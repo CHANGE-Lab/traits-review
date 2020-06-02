@@ -1,0 +1,914 @@
+---
+title: "trait_review_nmds"
+author: "Natasha Hardy"
+date: "March 10, 2020"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+```{r Setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Workspace Install, include=FALSE}
+
+getwd()
+install.packages("xlsx")
+library(devtools)
+install_github("vqv/ggbiplot")
+install.packages("goeveg")
+
+```
+
+```{r Workspace Load, include=FALSE}
+#Data manip
+library(tidyverse)
+library(plyr)
+#Load after
+library(dplyr)
+library(openxlsx)
+
+#Stats / ordination
+library(permute)
+library(lattice)
+library(vegan)
+library(mvabund)
+
+#Graphs
+library(ggplot2)
+library(scales)
+library(grid)
+library(ggbiplot)
+library(viridis)
+library(PNWColors)
+library(cowplot)
+library(forcats)
+library(goeveg)
+library(gridExtra)
+
+```
+
+## Secondary trait classification
+
+### Load and manipulate the data
+
+```{r Secondary Data Load, include=F, eval=F, echo=T}
+#This contains a cleaned up dataset of several hundred traits that have been "summarised" by a process they model, rather than completely disaggregated unique traits for which we had over 2000
+#Load data
+review_traits_2nd <- read_csv("secondary_traits_fill_dummy.csv")
+#Check dataframe
+glimpse(review_traits_2nd)
+
+#summary(as.factor(review_traits_2nd$TOS))
+#Note that there are 4 NA's under type of study and we may need to omit these.
+#summary(as.factor(review_traits_2nd$`Taxonomic`))
+#        Birds         Fish Herpetofauna      Insects      Mammals     Multiple        Other 
+#         155          324           91          339          105          393          230 
+#    Plankton       Plants 
+#          66          614 
+
+#Need to rename Predictive values
+#Need to rename and create some key variables for grouping factors
+```
+
+```{r Secondary Data Manipulation, include=F, eval=F, echo=T}
+
+#Also found a typo, there are probably loads more
+review_traits_2use = review_traits_2nd %>%
+  group_by(DOI) %>%
+  sample_n(1) %>%
+  dplyr::rename(Predictive = `Forecasting`) %>%
+  mutate(`GlobalChangeCat`=if_else(`GlobalChange`>0, "yes", "no"), #Add binary column for presence/absence of Global Change Driver 
+         `TaxonomicGroup`=case_when( #Note can use case_when() or if_ele() BUT you need to write one for each value and not try to combine them as strings using c()
+           `Taxonomic` == "Mammals" ~ "Vertebrate",
+           `Taxonomic` == "Birds" ~ "Vertebrate",
+           `Taxonomic` == "Fish" ~ "Vertebrate",
+           `Taxonomic` == "Herpetofauna" ~ "Vertebrate",
+           `Taxonomic` == "Plankton" ~ "Invertebrate",
+           `Taxonomic` == "Insects" ~ "Invertebrate",
+           `Taxonomic` == "Multiple" ~ "Multiple",
+           `Taxonomic` == "Other" ~ "Other",
+           `Taxonomic` == "Plants" ~ "Plants")
+         ) %>%
+  select(`DOI`:`Taxonomic`,`TaxonomicGroup`,`GlobalChange`,`GlobalChangeCat`,  `Predictive`:`zinc`, -c(`web making`, `diving ability`, `palladium`)) %>%
+  #Can remove: web-building and diving ability are problematic NMDS1 axis #, -c(`web making`, `diving ability`)
+  #Need to leave this in
+  filter(TOS != "NA")
+
+glimpse(review_traits_2use)
+#dim(review_traits_2use) #821 observations and 227 columns after removal of three problem variables
+
+```
+
+```{r Secondary Data Simplification}
+
+# Remove columns and rows that sum to 1 from the dataframe
+
+#Remove columns that only contain a single occurrence for a trait, as well as any zero sum rows
+review_traits_2.1 = review_traits_2use[,which(colSums(review_traits_2use[,11:ncol(review_traits_2use)])>1)]
+str(review_traits_2.1)
+#NOTE
+#We go from having 220 traits observed to 182 observed more than once.
+#Also note some explanatory variable columns disappear also, so adding them back in:
+review_traits_2.2 = cbind(as.data.frame(review_traits_2use[,1:10]), as.data.frame(review_traits_2.1[,9:ncol(review_traits_2.1)]))
+
+#WTF
+#Error message:
+#number of rows of result is not a multiple of vector length (arg 1)
+#dim(review_traits_2use[,1:10])
+#dim(review_traits_2.1[,9:ncol(review_traits_2.1)])
+#This should fucking work TBH
+#Solved needed to use as.data.frame()
+
+#Then we need to delete rows that sum to zero for the trait occurrences
+review_traits_2.3 = review_traits_2.2[-which(rowSums(review_traits_2.2[,11:ncol(review_traits_2.2)])==0),] #792 observations of 181 variables
+glimpse(review_traits_2.3)
+
+write.csv(review_traits_2.3, "review_traits_2use.csv")
+
+```
+
+### Start here if using clean data
+
+```{r UPLOAD CLEANED DATA HERE & USE THIS DATA}
+#Reload cleaned data here
+#review_traits_2use <- read_csv("review_traits_2use.csv")
+#review_traits_2use = review_traits_2use %>% select(DOI:ncol(review_traits_2use))
+
+#USE THESE SUBSETS
+#replace with review_traits_2use if loading data in otherwise take df name from simplification chunk above
+review_sites_2nd <- as.data.frame(review_traits_2.3[,1:10]) #792 observations & 10 co-variates 
+review_species_2nd <- review_traits_2.3[,11:ncol(review_traits_2.3)] #171 trait columns 792 observations
+str(review_species_2nd)
+#Make sure this is recording presence absences
+review_species_2ndPA = review_species_2nd
+review_species_2ndPA[review_species_2ndPA>0] = 1
+
+```
+
+
+### Ordination - 2ndary traits (filled in)
+
+Using Jaccard dissimilarity for binary data.
+Need to check and validate k and stress.
+
+```{r Ordination, echo=F, eval=F}
+#Second ordination based on using no replicates for the study
+traits_ord_2use <- metaMDS(review_species_2ndPA,
+                          distance = "jaccard",
+                          trymax = 20, #need to increase to 1000
+                          k = 3) #increase trymax = 50
+
+#Based on ordination goodness fit/stress checks, we could use k = 2 --> Double check for new data
+
+plot(traits_ord_2use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+
+ordiplot(traits_ord_2use, type = "none") #creates blank plot
+orditorp(traits_ord_2use, display = "species", col = "red", air=0.01) #labels traits
+orditorp(traits_ord_2use, display = "sites", col = "black", air=0.01) #labels traits
+
+#ID'ed two traits that are outliers = diving ability and web building
+#Need to remove these
+
+### Multiple problem diagnose
+#Potential outliers, the data are strangely underdispersed with some trais way overdispersed.
+#I have now iteratively removed multiple traits, and I feel that normal methods for removing them just aren't doing much (such as removing zero sum rows, and traits that only occur once.)
+
+#This also isn't working
+#Error in strwidth(labels, cex = cex) : plot.new has not been called yet
+#Fixed with this advice:
+#In RStudio, there's a setting in Preferences -> R Markdown to "Show output inline for all R Markdown documents". To get rid of the error, make sure this is unchecked.
+#https://stackoverflow.com/questions/40938561/plot-new-has-not-been-called-yet-error-in-rmarkdown-rstudio-1-0-44 
+#Wow RMarkdown is fucked sometimes...
+#I have the old code open in a separate document within the same project in RStudio and not having this much trouble there!!
+
+#saveRDS(traits_ord_2use, "traits_ord_2use.rds")
+
+```
+
+```{r UPLOAD ORDINATION RDS FILE}
+
+traits_ord_2use <- readRDS("traits_ord_2use.rds")
+
+```
+
+## Secondary traits not-filled
+
+### Load and manipulate the data
+
+```{r Secondary NF Data Load, include=F, eval=F, echo=T}
+#This contains a cleaned up dataset of several hundred traits that have been "summarised" by a process they model, rather than completely disaggregated unique traits for which we had over 2000
+#Load data
+review_traits_NF <- read_csv("secondary_traits_empty_dummy.csv")
+#Check dataframe
+glimpse(review_traits_NF)
+
+summary(as.factor(review_traits_NF$TOS))
+#Note that there are 4 NA's under type of study and we may need to omit these.
+summary(as.factor(review_traits_NF$`Taxonomic`))
+#        Birds         Fish Herpetofauna      Insects      Mammals     Multiple        Other 
+#         155          324           91          339          105          393          230 
+#    Plankton       Plants 
+#          66          614 
+
+```
+
+```{r Secondary Data Manipulation, include=F, eval=F, echo=T}
+
+#Also found a typo, there are probably loads more
+review_traits_NFuse = review_traits_NF %>%
+  group_by(DOI) %>%
+  sample_n(1) %>%
+  dplyr::rename(Predictive = `Forecasting`) %>% #Need to rename Predictive values
+  mutate(`GlobalChangeCat`=if_else(`GlobalChange`>0, "yes", "no"), #Add binary column for presence/absence of Global Change Driver 
+         `PredictiveCat`=if_else(`Predictive`>0, "yes", "no"), ##Add binary column for presence/absence of predictive work 
+         `TaxonomicGroup`=case_when( #Note can use case_when() or if_ele() BUT you need to write one for each value and not try to combine them as strings using c()
+           `Taxonomic` == "Mammals" ~ "Vertebrate",
+           `Taxonomic` == "Birds" ~ "Vertebrate",
+           `Taxonomic` == "Fish" ~ "Vertebrate",
+           `Taxonomic` == "Herpetofauna" ~ "Vertebrate",
+           `Taxonomic` == "Plankton" ~ "Invertebrate",
+           `Taxonomic` == "Insects" ~ "Invertebrate",
+           `Taxonomic` == "Multiple" ~ "Multiple",
+           `Taxonomic` == "Other" ~ "Other",
+           `Taxonomic` == "Plants" ~ "Plants")
+         ) %>%
+  select(`DOI`:`Taxonomic`,`TaxonomicGroup`,`GlobalChange`,`GlobalChangeCat`, `Predictive`, `PredictiveCat`, `TOS`:`filter`, `age`:`zinc`) %>%
+  #Can remove: , -cadmium
+  #Need to leave this in
+  filter(TOS != "NA")
+
+glimpse(review_traits_NFuse)
+#dim(review_traits_2use) #821 observations and 226 columns after removal of three problem variables
+
+```
+
+```{r Secondary Data Simplification}
+
+# Remove columns and rows that sum to 1 from the dataframe
+
+#Remove columns that only contain a single occurrence for a trait, as well as any zero sum rows
+review_traits_NF2.1 = review_traits_NFuse[,which(colSums(review_traits_NFuse[,12:ncol(review_traits_NFuse)])>1)]
+str(review_traits_NF2.1)
+#cadmium removed
+
+#Also note some explanatory variable columns disappear also, so adding them back in:
+review_traits_NF2.2 = cbind(as.data.frame(review_traits_NFuse[,1:11]), as.data.frame(review_traits_NF2.1[,10:ncol(review_traits_NF2.1)]))
+
+#Then we need to delete rows that sum to zero for the trait occurrences
+review_traits_NF2.3 = review_traits_NF2.2[-which(rowSums(review_traits_NF2.2[,12:ncol(review_traits_NF2.2)])==0),] #792 observations of 181 variables
+glimpse(review_traits_NF2.3)
+
+write.csv(review_traits_NF2.3, "review_traits_NFuse.csv")
+
+```
+
+## Start here if using clean data
+
+```{r UPLOAD CLEANED DATA HERE & USE THIS DATA}
+#Reload cleaned data here
+#review_traits_2use <- read_csv("review_traits_2use.csv")
+#review_traits_2use = review_traits_2use %>% select(DOI:ncol(review_traits_2use))
+
+#USE THESE SUBSETS
+#replace with review_traits_2use if loading data in otherwise take df name from simplification chunk above
+review_sites_NF <- as.data.frame(review_traits_NF2.3[,1:11]) #786 observations & 11 co-variates 
+review_species_NF <- review_traits_NF2.3[,12:ncol(review_traits_NF2.3)] #166 trait columns 786 observations
+
+```
+
+
+## Ordinations
+
+Using Jaccard dissimilarity for binary data.
+Need to check and validate k and stress.
+
+```{r Ordination USE, echo=F, eval=F}
+#Second ordination based on using no replicates for the study
+traits_ord_NF <- metaMDS(review_species_NF,
+                          distance = "jaccard",
+                          trymax = 20, #need to increase to 1000
+                          k = 2) #try k = 3 and compare ordinations
+
+#Based on ordination goodness fit/stress checks, we could use k = 2 --> Double check for new data
+
+plot(traits_ord_NF) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+
+ordiplot(traits_ord_NF, type = "none") #creates blank plot
+orditorp(traits_ord_NF, display = "species", col = "red", air=0.01) #labels traits
+orditorp(traits_ord_NF, display = "sites", cex = 0.7, air=0.01) #labels species 
+
+ggsave("traits_ord_NF.jpeg", width = 5, height = 5, dpi = 300)
+
+#ID'ed two traits that are outliers = diving ability and web building
+#Need to remove these
+
+#I have now iteratively removed these
+#This also isn't working
+#Error in strwidth(labels, cex = cex) : plot.new has not been called yet
+#Fixed with this advice:
+#In RStudio, there's a setting in Preferences -> R Markdown to "Show output inline for all R Markdown documents". To get rid of the error, make sure this is unchecked.
+#https://stackoverflow.com/questions/40938561/plot-new-has-not-been-called-yet-error-in-rmarkdown-rstudio-1-0-44 
+#Wow RMarkdown is fucked sometimes...
+#I have the old code open in a separate document within the same project in RStudio and not having this much trouble there!!
+
+#saveRDS(traits_ord_2use, "traits_ord_2use.rds")
+
+```
+
+## Checking ordination/nMDS output
+This is a helpful tutorial on checking nMDS goodness of fit, model convergence, stress and dimensionality.
+
+```{r Ordination - checks}
+#Check fit
+gof <- goodness(traits_ord_use)
+
+#Can visualise goodness of fit
+stressplot(traits_ord_use, pch = 19, cex=0.75, l.col = "tomato", p.col = "skyblue")
+
+#Now, we will be computing the stress for the dimensions 1, 2, 3, 4, 5, …. and explain how many dimensions are required to obtain a good fit.
+stress_vec <- numeric(10)
+for(i in seq(10)){
+  stress_vec[i] <- metaMDS(review_species_use,
+                          distance = "jaccard",
+                          k=i)$stress
+}
+
+#Plot the stress vs. number of dimensions needed
+plot(seq(10),stress_vec, type = 'o', ylab = "Stress", xlab = "Number of dimensions",
+     col="tomato", pch=19)
+
+#Stress is extremely low, likely there are insufficient data (n = 727 studies/rows) for the number of traits (n = 1411) included in this analysis.
+
+
+#Plot goodness of fit of points
+#plot(traits_ord_use, display = "sites", type = "n")
+#points(traits_ord_use)
+
+```
+
+```{r nMDS stress check}
+#Don't run, too time intensive.
+#We know from output above that the model is underdispersed and we have fit too few rows vs. variables.
+
+#dimcheckMDS(review_species_use,
+#            distance = "jaccard",
+#            trymax = 1000,
+#            k = 3)
+
+```
+
+
+## GRAPHICS PIPELINE
+
+For calculating data and treatment scores, and convex hulls around datapoints.
+
+### Extract NMDS coordinates and associate with co-variates/grouping factors
+
+```{r Data scores for plotting - USE}
+
+#Extract NMDS coordinates and associate with co-variates/grouping factors
+
+#Using the scores function from vegan to extract the site scores and convert to a data.frame
+data.scores <- as.data.frame(scores(traits_ord_use))  
+
+#create a column of site names, from the rownames of data.scores
+data.scores$points <- rownames(data.scores)
+
+#bind treatment labels and score values
+treatment.scores <- cbind(review_sites_use, data.scores)
+
+#Check
+str(treatment.scores)  
+#Awesome
+
+```
+
+### Convex hull calculations
+For each ordination and set of grouping variables input to data scores chunk
+
+```{r Convex hulls - Global Change}
+#Global Change yes/no
+#Create convex hulls for the space occupied by Global Change yes/no
+unique(treatment.scores$`Global Change`) #no/yes
+treatment.scores$`Global Change` <- as.factor(treatment.scores$`Global Change`)
+summary(treatment.scores$`Global Change`)
+levels(treatment.scores$`Global Change`)[levels(treatment.scores$`Global Change`)=="no"] <- "No"
+levels(treatment.scores$`Global Change`)[levels(treatment.scores$`Global Change`)=="yes"] <- "Yes"
+
+#Yes
+grp.climyes <- treatment.scores[treatment.scores$`Global Change` == "Yes", ][chull(treatment.scores[treatment.scores$`Global Change` == "yes", c("NMDS1", "NMDS2")]), ] 
+#No
+grp.climno <- treatment.scores[treatment.scores$`Global Change` == "No", ][chull(treatment.scores[treatment.scores$`Global Change` == "no", c("NMDS1", "NMDS2")]), ] 
+
+#combine the hull data
+hull.data.clim <- rbind(grp.climyes, grp.climno)  
+str(hull.data.clim)
+```
+
+```{r Convex hulls - Global Change Driver}
+#Global Change Drivers
+#Create convex hulls for the space occupied by each Global Change Driver
+unique(treatment.scores$`Global Change Driver`)
+
+#Change driver labels
+treatment.scores$`Global Change Driver` <- as.factor(treatment.scores$`Global Change Driver`)
+summary(treatment.scores$`Global Change Driver`)
+
+treatment.scores$`Global Change Driver` <- as.factor(treatment.scores$`Global Change Driver`)
+levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)==0] <- "Not assessed"
+levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)=="Global Change Broad"] <- "Multiple"
+levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)=="Global Change Multiple"] <- "Multiple"
+levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)=="Habitat Degredation"] <- "Habitat loss"
+levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)=="Climate Change"] <- "Climate change"
+
+#Global Change Drivers - hull loop
+gcd = as.character(unique(treatment.scores$`Global Change Driver`))
+for(i in 1:length(gcd)) {
+  temp = gcd[i]
+  df = treatment.scores[treatment.scores$`Global Change Driver` == temp, ][chull(treatment.scores[treatment.scores$`Global Change Driver` == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp.',temp), df)
+}
+
+#combine the hull data
+hull.data.gcd <- rbind(`grp.Not assessed`,`grp.Climate change`, grp.Exploitation, grp.Multiple, `grp.Habitat loss`, grp.Invasion)  
+str(hull.data.gcd)
+
+```
+
+```{r Convex hulls - Filter}
+# Level of filtering
+
+#Make following value changes
+#"Fundamental" --> Abiotic
+#"Physical" --> Dispersal 
+#"Ecological"  --> Biotic
+#"Trophic" = "Trophic"
+treatment.scores$Filter <- as.factor(treatment.scores$Filter)
+levels(treatment.scores$Filter)[levels(treatment.scores$Filter)=="Fundamental"] <- "Abiotic"
+levels(treatment.scores$Filter)[levels(treatment.scores$Filter)=="Physical"] <- "Dispersal"
+levels(treatment.scores$Filter)[levels(treatment.scores$Filter)=="Ecological"] <- "Biotic"
+
+#Create convex hulls for the space occupied by each Type of study
+#Hull loop
+filt = as.character(unique(treatment.scores$Filter))
+for(i in 1:length(filt)) {
+  temp = filt[i]
+  df = treatment.scores[treatment.scores$Filter == temp, ][chull(treatment.scores[treatment.scores$Filter == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp.',temp), df)
+}
+
+#combine the hull data
+hull.data.filt <- rbind(grp.Abiotic, grp.Biotic, grp.Trophic, grp.Dispersal)  
+str(hull.data.filt)
+
+#Check data distribution
+#unique(hull.data.filt$Filter)
+#summary(treatment.scores$Filter)
+
+```
+
+```{r Convex hulls - Predictive}
+#Predictive/Forecasting studies
+#Create convex hulls for the space occupied by Predictive yes/no
+unique(treatment.scores$Predictive) #no/yes
+
+#Modification of any values
+treatment.scores$Predictive <- as.factor(treatment.scores$Predictive)
+summary(treatment.scores$Predictive)
+levels(treatment.scores$Predictive)[levels(treatment.scores$Predictive)=="0"] <- "No"
+levels(treatment.scores$Predictive)[levels(treatment.scores$Predictive)=="1"] <- "Yes"
+
+#Yes
+treatment.scores$Predictive <- as.character(treatment.scores$Predictive)
+grp.predictyes <- treatment.scores[treatment.scores$Predictive == "Yes", ][chull(treatment.scores[treatment.scores$Predictive == "Yes", c("NMDS1", "NMDS2")]), ] 
+#No
+grp.predictno <- treatment.scores[treatment.scores$Predictive == "No", ][chull(treatment.scores[treatment.scores$Predictive == "No", c("NMDS1", "NMDS2")]), ]
+
+#combine the hull data
+hull.data.predict <- rbind(grp.predictyes, grp.predictno)  
+str(hull.data.predict)
+
+```
+
+```{r Convex hulls - Type of Study}
+# Type of study
+unique(treatment.scores$TOS)
+#TModel --> Theory
+treatment.scores$TOS <- as.factor(treatment.scores$TOS)
+levels(treatment.scores$TOS)[levels(treatment.scores$TOS)=="TModel"] <- "Theory"
+#Create convex hulls for the space occupied by each Type of study
+#Hull loop
+tos = as.character(unique(treatment.scores$TOS))
+for(i in 1:length(tos)) {
+  temp = tos[i]
+  df = treatment.scores[treatment.scores$TOS == temp, ][chull(treatment.scores[treatment.scores$TOS == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp.',temp), df)
+}
+
+#combine the hull data
+hull.data.tos <- rbind(grp.Observational, grp.Experiment, grp.Metanalysis, grp.Theory, grp.Review)  
+```
+
+```{r Convex hulls - Ecosystem}
+### Ecosystem type
+#Create convex hulls for the space occupied by each Ecosystem type
+unique(treatment.scores$Ecosystem) #"Terrestrial" "Freshwater"  "Marine"      "Broad"
+
+#Terrestrial
+grp.t <- treatment.scores[treatment.scores$Ecosystem == "Terrestrial", ][chull(treatment.scores[treatment.scores$Ecosystem == "Terrestrial", c("NMDS1", "NMDS2")]), ] 
+#Freshwater
+grp.f <- treatment.scores[treatment.scores$Ecosystem == "Freshwater", ][chull(treatment.scores[treatment.scores$Ecosystem == "Freshwater", c("NMDS1", "NMDS2")]), ] 
+#Marine
+grp.m <- treatment.scores[treatment.scores$Ecosystem == "Marine", ][chull(treatment.scores[treatment.scores$Ecosystem == "Marine", c("NMDS1", "NMDS2")]), ]
+#Broad
+grp.b <- treatment.scores[treatment.scores$Ecosystem == "Broad", ][chull(treatment.scores[treatment.scores$Ecosystem == "Broad", c("NMDS1", "NMDS2")]), ]
+
+#combine the hull data
+hull.data.ecos <- rbind(grp.t, grp.f, grp.m, grp.b)  
+str(hull.data.ecos)
+
+```
+
+```{r Convex hulls - Taxonomic Group}
+# Taxonomic groups (broad)
+#Create convex hulls for the space occupied by each Taxonomic group values
+unique(treatment.scores$`Taxonomic Group`) 
+
+#Taxonomic group - hull loop
+taxgrp = as.character(unique(treatment.scores$`Taxonomic Group`))
+for(i in 1:length(taxgrp)) {
+  temp = taxgrp[i]
+  df = treatment.scores[treatment.scores$`Taxonomic Group` == temp, ][chull(treatment.scores[treatment.scores$`Taxonomic Group` == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp.',temp), df)
+}
+
+#combine the hull data
+hull.data.taxgrp <- rbind(grp.Vertebrate, grp.Invertebrate, grp.Multiple, grp.Other, grp.Plants)  
+str(hull.data.taxgrp)
+
+```
+
+```{r Convex hulls - Taxonomic specific}
+# Taxonomic groups (specific)
+#Create convex hulls for the space occupied by each Taxonomic values
+unique(treatment.scores$Taxonomic) 
+
+#Change some of the values
+treatment.scores$Taxonomic <- as.factor(treatment.scores$Taxonomic)
+levels(treatment.scores$Taxonomic)[levels(treatment.scores$Taxonomic)=="Broad"] <- "Multiple"
+levels(treatment.scores$Taxonomic)[levels(treatment.scores$Taxonomic)=="Herps"] <- "Reptiles"
+#"Birds"    "Insects"  "Mammals"  "Broad"    "Multiple" "Other"    "Fish"     "Herps"    "Plants"   "Plankton"
+summary(treatment.scores$Taxonomic)
+
+#Taxonomic group - hull loop
+tax = as.character(unique(treatment.scores$Taxonomic))
+for(i in 1:length(tax)) {
+  temp = tax[i]
+  df = treatment.scores[treatment.scores$Taxonomic == temp, ][chull(treatment.scores[treatment.scores$Taxonomic == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp.',temp), df)
+}
+
+#combine the hull data
+hull.data.taxon <- rbind(grp.Birds, grp.Insects, grp.Mammals, grp.Multiple, grp.Other, grp.Fish, grp.Reptiles, grp.Plants, grp.Plankton)  
+head(hull.data.taxon)
+```
+
+
+## nMDS Plots
+
+### A/ Global change driver
+
+```{r nMDS Global Change Driver, echo=TRUE}
+#nMDS plot for the assessmenet of global change (yes/no) and the drivers.
+
+trait_nMDS_clim <- ggplot() + 
+  geom_polygon(data=hull.data.gcd, 
+               aes(x=NMDS1,y=NMDS2, fill= fct_relevel(`Global Change Driver`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation"), 
+                   group=fct_relevel(`Global Change Driver`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation")), alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores, aes(x=NMDS1,y=NMDS2, colour = fct_relevel(`Global Change Driver`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation")), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18), 
+        legend.text = element_text(size = 18),
+        legend.justification = c(0,0.5),
+        #panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  #guides(fill = FALSE, colour = FALSE) +
+  #guides(fill = guide_legend(order = 1), colour = guide_legend(order = 2)) +
+  scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name = "Driver of change") + #name = "Global Change Assessed"
+  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name = "Driver of change") #name = "Global Change Assessed"
+
+trait_nMDS_clim
+
+ggsave("trait_nMDS_clim.jpeg", plot = trait_nMDS_clim, width = 8, height = 8, dpi = 300)
+
+```
+
+### B/ Filter
+
+```{r nMDS Filter, echo=FALSE}
+#nMDS plot for the level of ecological filtering for which traits were applied
+
+trait_nMDS_filt <- ggplot() + 
+  geom_polygon(data=hull.data.filt,aes(x=NMDS1, y=NMDS2, fill= fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic"), group=fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic")),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic")), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(plot.title=element_text(face="bold", size=18), # hjust = 0.05, vjust = -1 # margin = margin(t = 5, b = -25)
+        axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        legend.justification = c(0,0.5),
+        #panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  #guides(fill = FALSE, colour = FALSE) +
+  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name="Filter") +
+  scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name="Filter")
+
+trait_nMDS_filt
+
+ggsave("trait_nMDS_filt.jpeg", plot = trait_nMDS_filt, width = 8, height = 8, dpi = 300)
+
+```
+
+### C/ Predictive studies
+
+```{r nMDS C/ Predictive, echo=TRUE}
+# nMDS for studies using traits for predictive/forecasting purposes
+
+trait_nMDS_predict <- ggplot() + 
+  geom_polygon(data=hull.data.predict, aes(x=NMDS1,y=NMDS2, fill=fct_relevel(Predictive, "Yes", "No"), group=fct_relevel(Predictive, "Yes", "No")), alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores, aes(x=NMDS1,y=NMDS2, colour = fct_relevel(Predictive, "Yes", "No")), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        legend.justification = c(0,0.5),
+        #panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  #guides(fill = FALSE, colour = FALSE) +
+  scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.2, end = 0.8, name = "Predictive") + #name = "Predictive"
+  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.2, end = 0.8, name = "Predictive") #name = "Predictive"
+
+trait_nMDS_predict
+
+ggsave("trait_nMDS_predict.jpeg", plot = trait_nMDS_predict, width = 8, height = 8, dpi = 300)
+
+
+```
+
+### D/ Study type
+
+```{r nMDS D/ Study Type, echo=FALSE}
+#nMDS plot for the type of study
+
+trait_nMDS_tos <- ggplot() + 
+  geom_polygon(data=hull.data.tos,aes(x=NMDS1,y=NMDS2,fill=fct_relevel(TOS, "Observational", "Experiment", "Metanalysis", "Review", "Theory"),group=fct_relevel(TOS, "Observational", "Experiment", "Metanalysis", "Review", "Theory")),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_relevel(TOS, "Observational", "Experiment", "Metanalysis", "Review", "Theory")), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        legend.justification = c(0,0.5),
+        #panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  #guides(fill = FALSE, colour = FALSE) +
+  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name = "Study type") +
+  scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name = "Study type")
+
+trait_nMDS_tos
+
+ggsave("trait_nMDS_tos.jpeg", plot = trait_nMDS_tos, width = 8, height = 8, dpi = 300)
+
+```
+
+
+### E/ Ecosystem
+
+```{r nMDS E/ Ecosystem, echo=TRUE}
+
+#nMDS plot for the ecosystem type studied
+
+trait_nMDS_ecos <- ggplot() + 
+  geom_polygon(data=hull.data.ecos,aes(x=NMDS1,y=NMDS2, fill=fct_rev(`Ecosystem`), group=fct_rev(`Ecosystem`)), alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_rev(`Ecosystem`)), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        legend.justification = c(0,0.5),
+        #panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+   #guides(fill = FALSE, colour = FALSE) +
+  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name="Ecosystem") +
+  scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name="Ecosystem")
+  
+trait_nMDS_ecos
+
+ggsave("trait_nMDS_ecos.jpeg", plot = trait_nMDS_ecos, width = 8, height = 8, dpi = 300)
+
+
+```
+
+### F/ Taxonomic Group
+
+```{r nMDS F/ Taxonomic Group, echo=TRUE}
+#nMDS plot for the broad taxonomic group studied
+
+trait_nMDS_taxgrp <- ggplot() + 
+  geom_polygon(data=hull.data.taxgrp,aes(x=NMDS1,y=NMDS2, fill= fct_relevel(`Taxonomic Group`, "Vertebrate", "Invertebrate", "Plants", "Other", "Multiple"), group= fct_relevel(`Taxonomic Group`, "Vertebrate", "Invertebrate", "Plants", "Other", "Multiple")),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_relevel(`Taxonomic Group`, "Vertebrate", "Invertebrate", "Plants", "Other", "Multiple")), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        legend.justification = c(0,0.5),
+        #panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  #guides(fill = FALSE, colour = FALSE) +
+  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name="Taxonomic group") +
+  scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name="Taxonomic group")
+
+trait_nMDS_taxgrp
+
+ggsave("trait_nMDS_taxgrp.jpeg", plot = trait_nMDS_taxgrp, width = 8, height = 8, dpi = 300)
+
+
+```
+
+### EXTRA Taxonomic (Specific)
+
+```{r nMDS Taxonomic specific, echo=TRUE}
+#nMDS plot for the specific taxonomic group studied
+
+trait_nMDS_taxon <- ggplot() + 
+  geom_polygon(data=hull.data.taxon,aes(x=NMDS1,y=NMDS2, fill= `Taxonomic`, group= `Taxonomic`),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = `Taxonomic`), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.2, end = 0.7, name="Taxonomic") +
+  scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.2, end = 0.7, name="Taxonomic")
+
+trait_nMDS_taxon
+
+ggsave("trait_nMDS_taxonsp.jpeg", plot = trait_nMDS_taxon, width = 8, height = 8, dpi = 300)
+
+```
+
+
+## Merge plots
+
+Useful resources for aligning the plots, from the Wilke Lab:
+https://wilkelab.org/cowplot/articles/aligning_plots.html 
+
+
+```{r Merge nMDS plots, include=F, eval=F, echo=F}
+
+#All 6 panels, grey background
+review_nMDS_6 = plot_grid(trait_nMDS_clim, trait_nMDS_filt, trait_nMDS_predict, trait_nMDS_tos, trait_nMDS_ecos, trait_nMDS_taxgrp, labels = c("A", "B", "C", "D", "E", "F"), label_x = 0.12, vjust = 3.5, ncol = 2, rel_widths = c(1, 1), align = "v") #hjust = -7.5, label_x = c(0.12, 0.12, 0.12, 0.12, 0.12, 0.12)
+review_nMDS_6
+ggsave("review_nMDS_6whitelab.jpeg", plot = review_nMDS_6, width = 12, height = 10, dpi = 300)
+
+
+#All 4 panels, grey background
+review_nMDS_4 = plot_grid(trait_nMDS_clim, trait_nMDS_filt, trait_nMDS_tos, trait_nMDS_ecos, labels = c("A", "B", "C", "D"), label_x = 0.10, vjust = 3.1, ncol = 2, rel_widths = c(1, 1),  align = "v")
+review_nMDS_4
+ggsave("review_nMDS_4whitelab.jpeg", plot = review_nMDS_4, width = 12, height = 7, dpi = 300)
+
+```
+
+#Useful for troubleshoot legend alignment
+https://github.com/wilkelab/cowplot/issues/33
+
+## Simper Analyses
+##Similarity Percentage Analysis
+
+Understanding the output in a nutshell:
+https://rdrr.io/rforge/vegan/man/simper.html
+
+Notes from rdocumentation: https://www.rdocumentation.org/packages/vegan/versions/2.4-2/topics/simper
+
+The simper functions performs pairwise comparisons of groups of sampling units and finds the average contributions of each species to the average overall Bray-Curtis dissimilarity.
+
+The function displays most important species for each pair of groups. These species contribute at least to 70 % of the differences between groups. The function returns much more extensive results which can be accessed directly from the result object (see section Value). Function summary transforms the result to a list of data frames. With argument ordered = TRUE the data frames also include the cumulative contributions and are ordered by species contribution.
+
+The results of simper can be very difficult to interpret. The method very badly confounds the mean between group differences and within group variation, and seems to single out variable species instead of distinctive species (Warton et al. 2012). Even if you make groups that are copies of each other, the method will single out species with high contribution, but these are not contributions to non-existing between-group differences but to within-group variation in species abundance.
+
+Most of the code for saved SIMPER files are currently on PACIFIC computer.
+
+```{r SIMPER Ecosystem, eval=F, echo=T}
+
+simper_ecos <- simper(review_species_use, review_sites_use$Ecosystem, permutations = 1000)
+
+summary(simper_ecos)
+
+```
+
+```{r SIMPER Filter, eval=F, echo=T}
+
+simper_filter <- simper(review_species_use, review_sites_use$Filter, permutations = 1000)
+
+summary_filter <- summary(simper_filter, ordered=TRUE)
+
+#Tried and failed to create multi-sheet xlsx document out of SIMPER output
+#str(summary_filter)
+#str(simper_filter)
+
+#write.csv(simper_filter$Fundamental_Ecological, "SIMPER_Filter_Fundamental_Ecological.csv")
+
+#output <- 1
+#for (i in length(summary_filter)){
+#   write.xlsx(x=summary_filter[[i]],file="summary_filter.xlsx", sheetName=paste("sheet",output,sep=""),append=T)
+#   output <- output + 1
+#}
+
+```
+
+```{r SIMPER Global Change, eval=F, echo=T}
+
+simper_gc <- simper(review_species_use, review_sites_use$`Global Change`, permutations = 1000)
+
+summary(simper_gc)
+
+```
+
+```{r SIMPER Type of Study, eval=F, echo=T}
+
+simper_tos <- simper(review_species_use, review_sites_use$TOS, permutations = 1000)
+
+summary(simper_tos)
+
+```
+
+## Don't run code below here
+
+```{r Gg.arrange plot merging, include=F, eval=F, echo=T}
+
+#Potential gg.arrange work around
+#gP <- ggplotGrob(trait_nMDS_clim)
+#gQ <- ggplotGrob(trait_nMDS_ecos)
+#review_grid = grid::grid.newpage(); grid.arrange(rbind(gQ, gP))
+#ggexport(review_grid, filename = "review_grid.jpeg")
+
+
+
+```
+
+
+#Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+#`eval = FALSE` ...

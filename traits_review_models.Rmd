@@ -1,0 +1,1162 @@
+---
+title: "trait_review_nmds"
+author: "Natasha Hardy"
+date: "March 10, 2020"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+```{r Setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r Workspace Install, echo=F, eval=F}
+
+getwd()
+install.packages("knitr")
+install.packages("tidyverse")
+install.packages("vegan")
+install.packages("viridis")
+install.packages("devtools")
+devtools::install_github("jakelawlor/PNWColors") 
+install.packages("mvabund")
+
+```
+
+```{r Workspace Load}
+
+library(knitr)
+library(tidyverse)
+library(vegan)
+library(ggplot2)
+library(viridis)
+library(plyr)
+library(dplyr)
+library(PNWColors)
+library(mvabund)
+library(reshape2)
+
+```
+
+
+```{r Data Manipulation, include=F, eval=F, echo=T}
+
+#Load data
+review_traits <- read_csv("traits_dummy.csv")
+#Check dataframe
+#str(review_traits)
+unique(review_traits$`Taxonomic`)
+summary(as.factor(review_traits$`Taxonomic`))
+#  Birds    Broad     Fish    Herps  Insects  Mammals Multiple    Other Plankton   Plants 
+#      74      118      173       49      156       53       56      108       35      406 
+
+#Need to rename Predictive values
+#Need to rename and create some key variables for grouping factors
+
+#Also found a typo, there are probably loads more
+review_traits = review_traits %>%
+  dplyr::rename(Predictive = `Forecasting/Predictive`, yield = `yeild`) %>%
+  mutate(`Global Change`=if_else(review_traits$`Global Change Driver`>0, "yes", "no"), 
+         `Taxonomic Group`=case_when( #Note can use case_when() or if_ele() BUT you need to write one for each value and not try to combine them as strings using c()
+           review_traits$`Taxonomic` == "Mammals" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Birds" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Fish" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Herps" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Plankton" ~ "Invertebrate",
+           review_traits$`Taxonomic` == "Insects" ~ "Invertebrate",
+           review_traits$`Taxonomic` == "Multiple" ~ "Multiple",
+           review_traits$`Taxonomic` == "Broad" ~ "Multiple",
+           review_traits$`Taxonomic` == "Other" ~ "Other",
+           review_traits$`Taxonomic` == "Plants" ~ "Plants")
+         ) %>%
+  select(`DOI`:`Taxonomic`,`Taxonomic Group`,`System`:`Global Change Driver`, `Global Change`, `# of eggs or live young`:`zoogeographical group`)
+  #Add binary column for presence/absence of Global Change Driver
+
+#Check Taxonomic group variable
+#unique(review_traits$`Taxonomic Group`)
+#summary(as.factor(review_traits$`Taxonomic Group`))
+
+# DF problems: at "string 1291". This appears to be a duplicate of column #1292
+sum(review_traits[,1291]) #10
+colnames(review_traits[,1291]) #"locomotion\x96substrate relation"
+sum(review_traits[,1292]) #4
+colnames(review_traits[,1292]) #"locomotion and substrate relation"
+#Need to merge these columns
+
+# USE THIS DF
+#Merging two repetitive/erroneous locomotion ~ substrate trait columns
+review_traits_fix = review_traits %>%
+   mutate(`locomotion and substrate relation total`=`locomotion\x96substrate relation`+`locomotion and substrate relation`) %>%
+  select(-c(`locomotion\x96substrate relation`,`locomotion and substrate relation`))
+#Check
+#sum(review_traits_fix$`locomotion and substrate relation total`) #6
+
+#The full data probably contains columns that may have occurred once
+#First deleting any columns with zero sum column values
+#review_species.0=review_species[,-which(colSums(review_species)==0)] #ncol = 2544
+#Second deleting any columns with =< 1 occurrences of a trait value
+#review_species.1=review_species[,-which(colSums(review_species)<2)] #ncol = 1413
+```
+
+```{r Data 1.0, include=F, eval=F, echo=T}
+# Remove zero sum columns and rows from the dataframe
+
+#Remove columns that only contain a single occurrence for a trait, as well as any zero sum rows
+review_traits.1 = review_traits_fix[,-which(colSums(review_traits_fix[,11:ncol(review_traits_fix)])<2)]
+#Not sure why some explanatory variable columns disappear also, so adding them back in:
+review_traits.2 = cbind(review_traits_fix[,1:10], review_traits.1[,4:ncol(review_traits.1)])
+#Then delete rows that sum to zero for the trait occurrences
+review_traits1.0 = review_traits.2[-which(rowSums(review_traits.2[11:ncol(review_traits.2)])==0),] #1099 observations of 1415 traits
+
+#USE THESE SUBSETS
+review_sites1.0 <- review_traits1.0[,1:10]
+review_species1.0 <- review_traits1.0[,11:ncol(review_traits1.0)] #1410 trait columns
+
+```
+
+```{r Data 2.0, include=F, eval=F, echo=T}
+
+#This chunk selects distinct studies by DOI from review_traits1.0, but it doesn't appear to be doing this randomly
+
+unique(review_traits1.0$DOI) #705
+
+review_traits2.0 = review_traits1.0 %>%
+  distinct(review_traits1.0$DOI, .keep_all = TRUE) %>%
+  select(DOI:`locomotion and substrate relation total`)
+#Datasets
+review_sites2.0 <- review_traits2.0[,1:10]
+review_species2.0 <- review_traits2.0[,11:ncol(review_traits2.0)] #1410 trait columns
+#This doesn't appear to have randomly selected studies but instead taken a lot of Abiotic studies
+
+
+```
+
+```{r Data 3.0, include=F, eval=F, echo=T}
+
+#Remove any DOI that appeared twice
+review_traits2.5 = review_traits1.0 %>%
+  group_by(DOI) %>% 
+  dplyr::summarize(obs = n())
+
+review_traits2.7 = review_traits1.0 %>%
+  left_join(review_traits2.5) %>%
+  select(DOI, obs, Ecosystem:`Global Change`, `# of eggs or live young`:`locomotion and substrate relation total`) 
+
+review_traits3.0 = review_traits2.7 %>%
+  filter(as.numeric(review_traits2.7$obs) == "1")
+  
+str(review_traits2.7$obs)
+#summary(review_traits2.7$obs) #374
+#review_traits2.7$obs <- as.factor(review_traits2.7$obs)
+
+#summary(as.factor(review_traits3.0$Filter))
+
+#Datasets
+review_sites3.0 <- review_traits3.0[,1:11]
+review_species3.0 <- review_traits3.0[,12:ncol(review_traits3.0)] #1410 trait columns
+
+```
+
+```{r Data 4.0, include=F, eval=F, echo=T}
+
+#Randomly select studies by DOI
+
+review_traits4.0 = review_traits1.0 %>% 
+   group_by(DOI) %>%
+   sample_n(1)
+#str(review_traits4.0)
+summary(as.factor(review_traits4.0$Filter))
+
+#Because this randomly selects from available DOI's I have run this a few times to view a consensus on the representation of various variables (Ecosystems, Filter, etc.). Some versions appear to have randomly selected too few of a given variable's values
+
+#Save different iterations for reuse in SIMPER and graphs!!!
+
+#Save versions of this
+#write.csv(review_traits4.0, "review_traits4.0.csv")
+#Ecological Fundamental    Physical     Trophic 
+#        109         438          36         144 
+
+#write.csv(review_traits4.0, "review_traits4.0v2.csv")
+# Ecological Fundamental    Physical     Trophic 
+#        125         425          38         139 
+
+review_sites4.0 <- as.data.frame(review_traits4.0[,1:10])
+review_species4.0 <- review_traits4.0[,11:ncol(review_traits4.0)] #1410 trait columns
+
+
+```
+
+```{r USE THIS DATA FOR ORDS}
+
+#Upload selected dataset
+
+review_traits_use <- read_csv("review_traits4.0V.csv")
+review_sites_use <- as.data.frame(review_traits_use[,1:10])
+review_species_use <- review_traits_use[,11:ncol(review_traits_use)] #1410 trait columns
+
+```
+
+```{r USE THIS DATA FOR MV GLMs}
+
+#Upload selected dataset
+
+#Remove columns that contain < 2 occurrences
+review_traits_use2 = review_traits_use[,-which(colSums(review_traits_use[,11:ncol(review_traits_use)])<3)]
+#Not sure why some explanatory variable columns disappear also, so adding them back in:
+review_traits_use3 = cbind(review_traits_use[,1:10], review_traits_use2[,1:ncol(review_traits_use2)])
+#Then delete rows that sum to zero for the trait occurrences
+review_traits_mv = review_traits_use3[-which(rowSums(review_traits_use3[11:ncol(review_traits_use3)])==0),] #209 observations of 144 traits
+
+review_sites_mv <- as.data.frame(review_traits_mv[,1:10])
+review_species_mv <- review_traits_mv[,11:ncol(review_traits_mv)] #144 trait columns
+
+#write.csv(review_traits_mv, "review_traits_mv.csv")
+#review_traits_mv <- read_csv("review_traits4.0V.csv")
+
+```
+
+## Ordinations
+
+Note that the stress decreases as we decrease the number of observations, however, I'm concerned that it becomes so low as to indicate that we do not have enough observations vs. traits (data are too wide because #traits > # obs)
+
+```{r Initial ordinations, include=F, eval=F, echo=T}
+#Ordination of data --> using Euclidean distance for presence/absence data, but can also use Jaccard or Sørensen
+
+#Can try for subset
+#traits_ordtrial <- metaMDS(review_species[,1:50],
+#                            distance = "euclidean", #jaccard
+#                            k = 3) #increase trymax = 50
+
+#Full data
+#Euclidean distance
+#traits_ord_euc <- metaMDS(review_species,
+#                            distance = "euclidean",
+#                            k = 3) #increase trymax = 50
+#Ordination run output
+#Run 20 stress 0.1598547 
+#*** No convergence -- monoMDS stopping criteria:
+#    20: no. of iterations >= maxit
+##Note that the ordination based on Euclidean distance is not converging properly
+##Need to try Jaccard
+#plot(traits_ord_euc) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+#Definitely not plotting well, too many points not differentiated
+```
+
+```{r Ordination 0, include=F, eval=F, echo=T}
+#Using original dataset review_traits
+#Jaccard dissimilarity
+traits_ord_jac <- metaMDS(review_species,
+                            distance = "jaccard",
+                            k = 3) #increase trymax = 50
+
+plot(traits_ord_jac) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+#Could try subset
+```
+
+```{r Ordination 1.0, include=F, eval=F, echo=T}
+#Jaccard dissimilarity
+#traits_ord_jac0 <- metaMDS(review_species1.0[,1:100],
+#                            distance = "jaccard",
+#                            k = 3) #increase trymax = 50
+#Problem with this subset apparently containing empty rows, however the full version does not??
+
+traits_ord_jac1 <- metaMDS(review_species1.0,
+                            distance = "jaccard",
+                            k = 3) #increase trymax = 50
+
+plot(traits_ord_jac1) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+```
+
+```{r Ordination 2.0, include=F, eval=F, echo=T}
+#Second ordination based on using no replicates for the study
+traits_ord_jac2 <- metaMDS(review_species2.0,
+                            distance = "jaccard",
+                            k = 3) #increase trymax = 50
+
+plot(traits_ord_jac2) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+
+```
+
+```{r Ordination 3.0, include=F, eval=F, echo=T}
+#Second ordination based on using no replicates for the study
+traits_ord_jac3 <- metaMDS(review_species3.0,
+                            distance = "jaccard",
+                            k = 3) #increase trymax = 50
+
+plot(traits_ord_jac3) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+
+```
+
+```{r Ordination 4.0, include=F, eval=F, echo=T}
+#Second ordination based on using no replicates for the study
+traits_ord_jac4 <- metaMDS(review_species4.0,
+                            distance = "jaccard",
+                            k = 3) #increase trymax = 50
+
+plot(traits_ord_jac4) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+
+```
+
+```{r Ordination USE}
+#Second ordination based on using no replicates for the study
+traits_ord_use <- metaMDS(review_species_use,
+                          distance = "jaccard",
+                          trymax = 99,
+                          k = 3) #increase trymax = 50
+
+plot(traits_ord_use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+
+```
+
+## Graphics pipeline
+Note that for the next three chunks below, here we change the input ordination AND the grouping variables solely and obtain the same output labels for downstream plotting
+1) First using traits_ord_jac1 and review_sites1.0
+2) Second using traits_ord_jac2 and review_sites2.0
+3) Second using traits_ord_jac3 and review_sites3.0
+
+```{r Data scores for plotting - 1.0 dataset, include=F, eval=F, echo=F}
+#attach(review_sites)
+
+data.scores <- as.data.frame(scores(traits_ord_jac1))  
+#Using the scores function from vegan to extract the site scores and convert to a data.frame
+data.scores$points <- rownames(data.scores)  
+# create a column of site names, from the rownames of data.scores
+treatment.scores<-cbind(review_sites1.0, data.scores)
+#bind treatment labels and score values
+
+#Check
+str(treatment.scores)  
+```
+
+```{r Data scores for plotting - 2.0 dataset, include=F, eval=F, echo=F}
+#attach(review_sites)
+
+data.scores <- as.data.frame(scores(traits_ord_jac2))  
+#Using the scores function from vegan to extract the site scores and convert to a data.frame
+data.scores$points <- rownames(data.scores)  
+# create a column of site names, from the rownames of data.scores
+treatment.scores<-cbind(review_sites2.0, data.scores)
+#bind treatment labels and score values
+
+#Check
+str(treatment.scores)  
+```
+
+```{r Data scores for plotting - 3.0 dataset, include=F, eval=F, echo=F}
+#attach(review_sites)
+
+data.scores <- as.data.frame(scores(traits_ord_jac3))  
+#Using the scores function from vegan to extract the site scores and convert to a data.frame
+data.scores$points <- rownames(data.scores)  
+# create a column of site names, from the rownames of data.scores
+treatment.scores<-cbind(review_sites3.0, data.scores)
+#bind treatment labels and score values
+
+#Check
+str(treatment.scores)  
+```
+
+```{r Data scores for plotting - 4.0 dataset, include=F, eval=F, echo=F}
+#Troubleshoot
+#str(data.scores4.0) #705 and 4 variables
+#str(data.scores) #705 and 4 variables
+
+#str(review_sites4.0[,1:9]) #705 and 9 variables
+#str(review_sites3.0) #705 and 9 variables
+
+data.scores <- as.data.frame(scores(traits_ord_jac4))  
+#Using the scores function from vegan to extract the site scores and convert to a data.frame
+data.scores$points <- rownames(data.scores)  
+# create a column of site names, from the rownames of data.scores
+treatment.scores <- cbind(review_sites4.0, data.scores)
+
+#bind treatment labels and score values
+
+#Check
+str(treatment.scores)  
+
+```
+
+```{r Data scores for plotting - USE}
+
+#Extract NMDS coordinates and associate with co-variates/grouping factors
+
+data.scores <- as.data.frame(scores(traits_ord_use))  
+#Using the scores function from vegan to extract the site scores and convert to a data.frame
+data.scores$points <- rownames(data.scores)  
+# create a column of site names, from the rownames of data.scores
+treatment.scores <- cbind(review_sites_use, data.scores)
+
+#bind treatment labels and score values
+
+#Check
+str(treatment.scores)  
+
+```
+
+#Convex hull calculations
+For each ordination and set of grouping variables input to data scores chunk
+
+```{r Convex hulls - Ecosystem}
+# Ecosystem type
+#Create convex hulls for the space occupied by each Ecosystem type
+unique(treatment.scores$Ecosystem) #"Terrestrial" "Freshwater"  "Marine"      "Broad"
+treatment.scores$Ecosystem <- as.factor(treatment.scores$Ecosystem)
+summary(treatment.scores$Ecosystem)
+
+#Terrestrial
+grp.t <- treatment.scores[treatment.scores$Ecosystem == "Terrestrial", ][chull(treatment.scores[treatment.scores$Ecosystem == "Terrestrial", c("NMDS1", "NMDS2")]), ] 
+#Freshwater
+grp.f <- treatment.scores[treatment.scores$Ecosystem == "Freshwater", ][chull(treatment.scores[treatment.scores$Ecosystem == "Freshwater", c("NMDS1", "NMDS2")]), ] 
+#Marine
+grp.m <- treatment.scores[treatment.scores$Ecosystem == "Marine", ][chull(treatment.scores[treatment.scores$Ecosystem == "Marine", c("NMDS1", "NMDS2")]), ]
+#Broad
+grp.b <- treatment.scores[treatment.scores$Ecosystem == "Broad", ][chull(treatment.scores[treatment.scores$Ecosystem == "Broad", c("NMDS1", "NMDS2")]), ]
+#combine the hull data
+hull.data.ecos <- rbind(grp.t, grp.f, grp.m, grp.b)  
+hull.data.ecos
+```
+
+```{r Convex hulls - Global Change}
+#Global Change yes/no
+#Create convex hulls for the space occupied by each Ecosystem type
+unique(treatment.scores$`Global Change`) #no/yes
+treatment.scores$`Global Change` <- as.factor(treatment.scores$`Global Change`)
+summary(treatment.scores$`Global Change`)
+
+#Yes
+grp.climyes <- treatment.scores[treatment.scores$`Global Change` == "yes", ][chull(treatment.scores[treatment.scores$`Global Change` == "yes", c("NMDS1", "NMDS2")]), ] 
+#No
+grp.climno <- treatment.scores[treatment.scores$`Global Change` == "no", ][chull(treatment.scores[treatment.scores$`Global Change` == "no", c("NMDS1", "NMDS2")]), ] 
+
+#combine the hull data
+hull.data.clim <- rbind(grp.climyes, grp.climno)  
+hull.data.clim
+```
+
+```{r Convex hulls - Taxonomic specific}
+# Taxonomic groups
+#Create convex hulls for the space occupied by each Taxonomic values
+unique(treatment.scores$Taxonomic) 
+treatment.scores$Taxonomic <- as.factor(treatment.scores$Taxonomic)
+#Change some of the values
+levels(treatment.scores$Taxonomic)[levels(treatment.scores$Taxonomic)=="Broad"] <- "Multiple"
+levels(treatment.scores$Taxonomic)[levels(treatment.scores$Taxonomic)=="Herps"] <- "Reptiles"
+#"Birds"    "Insects"  "Mammals"  "Broad"    "Multiple" "Other"    "Fish"     "Herps"    "Plants"   "Plankton"
+summary(treatment.scores$Taxonomic)
+
+#Example loop
+#for (unique(treatment.scores$Taxonomic) in treatment.scores$Taxonomic){
+#  print(paste("Taxon is", unique(treatment.scores$Taxonomic)))
+#}
+
+#Taxonomic group - hull loop
+tax = as.character(unique(treatment.scores$Taxonomic))
+for(i in 1:length(tax)) {
+  temp = tax[i]
+  df = treatment.scores[treatment.scores$Taxonomic == temp, ][chull(treatment.scores[treatment.scores$Taxonomic == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp.',temp), df)
+}
+
+#combine the hull data
+hull.data.taxon <- rbind(grp.Birds, grp.Insects, grp.Mammals, grp.Multiple, grp.Other, grp.Fish, grp.Reptiles, grp.Plants, grp.Plankton)  
+head(hull.data.taxon)
+```
+
+```{r Convex hulls - Taxonomic Group}
+# Taxonomic groups
+#Create convex hulls for the space occupied by each Taxonomic values
+unique(treatment.scores$`Taxonomic Group`) 
+
+#Taxonomic group - hull loop
+taxgrp = as.character(unique(treatment.scores$`Taxonomic Group`))
+for(i in 1:length(taxgrp)) {
+  temp = taxgrp[i]
+  df = treatment.scores[treatment.scores$`Taxonomic Group` == temp, ][chull(treatment.scores[treatment.scores$`Taxonomic Group` == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp.',temp), df)
+}
+
+#combine the hull data
+hull.data.taxgrp <- rbind(grp.Vertebrate, grp.Invertebrate, grp.Multiple, grp.Other, grp.Plants)  
+head(hull.data.taxgrp)
+```
+
+```{r Convex hulls - Type of Study}
+# Type of study
+unique(treatment.scores$TOS)
+#TModel --> Theory
+treatment.scores$TOS <- as.factor(treatment.scores$TOS)
+levels(treatment.scores$TOS)[levels(treatment.scores$TOS)=="TModel"] <- "Theory"
+#Create convex hulls for the space occupied by each Type of study
+#Hull loop
+tos = as.character(unique(treatment.scores$TOS))
+for(i in 1:length(tos)) {
+  temp = tos[i]
+  df = treatment.scores[treatment.scores$TOS == temp, ][chull(treatment.scores[treatment.scores$TOS == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp.',temp), df)
+}
+
+#combine the hull data
+hull.data.tos <- rbind(grp.Observational, grp.Experiment, grp.Metanalysis, grp.Theory, grp.Review)  
+```
+
+```{r Convex hulls - Filter}
+# Level of filtering
+
+#Make following value changes
+#"Fundamental" --> Abiotic
+#"Physical" --> Dispersal 
+#"Ecological"  --> Biotic
+#"Trophic" = "Trophic"
+treatment.scores$Filter <- as.factor(treatment.scores$Filter)
+levels(treatment.scores$Filter)[levels(treatment.scores$Filter)=="Fundamental"] <- "Abiotic"
+levels(treatment.scores$Filter)[levels(treatment.scores$Filter)=="Physical"] <- "Dispersal"
+levels(treatment.scores$Filter)[levels(treatment.scores$Filter)=="Ecological"] <- "Biotic"
+
+#Create convex hulls for the space occupied by each Type of study
+#Hull loop
+filt = as.character(unique(treatment.scores$Filter))
+for(i in 1:length(filt)) {
+  temp = filt[i]
+  df = treatment.scores[treatment.scores$Filter == temp, ][chull(treatment.scores[treatment.scores$Filter == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp.',temp), df)
+}
+
+
+#combine the hull data
+hull.data.filt <- rbind(grp.Abiotic, grp.Biotic, grp.Trophic, grp.Dispersal)  
+unique(hull.data.filt$Filter)
+summary(treatment.scores$Filter)
+
+```
+
+
+# nMDS Plots
+
+###nMDS plot for the assessmenet of global change (yes/no) and the drivers.
+
+```{r nMDS Global Change Driver, echo=TRUE}
+
+#Change one driver label
+treatment.scores$`Global Change Driver` <- as.factor(treatment.scores$`Global Change Driver`)
+levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)==0] <- "Not Assessed"
+hull.data.clim$`Global Change` <- as.factor(hull.data.clim$`Global Change`)
+levels(hull.data.clim$`Global Change`)[levels(hull.data.clim$`Global Change`)=="no"] <- "No"
+levels(hull.data.clim$`Global Change`)[levels(hull.data.clim$`Global Change`)=="yes"] <- "Yes"
+#Make palette for points?
+#Make palette for polygons?
+
+
+trait_nMDS_clim <- ggplot() + 
+  geom_polygon(data=hull.data.clim, aes(x=NMDS1,y=NMDS2, fill=`Global Change`, group=`Global Change`), alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores, aes(x=NMDS1,y=NMDS2, colour = `Global Change Driver`), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  scale_fill_viridis(discrete = TRUE, begin = 1, end = 0.4, name = "Global Change Assessed") +
+  scale_colour_viridis(discrete = TRUE, begin = 1, end = 0.2)
+#Need to add labels
+trait_nMDS_clim
+
+#Note, could use "System" variable for labelling
+
+ggsave("trait_nMDS_clim.jpeg", plot = trait_nMDS_clim, width = 8, height = 8, dpi = 300)
+
+
+```
+
+###nMDS plot for the ecosystem type studied
+
+```{r nMDS Ecosystem, echo=TRUE}
+
+pnwpal <- pnw_palette(4, name = "Starfish", type = "continuous")
+
+#levels(hull.data.ecos$Ecosystem) <- fct_rev(factor(hull.data.ecos$Ecosystem))
+#hull.data.ecos$Ecosystem <- factor(hull.data.ecos$Ecosystem, levels = c("Terrestrial", "Freshwater", "Marine", "Broad"))
+
+#treatment.scores$Ecosystem <- as.factor(treatment.scores$Ecosystem)
+#treatment.scores$Ecosystem <- factor(treatment.scores$Ecosystem, levels = c("Terrestrial", "Freshwater", "Marine", "Broad"))
+#treatment.scores$Ecosystem <- as.character(treatment.scores$Ecosystem)
+
+trait_nMDS_ecos <- ggplot() + 
+  geom_polygon(data=hull.data.ecos,aes(x=NMDS1,y=NMDS2, fill=fct_rev(`Ecosystem`), group=fct_rev(`Ecosystem`)), alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_rev(`Ecosystem`)), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  #guide_legend(title="Ecosystem") +
+  scale_colour_manual(values=pnwpal, name="Ecosystem") +
+  scale_fill_manual(values=pnwpal, name="Ecosystem")
+  #scale_colour_viridis(discrete = TRUE, begin = 0.2, end = 1) +
+  #scale_fill_viridis(discrete = TRUE, begin = 0.2, end = 1)
+#Need to add labels
+
+trait_nMDS_ecos
+
+#Note, could use "System" variable for labelling
+
+ggsave("trait_nMDS_ecos.jpeg", plot = trait_nMDS_ecos, width = 8, height = 8, dpi = 300)
+
+
+```
+
+###nMDS plot for the specific taxonomic group studied
+
+```{r nMDS Taxonomic, echo=TRUE}
+
+trait_nMDS_taxon <- ggplot() + 
+  geom_polygon(data=hull.data.taxon,aes(x=NMDS1,y=NMDS2, fill= `Taxonomic`, group= `Taxonomic`),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = `Taxonomic`), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  scale_colour_viridis(discrete = TRUE, name="Taxonomic") +
+  scale_fill_viridis(discrete = TRUE, name="Taxonomic")
+#Need to add labels
+
+trait_nMDS_taxon
+
+#Note, could use "System" variable for labelling
+
+ggsave("trait_nMDS_taxonsp.jpeg", plot = trait_nMDS_taxon, width = 8, height = 8, dpi = 300)
+
+```
+
+###nMDS plot for the broad taxonomic group studied
+
+```{r nMDS Taxonomic Group, echo=TRUE}
+
+trait_nMDS_taxon <- ggplot() + 
+  geom_polygon(data=hull.data.taxgrp,aes(x=NMDS1,y=NMDS2, fill= fct_rev(`Taxonomic Group`), group= fct_rev(`Taxonomic Group`)),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_rev(`Taxonomic Group`)), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  scale_colour_viridis(discrete = TRUE, name="Taxonomic Group") +
+  scale_fill_viridis(discrete = TRUE, name="Taxonomic Group")
+#Need to add labels
+
+trait_nMDS_taxon
+
+#Note, could use "System" variable for labelling
+
+ggsave("trait_nMDS_taxongrp.jpeg", plot = trait_nMDS_taxon, width = 8, height = 8, dpi = 300)
+
+```
+
+###nMDS plot for the type of study
+
+```{r nMDS Type of study, echo=TRUE}
+
+#pnwpal2 <- pnw_palette(5, name = "Anemone", type = "continuous")
+
+trait_nMDS_tos <- ggplot() + 
+  geom_polygon(data=hull.data.tos,aes(x=NMDS1,y=NMDS2,fill=TOS,group=TOS),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = TOS), size=2) + # add the point markers
+  coord_equal() +
+  #theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18), 
+        panel.background = element_rect(fill = "lightgrey"), #element_blank()
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  scale_colour_viridis(discrete = TRUE) +
+  scale_fill_viridis(discrete = TRUE)
+  #scale_colour_manual(values=pnwpal2) +
+  #scale_fill_manual(values=pnwpal2)
+#Need to add labels
+
+trait_nMDS_tos
+
+#Note, could use "System" variable for labelling
+
+ggsave("trait_nMDS_tos2.jpeg", plot = trait_nMDS_tos, width = 8, height = 8, dpi = 300)
+
+```
+
+###nMDS plot for the level of ecological filtering for which traits were applied
+
+```{r nMDS Filter, echo=TRUE}
+
+pnwpal <- pnw_palette(4, name = "Starfish", type = "continuous")
+#Change order of variables for polygons
+levels(hull.data.filt$Filter)
+#hull.data.filt$Filter <- factor(hull.data.filt$Filter, levels = c("Abiotic", "Biotic", "Trophic", "Dispersal"))
+#hull.data.filt$Filter <- factor(hull.data.filt$Filter, levels = c("Dispersal", "Trophic", "Biotic", "Abiotic"))
+#Change order of variables for points
+levels(treatment.scores$Filter)
+#treatment.scores$Filter <- factor(treatment.scores$Filter, levels = c("Abiotic", "Biotic", "Trophic", "Dispersal"))
+#treatment.scores$Filter <- factor(treatment.scores$Filter, levels = c("Dispersal", "Trophic", "Biotic", "Abiotic"))
+
+trait_nMDS_filt <- ggplot() + 
+  geom_polygon(data=hull.data.filt,aes(x=NMDS1,y=NMDS2,fill=Filter,group=Filter),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = Filter), size=2) + # add the point markers
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18), 
+        panel.background = element_rect(fill = "lightgrey"), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank()) +
+  scale_colour_manual(values=pnwpal, name="Filter") +
+  scale_fill_manual(values=pnwpal, name="Filter")
+  #scale_colour_viridis(discrete = TRUE, begin = 0.2, end = 1) +
+  #scale_fill_viridis(discrete = TRUE, begin = 0.2, end = 1)
+#Need to add labels
+
+trait_nMDS_filt
+
+#Note, could use "System" variable for labelling
+
+ggsave("trait_nMDS_filt.jpeg", plot = trait_nMDS_filt, width = 8, height = 8, dpi = 300)
+
+```
+
+## Simper Analyses
+
+Notes from rdocumentation: https://www.rdocumentation.org/packages/vegan/versions/2.4-2/topics/simper
+
+The simper functions performs pairwise comparisons of groups of sampling units and finds the average contributions of each species to the average overall Bray-Curtis dissimilarity.
+
+The function displays most important species for each pair of groups. These species contribute at least to 70 % of the differences between groups. The function returns much more extensive results which can be accessed directly from the result object (see section Value). Function summary transforms the result to a list of data frames. With argument ordered = TRUE the data frames also include the cumulative contributions and are ordered by species contribution.
+
+The results of simper can be very difficult to interpret. The method very badly confounds the mean between group differences and within group variation, and seems to single out variable species instead of distinctive species (Warton et al. 2012). Even if you make groups that are copies of each other, the method will single out species with high contribution, but these are not contributions to non-existing between-group differences but to within-group variation in species abundance.
+
+```{r SIMPER Ecosystem}
+
+simper_ecos <- simper(review_species_use, review_sites_use$Ecosystem, permutations = 1000)
+
+summary_ecos <- summary(simper_ecos)
+
+write.csv(simper_ecos$Freshwater_Terrestrial, "simper_ecos_Freshwater_Terrestrial.csv")
+write.csv(simper_ecos$Freshwater_Marine, "simper_ecos_Freshwater_Marine.csv")
+write.csv(simper_ecos$Freshwater_Broad, "simper_ecos_Freshwater_Broad.csv")
+write.csv(simper_ecos$Terrestrial_Marine, "simper_ecos_Terrestrial_Marine.csv")
+write.csv(simper_ecos$Terrestrial_Broad, "simper_ecos_Terrestrial_Broad.csv")
+write.csv(simper_ecos$Marine_Broad, "simper_ecos_Marine_Broad.csv")
+
+```
+
+```{r SIMPER Filter}
+
+simper_filter <- simper(review_species_use, review_sites_use$Filter, permutations = 1000)
+
+summary_filter <- summary(simper_filter)
+
+write.csv(simper_filter$Ecological_Fundamental, "simper_filter_Ecological_Fundamental.csv")
+write.csv(simper_filter$Ecological_Physical, "simper_filter_Ecological_Physical.csv")
+write.csv(simper_filter$Ecological_Trophic, "simper_filter_Ecological_Trophic.csv")
+write.csv(simper_filter$Fundamental_Physical, "simper_filter_Fundamental_Physical.csv")
+write.csv(simper_filter$Fundamental_Trophic, "simper_filter_Fundamental_Trophic.csv")
+write.csv(simper_filter$Physical_Trophic, "simper_filter_Physical_Trophic.csv")
+
+```
+
+```{r SIMPER Global Change}
+
+simper_gc <- simper(review_species_use, review_sites_use$`Global Change`, permutations = 1000)
+
+summary_gc <- summary(simper_gc)
+
+write.csv(simper_gc$yes_no, "simper_gc_yes_no.csv")
+
+```
+
+```{r SIMPER Type of Study}
+
+simper_tos <- simper(review_species_use, review_sites_use$TOS, permutations = 1000)
+
+summary_tos <- summary(simper_tos)
+
+write.csv(simper_tos$Observational_Experiment, "simper_tos_Observational_Experiment.csv")
+write.csv(simper_tos$Observational_Review, "simper_tos_Observational_Review.csv")
+write.csv(simper_tos$Observational_Metanalysis, "simper_tos_Observational_Metanalysis.csv")
+write.csv(simper_tos$Observational_TModel, "simper_tos_Observational_TModel.csv")
+write.csv(simper_tos$Experiment_Review, "simper_tos_Experiment_Review.csv")
+write.csv(simper_tos$Experiment_Metanalysis, "simper_tos_Experiment_Metanalysis.csv")
+write.csv(simper_tos$Experiment_TModel, "simper_tos_Experiment_TModel.csv")
+write.csv(simper_tos$Review_Metanalysis, "simper_tos_Review_Metanalysis.csv")
+write.csv(simper_tos$Review_TModel, "simper_tos_Review_TModel.csv")
+write.csv(simper_tos$Metanalysis_TModel, "simper_tos_Metanalysis_TModel.csv")
+
+```
+
+
+```{r SIMPER Predictive}
+
+simper_predict <- simper(review_species_use, review_sites_use$Predictive, permutations = 1000)
+
+#summary_tos <- summary(simper_tos)
+
+write.csv(simper_predict$`0_1`, "simper_PREDICT.csv")
+
+```
+
+## ManyGLMs to assess differences between groups
+
+```{r ManyGLM Setup}
+
+#Make mvabund ojbect
+review_species_mv <- mvabund(review_species_mv)
+
+#Issue with full data
+#Error in make.names(vnames, unique = TRUE) : invalid multibyte string 1211
+#review_species_mv <- mvabund(review_species_use[,-1211])
+#problematic column with only 2 occurrence of this trait, deleted it.
+
+```
+
+```{r ManyGLM A Global Change}
+#Total run time of chunk ~ 1h
+##Model build
+mv_gc <-manyglm(review_species_mv ~ review_traits_mv$`Global Change`, data= review_traits_mv,
+                    family=binomial("cloglog")) #Build model for difference in publication trait assemblages based on assessment of global change factors
+saveRDS(mv_gc, "mv_gc.rds") #Save model
+
+##Model check
+plot(mv_gc) #check residual vs. fitted values
+qqnorm(residuals(mv_gc)[which(residuals(mv_gc)<10000)]); abline(c(0,1,col="red")) #check normality and fit
+#model fit looking good!
+
+##Model output significance test
+mv_gc.an <- anova.manyglm(mv_gc)
+saveRDS(mv_gc.an, "mv_gc_anova.rds") #Save model
+write.csv(mv_gc.an$table, "mv_gc_anova_table.csv") #save ANOVA table output
+#Test was significant
+#Note we don't want to use the summary call or Wald stat for presence/absence data
+
+##Individual adjusted p-values for species/traits
+mv_gc.an.uni <- anova.manyglm(mv_gc,p.uni="adjusted") #Get the univariate p-values for univariate tests
+#View(mv_gc.an.uni$uni.test)
+saveRDS(mv_gc.an.uni, "mv_gc_univs.rds") #Save model
+
+#Get the direction of effect fof each species with the main effect
+gc_coef <- coef(mv_gc) #save to R object
+
+```
+
+```{r ManyGLM A Coefs Global Change}
+##Note could write loop and workflow for the calculation of deviance explained
+
+##Top species
+mv_gc.s <- sort(mv_gc.an$uni.test[2,],decreasing=T,index.return=T)[1:25] #sort and select top species/traits
+mv_gc.s$ix[1:25] #the column numbers of the top most impacted spp/traits
+
+##Deviance explained
+#Need > 50% deviance explainaed --> result = 25 traits explain > 50% deviance
+sum(mv_gc.an$uni.test[2,mv_gc.s$ix[1:25]])*100/sum(mv_gc.an$uni.test[2,]) #25 species explained = 51.93049% Deviance
+
+##Save as dataframe
+gc_top <- as.data.frame(dimnames(review_species_mv)[[2]][mv_gc.s$ix[1:25]]) #df with the names of the top 20 traits
+
+str(gc_top)
+names(gc_top)[names(gc_top)== "dimnames(review_species_mv)[[2]][mv_gc.s$ix[1:25]]"] <- "traits" #Rename column vector of traits
+#How much deviance explained?
+write.csv(gc_top, "mv_gc_top.csv")
+
+###Combine traits with their coeffs and p-values
+#Creat df to combine coef values, ideally also p-values from univ anovas and the top 20
+gc_coef_l <- as.data.frame(t(gc_coef)) #first transpose coef_filter
+gc_coef_l$traits <- rownames(gc_coef_l) #convert rownames to a column
+
+gc_top_coeffs <- join(gc_top, gc_coef_l) #plyr left joint to obtain coeffs of top 20 traits
+
+colnames(gc_top_coeffs)
+
+gc_top_coeffs = gc_top_coeffs %>%
+  dplyr::rename(coef_intercept = "(Intercept)", coef_gc_yes = "review_traits_mv$`Global Change`yes") #Clean up column names
+
+#need to join with test statistic values
+gc_an_test <- as.data.frame(t(mv_gc.an.uni$uni.test)) #first transpose coef_filter
+gc_an_test$traits <- rownames(gc_an_test) #convert rownames to a column
+gc_top_coeffs <- join(gc_top_coeffs, gc_an_test) #join with test statistic (deviance explained)
+gc_top_coeffs = gc_top_coeffs %>%
+  select(-"(Intercept)") %>%
+  dplyr::rename(deviance_explained = "review_traits_mv$`Global Change`") #Clean up column names
+
+#need to join with p-values
+gc_an_pvalue <- as.data.frame(t(mv_gc.an.uni$uni.p)) #first transpose coef_filter
+gc_an_pvalue$traits <- rownames(gc_an_pvalue) #convert rownames to a column
+gc_top_coeffs <- join(gc_top_coeffs, gc_an_pvalue) #join with test statistic (deviance explained)
+gc_top_coeffs = gc_top_coeffs %>%
+  select(-"(Intercept)") %>%
+  dplyr::rename(p_value = "review_traits_mv$`Global Change`") #Clean up column names
+
+write.csv(gc_top_coeffs, "gc_top_coefs.csv")
+
+```
+
+```{r ManyGLM B Predictive}
+
+#Change Predictive values:
+str(review_traits_mv)
+levels(review_traits_mv$Predictive)[levels(review_traits_mv$Predictive)==0] <- "No"
+levels(review_traits_mv$Predictive)[levels(review_traits_mv$Predictive)==1] <- "Yes"
+
+##Model build
+mv_predict <-manyglm(review_species_mv ~ review_traits_mv$Predictive, data= review_traits_mv,
+                    family=binomial("cloglog")) #Build model for difference in publication trait assemblages based on assessment of global change factors
+saveRDS(mv_predict, "mv_predict.rds") #Save model
+
+##Model check
+par(mfrow=c(1,2))
+plot(mv_predict) #check residual vs. fitted values
+qqnorm(residuals(mv_predict)[which(residuals(mv_predict)<10000)]) 
+#abline(c(0,1,col="red")) #check normality and fit
+#model fit looking good!
+
+##Model output significance test
+mv_predict.an <- anova.manyglm(mv_predict) #Not significant, but likely because predictive sample size too small
+saveRDS(mv_predict.an, "mv_predict_anova.rds") #Save model
+write.csv(mv_predict.an$table, "mv_predict_anova_table.csv") #save ANOVA table output
+#Test was significant
+#Note we don't want to use the summary call or Wald stat for presence/absence data
+
+##Individual adjusted p-values for species/traits
+mv_predict.an.uni <- anova.manyglm(mv_predict,p.uni="adjusted") #Get the univariate p-values for univariate tests
+#View(mv_predict.an.uni$uni.test)
+saveRDS(mv_predict.an.uni, "mv_predict_univs.rds") #Save model
+
+#Get the direction of effect fof each species with the main effect
+predict_coef <- coef(mv_predict) #save to R object
+
+
+```
+
+```{r ManyGLM B Coeffs Predictive}
+
+#The output from mv model was not informative because there are too few studies that were predictive and retained in these analyses.
+#Therefore think it more informative to extract just the traits that were found in predictive studies
+
+review_traits_predict = review_traits_use %>%
+  filter(Predictive != 0)
+  
+review_traits_predict2 = review_traits_predict[,11:ncol(review_traits_predict)]
+review_traits_predict3 = review_traits_predict2[,-which(colSums(review_traits_predict2)==0)]
+
+predict_trait_sums <- as.data.frame(colSums(review_traits_predict3))
+#review_traits_predict3$traits <- rownames(review_traits_predict3)
+write.csv(predict_trait_sums, "predict_traits.csv")
+
+review_traits_predictB = review_traits_use %>%
+  select(Predictive, `# of eggs or live young`:ncol(review_traits_use)) %>%
+  mutate(Predictive=if_else(review_traits_use$Predictive>0, "Yes", "No")) %>%
+  melt(id.vars="Predictive") %>%
+  filter(value > 0) 
+
+review_traits_predicttable = review_traits_predictB %>%
+  reshape2::dcast(variable + value ~ Predictive)
+
+write.csv(review_traits_predicttable, "predict_traits_sums.csv")
+
+```
+
+```{r ManyGLM Filter}
+#Total run time of chunk ~ 1h
+
+mv_filter <-manyglm(review_species_mv ~ review_traits_mv$Filter, data= review_traits_mv,
+                    family=binomial("cloglog"))
+
+saveRDS(mv_filter, "mv_filter.rds") #Save model
+rds <- readRDS("mv_filter.rds")
+
+#plot(mv_filter)
+
+mv_filter.an <- anova.manyglm(mv_filter)
+
+View(mv_filter.an$table)
+write.csv(mv_filter.an$table, "mv_filter_anova_table.csv")
+saveRDS(mv_filter.an, "mv_filter_anova.rds")
+
+#Significant p <0.001 ***
+
+#Output
+#Analysis of Deviance Table
+
+#Model: review_species_mv ~ review_traits_mv$Filter
+
+#Multivariate test:
+#                        Res.Df Df.diff   Dev Pr(>Dev)   
+#(Intercept)                208                          
+#review_traits_mv$Filter    205       3 300.9    0.005 **
+#---
+#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#Arguments:
+# Test statistics calculated assuming uncorrelated response (for faster computation) 
+# P-value calculated using 999 iterations via PIT-trap resampling.
+
+#Note we don't want to use the summary call or Wald stat for presence/absence data
+
+#Get the univariate p-values for univariate tests
+mv_filter.an.uni <- anova.manyglm(mv_filter,p.uni="adjusted")
+View(mv_filter.an.uni$uni.p)
+
+#Significant response variables?
+saveRDS(mv_filter.an.uni, "mv_filter_univs.rds")
+
+#Get the direction of effect for each species with the main effect
+coef_filter <- coef(mv_filter)
+View(coef_filter_l)
+write.csv(coef_filter, "mv_filter_coefs.csv")
+
+#Creat df to combine coef values, ideally also p-values from univ anovas and the top 20
+coef_filt_l <- as.data.frame(t(coef_filter)) #first transpose coef_filter
+coef_filt_l$traits <- rownames(coef_filt_l) #convert rownames to a column
+
+str(coef_filt_l)
+
+rownames(coef_filter)
+
+##Top species
+mv_filter.s <- sort(mv_filter.an$uni.test[2,],decreasing=T,index.return=T)[1:20]
+#an$uni.test stores univariate test stats, 3rd row has change in deviance due to time
+mv_filter.s$ix[1:20] # the column numbers of the "top 10" most impacted spp # so column number 25 had the strongest effect, most disappeared between the two time periods
+
+filter_top20 <- dimnames(review_species_mv)[[2]][mv_filter.s$ix[1:20]] #the names of the top 10 spp
+View(filter_top20)
+write.csv(filter_top20, "mv_filter_top20.csv")
+#Get coeffs for these
+# [1] "diaspore.type"                           "locomotion.and.substrate.relation.total"
+# [3] "vegetative.reproduction"                 "spinescence"                            
+# [5] "litter.size"                             "seed.dry.mass"                          
+# [7] "life.history.strategy"                   "width"                                  
+# [9] "body.form"                               "swim.factor"                            
+# [11] "biomass"                                 "insect.adult.longevity"                 
+# [13] "larval.longevity"                        "adult.mass"                             
+# [15] "defence.mechanism"                       "nest.form"                              
+# [17] "development"                             "worker.body.size"                       
+# [19] "method.of.locomotion"                    "length.of.the.femur"         
+
+```
+
+
+```{r ManyGLM Type of Study}
+#Total run time of chunk ~ 1h
+
+mv_tos <-manyglm(review_species_mv ~ review_traits_mv$TOS, data= review_traits_mv, 
+                 family=binomial("cloglog"))
+
+saveRDS(mv_tos, "mv_tos.rds") #Save model
+
+#plot(mv_tos)
+
+mv_tos.an <- anova.manyglm(mv_tos)
+saveRDS(mv_tos.an, "mv_tos_anova.rds") #Save model
+
+#Analysis of Deviance Table
+#Model: review_species_mv ~ review_traits_mv$TOS
+#Multivariate test:
+#                     Res.Df Df.diff   Dev Pr(>Dev)  
+#(Intercept)             208                         
+#review_traits_mv$TOS    204       4 181.4    0.027 *
+#---
+#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#Arguments:
+# Test statistics calculated assuming uncorrelated response (for faster computation) 
+# P-value calculated using 999 iterations via PIT-trap resampling.
+
+#Uncomment for outputs
+#Get model summary
+summv_tos <- summary(mv_tos)
+saveRDS(summv_tos, "mv_tos_summary.rds") #Save model
+
+#Test statistics:
+#                                  wald value Pr(>wald)   
+#(Intercept)                           11.525    0.0020 **
+#review_traits_mv$TOSMetanalysis        2.038    0.0689 . 
+#review_traits_mv$TOSObservational      3.337    0.0110 * 
+#review_traits_mv$TOSReview             1.999    0.0240 * 
+#review_traits_mv$TOSTModel             1.055    0.2647   
+#Test statistic:   6.34, p-value: 0.045 
+#Arguments:
+# Test statistics calculated assuming response assumed to be uncorrelated 
+# P-value calculated using 1000 resampling iterations via pit.trap resampling (to account for correlation in #testing).
+
+#Get the univariate p-values for univariate tests
+mv_tos.an.uni <- anova.manyglm(mv_tos,p.uni="adjusted")
+#Significant?
+saveRDS(mv_tos.an.uni, "mv_tos_univs.rds") #Save model
+
+```
+
+```{r ManyGLM Ecosystem}
+#Total run time of chunk ~ 1h
+
+mv_ecos <-manyglm(review_species_mv ~ review_traits_mv$Ecosystem, data= review_traits_mv, 
+                 family=binomial("cloglog"))
+
+saveRDS(mv_ecos, "mv_ecos.rds") #Save model
+
+#plot(mv_ecos)
+
+mv_ecos.an <- anova.manyglm(mv_ecos)
+saveRDS(mv_ecos.an, "mv_ecos_anova.rds") #Save model
+
+#Uncomment for outputs
+#Get model summary
+summv_ecos <- summary(mv_ecos)
+saveRDS(summv_ecos, "mv_ecos_summary.rds") #Save model
+
+#Get the univariate p-values for univariate tests
+mv_ecos.an.uni <- anova.manyglm(mv_ecos,p.uni="adjusted")
+#Significant?
+saveRDS(mv_ecos.an.uni, "mv_ecos_univs.rds") #Save model
+
+```
+
