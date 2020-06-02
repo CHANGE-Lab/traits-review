@@ -1,0 +1,161 @@
+---
+title: "traits_review_datamanip"
+author: "Natasha Hardy"
+date: "02/06/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data manipulation - initial
+
+This document contains code for intial data manipulation March 2020 using large "traits_dummy.csv" df.
+
+```{r Data Manipulation, include=F, eval=F, echo=T}
+
+#Load data
+review_traits <- read_csv("traits_dummy.csv")
+#Check dataframe
+#str(review_traits)
+unique(review_traits$`Taxonomic`)
+summary(as.factor(review_traits$`Taxonomic`))
+#  Birds    Broad     Fish    Herps  Insects  Mammals Multiple    Other Plankton   Plants 
+#      74      118      173       49      156       53       56      108       35      406 
+
+#Need to rename Predictive values
+#Need to rename and create some key variables for grouping factors
+
+#Also found a typo, there are probably loads more
+review_traits = review_traits %>%
+  dplyr::rename(Predictive = `Forecasting/Predictive`, yield = `yeild`) %>%
+  mutate(`Global Change`=if_else(review_traits$`Global Change Driver`>0, "yes", "no"), 
+         `Taxonomic Group`=case_when( #Note can use case_when() or if_ele() BUT you need to write one for each value and not try to combine them as strings using c()
+           review_traits$`Taxonomic` == "Mammals" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Birds" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Fish" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Herps" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Plankton" ~ "Invertebrate",
+           review_traits$`Taxonomic` == "Insects" ~ "Invertebrate",
+           review_traits$`Taxonomic` == "Multiple" ~ "Multiple",
+           review_traits$`Taxonomic` == "Broad" ~ "Multiple",
+           review_traits$`Taxonomic` == "Other" ~ "Other",
+           review_traits$`Taxonomic` == "Plants" ~ "Plants")
+         ) %>%
+  select(`DOI`:`Taxonomic`,`Taxonomic Group`,`System`:`Global Change Driver`, `Global Change`, `# of eggs or live young`:`zoogeographical group`)
+  #Add binary column for presence/absence of Global Change Driver
+View(review_traits)
+#Check Taxonomic group variable
+#unique(review_traits$`Taxonomic Group`)
+#summary(as.factor(review_traits$`Taxonomic Group`))
+
+# DF problems: at "string 1291". This appears to be a duplicate of column #1292
+sum(review_traits[,1291]) #10
+colnames(review_traits[,1291]) #"locomotion\x96substrate relation"
+sum(review_traits[,1292]) #4
+colnames(review_traits[,1292]) #"locomotion and substrate relation"
+#Need to merge these columns
+
+# USE THIS DF
+#Merging two repetitive/erroneous locomotion ~ substrate trait columns
+review_traits_fix = review_traits %>%
+   mutate(`locomotion and substrate relation total`=`locomotion\x96substrate relation`+`locomotion and substrate relation`) %>%
+  select(-c(`locomotion\x96substrate relation`,`locomotion and substrate relation`))
+#Check
+#sum(review_traits_fix$`locomotion and substrate relation total`) #6
+
+#The full data probably contains columns that may have occurred once
+#First deleting any columns with zero sum column values
+#review_species.0=review_species[,-which(colSums(review_species)==0)] #ncol = 2544
+#Second deleting any columns with =< 1 occurrences of a trait value
+#review_species.1=review_species[,-which(colSums(review_species)<2)] #ncol = 1413
+```
+
+```{r Data 1.0, include=F, eval=F, echo=T}
+# Remove zero sum columns and rows from the dataframe
+
+#Remove columns that only contain a single occurrence for a trait, as well as any zero sum rows
+review_traits.1 = review_traits_fix[,-which(colSums(review_traits_fix[,11:ncol(review_traits_fix)])<2)]
+#Not sure why some explanatory variable columns disappear also, so adding them back in:
+review_traits.2 = cbind(review_traits_fix[,1:10], review_traits.1[,4:ncol(review_traits.1)])
+#Then delete rows that sum to zero for the trait occurrences
+review_traits1.0 = review_traits.2[-which(rowSums(review_traits.2[11:ncol(review_traits.2)])==0),] #1099 observations of 1415 traits
+
+#USE THESE SUBSETS
+review_sites1.0 <- review_traits1.0[,1:10]
+review_species1.0 <- review_traits1.0[,11:ncol(review_traits1.0)] #1410 trait columns
+
+```
+
+```{r Data 2.0, include=F, eval=F, echo=T}
+
+#This chunk selects distinct studies by DOI from review_traits1.0, but it doesn't appear to be doing this randomly
+
+unique(review_traits1.0$DOI) #705
+
+review_traits2.0 = review_traits1.0 %>%
+  distinct(review_traits1.0$DOI, .keep_all = TRUE) %>%
+  select(DOI:`locomotion and substrate relation total`)
+#Datasets
+review_sites2.0 <- review_traits2.0[,1:10]
+review_species2.0 <- review_traits2.0[,11:ncol(review_traits2.0)] #1410 trait columns
+#This doesn't appear to have randomly selected studies but instead taken a lot of Abiotic studies
+
+
+```
+
+```{r Data 3.0, include=F, eval=F, echo=T}
+
+#Remove any DOI that appeared twice
+review_traits2.5 = review_traits1.0 %>%
+  group_by(DOI) %>% 
+  dplyr::summarize(obs = n())
+
+review_traits2.7 = review_traits1.0 %>%
+  left_join(review_traits2.5) %>%
+  select(DOI, obs, Ecosystem:`Global Change`, `# of eggs or live young`:`locomotion and substrate relation total`) 
+
+review_traits3.0 = review_traits2.7 %>%
+  filter(as.numeric(review_traits2.7$obs) == "1")
+  
+str(review_traits2.7$obs)
+#summary(review_traits2.7$obs) #374
+#review_traits2.7$obs <- as.factor(review_traits2.7$obs)
+
+#summary(as.factor(review_traits3.0$Filter))
+
+#Datasets
+review_sites3.0 <- review_traits3.0[,1:11]
+review_species3.0 <- review_traits3.0[,12:ncol(review_traits3.0)] #1410 trait columns
+
+```
+
+```{r Data 4.0, include=F, eval=F, echo=T}
+
+#Randomly select studies by DOI
+
+review_traits4.0 = review_traits1.0 %>% 
+   group_by(DOI) %>%
+   sample_n(1)
+#str(review_traits4.0)
+summary(as.factor(review_traits4.0$Filter))
+
+#Because this randomly selects from available DOI's I have run this a few times to view a consensus on the representation of various variables (Ecosystems, Filter, etc.). Some versions appear to have randomly selected too few of a given variable's values
+
+#Save different iterations for reuse in SIMPER and graphs!!!
+
+#Save versions of this
+#write.csv(review_traits4.0, "review_traits4.0.csv")
+#Ecological Fundamental    Physical     Trophic 
+#        109         438          36         144 
+
+#write.csv(review_traits4.0, "review_traits4.0v2.csv")
+# Ecological Fundamental    Physical     Trophic 
+#        125         425          38         139 
+
+review_sites4.0 <- as.data.frame(review_traits4.0[,1:10])
+review_species4.0 <- review_traits4.0[,11:ncol(review_traits4.0)] #1410 trait columns
+
+
+```
