@@ -75,87 +75,11 @@ review_species_mv <- review_traits_mv[,11:ncol(review_traits_mv)] #144 trait col
 
 ```
 
-## Ordinations
+## Ordination
 
 Note that the stress decreases as we decrease the number of observations, however, I'm concerned that it becomes so low as to indicate that we do not have enough observations vs. traits (data are too wide because #traits > # obs)
 
-```{r Initial ordinations, include=F, eval=F, echo=T}
-#Ordination of data --> using Euclidean distance for presence/absence data, but can also use Jaccard or Sørensen
 
-#Can try for subset
-#traits_ordtrial <- metaMDS(review_species[,1:50],
-#                            distance = "euclidean", #jaccard
-#                            k = 3) #increase trymax = 50
-
-#Full data
-#Euclidean distance
-#traits_ord_euc <- metaMDS(review_species,
-#                            distance = "euclidean",
-#                            k = 3) #increase trymax = 50
-#Ordination run output
-#Run 20 stress 0.1598547 
-#*** No convergence -- monoMDS stopping criteria:
-#    20: no. of iterations >= maxit
-##Note that the ordination based on Euclidean distance is not converging properly
-##Need to try Jaccard
-#plot(traits_ord_euc) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
-#Definitely not plotting well, too many points not differentiated
-```
-
-```{r Ordination 0, include=F, eval=F, echo=T}
-#Using original dataset review_traits
-#Jaccard dissimilarity
-traits_ord_jac <- metaMDS(review_species,
-                            distance = "jaccard",
-                            k = 3) #increase trymax = 50
-
-plot(traits_ord_jac) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
-#Could try subset
-```
-
-```{r Ordination 1.0, include=F, eval=F, echo=T}
-#Jaccard dissimilarity
-#traits_ord_jac0 <- metaMDS(review_species1.0[,1:100],
-#                            distance = "jaccard",
-#                            k = 3) #increase trymax = 50
-#Problem with this subset apparently containing empty rows, however the full version does not??
-
-traits_ord_jac1 <- metaMDS(review_species1.0,
-                            distance = "jaccard",
-                            k = 3) #increase trymax = 50
-
-plot(traits_ord_jac1) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
-```
-
-```{r Ordination 2.0, include=F, eval=F, echo=T}
-#Second ordination based on using no replicates for the study
-traits_ord_jac2 <- metaMDS(review_species2.0,
-                            distance = "jaccard",
-                            k = 3) #increase trymax = 50
-
-plot(traits_ord_jac2) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
-
-```
-
-```{r Ordination 3.0, include=F, eval=F, echo=T}
-#Second ordination based on using no replicates for the study
-traits_ord_jac3 <- metaMDS(review_species3.0,
-                            distance = "jaccard",
-                            k = 3) #increase trymax = 50
-
-plot(traits_ord_jac3) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
-
-```
-
-```{r Ordination 4.0, include=F, eval=F, echo=T}
-#Second ordination based on using no replicates for the study
-traits_ord_jac4 <- metaMDS(review_species4.0,
-                            distance = "jaccard",
-                            k = 3) #increase trymax = 50
-
-plot(traits_ord_jac4) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
-
-```
 
 ```{r Ordination USE}
 #Second ordination based on using no replicates for the study

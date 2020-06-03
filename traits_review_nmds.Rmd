@@ -15,10 +15,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r Workspace Install, include=FALSE}
 
 getwd()
-install.packages("xlsx")
-library(devtools)
-install_github("vqv/ggbiplot")
-install.packages("goeveg")
+#install.packages("xlsx")
+#library(devtools)
+#install_github("vqv/ggbiplot")
+#install.packages("goeveg")
 
 ```
 
@@ -40,140 +40,47 @@ library(mvabund)
 
 ```
 
-## Data issues
 
-There are way too many columns. Some thoughts on variable reduction:
-(i) Reduction based on number of occurrences (>0 --> 2400 variables, >1 --> #1411 variables, >2 --> #144 variables)
-(ii) Using fuzzy logic techniques to clean up and combine related variables
-(iii) Manual cleaning
+## UPLOAD CLEAN DATA FROM REPO
 
-```{r Data Manipulation, include=F, echo=F, eval=F}
-
-#Load data
-review_traits <- read_csv("traits_dummy.csv")
-#Check dataframe
-#str(review_traits)
-unique(review_traits$`Taxonomic`)
-summary(as.factor(review_traits$`Taxonomic`))
-#  Birds    Broad     Fish    Herps  Insects  Mammals Multiple    Other Plankton   Plants 
-#      74      118      173       49      156       53       56      108       35      406 
-
-
-#Need to rename and create some key variables for grouping factors
-#Also found a typo, there are probably loads more
-review_traits = review_traits %>%
-  dplyr::rename(Predictive = `Forecasting/Predictive`, yield = `yeild`) %>%
-  mutate(`Global Change`=if_else(review_traits$`Global Change Driver`>0, "yes", "no"), 
-         `Taxonomic Group`=case_when( #Note can use case_when() or if_ele() BUT you need to write one for each value and not try to combine them as strings using c()
-           review_traits$`Taxonomic` == "Mammals" ~ "Vertebrate",
-           review_traits$`Taxonomic` == "Birds" ~ "Vertebrate",
-           review_traits$`Taxonomic` == "Fish" ~ "Vertebrate",
-           review_traits$`Taxonomic` == "Herps" ~ "Vertebrate",
-           review_traits$`Taxonomic` == "Plankton" ~ "Invertebrate",
-           review_traits$`Taxonomic` == "Insects" ~ "Invertebrate",
-           review_traits$`Taxonomic` == "Multiple" ~ "Multiple",
-           review_traits$`Taxonomic` == "Broad" ~ "Multiple",
-           review_traits$`Taxonomic` == "Other" ~ "Other",
-           review_traits$`Taxonomic` == "Plants" ~ "Plants")
-         ) %>%
-  select(`DOI`:`Taxonomic`,`Taxonomic Group`,`System`:`Global Change Driver`, `Global Change`, `# of eggs or live young`:`zoogeographical group`)
-  #Add binary column for presence/absence of Global Change Driver
-
-#Check Taxonomic group variable
-#unique(review_traits$`Taxonomic Group`)
-#summary(as.factor(review_traits$`Taxonomic Group`))
-
-# DF problems: at "string 1291". This appears to be a duplicate of column #1292
-#sum(review_traits[,1291]) #10
-#colnames(review_traits[,1291]) #"locomotion\x96substrate relation"
-#sum(review_traits[,1292]) #4
-#colnames(review_traits[,1292]) #"locomotion and substrate relation"
-#Need to merge these columns
-
-# USE THIS DF
-#Merging two repetitive/erroneous locomotion ~ substrate trait columns
-review_traits_fix = review_traits %>%
-   mutate(`locomotion and substrate relation total`=`locomotion\x96substrate relation`+`locomotion and substrate relation`) %>%
-  select(-c(`locomotion\x96substrate relation`,`locomotion and substrate relation`))
-#Check
-#sum(review_traits_fix$`locomotion and substrate relation total`) #6
-
-#The full data probably contains columns that may have occurred once
-#First deleting any columns with zero sum column values
-#review_species.0=review_species[,-which(colSums(review_species)==0)] #ncol = 2544
-#Second deleting any columns with =< 1 occurrences of a trait value
-#review_species.1=review_species[,-which(colSums(review_species)<2)] #ncol = 1413
-```
-
-```{r Data - remove zero sum,  include=F, eval=F, echo=F}
-# Remove zero sum columns and rows from the dataframe
-str(review_traits_fix)
-#Remove columns that only contain a single occurrence for a trait, as well as any zero sum rows
-review_traits.1 = review_traits_fix[,-which(colSums(review_traits_fix[,11:ncol(review_traits_fix)])<2)]
-#Not sure why some explanatory variable columns disappear also, so adding them back in:
-review_traits.2 = cbind(review_traits_fix[,1:10], review_traits.1[,4:ncol(review_traits.1)])
-#Then delete rows that sum to zero for the trait occurrences
-review_traits1.0 = review_traits.2[-which(rowSums(review_traits.2[11:ncol(review_traits.2)])==0),] #1099 observations of 1415 traits
-
-#USE THESE SUBSETS
-review_sites1.0 <- review_traits1.0[,1:10]
-review_species1.0 <- review_traits1.0[,11:ncol(review_traits1.0)] #1410 trait columns
-
-```
-
-```{r Data - remove zero variance data}
-
-#I haven't applied this to this analysis, but this is a standard procedure in multivariate stats, to remove columns of data that do not contribute to the variance between groups.
-#Remove variables with zero variance
-#review_data_pca <- review_species_use[,apply(review_species_use, 2, var, na.rm=TRUE) != 0]
-#review_data_pca2 <- review_data_pca[-c(373,496),]
-
-```
-
-
-```{r Data - randomly select among DOIs, include=F, eval=F, echo=F}
-
-#Randomly select studies by DOI
-
-review_traits4.0 = review_traits1.0 %>% 
-   group_by(DOI) %>%
-   sample_n(1)
-#str(review_traits4.0)
-summary(as.factor(review_traits4.0$Filter))
-
-#Because this randomly selects from available DOI's I have run this a few times to view a consensus on the representation of various variables (Ecosystems, Filter, etc.). Some versions appear to have randomly selected too few of a given variable's values
-
-#Save different iterations for reuse in SIMPER and graphs!!!
-
-#Save versions of this
-#write.csv(review_traits4.0, "review_traits4.0.csv")
-#Ecological Fundamental    Physical     Trophic 
-#        109         438          36         144 
-
-#write.csv(review_traits4.0, "review_traits4.0v2.csv")
-# Ecological Fundamental    Physical     Trophic 
-#        125         425          38         139 
-
-#review_sites4.0 <- as.data.frame(review_traits4.0[,1:10])
-#review_species4.0 <- review_traits4.0[,11:ncol(review_traits4.0)] #1410 trait columns
-
-write.csv(review_traits4.0, "review_traits_use.csv")
-
-```
-
-## Start here if using clean data
-
-```{r UPLOAD CLEANED DATA HERE & USE THIS DATA}
+UPLOAD CLEANED DATA HERE & USE THIS DATA
+```{r Initial Dataset}
 
 #Upload selected dataset
 
-review_traits_use <- read_csv("review_traits_use.csv")
+review_traits_use <- read_csv("review_traits4.0V.csv")
 review_traits_use = review_traits_use %>%
   select(DOI:ncol(review_traits_use))
 review_sites_use <- as.data.frame(review_traits_use[,1:10])
 review_species_use <- review_traits_use[,11:ncol(review_traits_use)] #1410 trait columns
 
-str(review_traits_use)
+head(review_traits_use)
+```
+
+```{r Secondary Dataset}
+
+#Upload selected dataset
+
+review_traits_2use <- read_csv("review_traits_2use.csv")
+review_traits_2use = review_traits_2use %>%
+  select(DOI:ncol(review_traits_2use))
+review_sites_2use <- as.data.frame(review_traits_2use[,1:10])
+review_species_2use <- review_traits_2use[,11:ncol(review_traits_2use)] #1410 trait columns
+
+head(review_traits_2use)
+```
+
+```{r Primary Dataset}
+
+#Upload selected dataset
+
+review_traits_1use <- read_csv("review_traits_1use.csv")
+review_traits_1use = review_traits_1use %>%
+  select(DOI:ncol(review_traits_1use))
+review_sites_1use <- as.data.frame(review_traits_1use[,1:10])
+review_species_1use <- review_traits_1use[,11:ncol(review_traits_1use)] #1410 trait columns
+
+head(review_traits_2use)
 ```
 
 ## Summary statistics
@@ -257,12 +164,64 @@ saveRDS(traits_ord_use, "traits_ord_use.rds")
 
 ```
 
-```{r UPLOAD ORDINATION RDS FILE}
 
-traits_ord_use <- readRDS("traits_ord_use.rds")
+### Ordination 2nd
+
+```{r Ordination USE, echo=F, eval=F}
+#Secondary trait classification 
+#ordination based on using no replicates for the study
+traits_ord_2use <- metaMDS(review_species_2use,
+                          distance = "jaccard",
+                          trymax = 1000,
+                          k = 3) #increase trymax = 50
+
+#Based on ordination goodness fit/stress checks, we could use k = 2.
+#Don't want to redo this right now as it will take ~2h to rerun.
+
+plot(traits_ord_2use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+
+saveRDS(traits_ord_2use, "traits_ord_2use.rds")
 
 ```
 
+### Ordination 2nd NF
+
+Note that I ran the ordination for not-filled in data and it was worse than the 2nd classification, so I'm not bothering to include the code here right. Can include upon request.
+
+### Ordination 1ry
+
+```{r Ordination USE, echo=F, eval=F}
+#primary trait classification 
+#ordination based on using no replicates for the study
+traits_ord_1use <- metaMDS(review_species_1use,
+                          distance = "jaccard",
+                          trymax = 1000,
+                          k = 3) #increase trymax = 50
+
+#Based on ordination goodness fit/stress checks, we could use k = 2.
+#Don't want to redo this right now as it will take ~2h to rerun.
+
+plot(traits_ord_1use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+
+saveRDS(traits_ord_1use, "traits_ord_1use.rds")
+
+```
+
+### UPLOAD ORD FILE
+
+--> You can start directly here for further analysis pipeline
+
+```{r UPLOAD ORDINATION RDS FILE}
+
+#Initial dummy data
+traits_ord_use <- readRDS("traits_ord_2use.rds")
+str(trats_ord_use)
+#Secondary trait classification filled in
+#traits_ord_use <- readRDS("traits_ord_2use.rds")
+#primary trait classification filled in
+#traits_ord_use <- readRDS("traits_ord_1use.rds")
+
+```
 
 ## Checking ordination/nMDS output
 This is a helpful tutorial on checking nMDS goodness of fit, model convergence, stress and dimensionality.

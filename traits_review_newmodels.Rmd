@@ -183,64 +183,7 @@ with(dune.env, ordiellipse(mod, Management, label = TRUE))
 ## add
 ```
 
-## Primary trait classification
 
-### Data load and manipulation
-
-```{r Primary data load}
-
-#This contains a cleaned up dataset of several hundred traits that have been "summarised" by a process they model, rather than completely disaggregated unique traits for which we had over 2000
-#Load data
-review_traits_1ry <- read_csv("primary_traits_dummy.csv")
-#Check dataframe
-glimpse(review_traits_1ry)
-
-#summary(as.factor(review_traits_2nd$TOS))
-#Note that there are 4 NA's under type of study and we may need to omit these.
-#summary(as.factor(review_traits_2nd$`Taxonomic`))
-#        Birds         Fish Herpetofauna      Insects      Mammals     Multiple        Other 
-#         155          324           91          339          105          393          230 
-#    Plankton       Plants 
-#          66          614 
-
-#Need to rename Predictive values
-#Need to rename and create some key variables for grouping factors
-```
-
-```{r Primary data manipulation}
-
-#Manipulate data to relabel a couple things
-review_traits_1use = review_traits_1ry %>%
-  group_by(DOI) %>%
-  sample_n(1) %>%
-  dplyr::rename(Predictive = `Forecasting`) %>%
-  mutate(`GlobalChangeCat`=if_else(`GlobalChange`>0, "yes", "no"), 
-         #Add binary column for presence/absence of Global Change Driver
-         `Taxonomic Group`=case_when( 
-           #Note can use case_when() or if_ele() BUT you need to write one for each value and not try to combine them as strings using c()
-           `Taxonomic` == "Mammals" ~ "Vertebrate",
-           `Taxonomic` == "Birds" ~ "Vertebrate",
-           `Taxonomic` == "Fish" ~ "Vertebrate",
-           `Taxonomic` == "Herpetofauna" ~ "Vertebrate",
-           `Taxonomic` == "Plankton" ~ "Invertebrate",
-           `Taxonomic` == "Insects" ~ "Invertebrate",
-           `Taxonomic` == "Multiple" ~ "Multiple",
-           `Taxonomic` == "Other" ~ "Other",
-           `Taxonomic` == "Plants" ~ "Plants")
-         ) %>%
-  select(`DOI`:`Taxonomic`,`Taxonomic Group`,`GlobalChange`,`GlobalChangeCat`,  `Predictive`:`survival`) %>%
-  filter(TOS != "NA")
-
-dim(review_traits_1use)
-
-#These data do not contain zero sum columns or rows
-#CREATE SUBSETS FOR ANALYSES
-review_sites_1ry <- review_traits_1use[,1:10]
-review_species_1ry <- review_traits_1use[,11:ncol(review_traits_1use)] #9 trait columns
-
-#summary(as.factor(review_traits_1ry$TOS))
-
-```
 
 ### Ordination
 

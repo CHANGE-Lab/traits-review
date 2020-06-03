@@ -9,7 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Data manipulation - initial
+# Data manipulation document
+
+## Initial trait data
 
 This document contains code for intial data manipulation March 2020 using large "traits_dummy.csv" df.
 
@@ -89,50 +91,52 @@ review_species1.0 <- review_traits1.0[,11:ncol(review_traits1.0)] #1410 trait co
 ```
 
 ```{r Data 2.0, include=F, eval=F, echo=T}
-
+#DO NOT USE
 #This chunk selects distinct studies by DOI from review_traits1.0, but it doesn't appear to be doing this randomly
+#unique(review_traits1.0$DOI) #705
 
-unique(review_traits1.0$DOI) #705
-
-review_traits2.0 = review_traits1.0 %>%
-  distinct(review_traits1.0$DOI, .keep_all = TRUE) %>%
-  select(DOI:`locomotion and substrate relation total`)
+#review_traits2.0 = review_traits1.0 %>%
+#  distinct(review_traits1.0$DOI, .keep_all = TRUE) %>%
+#  select(DOI:`locomotion and substrate relation total`)
 #Datasets
-review_sites2.0 <- review_traits2.0[,1:10]
-review_species2.0 <- review_traits2.0[,11:ncol(review_traits2.0)] #1410 trait columns
+#review_sites2.0 <- review_traits2.0[,1:10]
+#review_species2.0 <- review_traits2.0[,11:ncol(review_traits2.0)] #1410 trait columns
 #This doesn't appear to have randomly selected studies but instead taken a lot of Abiotic studies
 
 
 ```
 
 ```{r Data 3.0, include=F, eval=F, echo=T}
-
+#DO NOT USE
+#Does not appear to be entirely random
 #Remove any DOI that appeared twice
-review_traits2.5 = review_traits1.0 %>%
-  group_by(DOI) %>% 
-  dplyr::summarize(obs = n())
+#review_traits2.5 = review_traits1.0 %>%
+#  group_by(DOI) %>% 
+#  dplyr::summarize(obs = n())
 
-review_traits2.7 = review_traits1.0 %>%
-  left_join(review_traits2.5) %>%
-  select(DOI, obs, Ecosystem:`Global Change`, `# of eggs or live young`:`locomotion and substrate relation total`) 
+#review_traits2.7 = review_traits1.0 %>%
+#  left_join(review_traits2.5) %>%
+#  select(DOI, obs, Ecosystem:`Global Change`, `# of eggs or live young`:`locomotion and substrate relation total`) 
 
-review_traits3.0 = review_traits2.7 %>%
-  filter(as.numeric(review_traits2.7$obs) == "1")
+#review_traits3.0 = review_traits2.7 %>%
+#  filter(as.numeric(review_traits2.7$obs) == "1")
   
-str(review_traits2.7$obs)
+#str(review_traits2.7$obs)
 #summary(review_traits2.7$obs) #374
 #review_traits2.7$obs <- as.factor(review_traits2.7$obs)
 
 #summary(as.factor(review_traits3.0$Filter))
 
 #Datasets
-review_sites3.0 <- review_traits3.0[,1:11]
-review_species3.0 <- review_traits3.0[,12:ncol(review_traits3.0)] #1410 trait columns
+#review_sites3.0 <- review_traits3.0[,1:11]
+#review_species3.0 <- review_traits3.0[,12:ncol(review_traits3.0)] #1410 trait columns
 
 ```
 
-```{r Data 4.0, include=F, eval=F, echo=T}
+### USE THIS DATA MANIP
 
+```{r Data 4.0, include=F, eval=F, echo=T}
+#USE THESE DATA
 #Randomly select studies by DOI
 
 review_traits4.0 = review_traits1.0 %>% 
@@ -151,11 +155,244 @@ summary(as.factor(review_traits4.0$Filter))
 #        109         438          36         144 
 
 #write.csv(review_traits4.0, "review_traits4.0v2.csv")
+
 # Ecological Fundamental    Physical     Trophic 
 #        125         425          38         139 
 
 review_sites4.0 <- as.data.frame(review_traits4.0[,1:10])
 review_species4.0 <- review_traits4.0[,11:ncol(review_traits4.0)] #1410 trait columns
 
+
+```
+
+
+### Data issues dummy
+
+There are way too many columns. Some thoughts on variable reduction:
+(i) Reduction based on number of occurrences (>0 --> 2400 variables, >1 --> #1411 variables, >2 --> #144 variables)
+(ii) Using fuzzy logic techniques to clean up and combine related variables
+(iii) Manual cleaning
+
+
+
+## Secondary trait classification
+
+### Load and manipulate the data
+
+```{r Secondary Data Load, include=F, eval=F, echo=T}
+#This contains a cleaned up dataset of several hundred traits that have been "summarised" by a process they model, rather than completely disaggregated unique traits for which we had over 2000
+#Load data
+review_traits_2nd <- read_csv("secondary_traits_fill_dummy.csv")
+#Check dataframe
+glimpse(review_traits_2nd)
+
+#summary(as.factor(review_traits_2nd$TOS))
+#Note that there are 4 NA's under type of study and we may need to omit these.
+#summary(as.factor(review_traits_2nd$`Taxonomic`))
+#        Birds         Fish Herpetofauna      Insects      Mammals     Multiple        Other 
+#         155          324           91          339          105          393          230 
+#    Plankton       Plants 
+#          66          614 
+
+#Need to rename Predictive values
+#Need to rename and create some key variables for grouping factors
+```
+
+```{r Secondary Data Manipulation, include=F, eval=F, echo=T}
+
+#Also found a typo, there are probably loads more
+review_traits_2use = review_traits_2nd %>%
+  group_by(DOI) %>%
+  sample_n(1) %>%
+  dplyr::rename(Predictive = `Forecasting`) %>%
+  mutate(`GlobalChangeCat`=if_else(`GlobalChange`>0, "yes", "no"), #Add binary column for presence/absence of Global Change Driver 
+         `TaxonomicGroup`=case_when( #Note can use case_when() or if_ele() BUT you need to write one for each value and not try to combine them as strings using c()
+           `Taxonomic` == "Mammals" ~ "Vertebrate",
+           `Taxonomic` == "Birds" ~ "Vertebrate",
+           `Taxonomic` == "Fish" ~ "Vertebrate",
+           `Taxonomic` == "Herpetofauna" ~ "Vertebrate",
+           `Taxonomic` == "Plankton" ~ "Invertebrate",
+           `Taxonomic` == "Insects" ~ "Invertebrate",
+           `Taxonomic` == "Multiple" ~ "Multiple",
+           `Taxonomic` == "Other" ~ "Other",
+           `Taxonomic` == "Plants" ~ "Plants")
+         ) %>%
+  select(`DOI`:`Taxonomic`,`TaxonomicGroup`,`GlobalChange`,`GlobalChangeCat`,  `Predictive`:`zinc`, -c(`web making`, `diving ability`, `palladium`)) %>%
+  #Can remove: web-building and diving ability are problematic NMDS1 axis #, -c(`web making`, `diving ability`)
+  #Need to leave this in
+  filter(TOS != "NA")
+
+glimpse(review_traits_2use)
+#dim(review_traits_2use) #821 observations and 227 columns after removal of three problem variables
+
+```
+
+```{r Secondary Data Simplification}
+
+# Remove columns and rows that sum to 1 from the dataframe
+
+#Remove columns that only contain a single occurrence for a trait, as well as any zero sum rows
+review_traits_2.1 = review_traits_2use[,which(colSums(review_traits_2use[,11:ncol(review_traits_2use)])>1)]
+#str(review_traits_2.1)
+#NOTE
+#We go from having 220 traits observed to 182 observed more than once.
+#Also note some explanatory variable columns disappear also, so adding them back in:
+review_traits_2.2 = cbind(as.data.frame(review_traits_2use[,1:10]), as.data.frame(review_traits_2.1[,9:ncol(review_traits_2.1)]))
+
+#WTF
+#Error message:
+#number of rows of result is not a multiple of vector length (arg 1)
+#dim(review_traits_2use[,1:10])
+#dim(review_traits_2.1[,9:ncol(review_traits_2.1)])
+#This should fucking work TBH
+#Solved needed to use as.data.frame()
+
+#Then we need to delete rows that sum to zero for the trait occurrences
+review_traits_2.3 = review_traits_2.2[-which(rowSums(review_traits_2.2[,11:ncol(review_traits_2.2)])==0),] #792 observations of 181 variables
+#glimpse(review_traits_2.3)
+
+write.csv(review_traits_2.3, "review_traits_2use.csv")
+
+```
+
+## Secondary traits not-filled
+
+### Load and manipulate the data
+
+```{r Secondary NF Data Load, include=F, eval=F, echo=T}
+#This contains a cleaned up dataset of several hundred traits that have been "summarised" by a process they model, rather than completely disaggregated unique traits for which we had over 2000
+#Load data
+review_traits_NF <- read_csv("secondary_traits_empty_dummy.csv")
+#Check dataframe
+glimpse(review_traits_NF)
+
+summary(as.factor(review_traits_NF$TOS))
+#Note that there are 4 NA's under type of study and we may need to omit these.
+summary(as.factor(review_traits_NF$`Taxonomic`))
+#        Birds         Fish Herpetofauna      Insects      Mammals     Multiple        Other 
+#         155          324           91          339          105          393          230 
+#    Plankton       Plants 
+#          66          614 
+
+```
+
+```{r Secondary Data Manipulation, include=F, eval=F, echo=T}
+
+#Also found a typo, there are probably loads more
+review_traits_NFuse = review_traits_NF %>%
+  group_by(DOI) %>%
+  sample_n(1) %>%
+  dplyr::rename(Predictive = `Forecasting`) %>% #Need to rename Predictive values
+  mutate(`GlobalChangeCat`=if_else(`GlobalChange`>0, "yes", "no"), #Add binary column for presence/absence of Global Change Driver 
+         `PredictiveCat`=if_else(`Predictive`>0, "yes", "no"), ##Add binary column for presence/absence of predictive work 
+         `TaxonomicGroup`=case_when( #Note can use case_when() or if_ele() BUT you need to write one for each value and not try to combine them as strings using c()
+           `Taxonomic` == "Mammals" ~ "Vertebrate",
+           `Taxonomic` == "Birds" ~ "Vertebrate",
+           `Taxonomic` == "Fish" ~ "Vertebrate",
+           `Taxonomic` == "Herpetofauna" ~ "Vertebrate",
+           `Taxonomic` == "Plankton" ~ "Invertebrate",
+           `Taxonomic` == "Insects" ~ "Invertebrate",
+           `Taxonomic` == "Multiple" ~ "Multiple",
+           `Taxonomic` == "Other" ~ "Other",
+           `Taxonomic` == "Plants" ~ "Plants")
+         ) %>%
+  select(`DOI`:`Taxonomic`,`TaxonomicGroup`,`GlobalChange`,`GlobalChangeCat`, `Predictive`, `PredictiveCat`, `TOS`:`filter`, `age`:`zinc`) %>%
+  #Can remove: , -cadmium
+  #Need to leave this in
+  filter(TOS != "NA")
+
+glimpse(review_traits_NFuse)
+#dim(review_traits_2use) #821 observations and 226 columns after removal of three problem variables
+
+```
+
+```{r Secondary Data Simplification}
+
+# Remove columns and rows that sum to 1 from the dataframe
+
+#Remove columns that only contain a single occurrence for a trait, as well as any zero sum rows
+review_traits_NF2.1 = review_traits_NFuse[,which(colSums(review_traits_NFuse[,12:ncol(review_traits_NFuse)])>1)]
+str(review_traits_NF2.1)
+#cadmium removed
+
+#Also note some explanatory variable columns disappear also, so adding them back in:
+review_traits_NF2.2 = cbind(as.data.frame(review_traits_NFuse[,1:11]), as.data.frame(review_traits_NF2.1[,10:ncol(review_traits_NF2.1)]))
+
+#Then we need to delete rows that sum to zero for the trait occurrences
+review_traits_NF2.3 = review_traits_NF2.2[-which(rowSums(review_traits_NF2.2[,12:ncol(review_traits_NF2.2)])==0),] #792 observations of 181 variables
+glimpse(review_traits_NF2.3)
+
+write.csv(review_traits_NF2.3, "review_traits_NFuse.csv")
+
+```
+
+## Primary trait classification
+
+### Data load and manipulation
+
+```{r Primary data load}
+
+#This contains a cleaned up dataset of several hundred traits that have been "summarised" by a process they model, rather than completely disaggregated unique traits for which we had over 2000
+#Load data
+review_traits_1ry <- read_csv("primary_traits_dummy.csv")
+#Check dataframe
+glimpse(review_traits_1ry)
+
+#summary(as.factor(review_traits_2nd$TOS))
+#Note that there are 4 NA's under type of study and we may need to omit these.
+#summary(as.factor(review_traits_2nd$`Taxonomic`))
+#        Birds         Fish Herpetofauna      Insects      Mammals     Multiple        Other 
+#         155          324           91          339          105          393          230 
+#    Plankton       Plants 
+#          66          614 
+
+#Need to rename Predictive values
+#Need to rename and create some key variables for grouping factors
+```
+
+```{r Primary data manipulation}
+
+#Manipulate data to relabel a couple things
+review_traits_1use = review_traits_1ry %>%
+  group_by(DOI) %>%
+  sample_n(1) %>%
+  dplyr::rename(Predictive = `Forecasting`) %>%
+  mutate(`GlobalChangeCat`=if_else(`GlobalChange`>0, "yes", "no"), 
+         #Add binary column for presence/absence of Global Change Driver
+         `Taxonomic Group`=case_when( 
+           #Note can use case_when() or if_ele() BUT you need to write one for each value and not try to combine them as strings using c()
+           `Taxonomic` == "Mammals" ~ "Vertebrate",
+           `Taxonomic` == "Birds" ~ "Vertebrate",
+           `Taxonomic` == "Fish" ~ "Vertebrate",
+           `Taxonomic` == "Herpetofauna" ~ "Vertebrate",
+           `Taxonomic` == "Plankton" ~ "Invertebrate",
+           `Taxonomic` == "Insects" ~ "Invertebrate",
+           `Taxonomic` == "Multiple" ~ "Multiple",
+           `Taxonomic` == "Other" ~ "Other",
+           `Taxonomic` == "Plants" ~ "Plants")
+         ) %>%
+  select(`DOI`:`Taxonomic`,`Taxonomic Group`,`GlobalChange`,`GlobalChangeCat`,  `Predictive`:`survival`) %>%
+  filter(TOS != "NA")
+
+dim(review_traits_1use)
+
+#These data do not contain zero sum columns or rows
+#CREATE SUBSETS FOR ANALYSES
+#review_sites_1ry <- review_traits_1use[,1:10]
+#review_species_1ry <- review_traits_1use[,11:ncol(review_traits_1use)] #9 trait columns
+
+write.csv(review_traits_1use, "review_traits_1use.csv")
+
+```
+
+### For analyses
+Potential data manipulation
+
+```{r Data - remove zero variance data}
+
+#I haven't applied this to this analysis, but this is a standard procedure in multivariate stats, to remove columns of data that do not contribute to the variance between groups.
+#Remove variables with zero variance
+#review_data_pca <- review_species_use[,apply(review_species_use, 2, var, na.rm=TRUE) != 0]
+#review_data_pca2 <- review_data_pca[-c(373,496),]
 
 ```
