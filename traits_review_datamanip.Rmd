@@ -385,6 +385,65 @@ write.csv(review_traits_1use, "review_traits_1use.csv")
 
 ```
 
+## Summary statistics
+
+```{r Summary stats for MS text}
+
+#Global change assessed?
+stat_gc <- summary(as.factor(review_traits1.0$`Global Change`))
+#Original data
+# no yes 
+#871 253 
+
+253*100/(871+253) #22.5089%
+
+stat_gc2 = stat_gc %>%
+  rename("GC" = stat_gc[,1], "Number" = stat_gc[,2])
+  mutate(percent = )
+
+#Global change driver?
+summary(as.factor(review_traits1.0$`Global Change Driver`))
+#Original data
+#                   0         Climate Change           Exploitation    Global Change Broad Global Change Multiple 
+#                   871                     58                     10                     37                      9 
+#   Habitat Degredation               Invasion 
+#                    88                     51
+
+#Climate change       #5.160142 %
+(58)*100/(871+253)
+#Multiple             #4.092527 %
+(37+9)*100/(871+253)
+#Habitat degradation  #7.829181 %
+(88)*100/(871+253) 
+#Invasion             #4.537367 %
+(51)*100/(871+253)
+#Exploitation         #0.8896797 %
+(10)*100/(871+253)
+
+
+#Ecosystem assessed
+summary(as.factor(review_traits1.0$Ecosystem))
+#Original data
+#      Broad  Freshwater      Marine Terrestrial 
+#         54         222         142         706 
+
+#Broad
+#Freshwater
+#Marine
+
+#Type of Study
+summary(as.factor(review_traits_use$TOS))
+#Reduced data
+# Experiment   Metanalysis Observational        Review        TModel 
+#           63            19           536            79            30 
+
+#Original data
+# Experiment   Metanalysis Observational        Review        TModel 
+#           90            30           829           118            57 
+
+```
+
+
 ### For analyses
 Potential data manipulation
 

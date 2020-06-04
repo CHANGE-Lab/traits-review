@@ -1,14 +1,11 @@
 ---
-title: "trait_review_nmds"
+title: "traits_review_nmds_1"
 author: "Natasha Hardy"
-date: "March 10, 2020"
-output:
-  word_document: default
-  pdf_document: default
-  html_document: default
+date: "03/06/2020"
+output: html_document
 ---
 
-```{r Setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -51,37 +48,23 @@ library(goeveg)
 
 ```
 
-
 ## UPLOAD CLEAN DATA FROM REPO
 
 UPLOAD CLEANED DATA HERE & USE THIS DATA
 
-```{r Initial Dataset}
+
+```{r Primary Dataset}
 
 #Upload selected dataset
 
-review_traits_use <- read_csv("review_traits4.0V.csv")
-review_traits_use = review_traits_use %>%
-  select(DOI:ncol(review_traits_use))
-review_sites_use <- as.data.frame(review_traits_use[,1:10])
-review_species_use <- review_traits_use[,11:ncol(review_traits_use)] #1410 trait columns
+review_traits_1use <- read_csv("review_traits_1use.csv")
+review_traits_1use = review_traits_1use %>%
+  select(DOI:ncol(review_traits_1use))
+review_sites_1use <- as.data.frame(review_traits_1use[,1:10])
+review_species_1use <- review_traits_1use[,11:ncol(review_traits_1use)] #1410 trait columns
 
-head(review_traits_use)
+head(review_traits_1use)
 ```
-
-```{r Secondary Dataset}
-
-#Upload selected dataset
-
-review_traits_2use <- read_csv("review_traits_2use.csv")
-review_traits_2use = review_traits_2use %>%
-  select(DOI:ncol(review_traits_2use))
-review_sites_2use <- as.data.frame(review_traits_2use[,1:10])
-review_species_2use <- review_traits_2use[,11:ncol(review_traits_2use)] #1410 trait columns
-
-head(review_traits_2use)
-```
-
 
 ## Ordinations
 
@@ -89,51 +72,25 @@ Using Jaccard dissimilarity for binary data.
 
 Note that the stress decreases as we decrease the number of observations, however, I'm concerned that it becomes so low as to indicate that we do not have enough observations vs. traits (data are too wide because #traits > # obs)
 
-```{r Ordination USE, echo=F, eval=F}
-#Don't run, run time = 3h
-
-#Second ordination based on using no replicates for the study
-#traits_ord_use <- metaMDS(review_species_use,
-#                          distance = "jaccard",
-#                          trymax = 1000,
-#                          k = 3) #increase trymax = 50
-
-#Based on ordination goodness fit/stress checks, we could use k = 2.
-#Don't want to redo this right now as it will take ~2h to rerun.
-
-plot(traits_ord_use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
-
-#saveRDS(traits_ord_use, "traits_ord_use.rds")
-
-```
-
-
-### Ordination 2nd
+### Ordination 1ry
 
 ```{r Ordination USE, echo=F, eval=F}
 #Don't run, run time = 3h
 
-#Ordination on secondary trait classification 
-
-#traits_ord_2use <- metaMDS(review_species_2use,
-#                          distance = "jaccard",
-#                          trymax = 1000,
-#                          k = 3) #increase trymax = 50
+#Ordination on primary trait classification 
+traits_ord_1use <- metaMDS(review_species_1use,
+                          distance = "jaccard",
+                          trymax = 1000,
+                          k = 3) #increase trymax = 50
 
 #Based on ordination goodness fit/stress checks, we could use k = 2.
 #Don't want to redo this right now as it will take ~2h to rerun.
 
-plot(traits_ord_2use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+plot(traits_ord_1use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
 
-#saveRDS(traits_ord_2use, "traits_ord_2use.rds")
+saveRDS(traits_ord_1use, "traits_ord_1use.rds")
 
 ```
-
-### Ordination 2nd NF
-
-Note that I ran the ordination for not-filled in data and it was worse than the 2nd classification, so I'm not bothering to include the code here right. Can include upon request.
-
-
 
 ### UPLOAD ORD FILE
 
@@ -141,14 +98,8 @@ Note that I ran the ordination for not-filled in data and it was worse than the 
 
 ```{r UPLOAD ORDINATION RDS FILE}
 
-#Initial dummy data
-#traits_ord_use <- readRDS("traits_ord_use.rds")
-#View(traits_ord_use)
-
-#Secondary trait classification filled in
-#traits_ord_use <- readRDS("traits_ord_2use.rds")
 #primary trait classification filled in
-traits_ord <- readRDS("traits_ord_1use.rds")
+traits_ord_1use <- readRDS("traits_ord_1use.rds")
 
 ```
 
@@ -162,16 +113,16 @@ For the primary traits dataset - the inflection point on the stress vs dimension
 ```{r Ordination - checks}
 #Run this for each ordination
 #Check fit
-gof <- goodness(traits_ord_use)
+gof <- goodness(traits_ord)
 
 #Can visualise goodness of fit
-stressplot(traits_ord_use, pch = 19, cex=0.75, l.col = "tomato", p.col = "skyblue")
+stressplot(traits_ord, pch = 19, cex=0.75, l.col = "tomato", p.col = "skyblue")
 
 #Now, we will be computing the stress for the dimensions 1, 2, 3, 4, 5, …. and explain how many dimensions are required to obtain a good fit.
 #REMEMBER TO ADJUST THE INITIAL SP MATRIX
 stress_vec <- numeric(10)
 for(i in seq(10)){
-  stress_vec[i] <- metaMDS(review_species_use,
+  stress_vec[i] <- metaMDS(review_species_1use,
                           distance = "jaccard",
                           k=i)$stress
 }
@@ -212,13 +163,13 @@ For calculating data and treatment scores, and convex hulls around datapoints.
 #Extract NMDS coordinates and associate with co-variates/grouping factors
 
 #Using the scores function from vegan to extract the site scores and convert to a data.frame
-data.scores <- as.data.frame(scores(traits_ord_use))  
+data.scores <- as.data.frame(scores(traits_ord_1use))  
 
 #create a column of site names, from the rownames of data.scores
 data.scores$points <- rownames(data.scores)
 
 #bind treatment labels and score values
-treatment.scores <- cbind(review_sites_use, data.scores)
+treatment.scores <- cbind(review_sites_1use, data.scores)
 
 #Check
 str(treatment.scores)  
@@ -232,16 +183,16 @@ For each ordination and set of grouping variables input to data scores chunk
 ```{r Convex hulls - Global Change}
 #Global Change yes/no
 #Create convex hulls for the space occupied by Global Change yes/no
-unique(treatment.scores$`Global Change`) #no/yes
-treatment.scores$`Global Change` <- as.factor(treatment.scores$`Global Change`)
-summary(treatment.scores$`Global Change`)
-levels(treatment.scores$`Global Change`)[levels(treatment.scores$`Global Change`)=="no"] <- "No"
-levels(treatment.scores$`Global Change`)[levels(treatment.scores$`Global Change`)=="yes"] <- "Yes"
+unique(treatment.scores$`GlobalChangeCat`) #no/yes
+treatment.scores$`GlobalChangeCat` <- as.factor(treatment.scores$`GlobalChangeCat`)
+summary(treatment.scores$`GlobalChangeCat`)
+levels(treatment.scores$`GlobalChangeCat`)[levels(treatment.scores$`GlobalChangeCat`)=="no"] <- "No"
+levels(treatment.scores$`GlobalChangeCat`)[levels(treatment.scores$`GlobalChangeCat`)=="yes"] <- "Yes"
 
 #Yes
-grp.climyes <- treatment.scores[treatment.scores$`Global Change` == "Yes", ][chull(treatment.scores[treatment.scores$`Global Change` == "yes", c("NMDS1", "NMDS2")]), ] 
+grp.climyes <- treatment.scores[treatment.scores$`GlobalChangeCat` == "Yes", ][chull(treatment.scores[treatment.scores$`GlobalChangeCat` == "Yes", c("NMDS1", "NMDS2")]), ] 
 #No
-grp.climno <- treatment.scores[treatment.scores$`Global Change` == "No", ][chull(treatment.scores[treatment.scores$`Global Change` == "no", c("NMDS1", "NMDS2")]), ] 
+grp.climno <- treatment.scores[treatment.scores$`GlobalChangeCat` == "No", ][chull(treatment.scores[treatment.scores$`GlobalChangeCat` == "No", c("NMDS1", "NMDS2")]), ] 
 
 #combine the hull data
 hull.data.clim <- rbind(grp.climyes, grp.climno)  
@@ -251,52 +202,46 @@ str(hull.data.clim)
 ```{r Convex hulls - Global Change Driver}
 #Global Change Drivers
 #Create convex hulls for the space occupied by each Global Change Driver
-unique(treatment.scores$`Global Change Driver`)
+unique(treatment.scores$`GlobalChange`)
 
 #Change driver labels
-treatment.scores$`Global Change Driver` <- as.factor(treatment.scores$`Global Change Driver`)
-summary(treatment.scores$`Global Change Driver`)
+treatment.scores$`GlobalChange` <- as.factor(treatment.scores$`GlobalChange`)
+summary(treatment.scores$`GlobalChange`)
 
-treatment.scores$`Global Change Driver` <- as.factor(treatment.scores$`Global Change Driver`)
-levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)==0] <- "Not assessed"
-levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)=="Global Change Broad"] <- "Multiple"
-levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)=="Global Change Multiple"] <- "Multiple"
-levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)=="Habitat Degredation"] <- "Habitat loss"
-levels(treatment.scores$`Global Change Driver`)[levels(treatment.scores$`Global Change Driver`)=="Climate Change"] <- "Climate change"
+levels(treatment.scores$`GlobalChange`)[levels(treatment.scores$`GlobalChange`)==0] <- "Not assessed"
+levels(treatment.scores$`GlobalChange`)[levels(treatment.scores$`GlobalChange`)=="Global Change Broad"] <- "Multiple"
+levels(treatment.scores$`GlobalChange`)[levels(treatment.scores$`GlobalChange`)=="Global Change Multiple"] <- "Multiple"
+levels(treatment.scores$`GlobalChange`)[levels(treatment.scores$`GlobalChange`)=="Habitat Degredation"] <- "Habitat loss"
+levels(treatment.scores$`GlobalChange`)[levels(treatment.scores$`GlobalChange`)=="Climate Change"] <- "Climate change" #for some reason we need to run this row, probably because it's a compound name
 
 #Global Change Drivers - hull loop
-gcd = as.character(unique(treatment.scores$`Global Change Driver`))
+gcd = as.character(unique(treatment.scores$`GlobalChange`))
 for(i in 1:length(gcd)) {
   temp = gcd[i]
-  df = treatment.scores[treatment.scores$`Global Change Driver` == temp, ][chull(treatment.scores[treatment.scores$`Global Change Driver` == temp, c("NMDS1", "NMDS2")]), ]
+  df = treatment.scores[treatment.scores$`GlobalChange` == temp, ][chull(treatment.scores[treatment.scores$`GlobalChange` == temp, c("NMDS1", "NMDS2")]), ]
   assign(paste0('grp.',temp), df)
 }
 
 #combine the hull data
 hull.data.gcd <- rbind(`grp.Not assessed`,`grp.Climate change`, grp.Exploitation, grp.Multiple, `grp.Habitat loss`, grp.Invasion)  
+
 str(hull.data.gcd)
 
 ```
 
 ```{r Convex hulls - Filter}
 # Level of filtering
+str(treatment.scores)
 
-#Make following value changes
-#"Fundamental" --> Abiotic
-#"Physical" --> Dispersal 
-#"Ecological"  --> Biotic
-#"Trophic" = "Trophic"
-treatment.scores$Filter <- as.factor(treatment.scores$Filter)
-levels(treatment.scores$Filter)[levels(treatment.scores$Filter)=="Fundamental"] <- "Abiotic"
-levels(treatment.scores$Filter)[levels(treatment.scores$Filter)=="Physical"] <- "Dispersal"
-levels(treatment.scores$Filter)[levels(treatment.scores$Filter)=="Ecological"] <- "Biotic"
+treatment.scores$filter <- as.factor(treatment.scores$filter)
+unique(treatment.scores$filter) #values have been changed in original df
 
 #Create convex hulls for the space occupied by each Type of study
 #Hull loop
-filt = as.character(unique(treatment.scores$Filter))
+filt = as.character(unique(treatment.scores$filter))
 for(i in 1:length(filt)) {
   temp = filt[i]
-  df = treatment.scores[treatment.scores$Filter == temp, ][chull(treatment.scores[treatment.scores$Filter == temp, c("NMDS1", "NMDS2")]), ]
+  df = treatment.scores[treatment.scores$filter == temp, ][chull(treatment.scores[treatment.scores$filter == temp, c("NMDS1", "NMDS2")]), ]
   assign(paste0('grp.',temp), df)
 }
 
@@ -336,9 +281,7 @@ str(hull.data.predict)
 ```{r Convex hulls - Type of Study}
 # Type of study
 unique(treatment.scores$TOS)
-#TModel --> Theory
-treatment.scores$TOS <- as.factor(treatment.scores$TOS)
-levels(treatment.scores$TOS)[levels(treatment.scores$TOS)=="TModel"] <- "Theory"
+
 #Create convex hulls for the space occupied by each Type of study
 #Hull loop
 tos = as.character(unique(treatment.scores$TOS))
@@ -349,7 +292,26 @@ for(i in 1:length(tos)) {
 }
 
 #combine the hull data
-hull.data.tos <- rbind(grp.Observational, grp.Experiment, grp.Metanalysis, grp.Theory, grp.Review)  
+hull.data.tos <- rbind(grp.Observational, grp.Experiment, grp.Metanalysis, grp.Theoretical, grp.Review)  
+
+```
+
+```{r Convex hulls - TT}
+# Type of study
+unique(treatment.scores$TT)
+
+#Create convex hulls for the space occupied by each Type of study
+#Hull loop
+tt = as.character(unique(treatment.scores$TT))
+for(i in 1:length(tt)) {
+  temp = tt[i]
+  df = treatment.scores[treatment.scores$TT == temp, ][chull(treatment.scores[treatment.scores$TT == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp.',temp), df)
+}
+
+#combine the hull data
+hull.data.tt <- rbind(grp.Morphological, grp.Behavioural, `grp.Life History`, grp.Physiological)  
+
 ```
 
 ```{r Convex hulls - Ecosystem}
@@ -364,7 +326,7 @@ grp.f <- treatment.scores[treatment.scores$Ecosystem == "Freshwater", ][chull(tr
 #Marine
 grp.m <- treatment.scores[treatment.scores$Ecosystem == "Marine", ][chull(treatment.scores[treatment.scores$Ecosystem == "Marine", c("NMDS1", "NMDS2")]), ]
 #Broad
-grp.b <- treatment.scores[treatment.scores$Ecosystem == "Broad", ][chull(treatment.scores[treatment.scores$Ecosystem == "Broad", c("NMDS1", "NMDS2")]), ]
+grp.b <- treatment.scores[treatment.scores$Ecosystem == "Multiple", ][chull(treatment.scores[treatment.scores$Ecosystem == "Multiple", c("NMDS1", "NMDS2")]), ]
 
 #combine the hull data
 hull.data.ecos <- rbind(grp.t, grp.f, grp.m, grp.b)  
@@ -426,9 +388,9 @@ head(hull.data.taxon)
 
 trait_nMDS_clim <- ggplot() + 
   geom_polygon(data=hull.data.gcd, 
-               aes(x=NMDS1,y=NMDS2, fill= fct_relevel(`Global Change Driver`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation"), 
-                   group=fct_relevel(`Global Change Driver`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation")), alpha=0.30) + # add the convex hulls
-  geom_point(data=treatment.scores, aes(x=NMDS1,y=NMDS2, colour = fct_relevel(`Global Change Driver`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation")), size=2) + # add the point markers
+               aes(x=NMDS1,y=NMDS2, fill= fct_relevel(`GlobalChange`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation"), 
+                   group=fct_relevel(`GlobalChange`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation")), alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores, aes(x=NMDS1,y=NMDS2, colour = fct_relevel(`GlobalChange`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation")), size=2) + # add the point markers
   coord_equal() +
   theme_bw()  +
   theme(axis.text.x = element_blank(),  # remove x-axis text
@@ -460,8 +422,8 @@ ggsave("trait_nMDS_clim.jpeg", plot = trait_nMDS_clim, width = 8, height = 8, dp
 #nMDS plot for the level of ecological filtering for which traits were applied
 
 trait_nMDS_filt <- ggplot() + 
-  geom_polygon(data=hull.data.filt,aes(x=NMDS1, y=NMDS2, fill= fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic"), group=fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic")),alpha=0.30) + # add the convex hulls
-  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic")), size=2) + # add the point markers
+  geom_polygon(data=hull.data.filt,aes(x=NMDS1, y=NMDS2, fill= fct_relevel(filter, "Abiotic", "Biotic", "Dispersal", "Trophic"), group=fct_relevel(filter, "Abiotic", "Biotic", "Dispersal", "Trophic")),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_relevel(filter, "Abiotic", "Biotic", "Dispersal", "Trophic")), size=2) + # add the point markers
   coord_equal() +
   theme_bw()  +
   theme(plot.title=element_text(face="bold", size=18), # hjust = 0.05, vjust = -1 # margin = margin(t = 5, b = -25)
@@ -526,8 +488,8 @@ ggsave("trait_nMDS_predict.jpeg", plot = trait_nMDS_predict, width = 8, height =
 #nMDS plot for the type of study
 
 trait_nMDS_tos <- ggplot() + 
-  geom_polygon(data=hull.data.tos,aes(x=NMDS1,y=NMDS2,fill=fct_relevel(TOS, "Observational", "Experiment", "Metanalysis", "Review", "Theory"),group=fct_relevel(TOS, "Observational", "Experiment", "Metanalysis", "Review", "Theory")),alpha=0.30) + # add the convex hulls
-  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_relevel(TOS, "Observational", "Experiment", "Metanalysis", "Review", "Theory")), size=2) + # add the point markers
+  geom_polygon(data=hull.data.tos,aes(x=NMDS1,y=NMDS2,fill=fct_relevel(TOS, "Observational", "Experiment", "Metanalysis", "Review", "Theoretical"),group=fct_relevel(TOS, "Observational", "Experiment", "Metanalysis", "Review", "Theoretical")),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_relevel(TOS, "Observational", "Experiment", "Metanalysis", "Review", "Theoretical")), size=2) + # add the point markers
   coord_equal() +
   theme_bw()  +
   theme(axis.text.x = element_blank(),  # remove x-axis text
@@ -621,6 +583,7 @@ ggsave("trait_nMDS_taxgrp.jpeg", plot = trait_nMDS_taxgrp, width = 8, height = 8
 ```
 
 ### EXTRA Taxonomic (Specific)
+Didn't run this.
 
 ```{r nMDS Taxonomic specific, echo=TRUE}
 #nMDS plot for the specific taxonomic group studied
@@ -662,93 +625,12 @@ https://wilkelab.org/cowplot/articles/aligning_plots.html
 #All 6 panels, grey background
 review_nMDS_6 = plot_grid(trait_nMDS_clim, trait_nMDS_filt, trait_nMDS_predict, trait_nMDS_tos, trait_nMDS_ecos, trait_nMDS_taxgrp, labels = c("A", "B", "C", "D", "E", "F"), label_x = 0.12, vjust = 3.5, ncol = 2, rel_widths = c(1, 1), align = "v") #hjust = -7.5, label_x = c(0.12, 0.12, 0.12, 0.12, 0.12, 0.12)
 review_nMDS_6
-ggsave("review_nMDS_6whitelab.jpeg", plot = review_nMDS_6, width = 12, height = 10, dpi = 300)
+ggsave("review_nMDS_primary6.jpeg", plot = review_nMDS_6, width = 12, height = 10, dpi = 300)
 
-
+#Alternative panel arrangements
 #All 4 panels, grey background
-review_nMDS_4 = plot_grid(trait_nMDS_clim, trait_nMDS_filt, trait_nMDS_tos, trait_nMDS_ecos, labels = c("A", "B", "C", "D"), label_x = 0.10, vjust = 3.1, ncol = 2, rel_widths = c(1, 1),  align = "v")
-review_nMDS_4
-ggsave("review_nMDS_4whitelab.jpeg", plot = review_nMDS_4, width = 12, height = 7, dpi = 300)
+#review_nMDS_4 = plot_grid(trait_nMDS_clim, trait_nMDS_filt, trait_nMDS_tos, trait_nMDS_ecos, labels = c("A", "B", "C", "D"), label_x = 0.10, vjust = 3.1, ncol = 2, rel_widths = c(1, 1),  align = "v")
+#review_nMDS_4
+#ggsave("review_nMDS_4whitelab.jpeg", plot = review_nMDS_4, width = 12, height = 7, dpi = 300)
 
 ```
-
-#Useful for troubleshoot legend alignment
-https://github.com/wilkelab/cowplot/issues/33
-
-## Simper Analyses
-##Similarity Percentage Analysis
-
-Understanding the output in a nutshell:
-https://rdrr.io/rforge/vegan/man/simper.html
-
-Notes from rdocumentation: https://www.rdocumentation.org/packages/vegan/versions/2.4-2/topics/simper
-
-The simper functions performs pairwise comparisons of groups of sampling units and finds the average contributions of each species to the average overall Bray-Curtis dissimilarity.
-
-The function displays most important species for each pair of groups. These species contribute at least to 70 % of the differences between groups. The function returns much more extensive results which can be accessed directly from the result object (see section Value). Function summary transforms the result to a list of data frames. With argument ordered = TRUE the data frames also include the cumulative contributions and are ordered by species contribution.
-
-The results of simper can be very difficult to interpret. The method very badly confounds the mean between group differences and within group variation, and seems to single out variable species instead of distinctive species (Warton et al. 2012). Even if you make groups that are copies of each other, the method will single out species with high contribution, but these are not contributions to non-existing between-group differences but to within-group variation in species abundance.
-
-Most of the code for saved SIMPER files are currently on PACIFIC computer.
-
-```{r SIMPER Ecosystem, eval=F, echo=T}
-
-simper_ecos <- simper(review_species_use, review_sites_use$Ecosystem, permutations = 1000)
-
-summary(simper_ecos)
-
-```
-
-```{r SIMPER Filter, eval=F, echo=T}
-
-simper_filter <- simper(review_species_use, review_sites_use$Filter, permutations = 1000)
-
-summary_filter <- summary(simper_filter, ordered=TRUE)
-
-#Tried and failed to create multi-sheet xlsx document out of SIMPER output
-#str(summary_filter)
-#str(simper_filter)
-
-#write.csv(simper_filter$Fundamental_Ecological, "SIMPER_Filter_Fundamental_Ecological.csv")
-
-#output <- 1
-#for (i in length(summary_filter)){
-#   write.xlsx(x=summary_filter[[i]],file="summary_filter.xlsx", sheetName=paste("sheet",output,sep=""),append=T)
-#   output <- output + 1
-#}
-
-```
-
-```{r SIMPER Global Change, eval=F, echo=T}
-
-simper_gc <- simper(review_species_use, review_sites_use$`Global Change`, permutations = 1000)
-
-summary(simper_gc)
-
-```
-
-```{r SIMPER Type of Study, eval=F, echo=T}
-
-simper_tos <- simper(review_species_use, review_sites_use$TOS, permutations = 1000)
-
-summary(simper_tos)
-
-```
-
-## Don't run code below here
-
-```{r Gg.arrange plot merging, include=F, eval=F, echo=T}
-
-#Potential gg.arrange work around
-#gP <- ggplotGrob(trait_nMDS_clim)
-#gQ <- ggplotGrob(trait_nMDS_ecos)
-#review_grid = grid::grid.newpage(); grid.arrange(rbind(gQ, gP))
-#ggexport(review_grid, filename = "review_grid.jpeg")
-
-
-
-```
-
-
-#Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-#`eval = FALSE` ...
