@@ -232,7 +232,7 @@ glimpse(review_traits_2use)
 # Remove columns and rows that sum to 1 from the dataframe
 
 #Remove columns that only contain a single occurrence for a trait, as well as any zero sum rows
-review_traits_2.1 = review_traits_2use[,which(colSums(review_traits_2use[,11:ncol(review_traits_2use)])>1)]
+review_traits_2.1 = review_traits_2use[,which(colSums(review_traits_2use[,11:ncol(review_traits_2use)])>8)]
 #str(review_traits_2.1)
 #NOTE
 #We go from having 220 traits observed to 182 observed more than once.
@@ -251,7 +251,7 @@ review_traits_2.2 = cbind(as.data.frame(review_traits_2use[,1:10]), as.data.fram
 review_traits_2.3 = review_traits_2.2[-which(rowSums(review_traits_2.2[,11:ncol(review_traits_2.2)])==0),] #792 observations of 181 variables
 #glimpse(review_traits_2.3)
 
-write.csv(review_traits_2.3, "review_traits_2use.csv")
+write.csv(review_traits_2.3, "review_traits_2use8.csv")
 
 ```
 

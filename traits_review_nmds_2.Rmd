@@ -54,19 +54,20 @@ library(gridExtra)
 
 ### Start here if using clean data
 
+Note to vary the df you want to upload but to also rename any output so you don't write over previous figures or ordinations
+
 ```{r UPLOAD CLEANED DATA HERE & USE THIS DATA}
 #Reload cleaned data here
-#review_traits_2use <- read_csv("review_traits_2use.csv")
-#review_traits_2use = review_traits_2use %>% select(DOI:ncol(review_traits_2use))
+#review_traits_2use <- read_csv("review_traits_2use6.csv")
+
+review_traits_2 = read_csv("review_traits_2use30.csv") %>%
+  select(DOI:ncol(.))
 
 #USE THESE SUBSETS
-#replace with review_traits_2use if loading data in otherwise take df name from simplification chunk above
-review_sites_2nd <- as.data.frame(review_traits_2.3[,1:10]) #792 observations & 10 co-variates 
-review_species_2nd <- review_traits_2.3[,11:ncol(review_traits_2.3)] #171 trait columns 792 observations
-str(review_species_2nd)
-#Make sure this is recording presence absences
-review_species_2ndPA = review_species_2nd
-review_species_2ndPA[review_species_2ndPA>0] = 1
+
+review_sites_2nd <- as.data.frame(review_traits_2[,1:10]) #140 observations & 10 co-variates 
+review_species_2nd <- review_traits_2[,11:ncol(review_traits_2)] #7 trait columns 140 obs observations
+#str(review_species_2nd)
 
 ```
 
@@ -78,18 +79,21 @@ Need to check and validate k and stress.
 
 ```{r Ordination, echo=F, eval=F}
 #Second ordination based on using no replicates for the study
-traits_ord_2use <- metaMDS(review_species_2ndPA,
+traits_ord_2 <- metaMDS(review_species_2nd,
                           distance = "jaccard",
                           trymax = 20, #need to increase to 1000
                           k = 3) #increase trymax = 50
 
 #Based on ordination goodness fit/stress checks, we could use k = 2 --> Double check for new data
+#When using the _2use9 dataset we get the following error message:
+#stress is (nearly) zero: you may have insufficient data
 
-plot(traits_ord_2use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+plot(traits_ord_2) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
 
-ordiplot(traits_ord_2use, type = "none") #creates blank plot
-orditorp(traits_ord_2use, display = "species", col = "red", air=0.01) #labels traits
-orditorp(traits_ord_2use, display = "sites", col = "black", air=0.01) #labels traits
+#Plot sites (row numbers) and species (traits) as labels
+ordiplot(traits_ord_2, type = "none") #creates blank plot
+orditorp(traits_ord_2, display = "species", col = "black", air=0.01) #labels traits
+orditorp(traits_ord_2, display = "sites", col = "red", air=0.01) #labels traits
 
 #ID'ed two traits that are outliers = diving ability and web building
 #Need to remove these
@@ -116,7 +120,9 @@ traits_ord_2use <- readRDS("traits_ord_2use.rds")
 
 ```
 
+### Ordination 2nd NF
 
+Note that I ran the ordination for not-filled in data and it was worse than the 2nd classification, so I'm not bothering to include the code here right. Can include upon request.
 
 ## Start here if using clean data
 

@@ -59,7 +59,7 @@ UPLOAD CLEANED DATA HERE & USE THIS DATA
 
 review_traits_1use <- read_csv("review_traits_1use.csv")
 review_traits_1use = review_traits_1use %>%
-  select(DOI:ncol(review_traits_1use))
+  select(DOI:ncol(.))
 review_sites_1use <- as.data.frame(review_traits_1use[,1:10])
 review_species_1use <- review_traits_1use[,11:ncol(review_traits_1use)] #1410 trait columns
 
@@ -87,6 +87,12 @@ traits_ord_1use <- metaMDS(review_species_1use,
 #Don't want to redo this right now as it will take ~2h to rerun.
 
 plot(traits_ord_1use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+
+#Plot sites (row numbers) and species (traits) as labels
+ordiplot(traits_ord_1use, type = "none") #creates blank plot
+orditorp(traits_ord_1use, display = "species", col = "black", air=0.01) #labels traits
+orditorp(traits_ord_1use, display = "sites", col = "red", air=0.01) #labels traits
+
 
 saveRDS(traits_ord_1use, "traits_ord_1use.rds")
 
@@ -582,15 +588,14 @@ ggsave("trait_nMDS_taxgrp.jpeg", plot = trait_nMDS_taxgrp, width = 8, height = 8
 
 ```
 
-### EXTRA Taxonomic (Specific)
-Didn't run this.
+### G/ Trait type
 
 ```{r nMDS Taxonomic specific, echo=TRUE}
 #nMDS plot for the specific taxonomic group studied
 
-trait_nMDS_taxon <- ggplot() + 
-  geom_polygon(data=hull.data.taxon,aes(x=NMDS1,y=NMDS2, fill= `Taxonomic`, group= `Taxonomic`),alpha=0.30) + # add the convex hulls
-  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = `Taxonomic`), size=2) + # add the point markers
+trait_nMDS_tt <- ggplot() + 
+  geom_polygon(data=hull.data.tt,aes(x=NMDS1,y=NMDS2, fill= `TT`, group= `TT`),alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = `TT`), size=2) + # add the point markers
   coord_equal() +
   theme_bw()  +
   theme(axis.text.x = element_blank(),  # remove x-axis text
@@ -604,10 +609,10 @@ trait_nMDS_taxon <- ggplot() +
         panel.grid.major = element_blank(),  #remove major-grid labels
         panel.grid.minor = element_blank(),  #remove minor-grid labels
         plot.background = element_blank()) +
-  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.2, end = 0.7, name="Taxonomic") +
-  scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.2, end = 0.7, name="Taxonomic")
+  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.2, end = 0.7, name="Trait type") +
+  scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.2, end = 0.7, name="Trait type")
 
-trait_nMDS_taxon
+trait_nMDS_tt
 
 ggsave("trait_nMDS_taxonsp.jpeg", plot = trait_nMDS_taxon, width = 8, height = 8, dpi = 300)
 

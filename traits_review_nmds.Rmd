@@ -48,6 +48,7 @@ library(PNWColors)
 library(cowplot)
 library(forcats)
 library(goeveg)
+library(ggrepel)
 
 ```
 
@@ -60,26 +61,13 @@ UPLOAD CLEANED DATA HERE & USE THIS DATA
 
 #Upload selected dataset
 
-review_traits_use <- read_csv("review_traits4.0V.csv")
-review_traits_use = review_traits_use %>%
-  select(DOI:ncol(review_traits_use))
+#review_traits_use <- read_csv("review_traits4.0V.csv")
+review_traits_use = read_csv("review_traits4.0V.csv") %>%
+  select(DOI:ncol(.))
 review_sites_use <- as.data.frame(review_traits_use[,1:10])
 review_species_use <- review_traits_use[,11:ncol(review_traits_use)] #1410 trait columns
 
 head(review_traits_use)
-```
-
-```{r Secondary Dataset}
-
-#Upload selected dataset
-
-review_traits_2use <- read_csv("review_traits_2use.csv")
-review_traits_2use = review_traits_2use %>%
-  select(DOI:ncol(review_traits_2use))
-review_sites_2use <- as.data.frame(review_traits_2use[,1:10])
-review_species_2use <- review_traits_2use[,11:ncol(review_traits_2use)] #1410 trait columns
-
-head(review_traits_2use)
 ```
 
 
@@ -92,46 +80,29 @@ Note that the stress decreases as we decrease the number of observations, howeve
 ```{r Ordination USE, echo=F, eval=F}
 #Don't run, run time = 3h
 
-#Second ordination based on using no replicates for the study
-#traits_ord_use <- metaMDS(review_species_use,
-#                          distance = "jaccard",
-#                          trymax = 1000,
-#                          k = 3) #increase trymax = 50
+#Ordination based on using no replicates for the study
+traits_ord_use <- metaMDS(review_species_use,
+                          distance = "jaccard",
+                          trymax = 1000,
+                          k = 3) #increase trymax = 50
 
 #Based on ordination goodness fit/stress checks, we could use k = 2.
 #Don't want to redo this right now as it will take ~2h to rerun.
 
 plot(traits_ord_use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
 
-#saveRDS(traits_ord_use, "traits_ord_use.rds")
+#Plot sites (row numbers) and species (traits) as labels #run the whole chunk of text below
+ordiplot(traits_ord_use, type = "none") #creates blank plot
+orditorp(traits_ord_use, display = "species", col = "black", air=0.01) #labels traits
+orditorp(traits_ord_use, display = "sites", col = "red", air=0.01) #labels traits
+
+
+ggsave("review_nmdsinitial.jpeg", width = 8, height = 8, dpi = 300)
+
+
+saveRDS(traits_ord_use, "traits_ord_use.rds")
 
 ```
-
-
-### Ordination 2nd
-
-```{r Ordination USE, echo=F, eval=F}
-#Don't run, run time = 3h
-
-#Ordination on secondary trait classification 
-
-#traits_ord_2use <- metaMDS(review_species_2use,
-#                          distance = "jaccard",
-#                          trymax = 1000,
-#                          k = 3) #increase trymax = 50
-
-#Based on ordination goodness fit/stress checks, we could use k = 2.
-#Don't want to redo this right now as it will take ~2h to rerun.
-
-plot(traits_ord_2use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
-
-#saveRDS(traits_ord_2use, "traits_ord_2use.rds")
-
-```
-
-### Ordination 2nd NF
-
-Note that I ran the ordination for not-filled in data and it was worse than the 2nd classification, so I'm not bothering to include the code here right. Can include upon request.
 
 
 
@@ -212,7 +183,7 @@ For calculating data and treatment scores, and convex hulls around datapoints.
 #Extract NMDS coordinates and associate with co-variates/grouping factors
 
 #Using the scores function from vegan to extract the site scores and convert to a data.frame
-data.scores <- as.data.frame(scores(traits_ord_use))  
+data.scores <- as.data.frame(scores(traits_ord_use))  #, "species"
 
 #create a column of site names, from the rownames of data.scores
 data.scores$points <- rownames(data.scores)
@@ -223,6 +194,13 @@ treatment.scores <- cbind(review_sites_use, data.scores)
 #Check
 str(treatment.scores)  
 #Awesome
+
+#ALSO
+#OR for species scores
+species.scores <- as.data.frame(scores(traits_ord_use, "species"))
+#create a column of species names:
+species.scores$species <- rownames(species.scores)
+#str(data.scores)
 
 ```
 
@@ -446,7 +424,10 @@ trait_nMDS_clim <- ggplot() +
   #guides(fill = FALSE, colour = FALSE) +
   #guides(fill = guide_legend(order = 1), colour = guide_legend(order = 2)) +
   scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name = "Driver of change") + #name = "Global Change Assessed"
-  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name = "Driver of change") #name = "Global Change Assessed"
+  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, name = "Driver of change") #+ #name = "Global Change Assessed"
+  #geom_text_repel(data = species.scores,
+  #                aes(x = NMDS1, y = NMDS2, label = species#, alpha = 0.8, size = 5
+  #                    ))
 
 trait_nMDS_clim
 
