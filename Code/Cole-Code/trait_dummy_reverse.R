@@ -2,10 +2,11 @@
 library(tidyverse)
 library(data.table)
 library(fastDummies)
+library(here)
 `%notin%` = Negate(`%in%`)
-
-dummy_new = read_csv('traits_dummy_fixed.csv')
-traits_fixed = read.csv('traits_fixed.csv')
+here()
+dummy_new = read_csv(here('./Data/Cole-Original-Data/traits_dummy_fixed.csv'))
+traits_fixed = read.csv(here('./Data/Cole-Original-Data/traits_fixed.csv'))
 
 all = traits_fixed$DOI
 some = dummy_new$DOI
@@ -266,16 +267,16 @@ categorial_data = other_data_TOS_TT_filter
 #original traits
 orig_traits = merge(categorial_data, orig_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
-write.csv(orig_traits, 'original_traits_dummy.csv')
+write.csv(orig_traits, here('./Data/Cole-Output-Data(readyforanalysis)/original_traits_dummy.csv'))
 #primary traits
 prim_traits = merge(categorial_data, prim_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
-write.csv(prim_traits, 'primary_traits_dummy.csv')
+write.csv(prim_traits, here('./Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy.csv'))
 #secondary (keep empty) traits
 sec_empty_traits = merge(categorial_data, sec_empty_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
-write.csv(sec_empty_traits, 'secondary_traits_empty_dummy.csv')
+write.csv(sec_empty_traits, here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_empty_dummy.csv'))
 #secondary (keep empty) traits
 sec_fill_traits = merge(categorial_data, sec_fill_traits_multivar,
                          by.x = 'DOI', by.y = 'DOI')
-write.csv(sec_fill_traits, 'secondary_traits_f_dummy.csv')
+write.csv(sec_fill_traits, here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_f_dummy.csv'))
