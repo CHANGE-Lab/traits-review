@@ -4,7 +4,7 @@ library(data.table)
 library(fastDummies)
 library(here)
 `%notin%` = Negate(`%in%`)
-here()
+
 dummy_new = read_csv(here('./Data/Cole-Original-Data/traits_dummy_fixed.csv'))
 traits_fixed = read_csv(here('./Data/Cole-Original-Data/traits_fixed.csv'))
 
