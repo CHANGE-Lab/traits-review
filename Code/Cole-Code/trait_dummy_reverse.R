@@ -65,7 +65,7 @@ n_distinct(additive$DOI) #okay, we have all 822 studies now
 additive$Trait = trimws(additive$Trait, which = 'both')
 
 #join all the other trait levels to the additive database 
-trait_levels = read_csv(here('./Data/Cole-Original-Data/traits_levels.csv'))
+trait_levels = read_csv(here('./Data/Cole-Original-Data/trait_levels.csv'))
 
 #now, there are likely duplicated traits in the trait_levels dataframe, I have to get rid of them so I can make proper pairs to them 
 dups = trait_levels[duplicated(trait_levels$Trait_spell_corrected),]
@@ -134,9 +134,9 @@ sec_empty_traits_multivar = additive_sec_traits_dropempty %>%
 
 #now get the DOI and other info and bring that in
   ##note: just using the old dummy here to check things for peace of mind 
-old_dummy = read.csv('traits_dummy_old.csv')
+old_dummy = read_csv(here('./Data/Cole-Original-Data/traits_dummy_old.csv'))
 old_dummy = old_dummy %>% 
-  select(DOI, Ecosystem, Taxonomic, System, `Forecasting.Predictive`, `Global.Change.Driver`,
+  select(DOI, Ecosystem, Taxonomic, System, `Forecasting/Predictive`, `Global Change Driver`,
          TOS, Filter)
 n_distinct(old_dummy$DOI) #note, only 802 here, gotta get the other 20 from the other df
 
@@ -144,7 +144,7 @@ old = old_dummy %>%
   select(DOI, Filter)
 test = old[duplicated(old),]
 
-current = read_csv('Working-Lit-DB-For-R.csv')
+current = read_csv(here('./Data/Cole-Original-Data/finalized_lit_db_for_r.csv'))
 current = current %>% 
   filter(`Relevant to Study` == 'Y' | `Relevant to Study` == 'y') %>% 
   rename(TOS = `Type of study`)
