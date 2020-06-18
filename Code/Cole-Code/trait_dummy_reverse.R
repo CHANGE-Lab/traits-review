@@ -9,13 +9,13 @@ dummy_new = read_csv(here('./Data/Cole-Original-Data/traits_dummy_fixed.csv'))
 traits_fixed = read.csv(here('./Data/Cole-Original-Data/traits_fixed.csv'))
 
 all = traits_fixed$DOI
-some = dummy_new$DOI
+some = as.factor(dummy_new$DOI)
 missing_dois = traits_fixed %>% 
   filter(DOI %notin% some) %>% 
   select(DOI) %>% 
   unique()
 missing_dois = as.character(unique(missing_dois$DOI))
-###### ok so somehow some papers are missing from the dummy set. I'll have to fix this sometime down the road
+###### keeping this here for posterity but this problem was solved
 
 
 ##### here, I'm making a new df that has each trait and each DOI paired so I can pull things based on the DOI and on the traits
@@ -36,13 +36,16 @@ additive = additive %>%
   distinct()
 
 
-dummy_new$sums = rowSums(dummy_new[,c(2:2561)])
+dummy_new$sums = rowSums(dummy_new[,c(2:ncol(dummy_new))])
 check_add = data.frame(table(additive$DOI)) %>% 
-  rename(DOI = Var1, Trait = Freq)
-check_orig = data.frame(dummy_new[,c(1,2562)]) %>% 
+  rename(DOI = Var1, Trait = Freq) %>% 
+  distinct()
+check_orig = data.frame(dummy_new[,c(1,ncol(dummy_new))]) %>% 
   distinct()
 check_add == check_orig
 check_add[500:802,] == check_orig[500:802,]
+
+check_orig[duplicated(check_orig$DOI),]
 ###### ok these above checks ran fine so the number of traits associated with each DOI look fine
 ###### I'm interpreting this as the additive df is doing what I'm asking it to do and we're good on that front
 
