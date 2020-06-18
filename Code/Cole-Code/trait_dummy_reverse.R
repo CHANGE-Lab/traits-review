@@ -6,7 +6,7 @@ library(here)
 `%notin%` = Negate(`%in%`)
 here()
 dummy_new = read_csv(here('./Data/Cole-Original-Data/traits_dummy_fixed.csv'))
-traits_fixed = read.csv(here('./Data/Cole-Original-Data/traits_fixed.csv'))
+traits_fixed = read_csv(here('./Data/Cole-Original-Data/traits_fixed.csv'))
 
 all = traits_fixed$DOI
 some = as.factor(dummy_new$DOI)
@@ -65,7 +65,7 @@ n_distinct(additive$DOI) #okay, we have all 822 studies now
 additive$Trait = trimws(additive$Trait, which = 'both')
 
 #join all the other trait levels to the additive database 
-trait_levels = read.csv('trait_levels.csv')
+trait_levels = read_csv(here('./Data/Cole-Original-Data/traits_levels.csv'))
 
 #now, there are likely duplicated traits in the trait_levels dataframe, I have to get rid of them so I can make proper pairs to them 
 dups = trait_levels[duplicated(trait_levels$Trait_spell_corrected),]
