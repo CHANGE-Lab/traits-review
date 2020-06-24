@@ -1,0 +1,1599 @@
+DOI,Relevant to Study,Review,Observational,Experiment,Metanalysis,QModel,TModel,Type of study,Ecosystem,Taxonomic,System,NEWPhysiological,Morphological,Physiological,Life History,Behavioural,Trait Types,Fundamental,Physical,Ecological,Trophic,Level of Prediction Possible,Forecasting/Predictive,Global Change Driver
+10.1111/gcb.13538,Y,0,0,0,0,1,0,Q Model,Marine,Birds,Tundra,0,0,0,1,0,Life History,1,0,0,0,F,0,Climate Change
+10.1111/1365-2435.12718,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,1,1,1,1,0,"Morphological, Physiological, Life History",0,0,1,0,E,0,0
+10.1086/703155,Y,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,0,0,1,1,"Behavioural, Life History",0,0,0,1,T,0,0
+10.1111/j.1558-5646.2012.01659.x,N,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,,,,,NA,0,0,0,0,NA,0,0
+10.1007/BF01237849,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/BF01237642,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.2307/2937081,Y,0,1,0,0,0,0,Observational,Terrestrial,Herps,Desert,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,1,T,0,0
+10.1098/rspb.2018.0621,Y,0,1,0,0,0,0,Observational,Marine,Plankton,Broad,0,1,0,0,0,Morphological,1,0,0,1,T,0,0
+10.1111/jeb.12717,Y,0,1,0,0,0,0,Observational,Terrestrial,Birds,Tropical Seasonal Forest,0,1,0,0,0,Morphological,0,0,1,0,E,0,0
+10.1111/j.0014-3820.2000.tb00694.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1086/368401,Y,1,0,0,0,0,0,Review,Terrestrial,Plants,Broad,1,0,1,0,0,Physiological,1,0,0,0,F,0,0
+10.1111/j.1461-0248.2006.01006.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,1,1,0,0,0,Morphological,0,1,1,0,P,0,0
+10.1111/ele.12157,Y,1,0,0,0,0,1,"T Model, Review",Broad,Broad,Broad,1,1,1,1,0,"Physiological, Morphological, Life History",1,0,1,0,E,0,0
+10.1073/pnas.1315179111,Y,0,0,0,0,1,0,Q Model,Terrestrial,Plants,NA,0,1,0,0,0,Morphological,0,1,1,0,P,0,0
+10.1163/156854200505865,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ecog.01930,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ympev.2009.10.033,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/05-0219,Y,0,0,1,0,0,0,Experiment,Terrestrial,Plants,Grassland,0,1,0,0,0,Morphological,0,0,1,1,T,0,Invasion
+10.1038/srep24451,Y,1,0,0,0,0,0,Review,Terrestrial,Insects,Broad,0,1,0,1,1,"Morphological, Behavioural, Life History",1,1,0,1,T,0,Climate Change
+10.1111/j.1365-2435.2010.01727.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,0,1,1,0,0,"Morphological, Physiological",1,0,1,0,F,0,0
+10.1111/j.1365-2745.2010.01651.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,0,1,1,0,0,"Morphological, Physiological",1,0,0,0,F,0,0
+10.1007/s10526-017-9860-6,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Olive Plantations,0,0,0,0,1,Behavioural  ,0,0,0,1,T,0,0
+10.1086/682680,Y,1,0,0,0,0,0,Review,Terrestrial,Mammals,Broad,1,0,1,0,1,"Behavioural, Physiological",1,1,0,0,P,0,0
+10.1111/jvs.12252,Y,0,0,0,0,0,1,T Model,Terrestrial,Plants,Temperature Forest,1,0,1,0,0,Life History,1,0,1,0,P,1,0
+10.1034/j.1600-0706.2000.880215.x,Y,0,1,1,0,0,0,"Observational, Experimental",Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1111/j.1420.9101.2004.00788.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.7717/peerj.5038,Y,0,0,0,0,1,0,Q Model,Marine,Other,Estuary/Enclosed Sea,1,1,1,1,0,"Physiological, Morphological, Life History",1,1,1,0,E,0,0
+10.1098/rspb.2014.1745,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/geb.12003,Y,1,0,0,0,0,0,Review,Terrestrial,Herps,Tropical Rainforest,0,1,0,0,0,Morphological,0,1,0,0,P,0,0
+10.1007/s10750-013-1711-6,Y,0,1,0,0,0,0,Observational,Freshwater,Other,River Floodplain,0,1,0,1,1,"Morphological, Life History, Behavioural",1,1,1,0,P,0,0
+10.1007/s11538-012-9771-8,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ele.12728,Y,1,0,0,0,0,0,Review,Terrestrial,Broad,Broad,0,1,0,1,1,"Morphological, Behavioural, Life History, ",0,1,1,0,P,0,Invasion
+10.1890/11-0181.1,Y,0,1,0,0,1,0,"Observational, Q Model",Marine,Birds,Mediterranean Basin,0,1,0,0,0,Morophological,0,0,1,1,E,0,0
+10.1111/j.1529-8817.2009.00767.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s13127-016-0299-x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ecolind.2013.01.038,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ele.12945,Y,1,0,0,0,0,0,Review,Broad,Plants,Broad,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/nph.12907,Y,0,0,0,1,0,0,Metanalysis,Broad,Plants,Broad,1,0,1,0,0,Physiological  ,1,0,0,0,F,0,0
+10.1016/j.ecolmodel.2007.01.002,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1186/1471-2148-10-204,Y,1,0,0,0,0,0,Review,Terrestrial,Multiple,Broad,0,1,0,0,0,Morophological,0,0,0,1,T,0,0
+10.1111/j.1365-2745.2011.01795.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Serengeti Grassland,0,1,0,0,0,Morphological,1,0,1,0,F,0,0
+10.1666/0094-8373(2005)031<0056:WTPCIT>2.0.CO;2,Y,0,0,0,0,1,0,Q Model,Terrestrial,Mammals,Broad,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1111/j.1461-0248.2011.01620.x,Y,1,0,0,0,1,0,Review/Q Model,Terrestrial,Multiple,Broad,0,1,0,1,1,"Morphology, Life History, Behavioural",0,1,0,1,T,0,Climate Change
+10.1111/ele.12532,Y,0,0,1,0,0,0,Experiment,Terrestrial,Plants,Broad,1,1,1,1,0,"Morphological, Physiological, Life History",1,0,0,0,E,0,0
+10.1016/j.ecolind.2017.03.035,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/jeb.12923,Y,0,1,0,0,0,0,Observational,Freshwater,Other,Broad,0,0,0,0,1,Behavioural,0,0,0,1,T,0,0
+10.1007/s10531-014-0843-y,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1098/rspb.2004.2899,Y,0,0,1,0,0,0,Experiment,Freshwater,Fish,River  ,0,0,0,1,0,Life History,0,0,0,1,T,0,0
+10.7717/peerj.1241,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,1,T,0,0
+10.1371/journal.pone.0005529,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/03-5340,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/0012-9658(1998)079[1847:ORNOPI]2.0.CO;2,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1098/rsos.160957,Y,1,0,0,0,0,0,Review,Terrestrial,Mammals,Broad,0,1,0,0,0,Morphological,0,0,0,1,,0,0
+10.3389/fevo.2018.00028,N,0,0,1,0,0,0,Experiment,Freshwater,Multiple,River,0,,,,,,0,0,0,0,,,
+10.1007/s10452-015-9546-z,Y,0,1,0,0,0,0,Observational,Freshwater,Other,Floodplain,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/j.1365-2427.2009.02340.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1098/rspb.2005.3174,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ece3.1084,Y,0,0,0,0,1,0,Q Model,Terrestrial,Other,Broad,1,1,0,1,1,"Morphological, Life History, Behavioural",1,0,1,0,T,0,0
+10.1111/jbi.12946,Y,0,1,0,0,0,0,Observational,Terrestrial,Other,Broad,1,1,0,1,1,"Morphological, Life History, Behavioural",1,0,1,0,T,0,0
+10.1098/rsos.181702,Y,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,0,0,0,1,Behavioural ,1,1,0,0,T,0,0
+10.1371/journal.pone.0151243,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.5751/ACE-00429-060102,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1461-0248.2007.01140.x,Y,0,0,1,0,0,0,Experiment,Terrestrial,Plants,Broad,0,0,0,0,1,Behavioural,0,0,1,0,E,0,0
+10.1111/1365-2664.13134,Y,1,0,0,0,0,0,Review,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Morphological,1,0,0,0,F,0,Habitat Degredation
+10.1017/S0960258510000176,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,0,0,Morphological,1,0,0,1,T,0,0
+10.1111/ele.12351,Y,0,1,0,0,0,0,Observational,Marine,Fish,Mediterranean  ,0,1,0,0,0,Morphological,0,0,1,0,E,0,0
+10.1371/journal.pone.0090437,Y,0,1,0,0,0,0,Observational,Terrestrial,Multiple,Boreal Forest,0,1,0,1,1,"Morphological, Life Hsitory, Behavioural",0,0,0,1,T,0,0
+10.1111/1365-2745.12333,Y,0,0,0,1,0,0,Metanalysis,Terrestrial,Plants,Broad,0,1,0,1,0,"Morphological, Life History  ",0,1,0,0,P,0,0
+10.1111/1365-2656.12570,Y,1,0,0,0,0,0,Review,Terrestrial,Birds,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,1,0,E,0,0
+10.1111/1365-2656.12317,N,0,0,1,0,0,1,"T Model, Experiment",Broad,Multiple,Broad,0,1,0,0,1,"Morphological, Behavioural",0,0,0,0,?,0,0
+10.1111/j.1365-2745.2012.01966.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Morphological,1,0,1,0,F,0,0
+10.1111/j.1365-2109.2012.03205.x,Y,0,0,1,0,0,0,Experiment,Freshwater,Fish,Broad,0,1,0,0,1,"Morphological, Behavioural",0,0,0,1,T,0,0
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/0169-2046(94)01038-A,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s11160-018-9522-5,Y,1,0,0,0,0,0,Review,Marine,Fish,Marine Soft Bottoms,0,1,0,0,1,"Morphological, Behavioural",0,0,0,1,T,0,0
+10.1002/ajpa.1330950203,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/mec.13998,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ddi.12275,N,0,1,0,0,0,0,Observational,Terrestrial,Birds,Grassland,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,0,0,,,
+10.1007/s12080-011-0148-7,Y,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,0,0,1,1,"Morophological, Behavioural",1,0,0,1,T,1,0
+10.1111/1365-2656.12140,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1095-8649.2010.02640.x,Y,0,1,0,0,0,0,Observational,Freshwater,Fish,River,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1186/1471-2105-13-S8-S8,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/oik.04507,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,1,T,0,Habitat Degredation
+10.1242/jeb.059022,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s11692-017-9409-8,Y,0,1,0,0,0,1,"T Model, Observational",Terrestrial,Multiple,Broad,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1007/s00442-015-3295-5,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1086/675903,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/jbi.13129,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,0,0,Morphological,1,0,1,0,F,0,0
+10.1016/j.ecolmodel.2018.05.002,N ,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.14471/2016.36.015,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Alpine,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1007/s10661-015-4519-1,Y,0,1,0,0,0,0,Observational,Freshwater,Plankton,Reservoir,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1007/s00265-002-0461-7,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ecolind.2017.01.011,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1600-0587.2013.00122.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Tropical Rainforest,0,0,0,1,0,Life History,1,1,0,0,P,0,0
+10.1002/etc.3029,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1095-8312.2008.01102.x,Y,1,0,0,0,0,0,Review,Terrestrial,Insects,Broad,0,0,0,1,0,Life History,1,0,0,1,T,0,0
+10.2307/1939076,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/14-1184.1,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1017/S0007485308005919,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ecog.03396,Y,1,0,0,0,0,0,Review,Terrestrial,Multiple,Broad,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1371/journal.pone.0082344,Y,0,0,1,0,0,0,Experiment,Freshwater,Multiple,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,0,1,T,0,0
+10.1111/ele.12153,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1038/sdata.2018.22,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/eco.1734,Y,0,1,0,0,0,0,Observational,Freshwater,Fish,Rivers,0,1,0,1,0,Morphological,1,0,0,0,F,0,0
+10.1111/oik.01279,Y,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,1,0,0,0,Morphological,0,0,0,1,T,0,Global Change Broad
+10.1016/j.yhbeh.2007.08.004,Y,0,0,1,0,0,0,Experiment,Terrestrial,Herps,Galapagos Islands,0,1,0,0,1,"Morphological, Behavioural",0,0,0,1,T,0,Invasion
+10.1016/j.ppees.2017.01.001,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2745.12003,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1093/plankt/fbr111,Y,0,1,0,0,0,0,Observational,Freshwater,Plankton,River,0,1,0,0,1,"Morphological, Behavioural",0,0,1,1,T,0,0
+10.1007/s00442-013-2673-0,Y,0,0,1,0,0,1,"T Model, Experiment",Freshwater,Other,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,1,0,E,0,0
+10.1371/journal.pone.0057550,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s00442-018-4074-x,Y,1,0,0,0,0,0,Review,Freshwater,Plants,Broad,0,1,0,0,0,Morphological,1,1,0,0,F,0,0
+10.1007/s10841-011-9412-9,Y,0,1,0,0,0,0,Observational,Freshwater,Insects,Lake Wetland,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,1,0,E,0,Habitat Degredation
+10.1111/1749-4877.12319,Y,0,1,0,0,0,0,Observational,Terrestrial,Multiple,Temperate Forest,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1098/rsif.2018.0239,Y,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1111/j.1600-0633.2010.00465.x,Y,0,1,0,0,0,0,Observation,Freshwater,Fish,Stream,0,1,0,1,0,"Morphological, Life History",0,0,1,0,E,0,0
+10.1111/2041-210X.12211,Y,0,0,0,0,1,0,Q Model,Broad,Multiple,Broad,1,1,0,1,0,"Morphological, Life History",1,0,0,0,F,1,0
+10.1007/s10682-013-9631-5,Y,0,0,0,0,1,0,Q Model,Terrestrial,Mammals,Broad,0,1,0,0,1,"Morphological, Behavioural",1,1,0,0,T,0,0
+10.1111/icad.12051,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Grass margins of crop fields,0,1,0,0,1,"Morphological, Behavioural",1,0,1,0,E,0,0
+10.1371/journal.pone.0188300,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s10750-017-3208-1,Y,0,0,0,0,1,0,Q Model,Freshwater,Fish,Lake  ,1,1,0,1,1,"Morphological, Life History, Behavioural",0,0,1,1,T,1,Climate Change
+10.1111/oik.02277,Y,0,0,0,0,1,0,Q Model,Terrestrial,Plants,Riparian Zone,1,1,0,1,0,"Morphological, Life History",0,1,0,0,P,0,Habitat Degredation
+10.1111/j.1365-294X.2010.04623.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/mec.14718,Y,0,0,0,0,1,0,Q Model,Terrestrial,Birds,Tropical Rainforest,0,0,0,0,1,Behavioural,1,0,0,0,T,0,0
+10.1023/B:APPA.0000038623.75416.e3,Y,0,0,1,0,0,0,Experiment,Terrestrial,Insects,Temperate Forest,0,0,0,0,1,Behavioural,0,0,0,1,T,0,0
+10.1111/1365-2656.12020,Y,0,1,0,0,0,0,Observational,Terrestrial,Herps,Galapagos Islands,0,1,0,1,0,"Morphological, Life History",1,1,0,0,P,0,0
+10.1002/ece3.5121,Y,0,1,0,0,0,0,Observational,Terrestrial,Mammals,Temperate Forest,0,1,0,0,1,"Morphological, Behavioural",1,0,0,0,E,0,0
+10.1111/j.1365-2427.2007.01736.x,Y,1,0,0,0,1,0,Review/Q Model,Freshwater,Fish,Broad,1,0,1,1,0,"Physiological, Life History",1,0,0,0,F,0,0
+10.1111/j.1439-0310.2005.01147.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.7717/peerj.3772,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.3389/fmicb.2017.01530,Y,0,1,0,0,0,0,Observational,Terrestrial,Other,Tropical Rainforest,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1007/s002650000260,Y,0,1,0,0,0,0,Observational,Terrestrial,Multiple,Desert,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1086/685444,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/geb.12146,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/14-0589.1,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.anbehav.2005.05.010,Y,0,1,1,0,0,0,Observational/Experiment,Terrestrial,Birds,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,1,0,E,0,0
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/zsc.12132,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/15-0688,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.2041-210X.2012.00247.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1186/1471-2148-13-198,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1038/s41598-018-35925-z,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s00468-011-0632-0,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Subtropical secondary broadleaved forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/jvs.12245,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Boreal Forest,1,1,0,1,0,"Morphological, Life History",1,0,1,0,E,0,0
+unknown_1,Y,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,0,0,0,1,Behavioural,0,0,0,1,T,0,0
+10.1016/j.jtherbio.2018.05.004,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2435.13194,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.jtbi.2009.10.035,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-2664.2006.001175.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,1,1,0,P,0,0
+10.1111/1574-6976.12035,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.aquabot.2016.10.002,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1556/168.2018.19.1.8,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/2041-210X.12450,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.4081/jlimnol.2014.826,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ece3.1395,Y,0,0,1,0,0,0,Experiment,Freshwater,Fish,River,1,0,1,0,1,"Physiological, Behavioural",0,0,0,1,T,0,0
+10.1111/1365-2656.12264,Y,0,1,0,0,0,0,Observational,Terrestrial,Birds,Temperate Forest,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1038/srep41599,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2656.12829,Y,0,0,0,0,1,0,Q Model,Terrestrial,Birds,Broad,1,0,1,0,1,"Physiological, Behavioural",1,1,0,0,P,0,Global Change Multiple
+10.1054/mehy.1999.0856,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2656.12648,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Urban Green Spaces,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,1,T,0,Habitat Degredation
+10.1002/ecy.2530,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/syen.12189,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.hal.2017.02.004,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s00338-013-1042-0,Y,0,1,0,0,0,0,Observational,Marine,Fish,Coral Reef,0,1,0,0,1,"Morphological, Behavioural",0,0,0,1, F,0,0
+10.1111/j.1439-0310.2005.01085.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1006/jaar.1998.0326,Y,0,1,0,0,0,0,Observational,Terrestrial,Mammals,Broad,0,0,0,0,1,Behavioural,0,0,1,0,E,0,0
+10.1093/beheco/11.4.452,Y,1,0,0,0,0,0,Review,Terrestrial,Mammals,Broad,0,1,0,0,1,"Morphological, Behaviour",0,0,0,1,T,0,0
+10.1890/14-1731.1.sm,Y,0,1,0,0,0,0,Observational,Terrestrial,Birds,Tropical Rainforest,0,1,0,0,1,"Morphological, Behavioural",1,0,1,0,T,0,Habitat Degredation
+10.1111/ecog.03917,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Tropcial Rainforest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/wre.12188,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.csr.2009.01.003,Y,0,1,0,0,0,0,Observational,Marine,Fish,Coastal Nursery,0,0,0,1,1,Life History & Behavioural,0,0,0,1,T,0,Exploitation
+10.2307/3072051,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.5061/dryad.m03vf,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Desert,0,1,0,0,0,Morphological,1,0,1,0,F,0,0
+10.1007/s12224-016-9267-7,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1558-5646.2011.01377.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/brv.12250,Y,1,0,0,0,0,0,Review,Broad,Broad,Broad,0,1,0,0,0,Morphological,0,0,1,1,E,0,Global Change Broad
+10.1038/s41559-019-0899-x,Y,1,0,0,0,1,0,Q Model/Review,Broad,Broad,Broad,1,0,0,1,1,"Life History, Behavioural",0,0,0,1,T,0,0
+10.1111/2041-210X.12163,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/gcb.13184,Y,1,0,0,0,0,0,Review,Marine,Broad,Broad,0,0,0,1,1,"Morphological, Behavioural",1,1,0,0,F,0,Climate Change
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1038/s41559-017-0426-x,Y,1,0,0,0,0,0,Review,Terrestrial,Other,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,Global Change Broad
+10.1016/j.scitotenv.2016.06.169,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1556/ComEc.14.2013.1.4,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Bog-Forest,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ele.12688,Y,1,0,0,0,0,0,Review,Marine,Other,Broad,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1016/j.actao.2011.11.002,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/11-1204.1,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2745.13079,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-2745.2010.01650.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+unknown_2,Y,1,0,0,0,0,0,Review,Broad,Broad,Broad,1,0,1,1,1,"Physiological, Life History, Behavioural",1,1,0,0,F,0,Climate Change
+10.1111/1365-2656.12548,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s10750-014-1960-z,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1098/rsos.150652,Y,0,1,0,0,0,0,Observational,Freshwater,Fish,Broad,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1002/ece3.3609,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morophological, Life History",1,0,1,0,E,0,0
+10.1111/geb.12637,Y,1,0,0,0,0,0,Review,Terrestrial,Plants,Broad,1,0,1,0,0,Physiological,1,0,0,0,F,0,0
+10.1098/rsbl.2011.0641,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1095-8312.2005.00465.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Herps,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,0,1,T,0,0
+10.1111/1365-2745.12013,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morphological, Physiological",1,0,0,0,F,0,0
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ecm.1267,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ecs2.2220,Y,0,1,0,0,0,0,Observational,Marine,Fish,Continental Shelf,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/geb.12148,Y,1,0,0,0,0,0,Review,Terrestrial,Birds,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,1,1,T,0,0
+10.1086/653665,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ecss.2013.07.019,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Delile meadows,0,0,0,0,1,Behavioural,0,0,1,0,E,0,Global Change Broad
+10.1111/j.1365-2486.2007.01483.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,0,0,0,1,0,Life History,1,0,0,0,F,0,Global Change Broad
+10.1002/ece3.2606,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Tropical Rainforest,0,0,0,0,1,Behavioural,1,0,1,1,T,0,0
+10.1111/j.1365-2656.2007.01308.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1600-0706.2013.00430.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1600-0587.2012.07479.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1186/1472-6785-12-21,Y,0,1,0,0,0,0,Observational,Terrestrial, Plants,Shrublands,0,0,0,1,0,Life History,1,0,1,0,E,0,0
+10.1371/journal.pbio.0020197,Y,1,0,0,0,0,0,Review,Terrestrial,Mammals,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,1,T,1,Global Change Broad
+10.1093/icb/icx015,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1558-5646.2010.01131.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,1,1,1,1,0,"Morphological, Physiological, Life History",1,0,0,0,F,0,0
+10.1111/1365-2745.12604,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,0,E,0,Climate Change
+10.4081/jlimnol.2012.e8,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ecolmodel.2009.04.021,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ecog.02632,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Broad,0,1,0,0,1,"Morphological, Behavioural",1,0,0,0,T,0,Habitat Degredation
+10.1111/jbi.12444,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ece3.2780,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1371/journal.pone.0035942,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ele.12342,Y,1,0,0,0,0,0,Review,Terrestrial,Plants,Broad,0,1,0,0,0,Morphological,0,0,1,0,E,0,0
+10.1007/s10682-018-9945-4,Y,0,1,0,0,0,0,Observational,Terrestrial,Birds,Broad,0,1,0,0,0,Morphological,1,1,0,0,P,0,0
+10.1186/s13071-016-1659-2,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Alpine,0,0,0,1,1,Morphological,0,0,0,1,T,0,0
+10.1186/s13071-015-1274-7,N,0,0,0,0,1,0,Q Model,Terrestrial,Mammals,Broad,0,0,0,1,0,Life History,0,0,0,0,,,
+10.1111/j.1600-048X.2012.05576.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s10682-012-9562-6,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-2664.2010.01945.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ecm.1297/full,Y,0,0,0,1,0,0,Metanalysis,Marine,Fish,Broad,1,0,1,1,1,"Physiological, Life History, Behavioural",1,0,0,0,F,1,Climate Change
+10.1006/bulm.1999.0083,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.seares.2013.05.004,Y,0,1,0,0,0,0,Observational,Marine,Fish,Lagoon,0,1,0,1,0,"Morphological, Life History",1,0,1,0,E,0,0
+10.1016/j.actao.2016.10.007,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Subtropocial Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1007/s10750-015-2313-2,Y,0,1,0,0,0,0,Observational,Freshwater,Plankton,Lake,1,1,1,1,0,"Morphological, Physiological, Life History",1,0,0,0,E,0,0
+10.1002/eap.1535/full,Y,0,1,0,0,0,0,Observational,Terrestrial,Mammals,Grassland,0,0,0,1,1,"Life History, Behavioural",1,0,0,0,E,0,Invasion
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2435.13141,Y,0,1,0,0,0,0,Observational,Terrestrial,Multiple,Tropical Rainforest,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,1,T,0,0
+unknown_3,Y,0,1,0,0,0,0,Observational,Marine,Broad,intertidal,0,0,0,0,1,Behavioural,0,0,0,1,T,0,0
+10.1111/j.1365-2656.2011.01883.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s00442-016-3547-z,Y,0,0,0,0,1,0,Q Model,Terrestrial,Plants,Grassland,0,1,0,0,0,Morphological,0,0,1,0,E,0,0
+10.1038/srep27087,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1086/690764,Y,0,0,0,0,1,0,Q Model,Broad,Plankton,Broad,1,1,1,1,0,"Morphological, Physiological, Life History",1,0,0,1,F,0,0
+10.1111/1365-2745.12658,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Alpine,0,1,0,0,0,Morphological,1,0,1,0,E,0,0
+10.1111/jvs.12031,Y,0,0,0,0,0,1,T Model,Terrestrial,Plants,Alpine,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1890/13-2153.1,Y,0,0,0,0,1,0,Q Model,Terrestrial,Plants,Alpine,0,1,0,0,0,Morphological,1,0,1,0,F,0,0
+10.1002/ece3.615,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ecy.2179,Y,0,0,0,0,1,0,Q Model,Terrestrial,Birds,Galapagos Islands,0,0,0,1,0,Life History,1,0,0,0,F,0,Climate Change
+10.1371/journal.pone.0084774,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1073/pnas.1300643110,Y,0,1,0,0,0,0,Observational,Terrestrial,Other,Tundra,0,0,0,1,0,Life History,1,0,0,0,F,0,Climate Change
+10.3389/fevo.2019.00025,Y,0,0,1,0,0,0,Experiment,Broad,Insects,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,0,1,T,0,0
+10.1890/ES15-00118.1,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ddi.12712,Y,0,1,0,0,0,0,Observational,Marine,Broad,Hydrothermal Vents,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,0
+10.3390/f9010019,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1890/15-0794.1,Y,0,1,0,0,0,0,Observational,Freshwater,Other,North-Temperate Ponds,0,1,0,1,0,"Morphological, Life History  ",1,0,0,0,F,0,Climate Change
+10.1371/journal.pone.0025305,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1666/13024,Y,0,1,0,0,0,0,Observational,Marine,Other,Enclosed Sea,0,0,0,0,1,Behavioural,0,0,0,1,T,0,0
+10.1186/1742-9994-7-3,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1371/journal.pone.0044374,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1038/s41598-017-13340-0,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ecog.02010,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,0,0,0,1,0,Life History,1,0,0,0,F,0,0
+10.1111/geb.12636,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,0,0,0,1,0,Life History,0,0,0,1,T,0,0
+10.1002/ece3.3472,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.marpolbul.2007.10.019,Y,0,1,0,0,0,0,Observational,Marine,Broad,Hong Kong harbour,1,0,0,1,1,"Life History, Behavioural",1,0,0,1,T,0,0
+10.1371/journal.pone.0041323,Y,0,0,1,0,0,0,Experiment,Terrestrial,Insects,Broad,0,1,0,0,1,"Morphological, Behavioural",0,1,0,0,P,0,0
+10.2478/s11535-013-0155-8,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-3113.2008.00427.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/mec.14258,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1080/17550874.2017.1345997,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,0,1,0,1,0,"Morphological, Behavioural",1,0,1,0,E,0,0
+10.1007/s11629-017-4477-x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,alpine,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1016/j.ecss.2015.05.023,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Sand Dunes,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1098/rstb.2017.0101,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1086/689819,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2435.12786,y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Alpine,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/j.1365-2745.2011.01860.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,0,1,0,1,0,"Morphological, Life Hsitory",1,0,1,0,E,0,Invasion
+10.1111/1462-2920.12281,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1163/15685381-00003131,Y,0,1,0,0,0,0,Observational,Terrestrial,Herps,Temperate Forest,0,1,0,0,1,"Morphological, Behavioural",1,0,0,1,F,0,0
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ecy.1802,Y,0,0,0,0,1,0,Q Model,Broad,Broad,Broad,0,0,0,0,1,Behavioural,1,0,0,1,F,0,0
+10.1017/S1461145707007912, N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/mec.13162,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1086/656444,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/S0167-8809(01)00333-4,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Grassland,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,0
+10.1016/j.scitotenv.2015.06.099,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1467-2979.2011.00420.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.envsoft.2016.12.004,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.2307/2410698,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2745.12012,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1007/s10530-015-1028-7,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-2664.2008.01566.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.3391/mbi.2016.7.4.04,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/ES10-00113.1,Y,0,0,1,0,0,0,Experiment,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1093/aob/mcu113,Y,1,0,0,0,0,0,Review,Terrestrial,Plants,Broad,1,0,0,1,0,Life History,1,0,0,0,F,0,0
+10.1111/j.1365-2745.2010.01662.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,0,1,0,0,0,Morphological,0,0,1,0,E,0,0
+10.1016/j.jmarsys.2015.03.006,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s10641-018-0796-1,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1086/687393,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ecm.1304/full,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1186/1471-2148-10-166,Y,0,1,0,0,0,0,Observational,Freshwater,Other,Lake,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1046/j.1420-9101.2003.00655.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/0012-9658(2000)081[0183:EOGCSO]2.0.CO;2,Y,0,0,1,0,0,0,Experiment,Freshwater,Plankton,Lake,0,1,0,0,0,Morphological,1,0,0,0,F,0,Habitat Degredation
+10.1007/s12080-010-0095-8,Y,0,0,0,0,0,1,T Model,Terrestrial,Plants,Broad,0,0,0,1,0,Life History,0,0,1,0,E,0,0
+10.1046/j.1365-2656.2000.00383.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2745.12633,Y,0,1,0,0,0,0,Observational,Terrestrial,Other,Oak Forest,1,1,1,0,0,"Morphological, Physiological",1,0,0,0,F,0,0
+10.1016/j.gene.2012.10.065,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ecog.00473,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1186/s13742-016-0120-y,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/2041-210X.12471,Y,0,0,0,0,1,0,Q Model,Terrestrial,Multiple,Broad,0,1,0,1,1,"Morphological, Life Hisotry, Behavioural",0,0,0,1,T,0,0
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ele.12571,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1086/670010,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-2656.2010.01666.x,Y,0,0,1,0,0,0,Experiment,Terrestrial,Insects,Broad,1,0,0,1,1,"Life History, Behavioural",1,0,1,0,E,0,Invasion
+10.3389/fpls.2016.01741,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ecolind.2015.03.032,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.3390/f7100228,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/1365-2435.12112,Y,0,1,0,0,0,0,Observational,Marine,Fish,Estuary,0,1,0,0,0,Morphological,1,0,0,1,T,0,0
+10.1111/1365-2656.12892,Y,0,0,0,0,0,1,T Model,Terrestrial,Broad,Broad,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+unknown_4,Y,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1371/journal.pone.0126112,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Tropical Rainforest,0,1,0,1,1,"Morphological, Life History, Behavioural",0,1,0,0,P,0,0
+10.1111/ddi.12785,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Tropical Rainforest,0,1,0,0,1,"Morphological, Behavioural",1,0,0,0,F,0,0
+10.1002/ecy.1915,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Urban environment,0,0,0,0,1,Behavioural,1,0,0,0,F,0,0
+10.1073/pnas.1215513110,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,0,0,Morphological,1,0,1,0,E,0,0
+unknown_5,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Alpine,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,Habitat Degredation
+10.1111/oik.00707,Y,0,1,0,0,0,0,Observational,Terrestrial,Mammals,Desert,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,0,1,T,0,0
+10.1111/j.1365-2745.2010.01739.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.aquatox.2008.02.016,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1086/519966,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s10980-017-0591-y,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s00442-012-2431-8,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/1365-2435.12061,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1461-0248.2012.01861.x,Y,0,0,0,0,1,0,Q Model,Marine,Other,Coral Reef,0,1,0,1,0,"Morphological, Life History",1,0,1,0,F,0,Global Change Broad
+10.1111/mec.13985,Y,0,1,0,0,1,0,Observational/Q Model,Terrestrial,Insects,Broad,0,1,0,0,0,Morphological,1,0,1,0,E,0,0
+10.1093/beheco/arx036,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1098/rstb.2010.0130,Y,0,1,0,0,0,0,Observational,Terrestrial,Multiple,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,1,0,0,P,0,Climate Change
+10.1111/1365-2664.12922,Y,0,1,0,0,0,0,Observational,Freshwater,Plants,Wetland,0,1,0,1,0,"Morphological, Life History",1,0,0,0,P,0,0
+10.3390/insects10040103,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Tropical Seasonal Forest,0,0,0,1,1,"Life History, Behavioural",1,0,1,0,F,0,0
+10.1111/1365-2664.13134,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s12224-015-9228-6,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/2041-210X.12735,Y,0,0,0,0,0,1,T Model,Terrestrial,Plants,Broad,0,1,0,0,0,Morphological,1,0,1,0,F,0,0
+10.1002/rra.687,Y,0,1,0,0,0,0,Observational,Freshwater,Fish,River,0,1,0,0,0,Morphological,1,0,0,1,F,0,0
+10.1111/fwb.12961,Y,0,1,0,0,0,0,Observational,Freshwater,Insects,Stream,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,0
+10.1016/j.tree.2016.09.007,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1371/journal.pone.0202403,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1038/srep31153,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2664.12524,Y,1,0,0,0,0,0,Review,Terrestrial,Insects,Broad,0,0,0,1,1,"Life History, Behavioural",1,0,0,0,F,0,Habitat Degredation
+10.1016/j.apsoil.2008.01.007,Y,1,0,0,0,0,0,Review,Terrestrial,Other,Broad,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/1365-2656.12144,Y,0,0,0,0,1,0,Q Model,Terrestrial,Mammals,Boreal Forest,0,0,0,1,0,Life History,1,0,0,1,T,0,0
+10.1139/cjfr-2017-0139,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,Climate Change
+10.1111/ecog.00623,Y,0,1,0,0,0,0,Observational,Terrestrial,Birds,Alpine,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1098/rspb.2015.2444,Y,0,1,0,0,0,0,Observational,Terrestrial,Multiple,Tropical Rainforest,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1111/1365-2656.12081,Y,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,0,0,0,1,Behavioural,1,0,0,1,T,0,Climate Change
+10.1073/pnas.1015178108,Y,1,0,0,0,0,0,Review,Broad,Broad,Broad,1,0,1,1,1,"Physiological, Life History, Behavioural",1,0,0,0,F,0,Climate Change
+10.1007/s00227-010-1468-7,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ddi.12790,Y,0,1,0,0,0,0,Observational,Terrestrial,Broad,Tropical Rainforest,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,1,0,F,0,0
+10.1111/1365-2656.12173,Y,0,1,0,0,0,0,Obersational,Freshwater,Other,Grassland,0,0,0,1,0,Life History,1,0,0,0,F,0,0
+10.1093/jee/tox243,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ele.12529,Y,0,0,1,0,0,0,Experiment,Terrestrial,Multiple,Grassland,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1007/00285-003-0236-4,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/plb.12566,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Tropical Seasonal Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1017/S1751731112001796,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1046/j.1440-1703.2001.00454.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1461-0248.2010.01493.x,Y,1,0,0,0,0,0,Review,Terrestrial,Birds,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,1,0,E,0,0
+10.1016/S1385-1101(02)00220-4,Y,1,0,0,0,0,0,Review,Terrestrial,Other,Broad,0,1,0,0,1,"Morphological, Behavioural",0,0,0,1,T,0,0
+10.1111/1365-2435.13142,Y,0,1,0,0,0,0,Observational,Terrestrial,Multiple,Tropical Rainforest,0,1,0,1,0,"Morphological, Life History",1,0,1,0,F,0,0
+10.7717/peerj.4867,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s10530-013-0550-8,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.jtbi.2005.12.002,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1017/S0952836900002016,Y,0,1,0,0,0,0,Observational,Marine,Other,Intertidal,1,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,Invasion
+10.1016/j.tree.2016.03.009,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-2656.2007.01284.x,Y,0,0,1,0,0,0,Experiment,Freshwater,Fish,Ponds,0,0,0,0,1,Behavioural,1,0,0,0,F,0,0
+10.1016/j.anbehav.2009.11.024,Y,0,0,1,0,0,0,Experiment,Freshwater,Fish,Ponds,0,0,0,0,1,Behavioural,1,0,0,1,F,0,0
+10.1098/rsos.170633,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-2427.1994.tb01755.x,Y,0,1,0,0,0,0,Observational,Freshwater,Broad,River,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,0
+10.1111/fwb.12554,Y,0,1,0,0,0,0,Observational,Freshwater,Multiple,River,1,0,0,1,1,,1,0,1,0,E,0,0
+10.1080/02664760120108845,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1063/1.4953163,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/oik.02100,Y,0,1,0,0,0,0,Observational,Marine,Broad,Intertidal,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,1,0,F,0,0
+10.1371/journal.pone.0007460,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s10531-017-1459-9,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/geb.12759,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s13744-013-0183-8,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s00360-008-0312-6,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/10-1961.1,Y,0,0,0,0,1,0,Q Model,Terrestrial,Plants,Broad,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1111/j.1365-2745.2011.01932.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,0,1,0,1,0,"Morphological, Life History",1,0,1,0,F,0,0
+10.1890/13-0196.1,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/11-1183.1,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1371/journal.pone.0130571,Y,0,0,1,0,0,0,Experiment,Terrestrial,Other,Tropical Rainforest,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1371/journal.pone.0186123,Y,0,0,0,0,1,0,Q Model,Marine,Fish,Coral Reef,0,1,0,1,1,"Morphological, Life History, Behavioural",1,1,0,0,F,0,0
+10.1186/s12862-017-0970-7,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1093/sysbio/syw020,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1093/sysbio/syx079,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ece3.3613,Y,0,1,0,0,0,0,Observational,Terrestrial,Mammals,Alpine,0,1,0,0,1,"Morphological, Behavioural",1,0,0,0,F,0,0
+10.1007/s00265-014-1831-7,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1600-0587.2013.00237.x,Y,0,0,0,0,1,0,Q Model,Terrestrial,Plants,Alpine,0,1,0,0,0,Morphological,1,0,0,0,F,1,Climate Change
+10.1128/mSphere.00387-16,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1654-1103.2012.01428.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Alpine,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1016/j.ecolind.2016.02.060,Y,0,1,0,0,0,0,Observational,Freshwater,Plants,River,0,1,0,1,0,"Morphological, Life Hisotry  ",1,0,0,0,F,0,0
+10.1371/journal.pbio.1001579,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/gfs.12129,Y,1,0,0,0,0,0,Review,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.3390/f9110722,Y,0,0,0,0,1,0,Q Model,Terrestrial,Plants,Tropical Seasonal Forest,0,1,0,0,0,Morphological,1,0,0,0,F,1,Global Change Multiple
+10.1111/evo.13005,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1461-0248.2011.01681.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1558-5646.2009.00741.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.baae.2017.09.014,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/eff.12333,Y,0,0,0,0,1,0,Q Model,Freshwater,Fish,Lake,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,0
+10.3389/fevo.2018.00219,Y,1,0,0,0,0,0,Review,Broad,Plants,Broad,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1371/journal.pone.0107525,Y,0,0,0,0,0,1,T Model,Marine,Other,Coral Reef,1,0,0,1,0,Life History,1,0,0,0,F,1,Climate Change
+10.3389/fmars.2019.00087,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1186/s13071-017-2590-x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.3897/rio.5.e34564,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/mec.14872,Y,0,0,0,0,1,0,Q Model,Terrestrial,Insects,Alpine,0,1,0,0,1,"Morphological, Behavioural",1,0,0,1,T,0,0
+10.1111/oik.04885,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Temperate Forest,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1098/rspb.2011.2149,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ele.12081,Y,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,1,1,E,0,0
+10.1111/j.1461-0248.2012.01810.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/oik.01544,Y,0,0,1,0,0,0,Experiment,Marine,Multiple,Eelgrass,0,1,0,1,1,"Morphological, Life Histoy, Behavioural",1,0,0,1,T,1,Global Change Multiple
+10.1111/1365-2656.12838,Y,1,0,0,0,0,0,Review,Terrestrial,Multiple,Soil,1,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,0
+10.1111/j.1365-2699.2008.01989.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.actao.2016.06.001,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/jbi.12237,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.scitotenv.2016.04.004,Y,0,0,0,0,1,0,Q Model,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/1365-2664.12623,Y,0,0,1,0,0,0,Experiment,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morphological, Life History",1,0,1,0,F,0,0
+10.1002/ece3.3268,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morphological, Life History",0,0,1,0,E,0,0
+10.3389/fgene.2014.00358,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1466-8238.2011.00719.x,Y,0,0,0,0,1,0,Q Model,Terrestrial,Herps,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,0
+10.1111/j.1365-2427.2009.02220.x,Y,0,1,0,0,0,0,Observational,Freshwater,Fish,Lake,0,0,0,1,1,"Life History, Behavioural",1,0,1,0,F,0,0
+10.1186/s12862-017-1002-3,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/geb.12306,Y,1,0,0,0,0,0,Review,Terrestrial,Plants,Broad,0,1,0,1,0,"Morphological, Behavioural",1,1,0,0,P,0,Global Change Broad
+10.1111/ecog.02968,Y,1,0,0,0,0,0,Review,Terrestrial,Multiple,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,1,0,0,P,0,Climate Change
+10.1002/ajp.22216,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1098/rspb.2006.3487,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1046/j.1095-8312.2003.00224.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ddi.12721,Y,1,0,0,0,0,0,Review,Terrestrial,Birds,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,1,0,E,0,Invasion
+10.1016/j.rse.2018.03.038,Y,0,0,1,0,0,0,Experiment,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1007/s00442-016-3545-1,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.3934/mbe.2010.7.603,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/jfb.12378,Y,0,1,0,0,0,0,Observational,Marine,Fish,Deep Ocean,0,0,0,1,1,"Life History, Behavioural",1,0,0,1,F,0,0
+10.1556/168.2016.17.1.12,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s13595-019-0830-2,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/j.1365-2656.2011.01824.x,Y,0,0,0,0,1,0,Q Model,Terrestrial,Multiple,Temperate Forest,0,0,0,0,1,Behavioural,0,0,1,0,E,0,Habitat Degredation
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2664.12490,Y,0,1,0,0,0,0,Observational,Terrestrial,Mammals,Tropical Rainforest,0,1,0,0,1,"Morphological, Behavioural",1,0,0,0,F,0,Habitat Degredation
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.2307/3060931,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1472-4642.2012.00886.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s10531-014-0850-z,Y,0,0,0,1,0,0,Metanalysis,Terrestrial,Herps,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,1,0,E,0,Invasion
+10.1002/ecm.1294/full,Y,0,0,0,0,0,1,T Model,Terrestrial,Plants,Broad,1,1,1,1,0,"Morphological, Physiological, Life History",1,0,0,0,F,0,0
+10.1002/ecs2.2101,Y,0,0,0,0,1,0,Q Model,Terrestrial,Insects,Tropical Rainforest,0,0,0,1,1,"Life History, Behavioural",0,1,0,0,P,0,0
+10.1073/pnas.1721464115,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Broad,0,1,0,1,0,"Morphological, Life History",0,0,0,1,T,0,0
+10.1093/aob/mcx005,Y,0,0,1,0,0,0,Experiment,Terrestrial,Plants,Coastal,1,0,0,1,0,Life History,1,0,0,0,F,0,0
+10.1111/brv.12461,Y,0,0,0,1,0,0,Metanalysis,Terrestrial,Plants,Broad,1,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1007/BF00619269,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/rec.12202,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/S0065-2881(09)56004-X,Y,1,0,0,0,0,0,Review,Marine,Fish,Broad,1,1,0,1,1,"Morphological, Life History, Behavioural",1,1,0,0,P,0,Global Change Broad
+10.1037/a0039109,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.3389/fmicb.2014.00614,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1461-9563.2007.00331.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1093/plankt/fbp098,Y,1,0,0,0,0,0,Review,Marine,Plankton,Broad,0,1,0,0,0,Morphological,1,0,0,0,F,0,Climate Change
+10.1111/1365-2664.12765,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/geb.12088,Y,0,0,0,0,1,0,Q Model,Terrestrial,Mammals,Tropical Rainforest,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,Invasion
+unknown_6,Y,0,0,0,0,1,0,Q Model,Terrestrial,Plants,Broad,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1111/1365-2435.12838,Y,0,1,0,0,1,0,Observational/Q Model,Freshwater,Fish,River,0,1,0,0,0,Morphological,0,0,0,1,T,0,0
+10.1007/BF02241353,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/2041-210X.12295,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1461-0248.2008.01255.x,Y,0,0,0,1,0,0,Metanalysis,Terrestrial,Multiple,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,Habitat Degredation
+10.1890/10-1245.1,Y,1,0,0,0,0,0,Review,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1007/s10530-013-0406-2,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.3389/fmicb.2014.00324,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s00114-017-1475-3,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Grassland,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.5194/bg-16-425-2019,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-2486.2011.02614.x,Y,0,0,0,0,0,1,T Model,Terrestrial,Plants,Broad,0,0,0,1,1,"Life History, Behavioural",1,1,0,0,P,1,Climate Change
+10.1016/j.apsoil.2017.12.021,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1046/j.1420-9101.1999.00084.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2745.12160,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1111/ele.12642,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Morphological,0,0,1,0,E,0,0
+10.1111/1365-2664.12353,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/een.12158,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2664.12493,Y,0,1,0,0,0,0,Observational,Terrestrial,Broad,Floodplain,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,0
+10.3389/fpls.2016.01224,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morphological, Life History",0,0,1,0,E,0,0
+10.1016/j.jtbi.2013.01.016,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1038/srep38488,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/gcb.12862,Y,1,0,0,0,0,0,Review,Terrestrial,Birds,Broad,0,0,0,0,1,Behavioural,1,0,0,0,F,0,Global Change Broad
+10.2307/2410216,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1034/j.1600-0587.2001.d01-206.x,Y,0,0,0,0,0,1,T Model,Terrestrial,Plants,Broad,0,1,0,1,0,"Morphological, Life History",0,0,1,0,E,0,0
+10.1093/gbe/evx249,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2435.12075,Y,0,1,0,0,0,0,Observational,Terrestrial,Multiple,Grassland,0,1,0,1,1,"Morphological, Life History, Behavioural",1,1,0,1,T,0,0
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/gcb.13016,Y,0,1,0,0,0,0,Observational,Terrestrial,Herps,Tropical Rainforest,1,0,1,0,0,Physiological,1,0,0,0,F,0,Climate Change
+10.1111/j.1461-0248.2009.01307.x,Y,1,0,0,0,1,0,Review/Q Model,Terrestrial,Mammals,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,Global Change Broad
+10.1371/journal.pone.0131630,Y,0,1,0,0,0,0,Observational,Freshwater,Plants,Lake,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1111/1365-2435.12400,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s00442-010-1712-3,Y,0,0,1,0,0,0,Experiment,Marine,Fish,Coral Reef,0,0,0,0,1,Behavioural,0,0,0,1,T,0,0
+10.1016/j.ecoinf.2016.01.005,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/fwb.12228,Y,0,1,0,0,0,0,Observational,Freshwater,Other,River,0,0,0,1,1,"Life History, Behavioural",1,0,1,0,E,0,0
+10.1111/brv.12275,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1186/1741-7007-10-46,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1073/pnas.0904106106,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s13593-013-0166-5,Y,1,0,0,0,0,0,Review,Terrestrial,Plants,Broad,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1186/s12864-015-1976-4,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1600-0706.2012.20025.x,Y,0,0,0,0,1,0,Q Model,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Morphological,0,0,1,0,E,0,0
+10.1111/ecog.02446,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1086/498398,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1098/rspb.2002.1967,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.pocean.2013.10.010,Y,0,1,0,0,0,0,Observational,Marine,Other,Continental Shelf,0,1,0,0,0,Morphological,1,0,0,1,F,0,Global Change Broad
+10.1016/j.foreco.2010.09.047,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/jbi.13516,Y,0,0,0,0,1,0,Q Model,Freshwater,Plants,Ponds,0,1,0,1,0,"Morphological, Life History",0,1,1,0,E,0,0
+10.1111/j.1466-8238.2010.00623.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,1,T,0,0
+10.1111/1365-2745.12996,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,1,0,"Morphological, Life History",1,0,1,0,E,0,Habitat Degredation
+10.1002/ece3.870,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s12224-013-9181-1,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1590/0102-33062016abb0442,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ecolmodel.2016.12.018,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ele.13217,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Desert,0,1,0,0,0,Morphological,0,0,1,0,E,0,0
+10.1111/j.1365-2656.2012.02015.x,Y,0,1,0,0,1,0,Obeservationa/Q Model,Terrestrial,Birds,Broad,0,0,0,1,1,"Life History, Behavioural",1,1,0,0,F,0,0
+10.1016/j.soilbio.2015.02.007,Y,0,0,1,0,0,0,Experiment,Terrestrial,Other,Temperate Forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,Habitat Degredation
+10.1051/kmae/2015033,Y,0,1,0,0,0,0,Observational,Freshwater,Fish,Lake,1,1,0,0,0,Morpholo,1,0,0,0,F,0,0
+10.1016/j.limno.2015.10.005,Y,0,1,0,0,0,0,Observational,Freshwater,Fish,River,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1111/j.1365-2656.2011.01928.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1038/nature15256,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/geb.12475,Y,0,1,0,0,0,0,Observational,Freshwater,Fish,Broad,1,1,0,1,1,"Morphological, Life History, Behavioural",1,0,1,1,T,0,0
+10.1111/maec.12480,Y,1,0,0,0,0,0,Review,Marine,Broad,Broad,0,0,0,1,0,Life History,1,1,0,0,F,0,0
+10.1111/aec.12042,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ecog.02926,Y,0,1,0,0,0,0,Observational,Freshwater,Plankton,Ponds,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,Habitat Degredation
+10.1007/s00442-014-3101-9,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,"Grassland, ",0,1,0,0,0,Morphological,1,0,0,1,T,0,0
+10.1111/wre.12222,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/jvs.12288,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Subtropical Riparian Forest,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1111/jeb.12438,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1095-8312.2007.00909.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Herps,Tropical Rainforest,0,1,0,0,0,Morphological,1,0,0,1,F,0,0
+10.5194/bg-9-2523-2012,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1093/icesjms/fsn035,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/gcb.13835,Y,0,0,0,1,1,0,Metanalysis/Q Model,Marine,Fish,Continental Shelf,1,0,0,1,0,Life History,1,0,0,0,F,0,Global Change Multiple
+10.1098/rspb.2017.1345,Y,1,0,0,0,0,0,Review,Marine,Fish,Broad,0,1,0,0,0,Morphological,1,1,0,0,F,0,0
+10.1016/j.agee.2008.04.011,Y,0,0,0,1,0,0,Metanalysis,Terrestrial,Insects,Grassland,0,1,0,0,1,"Morphological, Behavioural",1,0,0,0,F,0,0
+10.1098/rspb.2015.3003,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1214/09-STS306,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ecolmodel.2017.04.004,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1038/s41558-018-0086-0,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.tree.2016.02.006,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-2656.2010.01725.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ece3.4896,Y,0,1,0,0,0,0,Observational,Terrestrial,Mammals,Temperate Forest,0,0,0,0,1, Behavioural,0,0,0,1,T,0,0
+10.1111/j.1472-4642.2009.00599.x,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Tropical Rainforest,1,1,0,0,0,Morphological,1,0,0,1,T,0,Invasion
+10.1371/journal.pone.0072237,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2656.12004,Y,0,1,0,0,0,0,Observational,Freshwater,Broad,Stream,0,0,0,0,1,Behavioural,1,1,0,0,P,0,0
+10.1111/j.1469-185X.2011.00187.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2656.12718,Y,0,0,1,0,0,0,Experiment,Terrestrial,Herps,Broad,1,0,0,1,0,Life History,1,0,0,0,F,0,0
+10.1111/ele.12632,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ejor.2007.07.030,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/iroh.201401757,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1093/ee/nvv183,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Tropical Rainforest,0,1,0,0,1,"Morphological, Behavioural",1,0,1,1,E,0,0
+10.1111/een.12454,Y,0,1,0,0,0,0,Observational,Terrestrial,Insects,Tropical Rainforest,0,1,0,0,1,"Morphological, Behavioural",1,1,0,0,P,0,0
+10.1111/j.1461-0248.2008.01256.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.pocean.2014.10.002,Y,0,0,0,0,1,0,Q Model,Marine,Fish,Enclosed Sea,0,1,0,0,0,Morphological,1,0,0,0,F,0,Exploitation
+10.1111/j.1365-2427.2009.02379.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/jeb.12769,Y,0,0,1,0,0,0,Experiment,Freshwater,Other,Lake,0,0,0,0,1,Behavioural,1,0,0,0,F,0,0
+unknown_7,Y,0,0,1,0,0,0,Experiment,Marine,Fish,Coral Reef,0,0,0,0,1,Behavioural,0,0,0,1,T,0,0
+10.1111/1365-2656.12250,Y,0,0,0,0,1,0,Q Model,Marine,Fish,Coral Reef,0,1,0,0,1,"Morphological, Behavioural",0,0,0,1,T,0,Invasion
+10.1002/rra.2571,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ecolmodel.2016.01.001,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1365-2656.2011.01929.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1007/s00442-010-1833-8,Y,0,1,0,0,0,0,Observational,Marine,Fish,Coral Reef,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1111/1365-2435.12120,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Broad,0,1,0,0,0,Morphological,1,0,1,0,E,0,Invasion
+10.1371/journal.pone.0172879,Y,0,0,0,0,1,0,Q Model,Terrestrial,Herps,Broad,0,1,0,0,0,Morphological,1,0,0,1,F,0,0
+10.1007/s00442-005-0337-4,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.anbehav.2014.01.010,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.rse.2015.06.010,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Morphological,0,0,1,0,E,0,0
+10.1104/pp.16.00581,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/geb.12184,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.ecolmodel.2015.05.036,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1093/icb/icx056,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/zygo.12334,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ece3.1286,Y,0,0,1,0,0,0,Experiment,Terrestrial,Plants,Wetland,1,1,1,1,0,"Morphological, Physiological, Life History",0,0,1,0,E,0,Invasion
+10.1111/cobi.12656,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1086/674445,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.3389/fevo.2017.00084,Y,1,0,0,0,0,0,Review,Terrestrial,Birds,Broad,0,1,0,1,1,"Morphological, Life History, Behavioural",1,0,0,0,F,0,Habitat Degredation
+10.1371/journal.pone.0056717,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.2007.0030-1299.15875.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.3354/meps09086,Y,0,1,0,0,0,0,Observational,Marine,Fish,Kelp Forest,0,1,0,1,1,"Morphological, Life History, Behavioural",0,0,0,1,T,0,0
+10.1016/j.jenvman.2014.01.010,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1080/13658816.2013.861465,Y,0,0,0,0,1,0,Q Model,Marine,Fish,Estuary,1,0,0,1,1,"Life History, Behavioural",1,1,0,0,P,0,0
+10.1007/BF00133308,Y,0,0,0,0,1,0,Q Model,Terrestrial,Birds,Temperate Forest,0,0,0,1,1,"Life History, Behavioural",1,0,0,0,F,0,Habitat Degredation
+10.1046/j.1365-2435.1999.00299.x,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.3354/meps10036,Y,0,0,0,0,0,1,T Model,Marine,Multiple,Baltic Sea,0,0,0,1,0,Life History,1,0,1,0,E,1,Habitat Degredation
+10.3354/meps12165,Y,0,1,0,0,0,0,Observational,Marine,Broad,Continental Shelf,0,0,0,1,1,"Life History, Behavioural",1,0,0,1,T,0,Exploitation
+10.1016/j.psc.2006.04.007,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1890/ES14-00242.1,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/1365-2745.12439,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1016/j.pedobi.2016.06.001,Y,0,1,0,0,0,0,Observational,Terrestrial,Other,Temperate Forest,0,0,0,1,0,Life History,1,0,0,0,F,0,Habitat Degredation
+10.1016/j.jtbi.2010.12.006,Y,0,0,0,0,0,1,T Model,Broad,Broad,Broad,0,0,0,1,0,Life History,0,0,0,1,T,0,0
+10.14471/2016.36.018,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Grassland,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+NA,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1093/femsec/fix150,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1002/ece3.2765,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/j.1529-8817.2010.00890.x,Y,0,0,1,0,0,0,Experiment,Marine,Plants,Broad,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1093/aob/mcx222,Y,0,1,0,0,0,0,Observational,Terrestrial,Plants,Subtropical evergreen forest,0,1,0,0,0,Morphological,1,0,0,0,F,0,0
+10.1890/0012-9658(2001)082[0784:AASAFR]2.0.CO;2,N,,,,,,,,,,,0,,,,,,0,0,0,0,,,
+10.1111/ele.12080,Y,0,0,0,1,0,0,Metanalysis,Terrestrial,Plants,Broad,0,0,0,1,0,Life History,1,0,1,0,E,0,0
+10.1002/ece3.3969,Y,0,1,0,0,0,0,Observational,Marine,Broad,Coral Reef,0,1,0,1,0,"Morphological, Life History",1,0,0,0,F,0,0
+10.1111/ele.13216,Y,0,1,0,0,0,0,Single,Terrestrial,Herps,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1890/15-1084.1,Y,0,0,0,1,0,0,Single,Broad,Plankton,Broad,1,1,1,0,0,Multiple,1,0,0,0,Single,0,0
+10.1371/journal.pone.0185861,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1186/s40462-017-0111-3,Y,0,1,0,0,0,1,Multiple,Marine,Fish,Continental Shelf,0,0,0,0,1,Single,1,0,0,0,Single,0,0
+10.1002/ece3.1460,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/fwb.12934,Y,0,1,0,0,0,0,Single,Freshwater,Broad,Lake,0,1,0,1,1,Multiple,1,0,1,0,Multiple,0,0
+10.1038/srep33383,Y,0,0,0,0,0,1,Single,Terrestrial,Insects,Broad,0,0,0,1,0,Single,1,0,0,0,Single,1,Climate Change
+10.1111/1365-2664.12037,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1126/science.aac7978,Y,0,0,0,0,1,0,Single,Terrestrial,Mammals,Broad,1,1,0,1,1,Multiple,1,0,0,0,Single,0,Exploitation
+10.1023/B:BIOC.0000004319.91643.9e,Y,1,0,0,0,0,0,Single,Terrestrial,Broad,Grassland,0,1,0,1,1,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1007/s13592-016-0476-0,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/jeb.12409,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.3732/ajb.1400437,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/1365-2656.12532,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1472-4642.2007.00381.x,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Broad,1,1,0,1,0,Multiple,1,0,1,0,Multiple,1,Invasion
+10.1371/journal.pone.0095845,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1469-1795.2012.00528.x,Y,0,1,0,0,0,0,Single,Terrestrial,Birds,Tropical Rainforest,0,1,0,0,1,Multiple,1,0,1,0,Multiple,0,Habitat Degredation
+10.3390/insects9040179,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.3389/fevo.2017.00100,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1186/1471-2148-10-179,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.2989/00306520309485376,Y,0,1,0,0,0,0,Single,Terrestrial,Birds,Broad,0,1,0,1,1,Multiple,1,0,0,0,Single,0,0
+NA,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1002/eap.1434,Y,0,0,0,0,1,0,Single,Terrestrial,Birds,Polar,0,0,0,1,1,Multiple,1,0,0,0,Single,1,Climate Change
+10.1111/j.1365-2745.2006.01170.x,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2015.2841,Y,0,0,1,0,0,0,Single,Terrestrial,Multiple,Broad,1,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1093/icb/icw082,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1046/j.1365-2427.2002.01002.x,Y,0,0,0,0,0,1,Single,Freshwater,Fish,Lake,0,0,0,0,1,Single,1,0,0,1,Multiple,0,0
+10.1111/jeb.12966,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.2307/5755,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,1,1,Multiple,0,0,1,0,Single,0,0
+10.1016/j.jtbi.2013.04.034,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1098/rsos.140541,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Temperate Forest,1,1,1,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1890/ES13-00393.1,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecocom.2013.06.003,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1890/0012-9658(2006)87[100:PCAOIB]2.0.CO;2,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s13213-017-1317-8,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.3354/meps11626,Y,0,1,0,0,0,0,Single,Marine,Birds,Polar,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1111/1365-2656.12229,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.1994.0059,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2664.12548,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-005-0082-8,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1098/rstb.2015.0227,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecolmodel.2007.08.020,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s00338-018-1689-7,Y,0,0,0,0,1,0,Single,Marine,Fish,Coral Reef,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1046/j.1365-2311.2002.0379a.x,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Grassland,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+NA,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1002/mma.4612,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.tree.2018.11.003,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12514,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12982,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2435.2009.01614.x,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tropical Seasonal Forest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/j.1461-0248.2012.01788.x,Y,0,1,0,0,0,0,Single,Marine,Other,Continental Shelf,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+NA,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.13237,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s11538-007-9214-0,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/een.1.2425,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Grassland,0,1,0,0,1,Multiple,1,0,0,0,Single,0,0
+10.1007/s10452-016-9596-x,Y,1,0,0,0,0,0,Single,Freshwater,Plants,Broad,0,0,0,1,0,Single,1,0,1,0,Multiple,0,Global Change Broad
+10.1371/journal.pone.0020782,Y,0,0,1,0,0,0,Single,Freshwater,Fish,Lake,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1111/j.1365-2656.2008.01460.x,Y,1,0,0,0,0,0,Single,Broad,Broad,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1111/1365-2664.13027,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/gcb.12604,Y,0,0,0,0,0,1,Single,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Single,1,0,0,0,Single,1,Climate Change
+10.1016/j.scitotenv.2018.02.210,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.jtbi.2011.05.033,Y,0,0,0,0,1,0,Single,Terrestrial,Multiple,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+NA,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+unknown_8,Y,0,1,0,0,0,0,Single,Terrestrial,Herps,Grassland,1,1,0,1,0,Multiple,1,1,0,0,Multiple,0,0
+10.1086/505157,Y,0,0,0,0,1,0,Single,Terrestrial,Multiple,Seasonal Tropical Forest,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1890/10-1264.1,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.2307/1939297,Y,0,0,1,0,0,0,Single,Freshwater,Other,Ponds,0,0,0,1,1,Multiple,0,0,1,0,Single,0,0
+10.1016/B978-0-12-386475-8.00005-8,Y,0,1,0,0,0,1,Multiple,Marine,Broad,Polar,0,1,0,1,1,Multiple,1,0,0,1,Multiple,1,Global Change Multiple
+10.1111/1365-2745.12366,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/1365-2435.12798,Y,0,1,0,0,1,0,Multiple,Marine,Plants,Broad,1,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1186/1471-2148-7-220,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.23818/limn.38.25,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+http://dx.doi.org/10.3389/fevo.2018.00081.s001,Y,0,0,0,0,1,0,Single,Broad,Broad,Broad,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1007/s10980-012-9820-6,Y,0,1,0,0,1,0,Multiple,Terrestrial,Insects,Grasslands,0,0,0,1,1,Multiple,1,0,1,0,Multiple,0,Habitat Degredation
+10.1111/j.1466-8238.2010.00617.x,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1080/1357650X.2017.1293074,Y,0,1,0,0,0,0,Single,Terrestrial,Mammals,Temperate Forest,0,1,0,0,1,Multiple,0,0,0,1,Single,0,0
+10.1371/journal.pone.0133794,Y,0,0,0,0,0,1,Single,Marine,Broad,Broad,0,1,0,0,0,Single,1,0,0,1,Multiple,1,Exploitation
+10.1046/j.1365-2656.2003.00727.x,Y,0,0,0,0,1,0,Single,Marine,Birds,Polar,0,0,0,1,0,Single,1,0,0,0,Single,0,Climate Change
+10.1007/s00442-019-04386-0,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Grassland,0,0,0,1,0,Single,1,0,1,0,Multiple,0,0
+10.1111/j.1095-8649.2012.03294.x,Y,0,1,0,0,0,0,Single,Freshwater,Fish,Lake,0,1,0,0,1,Multiple,0,0,0,1,Single,0,0
+10.1111/j.1365-2435.2012.02057.x,Y,1,0,0,0,1,0,Multiple,Terrestrial,Multiple,Broad,1,1,0,0,0,Single,1,0,0,0,Single,0,Global Change Broad
+10.1111/jeb.13175,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2486.2009.01963.x,Y,1,0,0,0,0,0,Single,Terrestrial,Birds,Broad,0,1,0,1,1,Multiple,1,0,0,0,Single,1,Climate Change
+10.1186/s12898-014-0026-4,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/jvs.12375,Y,1,0,0,0,0,0,Single,Terrestrial,Plants,Broad,1,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1007/s00300-016-1946-6,Y,0,0,0,0,1,0,Single,Marine,Fish,Polar,0,0,0,1,0,Single,1,0,1,0,Multiple,0,0
+10.1016/j.ecoleng.2015.11.001,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Grassland,0,1,0,0,0,Single,1,0,1,0,Multiple,0,Habitat Degredation
+10.2307/1543609,Y,1,0,0,0,0,0,Single,Broad,Broad,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1007/s004420000504,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,0,0,1,0,Single,1,0,0,1,Multiple,0,0
+10.1098/rstb.2008.0334,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2664.12022,Y,0,1,0,0,1,0,Multiple,Freshwater,Broad,Wetland,0,0,0,1,1,Multiple,1,1,0,0,Multiple,0,Habitat Degredation
+10.1111/1365-2435.12753,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Broad,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1007/s10641-009-9537-9,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.3390/math6120336,Y,0,0,0,0,0,1,Single,Marine,Plankton,Continental Shelf,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+unknown_9,Y,0,1,0,0,0,0,Single,Freshwater,Other,Ponds,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1016/j.seares.2012.04.003,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2745.2010.01687.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Floodplain,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1111/1365-2435.12005,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s00035-017-0198-6,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Alpine,1,1,1,0,0,Multiple,1,0,0,0,Single,0,0
+10.1002/ece3.2328,Y,0,1,0,0,1,0,Multiple,Freshwater,Fish,River,0,1,0,0,1,Multiple,1,0,1,0,Multiple,0,0
+10.1890/14-0024.1,Y,0,1,0,0,1,0,Multiple,Terrestrial,Multiple,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1098/rspb.2011.1371,Y,0,0,0,0,1,0,Single,Terrestrial,Insects,Broad,0,0,0,1,0,Single,0,0,0,1,Single,0,0
+10.1093/icb/icv033,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1038/srep08069,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1038/s41559-017-0298-0,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1534/g3.118.200865,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.biocontrol.2010.12.005,Y,0,0,0,1,0,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1002/ecs2.2374,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/jvs.12255,,0,0,0,0,1,0,Single,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,0,0,1,0,Single,0,0
+10.1016/j.anbehav.2017.07.010,Y,0,1,0,0,0,0,Single,Marine,Fish,Coral Reef,0,0,0,1,1,Multiple,1,0,0,0,Single,0,Climate Change
+10.1016/j.jtbi.2007.07.013,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,1,0,Single,1,0,0,0,Single,1,Climate Change
+NA,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1186/2193-1801-3-630,Y,0,1,0,0,1,0,Multiple,Terrestrial,Birds,Tropical Rainforest,0,1,0,1,1,Multiple,0,0,0,1,Single,0,0
+10.1016/j.pbi.2008.01.004,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1093/aob/mcy004,Y,0,0,1,0,1,0,Multiple,Terrestrial,Plants,Grassland,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1016/j.biocontrol.2015.05.005,,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,1,0,Single,0,0,0,1,Single,0,0
+10.1111/j.1365-2486.2011.02451.x,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/ele.13203,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/jvs.12066,Y,1,0,0,0,0,0,Single,Terrestrial,Plants,Broad,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/j.0906-7590.2008.05457.x,Y,0,0,0,0,1,0,Single,Terrestrial,Other,Broad,1,0,0,1,0,Single,1,0,0,0,Single,0,Invasion
+10.1242/jeb.059634,Y,0,0,0,0,0,1,Single,Terrestrial,Herps,Broad,1,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1371/journal.pone.0093237,Y,0,1,0,0,1,0,Multiple,Freshwater,Fish,River,0,1,0,1,1,Multiple,1,0,1,0,Multiple,0,Invasion
+10.1111/j.1461-0248.2009.01354.x,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1095-8312.2008.01112.x,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1642/AUK-15-183.1,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-018-4162-y,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Alpine,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1016/j.ecolmodel.2017.06.005,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1163/1568539X-00003356,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1002/ecs2.2164,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,0,0,1,0,Single,0,0
+10.1111/ele.13089,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+unknown_10,Y,0,0,0,1,1,0,Multiple,Broad,Broad,Broad,0,0,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1016/j.tree.2018.06.004,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12074,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/ecog.00819,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12784,Y,0,1,0,0,0,0,Single,Marine,Plankton,Broad,1,1,0,1,1,Multiple,1,0,1,0,Multiple,0,0
+10.1007/s11356-008-0019-y,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.baae.2014.11.002,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1002/ecy.1745,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2699.2010.02433.x,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/j.1365-2486.2009.01905.x,Y,0,0,1,0,0,1,Multiple,Terrestrial,Plants,Grassland,0,1,0,0,0,Single,1,0,1,0,Multiple,1,0
+10.1098/rspb.2018.0312,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.foreco.2018.10.061,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Temperate Forest,0,0,0,1,0,Single,1,0,1,0,Multiple,1,Global Change Broad
+10.1016/j.biocon.2016.07.026,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/faf.12155,Y,1,0,0,0,0,0,Single,Marine,Fish,Broad,1,0,1,1,1,Multiple,1,0,0,0,Single,0,Climate Change
+10.1111/ecog.03747,Y,0,1,0,0,1,0,Multiple,Terrestrial,Mammals,Alpine,0,1,0,1,1,Multiple,1,0,1,0,Multiple,0,0
+10.1002/ece3.263,Y,0,1,1,0,1,0,Multiple,Terrestrial,Herps,Tropical Rainforest,1,0,0,1,0,Single,1,0,0,0,Single,0,Invasion
+10.1093/molbev/msw121,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.tpb.2006.07.005,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1466-8238.2010.00641.x,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1645/15-942,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1126/science.1160662,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,0,0,1,0,Single,0,0
+10.1890/09-1672.1,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1111/j.1600-0706.2013.00646.x,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2656.2010.01705.x,Y,0,0,1,0,0,0,Single,Freshwater,Broad,Ponds,0,1,0,1,0,Multiple,0,0,0,1,Single,0,0
+10.1098/rspb.2017.1942,Y,0,0,1,0,0,0,Single,Freshwater,Plankton,Lake,1,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1073/pnas.0909820106,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0015409,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+unknown_11,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1086/522055,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0035742,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Subtropical Forest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/j.1365-2427.2009.02298.x,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s00227-014-2568-6,Y,0,1,0,0,0,0,Single,Marine,Plankton,Estuary,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1038/ismej.2015.201,Y,0,1,0,0,1,0,Multiple,Terrestrial,Other,acid mine drainage,0,0,0,1,0,Single,1,0,0,0,Single,0,Habitat Degredation
+10.3389/fmicb.2017.01486,Y,0,1,0,0,1,0,Multiple,Terrestrial,Other,acid mine drainage,0,1,0,0,0,Single,1,0,0,0,Single,0,Habitat Degredation
+10.1111/j.1469-8137.2006.01811.x,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,0,0,1,0,Single,1,0,0,1,Multiple,0,0
+10.1111/avsc.12022,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1051/alr:2005029,Y,0,1,0,0,0,0,Single,Marine,Fish,Coral Reef,0,1,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1016/j.dsr.2016.11.011,Y,0,1,0,0,0,0,Single,Marine,Fish,Deep Ocean,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1111/1365-2435.12593,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s11284-016-1373-8,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Subtropical Forest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,Habitat Degredation
+10.1111/j.1461-0248.2012.01744.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Birds,Coast,0,1,0,0,1,Multiple,0,0,0,1,Single,0,0
+10.1111/gcb.12887,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/oik.04712,Y,0,0,0,0,1,0,Single,Terrestrial,Insects,Temperate Forest,0,1,0,1,1,Multiple,0,0,0,1,Single,0,0
+10.1111/ele.12573,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2656.2008.01443.x,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Riparian Zone,1,1,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1111/1365-2664.12516,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Grassland,0,1,0,0,0,Single,1,0,0,0,Single,0,Habitat Degredation
+10.1111/gcb.12355,Y,0,1,1,0,1,0,Multiple,Freshwater,Broad,Stream,0,1,0,0,1,Multiple,0,0,1,0,Single,0,Global Change Broad
+10.1007/s00442-015-3430-3,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Grassland,1,1,0,1,0,Multiple,0,0,1,0,Single,0,0
+10.1111/1365-2664.12350,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/eff.12391,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1654-1103.2012.01469.x,Y,0,0,1,0,1,0,Multiple,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1073/pnas.1319342111,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,0,0,1,0,Single,0,0
+10.1002/eap.1621,Y,0,0,0,0,1,0,Single,Freshwater,Multiple,River,1,1,0,1,1,Multiple,1,0,0,0,Single,0,Global Change Broad
+10.1890/07-0591.1,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1002/ecs2.1900,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0195919,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecolmodel.2015.03.013,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.12187,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2664.12935,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.3390/rs10071120,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1046/j.1365-2435.2002.00664.x,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Temperate Forest,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1111/gcb.12689,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/jvs.12083,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.12480,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Shrublands,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1111/1365-2745.12239,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1600-0587.2012.07534.x,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.12239,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.7717/peerj.3454,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/mam.12035,Y,1,0,0,0,0,0,Single,Terrestrial,Mammals,Broad,0,1,0,0,1,Multiple,1,0,1,0,Multiple,0,0
+10.1371/journal.pone.0196066,Y,0,1,0,0,0,0,Single,Freshwater,Herps,Ponds,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1890/08-1449.1,Y,0,0,0,0,0,0,Multiple,Terrestrial,Plants,Tropical Seasonal Forest,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1111/j.1752-4571.2008.00039.x,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1098/rstb.2010.0028,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1023/A:1006511124428,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-014-2917-7,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Apline,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1016/j.scitotenv.2016.03.120,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ympev.2016.01.012,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/aec.12607,Y,0,1,0,0,0,0,Single,Freshwater,Herps,Ponds,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/j.1366-9516.2005.00169.x,Y,0,0,0,0,1,0,Single,Terrestrial,Insects,Broad,0,1,0,0,1,Multiple,1,0,1,0,Multiple,1,Invasion
+10.1098/rspb.2014.2102,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Heathland,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1111/j.1095-8649.2008.01908.x,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+unknown_12,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,0,0,0,1,0,Single,1,0,1,0,Multiple,0,0
+10.1111/j.1600-0706.2013.00979.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,1,0,0,0,Single,0,Habitat Degredation
+NA,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12767,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/nph.14397,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pgen.1003596,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.12802,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.7717/peerj.3092,Y,0,0,0,0,1,0,Single,Terrestrial,Birds,Subtropical Forest,0,1,0,1,1,Multiple,1,0,1,0,Multiple,0,Invasion
+10.1016/j.biocon.2010.06.002,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2656.12747,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Broad,0,1,0,1,1,Multiple,1,0,1,0,Multiple,0,Habitat Degredation
+10.1111/oik.01515,Y,0,0,1,0,0,0,Single,Terrestrial,Insects,Broad,0,1,0,0,1,Multiple,0,0,0,1,Single,0,0
+10.1890/08-1802.1,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+unknown_13,Y,1,0,0,0,0,0,Single,Marine,Broad,Broad,0,1,0,1,1,Multiple,0,0,0,1,Single,0,0
+10.1007/s10646-011-0689-y,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s10530-016-1241-z,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/geb.12336,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1007/s11160-016-9446-x,Y,0,0,0,0,1,0,Single,Freshwater,Fish,River,0,0,0,1,1,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1163/156853998793066410,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1890/09-1894.1,Y,0,0,0,0,1,0,Single,Terrestrial,Insects,Temperate Forest,0,1,0,0,1,Multiple,1,0,0,0,Single,0,0
+10.1086/342898,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/ele.13235,Y,0,0,0,0,0,1,Single,Freshwater,Broad,Broad,1,0,0,1,0,Single,0,0,1,1,Multiple,1,0
+10.1002/ecm.1299,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/jbi.12707,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/jbi.12808,Y,1,0,0,0,0,0,Single,Terrestrial,Herps,Broad,0,1,0,1,0,Multiple,1,0,0,0,Single,1,Invasion
+10.1007/s11284-010-0738-7,N,0,1,0,0,0,0,Single,Terrestrial,Insects,Tropical Agroecosystem,0,,,,,Multiple,,,,,Multiple,,
+10.1146/annurev-environ-110615-085532,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1016/j.tpb.2003.12.004,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1002/ecy.1485,Y,0,0,1,0,0,0,Single,Freshwater,Broad,Lake,0,1,0,1,0,Multiple,0,0,1,1,Multiple,0,Invasion
+10.3390/w11020222,Y,0,0,1,0,0,0,Single,Freshwater,Plankton,Reservoir,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1093/cz/zow115,N,,,,,,,Multiple,,,,0,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1654-1103.2012.01424.x,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Tropical Seasonal Forest,0,1,0,0,0,Single,0,0,1,0,Single,0,0
+10.1111/jvs.12256,Y,1,0,0,0,0,0,Single,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/j.1365-2435.2006.01148.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.15451/ec2017-07-6.11-1-6,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/oik.05398,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.12536,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Grassland,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jvs.12681,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Alpine,0,1,0,0,0,Single,0,0,1,0,Single,0,0
+10.1007/s11829-016-9444-x,Y,0,1,1,0,0,0,Multiple,Terrestrial,Plants,Alpine,0,0,0,1,0,Single,0,0,1,0,Single,0,0
+10.1111/j.1654-1103.2009.01160.x,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Urban ,0,1,0,1,0,Multiple,1,1,0,0,Multiple,0,Habitat Degredation
+10.1111/1365-2435.12256,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecolind.2016.08.014,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1073/pnas.1304074110,Y,0,0,0,0,1,0,Single,Marine,Fish,Coral Reef,0,1,0,1,1,Multiple,1,1,0,0,Multiple,0,0
+10.1111/jbi.12574,Y,0,0,0,0,1,0,Single,Marine,Fish,Coral Reef,0,1,0,1,1,Multiple,1,1,0,0,Multiple,0,0
+10.1021/es505426z,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.3389/fmicb.2019.00169,Y,0,1,1,0,0,0,Multiple,Terrestrial,Other,Alpine,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1017/S0031182004005050,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,1,1,0,1,1,Multiple,0,0,0,1,Single,0,0
+10.1016/j.tree.2005.05.006,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.soilbio.2015.03.005,Y,0,1,0,0,1,0,Multiple,Terrestrial,Other,Grassland,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1007/s00227-016-2841-y,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/gcb.13736,Y,0,0,0,1,0,0,Single,Broad,Broad,Broad,0,1,0,1,1,Multiple,1,1,0,0,Multiple,0,Climate Change
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/mec.13746,Y,0,1,1,0,0,0,Multiple,Freshwater,Fish,Lake,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1890/13-2261.1,Y,0,1,0,0,0,0,Single,Terrestrial,Multiple,Tropical Rainforest,0,1,0,0,0,Single,0,0,1,1,Multiple,0,0
+10.1016/j.actao.2016.06.003,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Sand Dunes,1,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/1365-2656.12189,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/jmor.10081,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1467-7652.2011.00645.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ecs2.2324,Y,0,1,0,0,1,0,Multiple,Terrestrial,Birds,Tropical Rainforest,0,1,0,0,1,Multiple,0,0,1,0,Single,0,0
+10.1093/sysbio/syw115,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.marenvres.2017.09.004,Y,0,1,0,0,0,0,Single,Marine,Fish,Continental Shelf,0,0,0,0,1,Single,0,0,0,1,Single,0,Habitat Degredation
+10.1007/s10531-014-0742-2,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Sand Dunes,1,1,0,1,0,Multiple,0,0,1,0,Single,0,Invasion
+10.1556/168.2016.17.1.11,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tropical Rainforest,0,1,0,1,0,Multiple,1,1,1,0,Multiple,0,0
+10.1111/1365-2435.13059,Y,0,0,0,0,1,0,Single,Terrestrial,Mammals,Grassland,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1086/682369,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.0014-3820.2005.tb01015.x,Y,0,1,0,0,0,0,Single,Marine,Other,Coast,0,1,0,0,0,Single,0,0,1,0,Single,0,0
+10.1111/j.1095-8339.2005.00411.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jvs.12058,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Grassland,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1002/ecy.2079,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Glacial Outwash Plain,0,1,0,1,0,Multiple,1,1,1,0,Multiple,0,0
+http://dx.doi.org/10.3389/fevo.2018.00131.s001,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.13100,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ecy.1711/suppinfo,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/zsc.12198,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1086/685894,Y,0,1,0,0,0,0,Single,Terrestrial,Birds,Tropical Rainforest,0,1,0,1,1,Multiple,0,0,1,0,Single,0,0
+10.1016/j.ecss.2017.11.016,Y,0,0,1,0,0,0,Single,Marine,Other,,0,1,0,0,1,Multiple,0,0,0,1,Single,0,Invasion
+10.1016/j.ecoleng.2014.11.057,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Roadcuts,0,1,0,0,0,Single,1,1,0,0,Multiple,0,Habitat Degredation
+10.1111/ele.12305,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/ES12-00262.1,Y,0,0,0,1,0,0,Single,Terrestrial,Insects,Urban ,0,1,0,1,0,Multiple,1,1,0,0,Multiple,0,Habitat Degredation
+10.1126/science.aac9323,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2745.2012.01965.x,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Rainforests,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1111/jvs.12033,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jbi.12284,Y,0,0,0,0,1,0,Single,Terrestrial,Other,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1002/aqc.1198,Y,0,0,0,0,1,0,Single,Freshwater,Fish,Lake,0,1,0,1,1,Multiple,0,0,1,0,Single,0,Invasion
+10.7717/peerj.5459,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/08-1836.1,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0182826,Y,0,0,0,0,1,0,Single,Marine,Broad,Broad,0,0,0,1,0,Single,0,0,1,1,Multiple,0,Exploitation
+unknown_14,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Broad,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,Climate Change
+10.1093/beheco/arv030,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1071/WR13041,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1177/1059712311426800,Y,0,0,1,0,0,0,Single,Terrestrial,Herps,Broad,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1098/rspb.2010.0501,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,0,0,1,0,Single,0,0
+10.1186/1471-2148-13-277,Y,0,1,1,0,0,0,Multiple,Freshwater,Fish,Lake,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1016/j.aquatox.2008.12.002,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0124618,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2017.2066,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/15-0288.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rstb.2010.0159,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.12259,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12855,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+unknown_15,Y,0,1,0,0,0,0,Single,Terrestrial,Herps,Alpine,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1016/B978-0-12-396992-7.00004-6,Y,1,0,0,0,0,0,Single,Freshwater,Broad,Broad,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1111/j.1095-8312.2005.00426.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12391,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-017-4053-7,Y,0,0,0,0,1,0,Single,Terrestrial,Birds,Broad,1,0,0,1,1,Multiple,1,0,0,0,Single,0,Climate Change
+10.1111/btp.12130,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ece3.4439, N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2664.2012.02211.x,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Grassland,0,1,0,1,0,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1139/cjz-2017-0351,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.12755,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1093/jpe/rtt075,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Subtropical Forest,0,1,0,0,0,Single,1,1,0,0,Multiple,0,0
+10.1016/j.tree.2015.09.006,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Broad,1,0,0,1,0,Single,1,0,0,0,Single,0,Climate Change
+10.1007/s00442-016-3631-4,Y,0,0,0,0,1,0,Single,Terrestrial,Insects,Broad,0,0,0,1,1,Multiple,0,0,0,1,Single,0,0
+10.1111/evo.12371,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10750-007-9086-1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1749-4877.12114,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/ecog.02070, N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.13119,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1017/S0952836900001084,Y,0,1,0,0,0,0,Single,Terrestrial,Mammals,Broad,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.7717/peerj.2387,Y,0,1,0,0,0,0,Single,Marine,Fish,Broad,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1111/1365-2656.12471,Y,0,1,0,0,0,0,Single,Terrestrial,Fish,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1093/aob/mcp122,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12167,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-017-4041-y,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/jbi.12794,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tundra,0,1,0,0,0,Single,0,0,1,0,Single,0,0
+10.1111/j.1600-0706.2010.18411.x,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Grassland,1,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1371/journal.pone.0204365,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0107883,Y,0,1,0,0,1,0,Multiple,Terrestrial,Birds,Broad,0,1,0,1,1,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1093/beheco/ars040,Y,0,1,0,0,1,0,Multiple,Terrestrial,Birds,Broad,0,1,0,1,1,Multiple,1,1,0,0,Multiple,0,0
+10.1007/s00265-006-0160-x,Y,0,1,0,0,0,0,Single,Terrestrial,Birds,Broad,0,1,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1016/j.scitotenv.2016.07.227,Y,0,1,0,0,1,0,Multiple,Freshwater,Other,River,1,1,0,1,1,Multiple,1,0,1,0,Multiple,0,Habitat Degredation
+10.1002/eap.1530,Y,0,1,0,0,0,1,Multiple,Freshwater,Insects,Stream,1,1,1,1,1,Multiple,1,1,0,0,Multiple,0,0
+10.1890/13-0708.1,Y,0,1,0,0,1,0,Multiple,Freshwater,Fish,River,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1111/j.1365-3113.2004.00223.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0197877,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/avsc.12335,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10452-010-9339-3,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/06-1095.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2664.12486,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.2307/2410853,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/ele.12576,Y,0,0,0,1,0,0,Single,Broad,Fish,Broad,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/1365-2435.12776,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.12851,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Temperate Forest,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1111/ele.12356,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+unknown_16,Y,0,1,0,0,0,0,Single,Terrestrial,Mammals,Temperate Forest,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1111/gcb.12545,Y,0,1,0,0,1,0,Multiple,Freshwater,Fish,River,0,0,0,1,0,Single,1,0,1,0,Multiple,0,0
+10.1111/oik.04300,Y,0,0,0,0,0,1,Single,Terrestrial,Plants,Broad,0,1,0,1,0,Multiple,0,0,1,0,Single,0,0
+10.1007/s00300-015-1872-z,Y,0,1,0,0,1,0,Multiple,Terrestrial,Broad,Polar,0,0,0,1,0,Single,1,0,1,1,Multiple,0,Climate Change
+10.1371/journal.pone.0099753,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2664.13075,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2015.1498,Y,0,0,0,0,1,1,Multiple,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1016/B978-0-12-420002-9.00002-0,Y,1,0,0,0,0,0,Single,Terrestrial,Broad,Broad,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1016/B978-0-12-396992-7.00001-0,Y,0,1,0,0,0,1,Multiple,Freshwater,Fish,River,0,1,0,0,1,Multiple,0,0,1,1,Multiple,0,0
+10.1016/j.foreco.2018.04.032,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,broad,1,1,0,0,0,Single,1,0,0,0,Single,0,Climate Change
+10.1007/s00442-004-1770-5,Y,0,0,0,0,1,0,Single,Terrestrial,Birds,Temperate Forest,0,0,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1016/j.gecco.2016.01.004,Y,0,0,0,0,1,0,Single,Terrestrial,Mammals,Broad,0,1,0,1,1,Multiple,1,0,0,1,Multiple,0,Habitat Degredation
+10.1111/2041-210X.12364,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.2041-210X.2012.00196.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12918,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/plb.12605,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecss.2017.01.001,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2016.1646,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10682-005-2005-x,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,1,0,0,1,Multiple,0,0
+10.1111/j.1365-2699.2012.02729.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0112843,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ecy.1990,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Seasonal Tropical Forest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1023/A:1007942804047,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s12152-010-9095-z,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s12080-014-0229-5,Y,0,0,0,0,0,1,Single,Marine,Fish,Broad,1,1,0,1,1,Multiple,0,0,1,1,Multiple,0,0
+10.1016/j.ufug.2018.01.002,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Urban ,1,1,0,1,1,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.3389/fpls.2014.00348,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1006/jtbi.1997.0554,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.biosystems.2015.03.005,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.2307/3546168,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1073/pnas.1302051110,Y,0,0,1,0,0,0,Single,Marine,Fish,Continental Shelf,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1111/1365-2656.12603,Y,0,1,0,0,1,1,Multiple,Freshwater,Fish,Lake,0,0,0,1,0,Single,0,0,0,1,Single,0,0
+10.1371/journal.pone.0137085,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jbi.12970,Y,0,1,0,0,0,0,Single,Terrestrial,Other,Alpine,0,0,0,1,0,Single,1,0,1,0,Multiple,0,Climate Change
+10.1002/ece3.868,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1093/jpe/rtt064,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Alpine,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/oik.05650,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Alpine,0,0,0,0,1,Single,1,0,0,1,Multiple,0,0
+10.1016/j.jinsphys.2018.08.003,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2012.2131,Y,0,1,0,1,0,0,Multiple,Terrestrial,Birds,Broad,0,1,0,1,1,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1016/j.funeco.2015.10.004,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1073/pnas.1708873114,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12936,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1556/168.2018.19.2.9,Y,1,0,0,0,0,0,Single,Terrestrial,Mammals,Broad,0,1,0,1,1,Multiple,0,0,1,1,Multiple,0,0
+10.1371/journal.pone.0114290,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate River,0,1,0,0,0,Single,1,0,0,0,Single,0,Habitat Degredation
+10.1007/s13253-017-0304-7,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2656.2009.01523.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1023/A:1022417601010,Y,1,0,0,0,0,0,Single,Terrestrial,Insects,Broad,0,1,0,0,1,Multiple,0,0,0,1,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00360-013-0763-2,Y,0,0,1,0,0,0,Single,Terrestrial,Birds,Broad,1,0,1,0,0,Single,1,0,0,0,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2435.2008.01477.x,Y,0,0,0,1,0,0,Single,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/ele.12384,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1558-5646.2007.00158.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.scitotenv.2016.05.136,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.5194/bg-14-3371-2017,Y,1,0,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,1,1,1,0,0,Multiple,1,0,0,0,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10750-015-2191-7,Y,0,1,0,0,1,0,Multiple,Freshwater,Other,Lake,0,1,0,0,1,Multiple,1,0,1,1,Multiple,0,0
+10.1007/s10750-018-3697-6,Y,0,1,0,0,0,0,Single,Freshwater,Other,Lake,0,1,0,0,1,Multiple,1,0,1,1,Multiple,0,0
+10.1371/journal.pone.0193425,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0061866,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Broad,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.3390/d2111158,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ppees.2017.07.002,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,1,0,1,1,Multiple,0,0
+10.1111/gcb.13085,Y,0,1,0,0,0,0,Single,Freshwater,Plankton,Lake,0,1,0,1,0,Multiple,1,0,1,0,Multiple,1,Climate Change
+10.1111/een.12374,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Temperate Forest,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1007/s10641-018-0759-6,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12889,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1600-0587.2013.00459.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2656.12274,Y,0,0,0,0,0,1,Single,Marine,Fish,Broad,0,0,0,1,0,Single,0,0,0,1,Single,0,Exploitation
+10.1111/jbi.12823,Y,0,0,0,0,1,0,Single,Terrestrial,Mammals,Broad,0,0,0,1,0,Single,1,0,0,1,Multiple,0,0
+unknown_17,Y,0,0,0,0,1,0,Single,Freshwater,Fish,River,0,1,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1111/1365-2745.12437,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ijpara.2009.07.012,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-294X.2011.05429.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10750-014-2089-9,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00244-010-9570-x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12610,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-004-1650-z,Y,0,1,0,0,0,0,Single,Freshwater,Fish,Lake,0,1,0,0,1,Multiple,0,0,0,1,Single,0,0
+10.1080/17550874.2016.1211192,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Desert,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1002/ece3.3541,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Desert,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/mec.13287,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.funeco.2014.03.003,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.13007,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Cereal Fields,1,1,1,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1016/j.foreco.2016.04.020, Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Subtropical Rainforest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,Habitat Degredation
+10.1111/ele.12757,Y,0,0,0,0,1,0,Single,Terrestrial,Insects,Broad,0,0,0,1,1,Multiple,1,0,1,0,Multiple,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.0030-1299.2005.13632.x,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Broad,0,0,0,1,0,Single,1,1,0,0,Multiple,0,0
+10.1371/journal.pone.0111227,Y,0,1,0,0,0,0,Single,Freshwater,Broad,River,0,1,0,1,0,Multiple,1,1,0,0,Multiple,0,0
+10.1086/691537,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0098755,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Broad,1,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1899/06-12.1,Y,0,1,0,0,0,0,Single,Freshwater,Other,River,0,0,0,1,1,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1002/ecs2.1972,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.12401,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12433,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1038/355073a0,Y,0,0,0,0,1,0,Single,Marine,Broad,Broad,0,0,0,0,1,Single,0,0,1,1,Multiple,0,0
+10.1002/ece3.4090,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-011-1980-6,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1002/ece3.2495,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/ecog.02516,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Urban ,1,1,0,1,0,Multiple,1,1,0,0,Multiple,0,Habitat Degredation
+10.1002/ajp.22374,Y,1,0,0,0,1,0,Multiple,Terrestrial,Mammals,Tropical Rainforest,0,1,0,0,1,Multiple,1,0,0,0,Single,0,0
+10.1007/s10750-015-2389-8,Y,0,1,0,0,1,0,Multiple,Freshwater,Insects,Stream,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1016/bs.aecr.2016.10.008,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1469-8137.2011.04007.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1073/pnas.1309948110,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2435.2009.01528.x,Y,1,0,0,0,0,0,Single,Terrestrial,Mammals,Polar,1,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1086/656619,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s13744-012-0069-1,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Tropical Rainforest,0,1,0,0,1,Multiple,1,0,1,0,Multiple,0,0
+10.1111/j.1469-8137.2010.03190.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ecy.2481,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/eap.1554/full,Y,0,0,0,0,1,0,Single,Freshwater,Broad,Stream,0,1,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1086/696978,Y,0,0,0,0,1,0,Single,Freshwater,Other,Stream,0,0,0,0,1,Single,1,0,0,1,Multiple,0,0
+10.1002/ece3.748,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/07-1737.1,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Temperate Forest,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/j.1365-2427.1994.tb01754.x,Y,0,1,0,0,0,0,Single,Freshwater,Plants,Floodplain,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1890/09-1290.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/13-2036.1,Y,0,1,0,0,1,0,Multiple,Terrestrial,Insects,Broad,1,0,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1111/j.1469-185X.2010.00171.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecolind.2017.06.056,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1461-0248.2009.01344.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12591,Y,0,0,0,0,1,0,Single,Freshwater,Other,River,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/j.1365-2745.2010.01743.x,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1560/KPRR-X1C3-5NHE-QV2N,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ntt.2013.07.001,Y,0,0,1,0,0,0,Single,Freshwater,Fish,Broad,0,0,0,0,1,Single,1,0,0,0,Single,0,Habitat Degredation
+10.1890/12-1676.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1469-8137.2009.03075.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ecs2.2460,Y,0,1,0,0,0,0,Single,Marine,Broad,Continental Shelf,0,1,0,1,1,Multiple,1,0,1,1,Multiple,0,0
+10.1007/s00114-011-0804-1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/brv.12366,Y,1,0,0,0,0,0,Single,Terrestrial,Multiple,Tropical Rainforest,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1086/303416,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1556/ComEc.14.2013.2.7,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Broad,0,0,0,1,0,Single,1,0,1,0,Multiple,0,Invasion
+10.1038/ismej.2010.6,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ece3.1251,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ece3.4377,Y,1,0,0,0,0,0,Single,Terrestrial,Multiple,Broad,0,1,0,1,1,Multiple,0,0,0,1,Single,0,0
+10.1007/s10452-016-9597-9,Y,0,1,0,0,0,0,Single,Freshwater,Herps,Pond,0,1,0,0,0,Single,1,1,0,0,Multiple,0,0
+10.1111/geb.12567,Y,0,0,0,0,1,0,Single,Terrestrial,Broad,Broad,0,1,0,1,0,Multiple,1,0,0,0,Single,0,Invasion
+10.1111/ddi.12747,Y,0,0,0,0,1,0,Single,Freshwater,Fish,Stream,1,1,0,1,0,Multiple,1,0,0,0,Single,0,Invasion
+10.1111/1365-2435.12669,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/mec.13575,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s11258-014-0405-0,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/11-0494.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jav.01745,Y,0,0,0,0,1,0,Single,Terrestrial,Birds,Broad,0,1,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1111/1365-2745.12747,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Shrublands,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1093/femsec/fiv031,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/ES15-00121.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ppees.2017.01.004,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1654-1103.2012.01476.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Shrublands,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1890/0012-9658(2003)084[1129:AHUISP]2.0.CO;2,Y,0,0,0,0,0,1,Single,Marine,Broad,Broad,1,1,1,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1016/j.chemosphere.2009.10.066,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1073/pnas.0710672105,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1461-0248.2006.00924.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rsfs.2011.0083,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.geoderma.2013.03.010,Y,0,0,1,0,0,0,Single,Terrestrial,Other,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1371/journal.pone.0108985,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1038/srep29414,Y,0,1,0,0,0,1,Multiple,Freshwater,Fish,River,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/j.1365-2664.2011.02039.x,Y,0,0,0,0,1,0,Single,Terrestrial,Other,Broad,0,1,0,1,0,Multiple,1,1,0,0,Multiple,0,Invasion
+10.1016/j.ecocom.2012.03.003,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Tropical Rainforest,0,1,0,1,0,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1111/ele.12043,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12930,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1461-0248.2010.01456.x,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Grassland,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1016/j.ecolind.2016.07.019,Y,0,1,0,0,1,0,Multiple,Marine,Other,Estuary,0,1,0,1,1,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1186/1471-2148-8-68,Y,0,1,0,0,0,0,Single,Terrestrial,Herps,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/jvs.12151,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/14-0910.1,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Broad,0,1,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1139/cjz-79-10-1891,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.18054/pb.2016.118.3.3924,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Alpine,0,0,0,1,1,Multiple,1,1,0,0,Multiple,0,0
+10.1186/1471-2164-15-492,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.2307/1941217,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,Y,1,0,0,0,0,0,Single,Terrestrial,Insects,Broad,1,1,0,1,1,Multiple,1,1,0,1,Multiple,0,0
+10.1111/oik.01719,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.anbehav.2008.08.006,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1080/17451000.2013.793802,Y,0,1,0,0,0,0,Single,Marine,Fish,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1007/s10750-016-2981-6,Y,0,1,0,0,1,0,Multiple,Freshwater,Plankton,Lake,0,1,0,0,0,Single,1,0,1,0,Multiple,0,Global Change Broad
+10.1007/s10646-013-1068-7,Y,0,0,1,0,0,0,Single,Freshwater,Plankton,Lake,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/08-1638.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.dsr.2017.11.010,Y,0,1,0,0,0,0,Single,Marine,Other,Deep Sea,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+unknown_18,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Temperate Forest,0,0,0,1,0,Single,1,1,0,0,Multiple,0,Global Change Broad
+10.1111/j.1365-2664.2009.01714.x,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,0,1,0,1,0,Multiple,1,1,0,0,Multiple,0,0
+10.1111/j.1466-8238.2012.00790.x,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Alpine,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.7717/peerj.1410,Y,0,0,0,0,1,0,Single,Terrestrial,Insects,Broad,0,1,0,1,1,Multiple,1,0,0,0,Single,0,Global Change Broad
+10.1111/geb.12521,Y,1,0,0,0,1,0,Multiple,Terrestrial,Insects,Broad,0,1,0,1,1,Multiple,1,0,0,1,Multiple,0,Habitat Degredation
+10.1111/j.1600-0706.2012.00121.x,Y,0,0,0,1,0,0,Single,Terrestrial,Plants,Broad,0,0,0,1,0,Single,1,0,1,0,Multiple,0,0
+10.1016/j.flora.2017.02.004,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1748-7692.2006.00091.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+unknown_19,Y,0,1,0,0,1,0,Multiple,Freshwater,Herps,Pond,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1016/j.anbehav.2009.04.016,Y,0,0,1,0,0,0,Single,Terrestrial,Insects,Broad,0,0,0,0,1,Single,0,0,1,0,Single,0,0
+10.1111/1365-2745.12098,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1111/1365-2745.12199,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Grassland,0,0,0,1,0,Single,1,0,0,0,Single,0,Habitat Degredation
+10.1111/j.1366-9516.2004.00079.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jbi.13108,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1111/jbi.12639,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/evo.12817,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1139/cjfas-54-6-1211,Y,0,1,0,0,0,0,Single,Freshwater,Other,River,0,1,0,1,1,Multiple,0,0,0,1,Single,0,0
+10.1111/j.1600-0706.2012.20261.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Shrublands,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/j.1600-0706.2010.18860.x,Y,0,0,1,0,1,0,Multiple,Terrestrial,Insects,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1111/jvs.12615,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Urban ,0,0,0,1,0,Single,1,0,1,0,Multiple,0,Habitat Degredation
+10.1016/j.ecolmodel.2006.07.023,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,1,0,Single,0,0,0,1,Single,0,0
+10.1016/j.ecocom.2007.11.002,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,1,0,Single,0,0,0,1,Single,0,0
+10.1093/forestry/cpw018,Y,1,0,0,0,0,0,Single,Terrestrial,Insects,Broad,1,0,0,1,0,Single,1,0,0,0,Single,0,Climate Change
+10.1016/j.ecolind.2017.09.047,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12135,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Alpine,0,0,0,1,0,Single,1,0,0,1,Multiple,0,0
+10.1098/rstb.2015.0305,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/10-1707.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jvs.12555,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Alpine,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/1365-2435.12162,Y,0,0,0,1,0,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/oik.02760,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.rse.2018.02.031,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1163/156853989X00646,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jfb.12177,Y,0,1,0,0,0,0,Single,Marine,Fish,Continental Shelf,1,0,0,1,1,Multiple,0,0,0,1,Single,0,0
+10.1046/j.1523-1739.2002.02283.x,Y,0,1,0,0,0,0,Single,Terrestrial,Herps,Broad,1,1,0,1,1,Multiple,1,0,0,1,Multiple,0,Habitat Degredation
+10.1186/s12302-018-0174-9,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2017.1405,Y,0,0,1,0,0,0,Single,Marine,Fish,Broad,1,1,0,0,0,Single,1,0,0,0,Single,0,Climate Change
+unknown_20,Y,0,1,0,0,0,0,Single,Freshwater,Fish,Lake,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.3354/meps10622,Y,0,0,1,0,0,0,Single,Freshwater,Fish,Lake,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2311.2008.01044.x,Y,0,0,1,0,0,0,Single,Terrestrial,Birds,Temperate Forest,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1111/j.1365-2427.1994.tb01756.x,Y,0,1,0,0,0,0,Single,Terrestrial,Broad,Broad,1,1,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/14-2326.1.sm,Y,1,0,0,0,1,0,Multiple,Terrestrial,Insects,Broad,0,1,0,1,1,Multiple,1,0,1,0,Multiple,0,0
+10.1371/journal.pbio.0040007,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.2307/2410901,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,0,0,1,0,Single,1,0,0,1,Multiple,0,0
+10.1111/gcb.14119,Y,0,1,0,0,0,0,Single,Marine,Fish,Coral Reef,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,Climate Change
+10.1111/j.1558-5646.2007.00029.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12444,Y,0,1,0,0,0,0,Single,Marine,Fish,Continental Shelf,0,0,0,0,1,Single,1,0,0,1,Multiple,0,0
+10.1111/faf.12347,Y,1,0,0,1,0,0,Multiple,Marine,Fish,Broad,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1007/s10682-008-9267-z,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.paid.2018.09.013,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.anbehav.2012.01.032,Y,1,0,0,0,0,0,Single,Terrestrial,Insects,Broad,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1007/s10750-017-3199-y,Y,1,0,0,0,0,0,Single,Freshwater,Fish,Broad,0,1,0,1,1,Multiple,1,0,1,1,Multiple,0,0
+10.1111/fwb.13233,Y,0,1,0,0,1,0,Multiple,Freshwater,Fish,Stream,1,1,0,0,1,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1111/j.1365-2699.2007.01824.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Herps,Tropical Rainforest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/jbi.13457,Y,0,1,0,0,0,0,Single,Freshwater,Other,Stream,0,1,0,0,1,Multiple,1,0,0,0,Single,0,0
+10.1016/j.ecss.2013.06.019,Y,0,1,0,0,0,0,Single,Marine,Other,Sandy Beaches,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.2307/1939303,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.tree.2011.03.002,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2015.2702,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+unknown_21,Y,0,1,0,0,0,0,Single,Marine,Fish,Coral Reef,0,1,0,0,0,Single,1,0,0,1,Multiple,0,Invasion
+unknown_22,Y,0,0,1,0,1,0,Multiple,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1098/rstb.2008.0286,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,0,1,Single,0,0,0,1,Single,0,Invasion
+10.1002/jmor.20411,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12894,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Coastal Sandy Plain,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1371/journal.pone.0036760,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jmi.12233,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.3389/fevo.2018.00234,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2656.13029,Y,0,1,0,0,1,0,Multiple,Broad,Birds,Islands,1,0,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1111/j.1365-2745.2005.01046.x,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tropical Seasonal Forest,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/oik.05228,Y,0,0,1,0,1,0,Multiple,Terrestrial,Other,Temperate Forest,1,1,0,0,1,Multiple,1,0,0,0,Single,0,0
+10.1371/journal.pone.0139194,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1186/1471-2164-15-1033,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2016.1207,Y,0,0,0,0,1,0,Single,Terrestrial,Mammals,Broad,0,1,0,0,1,Multiple,1,0,0,0,Single,0,Global Change Broad
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/nph.14498,Y,1,0,0,0,0,0,Single,Terrestrial,Plants,Broad,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1890/07-0179.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/S0929-1393(98)00103-6,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0081739,Y,0,1,0,1,0,0,Multiple,Terrestrial,Broad,Wetland,1,1,0,1,1,Multiple,1,1,0,1,Multiple,0,0
+10.1111/gcb.12780,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,1,0,1,1,Multiple,1,0,1,1,Multiple,0,Invasion
+10.1111/jeb.12421,Y,0,1,0,0,0,0,Single,Terrestrial,Herps,Islands,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1111/jeb.12845,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Desert,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1111/2041-210X.12914,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rstb.1993.0057,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/S0065-2504(04)37006-6,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1038/ismej.2015.123,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ece3.2081,Y,0,1,0,0,0,0,Single,Freshwater,Insects,Stream,0,0,0,1,1,Multiple,1,0,1,0,Multiple,0,0
+10.1111/icad.12248,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,Habitat Degredation
+10.1007/s00442-009-1446-2,Y,0,1,0,0,0,0,Single,Terrestrial,Birds,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,Climate Change
+10.1111/1365-2745.12334,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.13148,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0199898,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Riparian Area,0,1,0,1,0,Multiple,1,0,0,0,Single,0,Climate Change
+10.1016/j.soilbio.2014.04.002,Y,0,1,0,0,1,0,Multiple,Terrestrial,Insects,Broad,1,1,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1038/ncomms9877,Y,0,0,0,1,0,0,Single,Terrestrial,Multiple,Broad,0,1,0,1,1,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1016/j.baae.2018.07.009,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+unknown_23,Y,0,0,0,1,0,0,Single,Freshwater,Other,River,0,1,0,1,0,Multiple,1,0,0,1,Multiple,0,0
+10.2478/s11756-014-0347-y,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,0,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1111/1365-2656.12271,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Forest Hedge,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.2007.0906-7590.05090.x,Y,1,0,0,0,0,0,Single,Marine,Birds,Broad,0,0,0,1,0,Single,1,0,0,0,Single,0,Climate Change
+10.1111/j.1365-2656.2005.00981.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10452-017-9634-3,Y,0,1,0,0,0,0,Single,Freshwater,Plankton,Reservoir,1,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1016/j.ecolind.2017.12.003,Y,0,1,0,0,0,0,Single,Marine,Plankton,Estuary,1,0,1,0,0,Single,1,0,0,0,Single,0,0
+10.1650/0010-5422(2007)109[132:SSDAME]2.0.CO;2,Y,1,1,0,0,0,0,Multiple,Terrestrial,Birds,Islands,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/gcb.13271,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.foreco.2019.01.021,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Temperate Forest,0,1,0,0,0,Single,1,0,0,0,Single,0,Habitat Degredation
+10.1073/pnas.2133521100,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1093/molbev/mss069,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1163/157075607780001998,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/ddi.12074,Y,0,1,0,0,1,0,Multiple,Marine,Other,Enclosed Sea,0,1,0,1,0,Multiple,1,0,0,0,Single,0,Invasion
+10.1371/journal.pone.0130151,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1007/s13744-018-0620-9,Y,0,1,0,0,0,0,Single,Freshwater,Insects,Reservoir,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1093/sysbio/syx084,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10336-005-0011-y,Y,0,1,0,0,0,0,Single,Terrestrial,Birds,Broad,0,0,0,1,0,Single,1,0,0,0,Single,0,Climate Change
+unknown_24,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1186/1471-2148-13-132,Y,0,1,0,0,1,0,Multiple,Freshwater,Fish,Lake,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1111/2041-210X.12435,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/03-0408,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1469-8137.2009.03114.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+unknown_25,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Urban ,0,0,0,1,0,Single,1,0,1,0,Multiple,0,0
+10.1111/fwb.12973,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/fwb.12369,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1086/681623,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.limno.2006.10.002,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1086/701784,Y,0,0,1,0,1,0,Multiple,Freshwater,Fish,Lake,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1007/s00442-018-4210-7,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1139/cjz-2012-0236,Y,0,1,0,0,0,0,Single,Freshwater,Other,Lake,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1098/rspb.2016.1931,Y,0,0,0,0,0,1,Single,Marine,Multiple,Broad,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1007/s00442-010-1854-3,Y,0,1,0,0,1,0,Multiple,Terrestrial,Mammals,Broad,0,1,0,0,1,Multiple,1,0,1,1,Multiple,0,0
+10.1007/s12080-010-0098-5,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2005.3236,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,0,1,Single,1,0,1,1,Multiple,0,0
+10.1111/1365-2745.12489,Y,0,0,1,0,1,0,Multiple,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/1365-2656.12609,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12605,Y,0,1,0,0,0,1,Multiple,Terrestrial,Other,Alpine,0,0,0,1,1,Multiple,1,1,0,1,Multiple,0,0
+10.1016/j.foreco.2015.05.026,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,Habitat Degredation
+10.1016/j.agee.2017.01.036,Y,0,1,0,0,0,0,Single,Terrestrial,Other,Broad,1,1,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1002/ecy.2533,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,1,0,1,0,0,Single,1,0,0,1,Multiple,0,0
+10.1111/1752-1688.12650,Y,0,1,0,0,0,0,Single,Freshwater,Other,Stream,1,1,1,1,1,Multiple,1,1,0,1,Multiple,0,0
+10.1111/ele.12183,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10021-015-9875-8,Y,0,1,0,0,0,0,Single,Terrestrial,Birds,Broad,0,1,0,1,1,Multiple,1,0,1,0,Multiple,0,0
+10.1016/j.scitotenv.2014.04.093,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/15-1673.1,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,Habitat Degredation
+10.3354/meps08593,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.tpb.2013.11.005,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1103/PhysRevE.88.062721,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,1,1,Multiple,1,0,1,1,Multiple,0,0
+10.1111/2041-210X.12119,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/ddi.12708,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Grassland,1,1,0,1,0,Multiple,1,0,1,0,Multiple,0,Invasion
+10.1111/ecog.02380,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2005.3229,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.3390/f9030122,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1007/s10144-009-0187-8,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jvs.12294,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/10-0394.1,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,1,1,1,0,0,Multiple,1,0,0,0,Single,0,0
+10.1007/s10641-017-0576-3,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/j.1095-8312.2010.01427.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1139/cjfas-2015-0190,Y,0,1,0,0,0,0,Single,Freshwater,Fish,Lake,0,1,0,1,0,Multiple,1,0,0,1,Multiple,0,0
+10.1111/1365-2656.12478,Y,0,1,0,0,1,0,Multiple,Marine,Birds,Islands,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1111/1365-2656.12650,Y,0,1,0,0,1,0,Multiple,Marine,Birds,Islands,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1002/ecy.2438,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/geb.12030,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/ele.12508,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s11356-018-3744-x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+unknown_26,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1899/12-024.1,Y,0,1,0,0,0,0,Single,Freshwater,Broad,Wetland,0,0,0,1,0,Single,1,1,0,0,Multiple,0,0
+10.1111/j.1469-7998.2010.00711.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ece3.3297,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,1,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/jbi.13171,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1073/pnas.1401949111,Y,0,0,1,0,0,0,Single,Terrestrial,Insects,Temperate Forest,0,1,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1111/btp.12224,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.7717/peerj.3552,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Alpine,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1177/1529100611426706,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12675,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-008-0995-0,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-017-4016-z,Y,0,1,0,0,1,0,Multiple,Terrestrial,Herps,Temperate Forest,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+unknown_27,Y,0,1,0,0,0,0,Single,Marine,Fish,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,Invasion
+10.1093/icb/ics067,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ncon.2014.09.008,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.0906-7590.2004.03749.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/geb.12204,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ijpara.2011.05.005,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1093/beheco/10.1.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1093/beheco/ary021,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+unknown_28,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Vineyard,0,0,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1073/pnas.1310700110,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,Climate Change
+10.1016/j.ppees.2016.09.006,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Tropical Rainforest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1111/gcb.13174,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1007/s00442-005-0170-9,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.biocon.2010.04.034,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2656.12218,Y,0,0,0,0,0,1,Single,Marine,Multiple,Continental Shelf,1,1,1,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1007/s11356-008-0072-6,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2656.2010.01707.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.foreco.2018.06.006,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Seasonal Tropical Forest,0,1,0,1,0,Multiple,1,0,0,0,Single,0,Climate Change
+10.1666/06020.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1086/378646,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.2307/1938541,Y,0,1,0,0,1,0,Multiple,Terrestrial,Mammals,Temperate Forest,0,0,0,0,1,Single,1,0,1,0,Multiple,0,0
+10.1073/pnas.0304903101,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1073/pnas.1802091115,Y,0,1,0,0,1,0,Multiple,Freshwater,Insects,Pond,1,0,1,0,1,Multiple,1,0,0,0,Single,0,0
+10.11646/zootaxa.2556.1.3,Y,0,1,0,0,1,0,Multiple,Freshwater,Insects,River,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.7717/peerj.2779,Y,0,1,0,0,1,0,Multiple,Terrestrial,Insects,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1111/nph.14219,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/1365-2656.12987,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/14-0495.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/13-2377.1,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Temperate Forest,1,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1007/s10661-017-5957-8,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.7717/peerj.898,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-010-1684-3,y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,0,0,1,0,Single,1,0,1,0,Multiple,0,0
+10.1111/1462-2920.12211,Y,0,1,0,0,0,0,Single,Terrestrial,Other,Broad,1,0,1,0,0,Single,1,0,1,0,Multiple,0,0
+10.1614/WS-09-096.1,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Arable Land,0,1,0,1,0,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1111/wre.12126,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Broad,1,1,1,1,0,Multiple,1,0,0,0,Single,0,Habitat Degredation
+10.1111/j.1365-2656.2011.01812.x,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1111/j.1469-8137.2004.01228.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ece3.3102,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10530-015-1003-3,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/1051-0761(2006)016[0891:STAPOL]2.0.CO;2,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Grassland,0,1,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1007/s10681-014-1200-7,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1016/j.jtbi.2017.02.014,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.applanim.2004.08.030,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1038/srep37753,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2699.2012.02690.x,Y,0,0,0,0,0,1,Single,Terrestrial,Plants,Seasonal Tropical Forest,0,0,0,1,0,Single,1,0,0,0,Single,0,Climate Change
+10.1111/j.1600-0587.2012.00121.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/08-1025.1,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Seasonal Tropical Forest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1111/1365-2745.12771,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/ecog.00938,Y,0,1,0,0,1,0,Multiple,Terrestrial,Insects,Temperate Forest,0,1,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/icad.12271,Y,0,1,0,0,0,0,Single,Freshwater,Insects,Wetland,0,1,0,1,1,Multiple,1,0,1,0,Multiple,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jeb.13306,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Broad,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1890/ES13-00102.1,Y,0,1,0,0,1,1,Multiple,Terrestrial,Plants,Wetland,0,0,0,1,0,Single,1,0,1,0,Multiple,0,Global Change Broad
+10.2307/3546681,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.dsr2.2011.10.001,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.soilbio.2014.10.010,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.13074,Y,0,0,0,0,0,1,Single,Terrestrial,Plants,Broad,0,0,0,1,0,Single,1,0,1,0,Multiple,0,0
+10.1111/ecog.01433,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/06-0326.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rspb.2000.1167,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1080/10641262.2013.796815,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/nph.15304,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Tropical Rainforest,1,0,1,0,0,Single,1,0,0,0,Single,0,Climate Change
+10.1007/s10750-015-2221-5,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecolind.2015.10.036,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/evo.12518,Y,1,0,0,0,0,0,Single,Broad,Broad,Broad,0,1,0,1,0,Multiple,1,0,0,1,Multiple,0,0
+10.7717/peerj.2885,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10651-017-0368-0,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jvs.12666,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10651-017-03095-x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2486.2010.02165.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1095-8312.2010.01569.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Insects,Grassland,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/geb.12783,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tundra,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/j.1365-2745.2009.01610.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Roadside,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/j.1365-2656.2006.01068.x,Y,0,1,0,0,1,0,Multiple,Freshwater,Other,River,0,0,0,1,1,Multiple,1,1,0,0,Multiple,0,0
+10.1111/j.1365-2427.2012.02808.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rsos.182180,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.3389/fmicb.2017.01028,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecolind.2017.01.029,Y,0,1,0,0,1,0,Multiple,Terrestrial,Insects,Alpine,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1002/ecy.2436,Y,0,1,0,0,1,0,Multiple,Terrestrial,Insects,Alpine,0,1,0,0,0,Single,1,1,0,0,Multiple,0,0
+10.1016/j.dsr2.2006.11.012,Y,0,1,0,0,0,0,Single,Marine,Mammals,Continental Shelf,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.3389/fevo.2018.00192,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/bij.12238,Y,0,1,0,0,1,0,Multiple,Terrestrial,Mammals,Broad,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1098/rspb.2000.1010,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Grassland,1,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1046/j.1365-2745.2001.00673.x,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Grassland,0,0,0,1,0,Single,1,1,0,0,Multiple,0,0
+10.1046/j.1439-0485.2000.00732.x,Y,0,1,0,0,1,0,Multiple,Marine,Other,Intertidal,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1111/j.1365-2656.2010.01742.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecss.2018.11.016,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Coastal Dunes,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1038/s41598-018-32078-x,Y,0,0,1,0,1,0,Multiple,Terrestrial,Plants,Grassland,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1016/j.anbehav.2014.01.018,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0003532,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jfb.13203,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1046/j.1365-2427.1997.00166.x,Y,0,1,0,0,0,0,Single,Freshwater,Insects,River,0,1,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.2307/1468142,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1558-5646.1980.tb04787.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1642/0004-8038(2004)121[0950:NEOWSM]2.0.CO;2,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/BF02712119,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.biocon.2013.12.008,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Vineyard,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1016/j.ecolmodel.2007.01.007,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1556/ComEc.9.2008.2.6,Y,0,1,0,0,0,0,Single,Terrestrial,Insects,Urban,1,0,0,1,0,Single,1,0,0,0,Single,0,Habitat Degredation
+10.1038/s41396-018-0217-7,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecss.2010.04.007,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.pedobi.2017.05.007,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00035-018-0199-0,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Alpine,1,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1098/rspb.2011.0190,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1146/annurev-ecolsys-110316-022821,,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/oik.04561,Y,0,1,0,0,0,0,Single,Terrestrial,Birds,Tropical Rainforest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1371/journal.pone.0163338,Y,0,1,0,0,1,0,Multiple,Terrestrial,Birds,Tropical Rainforest,0,1,0,1,0,Multiple,1,1,0,0,Multiple,0,Habitat Degredation
+10.1111/j.2041-210X.2012.00217.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/06-1946.1,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,1,0,Single,0,0,0,1,Single,0,0
+10.1111/j.1461-0248.2010.01541.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Tropical Rainforest,1,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/jvs.12465,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Temperate Forest,1,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1046/j.1365-2427.2000.00535.x,Y,0,1,0,0,0,0,Single,Freshwater,Other,River,1,1,0,1,1,Multiple,1,1,1,1,Multiple,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10530-016-1246-7,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/14-0306.1,Y,0,0,0,1,0,0,Single,Marine,Broad,Broad,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1111/j.1365-294X.2008.04001.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1466-8238.2011.00717.x,Y,1,0,0,0,0,0,Single,Terrestrial,Plants,Broad,1,1,1,1,0,Multiple,1,0,0,0,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00442-011-2190-y,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/eco.1655,Y,1,0,0,1,1,0,Multiple,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1890/11-0975.1,Y,0,1,0,0,1,0,Multiple,Terrestrial,Multiple,Grassland,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1890/14-0454.1,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Savannah,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1186/s12918-017-0430-4,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.scitotenv.2016.12.009,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.ecolind.2013.10.006,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.scitotenv.2016.04.193,Y,0,1,0,0,1,0,Multiple,Freshwater,Other,River,1,0,1,0,0,Single,1,0,0,0,Single,0,Habitat Degredation
+10.1016/j.landurbplan.2014.11.022,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/etc.4185,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ps.3370,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1038/s41598-017-17019-4,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/11-2026.1,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Alpine,0,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1016/j.ecolind.2017.10.009,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0129609,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1038/npp.2014.98,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/mec.12756,Y,1,0,0,0,0,0,Single,Broad,Broad,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/oik.01493,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1098/rstb.1996.0115,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s00265-010-1031-z,Y,0,0,1,0,0,0,Single,Terrestrial,Insects,Broad,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1007/s00442-016-3700-8,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Alpine,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/j.1365-2656.2010.01660.x,Y,0,1,0,0,0,0,Single,Freshwater,Other,Wetland,0,0,0,1,1,Multiple,1,0,1,1,Multiple,0,0
+10.1111/jeb.12647,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+unknown_29,Y,0,0,0,0,0,1,Single,Terrestrial,Plants,Broad,1,1,1,0,0,Multiple,1,0,0,0,Single,0,Climate Change
+10.1016/j.ncon.2016.09.006,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Tropical Rainforest,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1002/eco.1533,Y,1,0,0,0,0,1,Multiple,Terrestrial,Plants,Broad,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1111/geb.12249,Y,0,0,0,1,0,0,Single,Terrestrial,Plants,Broad,0,1,0,1,0,Multiple,1,0,0,0,Single,0,Invasion
+10.1111/cobi.12378,Y,0,0,0,0,1,0,Single,Marine,Birds,Broad,0,0,0,1,1,Multiple,1,0,0,0,Single,0,Global Change Broad
+10.1007/s00442-014-3039-y,Y,0,1,0,0,0,0,Single,Terrestrial,Mammals,Tropical Rainforest,0,1,0,0,1,Multiple,1,0,1,1,Multiple,0,0
+10.1007/s00027-017-0546-z,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1438-8677.2012.00684.x,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.3390/w10020108,Y,0,1,0,0,0,0,Single,Freshwater,Plankton,Lake,0,0,0,0,1,Single,1,0,0,1,Multiple,0,0
+10.1016/j.ecolmodel.2017.07.027,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1558-5646.1998.tb01652.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jzo.12566,Y,0,1,0,0,0,0,Single,Terrestrial,Mammals,Broad,0,1,0,0,1,Multiple,0,0,0,1,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2664.12975,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s11258-015-0467-7,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0053873,Y,0,0,0,0,0,1,Single,Broad,Herps,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.1098/rspb.2014.2205,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1899/10-041.1,Y,0,0,1,0,0,0,Single,Freshwater,Insects,Stream,0,1,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1023/A:1008991021305,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,1,0,Single,0,0,0,1,Single,0,0
+10.1007/s11104-018-3816-1,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1016/j.mbs.2016.01.005,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1111/j.1600-0587.2012.00011.x,Y,0,1,0,0,0,1,Multiple,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Single,1,1,0,0,Multiple,0,0
+10.1890/14-2357.1,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1890/14-0392.1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2699.2011.02502.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Birds,Temperate Forest,0,1,0,0,1,Multiple,1,0,1,1,Multiple,0,0
+10.1002/ecs2.2125,Y,0,0,1,0,0,0,Single,Terrestrial,Herps,Broad,0,1,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1007/s00442-002-0935-3,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,0,0,1,0,Single,0,0
+10.1007/s11258-014-0366-3,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/2041-210X.12280,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/j.1469-7998.2009.00671.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1093/beheco/13.6.808,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2656.12773,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1093/aob/mcs225,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/jbi.12747,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2745.12197,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.2307/3547051,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Wetland,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.2307/2410482,Y,0,0,1,0,0,1,Multiple,Terrestrial,Insects,Broad,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1016/j.baae.2017.06.002,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+unknown_30,Y,1,0,0,0,0,0,Single,Broad,Plankton,Broad,1,1,0,1,0,Multiple,1,0,0,1,Multiple,0,0
+10.1111/fwb.12527,Y,0,1,0,0,0,0,Single,Freshwater,Plankton,Lake,1,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.2307/1941614,Y,0,1,0,0,0,0,Single,Freshwater,Other,Lake,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1098/rspb.2017.0198,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/gcb.13542,Y,0,0,0,0,0,1,Single,Terrestrial,Plants,Broad,0,1,0,1,0,Multiple,1,0,0,0,Single,0,Climate Change
+10.1371/journal.pone.0137963,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1002/wat2.1033,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1600-0587.2011.07181.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s11160-017-9479-9,Y,0,1,0,0,0,1,Multiple,Freshwater,Fish,River,1,1,0,1,1,Multiple,1,1,0,0,Multiple,1,Climate Change
+10.1007/s00442-015-3345-z,Y,0,1,0,0,1,0,Multiple,Freshwater,Other,Salt Marsh,0,1,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1111/1365-2745.12598,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Savannah,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1098/rspb.2005.3205,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.2307/1467813,Y,1,0,0,0,0,0,Single,Freshwater,Insects,Broad,0,1,0,1,1,Multiple,1,0,0,0,Single,0,0
+10.1371/journal.pone.0012092,Y,0,0,0,0,0,1,Single,Broad,Broad,Broad,0,1,0,0,0,Single,0,0,0,1,Single,0,0
+10.3389/fmicb.2014.00358,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/evo.12153,Y,0,1,0,0,0,0,Single,Terrestrial,Herps,Broad,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1103/PhysRevE.95.042401,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1093/beheco/arv115,Y,0,1,0,0,0,0,Single,Marine,Fish,Continental Shelf,0,0,0,0,1,Single,1,0,1,0,Multiple,0,0
+10.1002/wmon.8,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.2307/2937046,Y,0,1,0,0,0,0,Single,Freshwater,Fish,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/j.1365-2311.2007.00902.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1002/ece3.908,Y,0,1,0,0,1,0,Multiple,Terrestrial,Herps,Seasonal Tropical Forest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1016/j.biocon.2011.11.033,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Grassland,0,0,0,1,0,Single,1,0,0,1,Multiple,0,0
+unknown_31,Y,0,1,0,0,1,0,Multiple,Freshwater,Fish,Lake,0,1,0,1,0,Multiple,1,0,0,1,Multiple,0,0
+10.1111/ecog.03782,Y,0,1,0,0,1,0,Multiple,Freshwater,Fish,River,0,0,0,1,0,Single,1,0,0,1,Multiple,0,0
+10.1016/0169-5347(87)90010-3,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1046/j.1365-2427.2002.00908.x,Y,1,0,0,0,0,0,Single,Freshwater,Broad,River,0,1,0,1,1,Multiple,1,0,0,1,Multiple,0,0
+10.1002/ecy.1911,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0114596,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/S1385-1101(02)00149-1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1186/1471-2148-14-156,Y,0,1,0,0,1,0,Multiple,Marine,Other,Broad,1,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1007/s10519-005-9029-4,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1038/srep35649,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Grassland,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1016/j.ecolind.20.17.05.066,Y,1,0,0,0,0,0,Single,Freshwater,Plants,River,1,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1038/ismej.2017.183,Y,0,1,0,0,1,0,Multiple,Marine,Other,Continental Shelf,0,0,0,1,1,Multiple,1,0,1,0,Multiple,0,0
+10.1111/geb.12167,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Temperate Forest,1,1,0,1,0,Multiple,1,0,0,0,Single,0,0
+10.1093/biolinnean/blx159,Y,0,1,0,0,1,0,Multiple,Terrestrial,Insects,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1002/ece3.3068,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Alpine,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1016/j.ecss.2009.10.015,Y,0,1,0,0,1,0,Multiple,Marine,Fish,Estuary,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1086/661241,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1645/15-887,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1654-1103.2011.01384.x,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Alpine,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1093/jpe/rtw099,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12176,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Seasonal Tropical Forest,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,0
+10.1038/s41598-019-43179-6,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10750-017-3433-7,Y,0,1,0,0,1,0,Multiple,Freshwater,Plankton,Lake,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1038/srep24110,Y,0,0,0,0,1,0,Single,Terrestrial,Plants,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1177/0309133315582018,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.tree.2018.08.001,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/ecog.03582,Y,0,0,0,0,1,0,Single,Broad,Multiple,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/geb.12537,Y,0,1,0,0,1,0,Multiple,Broad,Multiple,Broad,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1139/gen-2018-0039,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Islands,0,1,0,1,0,Multiple,1,0,1,0,Multiple,0,Invasion
+10.1371/journal.pbio.0050235,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2656.12161,Y,0,1,0,0,1,0,Multiple,Terrestrial,Multiple,Temperate Forest,0,1,0,0,1,Multiple,0,0,0,1,Single,0,0
+10.1007/BF02515724,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/j.1365-2656.2010.01759.x,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1016/j.tpb.2015.08.001,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10641-016-0481-1,Y,0,1,0,0,0,0,Single,Freshwater,Fish,Broad,0,1,0,0,1,Multiple,1,0,0,0,Single,0,0
+10.1098/rstb.2012.0246,Y,0,1,0,0,1,0,Multiple,Freshwater,Broad,Broad,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1017/S0266467416000572,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1371/journal.pone.0000868,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+NA,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1038/srep42007,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Seasonal Tropical Forest,0,0,0,1,0,Single,1,0,0,0,Single,0,0
+10.1111/1365-2435.13079,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Alpine,1,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1038/s41598-017-00429-9,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,1,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/j.1759-6831.2012.00220.x,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.scitotenv.2018.04.021,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10661-008-0574-1,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1890/09-0979.1,Y,0,0,1,0,1,0,Multiple,Terrestrial,Insects,Broad,0,1,0,0,1,Multiple,1,0,0,0,Single,0,0
+10.3835/plantgenome2015.07.0059,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1016/j.scitotenv.2018.09.256,Y,0,1,0,0,0,0,Single,Freshwater,Mammals,River,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.1016/j.ecolind.2016.07.026,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1111/1365-2435.12938,Y,0,1,0,0,0,0,Single,Terrestrial,Plants,Temperate Forest,0,1,0,0,0,Single,1,0,1,0,Multiple,0,0
+10.1002/ece3.1260,Y,0,1,0,0,0,0,Single,Freshwater,Fish,Pond,0,1,0,0,0,Single,1,0,1,1,Multiple,0,0
+10.1371/journal.pone.0088732,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1093/jpe/rtv043,Y,0,0,1,0,0,0,Single,Terrestrial,Plants,Alpine,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+unknown_32,Y,0,1,0,0,0,0,Single,Terrestrial,Herps,Alpine,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1007/s10071-018-1209-8,Y,0,0,1,0,0,0,Single,Marine,Fish,Broad,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+10.1111/fwb.12966,Y,0,1,0,0,0,0,Single,Freshwater,Plankton,River,0,1,0,0,1,Multiple,1,0,0,1,Multiple,0,0
+10.1016/j.jtbi.2010.09.038,N,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
+10.1007/s10641-016-0506-9,Y,0,1,0,0,0,0,Single,Freshwater,Fish,River,0,1,0,0,0,Single,1,0,0,1,Multiple,0,0
+10.3389/fpls.2016.00189,Y,0,1,0,0,1,0,Multiple,Terrestrial,Plants,Grassland,0,1,0,0,0,Single,1,0,0,0,Single,0,0
+10.1111/brv.12377,Y,1,0,0,0,0,0,Single,Terrestrial,Broad,Broad,0,0,0,0,1,Single,0,0,0,1,Single,0,0
+,,,,,,,,Multiple,,,,,,,,,Multiple,,,,,Multiple,,
