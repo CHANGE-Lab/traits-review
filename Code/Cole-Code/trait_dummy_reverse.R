@@ -1,7 +1,7 @@
 #Take Dummy variable dataset and reverse it so we can bring in higher-level trait categorizations
 library(tidyverse)
 library(data.table)
-library(fastDummies)
+#library(fastDummies)
 library(here)
 `%notin%` = Negate(`%in%`)
 
@@ -283,3 +283,12 @@ write.csv(sec_empty_traits, here('./Data/Cole-Output-Data(readyforanalysis)/seco
 sec_fill_traits = merge(categorial_data, sec_fill_traits_multivar,
                          by.x = 'DOI', by.y = 'DOI')
 write.csv(sec_fill_traits, here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_f_dummy.csv'))
+
+#hoping to show a summary (rank abundance curve for traits instead of species) 
+#so come up with how many traits go to each primary/secondary (i.e. if a paper 
+#has three 1s for three primary sections, each of those ones might be due to three
+#or four or however many traits per each one)
+
+#we could exclude cases that don't share any traits with other studies
+#or we could exclude traits
+
