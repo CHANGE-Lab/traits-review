@@ -291,6 +291,32 @@ write.csv(sec_fill_traits, here('./Data/Cole-Output-Data(readyforanalysis)/secon
 #has three 1s for three primary sections, each of those ones might be due to three
 #or four or however many traits per each one)
 
+######### Repeat data creation process for secondary and primary, but instead
+######### of binary, make it abundance based (i.e. if there are 5 traits) 
+######### in a single paper that are 'Life History', life history now recieves
+######### 5 instead of 1 for that particular paper
+
+#so, make the count tables
+additive_prim_traits_abundance = additive_levels %>% 
+  group_by(DOI, Primary_classification) %>% 
+  dplyr::summarize(n = length(Primary_classification))
+
+additive_sec_traits_abundance = additive_levels %>% 
+  group_by(DOI, Secondary_classification) %>% 
+  dplyr::summarize(n = length(Secondary_classification))
+
+#now turn them into the quasi-dummy data
+prim_traits_abundance_multivar = additive_prim_traits_abundance %>% 
+  spread(Primary_classification, n, fill = 0)
+
+additive_sec_traits_abundance_multivar = additive_sec_traits_abundance %>% 
+  spread(Secondary_classification, n, fill = 0)
+
+
+
+
+
+
 #we could exclude cases that don't share any traits with other studies
 #or we could exclude traits
 
