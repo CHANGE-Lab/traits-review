@@ -40,8 +40,10 @@ dummy_new$sums = rowSums(dummy_new[,c(2:ncol(dummy_new))])
 check_add = data.frame(table(additive$DOI)) %>% 
   rename(DOI = Var1, Trait = Freq) %>% 
   distinct()
+check_add = check_add[order(check_add$DOI),] #important addition to make sure things are ordered properly
 check_orig = data.frame(dummy_new[,c(1,ncol(dummy_new))]) %>% 
   distinct()
+check_orig = check_orig[order(check_orig$DOI),]
 check_add == check_orig
 check_add[500:802,] == check_orig[500:802,]
 
@@ -65,7 +67,7 @@ n_distinct(additive$DOI) #okay, we have all 822 studies now
 additive$Trait = trimws(additive$Trait, which = 'both')
 
 #join all the other trait levels to the additive database 
-trait_levels = read_csv(here('./Data/Cole-Original-Data/trait_levels.csv'))
+trait_levels = read_csv(here('./Data/Cole-Original-Data/trait_levels_clean.csv'))
 
 #now, there are likely duplicated traits in the trait_levels dataframe, I have to get rid of them so I can make proper pairs to them 
 dups = trait_levels[duplicated(trait_levels$Trait_spell_corrected),]
