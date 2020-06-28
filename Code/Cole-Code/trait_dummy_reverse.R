@@ -312,7 +312,19 @@ prim_traits_abundance_multivar = additive_prim_traits_abundance %>%
 additive_sec_traits_abundance_multivar = additive_sec_traits_abundance %>% 
   spread(Secondary_classification, n, fill = 0)
 
+#perform joins and write to files
+#primary traits
+prim_traits_abundance = merge(categorial_data, prim_traits_abundance_multivar,
+                    by.x = 'DOI', by.y = 'DOI')
+write.csv(prim_traits_abundance, 
+          here('./Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy_abundance.csv'))
 
+#secondary (keep empty) traits
+sec_empty_traits_abundance = merge(categorial_data, 
+                                   additive_sec_traits_abundance_multivar,
+                         by.x = 'DOI', by.y = 'DOI')
+write.csv(sec_empty_traits_abundance, 
+          here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_abundance.csv'))
 
 
 
