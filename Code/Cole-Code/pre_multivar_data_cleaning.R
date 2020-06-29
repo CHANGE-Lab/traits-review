@@ -13,3 +13,5 @@
 library(tidyverse)
 library(here)
 `%notin%` = Negate(`%in%`)
+
+primary_traits = read_csv(here('./data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy_abundance.csv'))
