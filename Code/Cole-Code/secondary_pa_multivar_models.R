@@ -22,12 +22,16 @@ library(here)
 
 #separate the modeling into the P/A modeling (1/0) and then the abundance modeling
 secondary_pa = read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_pa_models.csv'))
-
+secondary_pa$sums = rowSums(secondary_pa[,11:ncol(secondary_pa)])
+t = secondary_pa %>% 
+  filter(sums == 0)
 
 #split species and sites
-secondary_pa_sites = data.frame(secondary_pa[,1:])
-secondary_pa_species = data.frame(secondary_pa[,9:ncol(secondary_pa)])
-
+secondary_pa_sites = data.frame(secondary_pa[,1:10])
+secondary_pa_species = data.frame(secondary_pa[,11:ncol(secondary_pa)])
+secondary_pa_species$sums = rowSums(secondary_pa_species)
+t = secondary_pa_species %>% 
+  filter(sums == 0)
 #run actual ordination - try with both k = 2 & 3
 secondary_pa_ord_k3 = metaMDS(secondary_pa_species,
                             distance = 'jaccard',

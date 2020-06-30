@@ -32,6 +32,7 @@ missing_dois = as.character(unique(missing_dois$DOI))
 additive = data.frame(DOI = as.character(),
                       Trait = as.character())
 traits = names(dummy_new)
+pb = txtProgressBar(min = 0, max = nrow(dummy_new), initial = 0) 
 for(i in 1:nrow(dummy_new)) {
   for(j in 2:ncol(dummy_new)) {
     if(dummy_new[i,j] != 0) {
@@ -41,10 +42,12 @@ for(i in 1:nrow(dummy_new)) {
       additive = rbind(additive,new)
     } 
   }
+  setTxtProgressBar(pb,i)
 }
 additive = additive %>% 
   distinct()
 
+write_csv(additive, here('./Data/Cole-Original-Data/additive.csv'))
 
 dummy_new$sums = rowSums(dummy_new[,c(2:ncol(dummy_new))])
 check_add = data.frame(table(additive$DOI)) %>% 

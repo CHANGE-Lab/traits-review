@@ -1,73 +1,73 @@
 DOI,Ecosystem,Taxonomic,GlobalChange,GlobalChangeCat,PredictiveCat,Predictive,TOS,TT,Filter,abundance,activity,composition,growth,habitat,life history,morphology,resource acquisition,survival
-10.1002/ajp.22374,Terrestrial,Mammals,0,no,no,0,QModel,Behavioural,Abiotic,0,0,0,0,1,0,1,0,0
-10.1002/aqc.1198,Freshwater,Fish,Invasion,yes,no,0,QModel,Behavioural,Biotic,0,0,0,0,1,2,1,1,0
+10.1002/ajp.22374,Terrestrial,Mammals,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,1,0,1,0,0
+10.1002/aqc.1198,Freshwater,Fish,Invasion,yes,no,0,QModel,Life History,Biotic,0,0,0,0,1,2,1,1,0
 10.1002/eap.1434,Terrestrial,Birds,Climate Change,yes,yes,1,QModel,Behavioural,Abiotic,0,1,0,2,1,6,0,1,1
-10.1002/eap.1530,Freshwater,Insects,0,no,no,0,Observational,Physiological,Dispersal,0,0,0,0,1,0,1,2,0
+10.1002/eap.1530,Freshwater,Insects,0,no,no,0,TModel,Morphological,Abiotic,0,0,0,0,1,0,1,2,0
 10.1002/eap.1535/full,Terrestrial,Mammals,Invasion,yes,no,0,Observational,Behavioural,Abiotic,0,0,0,0,1,0,1,1,0
 10.1002/eap.1554/full,Freshwater,Multiple,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,3,2,4,1,0
-10.1002/eap.1621,Freshwater,Multiple,Global Change Broad,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,9,6,1,6,0
-10.1002/ece3.1084,Terrestrial,Other,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,1,4,2,3,1
+10.1002/eap.1621,Freshwater,Multiple,Global Change Broad,yes,no,0,QModel,Physiological,Abiotic,0,0,0,0,9,6,1,6,0
+10.1002/ece3.1084,Terrestrial,Other,0,no,no,0,QModel,Morphological,Biotic,0,0,0,0,1,4,2,3,1
 10.1002/ece3.1260,Freshwater,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,14,1,0
-10.1002/ece3.1286,Terrestrial,Plants,Invasion,yes,no,0,Experiment,Morphological,Biotic,0,0,8,1,0,0,6,5,0
+10.1002/ece3.1286,Terrestrial,Plants,Invasion,yes,no,0,Experiment,Life History,Biotic,0,0,8,1,0,0,6,5,0
 10.1002/ece3.1395,Freshwater,Fish,0,no,no,0,Experiment,Behavioural,Trophic,0,5,1,0,1,0,1,0,0
-10.1002/ece3.2081,Freshwater,Insects,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,3,0,0,1,0
-10.1002/ece3.2328,Freshwater,Fish,0,no,no,0,QModel,Behavioural,Abiotic,0,0,0,0,0,0,6,1,0
-10.1002/ece3.2606,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Biotic,0,0,0,0,0,1,0,1,0
-10.1002/ece3.263,Terrestrial,Herpetofauna,Invasion,yes,no,0,Experiment,Life History,Abiotic,0,0,0,0,1,0,0,0,0
+10.1002/ece3.2081,Freshwater,Insects,0,no,no,0,Observational,Life History,Biotic,0,0,0,0,3,0,0,1,0
+10.1002/ece3.2328,Freshwater,Fish,0,no,no,0,QModel,Behavioural,Biotic,0,0,0,0,0,0,6,1,0
+10.1002/ece3.2606,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,1,0,1,0
+10.1002/ece3.263,Terrestrial,Herpetofauna,Invasion,yes,no,0,Observational,Physiological,Abiotic,0,0,0,0,1,0,0,0,0
 10.1002/ece3.3068,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,3,0,0,1,4,0,0
 10.1002/ece3.3268,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,1,0,0,0,10,10,1,0
-10.1002/ece3.3297,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,1,2,2,2,2,5,3,0
-10.1002/ece3.3541,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
+10.1002/ece3.3297,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Abiotic,0,1,2,2,2,2,5,3,0
+10.1002/ece3.3541,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1002/ece3.3609,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,0,0,0,0,4,3,0,0
 10.1002/ece3.3613,Terrestrial,Mammals,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,1,0
-10.1002/ece3.3969,Marine,Multiple,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,1,1,0,0
-10.1002/ece3.4377,Terrestrial,Multiple,0,no,no,0,Review,Behavioural,Trophic,0,1,0,1,0,0,3,1,0
+10.1002/ece3.3969,Marine,Multiple,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,1,1,0,0
+10.1002/ece3.4377,Terrestrial,Multiple,0,no,no,0,Review,Morphological,Trophic,0,1,0,1,0,0,3,1,0
 10.1002/ece3.4896,Terrestrial,Mammals,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,1,2,0
 10.1002/ece3.5121,Terrestrial,Mammals,0,no,no,0,Observational,Behavioural,Abiotic,0,3,0,0,0,0,1,1,0
-10.1002/ece3.908,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,5,0,0
+10.1002/ece3.908,Terrestrial,Herpetofauna,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,5,0,0
 10.1002/ecm.1294/full,Terrestrial,Plants,0,no,no,0,TModel,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1002/ecm.1297/full,Marine,Fish,Climate Change,yes,yes,1,Metanalysis,Behavioural,Abiotic,0,0,0,0,2,1,0,1,0
-10.1002/eco.1533,Terrestrial,Plants,0,no,no,0,Review,Life History,Abiotic,0,1,0,1,0,1,1,0,0
-10.1002/eco.1655,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,3,2,0,1,4,1,0
-10.1002/eco.1734,Freshwater,Fish,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,4,0,0,0
+10.1002/eco.1533,Terrestrial,Plants,0,no,no,0,TModel,Life History,Abiotic,0,1,0,1,0,1,1,0,0
+10.1002/eco.1655,Terrestrial,Plants,0,no,no,0,Review,Morphological,Abiotic,0,0,3,2,0,1,4,1,0
+10.1002/eco.1734,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,4,0,0,0
 10.1002/ecs2.2101,Terrestrial,Insects,0,no,no,0,QModel,Behavioural,Dispersal,0,3,0,0,0,0,0,0,0
-10.1002/ecs2.2125,Terrestrial,Herpetofauna,0,no,no,0,Experiment,Life History,Trophic,0,2,0,2,2,1,0,0,1
+10.1002/ecs2.2125,Terrestrial,Herpetofauna,0,no,no,0,Experiment,Morphological,Abiotic,0,2,0,2,2,1,0,0,1
 10.1002/ecs2.2164,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Biotic,0,1,1,1,0,4,3,0,0
 10.1002/ecs2.2220,Marine,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1002/ecs2.2324,Terrestrial,Birds,0,no,no,0,QModel,Morphological,Biotic,0,0,0,0,0,0,1,1,0
-10.1002/ecs2.2374,Terrestrial,Plants,0,no,no,0,QModel,Life History,Abiotic,0,1,0,1,1,8,8,0,0
-10.1002/ecs2.2460,Marine,Multiple,0,no,no,0,Observational,Behavioural,Biotic,0,0,0,0,0,2,1,2,0
-10.1002/ecy.1485,Freshwater,Multiple,Invasion,yes,no,0,Experiment,Morphological,Biotic,0,0,0,0,0,0,2,1,0
-10.1002/ecy.1802,Multiple,Multiple,0,no,no,0,QModel,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
+10.1002/ecs2.2374,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,1,0,1,1,8,8,0,0
+10.1002/ecs2.2460,Marine,Multiple,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,2,1,2,0
+10.1002/ecy.1485,Freshwater,Multiple,Invasion,yes,no,0,Experiment,Life History,Biotic,0,0,0,0,0,0,2,1,0
+10.1002/ecy.1802,Multiple,Multiple,0,no,no,0,QModel,Behavioural,Abiotic,0,0,0,0,0,0,0,1,0
 10.1002/ecy.1915,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,1,0,0,0,0,0,0,0
 10.1002/ecy.1990,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,1,2,0,0
-10.1002/ecy.2079,Terrestrial,Plants,0,no,no,0,QModel,Life History,Biotic,0,1,0,1,0,2,2,1,0
+10.1002/ecy.2079,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,0,1,0,2,2,1,0
 10.1002/ecy.2179,Terrestrial,Birds,Climate Change,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,0,1,0,0,1
-10.1002/ecy.2436,Terrestrial,Insects,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,10,0,0
-10.1002/ecy.2533,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Abiotic,0,0,1,0,0,0,0,1,0
-10.1002/rra.687,Freshwater,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,2,0,0
+10.1002/ecy.2436,Terrestrial,Insects,0,no,no,0,QModel,Morphological,Dispersal,0,0,0,0,0,0,10,0,0
+10.1002/ecy.2533,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Trophic,0,0,1,0,0,0,0,1,0
+10.1002/rra.687,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
 10.1006/jaar.1998.0326,Terrestrial,Mammals,0,no,no,0,Observational,Behavioural,Biotic,0,0,0,0,0,0,0,1,0
-10.1007/BF00133308,Terrestrial,Birds,Habitat Degredation,yes,no,0,QModel,Life History,Abiotic,0,1,0,0,2,3,0,4,0
-10.1007/s00035-017-0198-6,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,0,13,0,0
-10.1007/s00035-018-0199-0,Terrestrial,Plants,0,no,no,0,Experiment,Physiological,Abiotic,0,0,0,0,2,0,3,3,0
+10.1007/BF00133308,Terrestrial,Birds,Habitat Degredation,yes,no,0,QModel,Behavioural,Abiotic,0,1,0,0,2,3,0,4,0
+10.1007/s00035-017-0198-6,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Abiotic,0,0,0,1,0,0,13,0,0
+10.1007/s00035-018-0199-0,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,2,0,3,3,0
 10.1007/s00114-017-1475-3,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
 10.1007/s00227-014-2568-6,Marine,Plankton,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
-10.1007/s00265-006-0160-x,Terrestrial,Birds,0,no,no,0,Observational,Behavioural,Trophic,0,2,0,0,1,2,1,0,0
-10.1007/s00265-010-1031-z,Terrestrial,Insects,0,no,no,0,Experiment,Behavioural,Abiotic,0,2,0,0,0,2,2,0,1
+10.1007/s00265-006-0160-x,Terrestrial,Birds,0,no,no,0,Observational,Life History,Abiotic,0,2,0,0,1,2,1,0,0
+10.1007/s00265-010-1031-z,Terrestrial,Insects,0,no,no,0,Experiment,Behavioural,Trophic,0,2,0,0,0,2,2,0,1
 10.1007/s002650000260,Terrestrial,Multiple,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.1007/s00300-015-1872-z,Terrestrial,Multiple,Climate Change,yes,no,0,QModel,Life History,Biotic,0,0,0,0,0,2,0,0,0
+10.1007/s00300-015-1872-z,Terrestrial,Multiple,Climate Change,yes,no,0,QModel,Life History,Trophic,0,0,0,0,0,2,0,0,0
 10.1007/s00300-016-1946-6,Marine,Fish,0,no,no,0,QModel,Life History,Biotic,0,0,0,0,1,0,0,0,0
-10.1007/s00338-013-1042-0,Marine,Fish,0,no,no,0,Observational,Morphological,Trophic,0,1,0,0,0,0,5,0,0
+10.1007/s00338-013-1042-0,Marine,Fish,0,no,no,0,Observational,Behavioural,Trophic,0,1,0,0,0,0,5,0,0
 10.1007/s00338-018-1689-7,Marine,Fish,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 10.1007/s00360-013-0763-2,Terrestrial,Birds,0,no,no,0,Experiment,Physiological,Abiotic,0,0,0,0,0,0,0,2,0
 10.1007/s00442-002-0935-3,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Biotic,1,0,0,0,0,0,0,0,0
 10.1007/s00442-004-1650-z,Freshwater,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,2,0
-10.1007/s00442-004-1770-5,Terrestrial,Birds,0,no,no,0,QModel,Life History,Abiotic,1,0,0,0,0,3,0,0,1
+10.1007/s00442-004-1770-5,Terrestrial,Birds,0,no,no,0,QModel,Behavioural,Abiotic,1,0,0,0,0,3,0,0,1
 10.1007/s00442-009-1446-2,Terrestrial,Birds,Climate Change,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
 10.1007/s00442-010-1684-3,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,3,0,0,0,0,0
 10.1007/s00442-010-1712-3,Marine,Fish,0,no,no,0,Experiment,Behavioural,Trophic,0,5,0,0,0,0,3,0,0
-10.1007/s00442-010-1833-8,Marine,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,1,1,0,1
-10.1007/s00442-010-1854-3,Terrestrial,Mammals,0,no,no,0,Observational,Behavioural,Biotic,0,0,0,0,0,0,3,1,0
+10.1007/s00442-010-1833-8,Marine,Fish,0,no,no,0,Observational,Life History,Abiotic,0,0,0,1,0,1,1,0,1
+10.1007/s00442-010-1854-3,Terrestrial,Mammals,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,3,1,0
 10.1007/s00442-011-1980-6,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,0,0,1,2,3,8,0,0
 10.1007/s00442-012-2431-8,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,6,0,0,0,6,0,0
 10.1007/s00442-013-2673-0,Freshwater,Other,0,no,no,0,Experiment,Behavioural,Biotic,0,0,0,0,0,2,1,1,1
@@ -76,17 +76,17 @@ DOI,Ecosystem,Taxonomic,GlobalChange,GlobalChangeCat,PredictiveCat,Predictive,TO
 10.1007/s00442-014-3101-9,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,11,0,0
 10.1007/s00442-015-3295-5,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,2,0,2,8,1,0
 10.1007/s00442-015-3345-z,Freshwater,Other,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,2,0,3,0,0
-10.1007/s00442-015-3430-3,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Biotic,0,0,1,3,2,3,5,1,0
+10.1007/s00442-015-3430-3,Terrestrial,Plants,0,no,no,0,QModel,Life History,Biotic,0,0,1,3,2,3,5,1,0
 10.1007/s00442-016-3547-z,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,4,0,0,1,3,1,0
-10.1007/s00442-016-3631-4,Terrestrial,Insects,0,no,no,0,QModel,Behavioural,Trophic,0,0,0,0,0,0,0,2,0
-10.1007/s00442-016-3700-8,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,1,2,0,0
+10.1007/s00442-016-3631-4,Terrestrial,Insects,0,no,no,0,QModel,Life History,Trophic,0,0,0,0,0,0,0,2,0
+10.1007/s00442-016-3700-8,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,1,2,0,0
 10.1007/s00442-017-4016-z,Terrestrial,Herpetofauna,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,2,0,0,0,0,0
 10.1007/s00442-017-4041-y,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
-10.1007/s00442-017-4053-7,Terrestrial,Birds,Climate Change,yes,no,0,QModel,Life History,Abiotic,0,1,0,0,1,0,0,0,0
-10.1007/s00442-018-4074-x,Freshwater,Plants,0,no,no,0,Review,Morphological,Dispersal,0,0,0,0,0,0,2,0,0
+10.1007/s00442-017-4053-7,Terrestrial,Birds,Climate Change,yes,no,0,QModel,Behavioural,Abiotic,0,1,0,0,1,0,0,0,0
+10.1007/s00442-018-4074-x,Freshwater,Plants,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
 10.1007/s00442-018-4162-y,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Trophic,0,0,3,0,0,0,4,0,0
 10.1007/s00442-019-04386-0,Terrestrial,Plants,0,no,no,0,QModel,Life History,Abiotic,0,0,0,0,0,1,0,0,0
-10.1007/s004420000504,Freshwater,Fish,0,no,no,0,Observational,Life History,Trophic,0,0,0,0,0,5,0,0,0
+10.1007/s004420000504,Freshwater,Fish,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,5,0,0,0
 10.1007/s00468-011-0632-0,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,0,7,0,0
 10.1007/s10021-015-9875-8,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Abiotic,0,2,0,0,1,2,1,2,0
 10.1007/s10071-018-1209-8,Marine,Fish,0,no,no,0,Experiment,Behavioural,Trophic,0,1,0,0,0,0,0,0,0
@@ -94,476 +94,476 @@ DOI,Ecosystem,Taxonomic,GlobalChange,GlobalChangeCat,PredictiveCat,Predictive,TO
 10.1007/s10452-015-9546-z,Freshwater,Other,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,3,0,0
 10.1007/s10452-016-9596-x,Freshwater,Plants,Global Change Broad,yes,no,0,Review,Life History,Biotic,0,1,0,0,0,0,1,1,0
 10.1007/s10452-016-9597-9,Freshwater,Herpetofauna,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
-10.1007/s10452-017-9634-3,Freshwater,Plankton,0,no,no,0,Observational,Life History,Abiotic,0,0,1,0,0,0,3,2,0
+10.1007/s10452-017-9634-3,Freshwater,Plankton,0,no,no,0,Observational,Physiological,Biotic,0,0,1,0,0,0,3,2,0
 10.1007/s10526-017-9860-6,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
-10.1007/s10531-014-0742-2,Terrestrial,Plants,Invasion,yes,no,0,QModel,Morphological,Biotic,0,1,2,2,1,8,11,3,0
+10.1007/s10531-014-0742-2,Terrestrial,Plants,Invasion,yes,no,0,QModel,Life History,Biotic,0,1,2,2,1,8,11,3,0
 10.1007/s10531-014-0843-y,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,3,0,0
-10.1007/s10531-014-0850-z,Terrestrial,Herpetofauna,Invasion,yes,no,0,Metanalysis,Behavioural,Biotic,0,0,0,0,1,0,2,1,0
+10.1007/s10531-014-0850-z,Terrestrial,Herpetofauna,Invasion,yes,no,0,Metanalysis,Morphological,Biotic,0,0,0,0,1,0,2,1,0
 10.1007/s10641-016-0481-1,Freshwater,Fish,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,0,0,2,1,0
-10.1007/s10641-016-0506-9,Freshwater,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,19,0,0
+10.1007/s10641-016-0506-9,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,19,0,0
 10.1007/s10641-017-0576-3,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1007/s10641-018-0759-6,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,13,0,0
 10.1007/s10646-013-1068-7,Freshwater,Plankton,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,0,4,0,0
 10.1007/s10661-015-4519-1,Freshwater,Plankton,0,no,no,0,Observational,Morphological,Abiotic,1,1,0,0,0,0,5,1,0
 10.1007/s10681-014-1200-7,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Trophic,0,0,0,0,0,4,2,0,0
-10.1007/s10682-005-2005-x,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,3,2,1,0
+10.1007/s10682-005-2005-x,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Trophic,0,0,0,0,0,3,2,1,0
 10.1007/s10682-013-9631-5,Terrestrial,Mammals,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,1,0,1,1,0
 10.1007/s10682-018-9945-4,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Dispersal,0,0,1,0,0,0,7,0,0
-10.1007/s10750-013-1711-6,Freshwater,Other,0,no,no,0,Observational,Life History,Dispersal,0,0,0,0,0,0,4,0,0
-10.1007/s10750-015-2191-7,Freshwater,Other,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,0,0,3,2,0
+10.1007/s10750-013-1711-6,Freshwater,Other,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,4,0,0
+10.1007/s10750-015-2191-7,Freshwater,Other,0,no,no,0,Observational,Behavioural,Biotic,0,1,0,0,0,0,3,2,0
 10.1007/s10750-015-2313-2,Freshwater,Plankton,0,no,no,0,Observational,Physiological,Abiotic,0,0,1,0,0,0,4,1,0
-10.1007/s10750-015-2389-8,Freshwater,Insects,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,3,0,0
+10.1007/s10750-015-2389-8,Freshwater,Insects,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,3,0,0
 10.1007/s10750-016-2981-6,Freshwater,Plankton,Global Change Broad,yes,no,0,QModel,Morphological,Biotic,0,0,0,0,0,0,1,1,0
-10.1007/s10750-017-3199-y,Freshwater,Fish,0,no,no,0,Review,Morphological,Trophic,0,1,0,0,0,1,6,2,0
-10.1007/s10750-017-3208-1,Freshwater,Fish,Climate Change,yes,yes,1,QModel,Life History,Biotic,0,0,0,0,2,2,2,2,1
-10.1007/s10750-017-3433-7,Freshwater,Plankton,0,no,no,0,QModel,Morphological,Biotic,1,0,0,0,0,0,0,0,0
-10.1007/s10750-018-3697-6,Freshwater,Other,0,no,no,0,Observational,Behavioural,Trophic,0,1,0,0,0,0,3,2,0
-10.1007/s10841-011-9412-9,Freshwater,Insects,Habitat Degredation,yes,no,0,Observational,Behavioural,Biotic,0,0,0,0,1,1,2,1,0
+10.1007/s10750-017-3199-y,Freshwater,Fish,0,no,no,0,Review,Life History,Trophic,0,1,0,0,0,1,6,2,0
+10.1007/s10750-017-3208-1,Freshwater,Fish,Climate Change,yes,yes,1,QModel,Physiological,Trophic,0,0,0,0,2,2,2,2,1
+10.1007/s10750-017-3433-7,Freshwater,Plankton,0,no,no,0,Observational,Morphological,Abiotic,1,0,0,0,0,0,0,0,0
+10.1007/s10750-018-3697-6,Freshwater,Other,0,no,no,0,Observational,Behavioural,Abiotic,0,1,0,0,0,0,3,2,0
+10.1007/s10841-011-9412-9,Freshwater,Insects,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,0,0,0,1,1,2,1,0
 10.1007/s10980-012-9820-6,Terrestrial,Insects,Habitat Degredation,yes,no,0,QModel,Behavioural,Biotic,0,2,0,0,0,0,0,1,0
 10.1007/s11104-018-3816-1,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,2,0,0,0,4,0,0
-10.1007/s11160-016-9446-x,Freshwater,Fish,Habitat Degredation,yes,no,0,QModel,Behavioural,Abiotic,0,1,0,0,0,2,0,1,0
-10.1007/s11160-017-9479-9,Freshwater,Fish,Climate Change,yes,yes,1,Observational,Life History,Abiotic,0,0,0,0,4,3,3,2,1
+10.1007/s11160-016-9446-x,Freshwater,Fish,Habitat Degredation,yes,no,0,QModel,Life History,Abiotic,0,1,0,0,0,2,0,1,0
+10.1007/s11160-017-9479-9,Freshwater,Fish,Climate Change,yes,yes,1,Observational,Morphological,Abiotic,0,0,0,0,4,3,3,2,1
 10.1007/s11160-018-9522-5,Marine,Fish,0,no,no,0,Review,Behavioural,Trophic,0,0,0,0,1,0,2,0,0
-10.1007/s11284-016-1373-8,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,2,0,0,0,3,0,1
+10.1007/s11284-016-1373-8,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Biotic,0,0,2,0,0,0,3,0,1
 10.1007/s11629-017-4477-x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
-10.1007/s11692-017-9409-8,Terrestrial,Multiple,0,no,no,0,Observational,Morphological,Trophic,0,1,0,0,0,0,8,0,0
+10.1007/s11692-017-9409-8,Terrestrial,Multiple,0,no,no,0,TModel,Morphological,Trophic,0,1,0,0,0,0,8,0,0
 10.1007/s11829-016-9444-x,Terrestrial,Plants,0,no,no,0,Experiment,Life History,Biotic,0,0,0,0,0,2,0,0,0
 10.1007/s12080-010-0095-8,Terrestrial,Plants,0,no,no,0,TModel,Life History,Biotic,0,0,0,0,0,1,0,0,0
-10.1007/s12080-011-0148-7,Multiple,Multiple,0,no,yes,1,TModel,Behavioural,Trophic,0,4,0,1,0,0,0,8,1
-10.1007/s12080-014-0229-5,Marine,Fish,0,no,no,0,TModel,Life History,Biotic,0,2,2,0,1,0,20,3,0
-10.1007/s13593-013-0166-5,Terrestrial,Plants,0,no,no,0,Review,Morphological,Abiotic,0,0,0,3,1,2,5,0,0
+10.1007/s12080-011-0148-7,Multiple,Multiple,0,no,yes,1,TModel,Life History,Abiotic,0,4,0,1,0,0,0,8,1
+10.1007/s12080-014-0229-5,Marine,Fish,0,no,no,0,TModel,Life History,Trophic,0,2,2,0,1,0,20,3,0
+10.1007/s13593-013-0166-5,Terrestrial,Plants,0,no,no,0,Review,Life History,Abiotic,0,0,0,3,1,2,5,0,0
 10.1007/s13595-019-0830-2,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,5,0,0,0,11,0,0
-10.1007/s13744-012-0069-1,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,0,0,1,0,0
-10.1007/s13744-018-0620-9,Freshwater,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,1,0
-10.1016/B978-0-12-386475-8.00005-8,Marine,Multiple,Global Change Multiple,yes,yes,1,TModel,Morphological,Trophic,0,0,0,0,1,0,2,2,0
-10.1016/B978-0-12-396992-7.00001-0,Freshwater,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,1,0
+10.1007/s13744-012-0069-1,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Biotic,0,1,0,0,0,0,1,0,0
+10.1007/s13744-018-0620-9,Freshwater,Insects,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,1,1,0
+10.1016/B978-0-12-386475-8.00005-8,Marine,Multiple,Global Change Multiple,yes,yes,1,Observational,Behavioural,Trophic,0,0,0,0,1,0,2,2,0
+10.1016/B978-0-12-396992-7.00001-0,Freshwater,Fish,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,1,1,0
 10.1016/B978-0-12-396992-7.00004-6,Freshwater,Multiple,0,no,no,0,Review,Behavioural,Abiotic,0,0,0,0,0,0,1,1,0
 10.1016/B978-0-12-420002-9.00002-0,Terrestrial,Multiple,0,no,no,0,Review,Morphological,Abiotic,0,0,5,0,0,0,0,0,0
 10.1016/j.actao.2016.06.003,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,3,1,0,2,7,1,0
 10.1016/j.actao.2016.10.007,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,3,1,0
 10.1016/j.agee.2008.04.011,Terrestrial,Insects,0,no,no,0,Metanalysis,Behavioural,Abiotic,0,0,0,0,0,0,2,1,0
-10.1016/j.agee.2017.01.036,Terrestrial,Other,0,no,no,0,Observational,Behavioural,Abiotic,0,0,2,1,0,0,1,2,0
-10.1016/j.anbehav.2005.05.010,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,1,5,1,1,0
+10.1016/j.agee.2017.01.036,Terrestrial,Other,0,no,no,0,Observational,Morphological,Abiotic,0,0,2,1,0,0,1,2,0
+10.1016/j.anbehav.2005.05.010,Terrestrial,Birds,0,no,no,0,Experiment,Morphological,Biotic,0,0,0,0,1,5,1,1,0
 10.1016/j.anbehav.2009.04.016,Terrestrial,Insects,0,no,no,0,Experiment,Behavioural,Biotic,0,1,0,0,0,0,0,0,0
-10.1016/j.anbehav.2009.11.024,Freshwater,Fish,0,no,no,0,Experiment,Behavioural,Abiotic,0,3,0,0,0,0,0,1,0
+10.1016/j.anbehav.2009.11.024,Freshwater,Fish,0,no,no,0,Experiment,Behavioural,Trophic,0,3,0,0,0,0,0,1,0
 10.1016/j.anbehav.2012.01.032,Terrestrial,Insects,0,no,no,0,Review,Morphological,Abiotic,0,1,0,0,0,0,1,0,0
 10.1016/j.anbehav.2017.07.010,Marine,Fish,Climate Change,yes,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,0,3,0
 10.1016/j.apsoil.2008.01.007,Terrestrial,Other,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,0,0,3,0,0
-10.1016/j.biocon.2011.11.033,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,1,0,1,0,1,1
-10.1016/j.biocon.2013.12.008,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,0,1,3,0,0
+10.1016/j.biocon.2011.11.033,Terrestrial,Plants,0,no,no,0,Observational,Life History,Trophic,0,0,0,1,0,1,0,1,1
+10.1016/j.biocon.2013.12.008,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,0,1,3,0,0
 10.1016/j.biocontrol.2010.12.005,Terrestrial,Plants,0,no,no,0,Metanalysis,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.1016/j.csr.2009.01.003,Marine,Fish,Exploitation,yes,no,0,Observational,Life History,Trophic,0,1,0,0,1,0,1,1,0
+10.1016/j.csr.2009.01.003,Marine,Fish,Exploitation,yes,no,0,Observational,Behavioural,Trophic,0,1,0,0,1,0,1,1,0
 10.1016/j.dsr.2016.11.011,Marine,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,11,0,0
-10.1016/j.dsr.2017.11.010,Marine,Other,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,0,0,0
+10.1016/j.dsr.2017.11.010,Marine,Other,0,no,no,0,Observational,Morphological,Trophic,0,0,1,0,0,0,0,0,0
 10.1016/j.dsr2.2006.11.012,Marine,Mammals,0,no,no,0,Observational,Behavioural,Trophic,0,2,0,0,0,0,0,0,0
 10.1016/j.ecocom.2007.11.002,Multiple,Multiple,0,no,no,0,TModel,Life History,Trophic,0,1,0,0,0,0,0,0,0
-10.1016/j.ecocom.2012.03.003,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Morphological,Abiotic,0,0,0,2,0,1,2,0,2
-10.1016/j.ecoleng.2014.11.057,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
+10.1016/j.ecocom.2012.03.003,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Life History,Abiotic,0,0,0,2,0,1,2,0,2
+10.1016/j.ecoleng.2014.11.057,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Dispersal,0,0,0,0,0,0,1,0,0
 10.1016/j.ecoleng.2015.11.001,Terrestrial,Plants,Habitat Degredation,yes,no,0,Experiment,Morphological,Biotic,0,0,0,0,0,1,3,0,0
 10.1016/j.ecolind.20.17.05.066,Freshwater,Plants,0,no,no,0,Review,Morphological,Abiotic,0,0,1,0,1,2,4,4,0
-10.1016/j.ecolind.2016.02.060,Freshwater,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,4,0,0
-10.1016/j.ecolind.2016.07.019,Marine,Other,Habitat Degredation,yes,no,0,QModel,Morphological,Abiotic,0,0,0,0,1,2,2,2,0
+10.1016/j.ecolind.2016.02.060,Freshwater,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,4,0,0
+10.1016/j.ecolind.2016.07.019,Marine,Other,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,0,0,0,1,2,2,2,0
 10.1016/j.ecolind.2017.01.029,Terrestrial,Insects,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,4,0,0
 10.1016/j.ecolind.2017.12.003,Marine,Plankton,0,no,no,0,Observational,Physiological,Abiotic,0,0,0,0,0,0,7,2,0
 10.1016/j.ecolmodel.2006.07.023,Multiple,Multiple,0,no,no,0,TModel,Life History,Trophic,0,1,0,0,0,0,0,0,0
-10.1016/j.ecss.2009.10.015,Marine,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,1,0,1,1,0
+10.1016/j.ecss.2009.10.015,Marine,Fish,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,1,0,1,1,0
 10.1016/j.ecss.2013.06.019,Marine,Other,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,0,1,0
 10.1016/j.ecss.2013.07.019,Terrestrial,Insects,Global Change Broad,yes,no,0,Observational,Behavioural,Biotic,0,0,0,0,0,0,0,1,0
-10.1016/j.ecss.2015.05.023,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,1,1,1,0,5,0,0
+10.1016/j.ecss.2015.05.023,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,1,1,0,5,0,0
 10.1016/j.ecss.2017.11.016,Marine,Other,Invasion,yes,no,0,Experiment,Behavioural,Trophic,0,0,0,0,0,1,1,3,0
-10.1016/j.ecss.2018.11.016,Terrestrial,Plants,0,no,no,0,QModel,Life History,Abiotic,0,1,0,0,1,4,4,0,0
-10.1016/j.foreco.2015.05.026,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,1,2,0,0
-10.1016/j.foreco.2016.04.020,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,3,0,0
+10.1016/j.ecss.2018.11.016,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,1,4,4,0,0
+10.1016/j.foreco.2015.05.026,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Biotic,0,0,0,0,0,1,2,0,0
+10.1016/j.foreco.2016.04.020,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,3,0,0
 10.1016/j.foreco.2018.04.032,Terrestrial,Plants,Climate Change,yes,no,0,Observational,Morphological,Abiotic,0,0,4,0,0,0,4,1,0
-10.1016/j.foreco.2018.06.006,Terrestrial,Plants,Climate Change,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,2,1,1,0,0
+10.1016/j.foreco.2018.06.006,Terrestrial,Plants,Climate Change,yes,no,0,Observational,Life History,Abiotic,0,0,0,0,2,1,1,0,0
 10.1016/j.foreco.2018.10.061,Terrestrial,Plants,Global Change Broad,yes,yes,1,QModel,Life History,Abiotic,0,0,0,0,0,0,0,2,0
 10.1016/j.foreco.2019.01.021,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,7,0,0
-10.1016/j.gecco.2016.01.004,Terrestrial,Mammals,Habitat Degredation,yes,no,0,QModel,Behavioural,Abiotic,0,0,0,0,0,0,2,1,0
+10.1016/j.gecco.2016.01.004,Terrestrial,Mammals,Habitat Degredation,yes,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,2,1,0
 10.1016/j.geoderma.2013.03.010,Terrestrial,Other,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1016/j.jtbi.2007.07.013,Multiple,Multiple,Climate Change,yes,yes,1,TModel,Life History,Abiotic,0,0,0,0,0,0,0,1,0
 10.1016/j.jtbi.2010.12.006,Multiple,Multiple,0,no,no,0,TModel,Life History,Trophic,0,0,0,0,0,1,0,0,0
 10.1016/j.jtbi.2011.05.033,Terrestrial,Multiple,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,2,0,0
 10.1016/j.limno.2015.10.005,Freshwater,Fish,0,no,no,0,Observational,Life History,Abiotic,0,0,0,1,0,3,2,0,0
 10.1016/j.marenvres.2017.09.004,Marine,Fish,Habitat Degredation,yes,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
-10.1016/j.marpolbul.2007.10.019,Marine,Multiple,0,no,no,0,Observational,Physiological,Abiotic,0,0,0,0,2,1,0,1,0
+10.1016/j.marpolbul.2007.10.019,Marine,Multiple,0,no,no,0,Observational,Physiological,Trophic,0,0,0,0,2,1,0,1,0
 10.1016/j.mbs.2016.01.005,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Trophic,0,0,0,0,0,0,0,2,0
-10.1016/j.ncon.2016.09.006,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,1,1,0,2,10,0,0
+10.1016/j.ncon.2016.09.006,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,1,1,1,0,2,10,0,0
 10.1016/j.ntt.2013.07.001,Freshwater,Fish,Habitat Degredation,yes,no,0,Experiment,Behavioural,Abiotic,0,1,0,0,0,0,1,0,0
 10.1016/j.pedobi.2016.06.001,Terrestrial,Other,Habitat Degredation,yes,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,0,1,0
 10.1016/j.pocean.2013.10.010,Marine,Other,Global Change Broad,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1016/j.pocean.2014.10.002,Marine,Fish,Exploitation,yes,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,15,0,0
 10.1016/j.ppees.2016.09.006,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,1,6,0,0
-10.1016/j.ppees.2017.07.002,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,0,0,1,1,1,0,0,0
+10.1016/j.ppees.2017.07.002,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,1,1,0,0,0
 10.1016/j.rse.2015.06.010,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,1,0,4,0,0,0,6,0,0
 10.1016/j.rse.2018.03.038,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Abiotic,0,0,2,0,0,0,0,0,0
 10.1016/j.scitotenv.2016.04.004,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,1,0,0,0,0,0,1,0,0
 10.1016/j.scitotenv.2016.04.193,Freshwater,Other,Habitat Degredation,yes,no,0,Observational,Physiological,Abiotic,0,0,0,0,2,0,0,0,0
-10.1016/j.scitotenv.2016.07.227,Freshwater,Other,Habitat Degredation,yes,no,0,QModel,Morphological,Biotic,0,0,0,0,0,5,2,4,0
-10.1016/j.scitotenv.2018.09.256,Freshwater,Mammals,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,0,0,0
-10.1016/j.seares.2013.05.004,Marine,Fish,0,no,no,0,Observational,Life History,Biotic,0,0,0,0,0,3,2,0,0
-10.1016/j.soilbio.2014.04.002,Terrestrial,Insects,0,no,no,0,QModel,Life History,Abiotic,0,1,0,0,0,1,6,0,0
+10.1016/j.scitotenv.2016.07.227,Freshwater,Other,Habitat Degredation,yes,no,0,Observational,Physiological,Abiotic,0,0,0,0,0,5,2,4,0
+10.1016/j.scitotenv.2018.09.256,Freshwater,Mammals,0,no,no,0,Observational,Morphological,Trophic,0,0,1,0,0,0,0,0,0
+10.1016/j.seares.2013.05.004,Marine,Fish,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,3,2,0,0
+10.1016/j.soilbio.2014.04.002,Terrestrial,Insects,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,0,1,6,0,0
 10.1016/j.soilbio.2015.02.007,Terrestrial,Other,Habitat Degredation,yes,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1016/j.soilbio.2015.03.005,Terrestrial,Other,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,1,1,0
-10.1016/j.tree.2015.09.006,Terrestrial,Plants,Climate Change,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,1,0,0,0,0
-10.1016/j.ufug.2018.01.002,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,1,0,1,2,0
-10.1016/j.yhbeh.2007.08.004,Terrestrial,Herpetofauna,Invasion,yes,no,0,Experiment,Morphological,Trophic,0,3,0,0,0,0,3,0,0
-10.1016/S0065-2881(09)56004-X,Marine,Fish,Global Change Broad,yes,no,0,Review,Behavioural,Abiotic,0,1,0,0,3,0,1,0,2
+10.1016/j.tree.2015.09.006,Terrestrial,Plants,Climate Change,yes,no,0,QModel,Physiological,Abiotic,0,0,0,0,1,0,0,0,0
+10.1016/j.ufug.2018.01.002,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Physiological,Abiotic,0,0,0,0,1,0,1,2,0
+10.1016/j.yhbeh.2007.08.004,Terrestrial,Herpetofauna,Invasion,yes,no,0,Experiment,Behavioural,Trophic,0,3,0,0,0,0,3,0,0
+10.1016/S0065-2881(09)56004-X,Marine,Fish,Global Change Broad,yes,no,0,Review,Life History,Dispersal,0,1,0,0,3,0,1,0,2
 10.1016/S0167-8809(01)00333-4,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,2,0,0,0,5,3,1,0
 10.1016/S1385-1101(02)00220-4,Terrestrial,Other,0,no,no,0,Review,Morphological,Trophic,0,0,0,0,1,0,2,0,0
 10.1017/S0031182004005050,Freshwater,Fish,0,no,no,0,Observational,Life History,Trophic,0,1,0,0,2,0,1,2,0
 10.1017/S0952836900001084,Terrestrial,Mammals,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,2,2,1,0
-10.1017/S0952836900002016,Marine,Other,Invasion,yes,no,0,Observational,Life History,Abiotic,0,0,0,0,0,2,0,2,2
+10.1017/S0952836900002016,Marine,Other,Invasion,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,2,0,2,2
 10.1017/S0960258510000176,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,6,0,0,0
 10.1023/A:1008991021305,Multiple,Multiple,0,no,no,0,TModel,Life History,Trophic,0,0,0,0,0,0,0,0,1
-10.1023/A:1022417601010,Terrestrial,Insects,0,no,no,0,Review,Morphological,Trophic,0,0,0,0,0,0,2,1,0
+10.1023/A:1022417601010,Terrestrial,Insects,0,no,no,0,Review,Behavioural,Trophic,0,0,0,0,0,0,2,1,0
 10.1023/B:APPA.0000038623.75416.e3,Terrestrial,Insects,0,no,no,0,Experiment,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
 10.1023/B:BIOC.0000004319.91643.9e,Terrestrial,Multiple,Habitat Degredation,yes,no,0,Review,Behavioural,Abiotic,1,2,0,0,3,1,1,4,1
 10.1034/j.1600-0587.2001.d01-206.x,Terrestrial,Plants,0,no,no,0,TModel,Morphological,Biotic,0,0,0,0,0,3,1,0,0
-10.1034/j.1600-0706.2000.880215.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,1,0,0,0
+10.1034/j.1600-0706.2000.880215.x,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Trophic,0,0,0,0,0,1,0,0,0
 10.1038/355073a0,Marine,Multiple,0,no,no,0,QModel,Behavioural,Biotic,0,0,0,0,0,1,0,0,0
-10.1038/ismej.2015.201,Terrestrial,Other,Habitat Degredation,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,0,0,0,1,0
-10.1038/ismej.2017.183,Marine,Other,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,0,0,0,1,0
-10.1038/ncomms9877,Terrestrial,Multiple,Habitat Degredation,yes,no,0,Metanalysis,Life History,Abiotic,0,2,0,0,2,1,1,2,0
+10.1038/ismej.2015.201,Terrestrial,Other,Habitat Degredation,yes,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,0,1,0
+10.1038/ismej.2017.183,Marine,Other,0,no,no,0,QModel,Behavioural,Biotic,0,1,0,0,0,0,0,1,0
+10.1038/ncomms9877,Terrestrial,Multiple,Habitat Degredation,yes,no,0,Metanalysis,Morphological,Abiotic,0,2,0,0,2,1,1,2,0
 10.1038/s41559-017-0426-x,Terrestrial,Other,Global Change Broad,yes,no,0,Review,Life History,Abiotic,0,0,0,1,0,2,3,3,0
-10.1038/s41559-019-0899-x,Multiple,Multiple,0,no,no,0,QModel,Physiological,Trophic,0,1,0,0,1,0,0,2,0
+10.1038/s41559-019-0899-x,Multiple,Multiple,0,no,no,0,Review,Life History,Trophic,0,1,0,0,1,0,0,2,0
 10.1038/s41598-017-00429-9,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,0,3,0
-10.1038/s41598-018-32078-x,Terrestrial,Plants,0,no,no,0,Experiment,Life History,Abiotic,0,0,1,0,0,1,5,0,0
+10.1038/s41598-018-32078-x,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Biotic,0,0,1,0,0,1,5,0,0
 10.1038/srep24110,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,1,0,0,0,3,0,0
-10.1038/srep24451,Terrestrial,Insects,Climate Change,yes,no,0,Review,Morphological,Trophic,0,1,0,0,1,1,1,2,0
+10.1038/srep24451,Terrestrial,Insects,Climate Change,yes,no,0,Review,Morphological,Abiotic,0,1,0,0,1,1,1,2,0
 10.1038/srep29414,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,0,1,0,0
 10.1038/srep33383,Terrestrial,Insects,Climate Change,yes,yes,1,TModel,Life History,Abiotic,0,0,0,1,0,1,0,0,1
 10.1038/srep35649,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
 10.1038/srep42007,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,1,0,0,0,0
 10.1046/j.1365-2311.2002.0379a.x,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
 10.1046/j.1365-2427.1997.00166.x,Freshwater,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,2,0,3,0,0
-10.1046/j.1365-2427.2000.00535.x,Freshwater,Other,0,no,no,0,Observational,Life History,Trophic,0,1,0,0,8,4,2,7,0
-10.1046/j.1365-2427.2002.00908.x,Freshwater,Multiple,0,no,no,0,Review,Morphological,Trophic,0,1,1,0,0,0,2,1,0
+10.1046/j.1365-2427.2000.00535.x,Freshwater,Other,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,8,4,2,7,0
+10.1046/j.1365-2427.2002.00908.x,Freshwater,Multiple,0,no,no,0,Review,Life History,Abiotic,0,1,1,0,0,0,2,1,0
 10.1046/j.1365-2427.2002.01002.x,Freshwater,Fish,0,no,no,0,TModel,Behavioural,Trophic,0,0,0,0,1,0,1,1,0
-10.1046/j.1365-2435.2002.00664.x,Terrestrial,Plants,0,no,no,0,QModel,Life History,Abiotic,0,0,4,4,1,5,5,3,0
+10.1046/j.1365-2435.2002.00664.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,4,4,1,5,5,3,0
 10.1046/j.1365-2656.2003.00727.x,Marine,Birds,Climate Change,yes,no,0,QModel,Life History,Abiotic,0,0,0,1,0,0,0,0,1
-10.1046/j.1365-2745.2001.00673.x,Terrestrial,Plants,0,no,no,0,Experiment,Life History,Dispersal,0,1,0,0,0,0,0,0,0
-10.1046/j.1439-0485.2000.00732.x,Marine,Other,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
-10.1046/j.1523-1739.2002.02283.x,Terrestrial,Herpetofauna,Habitat Degredation,yes,no,0,Observational,Behavioural,Trophic,0,0,0,0,2,3,2,2,0
-10.1051/alr:2005029,Marine,Fish,0,no,no,0,Observational,Life History,Trophic,0,2,0,0,2,0,2,0,0
-10.1051/kmae/2015033,Freshwater,Fish,0,no,no,0,Observational,Physiological,Abiotic,0,0,1,0,0,0,0,0,0
-10.1073/pnas.1015178108,Multiple,Multiple,Climate Change,yes,no,0,Review,Behavioural,Abiotic,0,0,0,0,1,0,0,2,0
+10.1046/j.1365-2745.2001.00673.x,Terrestrial,Plants,0,no,no,0,Experiment,Life History,Abiotic,0,1,0,0,0,0,0,0,0
+10.1046/j.1439-0485.2000.00732.x,Marine,Other,0,no,no,0,QModel,Life History,Abiotic,0,0,0,0,0,0,1,0,0
+10.1046/j.1523-1739.2002.02283.x,Terrestrial,Herpetofauna,Habitat Degredation,yes,no,0,Observational,Morphological,Trophic,0,0,0,0,2,3,2,2,0
+10.1051/alr:2005029,Marine,Fish,0,no,no,0,Observational,Behavioural,Abiotic,0,2,0,0,2,0,2,0,0
+10.1051/kmae/2015033,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,0,0,0
+10.1073/pnas.1015178108,Multiple,Multiple,Climate Change,yes,no,0,Review,Life History,Abiotic,0,0,0,0,1,0,0,2,0
 10.1073/pnas.1215513110,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,3,0,0,0,0,1,0
 10.1073/pnas.1300643110,Terrestrial,Other,Climate Change,yes,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,0,1,0
 10.1073/pnas.1302051110,Marine,Fish,0,no,no,0,Experiment,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.1073/pnas.1304074110,Marine,Fish,0,no,no,0,QModel,Morphological,Abiotic,0,3,0,0,2,1,1,0,0
+10.1073/pnas.1304074110,Marine,Fish,0,no,no,0,QModel,Behavioural,Dispersal,0,3,0,0,2,1,1,0,0
 10.1073/pnas.1310700110,Terrestrial,Plants,Climate Change,yes,no,0,Observational,Morphological,Abiotic,0,0,6,0,0,1,5,0,0
 10.1073/pnas.1315179111,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,1,1,0,1,2,0,0
 10.1073/pnas.1319342111,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,0,0,0,0,7,0,0
-10.1073/pnas.1401949111,Terrestrial,Insects,0,no,no,0,Experiment,Morphological,Abiotic,0,1,0,0,1,0,3,1,0
+10.1073/pnas.1401949111,Terrestrial,Insects,0,no,no,0,Experiment,Morphological,Trophic,0,1,0,0,1,0,3,1,0
 10.1073/pnas.1721464115,Terrestrial,Insects,0,no,no,0,Observational,Life History,Trophic,0,1,0,0,0,0,1,0,0
-10.1073/pnas.1802091115,Freshwater,Insects,0,no,no,0,QModel,Physiological,Abiotic,0,2,0,0,0,0,0,2,0
-10.1080/1357650X.2017.1293074,Terrestrial,Mammals,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,5,0,0
-10.1080/13658816.2013.861465,Marine,Fish,0,no,no,0,QModel,Life History,Abiotic,0,0,0,0,0,0,1,1,0
+10.1073/pnas.1802091115,Freshwater,Insects,0,no,no,0,Observational,Physiological,Abiotic,0,2,0,0,0,0,0,2,0
+10.1080/1357650X.2017.1293074,Terrestrial,Mammals,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,5,0,0
+10.1080/13658816.2013.861465,Marine,Fish,0,no,no,0,QModel,Behavioural,Dispersal,0,0,0,0,0,0,1,1,0
 10.1080/17451000.2013.793802,Marine,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,1,0,0,0,0,1,0
 10.1080/17550874.2016.1211192,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,2,0,0,0,3,0,0
-10.1080/17550874.2017.1345997,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,1,5,4,0,3,10,3,0
+10.1080/17550874.2017.1345997,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,5,4,0,3,10,3,0
 10.1086/368401,Terrestrial,Plants,0,no,no,0,Review,Physiological,Abiotic,0,0,0,0,0,0,2,0,0
 10.1086/505157,Terrestrial,Multiple,0,no,no,0,QModel,Behavioural,Trophic,0,0,0,0,0,0,0,2,0
-10.1086/682680,Terrestrial,Mammals,0,no,no,0,Review,Physiological,Dispersal,0,0,0,0,1,0,0,1,0
-10.1086/685894,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Biotic,0,1,0,0,0,0,1,3,0
-10.1086/690764,Multiple,Plankton,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,1,3,0
-10.1086/696978,Freshwater,Other,0,no,no,0,QModel,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
+10.1086/682680,Terrestrial,Mammals,0,no,no,0,Review,Behavioural,Abiotic,0,0,0,0,1,0,0,1,0
+10.1086/685894,Terrestrial,Birds,0,no,no,0,Observational,Behavioural,Biotic,0,1,0,0,0,0,1,3,0
+10.1086/690764,Multiple,Plankton,0,no,no,0,QModel,Life History,Trophic,0,0,0,0,0,0,1,3,0
+10.1086/696978,Freshwater,Other,0,no,no,0,QModel,Behavioural,Abiotic,0,0,0,0,0,0,0,1,0
 10.1086/701784,Freshwater,Fish,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1086/703155,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Trophic,0,0,0,0,0,0,0,2,1
-10.1093/aob/mcu113,Terrestrial,Plants,0,no,no,0,Review,Life History,Abiotic,0,0,0,0,0,1,0,0,0
-10.1093/aob/mcx005,Terrestrial,Plants,0,no,no,0,Experiment,Life History,Abiotic,0,0,0,0,2,0,0,0,0
+10.1093/aob/mcu113,Terrestrial,Plants,0,no,no,0,Review,Physiological,Abiotic,0,0,0,0,0,1,0,0,0
+10.1093/aob/mcx005,Terrestrial,Plants,0,no,no,0,Experiment,Physiological,Abiotic,0,0,0,0,2,0,0,0,0
 10.1093/aob/mcx222,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1093/aob/mcy004,Terrestrial,Plants,0,no,no,0,Experiment,Life History,Abiotic,0,0,0,0,0,1,1,0,0
-10.1093/beheco/11.4.452,Terrestrial,Mammals,0,no,no,0,Review,Behavioural,Trophic,0,2,0,0,0,0,1,1,0
-10.1093/beheco/ars040,Terrestrial,Birds,0,no,no,0,QModel,Morphological,Abiotic,0,2,0,0,1,5,1,0,2
-10.1093/beheco/arv115,Marine,Fish,0,no,no,0,Observational,Behavioural,Biotic,0,2,0,0,0,0,1,0,0
-10.1093/biolinnean/blx159,Terrestrial,Insects,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
+10.1093/beheco/11.4.452,Terrestrial,Mammals,0,no,no,0,Review,Morphological,Trophic,0,2,0,0,0,0,1,1,0
+10.1093/beheco/ars040,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Dispersal,0,2,0,0,1,5,1,0,2
+10.1093/beheco/arv115,Marine,Fish,0,no,no,0,Observational,Behavioural,Abiotic,0,2,0,0,0,0,1,0,0
+10.1093/biolinnean/blx159,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
 10.1093/ee/nvv183,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,1,0
-10.1093/forestry/cpw018,Terrestrial,Insects,Climate Change,yes,no,0,Review,Life History,Abiotic,0,0,0,0,1,0,0,0,0
+10.1093/forestry/cpw018,Terrestrial,Insects,Climate Change,yes,no,0,Review,Physiological,Abiotic,0,0,0,0,1,0,0,0,0
 10.1093/jpe/rtt064,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,3,0,0,0,3,0,0
 10.1093/jpe/rtt075,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Dispersal,0,0,0,0,0,0,4,0,0
 10.1093/jpe/rtv043,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,1,3,0,0
 10.1093/plankt/fbp098,Marine,Plankton,Climate Change,yes,no,0,Review,Morphological,Abiotic,0,0,1,0,0,0,1,0,0
-10.1093/plankt/fbr111,Freshwater,Plankton,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,1,2,0,0
+10.1093/plankt/fbr111,Freshwater,Plankton,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,1,2,0,0
 10.1098/rsif.2018.0239,Multiple,Multiple,0,no,no,0,TModel,Morphological,Trophic,0,1,0,0,0,0,1,0,0
 10.1098/rsos.140541,Terrestrial,Plants,0,no,no,0,QModel,Physiological,Biotic,0,0,0,0,1,0,1,0,0
 10.1098/rsos.150652,Freshwater,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 10.1098/rsos.160957,Terrestrial,Mammals,0,no,no,0,Review,Morphological,Trophic,0,0,0,0,0,0,6,0,0
-10.1098/rsos.181702,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Abiotic,0,0,0,0,1,0,2,1,1
-10.1098/rspb.2000.1010,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,1,1,0,0,0,4,1,2,0
+10.1098/rsos.181702,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Dispersal,0,0,0,0,1,0,2,1,1
+10.1098/rspb.2000.1010,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,1,1,0,0,0,4,1,2,0
 10.1098/rspb.2004.2899,Freshwater,Fish,0,no,no,0,Experiment,Life History,Trophic,0,0,0,1,0,0,0,0,0
-10.1098/rspb.2005.3236,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
+10.1098/rspb.2005.3236,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Abiotic,0,0,0,0,0,0,0,1,0
 10.1098/rspb.2010.0501,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,1,0,0
 10.1098/rspb.2011.1371,Terrestrial,Insects,0,no,no,0,QModel,Life History,Trophic,0,0,0,0,0,2,0,0,0
-10.1098/rspb.2012.2131,Terrestrial,Birds,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,1,0,0,2,1,1,2,0
-10.1098/rspb.2014.2102,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,4,2,1,0
+10.1098/rspb.2012.2131,Terrestrial,Birds,Habitat Degredation,yes,no,0,Metanalysis,Morphological,Abiotic,0,1,0,0,2,1,1,2,0
+10.1098/rspb.2014.2102,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,0,0,0,0,4,2,1,0
 10.1098/rspb.2015.1498,Terrestrial,Plants,0,no,no,0,TModel,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1098/rspb.2015.2444,Terrestrial,Multiple,0,no,no,0,Observational,Morphological,Trophic,1,0,0,0,0,1,4,0,0
-10.1098/rspb.2015.2841,Terrestrial,Multiple,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,1,1,0,0
-10.1098/rspb.2016.1207,Terrestrial,Mammals,Global Change Broad,yes,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,1,1,0
+10.1098/rspb.2015.2841,Terrestrial,Multiple,0,no,no,0,Experiment,Physiological,Abiotic,0,0,0,0,0,1,1,0,0
+10.1098/rspb.2016.1207,Terrestrial,Mammals,Global Change Broad,yes,no,0,QModel,Behavioural,Abiotic,0,0,0,0,0,0,1,1,0
 10.1098/rspb.2016.1931,Marine,Multiple,0,no,no,0,TModel,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
 10.1098/rspb.2017.1345,Marine,Fish,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,0,0,5,0,0
 10.1098/rspb.2017.1405,Marine,Fish,Climate Change,yes,no,0,Experiment,Morphological,Abiotic,0,0,0,0,1,0,1,0,0
 10.1098/rspb.2017.1942,Freshwater,Plankton,0,no,no,0,Experiment,Physiological,Abiotic,0,0,0,0,1,0,0,0,0
-10.1098/rspb.2018.0621,Marine,Plankton,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
+10.1098/rspb.2018.0621,Marine,Plankton,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 10.1098/rstb.2008.0286,Multiple,Multiple,Invasion,yes,no,0,TModel,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
-10.1098/rstb.2010.0130,Terrestrial,Multiple,Climate Change,yes,no,0,Observational,Behavioural,Abiotic,0,0,0,0,2,2,1,1,0
-10.1098/rstb.2012.0246,Freshwater,Multiple,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
+10.1098/rstb.2010.0130,Terrestrial,Multiple,Climate Change,yes,no,0,Observational,Morphological,Dispersal,0,0,0,0,2,2,1,1,0
+10.1098/rstb.2012.0246,Freshwater,Multiple,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,1,0,0
 10.1103/PhysRevE.88.062721,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Trophic,0,0,0,0,0,0,0,1,1
-10.1111/1365-2435.12075,Terrestrial,Multiple,0,no,no,0,Observational,Behavioural,Abiotic,0,1,1,0,0,1,7,1,0
+10.1111/1365-2435.12075,Terrestrial,Multiple,0,no,no,0,Observational,Morphological,Abiotic,0,1,1,0,0,1,7,1,0
 10.1111/1365-2435.12112,Marine,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
-10.1111/1365-2435.12120,Terrestrial,Plants,Invasion,yes,no,0,Observational,Morphological,Biotic,0,0,2,1,0,0,6,0,0
-10.1111/1365-2435.12135,Terrestrial,Plants,0,no,no,0,QModel,Life History,Trophic,0,1,0,0,0,0,0,0,0
+10.1111/1365-2435.12120,Terrestrial,Plants,Invasion,yes,no,0,Observational,Morphological,Abiotic,0,0,2,1,0,0,6,0,0
+10.1111/1365-2435.12135,Terrestrial,Plants,0,no,no,0,Observational,Life History,Trophic,0,1,0,0,0,0,0,0,0
 10.1111/1365-2435.12162,Terrestrial,Plants,0,no,no,0,Metanalysis,Morphological,Abiotic,0,0,1,0,0,0,1,1,0
-10.1111/1365-2435.12176,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,1,1,0,0,1,7,0,0
+10.1111/1365-2435.12176,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,1,0,0,1,7,0,0
 10.1111/1365-2435.12444,Marine,Fish,0,no,no,0,Observational,Behavioural,Abiotic,0,0,1,0,0,0,0,0,0
-10.1111/1365-2435.12605,Terrestrial,Other,0,no,no,0,Observational,Life History,Trophic,0,1,0,0,1,0,0,0,0
-10.1111/1365-2435.12718,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Biotic,0,0,1,0,0,2,5,2,0
+10.1111/1365-2435.12605,Terrestrial,Other,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,1,0,0,0,0
+10.1111/1365-2435.12718,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,0,1,0,0,2,5,2,0
 10.1111/1365-2435.12753,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,1,0
-10.1111/1365-2435.12784,Marine,Plankton,0,no,no,0,Observational,Behavioural,Abiotic,0,2,1,0,0,0,3,2,0
+10.1111/1365-2435.12784,Marine,Plankton,0,no,no,0,Observational,Morphological,Abiotic,0,2,1,0,0,0,3,2,0
 10.1111/1365-2435.12786,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,3,0,0
-10.1111/1365-2435.12798,Marine,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,1,1,1,2,0
-10.1111/1365-2435.12838,Freshwater,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,44,1,0
-10.1111/1365-2435.12894,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,0,2,0
-10.1111/1365-2435.12938,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,15,0,0,0,0,0,0
-10.1111/1365-2435.13007,Terrestrial,Insects,0,no,no,0,Observational,Life History,Abiotic,0,0,0,1,0,0,1,1,0
+10.1111/1365-2435.12798,Marine,Plants,0,no,no,0,QModel,Life History,Abiotic,0,0,0,1,1,1,1,2,0
+10.1111/1365-2435.12838,Freshwater,Fish,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,44,1,0
+10.1111/1365-2435.12894,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,0,0,0,0,0,0,2,0
+10.1111/1365-2435.12938,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,15,0,0,0,0,0,0
+10.1111/1365-2435.13007,Terrestrial,Insects,0,no,no,0,Observational,Physiological,Biotic,0,0,0,1,0,0,1,1,0
 10.1111/1365-2435.13059,Terrestrial,Mammals,0,no,no,0,QModel,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
 10.1111/1365-2435.13079,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,1,2,0
 10.1111/1365-2435.13141,Terrestrial,Multiple,0,no,no,0,Observational,Life History,Trophic,0,1,0,0,0,3,4,4,0
 10.1111/1365-2435.13142,Terrestrial,Multiple,0,no,no,0,Observational,Life History,Biotic,0,0,0,0,0,0,1,1,0
 10.1111/1365-2656.12004,Freshwater,Multiple,0,no,no,0,Observational,Behavioural,Abiotic,0,3,0,0,0,0,0,0,0
-10.1111/1365-2656.12020,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Dispersal,0,0,0,0,0,1,1,0,0
-10.1111/1365-2656.12081,Multiple,Multiple,Climate Change,yes,no,0,TModel,Behavioural,Trophic,0,1,0,0,0,0,1,2,0
-10.1111/1365-2656.12144,Terrestrial,Mammals,0,no,no,0,QModel,Life History,Abiotic,0,0,0,0,0,0,0,0,1
-10.1111/1365-2656.12161,Terrestrial,Multiple,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,2,0,3,3,0
+10.1111/1365-2656.12020,Terrestrial,Herpetofauna,0,no,no,0,Observational,Life History,Dispersal,0,0,0,0,0,1,1,0,0
+10.1111/1365-2656.12081,Multiple,Multiple,Climate Change,yes,no,0,TModel,Behavioural,Abiotic,0,1,0,0,0,0,1,2,0
+10.1111/1365-2656.12144,Terrestrial,Mammals,0,no,no,0,QModel,Life History,Trophic,0,0,0,0,0,0,0,0,1
+10.1111/1365-2656.12161,Terrestrial,Multiple,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,2,0,3,3,0
 10.1111/1365-2656.12173,Freshwater,Other,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,1,0,0,0
-10.1111/1365-2656.12218,Marine,Multiple,0,no,no,0,TModel,Life History,Abiotic,0,4,6,0,3,0,17,1,0
-10.1111/1365-2656.12250,Marine,Fish,Invasion,yes,no,0,QModel,Morphological,Trophic,0,3,0,0,1,0,4,0,0
+10.1111/1365-2656.12218,Marine,Multiple,0,no,no,0,TModel,Morphological,Trophic,0,4,6,0,3,0,17,1,0
+10.1111/1365-2656.12250,Marine,Fish,Invasion,yes,no,0,QModel,Behavioural,Trophic,0,3,0,0,1,0,4,0,0
 10.1111/1365-2656.12264,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.1111/1365-2656.12271,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,1,1,1,1,0
+10.1111/1365-2656.12271,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,1,1,1,1,0
 10.1111/1365-2656.12274,Marine,Fish,Exploitation,yes,no,0,TModel,Life History,Trophic,0,0,0,0,0,2,0,0,2
 10.1111/1365-2656.12471,Terrestrial,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,0,0,0,0
-10.1111/1365-2656.12478,Marine,Birds,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,1,3,0
+10.1111/1365-2656.12478,Marine,Birds,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,1,3,0
 10.1111/1365-2656.12570,Terrestrial,Birds,0,no,no,0,Review,Life History,Abiotic,0,0,0,0,0,4,0,0,0
 10.1111/1365-2656.12603,Freshwater,Fish,0,no,no,0,TModel,Life History,Trophic,0,0,0,1,0,2,0,0,0
-10.1111/1365-2656.12648,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Life History,Abiotic,0,3,0,0,1,2,2,2,0
-10.1111/1365-2656.12650,Marine,Birds,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,1,3,0
+10.1111/1365-2656.12648,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,3,0,0,1,2,2,2,0
+10.1111/1365-2656.12650,Marine,Birds,0,no,no,0,QModel,Behavioural,Trophic,0,0,0,0,0,0,1,3,0
 10.1111/1365-2656.12718,Terrestrial,Herpetofauna,0,no,no,0,Experiment,Physiological,Abiotic,0,0,0,0,1,0,0,0,0
-10.1111/1365-2656.12747,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,1,0,0,0,3,2,2,0
-10.1111/1365-2656.12829,Terrestrial,Birds,Global Change Multiple,yes,no,0,QModel,Physiological,Dispersal,0,1,0,0,6,0,0,0,0
-10.1111/1365-2656.12838,Terrestrial,Multiple,0,no,no,0,Review,Behavioural,Abiotic,0,0,0,0,3,4,3,3,1
+10.1111/1365-2656.12747,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,1,0,0,0,3,2,2,0
+10.1111/1365-2656.12829,Terrestrial,Birds,Global Change Multiple,yes,no,0,QModel,Physiological,Abiotic,0,1,0,0,6,0,0,0,0
+10.1111/1365-2656.12838,Terrestrial,Multiple,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,3,4,3,3,1
 10.1111/1365-2656.12892,Terrestrial,Multiple,0,no,no,0,TModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.1111/1365-2656.13029,Multiple,Birds,0,no,no,0,Observational,Life History,Trophic,0,0,0,0,1,0,0,3,0
-10.1111/1365-2664.12022,Freshwater,Multiple,Habitat Degredation,yes,no,0,QModel,Behavioural,Dispersal,0,1,0,0,0,0,0,1,0
+10.1111/1365-2656.13029,Multiple,Birds,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,1,0,0,3,0
+10.1111/1365-2664.12022,Freshwater,Multiple,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,1,0,0,0,0,0,1,0
 10.1111/1365-2664.12037,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,4,1,0,0,10,5,3,1
-10.1111/1365-2664.12490,Terrestrial,Mammals,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,1,0,3,2,0
+10.1111/1365-2664.12490,Terrestrial,Mammals,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,0,0,0,1,0,3,2,0
 10.1111/1365-2664.12493,Terrestrial,Multiple,0,no,no,0,Observational,Life History,Abiotic,0,2,0,1,7,3,9,7,0
 10.1111/1365-2664.12516,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,2,0,0,1,2,0,0
 10.1111/1365-2664.12524,Terrestrial,Insects,Habitat Degredation,yes,no,0,Review,Life History,Abiotic,0,1,0,0,0,2,0,2,0
-10.1111/1365-2664.12623,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Biotic,0,0,0,0,0,6,3,1,0
+10.1111/1365-2664.12623,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,6,3,1,0
 10.1111/1365-2664.12922,Freshwater,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,1,2,2,0,0
 10.1111/1365-2664.12935,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,2,2,0,0
 10.1111/1365-2664.13134,Terrestrial,Plants,Habitat Degredation,yes,no,0,Review,Morphological,Abiotic,0,0,1,0,0,0,3,0,0
-10.1111/1365-2745.12003,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,2,0,0,3,3,0,0
+10.1111/1365-2745.12003,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,2,0,0,3,3,0,0
 10.1111/1365-2745.12012,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,5,0,0
-10.1111/1365-2745.12013,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,1,0,0,2,0,0
+10.1111/1365-2745.12013,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,0,2,0,0
 10.1111/1365-2745.12098,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,1,0,0,1,4,4,0,0
 10.1111/1365-2745.12160,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,8,0,0,0,7,0,0
-10.1111/1365-2745.12199,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Life History,Abiotic,0,1,0,0,0,1,0,0,1
+10.1111/1365-2745.12199,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Life History,Abiotic,0,1,0,0,0,1,0,0,1
 10.1111/1365-2745.12333,Terrestrial,Plants,0,no,no,0,Metanalysis,Morphological,Dispersal,0,1,0,0,0,2,0,0,0
 10.1111/1365-2745.12366,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,7,0,0,1,4,0,0
 10.1111/1365-2745.12480,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,3,0,0
-10.1111/1365-2745.12489,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,1,0,7,0,0,0,23,1,0
-10.1111/1365-2745.12536,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,1,0,0,2,2,0,0
-10.1111/1365-2745.12598,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,4,0,0,0,4,0,0
+10.1111/1365-2745.12489,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Abiotic,1,0,7,0,0,0,23,1,0
+10.1111/1365-2745.12536,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,2,2,0,0
+10.1111/1365-2745.12598,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,4,0,0,0,4,0,0
 10.1111/1365-2745.12604,Terrestrial,Plants,Climate Change,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,1,1,0,0
-10.1111/1365-2745.12633,Terrestrial,Other,0,no,no,0,Observational,Morphological,Abiotic,0,0,4,0,1,0,1,0,0
-10.1111/1365-2745.12658,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,4,0,0,0,3,0,0
-10.1111/1365-2745.12747,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,3,0,0,1,4,0,0
+10.1111/1365-2745.12633,Terrestrial,Other,0,no,no,0,Observational,Physiological,Abiotic,0,0,4,0,1,0,1,0,0
+10.1111/1365-2745.12658,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,4,0,0,0,3,0,0
+10.1111/1365-2745.12747,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,3,0,0,1,4,0,0
 10.1111/1365-2745.12802,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,2,0,0,0,5,1,0
-10.1111/1365-2745.12851,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,2,0,0
+10.1111/1365-2745.12851,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,2,0,0
 10.1111/1365-2745.12996,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Life History,Biotic,0,0,3,0,0,1,4,0,0
 10.1111/1365-2745.13074,Terrestrial,Plants,0,no,no,0,TModel,Life History,Biotic,0,1,0,0,0,0,0,1,0
 10.1111/1462-2920.12211,Terrestrial,Other,0,no,no,0,Observational,Physiological,Abiotic,0,0,0,0,0,0,0,1,0
 10.1111/1749-4877.12319,Terrestrial,Multiple,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,5,0,0
-10.1111/1752-1688.12650,Freshwater,Other,0,no,no,0,Observational,Life History,Abiotic,0,4,0,1,9,5,2,3,0
+10.1111/1752-1688.12650,Freshwater,Other,0,no,no,0,Observational,Morphological,Abiotic,0,4,0,1,9,5,2,3,0
 10.1111/2041-210X.12211,Multiple,Multiple,0,no,yes,1,QModel,Life History,Abiotic,0,0,0,1,0,4,2,1,0
 10.1111/2041-210X.12280,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,1,0,0
 10.1111/2041-210X.12471,Terrestrial,Multiple,0,no,no,0,QModel,Life History,Trophic,0,1,0,0,0,2,8,1,0
-10.1111/2041-210X.12591,Freshwater,Other,0,no,no,0,QModel,Life History,Abiotic,0,0,0,0,0,0,1,1,0
-10.1111/2041-210X.12735,Terrestrial,Plants,0,no,no,0,TModel,Morphological,Biotic,0,0,0,0,0,0,2,0,0
+10.1111/2041-210X.12591,Freshwater,Other,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,1,1,0
+10.1111/2041-210X.12735,Terrestrial,Plants,0,no,no,0,TModel,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
 10.1111/aec.12607,Freshwater,Herpetofauna,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,5,0,0
 10.1111/bij.12238,Terrestrial,Mammals,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,1,0,5,1,0,0
-10.1111/brv.12250,Multiple,Multiple,Global Change Broad,yes,no,0,Review,Morphological,Trophic,0,0,0,0,0,0,1,0,0
+10.1111/brv.12250,Multiple,Multiple,Global Change Broad,yes,no,0,Review,Morphological,Biotic,0,0,0,0,0,0,1,0,0
 10.1111/brv.12366,Terrestrial,Multiple,0,no,no,0,Review,Morphological,Trophic,0,0,0,0,0,0,2,0,0
 10.1111/brv.12377,Terrestrial,Multiple,0,no,no,0,Review,Behavioural,Trophic,0,1,0,0,0,0,0,0,0
 10.1111/brv.12461,Terrestrial,Plants,0,no,no,0,Metanalysis,Physiological,Abiotic,0,0,0,2,3,3,0,0,0
-10.1111/cobi.12378,Marine,Birds,Global Change Broad,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,0,1,0,2,0
+10.1111/cobi.12378,Marine,Birds,Global Change Broad,yes,no,0,QModel,Behavioural,Abiotic,0,0,0,0,0,1,0,2,0
 10.1111/ddi.12074,Marine,Other,Invasion,yes,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,1,1,0,0
-10.1111/ddi.12708,Terrestrial,Plants,Invasion,yes,no,0,Observational,Physiological,Abiotic,0,0,0,0,0,1,2,0,0
-10.1111/ddi.12712,Marine,Multiple,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,3,2,0
-10.1111/ddi.12721,Terrestrial,Birds,Invasion,yes,no,0,Review,Behavioural,Biotic,0,1,0,0,2,0,2,3,0
+10.1111/ddi.12708,Terrestrial,Plants,Invasion,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,1,2,0,0
+10.1111/ddi.12712,Marine,Multiple,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,3,2,0
+10.1111/ddi.12721,Terrestrial,Birds,Invasion,yes,no,0,Review,Life History,Biotic,0,1,0,0,2,0,2,3,0
 10.1111/ddi.12747,Freshwater,Fish,Invasion,yes,no,0,QModel,Morphological,Abiotic,0,0,0,0,2,3,1,1,0
 10.1111/ddi.12785,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Abiotic,1,1,0,0,0,0,0,3,0
-10.1111/ddi.12790,Terrestrial,Multiple,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,2,0,2,1,0
+10.1111/ddi.12790,Terrestrial,Multiple,0,no,no,0,Observational,Behavioural,Biotic,0,1,0,0,2,0,2,1,0
 10.1111/ecog.00473,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,1,1,0,0
 10.1111/ecog.00623,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,6,0,0
-10.1111/ecog.00938,Terrestrial,Insects,0,no,no,0,QModel,Morphological,Trophic,0,1,0,1,0,1,2,0,0
+10.1111/ecog.00938,Terrestrial,Insects,0,no,no,0,QModel,Behavioural,Trophic,0,1,0,1,0,1,2,0,0
 10.1111/ecog.02010,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,1,0,0
-10.1111/ecog.02516,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Physiological,Abiotic,0,1,0,1,0,4,2,2,0
+10.1111/ecog.02516,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Dispersal,0,1,0,1,0,4,2,2,0
 10.1111/ecog.02632,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,1,0,0,0,1,1,2,0
 10.1111/ecog.02926,Freshwater,Plankton,Habitat Degredation,yes,no,0,Observational,Life History,Abiotic,0,0,0,0,1,0,1,1,0
-10.1111/ecog.02968,Terrestrial,Multiple,Climate Change,yes,no,0,Review,Morphological,Abiotic,1,3,0,0,2,4,3,2,0
+10.1111/ecog.02968,Terrestrial,Multiple,Climate Change,yes,no,0,Review,Behavioural,Dispersal,1,3,0,0,2,4,3,2,0
 10.1111/ecog.03396,Terrestrial,Multiple,0,no,no,0,Review,Morphological,Trophic,1,0,0,0,0,2,5,0,0
 10.1111/ecog.03582,Multiple,Multiple,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
-10.1111/ecog.03747,Terrestrial,Mammals,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,2,0,1,1,0
-10.1111/ecog.03782,Freshwater,Fish,0,no,no,0,QModel,Life History,Trophic,0,1,0,0,0,3,2,0,0
+10.1111/ecog.03747,Terrestrial,Mammals,0,no,no,0,QModel,Morphological,Biotic,0,0,0,0,2,0,1,1,0
+10.1111/ecog.03782,Freshwater,Fish,0,no,no,0,QModel,Life History,Abiotic,0,1,0,0,0,3,2,0,0
 10.1111/ecog.03917,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1111/een.1.2425,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,2,0,0,0,0,1,0
 10.1111/een.12374,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,3,0,0
 10.1111/een.12454,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Dispersal,0,0,0,0,0,0,2,1,0
-10.1111/eff.12333,Freshwater,Fish,0,no,no,0,QModel,Behavioural,Abiotic,0,0,0,1,0,0,2,1,0
+10.1111/eff.12333,Freshwater,Fish,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,1,0,0,2,1,0
 10.1111/ele.12080,Terrestrial,Plants,0,no,no,0,Metanalysis,Life History,Abiotic,0,0,0,1,1,1,0,0,0
-10.1111/ele.12081,Multiple,Multiple,0,no,no,0,TModel,Morphological,Trophic,0,3,0,1,3,9,33,6,0
-10.1111/ele.12157,Multiple,Multiple,0,no,no,0,Review,Physiological,Biotic,0,0,2,1,0,1,1,0,0
+10.1111/ele.12081,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Biotic,0,3,0,1,3,9,33,6,0
+10.1111/ele.12157,Multiple,Multiple,0,no,no,0,TModel,Morphological,Biotic,0,0,2,1,0,1,1,0,0
 10.1111/ele.12342,Terrestrial,Plants,0,no,no,0,Review,Morphological,Biotic,0,0,0,0,0,0,4,0,0
 10.1111/ele.12351,Marine,Fish,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,1,0,0
 10.1111/ele.12529,Terrestrial,Multiple,0,no,no,0,Experiment,Morphological,Trophic,0,0,2,0,0,0,4,0,0
-10.1111/ele.12532,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Abiotic,0,0,5,1,0,1,4,1,0
+10.1111/ele.12532,Terrestrial,Plants,0,no,no,0,Experiment,Life History,Abiotic,0,0,5,1,0,1,4,1,0
 10.1111/ele.12576,Multiple,Fish,0,no,no,0,Metanalysis,Life History,Abiotic,0,0,0,0,0,2,0,0,0
 10.1111/ele.12642,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,2,0,0,1,5,0,0
 10.1111/ele.12688,Marine,Other,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,0,1,2,1,0
-10.1111/ele.12728,Terrestrial,Multiple,Invasion,yes,no,0,Review,Behavioural,Biotic,0,0,0,0,0,6,3,0,0
+10.1111/ele.12728,Terrestrial,Multiple,Invasion,yes,no,0,Review,Morphological,Dispersal,0,0,0,0,0,6,3,0,0
 10.1111/ele.12757,Terrestrial,Insects,0,no,no,0,QModel,Behavioural,Abiotic,0,1,0,0,1,0,0,0,0
 10.1111/ele.12945,Multiple,Plants,0,no,no,0,Review,Morphological,Abiotic,0,0,1,1,0,0,1,1,0
 10.1111/ele.13216,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Trophic,1,0,0,0,0,0,1,0,0
 10.1111/ele.13217,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,1,0,0,3,0,0
-10.1111/ele.13235,Freshwater,Multiple,0,no,yes,1,TModel,Physiological,Biotic,0,0,0,0,1,0,0,0,0
+10.1111/ele.13235,Freshwater,Multiple,0,no,yes,1,TModel,Life History,Biotic,0,0,0,0,1,0,0,0,0
 10.1111/evo.12153,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
-10.1111/evo.12518,Multiple,Multiple,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,0,2,0,1,0
-10.1111/faf.12155,Marine,Fish,Climate Change,yes,no,0,Review,Behavioural,Abiotic,0,4,0,1,1,3,0,6,1
-10.1111/faf.12347,Marine,Fish,0,no,no,0,Metanalysis,Behavioural,Abiotic,0,0,1,0,0,0,11,0,0
+10.1111/evo.12518,Multiple,Multiple,0,no,no,0,Review,Life History,Trophic,0,0,0,0,0,2,0,1,0
+10.1111/faf.12155,Marine,Fish,Climate Change,yes,no,0,Review,Physiological,Abiotic,0,4,0,1,1,3,0,6,1
+10.1111/faf.12347,Marine,Fish,0,no,no,0,Review,Morphological,Abiotic,0,0,1,0,0,0,11,0,0
 10.1111/fwb.12228,Freshwater,Other,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,3,0,1,0
 10.1111/fwb.12527,Freshwater,Plankton,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,3,2,0
-10.1111/fwb.12554,Freshwater,Multiple,0,no,no,0,Observational,Behavioural,Biotic,0,0,0,0,13,0,0,4,0
-10.1111/fwb.12934,Freshwater,Multiple,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,0,0,2,1,0
-10.1111/fwb.12961,Freshwater,Insects,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,1,1,4,1,0
-10.1111/fwb.12966,Freshwater,Plankton,0,no,no,0,Observational,Morphological,Trophic,0,0,0,1,0,0,1,1,0
-10.1111/fwb.13233,Freshwater,Fish,Habitat Degredation,yes,no,0,QModel,Physiological,Abiotic,0,0,0,0,1,0,8,2,0
-10.1111/gcb.12355,Freshwater,Multiple,Global Change Broad,yes,no,0,Observational,Morphological,Biotic,0,1,0,0,0,0,1,1,0
+10.1111/fwb.12554,Freshwater,Multiple,0,no,no,0,Observational,Physiological,Abiotic,0,0,0,0,13,0,0,4,0
+10.1111/fwb.12934,Freshwater,Multiple,0,no,no,0,Observational,Life History,Biotic,0,0,0,0,0,0,2,1,0
+10.1111/fwb.12961,Freshwater,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,1,1,4,1,0
+10.1111/fwb.12966,Freshwater,Plankton,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,0,1,1,0
+10.1111/fwb.13233,Freshwater,Fish,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,1,0,8,2,0
+10.1111/gcb.12355,Freshwater,Multiple,Global Change Broad,yes,no,0,Experiment,Morphological,Biotic,0,1,0,0,0,0,1,1,0
 10.1111/gcb.12545,Freshwater,Fish,0,no,no,0,QModel,Life History,Biotic,0,0,0,1,0,1,0,0,0
 10.1111/gcb.12604,Terrestrial,Plants,Climate Change,yes,yes,1,TModel,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
-10.1111/gcb.12780,Freshwater,Fish,Invasion,yes,no,0,Observational,Morphological,Biotic,0,0,0,0,4,4,1,2,0
+10.1111/gcb.12780,Freshwater,Fish,Invasion,yes,no,0,Observational,Life History,Trophic,0,0,0,0,4,4,1,2,0
 10.1111/gcb.12862,Terrestrial,Birds,Global Change Broad,yes,no,0,Review,Behavioural,Abiotic,0,2,0,0,0,3,1,2,0
 10.1111/gcb.13016,Terrestrial,Herpetofauna,Climate Change,yes,no,0,Observational,Physiological,Abiotic,0,0,0,0,1,0,0,0,0
-10.1111/gcb.13085,Freshwater,Plankton,Climate Change,yes,yes,1,Observational,Morphological,Abiotic,0,2,1,0,0,0,3,0,0
+10.1111/gcb.13085,Freshwater,Plankton,Climate Change,yes,yes,1,Observational,Morphological,Biotic,0,2,1,0,0,0,3,0,0
 10.1111/gcb.13174,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,1,0,0,0,2,0
-10.1111/gcb.13184,Marine,Multiple,Climate Change,yes,no,0,Review,Behavioural,Abiotic,0,0,0,1,2,0,0,0,0
+10.1111/gcb.13184,Marine,Multiple,Climate Change,yes,no,0,Review,Life History,Abiotic,0,0,0,1,2,0,0,0,0
 10.1111/gcb.13538,Marine,Birds,Climate Change,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,0,2,0,0,1
-10.1111/gcb.13542,Terrestrial,Plants,Climate Change,yes,no,0,TModel,Morphological,Abiotic,0,0,1,1,0,0,1,1,0
-10.1111/gcb.13736,Multiple,Multiple,Climate Change,yes,no,0,Metanalysis,Morphological,Abiotic,0,0,0,0,2,1,1,1,0
-10.1111/gcb.13835,Marine,Fish,Global Change Multiple,yes,no,0,Metanalysis,Physiological,Abiotic,0,0,0,0,1,0,0,0,0
-10.1111/gcb.14119,Marine,Fish,Climate Change,yes,no,0,Observational,Behavioural,Trophic,0,2,0,0,1,0,3,1,0
+10.1111/gcb.13542,Terrestrial,Plants,Climate Change,yes,no,0,TModel,Life History,Abiotic,0,0,1,1,0,0,1,1,0
+10.1111/gcb.13736,Multiple,Multiple,Climate Change,yes,no,0,Metanalysis,Behavioural,Abiotic,0,0,0,0,2,1,1,1,0
+10.1111/gcb.13835,Marine,Fish,Global Change Multiple,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,1,0,0,0,0
+10.1111/gcb.14119,Marine,Fish,Climate Change,yes,no,0,Observational,Behavioural,Abiotic,0,2,0,0,1,0,3,1,0
 10.1111/geb.12003,Terrestrial,Herpetofauna,0,no,no,0,Review,Morphological,Dispersal,0,0,0,0,0,0,6,0,0
 10.1111/geb.12030,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,1,2,0,0
-10.1111/geb.12088,Terrestrial,Mammals,Invasion,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,2,1,1,1,0
-10.1111/geb.12148,Terrestrial,Birds,0,no,no,0,Review,Life History,Trophic,0,3,0,0,0,3,1,3,0
-10.1111/geb.12167,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Abiotic,0,0,1,0,2,1,4,1,0
+10.1111/geb.12088,Terrestrial,Mammals,Invasion,yes,no,0,QModel,Morphological,Abiotic,0,0,0,0,2,1,1,1,0
+10.1111/geb.12148,Terrestrial,Birds,0,no,no,0,Review,Morphological,Trophic,0,3,0,0,0,3,1,3,0
+10.1111/geb.12167,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,1,0,2,1,4,1,0
 10.1111/geb.12249,Terrestrial,Plants,Invasion,yes,no,0,Metanalysis,Life History,Abiotic,0,0,0,0,4,1,0,1,0
-10.1111/geb.12306,Terrestrial,Plants,Global Change Broad,yes,no,0,Review,Life History,Dispersal,0,1,0,2,1,6,2,0,0
-10.1111/geb.12475,Freshwater,Fish,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,7,0,1,1,0
-10.1111/geb.12521,Terrestrial,Insects,Habitat Degredation,yes,no,0,Review,Behavioural,Trophic,0,1,0,0,0,1,1,1,0
-10.1111/geb.12537,Multiple,Multiple,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
+10.1111/geb.12306,Terrestrial,Plants,Global Change Broad,yes,no,0,Review,Morphological,Dispersal,0,1,0,2,1,6,2,0,0
+10.1111/geb.12475,Freshwater,Fish,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,7,0,1,1,0
+10.1111/geb.12521,Terrestrial,Insects,Habitat Degredation,yes,no,0,QModel,Morphological,Trophic,0,1,0,0,0,1,1,1,0
+10.1111/geb.12537,Multiple,Multiple,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1111/geb.12567,Terrestrial,Multiple,Invasion,yes,no,0,QModel,Morphological,Abiotic,0,1,0,1,1,5,5,1,0
 10.1111/geb.12636,Terrestrial,Plants,0,no,no,0,Observational,Life History,Trophic,0,0,0,0,0,0,0,0,1
 10.1111/geb.12637,Terrestrial,Plants,0,no,no,0,Review,Physiological,Abiotic,0,0,0,0,1,0,0,0,0
 10.1111/geb.12783,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,1,4,0,0
 10.1111/gfs.12129,Terrestrial,Plants,0,no,no,0,Review,Life History,Abiotic,0,0,0,0,0,1,1,0,0
-10.1111/icad.12051,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,2,2,1,4,0
+10.1111/icad.12051,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,2,2,1,4,0
 10.1111/icad.12248,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,13,0,0
-10.1111/icad.12271,Freshwater,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,1,2,1,4,0
+10.1111/icad.12271,Freshwater,Insects,0,no,no,0,Observational,Life History,Biotic,0,0,0,0,1,2,1,4,0
 10.1111/j.0014-3820.2005.tb01015.x,Marine,Other,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,2,0,0
-10.1111/j.0030-1299.2005.13632.x,Terrestrial,Plants,0,no,no,0,QModel,Life History,Abiotic,0,1,0,0,0,1,0,0,1
+10.1111/j.0030-1299.2005.13632.x,Terrestrial,Plants,0,no,no,0,QModel,Life History,Dispersal,0,1,0,0,0,1,0,0,1
 10.1111/j.0906-7590.2008.05457.x,Terrestrial,Other,Invasion,yes,no,0,QModel,Physiological,Abiotic,0,0,0,0,1,0,0,0,0
 10.1111/j.1095-8312.2005.00465.x,Terrestrial,Herpetofauna,0,no,no,0,Observational,Life History,Trophic,0,5,0,0,0,1,2,0,0
-10.1111/j.1095-8312.2007.00909.x,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,9,0,0
+10.1111/j.1095-8312.2007.00909.x,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,9,0,0
 10.1111/j.1095-8312.2008.01102.x,Terrestrial,Insects,0,no,no,0,Review,Life History,Trophic,0,0,0,0,0,1,0,0,0
 10.1111/j.1095-8312.2008.01112.x,Freshwater,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.1111/j.1095-8312.2010.01569.x,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,5,0,0
+10.1111/j.1095-8312.2010.01569.x,Terrestrial,Insects,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,5,0,0
 10.1111/j.1095-8649.2010.02640.x,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1111/j.1095-8649.2012.03294.x,Freshwater,Fish,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,1,1,0
-10.1111/j.1365-2109.2012.03205.x,Freshwater,Fish,0,no,no,0,Experiment,Behavioural,Trophic,0,0,0,0,0,0,3,1,0
+10.1111/j.1365-2109.2012.03205.x,Freshwater,Fish,0,no,no,0,Experiment,Morphological,Trophic,0,0,0,0,0,0,3,1,0
 10.1111/j.1365-2311.2008.01044.x,Terrestrial,Birds,0,no,no,0,Experiment,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
-10.1111/j.1365-2427.1994.tb01754.x,Freshwater,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,4,1,0,0
+10.1111/j.1365-2427.1994.tb01754.x,Freshwater,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,4,1,0,0
 10.1111/j.1365-2427.1994.tb01755.x,Freshwater,Multiple,0,no,no,0,Observational,Behavioural,Abiotic,0,1,0,1,1,6,4,4,0
-10.1111/j.1365-2427.1994.tb01756.x,Terrestrial,Multiple,0,no,no,0,Observational,Life History,Abiotic,0,2,0,2,0,8,5,4,0
-10.1111/j.1365-2427.2007.01736.x,Freshwater,Fish,0,no,no,0,QModel,Life History,Abiotic,0,0,0,0,2,0,0,1,0
-10.1111/j.1365-2427.2009.02220.x,Freshwater,Fish,0,no,no,0,Observational,Behavioural,Biotic,0,0,0,0,1,3,0,1,0
+10.1111/j.1365-2427.1994.tb01756.x,Terrestrial,Multiple,0,no,no,0,Observational,Physiological,Trophic,0,2,0,2,0,8,5,4,0
+10.1111/j.1365-2427.2007.01736.x,Freshwater,Fish,0,no,no,0,QModel,Physiological,Abiotic,0,0,0,0,2,0,0,1,0
+10.1111/j.1365-2427.2009.02220.x,Freshwater,Fish,0,no,no,0,Observational,Life History,Biotic,0,0,0,0,1,3,0,1,0
 10.1111/j.1365-2435.2008.01477.x,Terrestrial,Plants,0,no,no,0,Metanalysis,Morphological,Abiotic,0,0,0,0,0,1,0,0,0
 10.1111/j.1365-2435.2009.01528.x,Terrestrial,Mammals,0,no,no,0,Review,Physiological,Abiotic,0,0,2,0,0,0,1,1,0
 10.1111/j.1365-2435.2009.01614.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,3,0,0
 10.1111/j.1365-2435.2010.01727.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,2,0,0,0,3,0,0
-10.1111/j.1365-2435.2012.02057.x,Terrestrial,Multiple,Global Change Broad,yes,no,0,QModel,Morphological,Abiotic,0,1,0,0,0,0,0,0,0
+10.1111/j.1365-2435.2012.02057.x,Terrestrial,Multiple,Global Change Broad,yes,no,0,Review,Morphological,Abiotic,0,1,0,0,0,0,0,0,0
 10.1111/j.1365-2486.2007.01483.x,Terrestrial,Plants,Global Change Broad,yes,no,0,Observational,Life History,Abiotic,0,0,0,1,0,1,0,0,0
-10.1111/j.1365-2486.2009.01905.x,Terrestrial,Plants,0,no,yes,1,Experiment,Morphological,Biotic,0,0,2,0,0,0,6,0,0
+10.1111/j.1365-2486.2009.01905.x,Terrestrial,Plants,0,no,yes,1,Experiment,Morphological,Abiotic,0,0,2,0,0,0,6,0,0
 10.1111/j.1365-2486.2009.01963.x,Terrestrial,Birds,Climate Change,yes,yes,1,Review,Morphological,Abiotic,0,1,0,0,1,4,1,1,0
-10.1111/j.1365-2486.2011.02614.x,Terrestrial,Plants,Climate Change,yes,yes,1,TModel,Life History,Dispersal,0,1,0,1,0,0,0,1,0
-10.1111/j.1365-2656.2006.01068.x,Freshwater,Other,0,no,no,0,QModel,Life History,Abiotic,0,1,0,0,0,1,0,1,0
+10.1111/j.1365-2486.2011.02614.x,Terrestrial,Plants,Climate Change,yes,yes,1,TModel,Life History,Abiotic,0,1,0,1,0,0,0,1,0
+10.1111/j.1365-2656.2006.01068.x,Freshwater,Other,0,no,no,0,Observational,Life History,Dispersal,0,1,0,0,0,1,0,1,0
 10.1111/j.1365-2656.2007.01284.x,Freshwater,Fish,0,no,no,0,Experiment,Behavioural,Abiotic,0,3,0,0,0,0,0,1,0
-10.1111/j.1365-2656.2008.01443.x,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,2,0,0,1,0,1,2,0
+10.1111/j.1365-2656.2008.01443.x,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,2,0,0,1,0,1,2,0
 10.1111/j.1365-2656.2008.01460.x,Multiple,Multiple,0,no,no,0,Review,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.1111/j.1365-2656.2010.01660.x,Freshwater,Other,0,no,no,0,Observational,Behavioural,Trophic,0,1,0,2,0,7,1,1,0
-10.1111/j.1365-2656.2010.01666.x,Terrestrial,Insects,Invasion,yes,no,0,Experiment,Physiological,Abiotic,0,0,0,1,0,1,0,0,1
+10.1111/j.1365-2656.2010.01660.x,Freshwater,Other,0,no,no,0,Observational,Life History,Biotic,0,1,0,2,0,7,1,1,0
+10.1111/j.1365-2656.2010.01666.x,Terrestrial,Insects,Invasion,yes,no,0,Experiment,Behavioural,Abiotic,0,0,0,1,0,1,0,0,1
 10.1111/j.1365-2656.2010.01705.x,Freshwater,Multiple,0,no,no,0,Experiment,Morphological,Trophic,0,0,1,0,0,0,1,0,0
 10.1111/j.1365-2656.2010.01759.x,Freshwater,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,3,0,0
 10.1111/j.1365-2656.2011.01812.x,Multiple,Multiple,0,no,no,0,TModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 10.1111/j.1365-2656.2011.01824.x,Terrestrial,Multiple,Habitat Degredation,yes,no,0,QModel,Behavioural,Biotic,0,0,0,0,0,0,0,1,0
-10.1111/j.1365-2656.2012.02015.x,Terrestrial,Birds,0,no,no,0,Observational,Behavioural,Dispersal,0,2,0,0,0,1,0,0,1
-10.1111/j.1365-2664.2006.001175.x,Terrestrial,Insects,0,no,no,0,Observational,Life History,Biotic,0,4,0,0,0,1,2,0,0
-10.1111/j.1365-2664.2009.01714.x,Terrestrial,Plants,0,no,no,0,Observational,Life History,Dispersal,0,1,0,2,2,5,2,0,0
-10.1111/j.1365-2664.2011.02039.x,Terrestrial,Other,Invasion,yes,no,0,QModel,Morphological,Dispersal,0,1,0,0,0,1,6,0,0
+10.1111/j.1365-2656.2012.02015.x,Terrestrial,Birds,0,no,no,0,Observational,Life History,Abiotic,0,2,0,0,0,1,0,0,1
+10.1111/j.1365-2664.2006.001175.x,Terrestrial,Insects,0,no,no,0,Observational,Life History,Dispersal,0,4,0,0,0,1,2,0,0
+10.1111/j.1365-2664.2009.01714.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Dispersal,0,1,0,2,2,5,2,0,0
+10.1111/j.1365-2664.2011.02039.x,Terrestrial,Other,Invasion,yes,no,0,QModel,Morphological,Abiotic,0,1,0,0,0,1,6,0,0
 10.1111/j.1365-2664.2012.02211.x,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,1,0,0,0,0,0,1,1,0
-10.1111/j.1365-2699.2007.01824.x,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,3,0,0
+10.1111/j.1365-2699.2007.01824.x,Terrestrial,Herpetofauna,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,3,0,0
 10.1111/j.1365-2699.2010.02433.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,0,8,0,0
-10.1111/j.1365-2699.2011.02502.x,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,1,0,1,2,0
+10.1111/j.1365-2699.2011.02502.x,Terrestrial,Birds,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,1,0,1,2,0
 10.1111/j.1365-2699.2012.02690.x,Terrestrial,Plants,Climate Change,yes,no,0,TModel,Life History,Abiotic,0,0,0,0,0,0,0,1,0
-10.1111/j.1365-2745.2005.01046.x,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,0,1,0,2,3,1,0
+10.1111/j.1365-2745.2005.01046.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,1,0,2,3,1,0
 10.1111/j.1365-2745.2009.01610.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,3,0,2,2,6,9,1,0
 10.1111/j.1365-2745.2010.01650.x,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,0,1,0,3,2,0,0
 10.1111/j.1365-2745.2010.01651.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,2,0,0
 10.1111/j.1365-2745.2010.01662.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,1,0,0,1,8,1,0
-10.1111/j.1365-2745.2010.01687.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,3,0,0
-10.1111/j.1365-2745.2010.01743.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,2,2,0,0
+10.1111/j.1365-2745.2010.01687.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,3,0,0
+10.1111/j.1365-2745.2010.01743.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,0,0,0,2,2,0,0
 10.1111/j.1365-2745.2011.01795.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,2,0,0
-10.1111/j.1365-2745.2011.01860.x,Terrestrial,Plants,Invasion,yes,no,0,Observational,Life History,Biotic,0,0,0,0,1,3,2,2,0
-10.1111/j.1365-2745.2011.01932.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,2,0,0,5,4,0,0
-10.1111/j.1365-2745.2012.01965.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,2,0,0,0,1,0,0
-10.1111/j.1365-2745.2012.01966.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,4,0,0,0,5,0,0
-10.1111/j.1366-9516.2005.00169.x,Terrestrial,Insects,Invasion,yes,yes,1,QModel,Behavioural,Abiotic,0,1,0,0,1,0,1,1,0
+10.1111/j.1365-2745.2011.01860.x,Terrestrial,Plants,Invasion,yes,no,0,Observational,Morphological,Biotic,0,0,0,0,1,3,2,2,0
+10.1111/j.1365-2745.2011.01932.x,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,0,2,0,0,5,4,0,0
+10.1111/j.1365-2745.2012.01965.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,2,0,0,0,1,0,0
+10.1111/j.1365-2745.2012.01966.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,4,0,0,0,5,0,0
+10.1111/j.1366-9516.2005.00169.x,Terrestrial,Insects,Invasion,yes,yes,1,QModel,Morphological,Abiotic,0,1,0,0,1,0,1,1,0
 10.1111/j.1438-8677.2012.00684.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,2,1,0,0
-10.1111/j.1461-0248.2006.01006.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Dispersal,0,0,0,0,1,0,1,1,0
+10.1111/j.1461-0248.2006.01006.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,1,0,1,1,0
 10.1111/j.1461-0248.2007.01140.x,Terrestrial,Plants,0,no,no,0,Experiment,Behavioural,Biotic,0,0,0,0,0,0,0,1,0
-10.1111/j.1461-0248.2008.01255.x,Terrestrial,Multiple,Habitat Degredation,yes,no,0,Metanalysis,Life History,Abiotic,0,1,0,1,0,3,6,4,0
-10.1111/j.1461-0248.2009.01307.x,Terrestrial,Mammals,Global Change Broad,yes,no,0,QModel,Life History,Abiotic,1,0,0,1,1,1,1,0,0
-10.1111/j.1461-0248.2010.01456.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,0,0,1,0,6,0,0
-10.1111/j.1461-0248.2010.01493.x,Terrestrial,Birds,0,no,no,0,Review,Morphological,Biotic,0,2,0,0,0,3,1,4,0
+10.1111/j.1461-0248.2008.01255.x,Terrestrial,Multiple,Habitat Degredation,yes,no,0,Metanalysis,Morphological,Abiotic,0,1,0,1,0,3,6,4,0
+10.1111/j.1461-0248.2009.01307.x,Terrestrial,Mammals,Global Change Broad,yes,no,0,QModel,Behavioural,Abiotic,1,0,0,1,1,1,1,0,0
+10.1111/j.1461-0248.2010.01456.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,1,0,6,0,0
+10.1111/j.1461-0248.2010.01493.x,Terrestrial,Birds,0,no,no,0,Review,Behavioural,Biotic,0,2,0,0,0,3,1,4,0
 10.1111/j.1461-0248.2010.01541.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,2,0,0,1,5,0,0
-10.1111/j.1461-0248.2011.01620.x,Terrestrial,Multiple,Climate Change,yes,no,0,Review,Life History,Trophic,0,0,0,0,0,0,1,0,0
-10.1111/j.1461-0248.2012.01744.x,Terrestrial,Birds,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,1,1,0
+10.1111/j.1461-0248.2011.01620.x,Terrestrial,Multiple,Climate Change,yes,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
+10.1111/j.1461-0248.2012.01744.x,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,1,0
 10.1111/j.1461-0248.2012.01788.x,Marine,Other,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,0,0,1,0,0
-10.1111/j.1461-0248.2012.01861.x,Marine,Other,Global Change Broad,yes,no,0,QModel,Morphological,Abiotic,0,3,1,1,1,2,1,1,0
+10.1111/j.1461-0248.2012.01861.x,Marine,Other,Global Change Broad,yes,no,0,QModel,Life History,Biotic,0,3,1,1,1,2,1,1,0
 10.1111/j.1466-8238.2010.00623.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Trophic,0,0,4,0,0,0,3,0,0
 10.1111/j.1466-8238.2010.00641.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,2,2,0,0
 10.1111/j.1466-8238.2011.00717.x,Terrestrial,Plants,0,no,no,0,Review,Life History,Abiotic,0,0,1,0,0,1,1,1,0
 10.1111/j.1466-8238.2011.00719.x,Terrestrial,Herpetofauna,0,no,no,0,QModel,Morphological,Abiotic,0,1,0,0,1,3,3,0,0
 10.1111/j.1466-8238.2012.00790.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,1,0,2,0,0
-10.1111/j.1469-1795.2012.00528.x,Terrestrial,Birds,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,3,0
+10.1111/j.1469-1795.2012.00528.x,Terrestrial,Birds,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,0,0,0,0,0,1,3,0
 10.1111/j.1469-8137.2006.01811.x,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,1,0,0,0
-10.1111/j.1472-4642.2007.00381.x,Terrestrial,Plants,Invasion,yes,yes,1,QModel,Morphological,Biotic,0,1,0,2,12,11,0,1,2
-10.1111/j.1472-4642.2009.00599.x,Terrestrial,Plants,Invasion,yes,no,0,Observational,Physiological,Abiotic,0,0,15,1,1,10,9,1,0
+10.1111/j.1472-4642.2007.00381.x,Terrestrial,Plants,Invasion,yes,yes,1,QModel,Physiological,Biotic,0,1,0,2,12,11,0,1,2
+10.1111/j.1472-4642.2009.00599.x,Terrestrial,Plants,Invasion,yes,no,0,Observational,Morphological,Trophic,0,0,15,1,1,10,9,1,0
 10.1111/j.1529-8817.2010.00890.x,Marine,Plants,0,no,no,0,Experiment,Morphological,Abiotic,0,0,3,0,0,0,0,0,0
-10.1111/j.1558-5646.2010.01131.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,0,4,1,0
-10.1111/j.1600-0587.2012.00011.x,Terrestrial,Plants,0,no,no,0,TModel,Morphological,Dispersal,0,0,2,0,0,0,4,0,0
+10.1111/j.1558-5646.2010.01131.x,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Abiotic,0,0,0,1,0,0,4,1,0
+10.1111/j.1600-0587.2012.00011.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Dispersal,0,0,2,0,0,0,4,0,0
 10.1111/j.1600-0587.2013.00122.x,Terrestrial,Plants,0,no,no,0,Observational,Life History,Dispersal,0,1,0,0,0,0,0,0,0
 10.1111/j.1600-0587.2013.00237.x,Terrestrial,Plants,Climate Change,yes,yes,1,QModel,Morphological,Abiotic,0,0,1,0,0,1,3,0,0
 10.1111/j.1600-0633.2010.00465.x,Freshwater,Fish,0,no,no,0,Observational,Life History,Biotic,0,0,0,2,0,3,3,0,0
@@ -571,249 +571,249 @@ DOI,Ecosystem,Taxonomic,GlobalChange,GlobalChangeCat,PredictiveCat,Predictive,TO
 10.1111/j.1600-0706.2010.18860.x,Terrestrial,Insects,0,no,no,0,Experiment,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 10.1111/j.1600-0706.2012.00121.x,Terrestrial,Plants,0,no,no,0,Metanalysis,Life History,Abiotic,0,0,0,0,0,0,2,2,0
 10.1111/j.1600-0706.2012.20025.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,1,0,0,1,2,0,0
-10.1111/j.1600-0706.2012.20261.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,1,0,0,0,3,2,0,0
-10.1111/j.1600-0706.2013.00979.x,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Life History,Abiotic,0,0,0,1,0,3,5,0,0
-10.1111/j.1654-1103.2009.01160.x,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Life History,Dispersal,0,1,0,2,1,4,2,1,0
-10.1111/j.1654-1103.2011.01384.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,5,0,0
+10.1111/j.1600-0706.2012.20261.x,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,0,3,2,0,0
+10.1111/j.1600-0706.2013.00979.x,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,3,5,0,0
+10.1111/j.1654-1103.2009.01160.x,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Morphological,Dispersal,0,1,0,2,1,4,2,1,0
+10.1111/j.1654-1103.2011.01384.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,0,0,0,0,5,0,0
 10.1111/j.1654-1103.2012.01424.x,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Biotic,0,0,3,0,0,0,4,0,0
 10.1111/j.1654-1103.2012.01428.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,1,0,3,3,0,0
 10.1111/j.1654-1103.2012.01469.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,1,0,0,0
-10.1111/j.1654-1103.2012.01476.x,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,1,0,0,0,2,1,1,0
+10.1111/j.1654-1103.2012.01476.x,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,1,0,0,0,2,1,1,0
 10.1111/j.2007.0906-7590.05090.x,Marine,Birds,Climate Change,yes,no,0,Review,Life History,Abiotic,0,0,0,0,0,1,0,0,1
-10.1111/jav.01745,Terrestrial,Birds,0,no,no,0,QModel,Morphological,Abiotic,0,1,0,0,1,1,0,2,0
+10.1111/jav.01745,Terrestrial,Birds,0,no,no,0,QModel,Behavioural,Abiotic,0,1,0,0,1,1,0,2,0
 10.1111/jbi.12284,Terrestrial,Other,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,33,0,0
-10.1111/jbi.12574,Marine,Fish,0,no,no,0,QModel,Life History,Dispersal,0,1,0,0,3,0,1,1,0
-10.1111/jbi.12639,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
+10.1111/jbi.12574,Marine,Fish,0,no,no,0,QModel,Life History,Abiotic,0,1,0,0,3,0,1,1,0
+10.1111/jbi.12639,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1111/jbi.12794,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,1,0,0
-10.1111/jbi.12808,Terrestrial,Herpetofauna,Invasion,yes,yes,1,Review,Life History,Abiotic,0,1,0,0,4,1,1,0,0
-10.1111/jbi.12823,Terrestrial,Mammals,0,no,no,0,QModel,Life History,Trophic,0,0,0,0,0,0,0,1,0
-10.1111/jbi.12946,Terrestrial,Other,0,no,no,0,Observational,Physiological,Abiotic,0,0,0,0,2,4,2,3,1
+10.1111/jbi.12808,Terrestrial,Herpetofauna,Invasion,yes,yes,1,Review,Morphological,Abiotic,0,1,0,0,4,1,1,0,0
+10.1111/jbi.12823,Terrestrial,Mammals,0,no,no,0,QModel,Life History,Abiotic,0,0,0,0,0,0,0,1,0
+10.1111/jbi.12946,Terrestrial,Other,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,2,4,2,3,1
 10.1111/jbi.12970,Terrestrial,Other,Climate Change,yes,no,0,Observational,Life History,Biotic,0,0,0,0,0,1,0,0,0
 10.1111/jbi.13108,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,1,0,0,0
-10.1111/jbi.13129,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,1,2,0,0
+10.1111/jbi.13129,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,1,2,0,0
 10.1111/jbi.13171,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,2,0,0,1,3,0,0
 10.1111/jbi.13457,Freshwater,Other,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,1,0,1,1,0
-10.1111/jbi.13516,Freshwater,Plants,0,no,no,0,QModel,Morphological,Biotic,0,1,0,1,0,4,0,0,1
-10.1111/jeb.12421,Terrestrial,Herpetofauna,0,no,no,0,Observational,Behavioural,Abiotic,0,1,0,0,0,0,2,0,0
+10.1111/jbi.13516,Freshwater,Plants,0,no,no,0,QModel,Life History,Dispersal,0,1,0,1,0,4,0,0,1
+10.1111/jeb.12421,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,0,0,2,0,0
 10.1111/jeb.12717,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,2,3,0,0
 10.1111/jeb.12769,Freshwater,Other,0,no,no,0,Experiment,Behavioural,Abiotic,0,3,0,0,0,0,0,0,0
 10.1111/jeb.12845,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,9,0,0
 10.1111/jeb.12923,Freshwater,Other,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
-10.1111/jeb.13306,Terrestrial,Insects,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,0,0,1,0,0
-10.1111/jfb.12177,Marine,Fish,0,no,no,0,Observational,Physiological,Trophic,0,1,0,0,1,0,1,3,0
-10.1111/jfb.12378,Marine,Fish,0,no,no,0,Observational,Life History,Abiotic,0,0,0,1,0,1,0,1,0
+10.1111/jeb.13306,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,0,0,1,0,0
+10.1111/jfb.12177,Marine,Fish,0,no,no,0,Observational,Behavioural,Trophic,0,1,0,0,1,0,1,3,0
+10.1111/jfb.12378,Marine,Fish,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,1,0,1,0,1,0
 10.1111/jvs.12031,Terrestrial,Plants,0,no,no,0,TModel,Morphological,Abiotic,0,0,0,0,0,1,2,0,0
 10.1111/jvs.12058,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,1,2,0,0
 10.1111/jvs.12066,Terrestrial,Plants,0,no,no,0,Review,Life History,Abiotic,0,0,5,0,0,2,5,0,0
-10.1111/jvs.12151,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,3,4,2,0
-10.1111/jvs.12245,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,1,0,0,1,1,2,2,1
+10.1111/jvs.12151,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,3,4,2,0
+10.1111/jvs.12245,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,1,1,2,2,1
 10.1111/jvs.12252,Terrestrial,Plants,0,no,yes,1,TModel,Physiological,Abiotic,0,1,0,1,0,0,0,0,1
 10.1111/jvs.12256,Terrestrial,Plants,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
-10.1111/jvs.12288,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,1,3,0,1,3,0,0
+10.1111/jvs.12288,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,1,1,3,0,1,3,0,0
 10.1111/jvs.12375,Terrestrial,Plants,0,no,no,0,Review,Morphological,Abiotic,0,2,3,0,2,6,12,5,0
 10.1111/jvs.12465,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,0,0,0,3,0,3,0
 10.1111/jvs.12555,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,4,0,0
-10.1111/jvs.12615,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Life History,Biotic,0,1,0,2,0,1,0,1,0
-10.1111/jvs.12681,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,4,0,0
-10.1111/jzo.12566,Terrestrial,Mammals,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,2,2,1,0
+10.1111/jvs.12615,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Life History,Abiotic,0,1,0,2,0,1,0,1,0
+10.1111/jvs.12681,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,0,0,0,0,4,0,0
+10.1111/jzo.12566,Terrestrial,Mammals,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,2,2,1,0
 10.1111/maec.12480,Marine,Multiple,0,no,no,0,Review,Life History,Abiotic,0,1,0,0,0,0,0,0,0
-10.1111/mam.12035,Terrestrial,Mammals,0,no,no,0,Review,Morphological,Biotic,0,0,0,0,0,0,1,0,1
+10.1111/mam.12035,Terrestrial,Mammals,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,0,0,1,0,1
 10.1111/mec.12756,Multiple,Multiple,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
-10.1111/mec.13746,Freshwater,Fish,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,0,4,0,0
-10.1111/mec.13985,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,2,0,0
+10.1111/mec.13746,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,4,0,0
+10.1111/mec.13985,Terrestrial,Insects,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
 10.1111/mec.14718,Terrestrial,Birds,0,no,no,0,QModel,Behavioural,Abiotic,0,0,0,0,0,0,0,1,0
-10.1111/mec.14872,Terrestrial,Insects,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,1,1,0
+10.1111/mec.14872,Terrestrial,Insects,0,no,no,0,QModel,Behavioural,Abiotic,0,0,0,0,0,0,1,1,0
 10.1111/nph.12907,Multiple,Plants,0,no,no,0,Metanalysis,Physiological,Abiotic,0,0,0,0,0,0,0,1,0
 10.1111/nph.14219,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,3,0,0,0,0,0,0
 10.1111/nph.14498,Terrestrial,Plants,0,no,no,0,Review,Life History,Abiotic,0,1,0,0,0,0,0,0,0
-10.1111/nph.15304,Terrestrial,Plants,Climate Change,yes,no,0,Observational,Physiological,Abiotic,0,0,1,0,0,0,0,0,0
+10.1111/nph.15304,Terrestrial,Plants,Climate Change,yes,no,0,QModel,Physiological,Abiotic,0,0,1,0,0,0,0,0,0
 10.1111/oik.00707,Terrestrial,Mammals,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,1,2,1,2,0
 10.1111/oik.01279,Multiple,Multiple,Global Change Broad,yes,no,0,TModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.1111/oik.01515,Terrestrial,Insects,0,no,no,0,Experiment,Behavioural,Trophic,0,3,0,0,2,0,0,0,0
-10.1111/oik.01544,Marine,Multiple,Global Change Multiple,yes,yes,1,Experiment,Behavioural,Abiotic,0,1,0,0,1,3,2,1,0
-10.1111/oik.02100,Marine,Multiple,0,no,no,0,Observational,Morphological,Biotic,0,1,0,0,1,1,1,1,0
-10.1111/oik.02277,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Life History,Dispersal,0,2,0,4,0,5,4,6,0
-10.1111/oik.04300,Terrestrial,Plants,0,no,no,0,TModel,Morphological,Biotic,0,1,0,1,0,0,0,0,0
-10.1111/oik.04507,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Life History,Abiotic,0,1,0,0,0,2,2,1,0
-10.1111/oik.04561,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,6,0,0
-10.1111/oik.04712,Terrestrial,Insects,0,no,no,0,QModel,Life History,Trophic,0,0,0,0,1,0,4,3,0
+10.1111/oik.01515,Terrestrial,Insects,0,no,no,0,Experiment,Morphological,Trophic,0,3,0,0,2,0,0,0,0
+10.1111/oik.01544,Marine,Multiple,Global Change Multiple,yes,yes,1,Experiment,Morphological,Trophic,0,1,0,0,1,3,2,1,0
+10.1111/oik.02100,Marine,Multiple,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,1,1,1,1,0
+10.1111/oik.02277,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Morphological,Dispersal,0,2,0,4,0,5,4,6,0
+10.1111/oik.04300,Terrestrial,Plants,0,no,no,0,TModel,Life History,Biotic,0,1,0,1,0,0,0,0,0
+10.1111/oik.04507,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Life History,Trophic,0,1,0,0,0,2,2,1,0
+10.1111/oik.04561,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,6,0,0
+10.1111/oik.04712,Terrestrial,Insects,0,no,no,0,QModel,Behavioural,Trophic,0,0,0,0,1,0,4,3,0
 10.1111/oik.04885,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.1111/oik.05228,Terrestrial,Other,0,no,no,0,QModel,Behavioural,Abiotic,0,3,0,0,0,0,5,2,0
-10.1111/oik.05650,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,0,0,0,1,0
+10.1111/oik.05228,Terrestrial,Other,0,no,no,0,Experiment,Behavioural,Abiotic,0,3,0,0,0,0,5,2,0
+10.1111/oik.05650,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
 10.1111/plb.12566,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,5,1,0,0
-10.1111/wre.12126,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Morphological,Abiotic,0,0,0,2,3,8,1,1,0
-10.1126/science.1160662,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,1,0,0,1,4,0,0
+10.1111/wre.12126,Terrestrial,Plants,Habitat Degredation,yes,no,0,QModel,Life History,Abiotic,0,0,0,2,3,8,1,1,0
+10.1126/science.1160662,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,1,0,0,1,4,0,0
 10.1126/science.aac7978,Terrestrial,Mammals,Exploitation,yes,no,0,QModel,Morphological,Abiotic,0,1,0,0,1,0,2,1,0
 10.1139/cjfas-2015-0190,Freshwater,Fish,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,2,1,0,0
-10.1139/cjfas-54-6-1211,Freshwater,Other,0,no,no,0,Observational,Life History,Trophic,0,3,0,0,1,0,2,0,0
+10.1139/cjfas-54-6-1211,Freshwater,Other,0,no,no,0,Observational,Morphological,Trophic,0,3,0,0,1,0,2,0,0
 10.1139/cjfr-2017-0139,Terrestrial,Plants,Climate Change,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,5,0,0
 10.1139/cjz-2012-0236,Freshwater,Other,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,1,0,0,0
-10.1139/gen-2018-0039,Terrestrial,Plants,Invasion,yes,no,0,Observational,Morphological,Biotic,0,1,0,0,0,3,2,0,0
-10.1163/15685381-00003131,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,1,0
-10.11646/zootaxa.2556.1.3,Freshwater,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
+10.1139/gen-2018-0039,Terrestrial,Plants,Invasion,yes,no,0,Observational,Morphological,Abiotic,0,1,0,0,0,3,2,0,0
+10.1163/15685381-00003131,Terrestrial,Herpetofauna,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,0,0,2,1,0
+10.11646/zootaxa.2556.1.3,Freshwater,Insects,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1177/1059712311426800,Terrestrial,Herpetofauna,0,no,no,0,Experiment,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
 10.1186/1471-2148-10-166,Freshwater,Other,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
 10.1186/1471-2148-10-204,Terrestrial,Multiple,0,no,no,0,Review,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.1186/1471-2148-13-132,Freshwater,Fish,0,no,no,0,QModel,Behavioural,Abiotic,0,0,0,0,0,0,1,2,0
+10.1186/1471-2148-13-132,Freshwater,Fish,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,1,2,0
 10.1186/1471-2148-13-277,Freshwater,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,4,0,0
-10.1186/1471-2148-14-156,Marine,Other,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,2,0,1,1,1,1
+10.1186/1471-2148-14-156,Marine,Other,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,2,0,1,1,1,1
 10.1186/1471-2148-8-68,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1186/1472-6785-12-21,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,0,0,0,0,0,0,1,0
-10.1186/2193-1801-3-630,Terrestrial,Birds,0,no,no,0,QModel,Life History,Trophic,0,0,0,0,0,0,4,4,0
+10.1186/2193-1801-3-630,Terrestrial,Birds,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,4,4,0
 10.1186/s13071-016-1659-2,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Trophic,0,2,0,0,0,0,0,1,0
 10.1186/s40462-017-0111-3,Marine,Fish,0,no,no,0,Observational,Behavioural,Abiotic,0,1,0,0,0,0,0,0,0
 10.1242/jeb.059634,Terrestrial,Herpetofauna,0,no,no,0,TModel,Life History,Abiotic,0,1,0,0,0,0,0,2,0
-10.1371/journal.pbio.0020197,Terrestrial,Mammals,Global Change Broad,yes,yes,1,Review,Morphological,Abiotic,1,3,0,0,3,3,2,1,0
+10.1371/journal.pbio.0020197,Terrestrial,Mammals,Global Change Broad,yes,yes,1,Review,Morphological,Trophic,1,3,0,0,3,3,2,1,0
 10.1371/journal.pone.0012092,Multiple,Multiple,0,no,no,0,TModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 10.1371/journal.pone.0020782,Freshwater,Fish,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1371/journal.pone.0035742,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,0,4,0,0
-10.1371/journal.pone.0041323,Terrestrial,Insects,0,no,no,0,Experiment,Behavioural,Dispersal,0,3,0,0,0,0,8,0,0
+10.1371/journal.pone.0041323,Terrestrial,Insects,0,no,no,0,Experiment,Morphological,Dispersal,0,3,0,0,0,0,8,0,0
 10.1371/journal.pone.0053873,Multiple,Herpetofauna,0,no,no,0,TModel,Morphological,Trophic,0,0,0,0,0,0,2,0,0
-10.1371/journal.pone.0061866,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,1,0,1,0,0
-10.1371/journal.pone.0081739,Terrestrial,Multiple,0,no,no,0,Metanalysis,Morphological,Abiotic,0,1,0,0,3,3,1,5,0
-10.1371/journal.pone.0082344,Freshwater,Multiple,0,no,no,0,Experiment,Morphological,Trophic,0,1,0,0,0,1,2,0,0
+10.1371/journal.pone.0061866,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,1,0,1,0,0
+10.1371/journal.pone.0081739,Terrestrial,Multiple,0,no,no,0,Observational,Physiological,Abiotic,0,1,0,0,3,3,1,5,0
+10.1371/journal.pone.0082344,Freshwater,Multiple,0,no,no,0,Experiment,Life History,Trophic,0,1,0,0,0,1,2,0,0
 10.1371/journal.pone.0090437,Terrestrial,Multiple,0,no,no,0,Observational,Behavioural,Trophic,0,7,0,0,8,13,13,5,0
-10.1371/journal.pone.0093237,Freshwater,Fish,Invasion,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,2,5,1,1,0
-10.1371/journal.pone.0098755,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Trophic,0,0,0,0,0,0,2,0,0
-10.1371/journal.pone.0107525,Marine,Other,Climate Change,yes,yes,1,TModel,Physiological,Abiotic,0,1,0,2,2,1,0,1,1
-10.1371/journal.pone.0107883,Terrestrial,Birds,Habitat Degredation,yes,no,0,QModel,Morphological,Abiotic,0,2,0,0,2,0,1,0,0
+10.1371/journal.pone.0093237,Freshwater,Fish,Invasion,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,2,5,1,1,0
+10.1371/journal.pone.0098755,Terrestrial,Plants,0,no,no,0,Experiment,Physiological,Trophic,0,0,0,0,0,0,2,0,0
+10.1371/journal.pone.0107525,Marine,Other,Climate Change,yes,yes,1,TModel,Life History,Abiotic,0,1,0,2,2,1,0,1,1
+10.1371/journal.pone.0107883,Terrestrial,Birds,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,2,0,0,2,0,1,0,0
 10.1371/journal.pone.0111227,Freshwater,Multiple,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,0,0,1,0,0
 10.1371/journal.pone.0114290,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,5,0,0,0,0,0,0
-10.1371/journal.pone.0126112,Terrestrial,Insects,0,no,no,0,Observational,Life History,Dispersal,0,2,0,0,0,1,1,0,0
-10.1371/journal.pone.0130151,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,3,0,0,0,9,0,0
+10.1371/journal.pone.0126112,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Dispersal,0,2,0,0,0,1,1,0,0
+10.1371/journal.pone.0130151,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,3,0,0,0,9,0,0
 10.1371/journal.pone.0130571,Terrestrial,Other,0,no,no,0,Experiment,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 10.1371/journal.pone.0131630,Freshwater,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,4,1,0,3,8,0,0
 10.1371/journal.pone.0133794,Marine,Multiple,Exploitation,yes,yes,1,TModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 10.1371/journal.pone.0137963,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,1,0,0
 10.1371/journal.pone.0163338,Terrestrial,Birds,Habitat Degredation,yes,no,0,QModel,Life History,Dispersal,0,1,0,0,1,0,7,0,0
-10.1371/journal.pone.0172879,Terrestrial,Herpetofauna,0,no,no,0,QModel,Morphological,Trophic,0,0,2,0,0,0,0,0,0
-10.1371/journal.pone.0182826,Marine,Multiple,Exploitation,yes,no,0,QModel,Life History,Trophic,0,0,0,1,0,0,0,0,0
-10.1371/journal.pone.0186123,Marine,Fish,0,no,no,0,QModel,Behavioural,Abiotic,0,2,0,0,0,0,1,0,0
+10.1371/journal.pone.0172879,Terrestrial,Herpetofauna,0,no,no,0,QModel,Morphological,Abiotic,0,0,2,0,0,0,0,0,0
+10.1371/journal.pone.0182826,Marine,Multiple,Exploitation,yes,no,0,QModel,Life History,Biotic,0,0,0,1,0,0,0,0,0
+10.1371/journal.pone.0186123,Marine,Fish,0,no,no,0,QModel,Morphological,Abiotic,0,2,0,0,0,0,1,0,0
 10.1371/journal.pone.0196066,Freshwater,Herpetofauna,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,10,0,0
-10.1371/journal.pone.0199898,Terrestrial,Plants,Climate Change,yes,no,0,QModel,Life History,Abiotic,0,0,0,2,0,0,0,0,0
+10.1371/journal.pone.0199898,Terrestrial,Plants,Climate Change,yes,no,0,Observational,Morphological,Abiotic,0,0,0,2,0,0,0,0,0
 10.14471/2016.36.015,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,1,1,1,0,0
 10.14471/2016.36.018,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,3,0,0
-10.1556/168.2016.17.1.11,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,1,1,4,0,0
-10.1556/168.2018.19.2.9,Terrestrial,Mammals,0,no,no,0,Review,Behavioural,Biotic,0,0,0,0,0,2,1,1,0
+10.1556/168.2016.17.1.11,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,1,0,0,1,1,4,0,0
+10.1556/168.2018.19.2.9,Terrestrial,Mammals,0,no,no,0,Review,Life History,Biotic,0,0,0,0,0,2,1,1,0
 10.1556/ComEc.14.2013.1.4,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,3,0,0,0,4,1,0
 10.1556/ComEc.14.2013.2.7,Terrestrial,Plants,Invasion,yes,no,0,QModel,Life History,Abiotic,0,0,0,1,3,2,2,0,0
 10.1556/ComEc.9.2008.2.6,Terrestrial,Insects,Habitat Degredation,yes,no,0,Observational,Life History,Abiotic,0,0,0,0,2,0,0,2,0
-10.1614/WS-09-096.1,Terrestrial,Plants,Habitat Degredation,yes,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,2,1,0,0
-10.1650/0010-5422(2007)109[132:SSDAME]2.0.CO;2,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
+10.1614/WS-09-096.1,Terrestrial,Plants,Habitat Degredation,yes,no,0,Experiment,Life History,Abiotic,0,0,0,0,0,2,1,0,0
+10.1650/0010-5422(2007)109[132:SSDAME]2.0.CO;2,Terrestrial,Birds,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.1666/0094-8373(2005)031<0056:WTPCIT>2.0.CO;2,Terrestrial,Mammals,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 10.1666/13024,Marine,Other,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
-10.18054/pb.2016.118.3.3924,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Dispersal,0,1,0,0,1,1,0,1,0
+10.18054/pb.2016.118.3.3924,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,1,0,0,1,1,0,1,0
 10.1890/0012-9658(2000)081[0183:EOGCSO]2.0.CO;2,Freshwater,Plankton,Habitat Degredation,yes,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
-10.1890/0012-9658(2003)084[1129:AHUISP]2.0.CO;2,Marine,Multiple,0,no,no,0,TModel,Physiological,Abiotic,0,0,0,1,1,0,0,2,1
+10.1890/0012-9658(2003)084[1129:AHUISP]2.0.CO;2,Marine,Multiple,0,no,no,0,TModel,Morphological,Trophic,0,0,0,1,1,0,0,2,1
 10.1890/05-0219,Terrestrial,Plants,Invasion,yes,no,0,Experiment,Morphological,Trophic,1,0,2,0,0,0,2,0,0
 10.1890/06-1946.1,Multiple,Multiple,0,no,no,0,TModel,Life History,Trophic,0,0,0,1,0,0,0,0,0
-10.1890/07-1737.1,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,1,3,6,0,0
-10.1890/08-1025.1,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,1,5,0,0
+10.1890/07-1737.1,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,1,0,0,1,3,6,0,0
+10.1890/08-1025.1,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,1,5,0,0
 10.1890/08-1449.1,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,1,1,1,1,0,1,13,2,0
 10.1890/08-1836.1,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,1,1,0,0,0,0
 10.1890/09-0979.1,Terrestrial,Insects,0,no,no,0,QModel,Behavioural,Abiotic,1,0,0,0,0,0,0,1,0
-10.1890/09-1672.1,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,1,0,0,1,4,0,0
-10.1890/09-1894.1,Terrestrial,Insects,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,1,0,0,1,1,0
+10.1890/09-1672.1,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,1,0,0,1,4,0,0
+10.1890/09-1894.1,Terrestrial,Insects,0,no,no,0,QModel,Behavioural,Abiotic,0,0,0,1,0,0,1,1,0
 10.1890/10-0394.1,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Abiotic,0,0,8,0,0,3,6,1,1
-10.1890/10-1245.1,Terrestrial,Plants,0,no,no,0,Review,Morphological,Abiotic,0,0,1,0,0,0,3,1,0
-10.1890/10-1961.1,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,2,1,0,2,2,0,0
-10.1890/1051-0761(2006)016[0891:STAPOL]2.0.CO;2,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Trophic,0,1,0,0,1,1,1,1,0
-10.1890/11-0181.1,Marine,Birds,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,0,0
+10.1890/10-1245.1,Terrestrial,Plants,0,no,no,0,Review,Life History,Abiotic,0,0,1,0,0,0,3,1,0
+10.1890/10-1961.1,Terrestrial,Plants,0,no,no,0,QModel,Life History,Abiotic,0,0,2,1,0,2,2,0,0
+10.1890/1051-0761(2006)016[0891:STAPOL]2.0.CO;2,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,1,1,1,1,0
+10.1890/11-0181.1,Marine,Birds,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,1,0,0
 10.1890/11-0975.1,Terrestrial,Multiple,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,5,0,0
-10.1890/11-2026.1,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,5,0,0,1
+10.1890/11-2026.1,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,5,0,0,1
 10.1890/13-0708.1,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
-10.1890/13-2036.1,Terrestrial,Insects,0,no,no,0,Observational,Life History,Abiotic,0,2,0,3,1,6,1,1,0
+10.1890/13-2036.1,Terrestrial,Insects,0,no,no,0,QModel,Physiological,Abiotic,0,2,0,3,1,6,1,1,0
 10.1890/13-2153.1,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,1,2,0,0
-10.1890/13-2261.1,Terrestrial,Multiple,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,6,0,0
-10.1890/13-2377.1,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Abiotic,0,0,1,0,0,0,5,1,0
+10.1890/13-2261.1,Terrestrial,Multiple,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,6,0,0
+10.1890/13-2377.1,Terrestrial,Plants,0,no,no,0,Observational,Physiological,Biotic,0,0,1,0,0,0,5,1,0
 10.1890/14-0024.1,Terrestrial,Multiple,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,7,0,0
 10.1890/14-0306.1,Marine,Multiple,0,no,no,0,Metanalysis,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
-10.1890/14-0454.1,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,5,0,0,0,3,0,0
-10.1890/14-0910.1,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Trophic,0,1,0,0,0,2,1,0,0
+10.1890/14-0454.1,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,5,0,0,0,3,0,0
+10.1890/14-0910.1,Terrestrial,Insects,0,no,no,0,Observational,Life History,Trophic,0,1,0,0,0,2,1,0,0
 10.1890/14-1731.1.sm,Terrestrial,Birds,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,1,0,0,0,0,8,1,0
-10.1890/14-2326.1.sm,Terrestrial,Insects,0,no,no,0,Review,Morphological,Abiotic,0,3,0,0,0,2,2,2,0
-10.1890/14-2357.1,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Biotic,0,0,2,0,0,0,4,0,0
-10.1890/15-0794.1,Freshwater,Other,Climate Change,yes,no,0,Observational,Life History,Abiotic,0,0,1,0,0,1,1,0,0
-10.1890/15-1084.1,Multiple,Plankton,0,no,no,0,Metanalysis,Physiological,Abiotic,0,0,7,0,0,0,1,2,0
-10.1890/15-1673.1,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,1,4,0,0
-10.1890/ES10-00113.1,Terrestrial,Plants,0,no,no,0,Experiment,Life History,Abiotic,0,1,1,1,0,1,1,0,0
-10.1890/ES12-00262.1,Terrestrial,Insects,Habitat Degredation,yes,no,0,Metanalysis,Life History,Abiotic,0,1,0,0,1,0,1,1,0
-10.1890/ES13-00102.1,Terrestrial,Plants,Global Change Broad,yes,no,0,Observational,Life History,Abiotic,0,1,0,0,0,0,0,0,1
-10.1899/06-12.1,Freshwater,Other,Habitat Degredation,yes,no,0,Observational,Behavioural,Abiotic,0,1,0,0,1,1,0,1,0
-10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,Terrestrial,Insects,0,no,no,0,Review,Physiological,Abiotic,0,4,0,1,3,4,5,3,0
-10.1899/10-041.1,Freshwater,Insects,0,no,no,0,Experiment,Life History,Abiotic,0,1,0,0,1,1,2,1,0
+10.1890/14-2326.1.sm,Terrestrial,Insects,0,no,no,0,QModel,Behavioural,Abiotic,0,3,0,0,0,2,2,2,0
+10.1890/14-2357.1,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,2,0,0,0,4,0,0
+10.1890/15-0794.1,Freshwater,Other,Climate Change,yes,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,1,1,0,0
+10.1890/15-1084.1,Multiple,Plankton,0,no,no,0,Metanalysis,Morphological,Abiotic,0,0,7,0,0,0,1,2,0
+10.1890/15-1673.1,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Morphological,Biotic,0,0,0,0,0,1,4,0,0
+10.1890/ES10-00113.1,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Abiotic,0,1,1,1,0,1,1,0,0
+10.1890/ES12-00262.1,Terrestrial,Insects,Habitat Degredation,yes,no,0,Metanalysis,Morphological,Abiotic,0,1,0,0,1,0,1,1,0
+10.1890/ES13-00102.1,Terrestrial,Plants,Global Change Broad,yes,no,0,TModel,Life History,Abiotic,0,1,0,0,0,0,0,0,1
+10.1899/06-12.1,Freshwater,Other,Habitat Degredation,yes,no,0,Observational,Life History,Abiotic,0,1,0,0,1,1,0,1,0
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,Terrestrial,Insects,0,no,no,0,Review,Behavioural,Trophic,0,4,0,1,3,4,5,3,0
+10.1899/10-041.1,Freshwater,Insects,0,no,no,0,Experiment,Behavioural,Abiotic,0,1,0,0,1,1,2,1,0
 10.1899/12-024.1,Freshwater,Multiple,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,0,0,0,2,0
-10.2307/1467813,Freshwater,Insects,0,no,no,0,Review,Morphological,Abiotic,0,1,0,0,6,6,1,2,0
+10.2307/1467813,Freshwater,Insects,0,no,no,0,Review,Behavioural,Abiotic,0,1,0,0,6,6,1,2,0
 10.2307/1543609,Multiple,Multiple,0,no,no,0,Review,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 10.2307/1938541,Terrestrial,Mammals,0,no,no,0,QModel,Behavioural,Biotic,0,0,0,0,0,0,0,1,0
-10.2307/1939297,Freshwater,Other,0,no,no,0,Experiment,Behavioural,Biotic,0,1,0,1,0,2,0,0,0
+10.2307/1939297,Freshwater,Other,0,no,no,0,Experiment,Life History,Biotic,0,1,0,1,0,2,0,0,0
 10.2307/1941217,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,2,0,2,1,0
 10.2307/1941614,Freshwater,Other,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,2,0,0,0
-10.2307/2410482,Terrestrial,Insects,0,no,no,0,TModel,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
-10.2307/2410901,Freshwater,Fish,0,no,no,0,Observational,Life History,Trophic,0,0,0,0,0,0,0,0,1
+10.2307/2410482,Terrestrial,Insects,0,no,no,0,Experiment,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
+10.2307/2410901,Freshwater,Fish,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,0,0,1
 10.2307/2937046,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
-10.2307/2937081,Terrestrial,Herpetofauna,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,8,2,1,2
+10.2307/2937081,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,8,2,1,2
 10.2307/3547051,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,1,0,0,2,0,0,7,1,0
-10.2307/5755,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Biotic,0,0,0,0,0,0,0,3,0
-10.2478/s11756-014-0347-y,Freshwater,Fish,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,3,0,0,0,0
-10.2989/00306520309485376,Terrestrial,Birds,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,2,4,1,0,0
-10.3354/meps09086,Marine,Fish,0,no,no,0,Observational,Life History,Trophic,0,0,0,0,0,3,2,1,2
-10.3354/meps10036,Marine,Multiple,Habitat Degredation,yes,yes,1,TModel,Life History,Abiotic,0,0,0,0,0,0,0,1,0
+10.2307/5755,Multiple,Multiple,0,no,no,0,TModel,Life History,Biotic,0,0,0,0,0,0,0,3,0
+10.2478/s11756-014-0347-y,Freshwater,Fish,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,0,3,0,0,0,0
+10.2989/00306520309485376,Terrestrial,Birds,0,no,no,0,Observational,Morphological,Abiotic,0,1,0,0,2,4,1,0,0
+10.3354/meps09086,Marine,Fish,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,3,2,1,2
+10.3354/meps10036,Marine,Multiple,Habitat Degredation,yes,yes,1,TModel,Life History,Biotic,0,0,0,0,0,0,0,1,0
 10.3354/meps10622,Freshwater,Fish,0,no,no,0,Experiment,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
 10.3354/meps11626,Marine,Birds,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,0,2,0
-10.3354/meps12165,Marine,Multiple,Exploitation,yes,no,0,Observational,Life History,Abiotic,0,0,0,0,1,0,0,2,0
-10.3389/fevo.2017.00084,Terrestrial,Birds,Habitat Degredation,yes,no,0,Review,Life History,Abiotic,0,3,1,0,5,3,5,9,0
+10.3354/meps12165,Marine,Multiple,Exploitation,yes,no,0,Observational,Behavioural,Abiotic,0,0,0,0,1,0,0,2,0
+10.3389/fevo.2017.00084,Terrestrial,Birds,Habitat Degredation,yes,no,0,Review,Behavioural,Abiotic,0,3,1,0,5,3,5,9,0
 10.3389/fevo.2018.00219,Multiple,Plants,0,no,no,0,Review,Morphological,Abiotic,0,0,2,0,0,1,3,0,0
-10.3389/fevo.2019.00025,Multiple,Insects,0,no,no,0,Experiment,Morphological,Trophic,0,0,0,1,0,1,1,1,2
+10.3389/fevo.2019.00025,Multiple,Insects,0,no,no,0,Experiment,Life History,Trophic,0,0,0,1,0,1,1,1,2
 10.3389/fmicb.2017.01486,Terrestrial,Other,Habitat Degredation,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
-10.3389/fmicb.2017.01530,Terrestrial,Other,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,2,3,1,1,0
+10.3389/fmicb.2017.01530,Terrestrial,Other,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,2,3,1,1,0
 10.3389/fmicb.2019.00169,Terrestrial,Other,0,no,no,0,Experiment,Life History,Abiotic,0,0,0,0,0,0,0,1,0
-10.3389/fpls.2016.00189,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,2,0,0,0,4,0,0
+10.3389/fpls.2016.00189,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,2,0,0,0,4,0,0
 10.3389/fpls.2016.01224,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,1,0,0,1,2,3,1,0
 10.3390/f7100228,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
 10.3390/f9010019,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,1,3,0,0
 10.3390/f9030122,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,3,0,0,0,2,0,0
 10.3390/f9110722,Terrestrial,Plants,Global Change Multiple,yes,yes,1,QModel,Morphological,Abiotic,0,0,1,0,0,0,3,1,0
-10.3390/insects10040103,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,0,2,0,0,0,0,1,0
+10.3390/insects10040103,Terrestrial,Insects,0,no,no,0,Observational,Life History,Abiotic,0,0,2,0,0,0,0,1,0
 10.3390/math6120336,Marine,Plankton,0,no,no,0,TModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 10.3390/w10020108,Freshwater,Plankton,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,1,0,0,2,0
 10.3390/w11020222,Freshwater,Plankton,0,no,no,0,Experiment,Morphological,Abiotic,0,0,0,0,0,0,7,0,0
 10.3732/ajb.1400437,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,1,0,0,0,5,0,0
-10.5061/dryad.m03vf,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,9,0,0
-10.5194/bg-14-3371-2017,Terrestrial,Plants,0,no,no,0,Review,Morphological,Abiotic,0,0,20,0,0,0,3,1,0
-10.7717/peerj.1241,Terrestrial,Insects,0,no,no,0,Observational,Life History,Abiotic,0,4,0,0,0,2,2,6,0
-10.7717/peerj.1410,Terrestrial,Insects,Global Change Broad,yes,no,0,QModel,Behavioural,Abiotic,1,1,0,0,3,1,1,0,0
-10.7717/peerj.2387,Marine,Fish,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,8,1,0
-10.7717/peerj.2779,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,1,0,0
-10.7717/peerj.3092,Terrestrial,Birds,Invasion,yes,no,0,QModel,Life History,Abiotic,0,1,0,1,5,5,5,3,0
-10.7717/peerj.3552,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Abiotic,0,0,3,2,1,0,3,0,0
-10.7717/peerj.5038,Marine,Other,0,no,no,0,QModel,Morphological,Biotic,0,2,0,2,3,2,2,2,1
+10.5061/dryad.m03vf,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,0,0,0,9,0,0
+10.5194/bg-14-3371-2017,Terrestrial,Plants,0,no,no,0,Review,Physiological,Abiotic,0,0,20,0,0,0,3,1,0
+10.7717/peerj.1241,Terrestrial,Insects,0,no,no,0,Observational,Morphological,Trophic,0,4,0,0,0,2,2,6,0
+10.7717/peerj.1410,Terrestrial,Insects,Global Change Broad,yes,no,0,QModel,Morphological,Abiotic,1,1,0,0,3,1,1,0,0
+10.7717/peerj.2387,Marine,Fish,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,0,8,1,0
+10.7717/peerj.2779,Terrestrial,Insects,0,no,no,0,QModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
+10.7717/peerj.3092,Terrestrial,Birds,Invasion,yes,no,0,QModel,Morphological,Abiotic,0,1,0,1,5,5,5,3,0
+10.7717/peerj.3552,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,3,2,1,0,3,0,0
+10.7717/peerj.5038,Marine,Other,0,no,no,0,QModel,Morphological,Abiotic,0,2,0,2,3,2,2,2,1
 http://dx.doi.org/10.3389/fevo.2018.00081.s001,Multiple,Multiple,0,no,no,0,QModel,Life History,Abiotic,0,0,0,0,0,0,2,1,0
 unknown_1,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Trophic,0,1,1,0,0,0,0,0,0
-unknown_10,Multiple,Multiple,0,no,no,0,Metanalysis,Life History,Abiotic,0,1,0,1,2,3,1,16,0
+unknown_10,Multiple,Multiple,0,no,no,0,QModel,Behavioural,Abiotic,0,1,0,1,2,3,1,16,0
 unknown_11,Multiple,Multiple,0,no,no,0,TModel,Behavioural,Trophic,0,0,0,0,0,0,0,1,0
 unknown_12,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,0,0,1,0,0,0,1,0
-unknown_13,Marine,Multiple,0,no,no,0,Review,Life History,Trophic,0,0,0,0,0,0,2,2,0
-unknown_14,Terrestrial,Plants,Climate Change,yes,no,0,QModel,Life History,Biotic,0,0,0,0,0,2,2,0,0
+unknown_13,Marine,Multiple,0,no,no,0,Review,Morphological,Trophic,0,0,0,0,0,0,2,2,0
+unknown_14,Terrestrial,Plants,Climate Change,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,0,2,2,0,0
 unknown_15,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,2,0,0
 unknown_16,Terrestrial,Mammals,0,no,no,0,Observational,Life History,Abiotic,0,0,0,0,0,1,0,0,0
 unknown_17,Freshwater,Fish,0,no,no,0,QModel,Life History,Abiotic,0,0,0,0,2,8,3,1,0
-unknown_18,Terrestrial,Plants,Global Change Broad,yes,no,0,QModel,Life History,Abiotic,0,0,0,0,3,0,0,1,0
-unknown_19,Freshwater,Herpetofauna,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,1,0,1,1,0
-unknown_2,Multiple,Multiple,Climate Change,yes,no,0,Review,Life History,Dispersal,0,1,0,0,1,1,0,2,0
+unknown_18,Terrestrial,Plants,Global Change Broad,yes,no,0,QModel,Life History,Dispersal,0,0,0,0,3,0,0,1,0
+unknown_19,Freshwater,Herpetofauna,0,no,no,0,QModel,Behavioural,Abiotic,0,0,0,0,1,0,1,1,0
+unknown_2,Multiple,Multiple,Climate Change,yes,no,0,Review,Behavioural,Abiotic,0,1,0,0,1,1,0,2,0
 unknown_20,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,10,0,0
-unknown_21,Marine,Fish,Invasion,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,2,0,0
-unknown_22,Terrestrial,Plants,0,no,no,0,Experiment,Morphological,Biotic,0,0,0,0,0,0,4,0,0
-unknown_23,Freshwater,Other,0,no,no,0,Metanalysis,Morphological,Abiotic,0,3,0,0,1,0,4,0,0
-unknown_24,Terrestrial,Plants,0,no,no,0,Observational,Life History,Biotic,0,0,0,1,0,4,5,0,0
-unknown_25,Terrestrial,Plants,0,no,no,0,QModel,Life History,Biotic,0,1,0,0,0,0,0,2,0
+unknown_21,Marine,Fish,Invasion,yes,no,0,Observational,Morphological,Trophic,0,0,0,0,0,0,2,0,0
+unknown_22,Terrestrial,Plants,0,no,no,0,QModel,Morphological,Abiotic,0,0,0,0,0,0,4,0,0
+unknown_23,Freshwater,Other,0,no,no,0,Metanalysis,Life History,Trophic,0,3,0,0,1,0,4,0,0
+unknown_24,Terrestrial,Plants,0,no,no,0,Observational,Morphological,Biotic,0,0,0,1,0,4,5,0,0
+unknown_25,Terrestrial,Plants,0,no,no,0,Observational,Life History,Abiotic,0,1,0,0,0,0,0,2,0
 unknown_26,Freshwater,Fish,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,1,0,0,0
 unknown_27,Marine,Fish,Invasion,yes,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,1,0,0
 unknown_28,Terrestrial,Insects,0,no,no,0,Observational,Behavioural,Abiotic,0,0,0,1,1,1,0,1,0
-unknown_29,Terrestrial,Plants,Climate Change,yes,no,0,TModel,Physiological,Abiotic,0,0,0,0,0,0,1,2,0
+unknown_29,Terrestrial,Plants,Climate Change,yes,no,0,TModel,Morphological,Abiotic,0,0,0,0,0,0,1,2,0
 unknown_3,Marine,Multiple,0,no,no,0,Observational,Behavioural,Trophic,0,0,0,0,0,0,0,2,0
-unknown_30,Multiple,Plankton,0,no,no,0,Review,Morphological,Trophic,0,1,0,0,1,0,9,6,0
-unknown_31,Freshwater,Fish,0,no,no,0,Observational,Life History,Trophic,0,0,0,2,0,0,1,1,0
+unknown_30,Multiple,Plankton,0,no,no,0,Review,Physiological,Trophic,0,1,0,0,1,0,9,6,0
+unknown_31,Freshwater,Fish,0,no,no,0,QModel,Life History,Trophic,0,0,0,2,0,0,1,1,0
 unknown_32,Terrestrial,Herpetofauna,0,no,no,0,Observational,Morphological,Abiotic,0,0,0,0,0,0,0,1,0
 unknown_4,Multiple,Multiple,0,no,no,0,TModel,Morphological,Trophic,0,0,0,0,0,0,1,0,0
 unknown_5,Terrestrial,Plants,Habitat Degredation,yes,no,0,Observational,Life History,Abiotic,0,1,0,0,0,8,3,0,0
