@@ -131,7 +131,8 @@ additive_sec_traits_fillempty = additive_sec_traits_fillempty %>%
 #option2
 additive_sec_traits_dropempty = additive_levels %>% 
   select(DOI, Secondary_classification) %>% 
-  distinct()
+  distinct() %>% 
+  filter(!is.na(Secondary_classification))
 
 #now perform reshaping to get the dummies 
 orig_traits_multivar = additive_orig_traits %>% 
