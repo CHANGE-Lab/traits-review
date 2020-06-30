@@ -71,7 +71,7 @@ review_sites_mv <- as.data.frame(review_traits_mv[,1:10])
 review_species_mv <- review_traits_mv[,11:ncol(review_traits_mv)] #144 trait columns
 
 #write.csv(review_traits_mv, "review_traits_mv.csv")
-#review_traits_mv <- read_csv("review_traits4.0V.csv")
+#review_traits_mv <- read_csv("review_traits4.0V.scsv")
 
 ```
 
@@ -88,7 +88,7 @@ traits_ord_use <- metaMDS(review_species_use,
                           trymax = 99,
                           k = 3) #increase trymax = 50
 
-plot(traits_ord_use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
+plot(traits_ord_use) #plpots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
 
 ```
 
