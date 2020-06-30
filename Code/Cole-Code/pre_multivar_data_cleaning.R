@@ -15,11 +15,9 @@ library(here)
 `%notin%` = Negate(`%in%`)
 
 primary_traits_abund = read_csv(here('./data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy_abundance.csv'))
+primary_traits_pa = read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy.csv'))
 secondary_traits_abund = read_csv(here('./data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_abundance.csv'))
 secondary_traits_pa = read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_empty_dummy.csv'))
-primary_traits_pa = read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy.csv'))
-test = read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_f_dummy.csv'))
-
 
 #clean up the dataframes and make sure they're formatted properly - start with the abundance ones
 primary_traits_abund_clean = primary_traits_abund %>%
@@ -121,20 +119,3 @@ secondary_traits_pa_clean = secondary_traits_pa %>%
 write_csv(secondary_traits_pa_clean, 
           here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_pa_models.csv'))
 
-
-
-
-
-
-secondary_traits_pa_clean
-sec = secondary_traits_pa
-sec$sums = rowSums(sec[,10:206])
-sec %>% 
-  filter(sums == 0)
-summary(sec$sums)
-
-secondary_traits_pa_clean$sums = rowSums(secondary_traits_pa_clean[,9:204])
-summary(secondary_traits_pa_clean$sums)
-secondary_traits_pa_clean %>% 
-  filter(sums == 0)
-summary(secondary_traits_pa$sums)

@@ -29,25 +29,26 @@ missing_dois = as.character(unique(missing_dois$DOI))
 
 
 ##### here, I'm making a new df that has each trait and each DOI paired so I can pull things based on the DOI and on the traits
-additive = data.frame(DOI = as.character(),
-                      Trait = as.character())
-traits = names(dummy_new)
-pb = txtProgressBar(min = 0, max = nrow(dummy_new), initial = 0) 
-for(i in 1:nrow(dummy_new)) {
-  for(j in 2:ncol(dummy_new)) {
-    if(dummy_new[i,j] != 0) {
-      x = as.character(dummy_new[i,1])
-      y = as.character(traits[j])
-      new = data.frame(DOI = x, Trait = y)
-      additive = rbind(additive,new)
-    } 
-  }
-  setTxtProgressBar(pb,i)
-}
-additive = additive %>% 
-  distinct()
-
-write_csv(additive, here('./Data/Cole-Original-Data/additive.csv'))
+# additive = data.frame(DOI = as.character(),
+#                       Trait = as.character())
+# traits = names(dummy_new)
+# pb = txtProgressBar(min = 0, max = nrow(dummy_new), initial = 0) 
+# for(i in 1:nrow(dummy_new)) {
+#   for(j in 2:ncol(dummy_new)) {
+#     if(dummy_new[i,j] != 0) {
+#       x = as.character(dummy_new[i,1])
+#       y = as.character(traits[j])
+#       new = data.frame(DOI = x, Trait = y)
+#       additive = rbind(additive,new)
+#     } 
+#   }
+#   setTxtProgressBar(pb,i)
+# }
+# additive = additive %>% 
+#   distinct()
+# 
+# write_csv(additive, here('./Data/Cole-Original-Data/additive.csv'))
+additive = read_csv(here('./Data/Cole-Original-Data/additive.csv'))
 
 dummy_new$sums = rowSums(dummy_new[,c(2:ncol(dummy_new))])
 check_add = data.frame(table(additive$DOI)) %>% 
@@ -286,7 +287,7 @@ categorial_data = other_data_TOS_TT_filter
 #original traits
 orig_traits = merge(categorial_data, orig_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
-write.csv(orig_traits, here('./Data/Cole-Output-Data(readyforanalysis)/original_traits_dummy.csv'))
+write_csv(orig_traits, here('./Data/Cole-Output-Data(readyforanalysis)/original_traits_dummy.csv'))
 #primary traits
 prim_traits = merge(categorial_data, prim_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
@@ -317,6 +318,7 @@ additive_prim_traits_abundance = additive_levels %>%
 
 additive_sec_traits_abundance = additive_levels %>% 
   group_by(DOI, Secondary_classification) %>% 
+  filter(!is.na(Secondary_classification)) %>% 
   dplyr::summarize(n = length(Secondary_classification))
 
 #now turn them into the quasi-dummy data
