@@ -21,20 +21,35 @@ library(reshape2)
 library(here)
 
 #subset data into the two groups needed
-review_species_mv <- mvabund(review_species_mv)
 secondary_abundance = read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_abundance_models.csv'))
-secondary_abundance_species = data.frame(secondary_abundance[,11:ncol(primary_abundance)])
+secondary_abundance_species = data.frame(secondary_abundance[,11:ncol(secondary_abundance)])
 secondary_abundance_traits = data.frame(secondary_abundance[,1:10])
 secondary_abundance_mv = mvabund(secondary_abundance_species)
 
-mv_gc <-manyglm(secondary_abundance_mv ~ secondary_abundance_traits$GlobalChangeCat, data= secondary_abundance_traits,
-                family=binomial("cloglog")) #Build model for difference in publication trait assemblages based on assessment of global change factors
-saveRDS(mv_gc, "mv_gc.rds") #Save model
+#figure out what error distribution works
+secondary_check_matrix = as.matrix(secondary_abundance_species)
+hist(secondary_check_matrix)
+hist(secondary_check_matrix[secondary_check_matrix > 0])
+
+#try poisson and neg. binom.
+mv_gc_poisson = manyglm(secondary_abundance_mv ~ 
+                  secondary_abundance_traits$GlobalChangeCat, 
+                data= secondary_abundance_traits,
+                family = 'poisson')
+summary(m_gc_poisson)
+mv_gc_nb = manyglm(secondary_abundance_mv ~ 
+                     secondary_abundance_traits$GlobalChangeCat, 
+                   data= secondary_abundance_traits,
+                   family = 'negative.binomial')
+                #family=binomial("cloglog")) 
+                #Build model for difference in publication trait assemblages based on assessment of global change factors
+saveRDS(mv_gc, here('./Data/Cole-Output-ManyGLM/mv_gc.rds')) #Save model
 
 ##Model check
 plot(mv_gc) #check residual vs. fitted values
-qqnorm(residuals(mv_gc)[which(residuals(mv_gc)<10000)]); abline(c(0,1,col="red")) #check normality and fit
-#model fit looking good!
+qqnorm(residuals(mv_gc)[which(residuals(mv_gc)<10000)])
+#qqnorm(residuals(mv_gc)[which(residuals(mv_gc)<10000)]); abline(c(0,1,col="red")) #check normality and fit
+
 
 ##Model output significance test
 mv_gc.an <- anova.manyglm(mv_gc)
