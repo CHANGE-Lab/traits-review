@@ -28,11 +28,11 @@ secondary_pa_sites = data.frame(secondary_pa[,1:10])
 secondary_pa_species = data.frame(secondary_pa[,11:ncol(secondary_pa)])
 
 #run actual ordination - try with both k = 2 & 3
-secondary_pa_ord_k3 = metaMDS(secondary_pa_species,
-                            distance = 'jaccard',
-                            trymax = 100,
-                            k = 3)
-plot(secondary_pa_ord_k3)
+# secondary_pa_ord_k3 = metaMDS(secondary_pa_species,
+#                             distance = 'jaccard',
+#                             trymax = 100,
+#                             k = 3)
+# plot(secondary_pa_ord_k3)
 secondary_pa_ord_k2 = metaMDS(secondary_pa_species,
                             distance = 'jaccard',
                             trymax = 100,
@@ -41,7 +41,7 @@ plot(secondary_pa_ord_k2)
 
 #extract scores
 secondary_pa_ord_k2_scores = data.frame(scores(secondary_pa_ord_k2))
-secondary_pa_ord_k3_scores = data.frame(scores(secondary_pa_ord_k3))
+#secondary_pa_ord_k3_scores = data.frame(scores(secondary_pa_ord_k3))
 
 
 
