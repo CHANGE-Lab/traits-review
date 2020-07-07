@@ -56,13 +56,14 @@ saveRDS(mv_gc_poisson, here('./Data/Cole-Output-ManyGLM/mv_gc_poisson.rds'))
 #model output significance test
 mv_gc_nb_an = anova.manyglm(mv_gc_nb)
 saveRDS(mv_gc_nb_an, here('./Data/Cole-Output-ManyGLM/mv_gc__nb_anova.rds')) 
+#mv_gc_nb_an = readRDS(here('./Data/Cole-Output-ManyGLM/mv_gc__nb_anova.rds'))
 write_csv(mv_gc_nb_an$table, 
           here('./Data/Cole-Output-ManyGLM/mv_gc_nb_anova_table.csv')) 
 
 #individual adjusted p-values for species/traits - get univariate p-values
 mv_gc_nb_an_uni = anova.manyglm(mv_gc_nb,p.uni="adjusted") 
 saveRDS(mv_gc_nb_an_uni, here('./Data/Cole-Output-ManyGLM/mv_gc_univs.rds')) 
-
+#mv_gc_nb_an_uni = readRDS(here('./Data/Cole-Output-ManyGLM/mv_gc_univs.rds'))
 #Get the direction of effect fof each species with the main effect
 gc_coef = coef(mv_gc_nb)
 
@@ -79,11 +80,10 @@ sum(mv_gc_nb_an$uni.test[2,mv_gc_nb_species$ix[1:25]])*100/
 gc_top = 
   data.frame(dimnames(secondary_abundance_species)[[2]][mv_gc_nb_species$ix[
     1:25]]) #df with the names of the top 20 traits
-
+gc_top = gc_top %>% 
+  rename('traits' = names(gc_top))
 str(gc_top)
-names(gc_top)[names(gc_top) == 
-                "dimnames(secondary_abundance_species)[[2]]
-              [mv_gc_nb_species$ix[1:25]]"] = "traits" #Rename column  of traits
+
 
 #How much deviance explained?
 write_csv(gc_top, here('./Data/Cole-Output-ManyGLM/mv_gc_top.csv')) 
@@ -93,30 +93,42 @@ write_csv(gc_top, here('./Data/Cole-Output-ManyGLM/mv_gc_top.csv'))
 #Create df to combine coef values,  also p-values from univ anovas & the top 20
 gc_coef_l = data.frame(t(gc_coef)) 
 gc_coef_l$traits = rownames(gc_coef_l) #convert rownames to a column
+gc_coef_l = gc_coef_l %>% 
+  rename('coef_intercept' = `X.Intercept.`, 
+         'coef_gc_yes' = names(gc_coef_l)[2])
 
-gc_top_coeffs = merge(gc_top, gc_coef_l) #plyr left joint to obtain coeffs of top 20 traits
+gc_top_coeffs = merge(gc_top, gc_coef_l,
+                      by.x = 'traits',
+                      by.y = 'traits') 
 
 colnames(gc_top_coeffs)
-
-gc_top_coeffs = gc_top_coeffs %>%
-  dplyr::rename(coef_intercept = "(Intercept)", 
-                coef_gc_yes = "secondary_abundance_species$GlobalChangeyes") #Clean up column names
 
 #need to join with test statistic values
 gc_an_test = as.data.frame(t(mv_gc_nb_an_uni$uni.test)) #first transpose coef_filter
 gc_an_test$traits = rownames(gc_an_test) #convert rownames to a column
-gc_top_coeffs = join(gc_top_coeffs, gc_an_test) #join with test statistic (deviance explained)
+
+gc_an_test = gc_an_test %>% 
+  rename('deviance_explained' = names(gc_an_test)[2])
+
+gc_top_coeffs = merge(gc_top_coeffs,
+                      gc_an_test,
+                      by.x = 'traits',
+                      by.y = 'traits')
 gc_top_coeffs = gc_top_coeffs %>%
-  select(-"(Intercept)") %>%
-  dplyr::rename(deviance_explained = 
-                  "secondary_abundance_species$GlobalChange") #Clean up column names
+  select(-"(Intercept)")
 
 #need to join with p-values
-gc_an_pvalue = as.data.frame(t(mv_gc_nb_an_uni$uni.p)) #first transpose coef_filter
+gc_an_pvalue = data.frame(t(mv_gc_nb_an_uni$uni.p)) #first transpose coef_filter
 gc_an_pvalue$traits = rownames(gc_an_pvalue) #convert rownames to a column
-gc_top_coeffs = join(gc_top_coeffs, gc_an_pvalue) #join with test statistic (deviance explained)
-gc_top_coeffs = gc_top_coeffs %>%
-  select(-"(Intercept)") %>%
-  dplyr::rename(p_value = "secondary_abundance_species$GlobalChange") #Clean up column names
+
+gc_an_pvalue = gc_an_pvalue %>% 
+  select(-names(gc_an_pvalue)[1]) 
+gc_an_pvalue = gc_an_pvalue%>% 
+  rename('p_value' = names(gc_an_pvalue)[1])
+
+gc_top_coeffs = merge(gc_top_coeffs, 
+                     gc_an_pvalue,
+                     by.x = 'traits',
+                     by.y = 'traits') 
 
 write_csv(gc_top_coeffs, here('./Data/Cole-Output-ManyGLM/gc_top_coefs.csv'))
