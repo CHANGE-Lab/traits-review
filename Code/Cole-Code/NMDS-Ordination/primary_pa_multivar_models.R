@@ -31,7 +31,7 @@ primary_pa_species = data.frame(primary_pa[,11:ncol(primary_pa)])
 primary_pa_ord_k2 = metaMDS(primary_pa_species,
                          distance = 'jaccard',
                          trymax = 1000,
-                         k = 3)
+                         k = 4)
 plot(primary_pa_ord_k3)
 # primary_pa_ord_k2 = metaMDS(primary_pa_species,
 #                             distance = 'jaccard',

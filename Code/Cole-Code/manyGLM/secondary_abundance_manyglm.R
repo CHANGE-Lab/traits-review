@@ -22,8 +22,7 @@ library(here)
 
 #subset data into the two groups needed
 secondary_abundance = 
-  read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/
-                secondary_traits_dummy_abundance_models.csv'))
+  read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_abundance_models.csv'))
 secondary_abundance_species = 
   data.frame(secondary_abundance[,11:ncol(secondary_abundance)])
 secondary_abundance_traits = data.frame(secondary_abundance[,1:10])
@@ -75,7 +74,7 @@ mv_gc_nb_species$ix[1:25] #the column numbers of the top  impacted spp/traits
 
 #Need > 50% deviance explainaed --> result = 25 traits explain > 50% deviance
 sum(mv_gc_nb_an$uni.test[2,mv_gc_nb_species$ix[1:25]])*100/
-  sum(mv_gc_nb_an$uni.test[2,]) #25 species explained = 51.93049% Deviance
+  sum(mv_gc_nb_an$uni.test[2,]) #25 species explained = 53.65588% Deviance
 
 gc_top = 
   data.frame(dimnames(secondary_abundance_species)[[2]][mv_gc_nb_species$ix[
@@ -92,10 +91,10 @@ write_csv(gc_top, here('./Data/Cole-Output-ManyGLM/mv_gc_top.csv'))
 #Now combine traits with their coeffs and p-values
 
 #Create df to combine coef values,  also p-values from univ anovas & the top 20
-gc_coef_l = as.data.frame(t(gc_coef)) #first transpose coef_filter
+gc_coef_l = data.frame(t(gc_coef)) 
 gc_coef_l$traits = rownames(gc_coef_l) #convert rownames to a column
 
-gc_top_coeffs = join(gc_top, gc_coef_l) #plyr left joint to obtain coeffs of top 20 traits
+gc_top_coeffs = merge(gc_top, gc_coef_l) #plyr left joint to obtain coeffs of top 20 traits
 
 colnames(gc_top_coeffs)
 
