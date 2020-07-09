@@ -35,15 +35,6 @@ primary_pa_ord_k4 = metaMDS(primary_pa_species,
 saveRDS(primary_pa_ord_k4, 
         here('./Data/Cole-nMDS-Intermediate/primary_pa_ord.rds'))
 plot(primary_pa_ord_k4)
-# primary_pa_ord_k2 = metaMDS(primary_pa_species,
-#                             distance = 'jaccard',
-#                             trymax = 100,
-#                             k = 2)
-# plot(primary_pa_ord_k2)
-
-#extract scores
-#primary_pa_ord_k2_scores = data.frame(scores(primary_pa_ord_k2))
-#primary_pa_ord_k2_scores = data.frame(scores(primary_pa_ord_k2))
 
 ############################## Plotting pipeline ###############################
 
