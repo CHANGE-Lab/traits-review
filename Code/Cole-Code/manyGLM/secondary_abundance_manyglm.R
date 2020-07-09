@@ -136,7 +136,7 @@ write_csv(gc_top_coeffs, here('./Data/Cole-Output-ManyGLM/gc_top_coefs.csv'))
 #See how many papers actually have those traits
 papers_with_top_25_gc = secondary_abundance_species
 top_25_gc = gc_top$traits
-papers_with_top_25_gc = papers_with_top_25_gc[top_25_gc]
+papers_with_top_25_gc = papers_with_top_25_gc[top_25_gcggg]
 
 rownames(papers_with_top_25_gc) = secondary_abundance_traits$DOI
 papers_with_top_25_gc = papers_with_top_25_gc[rowSums(papers_with_top_25_gc[, -1])>0, ]

@@ -40,7 +40,7 @@ set.seed(00001)
 
 primary_abundance_ord_iso = metaMDS(primary_abundance_species,
                                      #distance = 'bray',
-                                     trymax = 100,
+                                     trymax = 1000,
                                     k = 3)
 # plot(primary_abundance_ord_k3)
 # summary(primary_abundance_ord_k3)
