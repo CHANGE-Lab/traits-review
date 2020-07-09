@@ -245,7 +245,8 @@ primary_pa_eco_plot <- ggplot() +
                       y = NMDS2,
                       label = species),
                   alpha = 0.8,
-                  size = 5)
+                  size = 3,
+             position = position_jitter(width = 0, height = 0.1, seed = 7))
 ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_eco_small.png'), 
        plot = primary_pa_eco_plot, 
        width = 8, height = 8, dpi = 200)
@@ -283,7 +284,8 @@ primary_pa_tax_plot <- ggplot() +
                  y = NMDS2,
                  label = species),
              alpha = 0.8,
-             size = 5)
+             size = 3,
+             position = position_jitter(width = 0, height = 0.1, seed = 7))
 ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_tax_small.png'), 
        plot = primary_pa_tax_plot, 
        width = 8, height = 8, dpi = 200)
@@ -321,14 +323,53 @@ primary_pa_tos_plot <- ggplot() +
                  y = NMDS2,
                  label = species),
              alpha = 0.8,
-             size = 5)
-ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_tax_small.png'), 
-       plot = primary_pa_tax_plot, 
+             size = 3,
+             position = position_jitter(width = 0, height = 0.1, seed = 7))
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_tos_small.png'), 
+       plot = primary_pa_tos_plot, 
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_tax_large.png'), 
-       plot = primary_pa_tax_plot, 
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_tos_large.png'), 
+       plot = primary_pa_tos_plot, 
        width = 8, height = 8, dpi = 1200)
+
 #filter
+primary_pa_fil_plot <- ggplot() + 
+  geom_polygon(data=hull_pa_fil, 
+               aes(x=NMDS1,y=NMDS2, 
+                   fill=Filter, 
+                   group=Filter),alpha=0.30) + 
+  geom_point(data=primary_pa_scores, 
+             aes(x=NMDS1,y=NMDS2, colour = Filter), size=2) + 
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  
+        axis.text.y = element_blank(), 
+        axis.ticks = element_blank(),  
+        axis.title.x = element_text(size=18), 
+        axis.title.y = element_text(size=18), 
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "white"), 
+        panel.grid.major = element_blank(),  
+        panel.grid.minor = element_blank(), 
+        plot.background = element_blank()) +
+  scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2, 
+                     name = "Filter") +
+  scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2, 
+                       name = "Filter")+
+  geom_label(data = primary_pa_trait_scores,
+             aes(x =  NMDS1,
+                 y = NMDS2,
+                 label = species),
+             alpha = 0.8,
+             size = 3,
+             position = position_jitter(width = 0, height = 0.1, seed = 7))
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_fil_small.png'), 
+       plot = primary_pa_fil_plot, 
+       width = 8, height = 8, dpi = 200)
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_fil_large.png'), 
+       plot = primary_pa_fil_plot, 
+       width = 8, height = 8, dpi = 1200)
 
 #global change
 primary_pa_gc_plot <- ggplot() + 
@@ -352,9 +393,16 @@ primary_pa_gc_plot <- ggplot() +
         panel.grid.minor = element_blank(), 
         plot.background = element_blank()) +
   scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2, 
-                     name = "Global Change Assessed") +
+                     name = "Global Change Driver") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2, 
-                       name = "Global Change Assessed")
+                       name = "Global Change Driver")+
+  geom_label(data = primary_pa_trait_scores,
+             aes(x =  NMDS1,
+                 y = NMDS2,
+                 label = species),
+             alpha = 0.8,
+             size = 3,
+             position = position_jitter(width = 0, height = 0.1, seed = 7))
 ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_gc_small.png'), 
        plot = primary_pa_gc_plot, 
        width = 8, height = 8, dpi = 200)
@@ -363,7 +411,43 @@ ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_gc_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #predictive
-
+primary_pa_pred_plot <- ggplot() + 
+  geom_polygon(data=hull_pa_pred, 
+               aes(x=NMDS1,y=NMDS2, 
+                   fill=PredictiveCat, 
+                   group=PredictiveCat), alpha=0.30) + 
+  geom_point(data=primary_pa_scores, 
+             aes(x=NMDS1,y=NMDS2, colour = PredictiveCat), size=2) + 
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  
+        axis.text.y = element_blank(), 
+        axis.ticks = element_blank(),  
+        axis.title.x = element_text(size=18), 
+        axis.title.y = element_text(size=18), 
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "white"), 
+        panel.grid.major = element_blank(),  
+        panel.grid.minor = element_blank(), 
+        plot.background = element_blank()) +
+  scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2, 
+                     name = "Predictive") +
+  scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2, 
+                       name = "Predictive")+
+  geom_label(data = primary_pa_trait_scores,
+             aes(x =  NMDS1,
+                 y = NMDS2,
+                 label = species),
+             alpha = 0.8,
+             size = 3,
+             position = position_jitter(width = 0, height = 0.1, seed = 7))
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_pred_small.png'), 
+       plot = primary_pa_pred_plot, 
+       width = 8, height = 9, dpi = 200)
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_pred_large.png'), 
+       plot = primary_pa_pred_plot, 
+       width = 8, height = 9, dpi = 1200)
 
 
 
