@@ -51,6 +51,12 @@ plot(primary_pa_ord_k4)
 primary_pa_k4_scores <- data.frame(scores(primary_pa_ord_k4)) 
 primary_pa_k4_scores$points <- rownames(primary_pa_k4_scores) 
 primary_pa_scores = cbind(primary_pa_sites, primary_pa_k4_scores)
+
+#add species
+primary_pa_trait_scores = data.frame(scores(primary_pa_ord_k4, 'species'))
+primary_pa_trait_scores$species = rownames(primary_pa_trait_scores)
+primary_pa_trait_scores$species[6] = 'life history'
+primary_pa_trait_scores$species[8] = 'resource acquisition'
 str(primary_pa_scores)
 
 ########### Get Hulls
@@ -108,9 +114,9 @@ hull_pa_taxonomic = rbind(grp_pa_tax_Birds, grp_pa_tax_Insects,
 primary_pa_scores = primary_pa_scores %>% 
   mutate(TaxonomicGroup = 
            ifelse(primary_pa_scores$Taxonomic %in% 
-                    c('Mammals', 'Birds', 'Herpetofauna', 'Fish'), 'Vertebrate', 
+                    c('Mammals', 'Birds', 'Herpetofauna', 'Fish'), 'Vertebrates', 
            ifelse(primary_pa_scores$Taxonomic %in%
-                    c('Insects', 'Plankton'), 'Invertebrate', 
+                    c('Insects', 'Plankton'), 'Invertebrates', 
            ifelse(primary_pa_scores$Taxonomic == 'Other', 'Other',
            ifelse(primary_pa_scores$Taxonomic == 'Multiple', 'Multiple',
            ifelse(primary_pa_scores$Taxonomic == 'Plants', 'Plants', NA))))))
@@ -126,11 +132,11 @@ for(i in 1:length(tax_group)) {
   ]), ]
   assign(paste0('grp_pa_taxgroup_',temp), df)
 }
-hull_pa_taxonomic_group = rbind(grp_pa_taxgroup_Invertebrate, 
+hull_pa_taxonomic_group = rbind(grp_pa_taxgroup_Invertebrates, 
                                 grp_pa_taxgroup_Multiple,
                                 grp_pa_taxgroup_Other, 
                                 grp_pa_taxgroup_Plants,
-                                grp_pa_taxgroup_Vertebrate)
+                                grp_pa_taxgroup_Vertebrates)
 
 #TOS
 levels(primary_pa_scores$TOS)[levels(primary_pa_scores$TOS)==
@@ -207,7 +213,156 @@ for(i in 1:length(pred)) {
 }
 hull_pa_pred = rbind(grp_pa_pred_no, grp_pa_pred_yes)
 
+########### Make Plots
 
+#ecosystem
+primary_pa_eco_plot <- ggplot() + 
+  geom_polygon(data=hull_pa_ecosystem, 
+               aes(x=NMDS1,y=NMDS2, 
+                   fill=Ecosystem, 
+                   group=Ecosystem),alpha=0.30) + 
+  geom_point(data=primary_pa_scores, 
+             aes(x=NMDS1,y=NMDS2, colour = Ecosystem), size=2) + 
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  
+        axis.text.y = element_blank(), 
+        axis.ticks = element_blank(),  
+        axis.title.x = element_text(size=18), 
+        axis.title.y = element_text(size=18), 
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "white"), 
+        panel.grid.major = element_blank(),  
+        panel.grid.minor = element_blank(), 
+        plot.background = element_blank()) +
+  scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2, 
+                     name = "Ecosystem") +
+  scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2, 
+                       name = "Ecosystem") +
+  geom_label(data = primary_pa_trait_scores,
+                  aes(x =  NMDS1,
+                      y = NMDS2,
+                      label = species),
+                  alpha = 0.8,
+                  size = 5)
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_eco_small.png'), 
+       plot = primary_pa_eco_plot, 
+       width = 8, height = 8, dpi = 200)
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_eco_large.png'), 
+       plot = primary_pa_eco_plot, 
+       width = 8, height = 8, dpi = 1200)
+
+#tax group
+primary_pa_tax_plot <- ggplot() + 
+  geom_polygon(data=hull_pa_taxonomic_group, 
+               aes(x=NMDS1,y=NMDS2, 
+                   fill=TaxonomicGroup, 
+                   group=TaxonomicGroup),alpha=0.30) + 
+  geom_point(data=primary_pa_scores, 
+             aes(x=NMDS1,y=NMDS2, colour = TaxonomicGroup), size=2) + 
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  
+        axis.text.y = element_blank(), 
+        axis.ticks = element_blank(),  
+        axis.title.x = element_text(size=18), 
+        axis.title.y = element_text(size=18), 
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "white"), 
+        panel.grid.major = element_blank(),  
+        panel.grid.minor = element_blank(), 
+        plot.background = element_blank()) +
+  scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2, 
+                     name = "Taxa") +
+  scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2, 
+                       name = "Taxa")+
+  geom_label(data = primary_pa_trait_scores,
+             aes(x =  NMDS1,
+                 y = NMDS2,
+                 label = species),
+             alpha = 0.8,
+             size = 5)
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_tax_small.png'), 
+       plot = primary_pa_tax_plot, 
+       width = 8, height = 8, dpi = 200)
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_tax_large.png'), 
+       plot = primary_pa_tax_plot, 
+       width = 8, height = 8, dpi = 1200)
+
+#TOS
+primary_pa_tos_plot <- ggplot() + 
+  geom_polygon(data=hull_pa_tos, 
+               aes(x=NMDS1,y=NMDS2, 
+                   fill=TOS, 
+                   group=TOS),alpha=0.30) + 
+  geom_point(data=primary_pa_scores, 
+             aes(x=NMDS1,y=NMDS2, colour = TOS), size=2) + 
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  
+        axis.text.y = element_blank(), 
+        axis.ticks = element_blank(),  
+        axis.title.x = element_text(size=18), 
+        axis.title.y = element_text(size=18), 
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "white"), 
+        panel.grid.major = element_blank(),  
+        panel.grid.minor = element_blank(), 
+        plot.background = element_blank()) +
+  scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2, 
+                     name = "Study Type") +
+  scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2, 
+                       name = "Study Type")+
+  geom_label(data = primary_pa_trait_scores,
+             aes(x =  NMDS1,
+                 y = NMDS2,
+                 label = species),
+             alpha = 0.8,
+             size = 5)
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_tax_small.png'), 
+       plot = primary_pa_tax_plot, 
+       width = 8, height = 8, dpi = 200)
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_tax_large.png'), 
+       plot = primary_pa_tax_plot, 
+       width = 8, height = 8, dpi = 1200)
+#filter
+
+#global change
+primary_pa_gc_plot <- ggplot() + 
+  geom_polygon(data=hull_pa_gc, 
+               aes(x=NMDS1,y=NMDS2, 
+                   fill=GlobalChange, 
+                   group=GlobalChange), alpha=0.30) + 
+  geom_point(data=primary_pa_scores, 
+             aes(x=NMDS1,y=NMDS2, colour = GlobalChange), size=2) + 
+  coord_equal() +
+  theme_bw()  +
+  theme(axis.text.x = element_blank(),  
+        axis.text.y = element_blank(), 
+        axis.ticks = element_blank(),  
+        axis.title.x = element_text(size=18), 
+        axis.title.y = element_text(size=18), 
+        legend.title = element_text(size = 18),
+        legend.text = element_text(size = 18),
+        panel.background = element_rect(fill = "white"), 
+        panel.grid.major = element_blank(),  
+        panel.grid.minor = element_blank(), 
+        plot.background = element_blank()) +
+  scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2, 
+                     name = "Global Change Assessed") +
+  scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2, 
+                       name = "Global Change Assessed")
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_gc_small.png'), 
+       plot = primary_pa_gc_plot, 
+       width = 8, height = 8, dpi = 200)
+ggsave(here('./Output-Figs/Cole-nMDS/primary_pa_plot_gc_large.png'), 
+       plot = primary_pa_gc_plot, 
+       width = 8, height = 8, dpi = 1200)
+
+#predictive
 
 
 

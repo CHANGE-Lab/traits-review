@@ -381,7 +381,7 @@ trait_nMDS_ecos <- ggplot() +
         axis.text.y = element_blank(), # remove y-axis text
         axis.ticks = element_blank(),  # remove axis ticks
         axis.title.x = element_text(size=18), # remove x-axis labels
-        axis.title.y = element_text(size=18), # remove y-axis labels
+        axis.title.y = element_text(si'ze=18), # remove y-axis labels
         legend.title = element_text(size = 18),
         legend.text = element_text(size = 18),
         panel.background = element_rect(fill = "lightgrey"), 
