@@ -65,6 +65,10 @@ primary_pa_scores$TOS =
   as.factor(primary_pa_scores$TOS)
 primary_pa_scores$Filter = 
   as.factor(primary_pa_scores$Filter)
+primary_pa_scores$GlobalChange = 
+  as.factor(primary_pa_scores$GlobalChange)
+primary_pa_scores$PredictiveCat = 
+  as.factor(primary_pa_scores$PredictiveCat)
 
 #ecosystem
 eco = as.character(unique(primary_pa_scores$Ecosystem))
@@ -100,7 +104,6 @@ hull_pa_taxonomic = rbind(grp_pa_tax_Birds, grp_pa_tax_Insects,
                           grp_pa_tax_Fish)
 
 #taxonomic group
-
 #first make new classifications 
 primary_pa_scores = primary_pa_scores %>% 
   mutate(TaxonomicGroup = 
@@ -149,7 +152,7 @@ hull_pa_tos = rbind(grp_pa_tos_Observational, grp_pa_tos_Experiment,
                           grp_pa_tos_Metanalysis, grp_pa_tos_Theory, 
                           grp_pa_tos_Review)
 
-#TOS
+#Filter
 levels(primary_pa_scores$Filter)[levels(primary_pa_scores$Filter)==
                                   "Fundamental"] <- "Abiotic"
 levels(primary_pa_scores$Filter)[levels(primary_pa_scores$Filter)==
@@ -170,6 +173,39 @@ for(i in 1:length(fil)) {
 hull_pa_fil = rbind(grp_pa_fil_Abiotic, grp_pa_fil_Biotic,
                     grp_pa_fil_Dispersal, grp_pa_fil_Trophic)
 
+#global change category
+levels(primary_pa_scores$GlobalChange)[levels(primary_pa_scores$GlobalChange)==
+                                   0] <- "Not Assessed"
+gc = as.character(unique(primary_pa_scores$GlobalChange))
+for(i in 1:length(gc)) {
+  temp = gc[i]
+  df = primary_pa_scores[
+    primary_pa_scores$GlobalChange == temp, 
+  ][chull(primary_pa_scores[
+    primary_pa_scores$GlobalChange == temp,
+    c("NMDS1", "NMDS2")
+  ]), ]
+  assign(paste0('grp_pa_gc_',temp), df)
+}
+hull_pa_gc = rbind(`grp_pa_gc_Climate Change`, grp_pa_gc_Exploitation,
+                    `grp_pa_gc_Global Change Broad`, 
+                    `grp_pa_gc_Global Change Multiple`,
+                    `grp_pa_gc_Habitat Degredation`, grp_pa_gc_Invasion,
+                    `grp_pa_gc_Not Assessed`)
+
+#predictive category
+pred = as.character(unique(primary_pa_scores$PredictiveCat))
+for(i in 1:length(pred)) {
+  temp = pred[i]
+  df = primary_pa_scores[
+    primary_pa_scores$PredictiveCat == temp, 
+  ][chull(primary_pa_scores[
+    primary_pa_scores$PredictiveCat == temp,
+    c("NMDS1", "NMDS2")
+  ]), ]
+  assign(paste0('grp_pa_pred_',temp), df)
+}
+hull_pa_pred = rbind(grp_pa_pred_no, grp_pa_pred_yes)
 
 
 
