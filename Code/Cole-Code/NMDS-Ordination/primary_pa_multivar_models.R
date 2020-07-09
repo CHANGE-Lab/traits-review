@@ -61,6 +61,10 @@ primary_pa_scores$GlobalChangeCat =
   as.factor(primary_pa_scores$GlobalChangeCat)
 primary_pa_scores$Taxonomic = 
   as.factor(primary_pa_scores$Taxonomic)
+primary_pa_scores$TOS = 
+  as.factor(primary_pa_scores$TOS)
+primary_pa_scores$Filter = 
+  as.factor(primary_pa_scores$Filter)
 
 #ecosystem
 eco = as.character(unique(primary_pa_scores$Ecosystem))
@@ -72,10 +76,10 @@ for(i in 1:length(eco)) {
     primary_pa_scores$Ecosystem == temp,
     c("NMDS1", "NMDS2")
   ]), ]
-  assign(paste0('grp_eco_',temp), df)
+  assign(paste0('grp_pa_eco_',temp), df)
 }
-hull_ecosystem = rbind(grp_eco_Terrestrial, grp_eco_Freshwater, 
-                       grp_eco_Marine, grp_eco_Multiple)
+hull_pa_ecosystem = rbind(grp_pa_eco_Terrestrial, grp_pa_eco_Freshwater, 
+                       grp_pa_eco_Marine, grp_pa_eco_Multiple)
 
 #taxonomic
 tax = as.character(unique(primary_pa_scores$Taxonomic))
@@ -87,71 +91,85 @@ for(i in 1:length(tax)) {
     primary_pa_scores$Taxonomic == temp,
     c("NMDS1", "NMDS2")
   ]), ]
-  assign(paste0('grp_tax_',temp), df)
+  assign(paste0('grp_pa_tax_',temp), df)
 }
-hull_taxonomic = rbind(grp_tax_Birds, grp_tax_Insects, grp_tax_Mammals, 
-                       grp_tax_Multiple, grp_tax_Herpetofauna, grp_tax_Plants,
-                       grp_tax_Plankton, grp_tax_Other, grp_tax_Fish)
+hull_pa_taxonomic = rbind(grp_pa_tax_Birds, grp_pa_tax_Insects, 
+                          grp_pa_tax_Mammals, grp_pa_tax_Multiple, 
+                          grp_pa_tax_Herpetofauna, grp_pa_tax_Plants,
+                          grp_pa_tax_Plankton, grp_pa_tax_Other, 
+                          grp_pa_tax_Fish)
 
 #taxonomic group
 
 #first make new classifications 
-
-
-tax = as.character(unique(primary_pa_scores$Taxonomic))
-for(i in 1:length(tax)) {
-  temp = tax[i]
+primary_pa_scores = primary_pa_scores %>% 
+  mutate(TaxonomicGroup = 
+           ifelse(primary_pa_scores$Taxonomic %in% 
+                    c('Mammals', 'Birds', 'Herpetofauna', 'Fish'), 'Vertebrate', 
+           ifelse(primary_pa_scores$Taxonomic %in%
+                    c('Insects', 'Plankton'), 'Invertebrate', 
+           ifelse(primary_pa_scores$Taxonomic == 'Other', 'Other',
+           ifelse(primary_pa_scores$Taxonomic == 'Multiple', 'Multiple',
+           ifelse(primary_pa_scores$Taxonomic == 'Plants', 'Plants', NA))))))
+#now put them in the normal loop
+tax_group = as.character(unique(primary_pa_scores$TaxonomicGroup))
+for(i in 1:length(tax_group)) {
+  temp = tax_group[i]
   df = primary_pa_scores[
-    primary_pa_scores$Taxonomic == temp, 
+    primary_pa_scores$TaxonomicGroup == temp, 
   ][chull(primary_pa_scores[
-    primary_pa_scores$Taxonomic == temp,
+    primary_pa_scores$TaxonomicGroup == temp,
     c("NMDS1", "NMDS2")
   ]), ]
-  assign(paste0('grp_tax_',temp), df)
+  assign(paste0('grp_pa_taxgroup_',temp), df)
 }
-hull_taxonomic = rbind(grp_tax_Birds, grp_tax_Insects, grp_tax_Mammals, 
-                       grp_tax_Multiple, grp_tax_Herpetofauna, grp_tax_Plants,
-                       grp_tax_Plankton, grp_tax_Other, grp_tax_Fish)
+hull_pa_taxonomic_group = rbind(grp_pa_taxgroup_Invertebrate, 
+                                grp_pa_taxgroup_Multiple,
+                                grp_pa_taxgroup_Other, 
+                                grp_pa_taxgroup_Plants,
+                                grp_pa_taxgroup_Vertebrate)
 
+#TOS
+levels(primary_pa_scores$TOS)[levels(primary_pa_scores$TOS)==
+                                'TModel']='Theory'
+levels(primary_pa_scores$TOS)[levels(primary_pa_scores$TOS)==
+                                'QModel']='Observational'
+tos = as.character(unique(primary_pa_scores$TOS))
+for(i in 1:length(tos)) {
+  temp = tos[i]
+  df = primary_pa_scores[
+    primary_pa_scores$TOS == temp, 
+  ][chull(primary_pa_scores[
+    primary_pa_scores$TOS == temp,
+    c("NMDS1", "NMDS2")
+  ]), ]
+  assign(paste0('grp_pa_tos_',temp), df)
+}
+hull_pa_tos = rbind(grp_pa_tos_Observational, grp_pa_tos_Experiment, 
+                          grp_pa_tos_Metanalysis, grp_pa_tos_Theory, 
+                          grp_pa_tos_Review)
 
+#TOS
+levels(primary_pa_scores$Filter)[levels(primary_pa_scores$Filter)==
+                                  "Fundamental"] <- "Abiotic"
+levels(primary_pa_scores$Filter)[levels(primary_pa_scores$Filter)==
+                                  "Physical"] <- "Dispersal"
+levels(primary_pa_scores$Filter)[levels(primary_pa_scores$Filter)==
+                                  "Ecological"] <- "Biotic"
+fil = as.character(unique(primary_pa_scores$Filter))
+for(i in 1:length(fil)) {
+  temp = fil[i]
+  df = primary_pa_scores[
+    primary_pa_scores$Filter == temp, 
+  ][chull(primary_pa_scores[
+    primary_pa_scores$Filter == temp,
+    c("NMDS1", "NMDS2")
+  ]), ]
+  assign(paste0('grp_pa_fil_',temp), df)
+}
+hull_pa_fil = rbind(grp_pa_fil_Abiotic, grp_pa_fil_Biotic,
+                    grp_pa_fil_Dispersal, grp_pa_fil_Trophic)
 
-
-
-
-
-#Terrestrial
-grp_terrest <- 
-  primary_pa_k4_treat_scores[
-    primary_pa_k4_treat_scores$Ecosystem
-    == "Terrestrial", 
-    ][chull(primary_pa_k4_treat_scores[primary_pa_k4_treat_scores$Ecosystem == 
-                                         "Terrestrial",
-                                       c("NMDS1", "NMDS2")]), ] 
-#Freshwater
-grp_fresh <- 
-  primary_pa_k4_treat_scores[
-    primary_pa_k4_treat_scores$Ecosystem
-    == "Freshwater", 
-  ][chull(primary_pa_k4_treat_scores[primary_pa_k4_treat_scores$Ecosystem == 
-                                       "Freshwater",
-                                     c("NMDS1", "NMDS2")]), ]
-#Marine
-grp_marine <- 
-  primary_pa_k4_treat_scores[
-    primary_pa_k4_treat_scores$Ecosystem
-    == "Marine", 
-  ][chull(primary_pa_k4_treat_scores[primary_pa_k4_treat_scores$Ecosystem == 
-                                       "Marine",
-                                     c("NMDS1", "NMDS2")]), ]
-#Marine
-grp_multiple <- 
-  primary_pa_k4_treat_scores[
-    primary_pa_k4_treat_scores$Ecosystem
-    == "Multiple", 
-  ][chull(primary_pa_k4_treat_scores[primary_pa_k4_treat_scores$Ecosystem == 
-                                       "Multiple",
-                                     c("NMDS1", "NMDS2")]), ]
-hull_ecosystem = rbind(grp_t, grp_fresh, grp_marine, grp_multiple)
 
 
 
