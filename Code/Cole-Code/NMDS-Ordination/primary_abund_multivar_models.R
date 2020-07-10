@@ -34,7 +34,9 @@ primary_abundance_ord_iso = metaMDS(primary_abundance_species,
                                      #distance = 'bray',
                                      trymax = 1000,
                                     k = 3)
-saveRDS(primary_abundance_ord_iso, "primary_abundance_ord_iso.rds")
+
+
+#saveRDS(primary_abundance_ord_iso, "primary_abundance_ord_iso.rds")
 
 ############################## Plotting pipeline ###############################
 
@@ -456,6 +458,10 @@ review_nMDS_primary_abun6 = plot_grid(primary_ab_gc_plot, primary_ab_fil_plot, p
 ggsave("review_nMDS_primary_abun6.jpeg", 
        plot = review_nMDS_primary_abun6,
        width = 15, height = 12, dpi = 1200)
+
+ggsave(here('./Output-Figs/Cole-nMDS/review_nMDS_primary_abun6.jpeg'), 
+       plot = review_nMDS_primary_abun6, 
+       width = 8, height = 9, dpi = 200)
 
 #Alternative panel arrangements
 #All 4 panels, grey background
