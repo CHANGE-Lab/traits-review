@@ -34,6 +34,7 @@ primary_abundance_ord_iso = metaMDS(primary_abundance_species,
                                      #distance = 'bray',
                                      trymax = 1000,
                                     k = 3)
+saveRDS(primary_abundance_ord_iso, "primary_abundance_ord_iso.rds")
 
 ############################## Plotting pipeline ###############################
 
