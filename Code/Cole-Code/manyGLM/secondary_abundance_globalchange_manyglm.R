@@ -6,7 +6,7 @@
 ##########
 ##########
 # AUTHOR: Cole B. Brookson
-# DATE OF CREATION: 2020-07-03•
+# DATE OF CREATION: 2020-07-03
 ##########
 ##########
 
