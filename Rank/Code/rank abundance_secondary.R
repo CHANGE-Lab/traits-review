@@ -263,6 +263,46 @@ rankabunplot(modstax[[4]],scale='logabun', addit=FALSE, specnames=c(1,2,3,4,5), 
 
 
 
+########### 6. Ecosystem ####################
+
+### A. Create summary of rank abundance for each ecosystem: 
+modsgc <- with(enviro_second, lapply(levels(Ecosystem), function(lev)
+  rankabundance(traits_second, enviro_second, 'Ecosystem', lev)))
+
+
+### B. View level order (for adding plot titles below):
+levels(enviro_second$Ecosystem)
+#1 = Freshwater
+#2 = Marine
+#3 = Multiple
+#4 = Terrestrial
+
+
+### C. Create plots for desired metrics of rank abundance for the levels of the variable 
+
+##### Rank metric: proportion- Arrange in 2 x 2 grid #####
+
+par(mfrow = c(2,2))
+
+rankabunplot(modsgc[[1]],scale='proportion', addit=FALSE, specnames=c(1,2,3,4,5), col = "red", main = "Freshwater", ylim = c(0, 13))
+rankabunplot(modsgc[[2]],scale='proportion', addit=FALSE, specnames=c(1,2,3,4,5), col = "darkred", main = "Marine", ylim = c(0, 13))
+rankabunplot(modsgc[[3]],scale='proportion', addit=FALSE, specnames=c(1,2,3,4,5), col = "purple", main = "Multiple", ylim = c(0, 13))
+rankabunplot(modsgc[[4]],scale='proportion', addit=FALSE, specnames=c(1,2,3,4,5), col = "magenta", main = "Terrestrial", ylim = c(0, 13))
+
+
+##### Rank metric: log abundance- Arrange in 2 x 2 grid #####
+
+par(mfrow = c(2,2))
+
+rankabunplot(modsgc[[1]],scale='logabun', addit=FALSE, specnames=c(1,2,3,4,5), col = "red", main = "Freshwater")#, ylim = c(0, 13))
+rankabunplot(modsgc[[2]],scale='logabun', addit=FALSE, specnames=c(1,2,3,4,5), col = "darkred", main = "Marine")#, ylim = c(0, 13))
+rankabunplot(modsgc[[3]],scale='logabun', addit=FALSE, specnames=c(1,2,3,4,5), col = "purple", main = "Multiple")#, ylim = c(0, 13))
+rankabunplot(modsgc[[4]],scale='logabun', addit=FALSE, specnames=c(1,2,3,4,5), col = "magenta", main = "Terrestrial")#, ylim = c(0, 13))
+
+
+
+
+
 
 
 
