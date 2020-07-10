@@ -457,11 +457,11 @@ review_nMDS_primary_abun6 = plot_grid(primary_ab_gc_plot, primary_ab_fil_plot, p
                                       label_x = 0.12, vjust = 3.5, ncol = 2, rel_widths = c(1, 1), align = "v")
 ggsave("review_nMDS_primary_abun6.jpeg", 
        plot = review_nMDS_primary_abun6,
-       width = 15, height = 12, dpi = 1200)
+       width = 15, height = 12, dpi = 300)
 
-ggsave(here('./Output-Figs/Cole-nMDS/review_nMDS_primary_abun6.jpeg'), 
+ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6.jpeg'), 
        plot = review_nMDS_primary_abun6, 
-       width = 8, height = 9, dpi = 200)
+       width = 15, height = 12, dpi = 300)
 
 #Alternative panel arrangements
 #All 4 panels, grey background

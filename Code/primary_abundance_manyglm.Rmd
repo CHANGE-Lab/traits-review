@@ -58,7 +58,7 @@ hist(primary_check_matrix[primary_check_matrix > 0])
 
 ## Global Change studies
 
-```{r ManyGLM - Global Change (categorical)}
+```{r ManyGLM - Global Change (yes/no)}
 #try poisson and neg. binom.
 mv_gc_poisson_primabun = manyglm(primary_abundance_mv ~  primary_abundance_traits$GlobalChangeCat, 
                 data= primary_abundance_traits,
@@ -85,6 +85,7 @@ saveRDS(mv_gc_poisson_primabun, "mv_gc_poisson_primabun.rds")
 #model output significance test
 mv_gc_nb_primabun_an = anova.manyglm(mv_gc_nb_primabun)
 saveRDS(mv_gc_nb_primabun_an, "mv_gc_nb_primabun_anova.rds") 
+levels(as.factor(primary_abundance_traits$GlobalChangeCat))
 
 #mv_gc_nb_an = readRDS(here('./Data/Cole-Output-ManyGLM/mv_gc__nb_anova.rds'))
 
@@ -185,7 +186,7 @@ View(papers_with_top_3_gc)
 
 ## Predictive studies
 
-```{r ManyGLM - Predictive}
+```{r ManyGLM - Predictive (yes/no)}
 
 mv_pd_nb_primabun = manyglm(primary_abundance_mv ~ 
                      primary_abundance_traits$PredictiveCat, 
@@ -196,7 +197,7 @@ plot(mv_pd_nb_primabun)
 qqnorm(residuals(mv_pd_nb_primabun)[which(residuals(mv_pd_nb_primabun)<10000)])
 
 # NOTE - okay, neg. binom definitely  better but I'll save both just in case
-saveRDS(mv_pd_nb_primabun, "mv_gc_nb_primabun.rds") #, here('./Code')
+saveRDS(mv_pd_nb_primabun, "mv_pd_nb_primabun.rds") #, here('./Code')
 
 
 ```
