@@ -57,11 +57,11 @@ UPLOAD CLEANED DATA HERE & USE THIS DATA
 
 #Upload selected dataset
 
-review_traits_1use <- read_csv("review_traits_1use.csv")
+review_traits_1use <- read_csv("C:/Users/Helder/Documents/GitHub/traits_review_proj/Data/review_traits_1use.csv")
 review_traits_1use = review_traits_1use %>%
   select(DOI:ncol(.))
 review_sites_1use <- as.data.frame(review_traits_1use[,1:10])
-review_species_1use <- review_traits_1use[,11:ncol(review_traits_1use)] #1410 trait columns
+review_species_1use <- review_traits_1use[,11:ncol(review_traits_1use)] #9 trait columns
 
 head(review_traits_1use)
 ```
@@ -80,8 +80,10 @@ Note that the stress decreases as we decrease the number of observations, howeve
 #Ordination on primary trait classification 
 traits_ord_1use <- metaMDS(review_species_1use,
                           distance = "jaccard",
-                          trymax = 1000,
-                          k = 3) #increase trymax = 50
+                          trymax = 100,
+                          #engine="isoMDS"
+                          k = 2
+                          ) #increase trymax = 50
 
 #Based on ordination goodness fit/stress checks, we could use k = 2.
 #Don't want to redo this right now as it will take ~2h to rerun.
@@ -105,13 +107,14 @@ saveRDS(traits_ord_1use, "traits_ord_1use.rds")
 ```{r UPLOAD ORDINATION RDS FILE}
 
 #primary trait classification filled in
-traits_ord_1use <- readRDS("traits_ord_1use.rds")
+traits_ord_1use <- readRDS("C:/Users/Helder/Documents/GitHub/traits_review_proj/Output-Figs/traits_ord_1use.rds")
+str(traits_ord_1use)
 
 ```
 
 ## Checking ordination/nMDS output
 
-This is a helpful tutorial on checking nMDS goodness of fit, model convergence, stress and dimensionality: https://ourcodingclub.github.io/tutorials/ordination/ 
+This is a helpful tutorial on checking nMDS goodness of fit, model convergence, stress and dimensionality: https://ourcodingclub.github.io/tutorials/ordination/  
 Notes:
 For the initial dummy dataset - stress is extremely low, likely there are insufficient data (n = 727 studies/rows) for the number of traits (n = 1411) included in this analysis.
 For the primary traits dataset - the inflection point on the stress vs dimensions plot is between 2-3, so I am selecting k= 3 
@@ -119,10 +122,10 @@ For the primary traits dataset - the inflection point on the stress vs dimension
 ```{r Ordination - checks}
 #Run this for each ordination
 #Check fit
-gof <- goodness(traits_ord)
+gof <- goodness(traits_ord_1use)
 
 #Can visualise goodness of fit
-stressplot(traits_ord, pch = 19, cex=0.75, l.col = "tomato", p.col = "skyblue")
+stressplot(traits_ord_1use, pch = 19, cex=0.75, l.col = "tomato", p.col = "skyblue")
 
 #Now, we will be computing the stress for the dimensions 1, 2, 3, 4, 5, …. and explain how many dimensions are required to obtain a good fit.
 #REMEMBER TO ADJUST THE INITIAL SP MATRIX

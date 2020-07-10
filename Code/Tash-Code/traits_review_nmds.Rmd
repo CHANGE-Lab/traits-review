@@ -62,10 +62,10 @@ UPLOAD CLEANED DATA HERE & USE THIS DATA
 #Upload selected dataset
 
 #review_traits_use <- read_csv("review_traits4.0V.csv")
-review_traits_use = read_csv("review_traits4.0V.csv") %>%
+review_traits_use = read_csv("C:/Users/Helder/Documents/GitHub/traits_review_proj/Data/review_traits4.0V.csv") %>%
   select(DOI:ncol(.))
 review_sites_use <- as.data.frame(review_traits_use[,1:10])
-review_species_use <- review_traits_use[,11:ncol(review_traits_use)] #1410 trait columns
+review_species_use <- review_traits_use[,11:ncol(review_traits_use)] #1411 trait columns
 
 head(review_traits_use)
 ```
@@ -84,10 +84,13 @@ Note that the stress decreases as we decrease the number of observations, howeve
 traits_ord_use <- metaMDS(review_species_use,
                           distance = "jaccard",
                           trymax = 1000,
-                          k = 3) #increase trymax = 50
+                          maxits = 1000,
+                          k = 4) #increase trymax = 50
 
-#Based on ordination goodness fit/stress checks, we could use k = 2.
+##Model convergence issues
+#Based on ordination goodness fit/stress checks, we could use k = 2-3.
 #Don't want to redo this right now as it will take ~2h to rerun.
+#Likely the data are zero inflated
 
 plot(traits_ord_use) #plots species (here traits) as black dots, sites (here studies) as red crosses, not labelled
 
@@ -113,8 +116,9 @@ saveRDS(traits_ord_use, "traits_ord_use.rds")
 ```{r UPLOAD ORDINATION RDS FILE}
 
 #Initial dummy data
-#traits_ord_use <- readRDS("traits_ord_use.rds")
-#View(traits_ord_use)
+traits_ord_use <- readRDS("C:/Users/Helder/Documents/GitHub/traits_review_proj/Output-Figs/traits_ord_use.rds")
+View(traits_ord_use)
+#Old model did not converge
 
 #Secondary trait classification filled in
 #traits_ord_use <- readRDS("traits_ord_2use.rds")

@@ -440,8 +440,23 @@ ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_pred_large.png'),
        width = 8, height = 9, dpi = 1200)
 
 
+##NH edit
 
+## Merge plots
 
+## We need to save the ordinations so I don't have to rerun them for this task
 
+#All 6 panels
+#review_nMDS_primary_abun6 = plot_grid(trait_nMDS_clim, trait_nMDS_filt, trait_nMDS_predict, trait_nMDS_tos, trait_nMDS_ecos, trait_nMDS_taxgrp, labels = c("A", "B", "C", "D", "E", "F"), label_x = 0.12, vjust = 3.5, ncol = 2, rel_widths = c(1, 1), align = "v") #hjust = -7.5, label_x = c(0.12, 0.12, 0.12, 0.12, 0.12, 0.12)
+#review_nMDS_primary_abun6
+#ggsave("review_nMDS_primary6.jpeg", plot = review_nMDS_6, width = 12, height = 10, dpi = 300)
+
+#Alternative panel arrangements
+#All 4 panels, grey background
+#review_nMDS_4 = plot_grid(trait_nMDS_clim, trait_nMDS_filt, trait_nMDS_tos, trait_nMDS_ecos, labels = c("A", "B", "C", "D"), label_x = 0.10, vjust = 3.1, ncol = 2, rel_widths = c(1, 1),  align = "v")
+#review_nMDS_4
+#ggsave("review_nMDS_4whitelab.jpeg", plot = review_nMDS_4, width = 12, height = 7, dpi = 300)
+
+```
 
 

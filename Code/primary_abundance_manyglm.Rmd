@@ -1,0 +1,186 @@
+---
+title: "primary_abundance_manyglm"
+author: "Natasha Hardy"
+date: "09/07/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##########
+# This code contains the multivariate modeling component of the analysis presented in
+# in Green et al. (2020) 
+# A review on the use of traits in ecological research
+##########
+
+```{r Workspace}
+
+library(devtools)
+library(knitr)
+library(tidyverse)
+library(vegan)
+library(viridis)
+library(PNWColors)
+library(mvabund)
+library(reshape2)
+library(here)
+library(readr)
+
+```
+
+## Load Data
+
+```{r Load data - primary traits for abundance}
+
+primary_abundance <- read_csv("C:/Users/Helder/Documents/GitHub/traits_review_proj/Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy_abundance_models.csv")
+#View(primary_traits_abun)
+
+```
+
+## Analysis pipeline
+
+```{r Data manip for analyses}
+
+#subset data into the two groups needed
+primary_abundance_species = data.frame(primary_abundance[,11:ncol(primary_abundance)]) #species matrix
+
+primary_abundance_traits = data.frame(primary_abundance[,1:10]) #trait matrix
+
+primary_abundance_mv = mvabund(primary_abundance_species) #need to make it an mvabund readable object
+
+#figure out what error distribution works
+primary_check_matrix = as.matrix(primary_abundance_species)
+hist(primary_check_matrix)
+hist(primary_check_matrix[primary_check_matrix > 0])
+```
+
+```{r ManyGLM - Global Change (categorical)}
+#try poisson and neg. binom.
+mv_gc_poisson_primabun = manyglm(primary_abundance_mv ~  primary_abundance_traits$GlobalChangeCat, 
+                data= primary_abundance_traits,
+                family = 'poisson')
+plot(mv_gc_poisson_primabun) 
+qqnorm(residuals(mv_gc_poisson_primabun)[which(residuals(mv_gc_poisson_primabun)<10000)])
+
+mv_gc_nb_primabun = manyglm(primary_abundance_mv ~ 
+                     primary_abundance_traits$GlobalChangeCat, 
+                   data= primary_abundance_traits,
+                   family = 'negative.binomial')
+                #family=binomial("cloglog")) 
+plot(mv_gc_nb_primabun) 
+qqnorm(residuals(mv_gc_nb_primabun)[which(residuals(mv_gc_nb_primabun)<10000)])
+
+# NOTE - okay, neg. binom definitely  better but I'll save both just in case
+saveRDS(mv_gc_nb_primabun, "mv_gc_nb_primabun.rds") #, here('./Code')
+saveRDS(mv_gc_poisson_primabun, "mv_gc_poisson_primabun.rds") 
+
+```
+
+```{r ManyGLM - output manipulation}
+##Use Neg Bin model output
+#model output significance test
+mv_gc_nb_primabun_an = anova.manyglm(mv_gc_nb_primabun)
+saveRDS(mv_gc_nb_primabun_an, "mv_gc_nb_primabun_anova.rds") 
+
+#mv_gc_nb_an = readRDS(here('./Data/Cole-Output-ManyGLM/mv_gc__nb_anova.rds'))
+
+write_csv(mv_gc_nb_primabun_an$table, "mv_gc_nb_primabun_anova_table.csv")
+
+#individual adjusted p-values for species/traits - get univariate p-values
+mv_gc_nb_primabun_an_uni = anova.manyglm(mv_gc_nb_primabun,p.uni="adjusted")
+
+saveRDS(mv_gc_nb_primabun_an_uni, "mv_gc_nb_primabun_univs.rds") 
+
+#mv_gc_nb_an_uni = readRDS(here('./Data/Cole-Output-ManyGLM/mv_gc_univs.rds'))
+#Get the direction of effect fof each species with the main effect
+gc_coef_primabun = coef(mv_gc_nb_primabun)
+
+#figure out what the top traits are - recall traits are our 'species' here
+mv_gc_nb_primabun_species = 
+  sort(mv_gc_nb_primabun_an$uni.test[2,],
+       decreasing=T,index.return=T)[1:3] #sort and select top species/traits
+mv_gc_nb_primabun_species$ix[1:3] #the column numbers of the top  impacted spp/traits
+
+#Need > 50% deviance explainaed --> result = 25 traits explain > 50% deviance
+sum(mv_gc_nb_primabun_an$uni.test[2,mv_gc_nb_primabun_species$ix[1:5]])*100/
+  sum(mv_gc_nb_primabun_an$uni.test[2,]) #25 species explained = 53.65588% Deviance
+#3 species explained >90% deviance
+
+gc_top_primabun = 
+  data.frame(dimnames(primary_abundance_species)[[2]][mv_gc_nb_primabun_species$ix[
+    1:3]]) #df with the names of the top 20 traits
+
+gc_top_primabun = gc_top_primabun %>% 
+  dplyr::rename('traits' = names(gc_top_primabun))
+
+str(gc_top_primabun)
+#These were traits: chr  "habitat" "morphology" "resource.acquisition"
+
+#How much deviance explained?
+write_csv(gc_top_primabun, "gc_top_primabun.csv") 
+
+```
+
+```{r ManyGLM - top coeffs}
+#Now combine traits with their coeffs and p-values
+
+#Create df to combine coef values,  also p-values from univ anovas & the top 20
+gc_coef_prim = data.frame(t(gc_coef_primabun)) 
+gc_coef_prim$traits = rownames(gc_coef_prim) #convert rownames to a column
+str(gc_coef_prim)
+
+gc_coef_prim = gc_coef_prim %>% 
+  dplyr::rename('coef_intercept' = `X.Intercept.`, 
+         'coef_gc_yes' = names(gc_coef_prim)[2])
+
+gc_top_coeffs = merge(gc_top_primabun, gc_coef_prim,
+                      by.x = 'traits',
+                      by.y = 'traits') 
+
+colnames(gc_top_coeffs)
+
+#need to join with test statistic values
+gc_an_test = as.data.frame(t(mv_gc_nb_primabun_an_uni$uni.test)) #first transpose coef_filter
+gc_an_test$traits = rownames(gc_an_test) #convert rownames to a column
+
+gc_an_test = gc_an_test %>% 
+  dplyr::rename('deviance_explained' = names(gc_an_test)[2])
+
+gc_top_coeffs = merge(gc_top_coeffs,
+                      gc_an_test,
+                      by.x = 'traits',
+                      by.y = 'traits')
+gc_top_coeffs = gc_top_coeffs %>%
+  select(-"(Intercept)")
+
+#need to join with p-values
+gc_an_pvalue = data.frame(t(mv_gc_nb_primabun_an_uni$uni.p)) #first transpose coef_filter
+gc_an_pvalue$traits = rownames(gc_an_pvalue) #convert rownames to a column
+
+gc_an_pvalue = gc_an_pvalue %>% 
+  select(-names(gc_an_pvalue)[1]) 
+gc_an_pvalue = gc_an_pvalue%>% 
+  dplyr::rename('p_value' = names(gc_an_pvalue)[1])
+
+gc_top_coeffs = merge(gc_top_coeffs, 
+                     gc_an_pvalue,
+                     by.x = 'traits',
+                     by.y = 'traits') 
+
+write_csv(gc_top_coeffs, "gc_top_coefs.csv")
+
+#See how many papers actually have those traits
+papers_with_top_3_gc = primary_abundance_species
+top_3_gc = gc_top_primabun$traits
+papers_with_top_3_gc = papers_with_top_3_gc[top_3_gc]
+
+rownames(papers_with_top_3_gc) = primary_abundance_traits$DOI
+papers_with_top_3_gc = papers_with_top_3_gc[rowSums(papers_with_top_3_gc[, -1])>0, ]
+View(papers_with_top_3_gc)
+```
+
+
+## Extra
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

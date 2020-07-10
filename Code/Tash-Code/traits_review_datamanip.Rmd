@@ -11,6 +11,35 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Data manipulation document
 
+## Cleaned Original/Initial trait data
+
+```{r Data Manipulation, include=F, eval=F, echo=T}
+
+review_traits_0 <- read_csv("Data/traits_dummy.csv")
+summary(as.factor(review_traits_0$`Taxonomic`))
+
+review_traits_0 = review_traits_0 %>%
+  dplyr::rename(Predictive = `Forecasting/Predictive`, yield = `yeild`) %>%
+  mutate(`Global Change`=if_else(review_traits$`Global Change Driver`>0, "yes", "no"), 
+         `Taxonomic Group`=case_when( #Note can use case_when() or if_ele() BUT you need to write one for each value and not try to combine them as strings using c()
+           review_traits$`Taxonomic` == "Mammals" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Birds" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Fish" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Herps" ~ "Vertebrate",
+           review_traits$`Taxonomic` == "Plankton" ~ "Invertebrate",
+           review_traits$`Taxonomic` == "Insects" ~ "Invertebrate",
+           review_traits$`Taxonomic` == "Multiple" ~ "Multiple",
+           review_traits$`Taxonomic` == "Broad" ~ "Multiple",
+           review_traits$`Taxonomic` == "Other" ~ "Other",
+           review_traits$`Taxonomic` == "Plants" ~ "Plants")
+         ) %>%
+  select(`DOI`:`Taxonomic`,`Taxonomic Group`,`System`:`Global Change Driver`, `Global Change`, `# of eggs or live young`:`zoogeographical group`)
+  #Add binary column for presence/absence of Global Change Driver
+View(review_traits)
+
+```
+
+
 ## Initial trait data
 
 This document contains code for intial data manipulation March 2020 using large "traits_dummy.csv" df.
