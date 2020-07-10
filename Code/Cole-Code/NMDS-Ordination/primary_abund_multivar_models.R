@@ -19,6 +19,7 @@ library(PNWColors)
 library(mvabund)
 library(reshape2)
 library(here)
+library(cowplot)
 
 #separate the modeling into the P/A modeling (1/0) and then the abundance modeling
 primary_abundance = read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy_abundance_models.csv'))
@@ -35,8 +36,9 @@ primary_abundance_ord_iso = metaMDS(primary_abundance_species,
                                      trymax = 1000,
                                     k = 3)
 
+saveRDS(primary_abundance_ord_iso, 
+        here('./Model Output/Primary_abundance/nMDS-Ordinations/primary_abundance_ord_iso.rds'))
 
-#saveRDS(primary_abundance_ord_iso, "primary_abundance_ord_iso.rds")
 
 ############################## Plotting pipeline ###############################
 
@@ -239,11 +241,11 @@ primary_ab_eco_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 7))
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_eco_small.png'), 
+             position = position_jitter(width = 0, height = 0.2, seed = 7))
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_eco_small.png'), 
        plot = primary_ab_eco_plot, 
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_eco_large.png'), 
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_eco_large.png'), 
        plot = primary_ab_eco_plot, 
        width = 8, height = 8, dpi = 1200)
 
@@ -278,11 +280,11 @@ primary_ab_tax_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 7))
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_tax_small.png'), 
+             position = position_jitter(width = 0, height = 0.2, seed = 7))
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_tax_small.png'), 
        plot = primary_ab_tax_plot, 
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_tax_large.png'), 
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_tax_large.png'), 
        plot = primary_ab_tax_plot, 
        width = 8, height = 8, dpi = 1200)
 
@@ -317,11 +319,11 @@ primary_ab_tos_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 7))
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_tos_small.png'), 
+             position = position_jitter(width = 0, height = 0.2, seed = 7))
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_tos_small.png'), 
        plot = primary_ab_tos_plot, 
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_tos_large.png'), 
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_tos_large.png'), 
        plot = primary_ab_tos_plot, 
        width = 8, height = 8, dpi = 1200)
 
@@ -356,11 +358,11 @@ primary_ab_fil_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 7))
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_fil_small.png'), 
+             position = position_jitter(width = 0, height = 0.2, seed = 7))
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_fil_small.png'), 
        plot = primary_ab_fil_plot, 
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_fil_large.png'), 
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_fil_large.png'), 
        plot = primary_ab_fil_plot, 
        width = 8, height = 8, dpi = 1200)
 
@@ -395,11 +397,11 @@ primary_ab_gc_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 7))
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_gc_small.png'), 
+             position = position_jitter(width = 0, height = 0.2, seed = 7))
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_gc_small.png'), 
        plot = primary_ab_gc_plot, 
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_gc_large.png'), 
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_gc_large.png'), 
        plot = primary_ab_gc_plot, 
        width = 8, height = 8, dpi = 1200)
 
@@ -434,16 +436,14 @@ primary_ab_pred_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 7))
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_pred_small.png'), 
+             position = position_jitter(width = 0, height = 0.2, seed = 7))
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_pred_small.png'), 
        plot = primary_ab_pred_plot, 
        width = 8, height = 9, dpi = 200)
-ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_pred_large.png'), 
+ggsave(here('./Figures/Primary_abundance/primary_ab_plot_pred_large.png'), 
        plot = primary_ab_pred_plot, 
        width = 8, height = 9, dpi = 1200)
 
-
-##NH edit
 
 ## Merge plots
 
@@ -451,11 +451,17 @@ ggsave(here('./Output-Figs/Cole-nMDS/primary_ab_plot_pred_large.png'),
 
 #All 6 panels
 
-review_nMDS_primary_abun6 = plot_grid(primary_ab_gc_plot, primary_ab_fil_plot, primary_ab_pred_plot, 
-                                      primary_ab_tos_plot, primary_ab_eco_plot, primary_ab_tax_plot, 
-                                      labels = c("A", "B", "C", "D", "E", "F"), 
-                                      label_x = 0.12, vjust = 3.5, ncol = 2, rel_widths = c(1, 1), align = "v")
-ggsave("review_nMDS_primary_abun6.jpeg", 
+review_nMDS_primary_abun6 = 
+  plot_grid(primary_ab_gc_plot, primary_ab_fil_plot, primary_ab_pred_plot, 
+            primary_ab_tos_plot, primary_ab_eco_plot, primary_ab_tax_plot, 
+            labels = c("A", "B", "C", "D", "E", "F"), 
+            label_x = 0.12, vjust = 3.5, ncol = 2, 
+            rel_widths = c(1, 1), align = "v")
+
+ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6_small.png'), 
+       plot = review_nMDS_primary_abun6,
+       width = 15, height = 12, dpi = 200)
+ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6_large.png'), 
        plot = review_nMDS_primary_abun6,
        width = 15, height = 12, dpi = 300)
 
