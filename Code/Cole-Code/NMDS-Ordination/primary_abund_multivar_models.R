@@ -463,11 +463,11 @@ ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6_small.png'),
        width = 15, height = 12, dpi = 200)
 ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6_large.png'), 
        plot = review_nMDS_primary_abun6,
-       width = 15, height = 12, dpi = 1200)
+       width = 15, height = 12, dpi = 300)
 
-ggsave(here('./Output-Figs/Cole-nMDS/review_nMDS_primary_abun6.jpeg'), 
+ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6.jpeg'), 
        plot = review_nMDS_primary_abun6, 
-       width = 8, height = 9, dpi = 200)
+       width = 15, height = 12, dpi = 300)
 
 #Alternative panel arrangements
 #All 4 panels, grey background
