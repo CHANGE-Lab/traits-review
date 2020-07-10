@@ -21,29 +21,30 @@ library(reshape2)
 library(here)
 
 #subset data into the two groups needed
-secondary_pa = 
-  read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_pa_models.csv'))
-secondary_pa_species = 
-  data.frame(secondary_pa[,11:ncol(secondary_pa)])
-secondary_pa_traits = data.frame(secondary_pa[,1:10])
-secondary_pa_mv = mvabund(secondary_pa_species)
+secondary_abundance = 
+  read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_abundance_models.csv'))
+secondary_abundance_species = 
+  data.frame(secondary_abundance[,11:ncol(secondary_abundance)])
+secondary_abundance_traits = data.frame(secondary_abundance[,1:10])
+secondary_abundance_mv = mvabund(secondary_abundance_species)
 
 #figure out what error distribution works
-secondary_check_matrix = as.matrix(secondary_pa_species)
+secondary_check_matrix = as.matrix(secondary_abundance_species)
 hist(secondary_check_matrix)
 hist(secondary_check_matrix[secondary_check_matrix > 0])
 
 #try poisson and neg. binom.
-mv_pred_poisson = manyglm(secondary_pa_mv ~ 
-                          secondary_pa_traits$GlobalChangeCat, 
-                        data= secondary_pa_traits,
+mv_pred_poisson = manyglm(secondary_abundance_mv ~ 
+                          secondary_abundance_traits$PredictiveCat, 
+                        data= secondary_abundance_traits,
                         family = 'poisson')
 plot(mv_pred_poisson) 
-qqnorm(residuals(mv_pred_poisson)[which(residuals(mv_pred_poisson)<10000)])
+qqnorm(residuals(mv_pred_poisson)[which(residuals(mv_pred_poisson)<10000 &
+                                          residuals(mv_pred_poisson)>-10000)])
 
-mv_pred_nb = manyglm(secondary_pa_mv ~ 
-                     secondary_pa_traits$GlobalChangeCat, 
-                   data= secondary_pa_traits,
+mv_pred_nb = manyglm(secondary_abundance_mv ~ 
+                     secondary_abundance_traits$PredictiveCat, 
+                   data= secondary_abundance_traits,
                    family = 'negative.binomial')
 #family=binomial("cloglog")) 
 plot(mv_pred_nb) 
@@ -71,14 +72,14 @@ pred_coef = coef(mv_pred_nb)
 mv_pred_nb_species = 
   sort(mv_pred_nb_an$uni.test[2,],
        decreasing=T,index.return=T)[1:25] #sort and select top species/traits
-mv_pred_nb_species$ix[1:25] #the column numbers of the top  impacted spp/traits
+mv_pred_nb_species$ix[1:25] #the column numbers of the top  imabundancected spp/traits
 
 #Need > 50% deviance explainaed --> result = 25 traits explain > 50% deviance
 sum(mv_pred_nb_an$uni.test[2,mv_pred_nb_species$ix[1:25]])*100/
-  sum(mv_pred_nb_an$uni.test[2,]) #25 species explained = 53.65588% Deviance
+  sum(mv_pred_nb_an$uni.test[2,]) #25 species explained = 51.99% Deviance
 
 pred_top = 
-  data.frame(dimnames(secondary_pa_species)[[2]][mv_pred_nb_species$ix[
+  data.frame(dimnames(secondary_abundance_species)[[2]][mv_pred_nb_species$ix[
     1:25]]) #df with the names of the top 20 traits
 pred_top = pred_top %>% 
   rename('traits' = names(pred_top))
@@ -133,10 +134,10 @@ pred_top_coeffs = merge(pred_top_coeffs,
 
 write_csv(pred_top_coeffs, here('./Data/Cole-Output-ManyGLM/pred_top_coefs.csv'))
 
-#See how many papers actually have those traits
-papers_with_top_25_pred = secondary_pa_species
+#See how many abundance papers actually have those traits
+papers_with_top_25_pred = secondary_abundance_species
 top_25_pred = pred_top$traits
-papers_with_top_25_pred = papers_with_top_25_pred[top_25_predggg]
+papers_with_top_25_pred = papers_with_top_25_pred[top_25_pred]
 
-rownames(papers_with_top_25_pred) = secondary_pa_traits$DOI
+rownames(papers_with_top_25_pred) = secondary_abundance_traits$DOI
 papers_with_top_25_pred = papers_with_top_25_pred[rowSums(papers_with_top_25_pred[, -1])>0, ]
