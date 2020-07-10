@@ -1,7 +1,7 @@
 
 
 ### SECONDARY TRAITS CLASSIFICATION####
-## Analysis and plotting of rank abundance for traits (secondary classification; 9 traits)
+## Analysis and plotting of rank abundance for traits (secondary classification; many traits!)
 # across studies grouped by different factors (global change drivers, taxonomic groups,etc.).
 
 
