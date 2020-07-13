@@ -30,9 +30,9 @@ secondary_abundance_species = data.frame(secondary_abundance[,11:ncol(secondary_
 #run actual ordination - try with both k = 2 & 3
 #set.seed(0002)
 secondary_abundance_ord_k3 = metaMDS(secondary_abundance_species,
-                              distance = 'bray',
-                              trymax = 100,
-                              k = 3)
+                              #distance = 'bray',
+                              trymax = 1000,
+                              k = 4)
 plot(secondary_abundance_ord_k3)
 summary(secondary_abundance_ord_k3)
 stressplot(secondary_abundance_ord_k3)

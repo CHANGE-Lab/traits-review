@@ -35,8 +35,8 @@ secondary_pa_species = data.frame(secondary_pa[,11:ncol(secondary_pa)])
 # plot(secondary_pa_ord_k3)
 secondary_pa_ord_k2 = metaMDS(secondary_pa_species,
                             distance = 'jaccard',
-                            trymax = 100,
-                            k = 2)
+                            trymax = 1000,
+                            k = 4)
 plot(secondary_pa_ord_k2)
 
 #extract scores
