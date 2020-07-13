@@ -33,6 +33,7 @@ secondary_abundance_ord_k3 = metaMDS(secondary_abundance_species,
                               #distance = 'bray',
                               trymax = 1000,
                               k = 4)
+saveRDS(secondary_abundance_ord_k3, here('./Model Output/Secondary_abundance/nMDS/secondary_abundance_ord.rd'))
 plot(secondary_abundance_ord_k3)
 summary(secondary_abundance_ord_k3)
 stressplot(secondary_abundance_ord_k3)

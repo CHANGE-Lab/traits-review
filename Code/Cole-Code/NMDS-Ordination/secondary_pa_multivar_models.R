@@ -37,6 +37,8 @@ secondary_pa_ord_k2 = metaMDS(secondary_pa_species,
                             distance = 'jaccard',
                             trymax = 1000,
                             k = 4)
+saveRDS(secondary_pa_ord_k2, here('./Model Output/Secondary_pa/nMDS-Ordinations/secondary_abundance_ord.rds'))
+
 plot(secondary_pa_ord_k2)
 
 #extract scores
