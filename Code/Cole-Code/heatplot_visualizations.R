@@ -847,5 +847,5 @@ ggsave(here('./Figures/Heatplots-Timeseries/timeseries_small.png'),
        width = 20, height = 12, dpi = 200)
 ggsave(here('./Figures/Heatplots-Timeseries/timeseries_large.png'), 
        plot = alltypes, 
-       width = 18, height = 12, dpi = 1200)
+       width = 20, height = 12, dpi = 1200)
 
