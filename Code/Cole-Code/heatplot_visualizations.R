@@ -840,11 +840,11 @@ alltypes = plot_grid(total_studies, ecosystem_studies,
                      rel_widths = c(0.91,0.76,0.76, 0.91,0.77,0.77), 
                      rel_heights = c(0.75,1), 
                      labels = c('A', 'B','C','D','E','F'), 
-                     label_x = c(0.17, 0.07, 0.07, 0.17,0.07,0.07), vjust = 2.5)
+                     label_x = c(0.185, 0.07, 0.07, 0.185,0.07,0.07), vjust = 2.5)
 
 ggsave(here('./Figures/Heatplots-Timeseries/timeseries_small.png'), 
        plot = alltypes, 
-       width = 18, height = 12, dpi = 200)
+       width = 20, height = 12, dpi = 200)
 ggsave(here('./Figures/Heatplots-Timeseries/timeseries_large.png'), 
        plot = alltypes, 
        width = 18, height = 12, dpi = 1200)
