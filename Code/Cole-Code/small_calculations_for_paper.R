@@ -6,7 +6,7 @@
 ##########
 ##########
 # AUTHOR: Cole B. Brookson
-# DATE OF CREATION: 2020-06-30
+# DATE OF CREATION: 2020-07-15
 ##########
 ##########
 
@@ -200,10 +200,14 @@ table(predictive$Forecasting)
 22/27
 13/27
 
+tt = orig_categorical[, c(1,7)]
+tt = tt %>% distinct()
+table(tt$TT)
 
 
-
-
+filter = orig_categorical[, c(1,8)]
+filter = filter %>% distinct()
+table(filter$filter)
 
 
 
