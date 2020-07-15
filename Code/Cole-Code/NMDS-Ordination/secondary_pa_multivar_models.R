@@ -235,8 +235,8 @@ secondary_pa_eco_plot <- ggplot() +
              aes(x=NMDS1,y=NMDS2, colour = Ecosystem), size=2) + 
   coord_equal() +
   theme_bw()  +
-  theme(#axis.text.x = element_blank(),  
-        #axis.text.y = element_blank(), 
+  theme(axis.text.x = element_blank(),  
+        axis.text.y = element_blank(), 
         axis.ticks = element_blank(),  
         axis.title.x = element_text(size=18), 
         axis.title.y = element_text(size=18), 
