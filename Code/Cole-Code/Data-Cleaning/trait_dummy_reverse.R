@@ -161,7 +161,8 @@ old = old_dummy %>%
   select(DOI, Filter)
 test = old[duplicated(old),]
 
-current = read_csv(here('./Data/Cole-Original-Data/finalized_lit_db_for_r.csv'))
+current = read_csv(here('./Data/Cole-Original-Data/finalized_lit_db_for_r.csv'),
+                   guess_max = 10000)
 current = current %>% 
   filter(`Relevant to Study` == 'Y' | `Relevant to Study` == 'y') %>% 
   rename(TOS = `Type of study`)

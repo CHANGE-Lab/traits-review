@@ -1994,7 +1994,7 @@ max shell size,max shell size,0,morphology,size,shell traits,shell traits,shell 
 maximal shell size,maximal shell size,0,morphology,size,shell traits,shell traits,shell traits,,,,,NH
 snout-to-vent length,snout-to-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
 snout-vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
-snout–vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
+snout--vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
 snout vent length,snout vent length,1,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: respiration = functional to organism,,NH
 veg height,veg height,0,morphology,size,vegetative height,vegetative height,vegetative height,,1,"NH: repeat ""vegetative height""",,NH
 veg plant height,veg plant height,0,morphology,size,vegetative height,vegetative height,vegetative height,,1,NH: how is this different from above or below,,NH
