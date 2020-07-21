@@ -4,11 +4,17 @@
 ## Analysis and plotting of rank abundance for traits (primary classifications; 9 traits)
 # across studies grouped by different factors (global change drivers, taxonomic groups,etc.).
 
+### LIBRARIES ###
+
+#### load libraries:
+library(vegan)
+library(here)
+library(tidyverse)
 
 ##### DATA ####
 
 ####load environmental (grouping) data for the studies:
-enviro <- read.csv('rank_enviro_primary.csv')
+enviro <- read_csv(here('./Rank/Data/rank_enviro_primary.csv'))
 str(enviro)
 
 #change each to factors:
@@ -21,15 +27,8 @@ enviro$filter <- as.factor(enviro$filter)
 
 
 #### load trait matrix for primary classification of the studies:
-traits <- read.csv('rank_matrix_primary.csv')
+traits <- read_csv(here('./Rank/Data/rank_matrix_primary.csv'))
 str(traits)
-
-
-### LIBRARIES ###
-
-#### load libraries:
-library(BiodiversityR)
-
 
 
 ###########################################################################

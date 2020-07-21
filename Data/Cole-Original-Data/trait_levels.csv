@@ -1366,7 +1366,7 @@ locomotion and substrate relation,locomotion and substrate relation,0,morphology
 locomotion mode,locomotion mode,0,morphology,mobility,locomotion,locomotion,locomotion,,1,"NH: ""method of locomotion"", ""locomotion type"" and ""lomocotion mode"" redundant?",,NH
 locomotion type,locomotion type,0,morphology,mobility,locomotion,locomotion,locomotion,,1,"NH: ""method of locomotion"", ""locomotion type"" and ""lomocotion mode"" redundant?",,NH
 locomotion velocity,locomotion velocity,0,morphology,mobility,locomotion,locomotion,locomotion,,,,,NH
-locomotion–substrate relation,locomotion and substrate relation,0,morphology,mobility,locomotion,locomotion,locomotion,,1,NH: this notation was problematic when loading to R,,NH
+locomotion-substrate relation,locomotion and substrate relation,0,morphology,mobility,locomotion,locomotion,locomotion,,1,NH: this notation was problematic when loading to R,,NH
 locomotor activity,locomotor activity,0,morphology,mobility,locomotion,locomotion,locomotion,,,,,NH
 locomotor propulsion mechanism,locomotor propulsion mechanism,0,morphology,mobility,locomotion,locomotion,locomotion,,,,,NH
 locomotory organs,locomotory organs,0,morphology,mobility,locomotion,locomotion,locomotion,,,,,NH
@@ -1441,7 +1441,7 @@ body volume,body volume,0,morphology,shape,size,size,size,,1,shape/size,secondar
 DGH,DGH,1,morphology,shape,size,size,size,,1,NH?,CB: Diameter at Ground Height,NH
 snout-to-vent length,snout-to-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
 snout-vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
-snout–vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
+snout-vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
 snout vent length,snout vent length,1,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: respiration = functional to organism,,NH
 sustainable swimming speed,sustainable swimming speed,0,morphology,mobility,speed,speed,speed,swimming,,,,NH
 swim factor,swim factor,0,morphology,mobility,speed,speed,speed,swimming,,,,NH

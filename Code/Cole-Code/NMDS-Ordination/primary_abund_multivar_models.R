@@ -241,7 +241,7 @@ primary_ab_eco_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.2, seed = 7))
+             position = position_jitter(width = 0, height = 0.3, seed = 7))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_eco_small.png'), 
        plot = primary_ab_eco_plot, 
        width = 8, height = 8, dpi = 200)
@@ -280,7 +280,7 @@ primary_ab_tax_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.2, seed = 7))
+             position = position_jitter(width = 0, height = 0.3, seed = 7))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_tax_small.png'), 
        plot = primary_ab_tax_plot, 
        width = 8, height = 8, dpi = 200)
@@ -319,7 +319,7 @@ primary_ab_tos_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.2, seed = 7))
+             position = position_jitter(width = 0, height = 0.3, seed = 7))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_tos_small.png'), 
        plot = primary_ab_tos_plot, 
        width = 8, height = 8, dpi = 200)
@@ -358,7 +358,7 @@ primary_ab_fil_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.2, seed = 7))
+             position = position_jitter(width = 0, height = 0.3, seed = 7))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_fil_small.png'), 
        plot = primary_ab_fil_plot, 
        width = 8, height = 8, dpi = 200)
@@ -397,7 +397,7 @@ primary_ab_gc_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.2, seed = 7))
+             position = position_jitter(width = 0, height = 0.3, seed = 7))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_gc_small.png'), 
        plot = primary_ab_gc_plot, 
        width = 8, height = 8, dpi = 200)
@@ -436,7 +436,7 @@ primary_ab_pred_plot <- ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.2, seed = 7))
+             position = position_jitter(width = 0, height = 0.3, seed = 7))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_pred_small.png'), 
        plot = primary_ab_pred_plot, 
        width = 8, height = 9, dpi = 200)
@@ -475,6 +475,6 @@ ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6.jpeg'),
 #review_nMDS_4
 #ggsave("review_nMDS_4whitelab.jpeg", plot = review_nMDS_4, width = 12, height = 7, dpi = 300)
 
-```
+
 
 

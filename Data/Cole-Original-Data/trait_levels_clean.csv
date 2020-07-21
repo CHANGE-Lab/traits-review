@@ -1994,7 +1994,7 @@ max shell size,max shell size,0,morphology,size,shell traits,shell traits,shell 
 maximal shell size,maximal shell size,0,morphology,size,shell traits,shell traits,shell traits,,,,,NH
 snout-to-vent length,snout-to-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
 snout-vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
-snout–vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
+snout--vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
 snout vent length,snout vent length,1,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: respiration = functional to organism,,NH
 veg height,veg height,0,morphology,size,vegetative height,vegetative height,vegetative height,,1,"NH: repeat ""vegetative height""",,NH
 veg plant height,veg plant height,0,morphology,size,vegetative height,vegetative height,vegetative height,,1,NH: how is this different from above or below,,NH
@@ -2214,29 +2214,29 @@ tooth shape,tooth shape,0,morphology,teeth traits,,teeth traits,tooth shape,,,,,
 tooth thickness,tooth thickness,0,morphology,teeth traits,,teeth traits,tooth thickness,,,,,NH
 upper tooth row angle,upper tooth row angle,0,morphology,teeth traits,,teeth traits,upper tooth row angle,,,,,NH
 upper tooth row length,upper tooth row length,0,morphology,teeth traits,,teeth traits,upper tooth row length,,,,,NH
-climate change tolerance,climate change tolerance,0,habitat,temperature tolerance,dessication tolerance,dessication tolerance,desiccation tolerance,,,,,CB
-climatic tolerance,climatic tolerance,0,habitat,temperature tolerance,dessication tolerance,dessication tolerance,desiccation tolerance,,,,,CB
-climatic zone inhabited,climatic zone inhabited,0,habitat,temperature tolerance,dessication tolerance,dessication tolerance,desiccation tolerance,,,,,CB
-base temperature,base temperature,0,habitat,temperature tolerance,,temperature tolerance,base temperature,,,,,CB
-base temperature,base temperature,1,habitat,temperature tolerance,,temperature tolerance,base temperature,,1,NH?,,CB
-base temperature for germination,base temperature for germination,0,habitat,temperature tolerance,,temperature tolerance,base temperature for germination,,,,,CB
-ceiling temperatures,ceiling temperatures,0,habitat,temperature tolerance,,temperature tolerance,ceiling temperatures,,,,,CB
-chilling requirement to break primary dormancy,chilling requirement to break primary dormancy,0,habitat,temperature tolerance,,temperature tolerance,chilling requirement to break primary dormancy,,,,,CB
-cold stratification required,cold stratification required,0,habitat,temperature tolerance,,temperature tolerance,cold stratification required,,,,,CB
-cold tolerance,cold tolerance,0,habitat,temperature tolerance,,temperature tolerance,cold tolerance,,,,,CB
-critical thermal maximum,critical thermal maximum,0,habitat,temperature tolerance,,temperature tolerance,critical thermal maximum,,,,,CB
-development strongly linked to environmental temperature,development strongly linked to environmental temperature,0,habitat,temperature tolerance,,temperature tolerance,development strongly linked to environmental temperature,,,,,CB
-effect of dormancy loss treatment on base germination temperature,effect of dormancy loss treatment on base germination temperature,0,habitat,temperature tolerance,,temperature tolerance,effect of dormancy loss treatment on base germination temperature,,,,,CB
-expression of molecular weight heat shock protein following heat stress,expression of molecular weight heat shock protein following heat stress,0,habitat,temperature tolerance,,temperature tolerance,expression of molecular weight heat shock protein following heat stress,,,,,CB
-germination temperature,germination temperature,0,habitat,temperature tolerance,,temperature tolerance,germination temperature,,,,,CB
-heat requirement,heat requirement,0,habitat,temperature tolerance,,temperature tolerance,heat requirement,,,,,CB
-larval thermal tolerance,larval thermal tolerance,0,habitat,temperature tolerance,,temperature tolerance,larval thermal tolerance,,,,,CB
-optimum temperatures,optimum temperatures,0,habitat,temperature tolerance,,temperature tolerance,optimum temperatures,,,,,CB
-temp preference,temp preference,0,habitat,temperature tolerance,,temperature tolerance,temp preference,,,,,CB
-temperature for growth,temperature for growth,0,habitat,temperature tolerance,,temperature tolerance,temperature for growth,,,,,CB
-temperature preferences,temperature preferences,0,habitat,temperature tolerance,,temperature tolerance,temperature preferences,,,,,CB
-thermal time for 50% germination,thermal time for 50% germination,0,habitat,temperature tolerance,,temperature tolerance,thermal time for 50% germination,,,,,CB
-thermal tolerance,thermal tolerance,0,habitat,temperature tolerance,,temperature tolerance,thermal tolerance,,,,,CB
+climate change tolerance,climate change tolerance,0,resource acquisition,temperature tolerance,dessication tolerance,dessication tolerance,desiccation tolerance,,,,,CB
+climatic tolerance,climatic tolerance,0,resource acquisition,temperature tolerance,dessication tolerance,dessication tolerance,desiccation tolerance,,,,,CB
+climatic zone inhabited,climatic zone inhabited,0,resource acquisition,temperature tolerance,dessication tolerance,dessication tolerance,desiccation tolerance,,,,,CB
+base temperature,base temperature,0,resource acquisition,temperature tolerance,,temperature tolerance,base temperature,,,,,CB
+base temperature,base temperature,1,resource acquisition,temperature tolerance,,temperature tolerance,base temperature,,1,NH?,,CB
+base temperature for germination,base temperature for germination,0,resource acquisition,temperature tolerance,,temperature tolerance,base temperature for germination,,,,,CB
+ceiling temperatures,ceiling temperatures,0,resource acquisition,temperature tolerance,,temperature tolerance,ceiling temperatures,,,,,CB
+chilling requirement to break primary dormancy,chilling requirement to break primary dormancy,0,resource acquisition,temperature tolerance,,temperature tolerance,chilling requirement to break primary dormancy,,,,,CB
+cold stratification required,cold stratification required,0,resource acquisition,temperature tolerance,,temperature tolerance,cold stratification required,,,,,CB
+cold tolerance,cold tolerance,0,resource acquisition,temperature tolerance,,temperature tolerance,cold tolerance,,,,,CB
+critical thermal maximum,critical thermal maximum,0,resource acquisition,temperature tolerance,,temperature tolerance,critical thermal maximum,,,,,CB
+development strongly linked to environmental temperature,development strongly linked to environmental temperature,0,resource acquisition,temperature tolerance,,temperature tolerance,development strongly linked to environmental temperature,,,,,CB
+effect of dormancy loss treatment on base germination temperature,effect of dormancy loss treatment on base germination temperature,0,resource acquisition,temperature tolerance,,temperature tolerance,effect of dormancy loss treatment on base germination temperature,,,,,CB
+expression of molecular weight heat shock protein following heat stress,expression of molecular weight heat shock protein following heat stress,0,resource acquisition,temperature tolerance,,temperature tolerance,expression of molecular weight heat shock protein following heat stress,,,,,CB
+germination temperature,germination temperature,0,resource acquisition,temperature tolerance,,temperature tolerance,germination temperature,,,,,CB
+heat requirement,heat requirement,0,resource acquisition,temperature tolerance,,temperature tolerance,heat requirement,,,,,CB
+larval thermal tolerance,larval thermal tolerance,0,resource acquisition,temperature tolerance,,temperature tolerance,larval thermal tolerance,,,,,CB
+optimum temperatures,optimum temperatures,0,resource acquisition,temperature tolerance,,temperature tolerance,optimum temperatures,,,,,CB
+temp preference,temp preference,0,resource acquisition,temperature tolerance,,temperature tolerance,temp preference,,,,,CB
+temperature for growth,temperature for growth,0,resource acquisition,temperature tolerance,,temperature tolerance,temperature for growth,,,,,CB
+temperature preferences,temperature preferences,0,resource acquisition,temperature tolerance,,temperature tolerance,temperature preferences,,,,,CB
+thermal time for 50% germination,thermal time for 50% germination,0,resource acquisition,temperature tolerance,,temperature tolerance,thermal time for 50% germination,,,,,CB
+thermal tolerance,thermal tolerance,0,resource acquisition,temperature tolerance,,temperature tolerance,thermal tolerance,,,,,CB
 exposure tolerance,exposure tolerance,1,resource acquisition,temperature tolerance,,temperature tolerance,exposure tolerance,,1,"NH: thinking regarding temperature, therefore resource acquisiton/niche",,CB
 leaf tissue density,leaf tissue density,0,composition,tissue density,,tissue density,leaf tissue density,,,,,CB
 skeletal density,skeletal density,0,composition,tissue density,,tissue density,skeletal density,,,,,CB
