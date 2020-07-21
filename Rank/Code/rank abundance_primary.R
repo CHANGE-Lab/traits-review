@@ -10,6 +10,15 @@
 library(vegan)
 library(here)
 library(tidyverse)
+library(BiodiversityR) #multiple dependent packages required
+
+#Warning
+#BiodiversityR 2.11-3: Use command BiodiversityRGUI() to launch the Graphical User Interface; to see changes use BiodiversityRGUI(changeLog=TRUE, backward.compatibility.messages=TRUE)
+
+#Warning messages:
+#1: package ‘BiodiversityR’ was built under R version 4.0.2 
+#2: package ‘vegan3d’ was built under R version 4.0.2 
+#3: package ‘rgl’ was built under R version 4.0.2
 
 ##### DATA ####
 
@@ -39,7 +48,7 @@ str(traits)
 
 ########### 1. Global change ####################
 
-### A. Create summary of rank abundance for each globabl change driver: 
+### A. Create summary of rank abundance for each globab change driver: 
 modsgc <- with(enviro, lapply(levels(GlobalChange), function(lev)
   rankabundance(traits, enviro, 'GlobalChange', lev)))
 
