@@ -22,7 +22,9 @@ library(here)
 library(cowplot)
 
 #separate the modeling into the P/A modeling (1/0) and then the abundance modeling
-primary_abundance = read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy_abundance_models.csv'))
+primary_abundance = 
+  read_csv(
+    here('./Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy_abundance_models.csv'))
 
 #split species and sites
 primary_abundance_sites = data.frame(primary_abundance[,1:10])
@@ -38,13 +40,14 @@ primary_abundance_ord_iso = metaMDS(primary_abundance_species,
 
 saveRDS(primary_abundance_ord_iso, 
         here('./Model Output/Primary_abundance/nMDS-Ordinations/primary_abundance_ord_iso.rds'))
-
+primary_abundance_ord_iso  = 
+  readRDS(here('./Model Output/Primary_abundance/nMDS-Ordinations/primary_abundance_ord_iso.rds'))
 
 ############################## Plotting pipeline ###############################
 
 #extract scores
-primary_ab_k4_scores <- data.frame(scores(primary_abundance_ord_iso)) 
-primary_ab_k4_scores$points <- rownames(primary_ab_k4_scores) 
+primary_ab_k4_scores = data.frame(scores(primary_abundance_ord_iso)) 
+primary_ab_k4_scores$points = rownames(primary_ab_k4_scores) 
 primary_ab_scores = cbind(primary_abundance_sites, primary_ab_k4_scores)
 
 #add species
@@ -155,11 +158,11 @@ hull_ab_tos = rbind(grp_ab_tos_Observational, grp_ab_tos_Experiment,
 
 #Filter
 levels(primary_ab_scores$Filter)[levels(primary_ab_scores$Filter)==
-                                   "Fundamental"] <- "Abiotic"
+                                   "Fundamental"] = "Abiotic"
 levels(primary_ab_scores$Filter)[levels(primary_ab_scores$Filter)==
-                                   "Physical"] <- "Dispersal"
+                                   "Physical"] = "Dispersal"
 levels(primary_ab_scores$Filter)[levels(primary_ab_scores$Filter)==
-                                   "Ecological"] <- "Biotic"
+                                   "Ecological"] = "Biotic"
 fil = as.character(unique(primary_ab_scores$Filter))
 for(i in 1:length(fil)) {
   temp = fil[i]
@@ -176,7 +179,11 @@ hull_ab_fil = rbind(grp_ab_fil_Abiotic, grp_ab_fil_Biotic,
 
 #global change category
 levels(primary_ab_scores$GlobalChange)[levels(primary_ab_scores$GlobalChange)==
-                                         0] <- "Not Assessed"
+                                         0] = "Not Assessed"
+levels(primary_ab_scores$GlobalChange)[levels(primary_ab_scores$GlobalChange)==
+                                        'Global Change Broad'] = "Multiple"
+levels(primary_ab_scores$GlobalChange)[levels(primary_ab_scores$GlobalChange)==
+                                         'Global Change Multiple'] = "Multiple"
 gc = as.character(unique(primary_ab_scores$GlobalChange))
 for(i in 1:length(gc)) {
   temp = gc[i]
@@ -189,8 +196,7 @@ for(i in 1:length(gc)) {
   assign(paste0('grp_ab_gc_',temp), df)
 }
 hull_ab_gc = rbind(`grp_ab_gc_Climate Change`, grp_ab_gc_Exploitation,
-                   `grp_ab_gc_Global Change Broad`, 
-                   `grp_ab_gc_Global Change Multiple`,
+                   `grp_ab_gc_Multiple`,
                    `grp_ab_gc_Habitat Degredation`, grp_ab_gc_Invasion,
                    `grp_ab_gc_Not Assessed`)
 
@@ -211,7 +217,7 @@ hull_ab_pred = rbind(grp_ab_pred_no, grp_ab_pred_yes)
 ########### Make Plots
 
 #ecosystem
-primary_ab_eco_plot <- ggplot() + 
+primary_ab_eco_plot = ggplot() + 
   geom_polygon(data=hull_ab_ecosystem, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=Ecosystem, 
@@ -250,7 +256,7 @@ ggsave(here('./Figures/Primary_abundance/primary_ab_plot_eco_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #tax group
-primary_ab_tax_plot <- ggplot() + 
+primary_ab_tax_plot = ggplot() + 
   geom_polygon(data=hull_ab_taxonomic_group, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=TaxonomicGroup, 
@@ -289,7 +295,7 @@ ggsave(here('./Figures/Primary_abundance/primary_ab_plot_tax_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #TOS
-primary_ab_tos_plot <- ggplot() + 
+primary_ab_tos_plot = ggplot() + 
   geom_polygon(data=hull_ab_tos, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=TOS, 
@@ -328,7 +334,7 @@ ggsave(here('./Figures/Primary_abundance/primary_ab_plot_tos_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #filter
-primary_ab_fil_plot <- ggplot() + 
+primary_ab_fil_plot = ggplot() + 
   geom_polygon(data=hull_ab_fil, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=Filter, 
@@ -367,7 +373,7 @@ ggsave(here('./Figures/Primary_abundance/primary_ab_plot_fil_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #global change
-primary_ab_gc_plot <- ggplot() + 
+primary_ab_gc_plot = ggplot() + 
   geom_polygon(data=hull_ab_gc, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=GlobalChange, 
@@ -406,7 +412,7 @@ ggsave(here('./Figures/Primary_abundance/primary_ab_plot_gc_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #predictive
-primary_ab_pred_plot <- ggplot() + 
+primary_ab_pred_plot = ggplot() + 
   geom_polygon(data=hull_ab_pred, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=PredictiveCat, 

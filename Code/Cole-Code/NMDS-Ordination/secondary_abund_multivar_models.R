@@ -39,8 +39,8 @@ secondary_abundance_ord_k4 = readRDS(here('./Model Output/Secondary_abundance/nM
 ############################## Plotting pipeline ###############################
 
 #extract scores
-secondary_ab_k4_scores <- data.frame(scores(secondary_abundance_ord_k4)) 
-secondary_ab_k4_scores$points <- rownames(secondary_abundance_ord_k4) 
+secondary_ab_k4_scores = data.frame(scores(secondary_abundance_ord_k4)) 
+secondary_ab_k4_scores$points = rownames(secondary_abundance_ord_k4) 
 secondary_ab_scores = cbind(secondary_abundance_sites, secondary_ab_k4_scores)
 
 secondary_ab_scores = 
@@ -163,11 +163,11 @@ hull_sec_ab_tos = rbind(grp_sec_ab_tos_Observational, grp_sec_ab_tos_Experiment,
 
 #Filter
 levels(secondary_ab_scores$Filter)[levels(secondary_ab_scores$Filter)==
-                                     "Fundamental"] <- "Abiotic"
+                                     "Fundamental"] = "Abiotic"
 levels(secondary_ab_scores$Filter)[levels(secondary_ab_scores$Filter)==
-                                     "Physical"] <- "Dispersal"
+                                     "Physical"] = "Dispersal"
 levels(secondary_ab_scores$Filter)[levels(secondary_ab_scores$Filter)==
-                                     "Ecological"] <- "Biotic"
+                                     "Ecological"] = "Biotic"
 fil = as.character(unique(secondary_ab_scores$Filter))
 for(i in 1:length(fil)) {
   temp = fil[i]
@@ -184,7 +184,11 @@ hull_sec_ab_fil = rbind(grp_sec_ab_fil_Abiotic, grp_sec_ab_fil_Biotic,
 
 #global change category
 levels(secondary_ab_scores$GlobalChange)[levels(secondary_ab_scores$GlobalChange)==
-                                           0] <- "Not Assessed"
+                                           0] = "Not Assessed"
+levels(secondary_ab_scores$GlobalChange)[levels(secondary_ab_scores$GlobalChange)==
+                                         'Global Change Broad'] = "Multiple"
+levels(secondary_ab_scores$GlobalChange)[levels(secondary_ab_scores$GlobalChange)==
+                                         'Global Change Multiple'] = "Multiple"
 gc = as.character(unique(secondary_ab_scores$GlobalChange))
 for(i in 1:length(gc)) {
   temp = gc[i]
@@ -197,8 +201,7 @@ for(i in 1:length(gc)) {
   assign(paste0('grp_sec_ab_gc_',temp), df)
 }
 hull_sec_ab_gc = rbind(`grp_sec_ab_gc_Climate Change`, grp_sec_ab_gc_Exploitation,
-                       `grp_sec_ab_gc_Global Change Broad`, 
-                       `grp_sec_ab_gc_Global Change Multiple`,
+                       `grp_sec_ab_gc_Multiple`,
                        `grp_sec_ab_gc_Habitat Degredation`, grp_sec_ab_gc_Invasion,
                        `grp_sec_ab_gc_Not Assessed`)
 
@@ -219,7 +222,7 @@ hull_sec_ab_pred = rbind(grp_sec_ab_pred_no, grp_sec_ab_pred_yes)
 ########### Make Plots
 
 #ecosystem
-secondary_ab_eco_plot <- ggplot() + 
+secondary_ab_eco_plot = ggplot() + 
   geom_polygon(data=hull_sec_ab_ecosystem, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=Ecosystem, 
@@ -251,7 +254,7 @@ ggsave(here('./Figures/Secondary_abundance/secondary_ab_plot_eco_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #tax group
-secondary_ab_tax_plot <- ggplot() + 
+secondary_ab_tax_plot = ggplot() + 
   geom_polygon(data=hull_sec_ab_taxonomic_group, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=TaxonomicGroup, 
@@ -283,7 +286,7 @@ ggsave(here('./Figures/Secondary_abundance/secondary_ab_plot_tax_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #TOS
-secondary_ab_tos_plot <- ggplot() + 
+secondary_ab_tos_plot = ggplot() + 
   geom_polygon(data=hull_sec_ab_tos, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=TOS, 
@@ -315,7 +318,7 @@ ggsave(here('./Figures/Secondary_abundance/secondary_ab_plot_tos_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #filter
-secondary_ab_fil_plot <- ggplot() + 
+secondary_ab_fil_plot = ggplot() + 
   geom_polygon(data=hull_sec_ab_fil, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=Filter, 
@@ -347,7 +350,7 @@ ggsave(here('./Figures/Secondary_abundance/secondary_ab_plot_fil_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #global change
-secondary_ab_gc_plot <- ggplot() + 
+secondary_ab_gc_plot = ggplot() + 
   geom_polygon(data=hull_sec_ab_gc, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=GlobalChange, 
@@ -379,7 +382,7 @@ ggsave(here('./Figures/Secondary_abundance/secondary_ab_plot_gc_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #predictive
-secondary_ab_pred_plot <- ggplot() + 
+secondary_ab_pred_plot = ggplot() + 
   geom_polygon(data=hull_sec_ab_pred, 
                aes(x=NMDS1,y=NMDS2, 
                    fill=PredictiveCat, 
