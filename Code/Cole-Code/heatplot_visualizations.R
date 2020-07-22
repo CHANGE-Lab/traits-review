@@ -251,6 +251,10 @@ levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] =
   "Multiple"
 levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] = 
   "Multiple"
+levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
+  "Abiotic"
+levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
+  "Biotic"
 
 trait_env_df3$Filter = as.factor(trait_env_df3$Filter)
 
@@ -269,6 +273,7 @@ trait_env_df3$Trait = factor(trait_env_df3$Trait,
                                         'Behavioural', 
                                         'Morphological', 
                                         'Physiological'))
+
 
 trait_x_filter_by_ecosystem_x_TOS_plot = 
   ggplot(data = trait_env_df3) +

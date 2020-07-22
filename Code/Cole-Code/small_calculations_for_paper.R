@@ -257,3 +257,18 @@ trait_levels = read_csv(here('./Data/Cole-Original-Data/trait_levels_types_clean
 trait_levels = trait_levels %>% 
   distinct(Trait_spell_corrected, Type)
 table(trait_levels$Type)
+
+table_s3 = trait_levels %>% 
+  select(Primary_classification, Secondary_classification) %>% 
+  group_by(Primary_classification, Secondary_classification) %>% 
+  summarize(count = n())
+write_csv(table_s3, here('./Data/Cole-Original-Data/table_s3.csv'))
+
+unique(trait_levels$Primary_classification)
+
+
+wos_dois = read_csv('./Data/Cole-Original-Data/wos_dois.csv')
+inn = current %>% 
+  filter(DOI %in% wos_dois$DI)
+out = wos_dois %>% 
+  filter(DI %in% current$DOI)
