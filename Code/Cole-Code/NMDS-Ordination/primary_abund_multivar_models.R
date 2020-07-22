@@ -224,7 +224,7 @@ primary_ab_eco_plot = ggplot() +
                    group=Ecosystem),alpha=0.30) + 
   geom_point(data=primary_ab_scores, 
              aes(x=NMDS1,y=NMDS2, colour = Ecosystem), size=2) + 
-  coord_equal() +
+  coord_equal(xlim = c(-1.3, 2.5)) +
   theme_bw()  +
   theme(axis.text.x = element_blank(),  
         axis.text.y = element_blank(), 
@@ -247,7 +247,7 @@ primary_ab_eco_plot = ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.3, seed = 7))
+             position = position_jitter(width = 0.3, height = 0.3, seed = 9))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_eco_small.png'), 
        plot = primary_ab_eco_plot, 
        width = 8, height = 8, dpi = 200)
@@ -263,7 +263,7 @@ primary_ab_tax_plot = ggplot() +
                    group=TaxonomicGroup),alpha=0.30) + 
   geom_point(data=primary_ab_scores, 
              aes(x=NMDS1,y=NMDS2, colour = TaxonomicGroup), size=2) + 
-  coord_equal() +
+  coord_equal(xlim = c(-1.3, 2.5)) +
   theme_bw()  +
   theme(axis.text.x = element_blank(),  
         axis.text.y = element_blank(), 
@@ -286,7 +286,7 @@ primary_ab_tax_plot = ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.3, seed = 7))
+             position = position_jitter(width = 0.3, height = 0.3, seed = 9))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_tax_small.png'), 
        plot = primary_ab_tax_plot, 
        width = 8, height = 8, dpi = 200)
@@ -302,7 +302,7 @@ primary_ab_tos_plot = ggplot() +
                    group=TOS),alpha=0.30) + 
   geom_point(data=primary_ab_scores, 
              aes(x=NMDS1,y=NMDS2, colour = TOS), size=2) + 
-  coord_equal() +
+  coord_equal(xlim = c(-1.3, 2.5)) +
   theme_bw()  +
   theme(axis.text.x = element_blank(),  
         axis.text.y = element_blank(), 
@@ -325,7 +325,7 @@ primary_ab_tos_plot = ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.3, seed = 7))
+             position = position_jitter(width = 0.3, height = 0.3, seed = 9))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_tos_small.png'), 
        plot = primary_ab_tos_plot, 
        width = 8, height = 8, dpi = 200)
@@ -341,7 +341,7 @@ primary_ab_fil_plot = ggplot() +
                    group=Filter),alpha=0.30) + 
   geom_point(data=primary_ab_scores, 
              aes(x=NMDS1,y=NMDS2, colour = Filter), size=2) + 
-  coord_equal() +
+  coord_equal(xlim = c(-1.3, 2.5)) +
   theme_bw()  +
   theme(axis.text.x = element_blank(),  
         axis.text.y = element_blank(), 
@@ -364,7 +364,7 @@ primary_ab_fil_plot = ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.3, seed = 7))
+             position = position_jitter(width = 0.3, height = 0.3, seed = 9))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_fil_small.png'), 
        plot = primary_ab_fil_plot, 
        width = 8, height = 8, dpi = 200)
@@ -380,7 +380,7 @@ primary_ab_gc_plot = ggplot() +
                    group=GlobalChange), alpha=0.30) + 
   geom_point(data=primary_ab_scores, 
              aes(x=NMDS1,y=NMDS2, colour = GlobalChange), size=2) + 
-  coord_equal() +
+  coord_equal(xlim = c(-1.3, 2.5)) +
   theme_bw()  +
   theme(axis.text.x = element_blank(),  
         axis.text.y = element_blank(), 
@@ -403,7 +403,7 @@ primary_ab_gc_plot = ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.3, seed = 7))
+             position = position_jitter(width = 0.3, height = 0.3, seed = 9))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_gc_small.png'), 
        plot = primary_ab_gc_plot, 
        width = 8, height = 8, dpi = 200)
@@ -419,7 +419,7 @@ primary_ab_pred_plot = ggplot() +
                    group=PredictiveCat), alpha=0.30) + 
   geom_point(data=primary_ab_scores, 
              aes(x=NMDS1,y=NMDS2, colour = PredictiveCat), size=2) + 
-  coord_equal() +
+  coord_equal(xlim = c(-1.3, 2.5)) +
   theme_bw()  +
   theme(axis.text.x = element_blank(),  
         axis.text.y = element_blank(), 
@@ -442,7 +442,7 @@ primary_ab_pred_plot = ggplot() +
                  label = species),
              alpha = 0.8,
              size = 3,
-             position = position_jitter(width = 0, height = 0.3, seed = 7))
+             position = position_jitter(width = 0.3, height = 0.3, seed = 9))
 ggsave(here('./Figures/Primary_abundance/primary_ab_plot_pred_small.png'), 
        plot = primary_ab_pred_plot, 
        width = 8, height = 9, dpi = 200)
@@ -461,15 +461,15 @@ review_nMDS_primary_abun6 =
   plot_grid(primary_ab_gc_plot, primary_ab_fil_plot, primary_ab_pred_plot, 
             primary_ab_tos_plot, primary_ab_eco_plot, primary_ab_tax_plot, 
             labels = c("A", "B", "C", "D", "E", "F"), 
-            label_x = 0.12, vjust = 3.5, ncol = 2, 
+            label_x = 0.15, vjust = 3.5, ncol = 2, 
             rel_widths = c(1, 1), align = "v")
 
 ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6_small.png'), 
        plot = review_nMDS_primary_abun6,
-       width = 15, height = 12, dpi = 200)
+       width = 16, height = 12, dpi = 200)
 ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6_large.png'), 
        plot = review_nMDS_primary_abun6,
-       width = 15, height = 12, dpi = 300)
+       width = 16, height = 12, dpi = 300)
 
 ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6.jpeg'), 
        plot = review_nMDS_primary_abun6, 
