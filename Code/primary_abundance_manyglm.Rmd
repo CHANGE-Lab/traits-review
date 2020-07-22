@@ -103,17 +103,17 @@ gc_coef_primabun = coef(mv_gc_nb_primabun)
 #figure out what the top traits are - recall traits are our 'species' here
 mv_gc_nb_primabun_species = 
   sort(mv_gc_nb_primabun_an$uni.test[2,],
-       decreasing=T,index.return=T)[1:3] #sort and select top species/traits
-mv_gc_nb_primabun_species$ix[1:3] #the column numbers of the top  impacted spp/traits
+       decreasing=T,index.return=T)[1:5] #sort and select top species/traits
+mv_gc_nb_primabun_species$ix[1:5] #the column numbers of the top  impacted spp/traits
 
 #Need > 50% deviance explainaed --> result = 25 traits explain > 50% deviance
-sum(mv_gc_nb_primabun_an$uni.test[2,mv_gc_nb_primabun_species$ix[1:5]])*100/
+sum(mv_gc_nb_primabun_an$uni.test[2,mv_gc_nb_primabun_species$ix[1:3]])*100/
   sum(mv_gc_nb_primabun_an$uni.test[2,]) #25 species explained = 53.65588% Deviance
 #3 species explained >90% deviance
 
 gc_top_primabun = 
   data.frame(dimnames(primary_abundance_species)[[2]][mv_gc_nb_primabun_species$ix[
-    1:3]]) #df with the names of the top 20 traits
+    1:5]]) #df with the names of the top 20 traits
 
 gc_top_primabun = gc_top_primabun %>% 
   dplyr::rename('traits' = names(gc_top_primabun))
@@ -122,7 +122,7 @@ str(gc_top_primabun)
 #These were traits: chr  "habitat" "morphology" "resource.acquisition"
 
 #How much deviance explained?
-write_csv(gc_top_primabun, "gc_top_primabun.csv") 
+write_csv(gc_top_primabun, "gc_top5_primabun.csv") 
 
 ```
 
@@ -224,8 +224,8 @@ pd_coef_primabun = coef(mv_pd_nb_primabun)
 #figure out what the top traits are - recall traits are our 'species' here
 mv_pd_nb_primabun_species = 
   sort(mv_pd_nb_primabun_an$uni.test[2,],
-       decreasing=T,index.return=T)[1:3] #sort and select top species/traits
-mv_pd_nb_primabun_species$ix[1:3] #the column numbers of the top  impacted spp/traits
+       decreasing=T,index.return=T)[1:5] #sort and select top species/traits
+mv_pd_nb_primabun_species$ix[1:5] #the column numbers of the top  impacted spp/traits
 
 #Need > 50% deviance explainaed --> result = 25 traits explain > 50% deviance
 sum(mv_pd_nb_primabun_an$uni.test[2,mv_pd_nb_primabun_species$ix[1:5]])*100/
@@ -234,7 +234,7 @@ sum(mv_pd_nb_primabun_an$uni.test[2,mv_pd_nb_primabun_species$ix[1:5]])*100/
 
 pd_top_primabun = 
   data.frame(dimnames(primary_abundance_species)[[2]][mv_pd_nb_primabun_species$ix[
-    1:3]]) #df with the names of the top 20 traits
+    1:5]]) #df with the names of the top 20 traits
 
 pd_top_primabun = pd_top_primabun %>% 
   dplyr::rename('traits' = names(pd_top_primabun))
@@ -243,7 +243,7 @@ str(pd_top_primabun)
 #These were traits: chr  "habitat" "morphology" "resource.acquisition"
 
 #How much deviance explained?
-write_csv(pd_top_primabun, "pd_top_primabun.csv") 
+write_csv(pd_top_primabun, "pd_top5_primabun.csv") 
 
 ```
 
