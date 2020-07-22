@@ -211,14 +211,21 @@ table(filter$filter)
 
 
 
+secondary_pa_dummy = 
+  read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_pa_models.csv'))
 
+secondary_pa_dummy %>% 
+  filter(size == 1)
+secondary_dummy_traits = secondary_pa_dummy[,11:ncol(secondary_pa_dummy)]
+temp = secondary_dummy_traits %>% 
+  select(-size)
+secondary_all_traits_count = colSums(temp)
+rm(temp)
+mean(secondary_all_traits_count)
+secondary_all_traits_count = x[!secondary_all_traits_count == 'size']
 
-
-
-
-
-
-
+size_based_traits = 
+  read_csv(here('./Data/Cole-Original-Data/size_based_traits.csv'))
 
 
 
