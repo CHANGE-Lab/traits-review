@@ -54,7 +54,7 @@ artifacts of conflict,artifacts of conflict,1,Behavioural,activity,aggression,,a
 altitude,altitude,0,Behavioural,habitat,altitude,,altitude,altitude,,,,,CB
 altitudinal affinity,altitudinal affinity,0,Behavioural,habitat,altitude,,altitude,altitudinal affinity,,,,,CB
 altitudinal preferences,altitudinal preferences,0,Behavioural,habitat,altitude,,altitude,altitudinal preferences,,,,,CB
-root conentrations of Al,root concentrations of Al,0,Morphological,composition,aluminum,,aluminum,root concentrations of Al,,,,,CB
+root conentrations of Al,root concentrations of Al,0,Morphology,composition,aluminum,,aluminum,root concentrations of Al,,,,,CB
 ammonia excretion rate,ammonia excretion rate,0,Behavioural,resource acquisition,amonia excretion,,amonia excretion,ammonia excretion rate,,,,,NH
 scape length,scape length,0,Morphology,morphology,antennae,,antennae,scape length,,,,,CB
 swimming antennae length ratio to body size,swimming antennae length ratio to body size,0,Morphology,morphology,antennae,,antennae,swimming antennae length ratio to body size,,,,,CB
@@ -135,75 +135,75 @@ buds,buds,0,Life History,growth,buds,,buds,buds,,,,,CB
 winter buds size,winter buds size,0,Life History,growth,buds,,buds,winter buds size,,,,,CB
 buoyance,buoyance,0,Morphology,morphology,buoyancy,,buoyancy,buoyance,,1,NH: typo,,NH
 buoyancy,buoyancy,0,Morphology,morphology,buoyancy,,buoyancy,buoyancy,,1,NH: combine typo with this one,,NH
-leaf concentrations of Cd,leaf concentrations of Cd,0,Morphological,composition,cadmium,,cadmium,leaf concentrations of Cd,,,,,CB
-Ca%,Ca%,0,Morphological,composition,calcium,,calcium,Ca%,,,,,CB
-concentration Ca in leaves,concentration Ca in leaves,0,Morphological,composition,calcium,,calcium,concentration Ca in leaves,,,,,CB
-root conentrations of Ca,root concentrations of Ca,0,Morphological,composition,calcium,,calcium,root concentrations of Ca,,,,,CB
+leaf concentrations of Cd,leaf concentrations of Cd,0,Morphology,composition,cadmium,,cadmium,leaf concentrations of Cd,,,,,CB
+Ca%,Ca%,0,Morphology,composition,calcium,,calcium,Ca%,,,,,CB
+concentration Ca in leaves,concentration Ca in leaves,0,Morphology,composition,calcium,,calcium,concentration Ca in leaves,,,,,CB
+root conentrations of Ca,root concentrations of Ca,0,Morphology,composition,calcium,,calcium,root concentrations of Ca,,,,,CB
 canopy arch,canopy arch,0,Behavioural,habitat,canopy,,canopy,canopy arch,,1,"seems to be providing habitat, niche space?",secondary,NH
 canopy height,canopy height,0,Behavioural,habitat,canopy,,canopy,canopy height,,1,"seems to be providing habitat, niche space?",secondary,NH
 canopy structure,canopy structure,0,Behavioural,habitat,canopy,,canopy,canopy structure,,1,"seems to be providing habitat, niche space?",secondary,NH
-carb stoarage in root,carb storage in root,0,Morphological,composition,carbohydrate,root traits,root traits,root traits,,,,,CB
-carb structure in long tap root,carb structure in long tap root,0,Morphological,composition,carbohydrate,root traits,root traits,root traits,,,,,CB
-carb structure in step,carb structure in step,0,Morphological,composition,carbohydrate,,carbohydrate,carb structure in step,,,,,CB
-fine-root C:N mass ratio,fine-root C:N mass ratio,0,Morphological,composition,carbon,nitrogen,nitrogen,nitrogen,root traits,,,,CB
-av leaf C/N ratio,av leaf C/N ratio,0,Morphological,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
-C:N ratio,C:N ratio,0,Morphological,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
-C:N ratio of the leaves,C:N ratio of the leaves,0,Morphological,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
-foliage C:N ratio,foliage C:N ratio,0,Morphological,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
-foliar C:N ratio,foliar C:N ratio,0,Morphological,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
-folirar C: N ration,foliar C: N ration,0,Morphological,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
-leaf C:N,leaf C:N,0,Morphological,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
-leaf C:N mass ratio,leaf C:N mass ratio,0,Morphological,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
-leaf C:N ratio,leaf C:N ratio,0,Morphological,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
-13C isotope ratio,13C isotope ratio,0,Morphological,composition,carbon,,carbon,13C isotope ratio,,,,,CB
-C body concentration,C body concentration,0,Morphological,composition,carbon,,carbon,C body concentration,,,,,CB
-C concentration,C concentration,0,Morphological,composition,carbon,,carbon,C concentration,,,,,CB
-C content,C content,0,Morphological,composition,carbon,,carbon,C content,,,,,CB
-C isotope composition,C isotope composition,0,Morphological,composition,carbon,,carbon,C isotope composition,,,,,CB
-C isotope ratio,C isotope ratio,0,Morphological,composition,carbon,,carbon,C isotope ratio,,,,,CB
-C13,C13,0,Morphological,composition,carbon,,carbon,C13,,,,,CB
-C13 isotopic composition,C13 isotopic composition,0,Morphological,composition,carbon,,carbon,C13 isotopic composition,,,,,CB
-carbon,carbon,0,Morphological,composition,carbon,,carbon,carbon,,,,,CB
-carbon isotope ratio,carbon isotope ratio,0,Morphological,composition,carbon,,carbon,carbon isotope ratio,,,,,CB
-carbon isotope ratios of leaves,carbon isotope ratios of leaves,0,Morphological,composition,carbon,,carbon,carbon isotope ratios of leaves,,,,,CB
-concentration of C,concentration of C,0,Morphological,composition,carbon,,carbon,concentration of C,,,,,CB
-fine-root carbon content,fine-root carbon content,0,Morphological,composition,carbon,,carbon,fine-root carbon content,root traits,,,,CB
-foliar C-13,foliar C-13,0,Morphological,composition,carbon,,carbon,foliar C-13,,,,,CB
-foliar C13 composition,foliar C13 composition,0,Morphological,composition,carbon,,carbon,foliar C13 composition,,,,,CB
-foliar carbon,foliar carbon,0,Morphological,composition,carbon,,carbon,foliar carbon,,,,,CB
-leaf C,leaf C,0,Morphological,composition,carbon,,carbon,leaf C,,,,,CB
-leaf C content,leaf C content,0,Morphological,composition,carbon,,carbon,leaf C content,,,,,CB
-leaf C dry mah percentage,leaf C dry mah percentage,0,Morphological,composition,carbon,,carbon,leaf C dry mah percentage,,,,,CB
-leaf C isotope ratio,leaf C isotope ratio,0,Morphological,composition,carbon,,carbon,leaf C isotope ratio,,,,,CB
-leaf C13,leaf C13,0,Morphological,composition,carbon,,carbon,leaf C13,,,,,CB
-leaf C13 composition,leaf C13 composition,0,Morphological,composition,carbon,,carbon,leaf C13 composition,,,,,CB
-leaf carbon concentration,leaf carbon concentration,0,Morphological,composition,carbon,,carbon,leaf carbon concentration,,,,,CB
-leaf carbon isotopic discrimination,leaf carbon isotopic discrimination,0,Morphological,composition,carbon,,carbon,leaf carbon isotopic discrimination,,,,,CB
-leaf carbon isotopic ratio,leaf carbon isotopic ratio,0,Morphological,composition,carbon,,carbon,leaf carbon isotopic ratio,,,,,CB
-leaf carbon mass per unit area,leaf carbon mass per unit area,0,Morphological,composition,carbon,,carbon,leaf carbon mass per unit area,,,,,CB
-leaf carbon per mass,leaf carbon per mass,0,Morphological,composition,carbon,,carbon,leaf carbon per mass,,,,,CB
-mean leaf C concentration,mean leaf C concentration,0,Morphological,composition,carbon,,carbon,mean leaf C concentration,,,1,should all the elements maybe become tertiary and another secondary category like 'element' or something be created?,CB
-mean leaf C isotope ratio,mean leaf C isotope ratio,0,Morphological,composition,carbon,,carbon,mean leaf C isotope ratio,,,,,CB
-potential C mineralization,potential C mineralization,0,Morphological,composition,carbon,,carbon,potential C mineralization,,,,,CB
-root C content,root C content,0,Morphological,composition,carbon,,carbon,root C content,,,,,CB
-root C:N ratio,root C:N ratio,0,Morphological,composition,carbon,,carbon,root C:N ratio,,,,,CB
-root carbon,root carbon,0,Morphological,composition,carbon,,carbon,root carbon,,,,,CB
-root conentrations of C,root concentrations of C,0,Morphological,composition,carbon,,carbon,root concentrations of C,,,,,CB
-soluble C,soluble C,0,Morphological,composition,carbon,,carbon,soluble C,,,,,CB
-stable isotope mean of C values,stable isotope mean of C values,0,Morphological,composition,carbon,,carbon,stable isotope mean of C values,,,,,CB
+carb stoarage in root,carb storage in root,0,Morphology,composition,carbohydrate,root traits,root traits,root traits,,,,,CB
+carb structure in long tap root,carb structure in long tap root,0,Morphology,composition,carbohydrate,root traits,root traits,root traits,,,,,CB
+carb structure in step,carb structure in step,0,Morphology,composition,carbohydrate,,carbohydrate,carb structure in step,,,,,CB
+fine-root C:N mass ratio,fine-root C:N mass ratio,0,Morphology,composition,carbon,nitrogen,nitrogen,nitrogen,root traits,,,,CB
+av leaf C/N ratio,av leaf C/N ratio,0,Morphology,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
+C:N ratio,C:N ratio,0,Morphology,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
+C:N ratio of the leaves,C:N ratio of the leaves,0,Morphology,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
+foliage C:N ratio,foliage C:N ratio,0,Morphology,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
+foliar C:N ratio,foliar C:N ratio,0,Morphology,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
+folirar C: N ration,foliar C: N ration,0,Morphology,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
+leaf C:N,leaf C:N,0,Morphology,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
+leaf C:N mass ratio,leaf C:N mass ratio,0,Morphology,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
+leaf C:N ratio,leaf C:N ratio,0,Morphology,composition,carbon,nitrogen,nitrogen,nitrogen,,,,,CB
+13C isotope ratio,13C isotope ratio,0,Morphology,composition,carbon,,carbon,13C isotope ratio,,,,,CB
+C body concentration,C body concentration,0,Morphology,composition,carbon,,carbon,C body concentration,,,,,CB
+C concentration,C concentration,0,Morphology,composition,carbon,,carbon,C concentration,,,,,CB
+C content,C content,0,Morphology,composition,carbon,,carbon,C content,,,,,CB
+C isotope composition,C isotope composition,0,Morphology,composition,carbon,,carbon,C isotope composition,,,,,CB
+C isotope ratio,C isotope ratio,0,Morphology,composition,carbon,,carbon,C isotope ratio,,,,,CB
+C13,C13,0,Morphology,composition,carbon,,carbon,C13,,,,,CB
+C13 isotopic composition,C13 isotopic composition,0,Morphology,composition,carbon,,carbon,C13 isotopic composition,,,,,CB
+carbon,carbon,0,Morphology,composition,carbon,,carbon,carbon,,,,,CB
+carbon isotope ratio,carbon isotope ratio,0,Morphology,composition,carbon,,carbon,carbon isotope ratio,,,,,CB
+carbon isotope ratios of leaves,carbon isotope ratios of leaves,0,Morphology,composition,carbon,,carbon,carbon isotope ratios of leaves,,,,,CB
+concentration of C,concentration of C,0,Morphology,composition,carbon,,carbon,concentration of C,,,,,CB
+fine-root carbon content,fine-root carbon content,0,Morphology,composition,carbon,,carbon,fine-root carbon content,root traits,,,,CB
+foliar C-13,foliar C-13,0,Morphology,composition,carbon,,carbon,foliar C-13,,,,,CB
+foliar C13 composition,foliar C13 composition,0,Morphology,composition,carbon,,carbon,foliar C13 composition,,,,,CB
+foliar carbon,foliar carbon,0,Morphology,composition,carbon,,carbon,foliar carbon,,,,,CB
+leaf C,leaf C,0,Morphology,composition,carbon,,carbon,leaf C,,,,,CB
+leaf C content,leaf C content,0,Morphology,composition,carbon,,carbon,leaf C content,,,,,CB
+leaf C dry mah percentage,leaf C dry mah percentage,0,Morphology,composition,carbon,,carbon,leaf C dry mah percentage,,,,,CB
+leaf C isotope ratio,leaf C isotope ratio,0,Morphology,composition,carbon,,carbon,leaf C isotope ratio,,,,,CB
+leaf C13,leaf C13,0,Morphology,composition,carbon,,carbon,leaf C13,,,,,CB
+leaf C13 composition,leaf C13 composition,0,Morphology,composition,carbon,,carbon,leaf C13 composition,,,,,CB
+leaf carbon concentration,leaf carbon concentration,0,Morphology,composition,carbon,,carbon,leaf carbon concentration,,,,,CB
+leaf carbon isotopic discrimination,leaf carbon isotopic discrimination,0,Morphology,composition,carbon,,carbon,leaf carbon isotopic discrimination,,,,,CB
+leaf carbon isotopic ratio,leaf carbon isotopic ratio,0,Morphology,composition,carbon,,carbon,leaf carbon isotopic ratio,,,,,CB
+leaf carbon mass per unit area,leaf carbon mass per unit area,0,Morphology,composition,carbon,,carbon,leaf carbon mass per unit area,,,,,CB
+leaf carbon per mass,leaf carbon per mass,0,Morphology,composition,carbon,,carbon,leaf carbon per mass,,,,,CB
+mean leaf C concentration,mean leaf C concentration,0,Morphology,composition,carbon,,carbon,mean leaf C concentration,,,1,should all the elements maybe become tertiary and another secondary category like 'element' or something be created?,CB
+mean leaf C isotope ratio,mean leaf C isotope ratio,0,Morphology,composition,carbon,,carbon,mean leaf C isotope ratio,,,,,CB
+potential C mineralization,potential C mineralization,0,Morphology,composition,carbon,,carbon,potential C mineralization,,,,,CB
+root C content,root C content,0,Morphology,composition,carbon,,carbon,root C content,,,,,CB
+root C:N ratio,root C:N ratio,0,Morphology,composition,carbon,,carbon,root C:N ratio,,,,,CB
+root carbon,root carbon,0,Morphology,composition,carbon,,carbon,root carbon,,,,,CB
+root conentrations of C,root concentrations of C,0,Morphology,composition,carbon,,carbon,root concentrations of C,,,,,CB
+soluble C,soluble C,0,Morphology,composition,carbon,,carbon,soluble C,,,,,CB
+stable isotope mean of C values,stable isotope mean of C values,0,Morphology,composition,carbon,,carbon,stable isotope mean of C values,,,,,CB
 cell biovolumn,cell biovolume,0,Morphology,morphology,cell biovolume,,cell biovolume,cell biovolume,,1,typo,,NH
-cellulose %,cellulose %,0,Morphological,composition,cellulose,,cellulose,cellulose %,,,,,CB
-hemicellulose %,hemicellulose %,0,Morphological,composition,cellulose,,cellulose,hemicellulose %,,,,,CB
-chemcial composition,chemical composition,0,Morphological,composition,chemcial composition,,chemcial composition,chemical composition,,,,,CB
-chemical structural-compositional similarity,chemical structural-compositional similarity,0,Morphological,composition,chemcial composition,,chemcial composition,chemical structural-compositional similarity,,,,,CB
-chl a b anc total concentrations,chl a b anc total concentrations,0,Morphological,composition,chlorophyll,,chlorophyll,chl a b anc total concentrations,,,,,CB
-chlorophyll a:b ratio,chlorophyll a:b ratio,0,Morphological,composition,chlorophyll,,chlorophyll,chlorophyll a:b ratio,,,,,CB
-chlorophyll b,chlorophyll b,0,Morphological,composition,chlorophyll,,chlorophyll,chlorophyll b,,,,,CB
-chlorphyll a,chlorophyll a,0,Morphological,composition,chlorophyll,,chlorophyll,chlorophyll a,,,,,CB
-laminar total chlorophyll,laminar total chlorophyll,0,Morphological,composition,chlorophyll,,chlorophyll,laminar total chlorophyll,,,,,CB
-leaf chlorophyll content,leaf chlorophyll content,0,Morphological,composition,chlorophyll,,chlorophyll,leaf chlorophyll content,,,,,CB
-total cholorphyll,total chlorophyll,0,Morphological,composition,chlorophyll,,chlorophyll,total chlorophyll,,,,,CB
-root conentrations of Co,root concentrations of Co,0,Morphological,composition,cobalt,,cobalt,root concentrations of Co,,,,,CB
+cellulose %,cellulose %,0,Morphology,composition,cellulose,,cellulose,cellulose %,,,,,CB
+hemicellulose %,hemicellulose %,0,Morphology,composition,cellulose,,cellulose,hemicellulose %,,,,,CB
+chemcial composition,chemical composition,0,Morphology,composition,chemcial composition,,chemcial composition,chemical composition,,,,,CB
+chemical structural-compositional similarity,chemical structural-compositional similarity,0,Morphology,composition,chemcial composition,,chemcial composition,chemical structural-compositional similarity,,,,,CB
+chl a b anc total concentrations,chl a b anc total concentrations,0,Morphology,composition,chlorophyll,,chlorophyll,chl a b anc total concentrations,,,,,CB
+chlorophyll a:b ratio,chlorophyll a:b ratio,0,Morphology,composition,chlorophyll,,chlorophyll,chlorophyll a:b ratio,,,,,CB
+chlorophyll b,chlorophyll b,0,Morphology,composition,chlorophyll,,chlorophyll,chlorophyll b,,,,,CB
+chlorphyll a,chlorophyll a,0,Morphology,composition,chlorophyll,,chlorophyll,chlorophyll a,,,,,CB
+laminar total chlorophyll,laminar total chlorophyll,0,Morphology,composition,chlorophyll,,chlorophyll,laminar total chlorophyll,,,,,CB
+leaf chlorophyll content,leaf chlorophyll content,0,Morphology,composition,chlorophyll,,chlorophyll,leaf chlorophyll content,,,,,CB
+total cholorphyll,total chlorophyll,0,Morphology,composition,chlorophyll,,chlorophyll,total chlorophyll,,,,,CB
+root conentrations of Co,root concentrations of Co,0,Morphology,composition,cobalt,,cobalt,root concentrations of Co,,,,,CB
 colonization,colonization,0,Behavioural,activity,colonization,,colonization,colonization,,,,,CB
 colonization ability,colonization ability,0,Behavioural,activity,colonization,,colonization,colonization ability,,,,,CB
 colonization rates,colonization rates,0,Behavioural,activity,colonization,,colonization,colonization rates,,,,,CB
@@ -284,9 +284,9 @@ mean number of feeding bouts required to take a blood meal,mean number of feedin
 patch detection time,patch detection time,0,Behavioural,resource acquisition,consumption rate,,consumption rate,patch detection time,,,,,NH
 rate of energy consumption after emergence,rate of energy consumption after emergence,0,Behavioural,resource acquisition,consumption rate,,consumption rate,rate of energy consumption after emergence,,,,,NH
 time to consume new food,time to consume new food,0,Behavioural,resource acquisition,consumption rate,,consumption rate,time to consume new food,,,,,NH
-Cu,Cu,0,Morphological,composition,copper,,copper,Cu,,,,,CB
-root conentrations of Cu,root concentrations of Cu,0,Morphological,composition,copper,,copper,root concentrations of Cu,,,,,CB
-cortisol concentrations,cortisol concentrations,0,Morphological,composition,cortisol,,cortisol,cortisol concentrations,activity,,,,CB
+Cu,Cu,0,Morphology,composition,copper,,copper,Cu,,,,,CB
+root conentrations of Cu,root concentrations of Cu,0,Morphology,composition,copper,,copper,root concentrations of Cu,,,,,CB
+cortisol concentrations,cortisol concentrations,0,Morphology,composition,cortisol,,cortisol,cortisol concentrations,activity,,,,CB
 camouflage,camouflage,0,Behavioural,activity,defense,crypsis,crypsis,crypsis,,,,,CB
 defence behaviour,defense behaviour,0,Behavioural,activity,defense,,defense,defense behaviour,,,,,CB
 defence mechanism,defense mechanism,0,Behavioural,activity,defense,,defense,defense mechanism,,,,,CB
@@ -565,25 +565,25 @@ reproductive effort,reproductive effort,0,Life History ,life history,energy allo
 reproductive investment,reproductive investment,0,Life History ,life history,energy allocation,,energy allocation,reproductive investment,,,,,CB
 size specific reproductive investment,size specific reproductive investment,0,Life History ,life history,energy allocation,,energy allocation,size specific reproductive investment,,,,,CB
 need to forage during dispersal,need to forage during dispersal,0,Behavioural,resource acquisition,energy allocation,,energy allocation,need to forage during dispersal,,,,,NH
-ash,ash,0,Morphological,composition,energy density,,energy density,ash,,,,,CB
-ash content,ash content,0,Morphological,composition,energy density,,energy density,ash content,,,,,CB
-body dry mass,body dry mass,0,Morphological,composition,energy density,,energy density,body dry mass,,,,,CB
-body size:mass ratio,body size:mass ratio,0,Morphological,composition,energy density,,energy density,body size:mass ratio,,,,,CB
-dry matter content,dry matter content,0,Morphological,composition,energy density,,energy density,dry matter content,,,,,CB
-dry pulp:seed mass,dry pulp:seed mass,0,Morphological,composition,energy density,,energy density,dry pulp:seed mass,,,,,CB
-dry weight ratios of pulp to seed,dry weight ratios of pulp to seed,0,Morphological,composition,energy density,,energy density,dry weight ratios of pulp to seed,,,,,CB
-energy density,energy density,0,Morphological,composition,energy density,,energy density,energy density,,,,,CB
-energy value,energy value,0,Morphological,composition,energy density,,energy density,energy value,,,,,CB
-leaf ash contents,leaf ash contents,0,Morphological,composition,energy density,,energy density,leaf ash contents,,,,,CB
-leaf dry mass,leaf dry mass,0,Morphological,composition,energy density,,energy density,leaf dry mass,,,,,CB
-leaf dry weight,leaf dry weight,0,Morphological,composition,energy density,,energy density,leaf dry weight,,,,,CB
-leaf dry-matter content,leaf dry-matter content,0,Morphological,composition,energy density,,energy density,leaf dry-matter content,,,,,CB
-ratio of leaf areea to dry weight,ratio of leaf area to dry weight,0,Morphological,composition,energy density,,energy density,ratio of leaf area to dry weight,,,,,CB
-root dry matter content,root dry matter content,0,Morphological,composition,energy density,,energy density,root dry matter content,,,,,CB
-root mass ratio,root mass ratio,0,Morphological,composition,energy density,,energy density,root mass ratio,,,,,CB
-SDMC,SDMC,1,Morphological,composition,energy density,,energy density,SDMC,,1,,CB: stem dry matter content,CB
-stem dry mass content,stem dry mass content,0,Morphological,composition,energy density,,energy density,stem dry mass content,,,,,CB
-stem dry matter content,stem dry matter content,0,Morphological,composition,energy density,,energy density,stem dry matter content,,,,,CB
+ash,ash,0,Morphology,composition,energy density,,energy density,ash,,,,,CB
+ash content,ash content,0,Morphology,composition,energy density,,energy density,ash content,,,,,CB
+body dry mass,body dry mass,0,Morphology,composition,energy density,,energy density,body dry mass,,,,,CB
+body size:mass ratio,body size:mass ratio,0,Morphology,composition,energy density,,energy density,body size:mass ratio,,,,,CB
+dry matter content,dry matter content,0,Morphology,composition,energy density,,energy density,dry matter content,,,,,CB
+dry pulp:seed mass,dry pulp:seed mass,0,Morphology,composition,energy density,,energy density,dry pulp:seed mass,,,,,CB
+dry weight ratios of pulp to seed,dry weight ratios of pulp to seed,0,Morphology,composition,energy density,,energy density,dry weight ratios of pulp to seed,,,,,CB
+energy density,energy density,0,Morphology,composition,energy density,,energy density,energy density,,,,,CB
+energy value,energy value,0,Morphology,composition,energy density,,energy density,energy value,,,,,CB
+leaf ash contents,leaf ash contents,0,Morphology,composition,energy density,,energy density,leaf ash contents,,,,,CB
+leaf dry mass,leaf dry mass,0,Morphology,composition,energy density,,energy density,leaf dry mass,,,,,CB
+leaf dry weight,leaf dry weight,0,Morphology,composition,energy density,,energy density,leaf dry weight,,,,,CB
+leaf dry-matter content,leaf dry-matter content,0,Morphology,composition,energy density,,energy density,leaf dry-matter content,,,,,CB
+ratio of leaf areea to dry weight,ratio of leaf area to dry weight,0,Morphology,composition,energy density,,energy density,ratio of leaf area to dry weight,,,,,CB
+root dry matter content,root dry matter content,0,Morphology,composition,energy density,,energy density,root dry matter content,,,,,CB
+root mass ratio,root mass ratio,0,Morphology,composition,energy density,,energy density,root mass ratio,,,,,CB
+SDMC,SDMC,1,Morphology,composition,energy density,,energy density,SDMC,,1,,CB: stem dry matter content,CB
+stem dry mass content,stem dry mass content,0,Morphology,composition,energy density,,energy density,stem dry mass content,,,,,CB
+stem dry matter content,stem dry matter content,0,Morphology,composition,energy density,,energy density,stem dry matter content,,,,,CB
 fruit width,fruit width,0,Life History ,life history,fecundity,germination,germination,germination,,,,,CB
 germinability,germinability,0,Life History ,life history,fecundity,germination,germination,germination,,,,,CB
 germination,germination,0,Life History ,life history,fecundity,germination,germination,germination,,,,,CB
@@ -765,8 +765,8 @@ capture strategy,capture strategy,0,Behavioural,resource acquisition,feeding mod
 capture tools,capture tools,0,Behavioural,resource acquisition,feeding mode,,foraging mode,capture tools,,,,,CB
 collective foraging strategy,collective foraging strategy,0,Behavioural,resource acquisition,feeding mode,,foraging mode,collective foraging strategy,,,,,CB
 timing of foraging season,timing of foraging season,0,Behavioural,resource acquisition,feeding mode,,foraging mode,timing of foraging season,,,,,CB
-fiber,fiber,0,Morphological,composition,fiber,,fiber,fiber,,,,,CB
-fibrouses,fibrouses,0,Morphological,composition,fiber,,fiber,fibrouses,,,,,CB
+fiber,fiber,0,Morphology,composition,fiber,,fiber,fiber,,,,,CB
+fibrouses,fibrouses,0,Morphology,composition,fiber,,fiber,fibrouses,,,,,CB
 anal fin height,anal fin height,0,Morphology,morphology,fin,,fin,anal fin height,,,,,NH
 anal fin length,anal fin length,0,Morphology,morphology,fin,,fin,anal fin length,,,,,NH
 aspect ratio of pectoral fin,aspect ratio of pectoral fin,0,Morphology,morphology,fin,,fin,aspect ratio of pectoral fin,,,,,NH
@@ -868,9 +868,9 @@ leaf surface,leaf surface,0,Morphology,morphology,integument,,integument,leaf su
 leaf surface texture,leaf surface texture,0,Morphology,morphology,integument,,integument,leaf surface texture,,1,"NH: as with fins, any mention of surface area and area need to be combined",,NH
 leaf texture,leaf texture,0,Morphology,morphology,integument,,integument,leaf texture,,,,,NH
 trunk bark thickness,trunk bark thickness,0,Morphology,morphology,integument,,integument,trunk bark thickness,,,,,NH
-Fe,Fe,0,Morphological,composition,iron,,iron,Fe,,,,,CB
-Fe weight,Fe weight,0,Morphological,composition,iron,,iron,Fe weight,,,,,CB
-root conentrations of Fe,root concentrations of Fe,0,Morphological,composition,iron,,iron,root concentrations of Fe,,,,,CB
+Fe,Fe,0,Morphology,composition,iron,,iron,Fe,,,,,CB
+Fe weight,Fe weight,0,Morphology,composition,iron,,iron,Fe weight,,,,,CB
+root conentrations of Fe,root concentrations of Fe,0,Morphology,composition,iron,,iron,root concentrations of Fe,,,,,CB
 iron sensitivity as percent of relative growth rate,iron sensitivity as percent of relative growth rate,0,Behavioural,resource acquisition,iron,,iron,iron sensitivity as percent of relative growth rate,,,,,NH
 developmental time,developmental time,0,Life History,growth,larval/juvenile stage length,,larval/juvenile stage length,developmental time,,,,,CB
 duration of juvenile stage,duration of juvenile stage,0,Life History,growth,larval/juvenile stage length,,larval/juvenile stage length,duration of juvenile stage,,,,,CB
@@ -883,8 +883,8 @@ weaning age,weaning age,0,Life History,growth,larval/juvenile stage length,,larv
 capacity for lateral spread,capacity for lateral spread,0,Life History,growth,lateral spread,,lateral spread,capacity for lateral spread,,,,,CB
 lateral spread,lateral spread,0,Life History,growth,lateral spread,,lateral spread,lateral spread,,,,,CB
 lateral spread rate,lateral spread rate,0,Life History,growth,lateral spread,,lateral spread,lateral spread rate,,,,,CB
-latex,latex,0,Morphological,composition,latex,,latex,latex,,,,,CB
-latex content,latex content,0,Morphological,composition,latex,,latex,latex content,,,,,CB
+latex,latex,0,Morphology,composition,latex,,latex,latex,,,,,CB
+latex content,latex content,0,Morphology,composition,latex,,latex,latex content,,,,,CB
 leaf size,leaf size,0,Morphology,morphology,leaf area,size,size,size,,,,,NH
 leaf width,leaf width,0,Morphology,morphology,leaf area,size,size,size,,,,,NH
 leaf widths,leaf widths,0,Morphology,morphology,leaf area,size,size,size,,,,,NH
@@ -943,9 +943,9 @@ leaf thickness,leaf thickness,0,Morphology,morphology,leaf shape,,leaf shape,lea
 leaf type,leaf type,0,Morphology,morphology,leaf shape,,leaf shape,leaf type,,,,,NH
 leaf width: length ratio,leaf width: length ratio,0,Morphology,morphology,leaf shape,,leaf shape,leaf width: length ratio,,,,,NH
 reduced leaves,reduced leaves,0,Morphology,morphology,leaf shape,,leaf shape,reduced leaves,,,,,NH
-leaf conductivity,leaf conductivity,0,Morphological,composition,leaf traits,,leaf traits,leaf conductivity,,1,1,secondary 'leaf traits',CB
-leaf conssistency,leaf consistency,0,Morphological,composition,leaf traits,,leaf traits,leaf consistency,,1,1,secondary 'leaf traits',CB
-leaf content %,leaf content %,0,Morphological,composition,leaf traits,,leaf traits,leaf content %,,1,1,secondary 'leaf traits',CB
+leaf conductivity,leaf conductivity,0,Morphology,composition,leaf traits,,leaf traits,leaf conductivity,,1,1,secondary 'leaf traits',CB
+leaf conssistency,leaf consistency,0,Morphology,composition,leaf traits,,leaf traits,leaf consistency,,1,1,secondary 'leaf traits',CB
+leaf content %,leaf content %,0,Morphology,composition,leaf traits,,leaf traits,leaf content %,,1,1,secondary 'leaf traits',CB
 leaf deciduousness,leaf deciduousness,0,Life History,growth,leaf traits,deciduousness,deciduousness,deciduousness,,,,,CB
 deciduouness,deciduousness,0,Life History,growth,leaf traits,deciduousness,deciduousness,deciduousness,,1,"NH: For primary, I view this more as a life history strategy, and for secondary suggesting this is to do with resource preservation/survival, also typo --> ""deciduousness""",,NH
 leaf phenology,leaf phenology,0,Life History,growth,leaf traits,phenology,phenology,phenology,,,,,CB
@@ -1017,22 +1017,22 @@ light uptake parameters,light uptake parameters,0,Physiological,resource acquisi
 shade tolerance,shade tolerance,0,Physiological,resource acquisition,light requirement,,light requirement,shade tolerance,,,,,NH
 shading,shading,0,Physiological,resource acquisition,light requirement,,light requirement,shading,,,,,NH
 shading preference,shading preference,0,Physiological,resource acquisition,light requirement,,light requirement,shading preference,,,,,NH
-foliar lignin percentage,foliar lignin percentage,0,Morphological,composition,lignin,,lignin,foliar lignin percentage,,,,,CB
-lignin%,lignin%,0,Morphological,composition,lignin,,lignin,lignin%,,,,,CB
-amount of subcutaneous fat,amount of subcutaneous fat,0,Morphological,composition,lipid,,lipid,amount of subcutaneous fat,,,,,CB
-body fat%,body fat%,0,Morphological,composition,lipid,,lipid,body fat%,,,,,CB
-fat,fat,0,Morphological,composition,lipid,,lipid,fat,,,,,CB
-highly unsaturated fatty acid content,highly unsaturated fatty acid content,0,Morphological,composition,lipid,,lipid,highly unsaturated fatty acid content,,,,,CB
-lipid body concentration,lipid body concentration,0,Morphological,composition,lipid,,lipid,lipid body concentration,,,,,CB
-lipid content,lipid content,0,Morphological,composition,lipid,,lipid,lipid content,,,,,CB
-muscle lipid content,muscle lipid content,0,Morphological,composition,lipid,,lipid,muscle lipid content,,,,,CB
-oil content,oil content,0,Morphological,composition,lipid,,lipid,oil content,,,,,CB
-seed oil,seed oil,0,Morphological,composition,lipid,,lipid,seed oil,,,,,CB
+foliar lignin percentage,foliar lignin percentage,0,Morphology,composition,lignin,,lignin,foliar lignin percentage,,,,,CB
+lignin%,lignin%,0,Morphology,composition,lignin,,lignin,lignin%,,,,,CB
+amount of subcutaneous fat,amount of subcutaneous fat,0,Morphology,composition,lipid,,lipid,amount of subcutaneous fat,,,,,CB
+body fat%,body fat%,0,Morphology,composition,lipid,,lipid,body fat%,,,,,CB
+fat,fat,0,Morphology,composition,lipid,,lipid,fat,,,,,CB
+highly unsaturated fatty acid content,highly unsaturated fatty acid content,0,Morphology,composition,lipid,,lipid,highly unsaturated fatty acid content,,,,,CB
+lipid body concentration,lipid body concentration,0,Morphology,composition,lipid,,lipid,lipid body concentration,,,,,CB
+lipid content,lipid content,0,Morphology,composition,lipid,,lipid,lipid content,,,,,CB
+muscle lipid content,muscle lipid content,0,Morphology,composition,lipid,,lipid,muscle lipid content,,,,,CB
+oil content,oil content,0,Morphology,composition,lipid,,lipid,oil content,,,,,CB
+seed oil,seed oil,0,Morphology,composition,lipid,,lipid,seed oil,,,,,CB
 density of liver-free body,density of liver-free body,0,Morphology,morphology,liver-free body,,liver-free body,density of liver-free body,,,,,NH
 volume of liver-free body,volume of liver-free body,0,Morphology,morphology,liver-free body,,liver-free body,volume of liver-free body,,1,"NH: seems to be ""condition"" to me, and the complement to hepatosomatic measurements.",,NH
-concentration Mg in leaves,concentration Mg in leaves,0,Morphological,composition,magnesium,,magnesium,concentration Mg in leaves,,,,,CB
-Mg%,Mg%,0,Morphological,composition,magnesium,,magnesium,Mg%,,,,,CB
-root conentrations of Mg,root concentrations of Mg,0,Morphological,composition,magnesium,,magnesium,root concentrations of Mg,,,,,CB
+concentration Mg in leaves,concentration Mg in leaves,0,Morphology,composition,magnesium,,magnesium,concentration Mg in leaves,,,,,CB
+Mg%,Mg%,0,Morphology,composition,magnesium,,magnesium,Mg%,,,,,CB
+root conentrations of Mg,root concentrations of Mg,0,Morphology,composition,magnesium,,magnesium,root concentrations of Mg,,,,,CB
 conservation status,conservation status,0,Life History,abundance,managed species,conservation status,conservation status,conservation status,,,,,CB
 species status,species status,1,Life History,abundance,managed species,conservation status,conservation status,conservation status,,1,,CB: endangered status,CB
 commercially fished,commercially fished,0,Life History,survival,managed species,,managed species,commercially fished,,,,,NH
@@ -1040,9 +1040,9 @@ economic importance,economic importance,0,Life History,survival,managed species,
 fishing mortality rate,fishing mortality rate,0,Life History,survival,managed species,,managed species,fishing mortality rate,,,,,NH
 game fished,game fished,0,Life History,survival,managed species,,managed species,game fished,,,,,NH
 IUCN listing,IUCN listing,0,Life History,survival,managed species,,managed species,IUCN listing,,,,,NH
-Mn,Mn,0,Morphological,composition,manganese,,manganese,Mn,,,,,CB
-Mn weight,Mn weight,0,Morphological,composition,manganese,,manganese,Mn weight,,,,,CB
-root conentrations of Mn,root concentrations of Mn,0,Morphological,composition,manganese,,manganese,root concentrations of Mn,,,,,CB
+Mn,Mn,0,Morphology,composition,manganese,,manganese,Mn,,,,,CB
+Mn weight,Mn weight,0,Morphology,composition,manganese,,manganese,Mn weight,,,,,CB
+root conentrations of Mn,root concentrations of Mn,0,Morphology,composition,manganese,,manganese,root concentrations of Mn,,,,,CB
 maturation,maturation,0,Life History,growth,maturity,,maturity,maturation,,,,,CB
 maturity,maturity,0,Life History,growth,maturity,,maturity,maturity,,,,,CB
 maturity degree,maturity degree,0,Life History,growth,maturity,,maturity,maturity degree,,,,,CB
@@ -1248,53 +1248,53 @@ specialist,specialist,0,Behavioural,resource acquisition,niche space,niche space
 specialization to wetlands,specialization to wetlands,0,Behavioural,resource acquisition,niche space,niche space,niche space,niche space,,,,,NH
 percent change in suitable area,percent change in suitable area,1,Behavioural,resource acquisition,niche space,niche space,niche space,niche space,,,,,NH
 ecology,ecology,1,Behavioural,resource acquisition,niche space,niche space,niche space,niche space,,1,NH: too broad?,,NH
-root conentrations of Ni,root concentrations of Ni,0,Morphological,composition,nickel,,nickel,root concentrations of Ni,,,,,CB
-leaf N:P ratio,leaf N:P ratio,0,Morphological,composition,nitrogen,phosphorous,phosphorous,phosphorous,,,,,CB
-leaf nitrogen and phosphorus concentration,leaf nitrogen and phosphorus concentration,0,Morphological,composition,nitrogen,phosphorous,phosphorous,phosphorous,,,,,CB
-mass based root nitrogen content,mass based root nitrogen content,0,Morphological,composition,nitrogen,root traits,root traits,root traits,,,,,CB
-area-based leaf N,area-based leaf N,0,Morphological,composition,nitrogen,,nitrogen,area-based leaf N,,,,,CB
-concentration N in leaves,concentration N in leaves,0,Morphological,composition,nitrogen,,nitrogen,concentration N in leaves,,,,,CB
-concentration of N,concentration of N,0,Morphological,composition,nitrogen,,nitrogen,concentration of N,,,,,CB
-fine-root N content,fine-root N content,0,Morphological,composition,nitrogen,,nitrogen,fine-root N content,root traits,,,,CB
-foliar N,foliar N,0,Morphological,composition,nitrogen,,nitrogen,foliar N,,,,,CB
-foliar N15 composition,foliar N15 composition,0,Morphological,composition,nitrogen,,nitrogen,foliar N15 composition,,,,,CB
-high leaf concentration of nitrogen,high leaf concentration of nitrogen,0,Morphological,composition,nitrogen,,nitrogen,high leaf concentration of nitrogen,,,,,CB
-leaf 15N,leaf 15N,0,Morphological,composition,nitrogen,,nitrogen,leaf 15N,,,,,CB
-leaf N,leaf N,0,Morphological,composition,nitrogen,,nitrogen,leaf N,,,,,CB
-leaf N concentration,leaf N concentration,0,Morphological,composition,nitrogen,,nitrogen,leaf N concentration,,,,,CB
-leaf N concentration per unit mass,leaf N concentration per unit mass,0,Morphological,composition,nitrogen,,nitrogen,leaf N concentration per unit mass,,,,,CB
-leaf N content,leaf N content,0,Morphological,composition,nitrogen,,nitrogen,leaf N content,,,,,CB
-leaf N content per unit mass,leaf N content per unit mass,0,Morphological,composition,nitrogen,,nitrogen,leaf N content per unit mass,,,,,CB
-leaf N isotopic ratio,leaf N isotopic ratio,0,Morphological,composition,nitrogen,,nitrogen,leaf N isotopic ratio,,,,,CB
-leaf N per mass,leaf N per mass,0,Morphological,composition,nitrogen,,nitrogen,leaf N per mass,,,,,CB
-leaf N per unit leaf dry mass,leaf N per unit leaf dry mass,0,Morphological,composition,nitrogen,,nitrogen,leaf N per unit leaf dry mass,,,,,CB
-leaf N15 composition,leaf N15 composition,0,Morphological,composition,nitrogen,,nitrogen,leaf N15 composition,,,,,CB
-leaf nitrogen content per unit area,leaf nitrogen content per unit area,0,Morphological,composition,nitrogen,,nitrogen,leaf nitrogen content per unit area,,,,,CB
-leaf nitrogen per area,leaf nitrogen per area,0,Morphological,composition,nitrogen,,nitrogen,leaf nitrogen per area,,,,,CB
-litter N,litter N,0,Morphological,composition,nitrogen,,nitrogen,litter N,,,,,CB
-mass-based leaf N,mass-based leaf N,0,Morphological,composition,nitrogen,,nitrogen,mass-based leaf N,,,,,CB
-mass-based leaf nitrogen content,mass-based leaf nitrogen content,0,Morphological,composition,nitrogen,,nitrogen,mass-based leaf nitrogen content,,,,,CB
-mean leaf N conc,mean leaf N conc,0,Morphological,composition,nitrogen,,nitrogen,mean leaf N conc,,,,,CB
-N body concentration,N body concentration,0,Morphological,composition,nitrogen,,nitrogen,N body concentration,,,,,CB
-N concentration,N concentration,0,Morphological,composition,nitrogen,,nitrogen,N concentration,,,,,CB
-N content,N content,0,Morphological,composition,nitrogen,,nitrogen,N content,,,,,CB
-N contents,N contents,0,Morphological,composition,nitrogen,,nitrogen,N contents,,,,,CB
-N dry mass percentage,N dry mass percentage,0,Morphological,composition,nitrogen,,nitrogen,N dry mass percentage,,,,,CB
-N isotope composition,N isotope composition,0,Morphological,composition,nitrogen,,nitrogen,N isotope composition,,,,,CB
-N per unit leaf area,N per unit leaf area,0,Morphological,composition,nitrogen,,nitrogen,N per unit leaf area,,,,,CB
-N per unit mass,N per unit mass,0,Morphological,composition,nitrogen,,nitrogen,N per unit mass,,,,,CB
-N:P body ratio,N:P body ratio,0,Morphological,composition,nitrogen,,nitrogen,N:P body ratio,,,,,CB
-N:P ratio,N:P ratio,0,Morphological,composition,nitrogen,,nitrogen,N:P ratio,,,,,CB
-N-15 delta isotopic compostition,N-15 delta isotopic composition,0,Morphological,composition,nitrogen,,nitrogen,N-15 delta isotopic composition,,,,,CB
-N15%,N15%,0,Morphological,composition,nitrogen,,nitrogen,N15%,,,,,CB
-natural 15N abundance,natural 15N abundance,0,Morphological,composition,nitrogen,,nitrogen,natural 15N abundance,,,,,CB
-potentially mineralizable N,potentially mineralizable N,0,Morphological,composition,nitrogen,,nitrogen,potentially mineralizable N,,,,,CB
-root N concentration,root N concentration,0,Morphological,composition,nitrogen,,nitrogen,root N concentration,,,,,CB
-root nitrogen,root nitrogen,0,Morphological,composition,nitrogen,,nitrogen,root nitrogen,,,,,CB
-seed N concentration,seed N concentration,0,Morphological,composition,nitrogen,,nitrogen,seed N concentration,,,,,CB
-stable isotope mean of N values,stable isotope mean of N values,0,Morphological,composition,nitrogen,,nitrogen,stable isotope mean of N values,,,,,CB
-tissue concentrations of N,tissue concentrations of N,0,Morphological,composition,nitrogen,,nitrogen,tissue concentrations of N,,,,,CB
-total leaf N concentration,total leaf N concentration,0,Morphological,composition,nitrogen,,nitrogen,total leaf N concentration,,,,,CB
+root conentrations of Ni,root concentrations of Ni,0,Morphology,composition,nickel,,nickel,root concentrations of Ni,,,,,CB
+leaf N:P ratio,leaf N:P ratio,0,Morphology,composition,nitrogen,phosphorous,phosphorous,phosphorous,,,,,CB
+leaf nitrogen and phosphorus concentration,leaf nitrogen and phosphorus concentration,0,Morphology,composition,nitrogen,phosphorous,phosphorous,phosphorous,,,,,CB
+mass based root nitrogen content,mass based root nitrogen content,0,Morphology,composition,nitrogen,root traits,root traits,root traits,,,,,CB
+area-based leaf N,area-based leaf N,0,Morphology,composition,nitrogen,,nitrogen,area-based leaf N,,,,,CB
+concentration N in leaves,concentration N in leaves,0,Morphology,composition,nitrogen,,nitrogen,concentration N in leaves,,,,,CB
+concentration of N,concentration of N,0,Morphology,composition,nitrogen,,nitrogen,concentration of N,,,,,CB
+fine-root N content,fine-root N content,0,Morphology,composition,nitrogen,,nitrogen,fine-root N content,root traits,,,,CB
+foliar N,foliar N,0,Morphology,composition,nitrogen,,nitrogen,foliar N,,,,,CB
+foliar N15 composition,foliar N15 composition,0,Morphology,composition,nitrogen,,nitrogen,foliar N15 composition,,,,,CB
+high leaf concentration of nitrogen,high leaf concentration of nitrogen,0,Morphology,composition,nitrogen,,nitrogen,high leaf concentration of nitrogen,,,,,CB
+leaf 15N,leaf 15N,0,Morphology,composition,nitrogen,,nitrogen,leaf 15N,,,,,CB
+leaf N,leaf N,0,Morphology,composition,nitrogen,,nitrogen,leaf N,,,,,CB
+leaf N concentration,leaf N concentration,0,Morphology,composition,nitrogen,,nitrogen,leaf N concentration,,,,,CB
+leaf N concentration per unit mass,leaf N concentration per unit mass,0,Morphology,composition,nitrogen,,nitrogen,leaf N concentration per unit mass,,,,,CB
+leaf N content,leaf N content,0,Morphology,composition,nitrogen,,nitrogen,leaf N content,,,,,CB
+leaf N content per unit mass,leaf N content per unit mass,0,Morphology,composition,nitrogen,,nitrogen,leaf N content per unit mass,,,,,CB
+leaf N isotopic ratio,leaf N isotopic ratio,0,Morphology,composition,nitrogen,,nitrogen,leaf N isotopic ratio,,,,,CB
+leaf N per mass,leaf N per mass,0,Morphology,composition,nitrogen,,nitrogen,leaf N per mass,,,,,CB
+leaf N per unit leaf dry mass,leaf N per unit leaf dry mass,0,Morphology,composition,nitrogen,,nitrogen,leaf N per unit leaf dry mass,,,,,CB
+leaf N15 composition,leaf N15 composition,0,Morphology,composition,nitrogen,,nitrogen,leaf N15 composition,,,,,CB
+leaf nitrogen content per unit area,leaf nitrogen content per unit area,0,Morphology,composition,nitrogen,,nitrogen,leaf nitrogen content per unit area,,,,,CB
+leaf nitrogen per area,leaf nitrogen per area,0,Morphology,composition,nitrogen,,nitrogen,leaf nitrogen per area,,,,,CB
+litter N,litter N,0,Morphology,composition,nitrogen,,nitrogen,litter N,,,,,CB
+mass-based leaf N,mass-based leaf N,0,Morphology,composition,nitrogen,,nitrogen,mass-based leaf N,,,,,CB
+mass-based leaf nitrogen content,mass-based leaf nitrogen content,0,Morphology,composition,nitrogen,,nitrogen,mass-based leaf nitrogen content,,,,,CB
+mean leaf N conc,mean leaf N conc,0,Morphology,composition,nitrogen,,nitrogen,mean leaf N conc,,,,,CB
+N body concentration,N body concentration,0,Morphology,composition,nitrogen,,nitrogen,N body concentration,,,,,CB
+N concentration,N concentration,0,Morphology,composition,nitrogen,,nitrogen,N concentration,,,,,CB
+N content,N content,0,Morphology,composition,nitrogen,,nitrogen,N content,,,,,CB
+N contents,N contents,0,Morphology,composition,nitrogen,,nitrogen,N contents,,,,,CB
+N dry mass percentage,N dry mass percentage,0,Morphology,composition,nitrogen,,nitrogen,N dry mass percentage,,,,,CB
+N isotope composition,N isotope composition,0,Morphology,composition,nitrogen,,nitrogen,N isotope composition,,,,,CB
+N per unit leaf area,N per unit leaf area,0,Morphology,composition,nitrogen,,nitrogen,N per unit leaf area,,,,,CB
+N per unit mass,N per unit mass,0,Morphology,composition,nitrogen,,nitrogen,N per unit mass,,,,,CB
+N:P body ratio,N:P body ratio,0,Morphology,composition,nitrogen,,nitrogen,N:P body ratio,,,,,CB
+N:P ratio,N:P ratio,0,Morphology,composition,nitrogen,,nitrogen,N:P ratio,,,,,CB
+N-15 delta isotopic compostition,N-15 delta isotopic composition,0,Morphology,composition,nitrogen,,nitrogen,N-15 delta isotopic composition,,,,,CB
+N15%,N15%,0,Morphology,composition,nitrogen,,nitrogen,N15%,,,,,CB
+natural 15N abundance,natural 15N abundance,0,Morphology,composition,nitrogen,,nitrogen,natural 15N abundance,,,,,CB
+potentially mineralizable N,potentially mineralizable N,0,Morphology,composition,nitrogen,,nitrogen,potentially mineralizable N,,,,,CB
+root N concentration,root N concentration,0,Morphology,composition,nitrogen,,nitrogen,root N concentration,,,,,CB
+root nitrogen,root nitrogen,0,Morphology,composition,nitrogen,,nitrogen,root nitrogen,,,,,CB
+seed N concentration,seed N concentration,0,Morphology,composition,nitrogen,,nitrogen,seed N concentration,,,,,CB
+stable isotope mean of N values,stable isotope mean of N values,0,Morphology,composition,nitrogen,,nitrogen,stable isotope mean of N values,,,,,CB
+tissue concentrations of N,tissue concentrations of N,0,Morphology,composition,nitrogen,,nitrogen,tissue concentrations of N,,,,,CB
+total leaf N concentration,total leaf N concentration,0,Morphology,composition,nitrogen,,nitrogen,total leaf N concentration,,,,,CB
 ability to fix atmospheric nitrogen,ability to fix atmospheric nitrogen,0,Behavioural,resource acquisition,nitrogen,,nitrogen,ability to fix atmospheric nitrogen,,,,,NH
 ability to fix N,ability to fix N,0,Physiological,resource acquisition,nitrogen,,nitrogen,ability to fix N,,,,,NH
 assimilating organ,assimilating organ,1,Physiological,resource acquisition,nitrogen,,nitrogen,assimilating organ,,1,NH: secondary --> nitrogen and resource assimilation,CB: binary - does it have an organ to assimilate N,NH
@@ -1331,15 +1331,15 @@ number of native congeners,number of native congeners,1,Behavioural,habitat,non-
 origin,origin,1,Behavioural,habitat,non-native,non-native,non-native,non-native,,,,,NH
 confamilial invasive,nonfamilial invasive,0,Behavioural,habitat,non-native,,non-native,nonfamilial invasive,,,,,NH
 congeneric invasive,congeneric invasive,0,Behavioural,habitat,non-native,,non-native,congeneric invasive,,,,,NH
-nutrient acquisition,nutrient acquisition,0,Phsiological,resource acquisition,nutrients,,nutrients,nutrient acquisition,,,,,NH
-nutrient level flowering period,nutrient level flowering period,0,Phsiological,resource acquisition,nutrients,,nutrients,nutrient level flowering period,,,,,NH
-nutrient uptake parameters,nutrient uptake parameters,0,Phsiological,resource acquisition,nutrients,,nutrients,nutrient uptake parameters,,,,,NH
-nutrient uptake rate,nutrient uptake rate,0,Phsiological,resource acquisition,nutrients,,nutrients,nutrient uptake rate,,,,,NH
-nutrient uptake strategy,nutrient uptake strategy,0,Phsiological,resource acquisition,nutrients,,nutrients,nutrient uptake strategy,,,,,NH
-nutritional requirements,nutritional requirements,0,Phsiological,resource acquisition,nutrients,,nutrients,nutritional requirements,,,,,NH
-concentration of oenothein A,concentration of oenothein A,0,Morphological,composition,oenothein A,,oenothein A,concentration of oenothein A,,,,,CB
-concentration of oenothein oxidized A,concentration of oenothein oxidized A,0,Morphological,composition,oenothein A,,oenothein A,concentration of oenothein oxidized A,,,,,CB
-concentration of oenothein B,concentration of oenothein B,0,Morphological,composition,oenothein B,,oenothein B,concentration of oenothein B,,,,,CB
+nutrient acquisition,nutrient acquisition,0,Physiological,resource acquisition,nutrients,,nutrients,nutrient acquisition,,,,,NH
+nutrient level flowering period,nutrient level flowering period,0,Physiological,resource acquisition,nutrients,,nutrients,nutrient level flowering period,,,,,NH
+nutrient uptake parameters,nutrient uptake parameters,0,Physiological,resource acquisition,nutrients,,nutrients,nutrient uptake parameters,,,,,NH
+nutrient uptake rate,nutrient uptake rate,0,Physiological,resource acquisition,nutrients,,nutrients,nutrient uptake rate,,,,,NH
+nutrient uptake strategy,nutrient uptake strategy,0,Physiological,resource acquisition,nutrients,,nutrients,nutrient uptake strategy,,,,,NH
+nutritional requirements,nutritional requirements,0,Physiological,resource acquisition,nutrients,,nutrients,nutritional requirements,,,,,NH
+concentration of oenothein A,concentration of oenothein A,0,Morphology,composition,oenothein A,,oenothein A,concentration of oenothein A,,,,,CB
+concentration of oenothein oxidized A,concentration of oenothein oxidized A,0,Morphology,composition,oenothein A,,oenothein A,concentration of oenothein oxidized A,,,,,CB
+concentration of oenothein B,concentration of oenothein B,0,Morphology,composition,oenothein B,,oenothein B,concentration of oenothein B,,,,,CB
 dissemination,dissemination,1,Life History ,life history,offspring attribute,dispersal,dispersal,dispersal,,1,NH?,CB: how they disseminate their seeds,CB
 dissemination potential,dissemination potential,1,Life History ,life history,offspring attribute,dispersal,dispersal,dispersal,,1,NH: sounds like a performance metric I need to report on.,,CB
 autochory,autochory,1,Life History ,life history,offspring attribute,,offspring attributes,autochory,,1,"NH: to do with seed dispersal, reproductive/seed dispersal mechanism",,CB
@@ -1421,7 +1421,7 @@ gill raker profile,gill raker profile,0,Physiological,resource acquisition,oxyge
 hypoxic tolerance,hypoxic tolerance,0,Physiological,resource acquisition,oxygen,,oxygen,hypoxic tolerance,,,,,NH
 oxygen requirement,oxygen requirement,0,Physiological,resource acquisition,oxygen,,oxygen,oxygen requirement,,,,,NH
 oxygen tolerance,oxygen tolerance,0,Physiological,resource acquisition,oxygen,,oxygen,oxygen tolerance,,,,,NH
-leaf concentrations of Pb,leaf concentrations of Pb,0,Morphological,composition,palladium,,palladium,leaf concentrations of Pb,,,,,CB
+leaf concentrations of Pb,leaf concentrations of Pb,0,Morphology,composition,palladium,,palladium,leaf concentrations of Pb,,,,,CB
 per spore susceptibility,per spore susceptibility,1,Life History ,life history,parasite traits,,parasite traits,per spore susceptibility,,,,,CB
 nontarget effects,nontarget effects,1,Physiological,resource acquisition,parasite traits,,parasite traits,nontarget effects,,1,,"CB: relating to parasites, do they or don't they produce non-target effects (i.e. symptoms) in their host of the infection",CB
 obligate parasitoid,obligate parasitoid,0,Physiological,resource acquisition,parasite traits,,parasite traits,obligate parasitoid,,,,,NH
@@ -1449,27 +1449,27 @@ pH,pH,0,Physiological,resource acquisition,pH tolerance,,pH tolerance,pH,,,,,NH
 pH range of the germination phenotype,pH range of the germination phenotype,0,Physiological,resource acquisition,pH tolerance,,pH tolerance,pH range of the germination phenotype,,,,,NH
 ph tolerance,ph tolerance,0,Physiological,resource acquisition,pH tolerance,,pH tolerance,ph tolerance,,1,pH tolerance,"typo, combine",NH
 pH tolerance,pH tolerance,0,Physiological,resource acquisition,pH tolerance,,pH tolerance,pH tolerance,,1,see above,"typo, combine",NH
-phenolic substrates,phenolic substrates,0,Morphological,composition,phenolics,,phenolics,phenolic substrates,,,,,CB
-phenolics%,phenolics%,0,Morphological,composition,phenolics,,phenolics,phenolics%,,,,,CB
-total phenolics,total phenolics,0,Morphological,composition,phenolics,,phenolics,total phenolics,,,,,CB
+phenolic substrates,phenolic substrates,0,Morphology,composition,phenolics,,phenolics,phenolic substrates,,,,,CB
+phenolics%,phenolics%,0,Morphology,composition,phenolics,,phenolics,phenolics%,,,,,CB
+total phenolics,total phenolics,0,Morphology,composition,phenolics,,phenolics,total phenolics,,,,,CB
 phenology,phenology,0,Life History,growth,phenology,,phenology,phenology,,,,,CB
 plant phenology,plant phenology,0,Life History,growth,phenology,,phenology,plant phenology,,,,,NH
-concentration P in leaves,concentration P in leaves,0,Morphological,composition,phosphorous,,phosphorous,concentration P in leaves,,,,,CB
-foliar P,foliar P,0,Morphological,composition,phosphorous,,phosphorous,foliar P,,,,,CB
-leaf P,leaf P,0,Morphological,composition,phosphorous,,phosphorous,leaf P,,,,,CB
-leaf P concentration,leaf P concentration,0,Morphological,composition,phosphorous,,phosphorous,leaf P concentration,,,,,CB
-leaf P conconcentration,leaf P conconcentration,0,Morphological,composition,phosphorous,,phosphorous,leaf P conconcentration,,,,,CB
-leaf P content,leaf P content,0,Morphological,composition,phosphorous,,phosphorous,leaf P content,,,,,CB
-leaf phosphorus,leaf phosphorus,0,Morphological,composition,phosphorous,,phosphorous,leaf phosphorus,,,,,CB
-leaf phosphorus conctent,leaf phosphorus content,0,Morphological,composition,phosphorous,,phosphorous,leaf phosphorus content,,,,,CB
-litter P,litter P,0,Morphological,composition,phosphorous,,phosphorous,litter P,,,,,CB
-mass based P content,mass based P content,0,Morphological,composition,phosphorous,,phosphorous,mass based P content,,,,,CB
-P body concentration,P body concentration,0,Morphological,composition,phosphorous,,phosphorous,P body concentration,,,,,CB
-P concentration,P concentration,0,Morphological,composition,phosphorous,,phosphorous,P concentration,,,,,CB
-P content,P content,0,Morphological,composition,phosphorous,,phosphorous,P content,,,,,CB
-P contents,P contents,0,Morphological,composition,phosphorous,,phosphorous,P contents,,,,,CB
-phosphorus,phosphorus,0,Morphological,composition,phosphorous,,phosphorous,phosphorus,,,,,CB
-root P concentration,root P concentration,0,Morphological,composition,phosphorous,,phosphorous,root P concentration,,,,,CB
+concentration P in leaves,concentration P in leaves,0,Morphology,composition,phosphorous,,phosphorous,concentration P in leaves,,,,,CB
+foliar P,foliar P,0,Morphology,composition,phosphorous,,phosphorous,foliar P,,,,,CB
+leaf P,leaf P,0,Morphology,composition,phosphorous,,phosphorous,leaf P,,,,,CB
+leaf P concentration,leaf P concentration,0,Morphology,composition,phosphorous,,phosphorous,leaf P concentration,,,,,CB
+leaf P conconcentration,leaf P conconcentration,0,Morphology,composition,phosphorous,,phosphorous,leaf P conconcentration,,,,,CB
+leaf P content,leaf P content,0,Morphology,composition,phosphorous,,phosphorous,leaf P content,,,,,CB
+leaf phosphorus,leaf phosphorus,0,Morphology,composition,phosphorous,,phosphorous,leaf phosphorus,,,,,CB
+leaf phosphorus conctent,leaf phosphorus content,0,Morphology,composition,phosphorous,,phosphorous,leaf phosphorus content,,,,,CB
+litter P,litter P,0,Morphology,composition,phosphorous,,phosphorous,litter P,,,,,CB
+mass based P content,mass based P content,0,Morphology,composition,phosphorous,,phosphorous,mass based P content,,,,,CB
+P body concentration,P body concentration,0,Morphology,composition,phosphorous,,phosphorous,P body concentration,,,,,CB
+P concentration,P concentration,0,Morphology,composition,phosphorous,,phosphorous,P concentration,,,,,CB
+P content,P content,0,Morphology,composition,phosphorous,,phosphorous,P content,,,,,CB
+P contents,P contents,0,Morphology,composition,phosphorous,,phosphorous,P contents,,,,,CB
+phosphorus,phosphorus,0,Morphology,composition,phosphorous,,phosphorous,phosphorus,,,,,CB
+root P concentration,root P concentration,0,Morphology,composition,phosphorous,,phosphorous,root P concentration,,,,,CB
 phosphorus efficieincy,phosphorus efficieincy,0,Behavioural,resource acquisition,phosphorous,,phosphorous,phosphorus efficieincy,,,,,NH
 CO2 assimilation rate,CO2 assimilation rate,0,Physiological,resource acquisition,photosynthetic rate,,photosynthetic rate,CO2 assimilation rate,,,,,NH
 efficiency of PSII,efficiency of PSII,1,Physiological,resource acquisition,photosynthetic rate,,photosynthetic rate,efficiency of PSII,,1,,CB: PSII is the first protien in photosynthesis,CB
@@ -1496,11 +1496,11 @@ polymorphism,polymorphism,1,Morphology,morphology,polymorphism,,polymorphism,pol
 worker polymorphism,worker polymorphism,0,Morphology,morphology,polymorphism,,polymorphism,worker polymorphism,,1,"NH: secondary --> ""phenotypic plasticity"" or ""resource use"". This is a bit of both. I think morphological phenotypic plasticity is a hugely interesting trait, regardless of the purpose it shows a huge potential for functional plasticity. In Hymenopterans it translates to complex functioning of colonies that for example make the European & African bees so hard to eradicate and successful against native pollinators. I guess this leads to a tertiary classification - to do with social organisation. Again, a type of trait that we can use when thinking about many other types of critters. Such as the social organisation of seals is currently considered on a level closer to schooling sharks or fish, than dolphins or whales, that can convey success at some things and not at others.",,NH
 hydathodes,hydathodes,0,Morphology,morphology,pores,,pores,hydathodes,,,,,NH
 size of male pores,size of male pores,0,Morphology,morphology,pores,,pores,size of male pores,,,,,NH
-foliar K,foliar K,0,Morphological,composition,potassium,,potassium,foliar K,,,,,CB
-K content,K content,0,Morphological,composition,potassium,,potassium,K content,,,,,CB
-leaf K concentration,leaf K concentration,0,Morphological,composition,potassium,,potassium,leaf K concentration,,,,,CB
-leaf K content,leaf K content,0,Morphological,composition,potassium,,potassium,leaf K content,,,,,CB
-root conentrations of K,root concentrations of K,0,Morphological,composition,potassium,,potassium,root concentrations of K,,,,,CB
+foliar K,foliar K,0,Morphology,composition,potassium,,potassium,foliar K,,,,,CB
+K content,K content,0,Morphology,composition,potassium,,potassium,K content,,,,,CB
+leaf K concentration,leaf K concentration,0,Morphology,composition,potassium,,potassium,leaf K concentration,,,,,CB
+leaf K content,leaf K content,0,Morphology,composition,potassium,,potassium,leaf K content,,,,,CB
+root conentrations of K,root concentrations of K,0,Morphology,composition,potassium,,potassium,root concentrations of K,,,,,CB
 nest predation,nest predation,0,Life History,survival,predation,,predation,nest predation,,,,,NH
 risk of predation,risk of predation,0,Life History,survival,predation,,predation,risk of predation,,,,,NH
 seed predation,seed predation,0,Life History,survival,predation,,predation,seed predation,,,,,NH
@@ -1537,10 +1537,10 @@ virulence,virulence,0,Behavioural,activity,predator avoidance,,predator avoidanc
 proboscid length,proboscis length,0,Morphology,morphology,proboscis traits,,proboscis traits,proboscis length,,,,,NH
 proboscid width,proboscis width,0,Morphology,morphology,proboscis traits,,proboscis traits,proboscis width,,,,,NH
 proboscis length,proboscis length,0,Morphology,morphology,proboscis traits,,proboscis traits,proboscis length,,,,,NH
-body protein%,body protein%,0,Morphological,composition,protein,,protein,body protein%,,,,,CB
-protein body concentration,protein body concentration,0,Morphological,composition,protein,,protein,protein body concentration,,,,,CB
-protein content,protein content,0,Morphological,composition,protein,,protein,protein content,,,,,CB
-seed protein,seed protein,0,Morphological,composition,protein,,protein,seed protein,,,,,CB
+body protein%,body protein%,0,Morphology,composition,protein,,protein,body protein%,,,,,CB
+protein body concentration,protein body concentration,0,Morphology,composition,protein,,protein,protein body concentration,,,,,CB
+protein content,protein content,0,Morphology,composition,protein,,protein,protein content,,,,,CB
+seed protein,seed protein,0,Morphology,composition,protein,,protein,seed protein,,,,,CB
 pulp dry weight,pulp dry weight,0,Morphology,morphology,pulp traits,,pulp traits,pulp dry weight,,,,,NH
 pulp macronutrient,pulp macronutrient,0,Morphology,morphology,pulp traits,,pulp traits,pulp macronutrient,,,,,NH
 pulp mass per individual seed,pulp mass per individual seed,0,Morphology,morphology,pulp traits,,pulp traits,pulp mass per individual seed,,,,,NH
@@ -1982,10 +1982,10 @@ shell constitution,shell constitution,0,Morphology,morphology,shell traits,,shel
 shell ornamentation,shell ornamentation,0,Morphology,morphology,shell traits,,shell traits,shell ornamentation,,,,,NH
 shell shape,shell shape,0,Morphology,morphology,shell traits,,shell traits,shell shape,,,,,NH
 shell strength,shell strength,0,Morphology,morphology,shell traits,,shell traits,shell strength,,,,,NH
-use of silica in cell walls,use of silica in cell walls,0,Morphological,composition,silica,defense,defense,defense,,,,,CB
-Si%,Si%,0,Morphological,composition,silica,,silica,Si%,,,,,CB
-silica requirements,silica requirements,0,Morphological,composition,silica,,silica,silica requirements,,,,,CB
-silicum content,silicum content,0,Morphological,composition,silica,,silica,silicum content,,,,,CB
+use of silica in cell walls,use of silica in cell walls,0,Morphology,composition,silica,defense,defense,defense,,,,,CB
+Si%,Si%,0,Morphology,composition,silica,,silica,Si%,,,,,CB
+silica requirements,silica requirements,0,Morphology,composition,silica,,silica,silica requirements,,,,,CB
+silicum content,silicum content,0,Morphology,composition,silica,,silica,silicum content,,,,,CB
 absence of silica demand,absence of silica demand,0,Behavioural,resource acquisition,silica requirement,,silica requirement,absence of silica demand,,1,"suggesting combine with above, redundant","redundant, combine'",NH
 presence of silica demand,presence of silica demand,0,Behavioural,resource acquisition,silica requirement,,silica requirement,presence of silica demand,,1,suggesting combine with below,"redundant, combine'",NH
 demand for silica,demand for silica,0,Behavioural,resource acquisition,silica requirement,,silica requirement,demand for silica,,,,,NH
@@ -2130,7 +2130,7 @@ snout length,snout length,0,Morphology,morphology,snout,,snout,snout length,,,,,
 snout length closed,snout length closed,0,Morphology,morphology,snout,,snout,snout length closed,,,,,NH
 snout length eye position,snout length eye position,0,Morphology,morphology,snout,,snout,snout length eye position,,,,,NH
 snout length open,snout length open,0,Morphology,morphology,snout,,snout,snout length open,,,,,NH
-root conentrations of Na,root concentrations of Na,0,Morphological,composition,sodium,,sodium,root concentrations of Na,,,,,CB
+root conentrations of Na,root concentrations of Na,0,Morphology,composition,sodium,,sodium,root concentrations of Na,,,,,CB
 Soil moisture,Soil moisture,0,Physiological,habitat,soil traits,dessication tolerance,dessication tolerance,desiccation tolerance,,,,,CB
 soil pH,soil pH,0,Physiological,habitat,soil traits,pH tolerance,pH tolerance,pH tolerance,,,,,CB
 humicolous,humicolous,0,Physiological,habitat,soil traits,,soil traits,humicolous,,,,,CB
@@ -2140,8 +2140,8 @@ soil humus,soil humus,0,Physiological,habitat,soil traits,,soil traits,soil humu
 soil layer,soil layer,0,Physiological,habitat,soil traits,,soil traits,soil layer,,,,,CB
 soil proteins,soil proteins,0,Physiological,habitat,soil traits,,soil traits,soil proteins,,,,,CB
 relative spriacle size,relative spiracle size,0,Morphology,morphology,spiracle,,spiracle,relative spiracle size,,,,,NH
-stable isotope,stable isotope,0,Morphological,composition,stable isotope,,stable isotope,stable isotope,,,,,CB
-stable isotopes,stable isotopes,0,Morphological,composition,stable isotope,,stable isotope,stable isotopes,,,,,CB
+stable isotope,stable isotope,0,Morphology,composition,stable isotope,,stable isotope,stable isotope,,,,,CB
+stable isotopes,stable isotopes,0,Morphology,composition,stable isotope,,stable isotope,stable isotopes,,,,,CB
 timing of life stage,timing of life stage,0,Life History ,life history,stage,,stage,timing of life stage,,,,,CB
 stomach diameter,stomach diameter,0,Morphology,morphology,stomach size,,stomach size,stomach diameter,,,,,NH
 stomach length,stomach length,0,Morphology,morphology,stomach size,,stomach size,stomach length,,,,,NH
@@ -2170,11 +2170,11 @@ substrate preference,substrate preference,0,Behavioural,habitat,substrate,,subst
 substrate preferences,substrate preferences,0,Behavioural,habitat,substrate,,substrate,substrate preferences,,,,,CB
 substratum,substratum,0,Behavioural,habitat,substrate,,substrate,substratum,,,,,CB
 trajectory on the bottom substrate,trajectory on the bottom substrate,0,Behavioural,habitat,substrate,,substrate,trajectory on the bottom substrate,,,,,CB
-sugar profile,sugar profile,0,Morphological,composition,sugars,,sugars,sugar profile,,,,,CB
-total sugars,total sugars,0,Morphological,composition,sugars,,sugars,total sugars,,,,,CB
-concentration S in leaves,concentration S in leaves,0,Morphological,composition,sulphur,,sulphur,concentration S in leaves,,,,,CB
-leaf S,leaf S,0,Morphological,composition,sulphur,,sulphur,leaf S,,,,,CB
-root conentrations of S,root concentrations of S,0,Morphological,composition,sulphur,,sulphur,root concentrations of S,,,,,CB
+sugar profile,sugar profile,0,Morphology,composition,sugars,,sugars,sugar profile,,,,,CB
+total sugars,total sugars,0,Morphology,composition,sugars,,sugars,total sugars,,,,,CB
+concentration S in leaves,concentration S in leaves,0,Morphology,composition,sulphur,,sulphur,concentration S in leaves,,,,,CB
+leaf S,leaf S,0,Morphology,composition,sulphur,,sulphur,leaf S,,,,,CB
+root conentrations of S,root concentrations of S,0,Morphology,composition,sulphur,,sulphur,root concentrations of S,,,,,CB
 adult female survival rate,adult female survival rate,0,Life History,survival,survival,,survival,adult female survival rate,,,,,NH
 adult survival,adult survival,0,Life History,survival,survival,,survival,adult survival,,,,,NH
 adult survival rate,adult survival rate,0,Life History,survival,survival,,survival,adult survival rate,,1,see below,"typo, combine",NH
@@ -2238,10 +2238,10 @@ temperature preferences,temperature preferences,0,Physiological,resource acquisi
 thermal time for 50% germination,thermal time for 50% germination,0,Physiological,resource acquisition,temperature tolerance,,temperature tolerance,thermal time for 50% germination,,,,,CB
 thermal tolerance,thermal tolerance,0,Physiological,resource acquisition,temperature tolerance,,temperature tolerance,thermal tolerance,,,,,CB
 exposure tolerance,exposure tolerance,1,Physiological,resource acquisition,temperature tolerance,,temperature tolerance,exposure tolerance,,1,"NH: thinking regarding temperature, therefore resource acquisiton/niche",,CB
-leaf tissue density,leaf tissue density,0,Morphological,composition,tissue density,,tissue density,leaf tissue density,,,,,CB
-skeletal density,skeletal density,0,Morphological,composition,tissue density,,tissue density,skeletal density,,,,,CB
-stem tissue density,stem tissue density,0,Morphological,composition,tissue density,,tissue density,stem tissue density,,,,,CB
-tissue density,tissue density,0,Morphological,composition,tissue density,,tissue density,tissue density,,,,,CB
+leaf tissue density,leaf tissue density,0,Morphology,composition,tissue density,,tissue density,leaf tissue density,,,,,CB
+skeletal density,skeletal density,0,Morphology,composition,tissue density,,tissue density,skeletal density,,,,,CB
+stem tissue density,stem tissue density,0,Morphology,composition,tissue density,,tissue density,stem tissue density,,,,,CB
+tissue density,tissue density,0,Morphology,composition,tissue density,,tissue density,tissue density,,,,,CB
 vessel area,vessel area,0,Morphology,morphology,tissue density,plant vessels,plant vessels,plant vessels,,,,,NH
 vessel arrangement,vessel arrangement,0,Morphology,morphology,tissue density,plant vessels,plant vessels,plant vessels,,,,,NH
 vessel density,vessel density,0,Morphology,morphology,tissue density,plant vessels,plant vessels,plant vessels,,,,,NH
@@ -2313,11 +2313,11 @@ call duration,call duration,1,Behavioural,activity,vocalization,,vocalization,ca
 call frequency,call frequency,0,Behavioural,activity,vocalization,,vocalization,call frequency,,,,,CB
 call frequency range,call frequency range,1,Behavioural,activity,vocalization,,vocalization,call frequency range,,1,,CB: this is frequency range of sound,CB
 vocalization peak frequency,vocalization peak frequency,0,Morphology,morphology,vocalization,,vocalization,vocalization peak frequency,,,,,NH
-leaf water content,leaf water content,0,Morphological,composition,water,leaf traits,leaf traits,leaf traits,,1,1,secondary 'leaf traits',CB
-water and total phenols,water and total phenols,0,Morphological,composition,water,phenolics,phenolics,phenolics,,,,,CB
-% water content,% water content,0,Morphological,composition,water,,water,% water content,,,,,CB
-canopy water content,canopy water content,0,Morphological,composition,water,,water,canopy water content,,,,,CB
-water content,water content,0,Morphological,composition,water,,water,water content,,,,,CB
+leaf water content,leaf water content,0,Morphology,composition,water,leaf traits,leaf traits,leaf traits,,1,1,secondary 'leaf traits',CB
+water and total phenols,water and total phenols,0,Morphology,composition,water,phenolics,phenolics,phenolics,,,,,CB
+% water content,% water content,0,Morphology,composition,water,,water,% water content,,,,,CB
+canopy water content,canopy water content,0,Morphology,composition,water,,water,canopy water content,,,,,CB
+water content,water content,0,Morphology,composition,water,,water,water content,,,,,CB
 moisture,moisture,0,Behavioural,habitat,water,,water,moisture,,,,,CB
 moisture level,moisture level,0,Behavioural,habitat,water,,water,moisture level,,,,,CB
 moisture use,moisture use,1,Behavioural,habitat,water,,water,moisture use,,,,,CB
@@ -2392,10 +2392,10 @@ wing surface,wing surface,0,Morphology,morphology,wing,,wing,wing surface,,1,NH:
 wing tip index,wing tip index,0,Morphology,morphology,wing,,wing,wing tip index,,1,NH: this pertains to mobility in my opinion --> then wing as tertiary?,,NH
 wing width,wing width,0,Morphology,morphology,wing,,wing,wing width,,1,NH: this pertains to mobility in my opinion --> then wing as tertiary?,,NH
 wings,wings,0,Morphology,morphology,wing,,wing,wings,,1,NH: this pertains to mobility in my opinion --> then wing as tertiary?,,NH
-leaf concentrations of Zn,leaf concentrations of Zn,0,Morphological,composition,zinc,,zinc,leaf concentrations of Zn,,,,,CB
-root conentrations of Zn,root concentrations of Zn,0,Morphological,composition,zinc,,zinc,root concentrations of Zn,,,,,CB
-Zc,Zc,0,Morphological,composition,zinc,,zinc,Zc,,,,,CB
-Zn weight,Zn weight,0,Morphological,composition,zinc,,zinc,Zn weight,,,,,CB
+leaf concentrations of Zn,leaf concentrations of Zn,0,Morphology,composition,zinc,,zinc,leaf concentrations of Zn,,,,,CB
+root conentrations of Zn,root concentrations of Zn,0,Morphology,composition,zinc,,zinc,root concentrations of Zn,,,,,CB
+Zc,Zc,0,Morphology,composition,zinc,,zinc,Zc,,,,,CB
+Zn weight,Zn weight,0,Morphology,composition,zinc,,zinc,Zn weight,,,,,CB
 abundance,abundance,0,Life History,abundance,,,abundance,abundance,,,,,CB
 rarity,rarity,0,Life History,abundance,,,rarity,rarity,,,,,CB
 leadership,leadership,0,Behavioural,activity,,,leadership,leadership,,,,,CB
@@ -2403,27 +2403,27 @@ organization,organization,1,Behavioural,activity,,,organization,organization,,,,
 response to edge,response to edge,0,Behavioural,activity,,,response to edge,response to edge,,,,,CB
 time when active,time when active,0,Behavioural,activity,,,time when active,time when active,,,,,CB
 total flying time,total flying time,0,Behavioural,activity,,,total flying time,total flying time,,1,1,Secondary 'flying',CB
-algal quality,algal quality,0,Morphological,composition,,,algal quality,algal quality,,,,,CB
-anthocyanins,anthocyanins,0,Morphological,composition,,,anthocyanins,anthocyanins,,,,,CB
-chitin,chitin,0,Morphological,composition,,,chitin,chitin,,,,,CB
-coat chemical content,coat chemical content,0,Morphological,composition,,,coat chemical content,coat chemical content,,,,,CB
-concentrations of total carotenoid,concentrations of total carotenoid,0,Morphological,composition,,,concentrations of total carotenoid,concentrations of total carotenoid,,,,,CB
-elemental stoichiometry,elemental stoichiometry,0,Morphological,composition,,,elemental stoichiometry,elemental stoichiometry,,,,,CB
-inducibility,inducibility,1,Morphological,composition,,,inducibility,inducibility,,,,,CB
-intercellular CO2 concentration,intercellular CO2 concentration,0,Morphological,composition,,,intercellular CO2 concentration,intercellular CO2 concentration,,,,,CB
-isoprene gas emission,isoprene gas emission,1,Morphological,composition,,,isoprene gas emission,isoprene gas emission,,,,,CB
-isotope ratios,isotope ratios,0,Morphological,composition,,,isotope ratios,isotope ratios,,,,,CB
-leaf economics,leaf economics,1,Morphological,composition,,,leaf economics,leaf economics,,,,,CB
-leaf nutrient concentration,leaf nutrient concentration,0,Morphological,composition,,,leaf nutrient concentration,leaf nutrient concentration,,,,,CB
-litter chemistry,litter chemistry,0,Morphological,composition,,,litter chemistry,litter chemistry,,,,,CB
-mass of underground reserves,mass of underground reserves,0,Morphological,composition,,,mass of underground reserves,mass of underground reserves,,,,,CB
-nutritional mode,nutritional mode,0,Morphological,composition,,,nutritional mode,nutritional mode,,,,,CB
-nutritional quality,nutritional quality,0,Morphological,composition,,,nutritional quality,nutritional quality,,,,,CB
-phlorotannin concentrations,phlorotannin concentrations,0,Morphological,composition,,,phlorotannin concentrations,phlorotannin concentrations,,,,,CB
-total carotenoids,total carotenoids,0,Morphological,composition,,,total carotenoids,total carotenoids,,,,,CB
-total secondary metabolite richness,total secondary metabolite richness,0,Morphological,composition,,,total secondary metabolite richness,total secondary metabolite richness,,,,,CB
-various carbon hydrates,various carbon hydrates,1,Morphological,composition,,,various carbon hydrates,various carbon hydrates,,,,,CB
-xanthophylls,xanthophylls,0,Morphological,composition,,,xanthophylls,xanthophylls,,,,,CB
+algal quality,algal quality,0,Morphology,composition,,,algal quality,algal quality,,,,,CB
+anthocyanins,anthocyanins,0,Morphology,composition,,,anthocyanins,anthocyanins,,,,,CB
+chitin,chitin,0,Morphology,composition,,,chitin,chitin,,,,,CB
+coat chemical content,coat chemical content,0,Morphology,composition,,,coat chemical content,coat chemical content,,,,,CB
+concentrations of total carotenoid,concentrations of total carotenoid,0,Morphology,composition,,,concentrations of total carotenoid,concentrations of total carotenoid,,,,,CB
+elemental stoichiometry,elemental stoichiometry,0,Morphology,composition,,,elemental stoichiometry,elemental stoichiometry,,,,,CB
+inducibility,inducibility,1,Morphology,composition,,,inducibility,inducibility,,,,,CB
+intercellular CO2 concentration,intercellular CO2 concentration,0,Morphology,composition,,,intercellular CO2 concentration,intercellular CO2 concentration,,,,,CB
+isoprene gas emission,isoprene gas emission,1,Morphology,composition,,,isoprene gas emission,isoprene gas emission,,,,,CB
+isotope ratios,isotope ratios,0,Morphology,composition,,,isotope ratios,isotope ratios,,,,,CB
+leaf economics,leaf economics,1,Morphology,composition,,,leaf economics,leaf economics,,,,,CB
+leaf nutrient concentration,leaf nutrient concentration,0,Morphology,composition,,,leaf nutrient concentration,leaf nutrient concentration,,,,,CB
+litter chemistry,litter chemistry,0,Morphology,composition,,,litter chemistry,litter chemistry,,,,,CB
+mass of underground reserves,mass of underground reserves,0,Morphology,composition,,,mass of underground reserves,mass of underground reserves,,,,,CB
+nutritional mode,nutritional mode,0,Morphology,composition,,,nutritional mode,nutritional mode,,,,,CB
+nutritional quality,nutritional quality,0,Morphology,composition,,,nutritional quality,nutritional quality,,,,,CB
+phlorotannin concentrations,phlorotannin concentrations,0,Morphology,composition,,,phlorotannin concentrations,phlorotannin concentrations,,,,,CB
+total carotenoids,total carotenoids,0,Morphology,composition,,,total carotenoids,total carotenoids,,,,,CB
+total secondary metabolite richness,total secondary metabolite richness,0,Morphology,composition,,,total secondary metabolite richness,total secondary metabolite richness,,,,,CB
+various carbon hydrates,various carbon hydrates,1,Morphology,composition,,,various carbon hydrates,various carbon hydrates,,,,,CB
+xanthophylls,xanthophylls,0,Morphology,composition,,,xanthophylls,xanthophylls,,,,,CB
 ability to spread with many close ramets,ability to spread with many close ramets,1,Life History,growth,,,ability to spread with many close ramets,ability to spread with many close ramets,,,,,CB
 annual productivity,annual productivity,0,Life History,growth,,,annual productivity,annual productivity,,,,,CB
 bacterial growth,bacterial growth,0,Life History,growth,,,bacterial growth,bacterial growth,,,,,CB

@@ -12,6 +12,7 @@
 
 library(tidyverse)
 library(here)
+`%notin%`= Negate(`%in%`)
 
 original_dummy = 
   read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/original_traits_dummy.csv'))
@@ -217,6 +218,10 @@ secondary_pa_dummy =
 secondary_pa_dummy %>% 
   filter(size == 1)
 secondary_dummy_traits = secondary_pa_dummy[,11:ncol(secondary_pa_dummy)]
+secondary_counts = colSums(secondary_dummy_traits)
+table(secondary_counts)
+
+
 temp = secondary_dummy_traits %>% 
   select(-size)
 secondary_all_traits_count = colSums(temp)
@@ -226,18 +231,29 @@ secondary_all_traits_count = x[!secondary_all_traits_count == 'size']
 
 size_based_traits = 
   read_csv(here('./Data/Cole-Original-Data/size_based_traits.csv'))
+orig_size = orig_dums %>% 
+  select(-sums)
+
+original_not_size = names(orig_size)[!(names(orig_size) %in% 
+                                         unique(size_based_traits$Trait_spell_corrected))]
+original_size = names(orig_size)[!(names(orig_size) %notin% 
+                                         unique(size_based_traits$Trait_spell_corrected))]
+original_not_size = orig_size[, original_not_size]
+
+original_size = orig_size[, original_size]
+orig_size_counts = colSums(original_size[,2:ncol(original_size)])
+orig_not_size_counts = colSums(original_not_size[,2:ncol(original_not_size)])
+mean(orig_size_counts)
+ 
+hist(orig_not_size_counts)
+
+mean(orig_not_size_counts)
 
 
+original_size[rowSums(original_size > 0) >= 1, ]
 
 
-
-
-
-
-
-
-
-
-
-
-
+trait_levels = read_csv(here('./Data/Cole-Original-Data/trait_levels_types_clean.csv'))
+trait_levels = trait_levels %>% 
+  distinct(Trait_spell_corrected, Type)
+table(trait_levels$Type)

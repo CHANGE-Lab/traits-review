@@ -23,6 +23,11 @@ library(here)
 library(gridExtra)
 
 current = read_csv('./Data/Cole-Original-Data/finalized_lit_db_for_r.csv')
+trait_levels = 
+  read_csv(here('./Data/Cole-Original-Data/trait_levels_types_clean.csv'))
+original_dummy = 
+  read_csv(
+    here('./Data/Cole-Output-Data(readyforanalysis)/original_traits_dummy.csv'))
 
 unique(current$`Relevant to Study`)
 
@@ -417,6 +422,69 @@ wordcloud(trophic$Trait, trophic$`Number of Times Used`, scale=c(2.2,.6),
 #trophicsub - min. 1
 wordcloud(trophicsub$Trait, trophicsub$`Number of Times Used`, scale=c(2.2,.6), 
           random.order = FALSE, min.freq = 1, max.words = Inf, 
+          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
+
+
+####### wordclouds from the trait-levels of the traits
+trait_levels = trait_levels %>% 
+  select(Trait_spell_corrected, Type) %>% 
+  distinct()
+
+trait_levels_morph = trait_levels %>% 
+  filter(Type == 'Morphology')
+trait_levels_phys = trait_levels %>% 
+  filter(Type == 'Physiological')
+trait_levels_life = trait_levels %>% 
+  filter(Type == 'Life History')
+trait_levels_behav = trait_levels %>% 
+  filter(Type == 'Behavioural')
+
+orig_morph = data.frame(colSums(original_dummy %>% 
+                                  select(-c(1:8)) %>% 
+                                  select(c(
+                                    trait_levels_morph$Trait_spell_corrected))))
+orig_morph$Trait = rownames(orig_morph)
+names(orig_morph)[1] = 'count'
+
+orig_phys = data.frame(colSums(original_dummy %>% 
+                                  select(-c(1:8)) %>% 
+                                  select(c(
+                                    trait_levels_phys$Trait_spell_corrected))))
+orig_phys$Trait = rownames(orig_phys)
+names(orig_phys)[1] = 'count'
+
+orig_life = data.frame(colSums(original_dummy %>% 
+                                 select(-c(1:8)) %>% 
+                                 select(c(
+                                   trait_levels_life$Trait_spell_corrected))))
+orig_life$Trait = rownames(orig_life)
+names(orig_life)[1] = 'count'
+
+orig_behav = data.frame(colSums(original_dummy %>% 
+                                 select(-c(1:8)) %>% 
+                                 select(c(
+                                   trait_levels_behav$Trait_spell_corrected))))
+orig_behav$Trait = rownames(orig_behav)
+names(orig_behav)[1] = 'count'
+
+# wordcloud - morphological
+wordcloud(orig_morph$Trait, orig_morph$count, scale=c(2.2,.6), 
+          random.order = FALSE, min.freq = 15, max.words = Inf, 
+          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
+
+# wordcloud - physiological
+wordcloud(orig_phys$Trait, orig_phys$count, scale=c(2.2,.6), 
+          random.order = FALSE, min.freq = 7, max.words = Inf, 
+          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
+
+# wordcloud - life history
+wordcloud(orig_life$Trait, orig_life$count, scale=c(2.2,.6), 
+          random.order = FALSE, min.freq = 14, max.words = Inf, 
+          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
+
+# wordcloud - behavioural
+wordcloud(orig_behav$Trait, orig_behav$count, scale=c(2.2,.6), 
+          random.order = FALSE, min.freq = 14, max.words = Inf, 
           rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
 
 ######## Studies over time
