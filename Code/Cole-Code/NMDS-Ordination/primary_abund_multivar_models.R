@@ -10,16 +10,11 @@
 ##########
 ##########
 
-library(devtools)
-library(knitr)
 library(tidyverse)
 library(vegan)
 library(viridis)
-library(PNWColors)
 library(mvabund)
-library(reshape2)
 library(here)
-library(cowplot)
 
 #separate the modeling into the P/A modeling (1/0) and then the abundance modeling
 primary_abundance = 
@@ -31,15 +26,15 @@ primary_abundance_sites = data.frame(primary_abundance[,1:10])
 primary_abundance_species = data.frame(primary_abundance[,11:ncol(primary_abundance)])
 
 #run actual ordination - try with both k = 2 & 3
-set.seed(00001)
-
-primary_abundance_ord_iso = metaMDS(primary_abundance_species,
-                                     #distance = 'bray',
-                                     trymax = 1000,
-                                    k = 3)
-
-saveRDS(primary_abundance_ord_iso, 
-        here('./Model Output/Primary_abundance/nMDS-Ordinations/primary_abundance_ord_iso.rds'))
+# set.seed(00001)
+# 
+# primary_abundance_ord_iso = metaMDS(primary_abundance_species,
+#                                      #distance = 'bray',
+#                                      trymax = 1000,
+#                                     k = 3)
+# 
+# saveRDS(primary_abundance_ord_iso, 
+#         here('./Model Output/Primary_abundance/nMDS-Ordinations/primary_abundance_ord_iso.rds'))
 primary_abundance_ord_iso  = 
   readRDS(here('./Model Output/Primary_abundance/nMDS-Ordinations/primary_abundance_ord_iso.rds'))
 
@@ -458,8 +453,8 @@ ggsave(here('./Figures/Primary_abundance/primary_ab_plot_pred_large.png'),
 #All 6 panels
 
 review_nMDS_primary_abun6 = 
-  plot_grid(primary_ab_gc_plot, primary_ab_fil_plot, primary_ab_pred_plot, 
-            primary_ab_tos_plot, primary_ab_eco_plot, primary_ab_tax_plot, 
+  plot_grid(primary_ab_tax_plot, primary_ab_tos_plot, primary_ab_eco_plot,
+            primary_ab_fil_plot, primary_ab_gc_plot, primary_ab_pred_plot, 
             labels = c("A", "B", "C", "D", "E", "F"), 
             label_x = 0.15, vjust = 3.5, ncol = 2, 
             rel_widths = c(1, 1), align = "v")
@@ -469,7 +464,7 @@ ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6_small.png'),
        width = 16, height = 12, dpi = 200)
 ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6_large.png'), 
        plot = review_nMDS_primary_abun6,
-       width = 16, height = 12, dpi = 300)
+       width = 16, height = 12, dpi = 1200)
 
 ggsave(here('./Figures/Primary_abundance/review_nMDS_primary_abun6.jpeg'), 
        plot = review_nMDS_primary_abun6, 

@@ -10,14 +10,10 @@
 ##########
 ##########
 
-library(devtools)
-library(knitr)
 library(tidyverse)
 library(vegan)
 library(viridis)
-library(PNWColors)
 library(mvabund)
-library(reshape2)
 library(here)
 
 #separate the modeling into the P/A modeling (1/0) and then the abundance modeling
@@ -29,11 +25,11 @@ secondary_abundance_species = data.frame(secondary_abundance[,11:ncol(secondary_
 
 #run actual ordination - try with both k = 2 & 3
 #set.seed(0002)
-secondary_abundance_ord_k3 = metaMDS(secondary_abundance_species,
-                              #distance = 'bray',
-                              trymax = 1000,
-                              k = 4)
-saveRDS(secondary_abundance_ord_k3, here('./Model Output/Secondary_abundance/nMDS/secondary_abundance_ord.rds'))
+# secondary_abundance_ord_k3 = metaMDS(secondary_abundance_species,
+#                               #distance = 'bray',
+#                               trymax = 1000,
+#                               k = 4)
+# saveRDS(secondary_abundance_ord_k3, here('./Model Output/Secondary_abundance/nMDS/secondary_abundance_ord.rds'))
 secondary_abundance_ord_k4 = readRDS(here('./Model Output/Secondary_abundance/nMDS/secondary_abundance_ord.rds'))
 
 ############################## Plotting pipeline ###############################
@@ -421,8 +417,8 @@ ggsave(here('./Figures/Secondary_abundance/secondary_ab_plot_pred_large.png'),
 #All 6 panels
 
 review_nMDS_secondary_ab6 = 
-  plot_grid(secondary_ab_gc_plot, secondary_ab_fil_plot, secondary_ab_pred_plot, 
-            secondary_ab_tos_plot, secondary_ab_eco_plot, secondary_ab_tax_plot, 
+  plot_grid(secondary_ab_tax_plot, secondary_ab_tos_plot, secondary_ab_eco_plot,
+            secondary_ab_fil_plot, secondary_ab_gc_plot, secondary_ab_pred_plot,
             labels = c("A", "B", "C", "D", "E", "F"), 
             label_x = 0.12, vjust = 3.5, ncol = 2, 
             rel_widths = c(1, 1), align = "v")
