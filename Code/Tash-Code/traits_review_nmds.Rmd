@@ -116,7 +116,7 @@ saveRDS(traits_ord_use, "traits_ord_use.rds")
 ```{r UPLOAD ORDINATION RDS FILE}
 
 #Initial dummy data
-traits_ord_use <- readRDS("C:/Users/Helder/Documents/GitHub/traits_review_proj/Output-Figs/traits_ord_use.rds")
+traits_ord_use <- readRDS("C:/Users/Helder/Documents/GitHub/traits_review_proj/Model Output/Fulldata_pa/nMDS-Ordinations/traits_ord_use.rds")
 View(traits_ord_use)
 #Old model did not converge
 
@@ -644,8 +644,8 @@ https://wilkelab.org/cowplot/articles/aligning_plots.html
 
 ```{r Merge nMDS plots, include=F, eval=F, echo=F}
 
-#All 6 panels, grey background
-review_nMDS_6 = plot_grid(trait_nMDS_clim, trait_nMDS_filt, trait_nMDS_predict, trait_nMDS_tos, trait_nMDS_ecos, trait_nMDS_taxgrp, labels = c("A", "B", "C", "D", "E", "F"), label_x = 0.12, vjust = 3.5, ncol = 2, rel_widths = c(1, 1), align = "v") #hjust = -7.5, label_x = c(0.12, 0.12, 0.12, 0.12, 0.12, 0.12)
+#All 6 panels
+review_nMDS_6 = plot_grid(trait_nMDS_taxgrp, trait_nMDS_tos, trait_nMDS_ecos, trait_nMDS_filt, trait_nMDS_clim, trait_nMDS_predict, labels = c("A", "B", "C", "D", "E", "F"), label_x = 0.12, vjust = 3.5, ncol = 2, rel_widths = c(1, 1), align = "v") #hjust = -7.5, label_x = c(0.12, 0.12, 0.12, 0.12, 0.12, 0.12)
 review_nMDS_6
 ggsave("review_nMDS_6whitelab.jpeg", plot = review_nMDS_6, width = 12, height = 10, dpi = 300)
 
