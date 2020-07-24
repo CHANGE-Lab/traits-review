@@ -405,12 +405,18 @@ head(hull.data.taxon)
 
 ```{r nMDS Global Change Driver, echo=TRUE}
 #nMDS plot for the assessmenet of global change (yes/no) and the drivers.
+levels(hull.data.gcd$`Global Change Driver`)
 
 trait_nMDS_clim <- ggplot() + 
   geom_polygon(data=hull.data.gcd, 
-               aes(x=NMDS1,y=NMDS2, fill= fct_relevel(`Global Change Driver`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation"), 
-                   group=fct_relevel(`Global Change Driver`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation")), alpha=0.30) + # add the convex hulls
-  geom_point(data=treatment.scores, aes(x=NMDS1,y=NMDS2, colour = fct_relevel(`Global Change Driver`, "Not assessed", "Habitat loss", "Climate change", "Multiple", "Invasion", "Exploitation")), size=2) + # add the point markers
+               aes(x=NMDS1, y=NMDS2, 
+                   fill= fct_relevel(`Global Change Driver`, "Not assessed", "Climate change", "Exploitation", "Multiple", "Habitat loss", "Invasion"), 
+                   group=fct_relevel(`Global Change Driver`, "Not assessed", "Climate change", "Exploitation", "Multiple", "Habitat loss", "Invasion")), 
+               alpha=0.30) + # add the convex hulls
+  geom_point(data=treatment.scores, 
+             aes(x=NMDS1,y=NMDS2, 
+                 colour = fct_relevel(`Global Change Driver`, "Not assessed", "Climate change", "Exploitation", "Multiple", "Habitat loss", "Invasion")), 
+             size=2) + # add the point markers
   coord_equal() +
   theme_bw()  +
   theme(axis.text.x = element_blank(),  # remove x-axis text
@@ -445,7 +451,11 @@ ggsave("trait_nMDS_clim.jpeg", plot = trait_nMDS_clim, width = 8, height = 8, dp
 #nMDS plot for the level of ecological filtering for which traits were applied
 
 trait_nMDS_filt <- ggplot() + 
-  geom_polygon(data=hull.data.filt,aes(x=NMDS1, y=NMDS2, fill= fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic"), group=fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic")),alpha=0.30) + # add the convex hulls
+  geom_polygon(data=hull.data.filt, 
+               aes(x=NMDS1, y=NMDS2, 
+                   fill= fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic"), 
+                   group=fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic")),
+               alpha=0.30) + # add the convex hulls
   geom_point(data=treatment.scores,aes(x=NMDS1,y=NMDS2, colour = fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic")), size=2) + # add the point markers
   coord_equal() +
   theme_bw()  +
