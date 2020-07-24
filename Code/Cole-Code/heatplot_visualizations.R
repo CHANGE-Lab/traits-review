@@ -273,6 +273,17 @@ trait_env_df3$Trait = factor(trait_env_df3$Trait,
                                         'Behavioural', 
                                         'Morphological', 
                                         'Physiological'))
+levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
+  "Abiotic"
+levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
+  "Biotic"
+levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Physical"] = 
+  "Dispersal"
+trait_env_df3$Filter = factor(trait_env_df3$Filter, 
+                             levels = c('Abiotic', 
+                                        'Dispersal', 
+                                        'Biotic', 
+                                        'Trophic'))
 
 
 trait_x_filter_by_ecosystem_x_TOS_plot = 
