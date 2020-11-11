@@ -17,6 +17,9 @@ library(here)
 
 dummy_new = read_csv(here('./Data/Cole-Original-Data/traits_dummy_fixed.csv'))
 traits_fixed = read_csv(here('./Data/Cole-Original-Data/traits_fixed.csv'))
+func_biogeo_study_data = read_csv(here('./Data/Cole-Original-Data/study_classification_FuncBiogeog_to_append.csv'))
+func_biogeo_trait_data = read_csv(here('./Data/Cole-Original-Data/traits_classification_FuncBiogeog_to_append.csv'))
+
 
 all = traits_fixed$DOI
 some = as.factor(dummy_new$DOI)
@@ -78,10 +81,32 @@ names(missing_doi_traits)
 additive = rbind(additive, missing_doi_traits)
 n_distinct(additive$DOI) #okay, we have all 822 studies now
 
+#now add the new DOIs and traits
+#add functional bigeo geo DOIs and traits here
+#NOTE - did some checking, and dois: "10.1111/1365-2435.13142" & "10.1111/jbi.13171" already exist in previous set of studies
+#so i'll remove them as we should go with the first pass on those papers
+func_biogeo_study_data = func_biogeo_study_data %>% 
+  filter(DOI %notin% c("10.1111/1365-2435.13142", "10.1111/jbi.13171"))
+func_biogeo_trait_data = func_biogeo_trait_data %>% 
+  filter(DOI %notin% c("10.1111/1365-2435.13142", "10.1111/jbi.13171"))
+
+additive_biogeo = func_biogeo_trait_data %>% 
+  select(DOI, Original_trait) %>% 
+  rename(Trait = Original_trait)
+
+additive = rbind(additive, additive_biogeo)
+n_distinct(additive$DOI) #okay, we have all 850 studies now
+
 additive$Trait = trimws(additive$Trait, which = 'both')
 
 #join all the other trait levels to the additive database 
 trait_levels = read_csv(here('./Data/Cole-Original-Data/trait_levels_clean.csv'))
+#join the traits levels with the new data:
+trait_levels_biogeio = func_biogeo_trait_data %>% 
+  select(-DOI)
+names(trait_levels) == names(trait_levels_biogeio)
+#the names are the same so they match up - bind the two dfs
+trait_levels = rbind(trait_levels, trait_levels_biogeio)
 
 #now, there are likely duplicated traits in the trait_levels dataframe, I have to get rid of them so I can make proper pairs to them 
 dups = trait_levels[duplicated(trait_levels$Trait_spell_corrected),]
