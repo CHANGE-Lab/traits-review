@@ -81,32 +81,8 @@ names(missing_doi_traits)
 additive = rbind(additive, missing_doi_traits)
 n_distinct(additive$DOI) #okay, we have all 822 studies now
 
-#now add the new DOIs and traits
-#add functional bigeo geo DOIs and traits here
-#NOTE - did some checking, and dois: "10.1111/1365-2435.13142" & "10.1111/jbi.13171" already exist in previous set of studies
-#so i'll remove them as we should go with the first pass on those papers
-func_biogeo_study_data = func_biogeo_study_data %>% 
-  filter(DOI %notin% c("10.1111/1365-2435.13142", "10.1111/jbi.13171"))
-func_biogeo_trait_data = func_biogeo_trait_data %>% 
-  filter(DOI %notin% c("10.1111/1365-2435.13142", "10.1111/jbi.13171"))
-
-additive_biogeo = func_biogeo_trait_data %>% 
-  select(DOI, Original_trait) %>% 
-  rename(Trait = Original_trait)
-
-additive = rbind(additive, additive_biogeo)
-n_distinct(additive$DOI) #okay, we have all 850 studies now
-
-additive$Trait = trimws(additive$Trait, which = 'both')
-
 #join all the other trait levels to the additive database 
 trait_levels = read_csv(here('./Data/Cole-Original-Data/trait_levels_clean.csv'))
-#join the traits levels with the new data:
-trait_levels_biogeio = func_biogeo_trait_data %>% 
-  select(-DOI)
-names(trait_levels) == names(trait_levels_biogeio)
-#the names are the same so they match up - bind the two dfs
-trait_levels = rbind(trait_levels, trait_levels_biogeio)
 
 #now, there are likely duplicated traits in the trait_levels dataframe, I have to get rid of them so I can make proper pairs to them 
 dups = trait_levels[duplicated(trait_levels$Trait_spell_corrected),]
@@ -121,6 +97,7 @@ trait_levels_sub = trait_levels %>%
   select(Trait_spell_corrected, Primary_classification, Secondary_classification) %>% 
   rename(Trait = Trait_spell_corrected)
 
+
 #do a check to make sure that there are no traits coming in from the dummy set that aren't in the levels set and vice versa
 traits_levels_unique = sort(unique(as.character(trait_levels_sub$Trait)))
 traits_additive_unique = sort(unique(as.character(additive$Trait)))
@@ -133,7 +110,31 @@ missing_traits1 = data.frame(setdiff(traits_levels_unique, traits_additive_uniqu
 additive_levels = merge(additive, trait_levels_sub, 
                         by.x = 'Trait', by.y = 'Trait')
 
+#add functional bigeo geo DOIs and traits here
+#NOTE - did some checking, and dois: "10.1111/1365-2435.13142" & "10.1111/jbi.13171" already exist in previous set of studies
+#so i'll remove them as we should go with the first pass on those papers
+func_biogeo_study_data = func_biogeo_study_data %>% 
+  filter(Relevance == 1) 
 
+func_biogeo_study_data = func_biogeo_study_data %>% 
+  filter(DOI %notin% c("10.1111/1365-2435.13142", "10.1111/jbi.13171"))
+func_biogeo_trait_data = func_biogeo_trait_data %>% 
+  filter(DOI %notin% c("10.1111/1365-2435.13142", "10.1111/jbi.13171"))
+
+#do a check to make sure that all the dois are in both 
+traits_levels_unique_biogeo = sort(unique(as.character(func_biogeo_study_data$DOI)))
+traits_additive_unique_biogeo = sort(unique(as.character(func_biogeo_trait_data$DOI)))
+missing_dois_biogeo = data.frame(setdiff(traits_additive_unique_biogeo, traits_levels_unique_biogeo)) #as long as this is empty
+missing_dois_biogeo_1 = data.frame(setdiff(traits_levels_unique_biogeo, traits_additive_unique_biogeo)) #and this is empty - all the traits that should be there are accounted for
+
+
+additive_biogeo = func_biogeo_trait_data %>% 
+  select(Original_trait, DOI, Primary_classification, Secondary_classification) %>% 
+  rename(Trait = Original_trait)
+names(additive_levels) == names(additive_biogeo) #make sure this is all 'TRUE' 
+
+additive_levels = rbind(additive_levels, additive_biogeo)
+additive_levels = unique(additive_levels)
 #make the dummy datasets for the different levels here
 additive_orig_traits = additive_levels %>% 
   select(DOI, Trait)
@@ -190,6 +191,12 @@ current = read_csv(here('./Data/Cole-Original-Data/finalized_lit_db_for_r.csv'),
                    guess_max = 10000)
 current = current %>% 
   filter(`Relevant to Study` == 'Y' | `Relevant to Study` == 'y') %>% 
+  rename(TOS = `Type of study`)
+
+#gotta do it for the new data too
+func_biogeo_study_data = func_biogeo_study_data %>% 
+  filter(Relevance == 1) %>%
+  filter(DOI %in% additive_biogeo$DOI) %>% 
   rename(TOS = `Type of study`)
 
 #TOS
