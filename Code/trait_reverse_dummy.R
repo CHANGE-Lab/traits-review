@@ -19,10 +19,15 @@ library(data.table)
 library(here)
 `%notin%` = Negate(`%in%`)
 
-dummy_new = read_csv(here('./Data/Cole-Original-Data/traits_dummy_fixed.csv'))
+dummy_new = read_csv(here('./data/unprocessed-data/traits_dummy_fixed.csv'))
 traits_fixed = read_csv(here('./Data/Cole-Original-Data/traits_fixed.csv'))
-func_biogeo_study_data = read_csv(here('./Data/Cole-Original-Data/study_classification_FuncBiogeog_to_append.csv'))
-func_biogeo_trait_data = read_csv(here('./Data/Cole-Original-Data/traits_classification_FuncBiogeog_to_append_revised.csv'))
+func_biogeo_study_data = 
+  read_csv(here(paste('./data/unprocessed-data',
+  '/study_classification_FuncBiogeog_to_append.csv')))
+func_biogeo_trait_data = 
+  read_csv(here(paste('./data/unprocessed-data','
+                      /traits_classification','
+                      _FuncBiogeog_to_append_revised.csv')))
 
 # create data for initial data collection ======================================
 
@@ -57,7 +62,7 @@ missing_dois = as.character(unique(missing_dois$DOI))
 #   distinct()
 # 
 # write_csv(additive, here('./Data/Cole-Original-Data/additive.csv'))
-additive = read_csv(here('./Data/Cole-Original-Data/additive.csv'))
+additive = read_csv(here('./data/unprocessed-data/additive.csv'))
 
 dummy_new$sums = rowSums(dummy_new[,c(2:ncol(dummy_new))])
 check_add = data.frame(table(additive$DOI)) %>% 
@@ -96,7 +101,7 @@ n_distinct(additive$DOI) #okay, we have all 822 studies now
 
 #join all the other trait levels to the additive database 
 trait_levels = 
-  read_csv(here('./Data/Cole-Original-Data/trait_levels_clean.csv'))
+  read_csv(here('./data/unprocessed-data/trait_levels_clean.csv'))
 
 ###### begin NOTE ##############################################################
 # now, there are likely duplicated traits in the trait_levels dataframe, 
@@ -112,7 +117,9 @@ dup_df = trait_levels %>%
 trait_levels = trait_levels[!duplicated(trait_levels$Trait_spell_corrected),]
 
 trait_levels_sub = trait_levels %>% 
-  select(Trait_spell_corrected, Primary_classification, Secondary_classification) %>% 
+  select(Trait_spell_corrected, 
+         Primary_classification, 
+         Secondary_classification) %>% 
   rename(Trait = Trait_spell_corrected)
 
 #do a check to make sure that there are no traits coming in from the dummy set 
@@ -166,7 +173,9 @@ missing_dois_biogeo_1 = #and this is empty - all the traits are accounted for
 # Make an 'additive' dataframe for new data ====================================
 
 additive_biogeo = func_biogeo_trait_data %>% 
-  select(Original_trait, DOI, Primary_classification, Secondary_classification) %>% 
+  select(Original_trait, DOI, 
+         Primary_classification, 
+         Secondary_classification) %>% 
   rename(Trait = Original_trait)
 names(additive_levels) == names(additive_biogeo) #make sure this is all 'TRUE' 
 
@@ -221,18 +230,18 @@ sec_empty_traits_multivar = additive_sec_traits_dropempty %>%
 
 #now get the DOI and other info and bring that in
   ##note: just using the old dummy here to check things for peace of mind 
-old_dummy = read_csv(here('./Data/Cole-Original-Data/traits_dummy_old.csv'))
+old_dummy = read_csv(here('./data/unprocessed-data/traits_dummy_old.csv'))
 old_dummy = old_dummy %>% 
   select(DOI, Ecosystem, Taxonomic, System, `Forecasting/Predictive`, 
          `Global Change Driver`,
          TOS, Filter)
-n_distinct(old_dummy$DOI) #note, only 802 here, gotta get the other 20 from the other df
+n_distinct(old_dummy$DOI) #note, only 802 here, get other 20 from the other df
 
 old = old_dummy %>% 
   select(DOI, Filter)
 test = old[duplicated(old),]
 
-current = read_csv(here('./Data/Cole-Original-Data/finalized_lit_db_for_r.csv'),
+current = read_csv(here('./data/unprocessed-data/finalized_lit_db_for_r.csv'),
                    guess_max = 10000)
 current = current %>% 
   filter(`Relevant to Study` == 'Y' | `Relevant to Study` == 'y') %>% 
@@ -277,7 +286,8 @@ for(doi in unique(tos$DOI)) {
                           TOS = as.character())
     for(n in unique(names(temp[,2:ncol(temp)]))) {
       temp1 = temp[,c('DOI', n)]
-      temp2 = cbind(temp1[1L], TOS = names(temp1[-1L])[max.col(temp1[-1L] == 1L)])
+      temp2 = cbind(temp1[1L], 
+                    TOS = names(temp1[-1L])[max.col(temp1[-1L] == 1L)])
       sub = rbind(sub, temp2)
       
     }
@@ -311,7 +321,8 @@ for(doi in unique(trait_type$DOI)) {
                      TT = as.character())
     for(n in unique(names(temp[,2:ncol(temp)]))) {
       temp1 = temp[,c('DOI', n)]
-      temp2 = cbind(temp1[1L], TT = names(temp1[-1L])[max.col(temp1[-1L] == 1L)])
+      temp2 = cbind(temp1[1L], 
+                    TT = names(temp1[-1L])[max.col(temp1[-1L] == 1L)])
       sub = rbind(sub, temp2)
       
     }
@@ -341,7 +352,8 @@ for(doi in unique(filter$DOI)) {
                      filter = as.character())
     for(n in unique(names(temp[,2:ncol(temp)]))) {
       temp1 = temp[,c('DOI', n)]
-      temp2 = cbind(temp1[1L], filter = names(temp1[-1L])[max.col(temp1[-1L] == 1L)])
+      temp2 = cbind(temp1[1L], 
+                    filter = names(temp1[-1L])[max.col(temp1[-1L] == 1L)])
       sub = rbind(sub, temp2)
       
     }
@@ -352,25 +364,32 @@ for(doi in unique(filter$DOI)) {
   }
 }
 
-
 #grab the other data
 other_data = current %>% 
-  select(DOI, Ecosystem, Taxonomic, `Global Change Driver`, `Forecasting/Predictive`) %>% 
+  select(DOI, Ecosystem, Taxonomic, 
+         `Global Change Driver`, `Forecasting/Predictive`) %>% 
   rename(GlobalChange = `Global Change Driver`,
          Forecasting = `Forecasting/Predictive`)
 other_data$Ecosystem = as.factor((other_data$Ecosystem))
 other_data$Taxonomic = as.factor((other_data$Taxonomic))
 other_data$DOI = as.factor(other_data$DOI)
 
-levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="Broad"] <- "Multiple"
-levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Herps"] <- "Herpetofauna"
-levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Broad"] <- "Multiple"
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="Broad"] <-
+  "Multiple"
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Herps"] <- 
+  "Herpetofauna"
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Broad"] <- 
+  "Multiple"
 levels(other_data$Ecosystem)
-levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="freshwater"] <- "Freshwater"
-levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="terrestrial"] <- "Terrestrial"
-levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="marine"] <- "Marine"
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="freshwater"] <- 
+  "Freshwater"
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="terrestrial"] <- 
+  "Terrestrial"
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="marine"] <- 
+  "Marine"
 
-#merge all data together
+# Add join dummy and categorical ===============================================
+
 other_data_TOS = merge(other_data, TOS_data, 
                         by.x = 'DOI', by.y = 'DOI')
 other_data_TOS_TT = merge(other_data_TOS, TT_data, 
@@ -379,36 +398,36 @@ other_data_TOS_TT_filter = merge(other_data_TOS_TT, filter_data,
                           by.x = 'DOI', by.y = 'DOI')
 categorial_data = other_data_TOS_TT_filter
 
-### bring categorical data together with dummy data to finish the datasets
+# Write out the datasets =======================================================
 
 #original traits
 orig_traits = merge(categorial_data, orig_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
-write_csv(orig_traits, here('./Data/Cole-Output-Data(readyforanalysis)/original_traits_dummy.csv'))
+write_csv(orig_traits, here('./data/processed-data/original_traits_dummy.csv'))
 #primary traits
 prim_traits = merge(categorial_data, prim_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
-write.csv(prim_traits, here('./Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy.csv'))
+write.csv(prim_traits, 
+          here('./data/processed-data/primary_traits_dummy.csv'))
 #secondary (keep empty) traits
 sec_empty_traits = merge(categorial_data, sec_empty_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
-write.csv(sec_empty_traits, here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_empty_dummy.csv'))
+write.csv(sec_empty_traits, 
+          here('./data/processed-data/secondary_traits_empty_dummy.csv'))
 #secondary (keep empty) traits
 sec_fill_traits = merge(categorial_data, sec_fill_traits_multivar,
                          by.x = 'DOI', by.y = 'DOI')
-write.csv(sec_fill_traits, here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_f_dummy.csv'))
+write.csv(sec_fill_traits, 
+          here('./data/processed-data/secondary_traits_f_dummy.csv'))
 
-#hoping to show a summary (rank abundance curve for traits instead of species) 
-#so come up with how many traits go to each primary/secondary (i.e. if a paper 
-#has three 1s for three primary sections, each of those ones might be due to three
-#or four or however many traits per each one)
+###### begin NOTE ##############################################################
+# Repeat data creation process for secondary and primary, but instead
+# of binary, make it abundance based (i.e. if there are 5 traits) 
+# in a single paper that are 'Life History', life history now recieves
+# 5 instead of 1 for that particular paper
+###### end NOTE ################################################################
 
-######### Repeat data creation process for secondary and primary, but instead
-######### of binary, make it abundance based (i.e. if there are 5 traits) 
-######### in a single paper that are 'Life History', life history now recieves
-######### 5 instead of 1 for that particular paper
-
-#so, make the count tables
+# make the count tables
 additive_prim_traits_abundance = additive_levels %>% 
   group_by(DOI, Primary_classification) %>% 
   dplyr::summarize(n = length(Primary_classification))
@@ -430,18 +449,12 @@ additive_sec_traits_abundance_multivar = additive_sec_traits_abundance %>%
 prim_traits_abundance = merge(categorial_data, prim_traits_abundance_multivar,
                     by.x = 'DOI', by.y = 'DOI')
 write.csv(prim_traits_abundance, 
-          here('./Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy_abundance.csv'))
+          here('./data/processed-data/primary_traits_dummy_abundance.csv'))
 
 #secondary (keep empty) traits
 sec_empty_traits_abundance = merge(categorial_data, 
                                    additive_sec_traits_abundance_multivar,
                          by.x = 'DOI', by.y = 'DOI')
 write.csv(sec_empty_traits_abundance, 
-          here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_abundance.csv'))
-
-
-
-
-#we could exclude cases that don't share any traits with other studies
-#or we could exclude traits
+          here('./data/processed-data/secondary_traits_dummy_abundance.csv'))
 
