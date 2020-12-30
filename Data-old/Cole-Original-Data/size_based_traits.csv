@@ -1,0 +1,135 @@
+Original_trait,Trait_spell_corrected,Context_needed,Primary_classification,Secondary_classification,Tertiary_classification,Revised_major_class,Revised_fine_class,4th_class,Revision_addressed,Revision_suggested,NOTES,Reviewed
+thorax length,thorax length,0,morphology,size,shape,shape,shape,,1,shape/size,secondary,NH
+max shell size,max shell size,0,morphology,size,shell traits,shell traits,shell traits,,,,,NH
+maximal shell size,maximal shell size,0,morphology,size,shell traits,shell traits,shell traits,,,,,NH
+snout-to-vent length,snout-to-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
+snout-vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
+snout--vent length,snout-vent length,0,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: repeat,,NH
+snout vent length,snout vent length,1,morphology,size,snout-vent length,snout-vent length,snout-vent length,,1,NH: respiration = functional to organism,,NH
+veg height,veg height,0,morphology,size,vegetative height,vegetative height,vegetative height,,1,"NH: repeat ""vegetative height""",,NH
+veg plant height,veg plant height,0,morphology,size,vegetative height,vegetative height,vegetative height,,1,NH: how is this different from above or below,,NH
+vegetative height,vegetative height,0,morphology,size,vegetative height,vegetative height,vegetative height,,1,"NH: repeat ""veg height""",,NH
+adult body length,adult body length,0,morphology,size,,size,adult body length,,,,,NH
+adult body size,adult body size,0,morphology,size,,size,adult body size,,,,,NH
+adult mass,adult mass,0,morphology,size,,size,adult mass,,,,,NH
+adult size,adult size,0,morphology,size,,size,adult size,,,,,NH
+average body length,average body length,0,morphology,size,,size,average body length,,,,,NH
+average body size of females,average body size of females,0,morphology,size,,size,average body size of females,,,,,NH
+B weight,B weight,0,morphology,size,,size,B weight,,,,,NH
+biovolume,biovolume,0,morphology,size,,size,biovolume,,,,,NH
+body length,body length,0,morphology,size,,size,body length,,1,NH: repeat length/lengths,,NH
+body lengths,body lengths,0,morphology,size,,size,body lengths,,1,NH: repeat length/lengths,,NH
+body mass,body mass,0,morphology,size,,size,body mass,,,,,NH
+body size,body size,0,morphology,size,,size,body size,,,,,NH
+Body standard length,body standard length,0,morphology,size,,size,Body standard length,,,,,NH
+body weight,body weight,0,morphology,size,,size,body weight,,,,,NH
+body zie,body size,0,morphology,size,,size,body size,,,,,NH
+carapace length,carapace length,0,morphology,size,,size,carapace length,,,,,NH
+cell size,cell size,0,morphology,size,,size,cell size,,,,,NH
+cross-sectional diameter,cross-sectional diameter,0,morphology,size,,size,cross-sectional diameter,,,,,NH
+crown area,crown area,0,morphology,size,,size,crown area,,,,,NH
+crown cover,crown cover,0,morphology,size,,size,crown cover,,,,,NH
+crown length,crown length,0,morphology,size,,size,crown length,,,,,NH
+crown plasticity,crown plasticity,0,morphology,size,,size,crown plasticity,,,,,NH
+crown radius,crown radius,0,morphology,size,,size,crown radius,,,,,NH
+crown width,crown width,0,morphology,size,,size,crown width,,,,,NH
+crown witdth,crown width,0,morphology,size,,size,crown width,,1,"NH: typo ""witdth"" --> ""width""",,NH
+DBH,DBH,0,morphology,size,,size,DBH,,,,,NH
+diameter,diameter,0,morphology,size,,size,diameter,,,,,NH
+diameter at breast height,diameter at breast height,0,morphology,size,,size,diameter at breast height,,,,,NH
+dry mass,dry mass,0,morphology,size,,size,dry mass,,,,,NH
+female body mass,female body mass,0,morphology,size,,size,female body mass,,,,,NH
+femur length,femur length,0,morphology,size,,size,femur length,,,,,NH
+femur width,femur width,0,morphology,size,,size,femur width,,,,,NH
+fish length,fish length,0,morphology,size,,size,fish length,,,,,NH
+fork length,fork length,0,morphology,size,,size,fork length,,,,,NH
+fresh leaf mass,fresh leaf mass,0,morphology,size,,size,fresh leaf mass,,,,,NH
+girth at breast height,girth at breast height,0,morphology,size,,size,girth at breast height,,,,,NH
+grass height,grass height,1,morphology,size,,size,grass height,,1,NH: this seems to be a mix of a habitat complexity metric and a morphological trait,"CB: if it is a grass, what's it's height",NH
+greatest length of skull,greatest length of skull,0,morphology,size,,size,greatest length of skull,,,,,NH
+head and body length,head and body length,0,morphology,size,,size,head and body length,,,,,NH
+height,height,0,morphology,size,,size,height,,,,,NH
+height plasticity,height plasticity,0,morphology,size,,size,height plasticity,,1,size/shape,secondary,NH
+height to crown base,height to crown base,0,morphology,size,,size,height to crown base,,1,NH: secondary --> size,,NH
+individual volume,individual volume,0,morphology,size,,size,individual volume,,,,,NH
+instar size,instar size,0,morphology,size,,size,instar size,,,,,NH
+length,length,0,morphology,size,,size,length,,,,,NH
+length at widest point,length at widest point,0,morphology,size,,size,length at widest point,,,,,NH
+mass,mass,0,morphology,size,,size,mass,,,,,NH
+mass allometry,mass allometry,0,morphology,size,,size,mass allometry,,,,,NH
+mature plant height,mature plant height,0,morphology,size,,size,mature plant height,,,,,NH
+max adult size,max adult size,0,morphology,size,,size,max adult size,,,,,NH
+max body length,max body length,0,morphology,size,,size,max body length,,,,,NH
+max body mass,max body mass,0,morphology,size,,size,max body mass,,,,,NH
+max body size,max body size,0,morphology,size,,size,max body size,,,,,NH
+max body width,max body width,0,morphology,size,,size,max body width,,,,,NH
+max canopy height,max canopy height,0,morphology,size,,size,max canopy height,,,,,NH
+max cone length,max cone length,0,morphology,size,,size,max cone length,,,,,NH
+max DBH,max DBH,0,morphology,size,,size,max DBH,,,,,NH
+max diameter,max diameter,0,morphology,size,,size,max diameter,,,,,NH
+max height,max height,0,morphology,size,,size,max height,,,,,NH
+max length,max length,0,morphology,size,,size,max length,,,,,NH
+max linear dimension,max linear dimension,0,morphology,size,,size,max linear dimension,,,,,NH
+max linear dimension for surface,max linear dimension for surface,0,morphology,size,,size,max linear dimension for surface,,,,,NH
+max linear dimension for volume,max linear dimension for volume,0,morphology,size,,size,max linear dimension for volume,,,,,NH
+max plant height,max plant height,0,morphology,size,,size,max plant height,,,,,NH
+max recorded body size,max recorded body size,0,morphology,size,,size,max recorded body size,,,,,NH
+max recorded length,max recorded length,0,morphology,size,,size,max recorded length,,,,,NH
+max species height,max species height,0,morphology,size,,size,max species height,,,,,NH
+max stem height,max stem height,0,morphology,size,,size,max stem height,,,,,NH
+max total body length,max total body length,0,morphology,size,,size,max total body length,,,,,NH
+max total length,max total length,0,morphology,size,,size,max total length,,,,,NH
+max tree height,max tree height,0,morphology,size,,size,max tree height,,,,,NH
+max veg meight,max veg height,0,morphology,size,,size,max veg height,,,,,NH
+max vegetative height,max vegetative height,0,morphology,size,,size,max vegetative height,,,,,NH
+max weed height,max weed height,0,morphology,size,,size,max weed height,,,,,NH
+max weight,max weight,0,morphology,size,,size,max weight,,,,,NH
+max width,max width,0,morphology,size,,size,max width,,,,,NH
+maximal body length,maximal body length,0,morphology,size,,size,maximal body length,,,,,NH
+maximum body mass,maximum body mass,0,morphology,size,,size,maximum body mass,,,,,NH
+maximum canopy height,maximum canopy height,0,morphology,size,,size,maximum canopy height,,,,,NH
+maximum projected tree crown area,maximum projected tree crown area,0,morphology,size,,size,maximum projected tree crown area,,,,,NH
+maximum standard length,maximum standard length,0,morphology,size,,size,maximum standard length,,,,,NH
+maximum tree height,maximum tree height,0,morphology,size,,size,maximum tree height,,,,,NH
+mean adult body mass,mean adult body mass,0,morphology,size,,size,mean adult body mass,,,,,NH
+mean bill size,mean bill size,0,morphology,size,,size,mean bill size,,,,,NH
+mean body length,mean body length,0,morphology,size,,size,mean body length,,,,,NH
+mean body mass,mean body mass,0,morphology,size,,size,mean body mass,,,,,NH
+mean female body mass,mean female body mass,0,morphology,size,,size,mean female body mass,,,,,NH
+min height,min height,0,morphology,size,,size,min height,,1,"NH: ""min height"" and ""minimum height"" repeat",,NH
+minimum height,minimum height,0,morphology,size,,size,minimum height,,1,"NH: ""min height"" and ""minimum height"" repeat",,NH
+plant height,plant height,0,morphology,size,,size,plant height,,,,,NH
+plant maximum meight at maturity,plant maximum height at maturity,0,morphology,size,,size,plant maximum height at maturity,,,,,NH
+plant size,plant size,0,morphology,size,,size,plant size,,,,,NH
+plant vegetative height,plant vegetative height,0,morphology,size,,size,plant vegetative height,,,,,NH
+plant width,plant width,0,morphology,size,,size,plant width,,,,,NH
+postorbital length,postorbital length,0,morphology,size,,size,postorbital length,,,,,NH
+potential height,potential height,0,morphology,size,,size,potential height,,1,"NH: arguably a repeat of ""plant height""",,NH
+potential plant height,potential plant height,0,morphology,size,,size,potential plant height,,1,NH: see above,,NH
+potential size,potential size,0,morphology,size,,size,potential size,,,,,NH
+radius,radius,0,morphology,size,,size,radius,,,,,NH
+relative body size,relative body size,0,morphology,size,,size,relative body size,,,,,NH
+repro plant height,repro plant height,0,morphology,size,,size,repro plant height,,,,,NH
+shell size,shell size,0,morphology,size,,size,shell size,,,,,NH
+size,size,0,morphology,size,,size,size,,,,,NH
+size class,size class,0,morphology,size,,size,size class,,,,,NH
+small size,small size,0,morphology,size,,size,small size,,1,1,primary 'morphology',CB
+somatic wet mass of viscera,somatic wet mass of viscera,0,morphology,size,,size,somatic wet mass of viscera,,1,NH: body size / weight,,NH
+standard length,standard length,0,morphology,size,,size,standard length,,,,,NH
+standing height,standing height,0,morphology,size,,size,standing height,,,,,NH
+stem diameter,stem diameter,0,morphology,size,,size,stem diameter,,,,,NH
+stem dimension,stem dimension,0,morphology,size,,size,stem dimension,,,,,NH
+stretched height,stretched height,0,morphology,size,,size,stretched height,,,,,NH
+stump diameter,stump diameter,0,morphology,size,,size,stump diameter,,,,,NH
+total body mass,total body mass,0,morphology,size,,size,total body mass,,,,,NH
+total height,total height,0,morphology,size,,size,total height,,,,,NH
+total length,total length,0,morphology,size,,size,total length,,,,,NH
+tree height,tree height,0,morphology,size,,size,tree height,,,,,NH
+tree size,tree size,0,morphology,size,,size,tree size,,,,,NH
+trunk max height,trunk max height,0,morphology,size,,size,trunk max height,,,,,NH
+typical maximum canopy height,typical maximum canopy height,0,morphology,size,,size,typical maximum canopy height,,,,,NH
+volume,volume,0,morphology,size,,size,volume,,,,,NH
+width,width,0,morphology,size,,size,width,,,,,NH
+width at the widest point,width at the widest point,0,morphology,size,,size,width at the widest point,,,,,NH
+worker body size,worker body size,0,morphology,size,,size,worker body size,,,,,NH
+worker size,worker size,0,morphology,size,,size,worker size,,,,,NH

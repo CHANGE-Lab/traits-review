@@ -1,0 +1,4559 @@
+DOI,Trait
+10.1002/ajp.22374,circumperineal coloration
+10.1002/ajp.22374,terrestriality
+10.1002/eap.1434,adult survival rates
+10.1002/eap.1434,age at first breeding
+10.1002/eap.1434,diet breadth
+10.1002/eap.1434,ground nesting
+10.1002/eap.1434,habitat specialist
+10.1002/eap.1434,length of breeding season
+10.1002/eap.1434,max lifespan
+10.1002/eap.1434,mean clutch size
+10.1002/eap.1434,migratory behavior
+10.1002/eap.1434,number of fledging days
+10.1002/eap.1434,number of incubation days
+10.1002/eap.1434,typical number of broods
+10.1002/eap.1530,body size
+10.1002/eap.1530,diet
+10.1002/eap.1530,habitat
+10.1002/eap.1530,metabolic rate
+10.1002/eap.1535/full,diet
+10.1002/eap.1535/full,habitat
+10.1002/eap.1535/full,locomotion
+10.1002/eap.1554/full,ecomorphological guild of tadpoles
+10.1002/eap.1554/full,geomorphology preference
+10.1002/eap.1554/full,life history
+10.1002/eap.1554/full,locomotion type
+10.1002/eap.1554/full,mobility
+10.1002/eap.1554/full,morphology
+10.1002/eap.1554/full,reproductive strategy
+10.1002/eap.1554/full,stream size affinity
+10.1002/eap.1554/full,substrate affinity
+10.1002/eap.1554/full,trophic level
+10.1002/eap.1621,adult body length
+10.1002/eap.1621,age at first maturity
+10.1002/eap.1621,altitude
+10.1002/eap.1621,current velocity
+10.1002/eap.1621,egg diameter
+10.1002/eap.1621,feeding diet
+10.1002/eap.1621,feeding habitat
+10.1002/eap.1621,feeding method
+10.1002/eap.1621,habitat
+10.1002/eap.1621,longitudinal distribution
+10.1002/eap.1621,number of spawning events per year
+10.1002/eap.1621,parental care
+10.1002/eap.1621,pH
+10.1002/eap.1621,relative fecundity
+10.1002/eap.1621,reproduction habitat
+10.1002/eap.1621,rheophily habitat
+10.1002/eap.1621,salinity
+10.1002/eap.1621,saprobity
+10.1002/eap.1621,substrate
+10.1002/eap.1621,thermal tolerance
+10.1002/eap.1621,transversal distribution
+10.1002/eap.1621,trophic guild
+10.1002/ece3.1084,age at maturity
+10.1002/ece3.1084,diet
+10.1002/ece3.1084,humidity tolerance
+10.1002/ece3.1084,inundation tolerance
+10.1002/ece3.1084,microhabitat association
+10.1002/ece3.1084,number of offspring
+10.1002/ece3.1084,number of reproduction periods
+10.1002/ece3.1084,reproductive mode
+10.1002/ece3.1084,shell shape
+10.1002/ece3.1084,shell size
+10.1002/ece3.1084,survival of dry period
+10.1002/ece3.1260,body mass
+10.1002/ece3.1260,body section area
+10.1002/ece3.1260,body section shape
+10.1002/ece3.1260,caudal fin shape
+10.1002/ece3.1260,caudal peduncle throttling
+10.1002/ece3.1260,eye diameter
+10.1002/ece3.1260,eye position
+10.1002/ece3.1260,fins area
+10.1002/ece3.1260,fins area ratio
+10.1002/ece3.1260,gill raker length
+10.1002/ece3.1260,oral gape position
+10.1002/ece3.1260,oral gape shape
+10.1002/ece3.1260,oral gape surface
+10.1002/ece3.1260,pectoral fin position
+10.1002/ece3.1260,pectoral fin shape
+10.1002/ece3.2081,BMWP index
+10.1002/ece3.2081,microhabitat association
+10.1002/ece3.2081,reophily
+10.1002/ece3.2081,respiration
+10.1002/ece3.2328,body shape
+10.1002/ece3.2328,body width
+10.1002/ece3.2328,caudal peduncle depth
+10.1002/ece3.2328,caudal peduncle length
+10.1002/ece3.2328,diet
+10.1002/ece3.2328,locomotor propulsion mechanism
+10.1002/ece3.2328,mouth position
+10.1002/ece3.2606,foraging method
+10.1002/ece3.2606,nesting habitat preference
+10.1002/ece3.263,thermal tolerance
+10.1002/ece3.3068,LDMC
+10.1002/ece3.3068,leaf area
+10.1002/ece3.3068,leaf C content
+10.1002/ece3.3068,leaf C:N ratio
+10.1002/ece3.3068,leaf N content
+10.1002/ece3.3068,max plant height
+10.1002/ece3.3068,seed mass
+10.1002/ece3.3068,SLA
+10.1002/ece3.3297,bark thickness
+10.1002/ece3.3297,cold tolerance
+10.1002/ece3.3297,dispersal method
+10.1002/ece3.3297,drought tolerance
+10.1002/ece3.3297,fire tolerance
+10.1002/ece3.3297,growth rate
+10.1002/ece3.3297,height
+10.1002/ece3.3297,leaf N content
+10.1002/ece3.3297,leaf P
+10.1002/ece3.3297,leaf shape
+10.1002/ece3.3297,lifespan
+10.1002/ece3.3297,seed mass
+10.1002/ece3.3297,shade tolerance
+10.1002/ece3.3297,SLA
+10.1002/ece3.3297,waterlogging tolerance
+10.1002/ece3.3297,winter buds size
+10.1002/ece3.3297,wood density
+10.1002/ece3.3541,bark thickness
+10.1002/ece3.3609,flowering duration
+10.1002/ece3.3609,flowering onset
+10.1002/ece3.3609,LDMC
+10.1002/ece3.3609,seed mass
+10.1002/ece3.3609,seed number
+10.1002/ece3.3609,SLA
+10.1002/ece3.3609,vegetative height
+10.1002/ece3.3613,animal component of the diet
+10.1002/ece3.3613,head-body length
+10.1002/ece3.3613,tail:body ratio
+10.1002/ece3.3969,body size
+10.1002/ece3.3969,fecundity
+10.1002/ece3.5121,call bandwidth
+10.1002/ece3.5121,body mass
+10.1002/ece3.5121,call frequency
+10.1002/ece3.5121,call duration
+10.1002/ece3.5121,foraging method
+10.1002/ece3.908,body size
+10.1002/ece3.908,color
+10.1002/ece3.908,number of lamellae on the toe pad
+10.1002/ece3.908,relative limb length
+10.1002/ece3.908,tail length
+10.1002/eco.1655,iron sensitivity as percent of relative growth rate
+10.1002/eco.1655,lateral spread
+10.1002/eco.1655,leaf N content
+10.1002/eco.1655,leaf P content
+10.1002/eco.1655,leaf size
+10.1002/eco.1655,maximum canopy height
+10.1002/eco.1655,N:P ratio
+10.1002/eco.1655,relative growth rate
+10.1002/eco.1655,root porosity
+10.1002/eco.1655,seed mass
+10.1002/eco.1655,SLA
+10.1002/eco.1734,mature number of oocytes
+10.1002/eco.1734,oocyte diameter
+10.1002/eco.1734,size at maturity
+10.1002/eco.1734,smallest size of mature female sample
+10.1002/ecs2.2220,body shape
+10.1002/ecs2.2374,canopy structure
+10.1002/ecs2.2374,dispersal mode traits
+10.1002/ecs2.2374,flower sex
+10.1002/ecs2.2374,flower size
+10.1002/ecs2.2374,flowering period end
+10.1002/ecs2.2374,flowering period length
+10.1002/ecs2.2374,flowering period start
+10.1002/ecs2.2374,fruit type
+10.1002/ecs2.2374,growth form
+10.1002/ecs2.2374,leaf length/width ratio
+10.1002/ecs2.2374,leaf surface texture
+10.1002/ecs2.2374,life form
+10.1002/ecs2.2374,longevity
+10.1002/ecs2.2374,max plant height
+10.1002/ecs2.2374,mean leaf length
+10.1002/ecs2.2374,mean leaf width
+10.1002/ecs2.2374,pollination type
+10.1002/ecs2.2374,seed production
+10.1002/ecs2.2374,seed weight
+10.1002/ecs2.2460,adult size
+10.1002/ecs2.2460,diet
+10.1002/ecs2.2460,fecundity
+10.1002/ecs2.2460,feeding method
+10.1002/ecs2.2460,offspring size
+10.1002/ecy.1802,diet specialization
+10.1002/ecy.1915,web building behaviour
+10.1002/ecy.1990,leaf P concentration
+10.1002/ecy.1990,seed volume
+10.1002/ecy.1990,SLA
+10.1002/ecy.1990,wood density
+10.1002/ecy.2079,dispersal method
+10.1002/ecy.2079,first month of flowering
+10.1002/ecy.2079,height
+10.1002/ecy.2079,lateral spread
+10.1002/ecy.2079,mycorrhizal association
+10.1002/ecy.2079,seed mass
+10.1002/ecy.2079,SLA
+10.1002/ecy.2179,breeding success
+10.1002/ecy.2179,survival
+10.1002/ecy.2436,body length
+10.1002/ecy.2436,eye diameter
+10.1002/ecy.2436,interocular distance
+10.1002/ecy.2436,length of the femur of front legs
+10.1002/ecy.2436,length of the femur of hind legs
+10.1002/ecy.2436,length of the femur of middle legs
+10.1002/ecy.2436,length of tibia in hind leg
+10.1002/ecy.2436,pronotum length
+10.1002/ecy.2436,pronotum width
+10.1002/ecy.2436,wing length
+10.1002/ecy.2533,chemical structural-compositional similarity
+10.1002/ecy.2533,metabolite composition
+10.1002/rra.687,body mass
+10.1002/rra.687,length
+10.1007/BF00133308,feeding method
+10.1007/BF00133308,microhabitat preference
+10.1007/BF00133308,nest height
+10.1007/BF00133308,nest type
+10.1007/BF00133308,reproductive effort
+10.1007/BF00133308,response to patch size
+10.1007/BF00133308,response to edge
+10.1007/BF00133308,seral stage association
+10.1007/BF00133308,territory density
+10.1007/BF00133308,territory size
+10.1007/s00035-017-0198-6,depth of nectar tubes
+10.1007/s00035-017-0198-6,display size of flowers
+10.1007/s00035-017-0198-6,floral scent bouquet
+10.1007/s00035-017-0198-6,flower inclination
+10.1007/s00035-017-0198-6,leaf area
+10.1007/s00035-017-0198-6,leaf lengths
+10.1007/s00035-017-0198-6,leaf lobation
+10.1007/s00035-017-0198-6,leaf thickness
+10.1007/s00035-017-0198-6,leaf widths
+10.1007/s00035-017-0198-6,plant height
+10.1007/s00035-017-0198-6,position of anthers
+10.1007/s00035-017-0198-6,scent emission per plant per hour
+10.1007/s00035-017-0198-6,specific leaf weight
+10.1007/s00035-017-0198-6,width of nectar tubes
+10.1007/s00114-017-1475-3,morphological landmarks
+10.1007/s00114-017-1475-3,subsequent morphospace
+10.1007/s00227-014-2568-6,stomatal surface
+10.1007/s00227-014-2568-6,volume
+10.1007/s00265-006-0160-x,breeding habitat associated with human habitat
+10.1007/s00265-006-0160-x,mean body mass
+10.1007/s00265-006-0160-x,migratory
+10.1007/s00265-006-0160-x,nesting habitat
+10.1007/s00265-006-0160-x,sexual chromatism
+10.1007/s00265-006-0160-x,sociality
+10.1007/s00300-015-1872-z,emergence timing
+10.1007/s00300-015-1872-z,reproductive output
+10.1007/s00300-016-1946-6,zoogeographical group
+10.1007/s00338-018-1689-7,glandular lip epithelium
+10.1007/s00442-004-1770-5,breeding timing
+10.1007/s00442-004-1770-5,intraspecific density
+10.1007/s00442-004-1770-5,nest predation
+10.1007/s00442-004-1770-5,nest site selection
+10.1007/s00442-004-1770-5,parental quality
+10.1007/s00442-009-1446-2,body mass
+10.1007/s00442-009-1446-2,flight feather length
+10.1007/s00442-010-1684-3,branch dieback
+10.1007/s00442-010-1684-3,growth rate
+10.1007/s00442-010-1684-3,needle retention
+10.1007/s00442-010-1833-8,growth rate
+10.1007/s00442-010-1833-8,reproductive investment
+10.1007/s00442-010-1833-8,survival rate
+10.1007/s00442-010-1833-8,total length
+10.1007/s00442-010-1854-3,body size
+10.1007/s00442-010-1854-3,diet
+10.1007/s00442-010-1854-3,echolocation
+10.1007/s00442-010-1854-3,wing morphology
+10.1007/s00442-011-1980-6,canopy height
+10.1007/s00442-011-1980-6,canopy structure
+10.1007/s00442-011-1980-6,flowering end
+10.1007/s00442-011-1980-6,flowering start
+10.1007/s00442-011-1980-6,LDMC
+10.1007/s00442-011-1980-6,leaf size
+10.1007/s00442-011-1980-6,life form
+10.1007/s00442-011-1980-6,log seed mass
+10.1007/s00442-011-1980-6,regeneration stage
+10.1007/s00442-011-1980-6,seed longevity
+10.1007/s00442-011-1980-6,SLA
+10.1007/s00442-011-1980-6,terminal velocity
+10.1007/s00442-011-1980-6,variance in seed dimensions
+10.1007/s00442-011-1980-6,vegetative state
+10.1007/s00442-012-2431-8,bark thickness
+10.1007/s00442-012-2431-8,basal area
+10.1007/s00442-012-2431-8,concentration Ca in leaves
+10.1007/s00442-012-2431-8,concentration Mg in leaves
+10.1007/s00442-012-2431-8,concentration N in leaves
+10.1007/s00442-012-2431-8,concentration P in leaves
+10.1007/s00442-012-2431-8,concentration S in leaves
+10.1007/s00442-012-2431-8,LDMC
+10.1007/s00442-012-2431-8,leaf K concentration
+10.1007/s00442-012-2431-8,plant height
+10.1007/s00442-012-2431-8,SLA
+10.1007/s00442-012-2431-8,wood density
+10.1007/s00442-014-2917-7,dispersal capacity
+10.1007/s00442-014-2917-7,egg maturation time
+10.1007/s00442-014-2917-7,egg number
+10.1007/s00442-014-2917-7,the number of generations per year
+10.1007/s00442-014-2917-7,the way of egg deposition
+10.1007/s00442-014-2917-7,wing length
+10.1007/s00442-014-3039-y,aspect ratio
+10.1007/s00442-014-3039-y,breadth of braincase
+10.1007/s00442-014-3039-y,condylobasal length
+10.1007/s00442-014-3039-y,feeding method
+10.1007/s00442-014-3039-y,greatest length of skull
+10.1007/s00442-014-3039-y,length of mandibular tooth row
+10.1007/s00442-014-3039-y,length of maxillary tooth row
+10.1007/s00442-014-3039-y,mandible length
+10.1007/s00442-014-3039-y,skull height
+10.1007/s00442-014-3039-y,wing loading
+10.1007/s00442-014-3039-y,wing span
+10.1007/s00442-014-3039-y,wing surface
+10.1007/s00442-014-3039-y,wing tip index
+10.1007/s00442-014-3101-9,C:N ratio
+10.1007/s00442-014-3101-9,eye position
+10.1007/s00442-014-3101-9,eye width
+10.1007/s00442-014-3101-9,femur length
+10.1007/s00442-014-3101-9,head width
+10.1007/s00442-014-3101-9,mandible length
+10.1007/s00442-014-3101-9,pilosity
+10.1007/s00442-014-3101-9,polymorphism
+10.1007/s00442-014-3101-9,scape length
+10.1007/s00442-014-3101-9,sculpturing
+10.1007/s00442-014-3101-9,spinosity
+10.1007/s00442-014-3101-9,weber length
+10.1007/s00442-015-3295-5,CSR strategy
+10.1007/s00442-015-3295-5,flowering length
+10.1007/s00442-015-3295-5,flowering start
+10.1007/s00442-015-3295-5,growth form
+10.1007/s00442-015-3295-5,LDMC
+10.1007/s00442-015-3295-5,leaf form
+10.1007/s00442-015-3295-5,leaf persistence
+10.1007/s00442-015-3295-5,life form
+10.1007/s00442-015-3295-5,plant height
+10.1007/s00442-015-3295-5,scleromorphy
+10.1007/s00442-015-3295-5,SLA
+10.1007/s00442-015-3295-5,spinescence
+10.1007/s00442-015-3295-5,trichomes
+10.1007/s00442-015-3345-z,antennal to body length ratio
+10.1007/s00442-015-3345-z,body length
+10.1007/s00442-015-3345-z,habitat width
+10.1007/s00442-015-3345-z,life form
+10.1007/s00442-015-3345-z,moisture use
+10.1007/s00442-016-3700-8,LDMC
+10.1007/s00442-016-3700-8,seed mass
+10.1007/s00442-016-3700-8,SLA
+10.1007/s00442-017-4016-z,body condition
+10.1007/s00442-017-4016-z,growth rate
+10.1007/s00442-017-4041-y,LDMC
+10.1007/s00442-017-4041-y,SLA
+10.1007/s00442-017-4053-7,migratory behavior
+10.1007/s00442-017-4053-7,thermal tolerance
+10.1007/s00442-018-4162-y,C:N ratio
+10.1007/s00442-018-4162-y,LDMC
+10.1007/s00442-018-4162-y,plant height
+10.1007/s00442-018-4162-y,presence of trichomes
+10.1007/s00442-018-4162-y,silicum content
+10.1007/s00442-018-4162-y,SLA
+10.1007/s00442-018-4162-y,total secondary metabolite richness
+10.1007/s00442-019-04386-0,flowering time
+10.1007/s004420000504,female size at maturity
+10.1007/s004420000504,male size at maturity
+10.1007/s004420000504,number of offspring
+10.1007/s004420000504,reproductive allotment by females
+10.1007/s004420000504,size of offspring
+10.1007/s00468-011-0632-0,growth rings
+10.1007/s00468-011-0632-0,perforation plates
+10.1007/s00468-011-0632-0,porosity
+10.1007/s00468-011-0632-0,ray height
+10.1007/s00468-011-0632-0,ray width
+10.1007/s00468-011-0632-0,solitary vessel outline
+10.1007/s00468-011-0632-0,vessel arrangement
+10.1007/s00468-011-0632-0,vessel groupings
+10.1007/s10021-015-9875-8,body mass
+10.1007/s10021-015-9875-8,clutch size
+10.1007/s10021-015-9875-8,feeding method
+10.1007/s10021-015-9875-8,food types
+10.1007/s10021-015-9875-8,migrant
+10.1007/s10021-015-9875-8,nest types
+10.1007/s10021-015-9875-8,nomadic
+10.1007/s10021-015-9875-8,resident
+10.1007/s10336-005-0011-y,onset of reproduction
+10.1007/s10452-015-9546-z,presence or absence of gas vacuole
+10.1007/s10452-015-9546-z,shell compression
+10.1007/s10452-015-9546-z,shell constitution
+10.1007/s10452-016-9597-9,body size
+10.1007/s10452-017-9634-3,cell size
+10.1007/s10452-017-9634-3,mixotrophy
+10.1007/s10452-017-9634-3,motility
+10.1007/s10452-017-9634-3,N fixation
+10.1007/s10452-017-9634-3,shape
+10.1007/s10452-017-9634-3,silica requirements
+10.1007/s10531-014-0843-y,diameter
+10.1007/s10531-014-0843-y,height
+10.1007/s10531-014-0843-y,number of stems
+10.1007/s10641-016-0481-1,body weight
+10.1007/s10641-016-0481-1,ecological specialization
+10.1007/s10641-016-0481-1,sensory organ
+10.1007/s10641-016-0506-9,anal fin height
+10.1007/s10641-016-0506-9,anal fin length
+10.1007/s10641-016-0506-9,body shape
+10.1007/s10641-016-0506-9,body width
+10.1007/s10641-016-0506-9,caudal fin depth
+10.1007/s10641-016-0506-9,caudal fin length
+10.1007/s10641-016-0506-9,caudal peduncle width
+10.1007/s10641-016-0506-9,dorsal fin height
+10.1007/s10641-016-0506-9,dorsal fin length
+10.1007/s10641-016-0506-9,eye diameter
+10.1007/s10641-016-0506-9,gape width
+10.1007/s10641-016-0506-9,head height
+10.1007/s10641-016-0506-9,head length
+10.1007/s10641-016-0506-9,interorbital distance
+10.1007/s10641-016-0506-9,mouth position
+10.1007/s10641-016-0506-9,peduncle depth
+10.1007/s10641-016-0506-9,peduncle length
+10.1007/s10641-016-0506-9,snout length eye position
+10.1007/s10641-016-0506-9,standard length
+10.1007/s10641-017-0576-3,body shape
+10.1007/s10641-018-0759-6,aspect ratio of caudal fin
+10.1007/s10641-018-0759-6,aspect ratio of pectoral fin
+10.1007/s10641-018-0759-6,body transversal surface
+10.1007/s10641-018-0759-6,body transverse shape
+10.1007/s10641-018-0759-6,caudal peduncle throttling
+10.1007/s10641-018-0759-6,eye position
+10.1007/s10641-018-0759-6,eye size
+10.1007/s10641-018-0759-6,fins surface ratio
+10.1007/s10641-018-0759-6,fins surface to body size ratio
+10.1007/s10641-018-0759-6,oral gape position
+10.1007/s10641-018-0759-6,oral gape shape
+10.1007/s10641-018-0759-6,oral gape surface
+10.1007/s10641-018-0759-6,pectoral fin position
+10.1007/s10661-015-4519-1,akinetes
+10.1007/s10661-015-4519-1,biomass
+10.1007/s10661-015-4519-1,flagella
+10.1007/s10661-015-4519-1,max linear dimension
+10.1007/s10661-015-4519-1,mucilage
+10.1007/s10661-015-4519-1,presence of heterocytes
+10.1007/s10661-015-4519-1,silica walls
+10.1007/s10661-015-4519-1,vacuoles
+10.1007/s10682-013-9631-5,dietary preference category
+10.1007/s10682-013-9631-5,habitat
+10.1007/s10682-013-9631-5,mean body mass
+10.1007/s10682-018-9945-4,amount of subcutaneous fat
+10.1007/s10682-018-9945-4,body mass
+10.1007/s10682-018-9945-4,flight feather moult status
+10.1007/s10682-018-9945-4,tarsus and bill length
+10.1007/s10682-018-9945-4,wing aspect ratio
+10.1007/s10682-018-9945-4,wing loading
+10.1007/s10682-018-9945-4,wing pointedness
+10.1007/s10682-018-9945-4,wing shape
+10.1007/s10750-013-1711-6,cell size
+10.1007/s10750-013-1711-6,form of adherence to the substrate
+10.1007/s10750-013-1711-6,form of attachment
+10.1007/s10750-013-1711-6,form of growth
+10.1007/s10750-015-2191-7,body volume
+10.1007/s10750-015-2191-7,corona type
+10.1007/s10750-015-2191-7,defense behaviour
+10.1007/s10750-015-2191-7,feeding method
+10.1007/s10750-015-2191-7,integument type
+10.1007/s10750-015-2191-7,trophic guild
+10.1007/s10750-015-2313-2,biovolume
+10.1007/s10750-015-2313-2,greatest axial linear dimension
+10.1007/s10750-015-2313-2,life form
+10.1007/s10750-015-2313-2,mixotrophy
+10.1007/s10750-015-2313-2,motility
+10.1007/s10750-015-2313-2,silica requirements
+10.1007/s10750-015-2389-8,labral fan ray width
+10.1007/s10750-015-2389-8,length
+10.1007/s10750-015-2389-8,number of rays
+10.1007/s10750-016-2981-6,body size
+10.1007/s10750-016-2981-6,reynolds associations
+10.1007/s10750-017-3433-7,biomass
+10.1007/s10750-018-3697-6,body volume
+10.1007/s10750-018-3697-6,corona type
+10.1007/s10750-018-3697-6,defense behaviour
+10.1007/s10750-018-3697-6,feeding method
+10.1007/s10750-018-3697-6,integument type
+10.1007/s10750-018-3697-6,trophic guild
+10.1007/s10841-011-9412-9,body size
+10.1007/s10841-011-9412-9,habitat
+10.1007/s10841-011-9412-9,larval instar period
+10.1007/s10841-011-9412-9,trophic guild
+10.1007/s10841-011-9412-9,wing development
+10.1007/s10980-012-9820-6,dispersal ability
+10.1007/s10980-012-9820-6,sociality
+10.1007/s10980-012-9820-6,trophic guild
+10.1007/s11104-018-3816-1,LDMC
+10.1007/s11104-018-3816-1,root N concentration
+10.1007/s11104-018-3816-1,root RTD
+10.1007/s11104-018-3816-1,root SRL
+10.1007/s11104-018-3816-1,SLA
+10.1007/s11104-018-3816-1,total leaf N concentration
+10.1007/s11160-016-9446-x,feeding method
+10.1007/s11160-016-9446-x,nest-defense behaviour
+10.1007/s11160-016-9446-x,spawning location
+10.1007/s11160-016-9446-x,spawning season
+10.1007/s11160-017-9479-9,critical thermal maximum
+10.1007/s11160-017-9479-9,current preference
+10.1007/s11160-017-9479-9,diet breadth
+10.1007/s11160-017-9479-9,fecundity
+10.1007/s11160-017-9479-9,fluvial dependence
+10.1007/s11160-017-9479-9,IUCN listing
+10.1007/s11160-017-9479-9,max body length
+10.1007/s11160-017-9479-9,reproductive mode
+10.1007/s11160-017-9479-9,shape factor
+10.1007/s11160-017-9479-9,spawning temperature
+10.1007/s11160-017-9479-9,swim factor
+10.1007/s11160-017-9479-9,thermal tolerance
+10.1007/s11160-017-9479-9,trophic guild
+10.1007/s11284-016-1373-8,leaf N content
+10.1007/s11284-016-1373-8,leaf P content
+10.1007/s11284-016-1373-8,max stem height
+10.1007/s11284-016-1373-8,SLA
+10.1007/s11284-016-1373-8,sprouting ratio
+10.1007/s11284-016-1373-8,wood density
+10.1007/s11629-017-4477-x,woody vs. herbaceous
+10.1007/s13595-019-0830-2,height
+10.1007/s13595-019-0830-2,LDMC
+10.1007/s13595-019-0830-2,leaf area
+10.1007/s13595-019-0830-2,leaf C content
+10.1007/s13595-019-0830-2,leaf C13 composition
+10.1007/s13595-019-0830-2,leaf dimension
+10.1007/s13595-019-0830-2,leaf K content
+10.1007/s13595-019-0830-2,leaf N content
+10.1007/s13595-019-0830-2,leaf N15 composition
+10.1007/s13595-019-0830-2,root diameter
+10.1007/s13595-019-0830-2,root dimension
+10.1007/s13595-019-0830-2,SLA
+10.1007/s13595-019-0830-2,specific root length
+10.1007/s13595-019-0830-2,stem dimension
+10.1007/s13595-019-0830-2,trunk bark thickness
+10.1007/s13595-019-0830-2,wood density
+10.1007/s13744-012-0069-1,body size
+10.1007/s13744-012-0069-1,social behaviour
+10.1007/s13744-018-0620-9,body length
+10.1007/s13744-018-0620-9,diet
+10.1016/B978-0-12-386475-8.00005-8,body size
+10.1016/B978-0-12-386475-8.00005-8,feeding method
+10.1016/B978-0-12-386475-8.00005-8,habitat
+10.1016/B978-0-12-386475-8.00005-8,mobility
+10.1016/B978-0-12-386475-8.00005-8,trophic guild
+10.1016/j.actao.2016.06.003,carb storage in root
+10.1016/j.actao.2016.06.003,carb structure in long tap root
+10.1016/j.actao.2016.06.003,carb structure in step
+10.1016/j.actao.2016.06.003,clonality
+10.1016/j.actao.2016.06.003,dispersal method
+10.1016/j.actao.2016.06.003,leaf succulence
+10.1016/j.actao.2016.06.003,life form
+10.1016/j.actao.2016.06.003,photosynthetic pathway
+10.1016/j.actao.2016.06.003,plant height
+10.1016/j.actao.2016.06.003,plant strategy type
+10.1016/j.actao.2016.06.003,pollination mode
+10.1016/j.actao.2016.06.003,reduced leaves
+10.1016/j.actao.2016.06.003,stem succulence
+10.1016/j.actao.2016.06.003,thornines
+10.1016/j.actao.2016.06.003,wax-coating
+10.1016/j.actao.2016.10.007,bark texture
+10.1016/j.actao.2016.10.007,number of epiphytes per tree
+10.1016/j.actao.2016.10.007,tree size
+10.1016/j.actao.2016.10.007,wood density
+10.1016/j.agee.2017.01.036,bacterial growth
+10.1016/j.agee.2017.01.036,body mass
+10.1016/j.agee.2017.01.036,feeding method
+10.1016/j.agee.2017.01.036,metabolic quotient
+10.1016/j.agee.2017.01.036,potential C mineralization
+10.1016/j.agee.2017.01.036,potentially mineralizable N
+10.1016/j.anbehav.2017.07.010,diet
+10.1016/j.anbehav.2017.07.010,foraging method
+10.1016/j.anbehav.2017.07.010,foraging territory size
+10.1016/j.biocon.2011.11.033,clonality
+10.1016/j.biocon.2011.11.033,competitive ability
+10.1016/j.biocon.2011.11.033,plant regeneration strategy
+10.1016/j.biocon.2011.11.033,success of establishment
+10.1016/j.biocon.2013.12.008,dispersal method
+10.1016/j.biocon.2013.12.008,LDMC
+10.1016/j.biocon.2013.12.008,plant height
+10.1016/j.biocon.2013.12.008,seed mass
+10.1016/j.biocon.2013.12.008,SLA
+10.1016/j.dsr.2017.11.010,stable isotope
+10.1016/j.ecocom.2012.03.003,growth rate in disturbed plots
+10.1016/j.ecocom.2012.03.003,growth rate in undisturbed plots
+10.1016/j.ecocom.2012.03.003,max diameter
+10.1016/j.ecocom.2012.03.003,mortality rate in disturbed plots
+10.1016/j.ecocom.2012.03.003,mortality rate in undisturbed plots
+10.1016/j.ecocom.2012.03.003,recruitment
+10.1016/j.ecocom.2012.03.003,wood density
+10.1016/j.ecoleng.2014.11.057,vegetation type
+10.1016/j.ecolind.2016.02.060,form of adherence
+10.1016/j.ecolind.2016.02.060,intensity of adherence to substrate
+10.1016/j.ecolind.2016.02.060,life form
+10.1016/j.ecolind.2016.02.060,size class
+10.1016/j.ecolind.2016.07.019,AMBI ecological group
+10.1016/j.ecolind.2016.07.019,body size
+10.1016/j.ecolind.2016.07.019,feeding method
+10.1016/j.ecolind.2016.07.019,larval type
+10.1016/j.ecolind.2016.07.019,life span
+10.1016/j.ecolind.2016.07.019,motility
+10.1016/j.ecolind.2016.07.019,position in sediments
+10.1016/j.ecolind.2017.01.029,head length
+10.1016/j.ecolind.2017.01.029,length of hind femur
+10.1016/j.ecolind.2017.01.029,mandible length
+10.1016/j.ecolind.2017.01.029,weber length
+10.1016/j.ecolind.2017.12.003,aerotopes
+10.1016/j.ecolind.2017.12.003,flagella
+10.1016/j.ecolind.2017.12.003,heterocysts
+10.1016/j.ecolind.2017.12.003,individual volume
+10.1016/j.ecolind.2017.12.003,max linear dimension
+10.1016/j.ecolind.2017.12.003,mucilage
+10.1016/j.ecolind.2017.12.003,salinity tolerance
+10.1016/j.ecolind.2017.12.003,siliceous exoskeleton structures
+10.1016/j.ecolind.2017.12.003,type of cell organization
+10.1016/j.ecss.2009.10.015,habitat
+10.1016/j.ecss.2009.10.015,size
+10.1016/j.ecss.2009.10.015,trophic guild
+10.1016/j.ecss.2013.06.019,feeding method
+10.1016/j.ecss.2015.05.023,canopy height
+10.1016/j.ecss.2015.05.023,lateral spread
+10.1016/j.ecss.2015.05.023,LDMC
+10.1016/j.ecss.2015.05.023,leaf area
+10.1016/j.ecss.2015.05.023,leaf dry-matter content
+10.1016/j.ecss.2015.05.023,leaf projected area
+10.1016/j.ecss.2015.05.023,SLA
+10.1016/j.ecss.2015.05.023,succulence index
+10.1016/j.ecss.2018.11.016,flowering onset
+10.1016/j.ecss.2018.11.016,flowering span
+10.1016/j.ecss.2018.11.016,fruit type
+10.1016/j.ecss.2018.11.016,geographical distribution
+10.1016/j.ecss.2018.11.016,life form
+10.1016/j.ecss.2018.11.016,plant height
+10.1016/j.ecss.2018.11.016,pollination
+10.1016/j.ecss.2018.11.016,seed dispersal
+10.1016/j.ecss.2018.11.016,seed mass
+10.1016/j.ecss.2018.11.016,SLA
+10.1016/j.foreco.2015.05.026,seed mass
+10.1016/j.foreco.2015.05.026,SLA
+10.1016/j.foreco.2015.05.026,wood density
+10.1016/j.foreco.2016.04.020,DBH
+10.1016/j.foreco.2016.04.020,max tree height
+10.1016/j.foreco.2016.04.020,wood density
+10.1016/j.foreco.2018.04.032,average and max diameters of 100 xylem vessels
+10.1016/j.foreco.2018.04.032,C isotope composition
+10.1016/j.foreco.2018.04.032,leaf dry weight
+10.1016/j.foreco.2018.04.032,leaf mass/area
+10.1016/j.foreco.2018.04.032,leaf P
+10.1016/j.foreco.2018.04.032,leaf water potential
+10.1016/j.foreco.2018.04.032,N isotope composition
+10.1016/j.foreco.2018.04.032,number of xylem vessels per mm
+10.1016/j.foreco.2018.04.032,stemp-specific density
+10.1016/j.foreco.2018.06.006,life form
+10.1016/j.foreco.2018.06.006,native
+10.1016/j.foreco.2018.06.006,non-native
+10.1016/j.foreco.2018.06.006,seed size
+10.1016/j.foreco.2018.10.061,fire tolerance
+10.1016/j.foreco.2018.10.061,shade tolerance
+10.1016/j.foreco.2019.01.021,clypeus length
+10.1016/j.foreco.2019.01.021,eye position
+10.1016/j.foreco.2019.01.021,femur length
+10.1016/j.foreco.2019.01.021,mandible length
+10.1016/j.foreco.2019.01.021,max eye diameter
+10.1016/j.foreco.2019.01.021,scape length
+10.1016/j.foreco.2019.01.021,weber length
+10.1016/j.gecco.2016.01.004,body size
+10.1016/j.gecco.2016.01.004,locomotion
+10.1016/j.gecco.2016.01.004,trophic guild
+10.1016/j.limno.2015.10.005,gonad mass
+10.1016/j.limno.2015.10.005,growth rate
+10.1016/j.limno.2015.10.005,hatching date
+10.1016/j.limno.2015.10.005,spawning date
+10.1016/j.limno.2015.10.005,total body mass
+10.1016/j.limno.2015.10.005,total length
+10.1016/j.marpolbul.2007.10.019,diet
+10.1016/j.marpolbul.2007.10.019,habitat
+10.1016/j.marpolbul.2007.10.019,life cycle length
+10.1016/j.marpolbul.2007.10.019,tolerance to organic matter enrichment
+10.1016/j.ncon.2016.09.006,diaspore size
+10.1016/j.ncon.2016.09.006,LDMC
+10.1016/j.ncon.2016.09.006,leaf area
+10.1016/j.ncon.2016.09.006,leaf deciduousness
+10.1016/j.ncon.2016.09.006,leaf form
+10.1016/j.ncon.2016.09.006,leaf hairiness
+10.1016/j.ncon.2016.09.006,leaf length
+10.1016/j.ncon.2016.09.006,leaf N content
+10.1016/j.ncon.2016.09.006,leaf width
+10.1016/j.ncon.2016.09.006,max height
+10.1016/j.ncon.2016.09.006,mean number of seeds per fruit
+10.1016/j.ncon.2016.09.006,seed mass
+10.1016/j.ncon.2016.09.006,SLA
+10.1016/j.ncon.2016.09.006,wood density
+10.1016/j.ncon.2016.09.006,zoochoric dispersal
+10.1016/j.pedobi.2016.06.001,disturbance tolerance
+10.1016/j.pocean.2013.10.010,body size
+10.1016/j.pocean.2014.10.002,body depth at the level of the pectoral fin insertion
+10.1016/j.pocean.2014.10.002,body shape
+10.1016/j.pocean.2014.10.002,body standard length
+10.1016/j.pocean.2014.10.002,caudal fin depth
+10.1016/j.pocean.2014.10.002,caudal fin length
+10.1016/j.pocean.2014.10.002,distance between the bottom of the head and the eye center along the head depth axis
+10.1016/j.pocean.2014.10.002,distance between the insertion of pectoral fin and the bottom of the body
+10.1016/j.pocean.2014.10.002,distance bottom of head-mouth
+10.1016/j.pocean.2014.10.002,eye diameter
+10.1016/j.pocean.2014.10.002,head depth along the vertical axis of the eye
+10.1016/j.pocean.2014.10.002,longest body depth
+10.1016/j.pocean.2014.10.002,mouth depth
+10.1016/j.pocean.2014.10.002,mouth width
+10.1016/j.pocean.2014.10.002,pigmentation on fish body
+10.1016/j.pocean.2014.10.002,presence of barbel near mouth
+10.1016/j.ppees.2016.09.006,leaf area
+10.1016/j.ppees.2016.09.006,leaf area divided by dry mass
+10.1016/j.ppees.2016.09.006,seed length
+10.1016/j.ppees.2016.09.006,SLA
+10.1016/j.ppees.2016.09.006,trunk max height
+10.1016/j.ppees.2016.09.006,trunk slenderness
+10.1016/j.ppees.2016.09.006,wood density
+10.1016/j.ppees.2017.07.002,canopy height
+10.1016/j.ppees.2017.07.002,clonal growth organs
+10.1016/j.ppees.2017.07.002,lateral spread
+10.1016/j.scitotenv.2016.04.004,dry mass per year of above ground biomass
+10.1016/j.scitotenv.2016.04.004,SLA
+10.1016/j.scitotenv.2016.04.193,pollution sensitivity
+10.1016/j.scitotenv.2016.04.193,thermal tolerance
+10.1016/j.scitotenv.2016.07.227,aquatic stages
+10.1016/j.scitotenv.2016.07.227,diet
+10.1016/j.scitotenv.2016.07.227,dissemination
+10.1016/j.scitotenv.2016.07.227,feeding method
+10.1016/j.scitotenv.2016.07.227,life cycle duration
+10.1016/j.scitotenv.2016.07.227,locomotion
+10.1016/j.scitotenv.2016.07.227,max body size
+10.1016/j.scitotenv.2016.07.227,reproduction
+10.1016/j.scitotenv.2016.07.227,resistance form
+10.1016/j.scitotenv.2016.07.227,respiration
+10.1016/j.scitotenv.2016.07.227,voltinism
+10.1016/j.scitotenv.2018.09.256,stable isotopes
+10.1016/j.seares.2013.05.004,age specific reproductive investment
+10.1016/j.seares.2013.05.004,body lengths
+10.1016/j.seares.2013.05.004,body mass
+10.1016/j.seares.2013.05.004,egg size
+10.1016/j.seares.2013.05.004,size specific reproductive investment
+10.1016/j.soilbio.2014.04.002,body length
+10.1016/j.soilbio.2014.04.002,body shape
+10.1016/j.soilbio.2014.04.002,defense against predators
+10.1016/j.soilbio.2014.04.002,locomotory organs
+10.1016/j.soilbio.2014.04.002,protective features
+10.1016/j.soilbio.2014.04.002,reproductive mode
+10.1016/j.soilbio.2014.04.002,sense-related organs
+10.1016/j.soilbio.2014.04.002,sensory organ
+10.1016/j.soilbio.2015.03.005,body size
+10.1016/j.soilbio.2015.03.005,trophic guild
+10.1016/j.tree.2015.09.006,thermal tolerance
+10.1016/j.ufug.2018.01.002,body size
+10.1016/j.ufug.2018.01.002,disturbance sensitivity
+10.1016/j.ufug.2018.01.002,habitat
+10.1016/j.ufug.2018.01.002,humidity tolerance
+10.1016/S0167-8809(01)00333-4,adult diet
+10.1016/S0167-8809(01)00333-4,breeding season
+10.1016/S0167-8809(01)00333-4,daily activity
+10.1016/S0167-8809(01)00333-4,duration of life cycle
+10.1016/S0167-8809(01)00333-4,emergence
+10.1016/S0167-8809(01)00333-4,locomotion
+10.1016/S0167-8809(01)00333-4,main activity season
+10.1016/S0167-8809(01)00333-4,overwintering
+10.1016/S0167-8809(01)00333-4,overwintering forms
+10.1016/S0167-8809(01)00333-4,size
+10.1016/S0167-8809(01)00333-4,wing morphology
+10.1017/S0952836900001084,age at maturity
+10.1017/S0952836900001084,body mass
+10.1017/S0952836900001084,litter size
+10.1017/S0952836900001084,pathogen community
+10.1017/S0952836900001084,tail length
+10.1017/S0952836900002016,clutch size
+10.1017/S0952836900002016,egg volume
+10.1017/S0952836900002016,mortality during egg stage
+10.1017/S0952836900002016,pH tolerance
+10.1017/S0952836900002016,salinity tolerane
+10.1017/S0952836900002016,stage-based survival
+10.1017/S0960258510000176,mean seed mass
+10.1017/S0960258510000176,proportion of large-seeded annuals
+10.1017/S0960258510000176,proportion of medium-seeded annuals
+10.1017/S0960258510000176,proportion of small-seeded annuals
+10.1017/S0960258510000176,SD of seed mass
+10.1017/S0960258510000176,weighted mean seed mass
+10.1038/ismej.2015.201,metabolic potential
+10.1038/ismej.2017.183,dispersal ability
+10.1038/ismej.2017.183,niche breadth
+10.1038/s41598-017-00429-9,leaf C isotope ratio
+10.1038/s41598-017-00429-9,phosphorus efficieincy
+10.1038/s41598-017-00429-9,photosynthesis rate
+10.1038/s41598-017-00429-9,photosynthetic nitrogen
+10.1038/s41598-018-32078-x,clonal spreading ability
+10.1038/s41598-018-32078-x,LDMC
+10.1038/s41598-018-32078-x,leaf area
+10.1038/s41598-018-32078-x,leaf dry-matter content
+10.1038/s41598-018-32078-x,life form
+10.1038/s41598-018-32078-x,plant height
+10.1038/s41598-018-32078-x,SLA
+10.1038/srep24110,area independent stomatal index
+10.1038/srep24110,leaf area index
+10.1038/srep24110,leaf mass/area
+10.1038/srep24110,mass-based leaf N
+10.1038/srep29414,body mass
+10.1038/srep29414,specific growth rates
+10.1038/srep35649,leaf mass fraction
+10.1038/srep35649,SLA
+10.1038/srep42007,habitat
+10.1046/j.1365-2427.1997.00166.x,clinger
+10.1046/j.1365-2427.1997.00166.x,flattened and with two or more life stages outside the stream
+10.1046/j.1365-2427.1997.00166.x,habitat generalist
+10.1046/j.1365-2427.1997.00166.x,high adult mobility
+10.1046/j.1365-2427.1997.00166.x,small size
+10.1046/j.1365-2427.1997.00166.x,streamlined and with two or more life stages outside the stream
+10.1046/j.1365-2427.2000.00535.x,altitude
+10.1046/j.1365-2427.2000.00535.x,aquatic stages
+10.1046/j.1365-2427.2000.00535.x,biogeographic regions
+10.1046/j.1365-2427.2000.00535.x,current velocity preference
+10.1046/j.1365-2427.2000.00535.x,diet
+10.1046/j.1365-2427.2000.00535.x,dispersal ability
+10.1046/j.1365-2427.2000.00535.x,feeding method
+10.1046/j.1365-2427.2000.00535.x,life cycle duration
+10.1046/j.1365-2427.2000.00535.x,locomotion and substrate relation
+10.1046/j.1365-2427.2000.00535.x,longitudinal distribution
+10.1046/j.1365-2427.2000.00535.x,max body size
+10.1046/j.1365-2427.2000.00535.x,pH tolerance
+10.1046/j.1365-2427.2000.00535.x,potential number of reproduction cycles per year
+10.1046/j.1365-2427.2000.00535.x,reproduction
+10.1046/j.1365-2427.2000.00535.x,resistance form
+10.1046/j.1365-2427.2000.00535.x,respiration
+10.1046/j.1365-2427.2000.00535.x,salinity tolerance
+10.1046/j.1365-2427.2000.00535.x,saprobity
+10.1046/j.1365-2427.2000.00535.x,substrate preference
+10.1046/j.1365-2427.2000.00535.x,thermal tolerance
+10.1046/j.1365-2427.2000.00535.x,transversal distribution
+10.1046/j.1365-2427.2000.00535.x,trophic guild
+10.1046/j.1365-2435.2002.00664.x,bark thickness
+10.1046/j.1365-2435.2002.00664.x,canopy arch
+10.1046/j.1365-2435.2002.00664.x,dry matter content
+10.1046/j.1365-2435.2002.00664.x,germination phenology
+10.1046/j.1365-2435.2002.00664.x,germination tests
+10.1046/j.1365-2435.2002.00664.x,growth form
+10.1046/j.1365-2435.2002.00664.x,leaf life span
+10.1046/j.1365-2435.2002.00664.x,leaf phenology
+10.1046/j.1365-2435.2002.00664.x,life span
+10.1046/j.1365-2435.2002.00664.x,mass of underground reserves
+10.1046/j.1365-2435.2002.00664.x,maturation age
+10.1046/j.1365-2435.2002.00664.x,N content
+10.1046/j.1365-2435.2002.00664.x,natural 15N abundance
+10.1046/j.1365-2435.2002.00664.x,period of photosynthetic activity
+10.1046/j.1365-2435.2002.00664.x,photosynthetic pathway
+10.1046/j.1365-2435.2002.00664.x,process of N capture
+10.1046/j.1365-2435.2002.00664.x,rooting depth
+10.1046/j.1365-2435.2002.00664.x,seed mass
+10.1046/j.1365-2435.2002.00664.x,seed shape
+10.1046/j.1365-2435.2002.00664.x,shoot height
+10.1046/j.1365-2435.2002.00664.x,SLA
+10.1046/j.1365-2435.2002.00664.x,specific root length
+10.1046/j.1365-2656.2003.00727.x,growth rate
+10.1046/j.1365-2656.2003.00727.x,mortality rate
+10.1046/j.1439-0485.2000.00732.x,ecomorphology groups
+10.1046/j.1523-1739.2002.02283.x,ambush predation
+10.1046/j.1523-1739.2002.02283.x,climatic tolerance
+10.1046/j.1523-1739.2002.02283.x,habitat use
+10.1046/j.1523-1739.2002.02283.x,male combat
+10.1046/j.1523-1739.2002.02283.x,mean clutch size
+10.1046/j.1523-1739.2002.02283.x,reproductive mode
+10.1046/j.1523-1739.2002.02283.x,sexual size dimorphism
+10.1046/j.1523-1739.2002.02283.x,snout-vent length
+10.1046/j.1523-1739.2002.02283.x,trophic guild
+10.1051/alr:2005029,degree of crypticity
+10.1051/alr:2005029,home range
+10.1051/alr:2005029,major biotype
+10.1051/alr:2005029,max adult size
+10.1051/alr:2005029,nycthmeral behaviour
+10.1051/alr:2005029,schooling behaviour
+10.1051/kmae/2015033,stable isotopes
+10.1073/pnas.1215513110,canopy water content
+10.1073/pnas.1215513110,leaf carbon per mass
+10.1073/pnas.1215513110,leaf N per mass
+10.1073/pnas.1215513110,leaf water concentration
+10.1073/pnas.1300643110,metabolic pathway
+10.1073/pnas.1304074110,adult depth range
+10.1073/pnas.1304074110,max body size
+10.1073/pnas.1304074110,nocturnal activity
+10.1073/pnas.1304074110,PLD
+10.1073/pnas.1304074110,schooling behaviour
+10.1073/pnas.1304074110,spawning mode
+10.1073/pnas.1304074110,use of multiple habitat types
+10.1073/pnas.1310700110,LDMC
+10.1073/pnas.1310700110,leaf area
+10.1073/pnas.1310700110,leaf C content
+10.1073/pnas.1310700110,leaf C:N ratio
+10.1073/pnas.1310700110,leaf thickness
+10.1073/pnas.1310700110,mass-based leaf nitrogen content
+10.1073/pnas.1310700110,mass based root nitrogen content
+10.1073/pnas.1310700110,root C content
+10.1073/pnas.1310700110,root C:N ratio
+10.1073/pnas.1310700110,seed mass
+10.1073/pnas.1310700110,SLA
+10.1073/pnas.1310700110,specific root length
+10.1073/pnas.1802091115,activity rate
+10.1073/pnas.1802091115,arginine kinase activity
+10.1073/pnas.1802091115,burst swimming speed
+10.1073/pnas.1802091115,lactate dehydrogenaze activity
+10.1080/13658816.2013.861465,hypoxic tolerance
+10.1080/13658816.2013.861465,swimming speed
+10.1080/17550874.2016.1211192,foliar C:N ratio
+10.1080/17550874.2016.1211192,foliar C-13
+10.1080/17550874.2016.1211192,LDMC
+10.1080/17550874.2016.1211192,plant height
+10.1080/17550874.2016.1211192,SLA
+10.1080/17550874.2017.1345997,assimilating organ
+10.1080/17550874.2017.1345997,av leaf C/N ratio
+10.1080/17550874.2017.1345997,average specific leaf area
+10.1080/17550874.2017.1345997,clonality
+10.1080/17550874.2017.1345997,crown area
+10.1080/17550874.2017.1345997,fruit dehiscence
+10.1080/17550874.2017.1345997,growth form
+10.1080/17550874.2017.1345997,height
+10.1080/17550874.2017.1345997,leaf consistency
+10.1080/17550874.2017.1345997,leaf life span
+10.1080/17550874.2017.1345997,leaf margin
+10.1080/17550874.2017.1345997,leaf size
+10.1080/17550874.2017.1345997,leaf tomentosity
+10.1080/17550874.2017.1345997,mean leaf C concentration
+10.1080/17550874.2017.1345997,mean leaf C isotope ratio
+10.1080/17550874.2017.1345997,mean leaf N conc
+10.1080/17550874.2017.1345997,photosynthetic organ colour
+10.1080/17550874.2017.1345997,pollination mode
+10.1080/17550874.2017.1345997,post - fire seedling
+10.1080/17550874.2017.1345997,raunkaar's Life form
+10.1080/17550874.2017.1345997,re-sprouter
+10.1080/17550874.2017.1345997,regeneration
+10.1080/17550874.2017.1345997,seed weight
+10.1080/17550874.2017.1345997,seeder
+10.1080/17550874.2017.1345997,spinescence
+10.1080/17550874.2017.1345997,trophic guild
+10.1086/690764,cell size
+10.1086/690764,investments in phototrophy
+10.1086/690764,nutrient uptake rate
+10.1086/690764,phagotrophy
+10.1086/696978,feeding method
+10.1086/701784,body shape
+10.1093/aob/mcx222,SLA
+10.1093/aob/mcy004,ploidy
+10.1093/aob/mcy004,reproductive mode
+10.1093/beheco/ars040,adult survival rate
+10.1093/beheco/ars040,age at first reproduction
+10.1093/beheco/ars040,annual fecundity
+10.1093/beheco/ars040,body mass
+10.1093/beheco/ars040,breeding range size
+10.1093/beheco/ars040,duration of breeding season
+10.1093/beheco/ars040,flight initiation distance
+10.1093/beheco/ars040,habitat
+10.1093/beheco/ars040,juvenile survival rate
+10.1093/beheco/ars040,natal dispersal distance
+10.1093/beheco/ars040,senescence
+10.1093/beheco/arv115,leadership
+10.1093/beheco/arv115,locomotor activity
+10.1093/beheco/arv115,sociability
+10.1093/biolinnean/blx159,body colour luminance
+10.1093/biolinnean/blx159,body size
+10.1093/ee/nvv183,adult body size
+10.1093/ee/nvv183,larval diet
+10.1093/ee/nvv183,wing marking
+10.1093/jpe/rtt064,C content
+10.1093/jpe/rtt064,C:N ratio
+10.1093/jpe/rtt064,LDMC
+10.1093/jpe/rtt064,N content
+10.1093/jpe/rtt064,plant height
+10.1093/jpe/rtt064,SLA
+10.1093/jpe/rtt075,body size
+10.1093/jpe/rtt075,max height
+10.1093/jpe/rtt075,SLA
+10.1093/jpe/rtt075,width
+10.1098/rsos.140541,maximum projected tree crown area
+10.1098/rsos.140541,thermal tolerance
+10.1098/rspb.2000.1010,abundance
+10.1098/rspb.2000.1010,competitive ability
+10.1098/rspb.2000.1010,dispersal ability
+10.1098/rspb.2000.1010,longevity
+10.1098/rspb.2000.1010,nutrient level flowering period
+10.1098/rspb.2000.1010,plant height
+10.1098/rspb.2000.1010,seed bank
+10.1098/rspb.2000.1010,seed weight
+10.1098/rspb.2000.1010,vegetative reproduction
+10.1098/rspb.2012.2131,body mass
+10.1098/rspb.2012.2131,diet
+10.1098/rspb.2012.2131,generation length
+10.1098/rspb.2012.2131,habitat
+10.1098/rspb.2012.2131,migratory behavior
+10.1098/rspb.2012.2131,range size
+10.1098/rspb.2012.2131,trophic guild
+10.1098/rspb.2014.2102,fecundity
+10.1098/rspb.2014.2102,fire response
+10.1098/rspb.2014.2102,longevity
+10.1098/rspb.2014.2102,plant height
+10.1098/rspb.2014.2102,raunkiaer life form
+10.1098/rspb.2014.2102,seed mass
+10.1098/rspb.2014.2102,seedbank persistence
+10.1098/rspb.2015.1498,stomatal density
+10.1098/rspb.2016.1207,body mass
+10.1098/rspb.2016.1207,diet
+10.1098/rspb.2018.0621,body size
+10.1098/rstb.2010.0130,body mass
+10.1098/rstb.2010.0130,breeding habitat type
+10.1098/rstb.2010.0130,flowering time shift
+10.1098/rstb.2010.0130,flowering time tracking
+10.1098/rstb.2010.0130,northern most breeding latitude
+10.1098/rstb.2010.0130,overgrowth resistance
+10.1098/rstb.2012.0246,body size
+10.1111/1365-2435.12075,13C isotope ratio
+10.1111/1365-2435.12075,colour
+10.1111/1365-2435.12075,feeding method
+10.1111/1365-2435.12075,head length
+10.1111/1365-2435.12075,LDMC
+10.1111/1365-2435.12075,onset of flowering
+10.1111/1365-2435.12075,period of activity
+10.1111/1365-2435.12075,relative eye length
+10.1111/1365-2435.12075,relative leg length
+10.1111/1365-2435.12075,SLA
+10.1111/1365-2435.12075,succulence of leaves or step
+10.1111/1365-2435.12112,body size
+10.1111/1365-2435.12120,C:N ratio of the leaves
+10.1111/1365-2435.12120,lateral spread
+10.1111/1365-2435.12120,LDMC
+10.1111/1365-2435.12120,leaf area
+10.1111/1365-2435.12120,leaf N content
+10.1111/1365-2435.12120,length
+10.1111/1365-2435.12120,plant vegetative height
+10.1111/1365-2435.12120,SLA
+10.1111/1365-2435.12120,width
+10.1111/1365-2435.12135,defense syndrome
+10.1111/1365-2435.12176,LDMC
+10.1111/1365-2435.12176,leaf area
+10.1111/1365-2435.12176,leaf chlorophyll content
+10.1111/1365-2435.12176,leaf thickness
+10.1111/1365-2435.12176,life form
+10.1111/1365-2435.12176,max height
+10.1111/1365-2435.12176,seed dormancy
+10.1111/1365-2435.12176,seed mass
+10.1111/1365-2435.12176,SLA
+10.1111/1365-2435.12176,stem specific resistance
+10.1111/1365-2435.12444,stable isotopes
+10.1111/1365-2435.12605,dispersal limitation
+10.1111/1365-2435.12605,habitat
+10.1111/1365-2435.12753,foraging specialization
+10.1111/1365-2435.12753,proboscis length
+10.1111/1365-2435.12784,ability to fix atmospheric nitrogen
+10.1111/1365-2435.12784,accessory pigment composition
+10.1111/1365-2435.12784,formation of chains
+10.1111/1365-2435.12784,formation of colonies
+10.1111/1365-2435.12784,mixotrophy
+10.1111/1365-2435.12784,motility
+10.1111/1365-2435.12784,size
+10.1111/1365-2435.12784,use of silica in cell walls
+10.1111/1365-2435.12786,body size
+10.1111/1365-2435.12786,glossa length
+10.1111/1365-2435.12786,relative forewing length
+10.1111/1365-2435.12798,exposure tolerance
+10.1111/1365-2435.12798,growth form
+10.1111/1365-2435.12798,habitat
+10.1111/1365-2435.12798,longevity
+10.1111/1365-2435.12798,salinity tolerance
+10.1111/1365-2435.12798,size
+10.1111/1365-2435.12894,CSR strategy
+10.1111/1365-2435.12894,stress tolerance
+10.1111/1365-2435.12938,root concentrations of Al
+10.1111/1365-2435.12938,root concentrations of C
+10.1111/1365-2435.12938,root concentrations of Ca
+10.1111/1365-2435.12938,root concentrations of Co
+10.1111/1365-2435.12938,root concentrations of Cu
+10.1111/1365-2435.12938,root concentrations of Fe
+10.1111/1365-2435.12938,root concentrations of K
+10.1111/1365-2435.12938,root concentrations of Mg
+10.1111/1365-2435.12938,root concentrations of Mn
+10.1111/1365-2435.12938,root concentrations of Na
+10.1111/1365-2435.12938,root concentrations of Ni
+10.1111/1365-2435.12938,root concentrations of S
+10.1111/1365-2435.12938,root concentrations of Zn
+10.1111/1365-2435.12938,root N concentration
+10.1111/1365-2435.12938,root P concentration
+10.1111/1365-2435.13007,amount of energy stocked in larval development
+10.1111/1365-2435.13007,body size
+10.1111/1365-2435.13007,rate of energy consumption after emergence
+10.1111/1365-2435.13079,CO2 assimilation rate
+10.1111/1365-2435.13079,leaf nutrient concentration
+10.1111/1365-2435.13079,leaf turgor loss point
+10.1111/1365-2435.13079,stem hydraulic conductivity
+10.1111/1365-2435.13141,aquatic developmental stage
+10.1111/1365-2435.13141,body form
+10.1111/1365-2435.13141,cohort production interval
+10.1111/1365-2435.13141,diet
+10.1111/1365-2435.13141,dispersal method
+10.1111/1365-2435.13141,feeding method
+10.1111/1365-2435.13141,locomotion
+10.1111/1365-2435.13141,max body size
+10.1111/1365-2435.13141,morphological defense
+10.1111/1365-2435.13141,reproductive mode
+10.1111/1365-2435.13141,resistance forms
+10.1111/1365-2435.13141,respiration mode
+10.1111/1365-2435.13142,dry mass
+10.1111/1365-2435.13142,feeding method
+10.1111/1365-2656.12004,adult flying strength
+10.1111/1365-2656.12004,drifting propensity
+10.1111/1365-2656.12004,female dispersal
+10.1111/1365-2656.12020,body size
+10.1111/1365-2656.12020,sex
+10.1111/1365-2656.12144,adult female survival rate
+10.1111/1365-2656.12173,paedomorphosis
+10.1111/1365-2656.12271,age
+10.1111/1365-2656.12271,body size
+10.1111/1365-2656.12271,habitat stratum
+10.1111/1365-2656.12271,hunting mode
+10.1111/1365-2656.12471,fractional size
+10.1111/1365-2656.12478,body mass
+10.1111/1365-2656.12478,main feeding behaviour
+10.1111/1365-2656.12478,main feeding guild
+10.1111/1365-2656.12478,main feeding stratum
+10.1111/1365-2656.12648,ballooning
+10.1111/1365-2656.12648,cleptoparasitc
+10.1111/1365-2656.12648,diet breadth
+10.1111/1365-2656.12648,flying
+10.1111/1365-2656.12648,habitat specialization
+10.1111/1365-2656.12648,hunting strategy
+10.1111/1365-2656.12648,nesting habitat
+10.1111/1365-2656.12648,size
+10.1111/1365-2656.12648,sociality
+10.1111/1365-2656.12648,wing size
+10.1111/1365-2656.12650,body mass
+10.1111/1365-2656.12650,main feeding behaviour
+10.1111/1365-2656.12650,main feeding guild
+10.1111/1365-2656.12650,main feeding stratum
+10.1111/1365-2656.12747,average head width
+10.1111/1365-2656.12747,body size
+10.1111/1365-2656.12747,colony size
+10.1111/1365-2656.12747,diet breadth
+10.1111/1365-2656.12747,group foraging
+10.1111/1365-2656.12747,inquiline nesting
+10.1111/1365-2656.12747,nesting in man-made structures
+10.1111/1365-2656.12747,nesting in the ground
+10.1111/1365-2656.12829,arable-land use
+10.1111/1365-2656.12829,climate change tolerance
+10.1111/1365-2656.12829,habitat
+10.1111/1365-2656.12829,habitat degradation
+10.1111/1365-2656.12829,meadow use
+10.1111/1365-2656.12829,migration
+10.1111/1365-2656.12829,thermal tolerance
+10.1111/1365-2656.13029,dietary composition
+10.1111/1365-2656.13029,foraging substrate
+10.1111/1365-2656.13029,niche partitioning
+10.1111/1365-2656.13029,resource requirements
+10.1111/1365-2664.12022,dispersal method
+10.1111/1365-2664.12022,trophic guild
+10.1111/1365-2664.12037,age first flowering
+10.1111/1365-2664.12037,anemochory
+10.1111/1365-2664.12037,autochory
+10.1111/1365-2664.12037,diaspore type
+10.1111/1365-2664.12037,dysochory
+10.1111/1365-2664.12037,endozoochory
+10.1111/1365-2664.12037,epizoochory
+10.1111/1365-2664.12037,fertility system
+10.1111/1365-2664.12037,flowering start
+10.1111/1365-2664.12037,hemerochory
+10.1111/1365-2664.12037,leaf size
+10.1111/1365-2664.12037,life span
+10.1111/1365-2664.12037,mycorrhizal frequency
+10.1111/1365-2664.12037,mycorrhizal type
+10.1111/1365-2664.12037,N content
+10.1111/1365-2664.12037,N fixation
+10.1111/1365-2664.12037,pollen vector
+10.1111/1365-2664.12037,reproductive type
+10.1111/1365-2664.12037,rosette type
+10.1111/1365-2664.12037,seed length
+10.1111/1365-2664.12037,seed longevity
+10.1111/1365-2664.12037,seed mass
+10.1111/1365-2664.12037,seed number
+10.1111/1365-2664.12037,seed shape
+10.1111/1365-2664.12490,body mass
+10.1111/1365-2664.12490,dietary specialization
+10.1111/1365-2664.12490,mobility
+10.1111/1365-2664.12490,trophic guild
+10.1111/1365-2664.12490,vertical stratification
+10.1111/1365-2664.12490,wing morphology
+10.1111/1365-2664.12493,ballooning
+10.1111/1365-2664.12493,body length
+10.1111/1365-2664.12493,body size
+10.1111/1365-2664.12493,body width
+10.1111/1365-2664.12493,breeding season
+10.1111/1365-2664.12493,competitive ability
+10.1111/1365-2664.12493,dispersal mechanism
+10.1111/1365-2664.12493,elevation
+10.1111/1365-2664.12493,function
+10.1111/1365-2664.12493,habitat
+10.1111/1365-2664.12493,humicolous
+10.1111/1365-2664.12493,leaf duration
+10.1111/1365-2664.12493,light
+10.1111/1365-2664.12493,mobility
+10.1111/1365-2664.12493,moisture
+10.1111/1365-2664.12493,niche
+10.1111/1365-2664.12493,number of segments
+10.1111/1365-2664.12493,overwintering forms
+10.1111/1365-2664.12493,ph tolerance
+10.1111/1365-2664.12493,body size plasticity
+10.1111/1365-2664.12493,prostomium
+10.1111/1365-2664.12493,root depth
+10.1111/1365-2664.12493,sex
+10.1111/1365-2664.12493,shading
+10.1111/1365-2664.12493,soil aeration
+10.1111/1365-2664.12493,soil humus
+10.1111/1365-2664.12493,soil layer
+10.1111/1365-2664.12493,trophic group
+10.1111/1365-2664.12493,wings
+10.1111/1365-2664.12516,N content
+10.1111/1365-2664.12516,P content
+10.1111/1365-2664.12516,plant height
+10.1111/1365-2664.12516,seed mass
+10.1111/1365-2664.12516,SLA
+10.1111/1365-2664.12922,longevity
+10.1111/1365-2664.12922,native provenance
+10.1111/1365-2664.12922,primary dispersal mode
+10.1111/1365-2664.12922,seed mass
+10.1111/1365-2664.12922,SLA
+10.1111/1365-2664.12922,woody
+10.1111/1365-2664.12935,flowering date
+10.1111/1365-2664.12935,max height
+10.1111/1365-2664.12935,seed mass
+10.1111/1365-2664.12935,SLA
+10.1111/1365-2745.12003,LDMC
+10.1111/1365-2745.12003,leaf carbon isotopic ratio
+10.1111/1365-2745.12003,leaf N concentration
+10.1111/1365-2745.12003,leaf thickness
+10.1111/1365-2745.12003,onset of flowering date
+10.1111/1365-2745.12003,reproductive height
+10.1111/1365-2745.12003,seed mass
+10.1111/1365-2745.12003,SLA
+10.1111/1365-2745.12012,high leaf concentration of nitrogen
+10.1111/1365-2745.12012,LDMC
+10.1111/1365-2745.12012,plant height
+10.1111/1365-2745.12012,SLA
+10.1111/1365-2745.12012,tensile strength
+10.1111/1365-2745.12012,wood specific gravity
+10.1111/1365-2745.12013,height
+10.1111/1365-2745.12013,relative growth rate
+10.1111/1365-2745.12013,root density
+10.1111/1365-2745.12098,canopy height
+10.1111/1365-2745.12098,epizoochory
+10.1111/1365-2745.12098,LDMC
+10.1111/1365-2745.12098,leaf size
+10.1111/1365-2745.12098,longevity
+10.1111/1365-2745.12098,plant life form
+10.1111/1365-2745.12098,seed bank
+10.1111/1365-2745.12098,seed mass
+10.1111/1365-2745.12098,seed production
+10.1111/1365-2745.12098,SLA
+10.1111/1365-2745.12160,foliar C-13
+10.1111/1365-2745.12160,foliar C13 composition
+10.1111/1365-2745.12160,foliar carbon
+10.1111/1365-2745.12160,foliar K
+10.1111/1365-2745.12160,foliar N
+10.1111/1365-2745.12160,foliar P
+10.1111/1365-2745.12160,laminar thickness
+10.1111/1365-2745.12160,laminar total chlorophyll
+10.1111/1365-2745.12160,laminar toughness
+10.1111/1365-2745.12160,leaf area
+10.1111/1365-2745.12160,leaf tissue density
+10.1111/1365-2745.12160,root wood specific gravity
+10.1111/1365-2745.12160,SLA
+10.1111/1365-2745.12160,stem wood specific gravity
+10.1111/1365-2745.12160,trunk bark thickness
+10.1111/1365-2745.12199,longevity
+10.1111/1365-2745.12199,persistence
+10.1111/1365-2745.12199,seed dispersal potential
+10.1111/1365-2745.12366,bark thickness
+10.1111/1365-2745.12366,height
+10.1111/1365-2745.12366,LDMC
+10.1111/1365-2745.12366,leaf N content
+10.1111/1365-2745.12366,leaf P
+10.1111/1365-2745.12366,leaf tissue density
+10.1111/1365-2745.12366,litter N
+10.1111/1365-2745.12366,litter P
+10.1111/1365-2745.12366,SDMC
+10.1111/1365-2745.12366,seed
+10.1111/1365-2745.12366,SLA
+10.1111/1365-2745.12366,stem tissue density
+10.1111/1365-2745.12480,leaf area
+10.1111/1365-2745.12480,plant height
+10.1111/1365-2745.12480,SLA
+10.1111/1365-2745.12489,C:N ratio
+10.1111/1365-2745.12489,carbon
+10.1111/1365-2745.12489,erectness
+10.1111/1365-2745.12489,evenness root area
+10.1111/1365-2745.12489,evenness root length
+10.1111/1365-2745.12489,evenness root mass
+10.1111/1365-2745.12489,LDMC
+10.1111/1365-2745.12489,leaf area
+10.1111/1365-2745.12489,leaf area ratio
+10.1111/1365-2745.12489,leaf area:perimeter ratio
+10.1111/1365-2745.12489,leaf conductivity
+10.1111/1365-2745.12489,leaf length
+10.1111/1365-2745.12489,leaf mass production
+10.1111/1365-2745.12489,leaf mass ratio
+10.1111/1365-2745.12489,leaf thickness
+10.1111/1365-2745.12489,leaf toughness
+10.1111/1365-2745.12489,leaf width: length ratio
+10.1111/1365-2745.12489,N content
+10.1111/1365-2745.12489,N uptake
+10.1111/1365-2745.12489,root carbon
+10.1111/1365-2745.12489,root diameter
+10.1111/1365-2745.12489,root nitrogen
+10.1111/1365-2745.12489,shoot root ratio
+10.1111/1365-2745.12489,SLA
+10.1111/1365-2745.12489,specific density
+10.1111/1365-2745.12489,specific root area
+10.1111/1365-2745.12489,specific root density
+10.1111/1365-2745.12489,specific root length
+10.1111/1365-2745.12489,specific stem density
+10.1111/1365-2745.12489,standing height
+10.1111/1365-2745.12489,stem dry matter content
+10.1111/1365-2745.12489,stretched height
+10.1111/1365-2745.12536,LDMC
+10.1111/1365-2745.12536,leaf N concentration
+10.1111/1365-2745.12536,reproductive plant height
+10.1111/1365-2745.12536,seed dry mass
+10.1111/1365-2745.12536,SLA
+10.1111/1365-2745.12598,average leaf area
+10.1111/1365-2745.12598,LDMC
+10.1111/1365-2745.12598,leaf C:N ratio
+10.1111/1365-2745.12598,leaf N concentration
+10.1111/1365-2745.12598,leaf N:P ratio
+10.1111/1365-2745.12598,leaf P concentration
+10.1111/1365-2745.12598,leaf tensile strength
+10.1111/1365-2745.12598,SLA
+10.1111/1365-2745.12604,age
+10.1111/1365-2745.12604,DBH
+10.1111/1365-2745.12633,chitin
+10.1111/1365-2745.12633,phenolic substrates
+10.1111/1365-2745.12633,phosphorus
+10.1111/1365-2745.12633,root tip size
+10.1111/1365-2745.12633,soil proteins
+10.1111/1365-2745.12633,various carbon hydrates
+10.1111/1365-2745.12658,LDMC
+10.1111/1365-2745.12658,leaf carbon concentration
+10.1111/1365-2745.12658,leaf carbon isotopic ratio
+10.1111/1365-2745.12658,leaf N concentration
+10.1111/1365-2745.12658,leaf N isotopic ratio
+10.1111/1365-2745.12658,SLA
+10.1111/1365-2745.12658,vegetative height
+10.1111/1365-2745.12747,carbon isotope ratio
+10.1111/1365-2745.12747,LDMC
+10.1111/1365-2745.12747,plant height
+10.1111/1365-2745.12747,root dry matter content
+10.1111/1365-2745.12747,seed mass
+10.1111/1365-2745.12747,SLA
+10.1111/1365-2745.12747,specific root area
+10.1111/1365-2745.12747,stem dry matter content
+10.1111/1365-2745.12802,body size
+10.1111/1365-2745.12802,DGH
+10.1111/1365-2745.12802,LDMC
+10.1111/1365-2745.12802,leaf C content
+10.1111/1365-2745.12802,leaf N content
+10.1111/1365-2745.12802,pH tolerance
+10.1111/1365-2745.12802,SLA
+10.1111/1365-2745.12802,stem specific density
+10.1111/1365-2745.12851,girth at breast height
+10.1111/1365-2745.12851,life form
+10.1111/1365-2745.12996,LDMC
+10.1111/1365-2745.12996,leaf area
+10.1111/1365-2745.12996,leaf carbon isotopic discrimination
+10.1111/1365-2745.12996,life cycle
+10.1111/1365-2745.12996,life form
+10.1111/1365-2745.12996,mass-based leaf nitrogen content
+10.1111/1365-2745.12996,mass based P content
+10.1111/1365-2745.12996,SLA
+10.1111/1462-2920.12211,pH tolerance
+10.1111/1752-1688.12650,adult dispersal
+10.1111/1752-1688.12650,adult life span
+10.1111/1752-1688.12650,body shape
+10.1111/1752-1688.12650,chemical tolerance
+10.1111/1752-1688.12650,current adaptation
+10.1111/1752-1688.12650,current preference
+10.1111/1752-1688.12650,development speed
+10.1111/1752-1688.12650,drift
+10.1111/1752-1688.12650,fecundity
+10.1111/1752-1688.12650,functional feeding group
+10.1111/1752-1688.12650,habit
+10.1111/1752-1688.12650,larval dispersal
+10.1111/1752-1688.12650,larval size
+10.1111/1752-1688.12650,lateral preference
+10.1111/1752-1688.12650,microhabitat type
+10.1111/1752-1688.12650,oxygen tolerance
+10.1111/1752-1688.12650,reproductive mode
+10.1111/1752-1688.12650,respiration mode
+10.1111/1752-1688.12650,sclerotization
+10.1111/1752-1688.12650,thermal tolerance
+10.1111/1752-1688.12650,turbidity preference
+10.1111/1752-1688.12650,vertical preference
+10.1111/1752-1688.12650,voltinism
+10.1111/1752-1688.12650,water body preference
+10.1111/2041-210X.12211,brood size
+10.1111/2041-210X.12211,carcass use efficiency
+10.1111/2041-210X.12211,clutch dry mass
+10.1111/2041-210X.12211,clutch size
+10.1111/2041-210X.12211,female body mass
+10.1111/2041-210X.12211,female mass change
+10.1111/2041-210X.12211,offspring size
+10.1111/2041-210X.12211,standard length
+10.1111/2041-210X.12280,LDMC
+10.1111/2041-210X.12280,leaf C content
+10.1111/2041-210X.12591,feeding method
+10.1111/2041-210X.12591,size
+10.1111/aec.12607,body length
+10.1111/aec.12607,body mass
+10.1111/aec.12607,leaf size
+10.1111/aec.12607,snout vent length
+10.1111/aec.12607,tibia fibula/hindlimb ratio
+10.1111/bij.12238,adult body size
+10.1111/bij.12238,age at sexual maturity
+10.1111/bij.12238,gestation length
+10.1111/bij.12238,litter size
+10.1111/bij.12238,neonate body mass
+10.1111/bij.12238,number of litters per year
+10.1111/bij.12238,weaning age
+10.1111/cobi.12378,breeding
+10.1111/cobi.12378,dietary specialization
+10.1111/cobi.12378,foraging method
+10.1111/ddi.12074,max body size
+10.1111/ddi.12074,reproductive output
+10.1111/ddi.12708,plant maximum height at maturity
+10.1111/ddi.12708,seed mass
+10.1111/ddi.12708,SLA
+10.1111/ddi.12712,forms a three dimensional structure
+10.1111/ddi.12712,max recorded body size
+10.1111/ddi.12712,nutritional symbionts
+10.1111/ddi.12712,relative adult mobility
+10.1111/ddi.12712,trophic level indicator
+10.1111/ddi.12747,age at maturity
+10.1111/ddi.12747,diet breadth
+10.1111/ddi.12747,max fecundity
+10.1111/ddi.12747,max lifespan
+10.1111/ddi.12747,max total length
+10.1111/ddi.12747,native range size
+10.1111/ddi.12747,thermal tolerance
+10.1111/ddi.12785,diet
+10.1111/ddi.12785,food relocation behaviour
+10.1111/ddi.12785,mean dry biomass
+10.1111/ddi.12785,period of activity
+10.1111/ddi.12785,trophic guild
+10.1111/ddi.12790,body mass
+10.1111/ddi.12790,body size
+10.1111/ddi.12790,diet
+10.1111/ddi.12790,habitat
+10.1111/ddi.12790,mean group size
+10.1111/ddi.12790,size of home range
+10.1111/ecog.00473,leaf N
+10.1111/ecog.00473,seed mass
+10.1111/ecog.00473,wood density
+10.1111/ecog.00623,beak length height and width
+10.1111/ecog.00623,kipp's distance
+10.1111/ecog.00623,sagittal and lateral diameter of tarsus
+10.1111/ecog.00623,tail length
+10.1111/ecog.00623,tarsus length
+10.1111/ecog.00623,wing length
+10.1111/ecog.00938,body size
+10.1111/ecog.00938,floral specialization
+10.1111/ecog.00938,nesting behaviour
+10.1111/ecog.00938,phenology
+10.1111/ecog.00938,sociality
+10.1111/ecog.02010,fruit types
+10.1111/ecog.02516,clonality
+10.1111/ecog.02516,dispersal method
+10.1111/ecog.02516,growth form
+10.1111/ecog.02516,longevity
+10.1111/ecog.02516,nutrient uptake strategy
+10.1111/ecog.02516,photosynthetic pathway
+10.1111/ecog.02516,plant height
+10.1111/ecog.02516,pollination syndrome
+10.1111/ecog.02516,seed mass
+10.1111/ecog.02516,spinescence
+10.1111/ecog.02632,body size
+10.1111/ecog.02632,diet breadth
+10.1111/ecog.02632,nest location
+10.1111/ecog.02632,sociality
+10.1111/ecog.02632,timing of foraging season
+10.1111/ecog.02926,body size
+10.1111/ecog.02926,degree in which species are associated with submerged plants
+10.1111/ecog.02926,filtration type
+10.1111/ecog.03582,body size
+10.1111/ecog.03747,body size
+10.1111/ecog.03747,diet
+10.1111/ecog.03747,geographic affinity
+10.1111/ecog.03747,habitat
+10.1111/ecog.03782,accelerators
+10.1111/ecog.03782,fecundity per female per spawning season
+10.1111/ecog.03782,incubation time from embryo fertilization to hatch
+10.1111/ecog.03782,length of spawning season
+10.1111/ecog.03782,locomotion mode
+10.1111/ecog.03782,swimming type
+10.1111/ecog.03917,body size
+10.1111/een.1.2425,diet
+10.1111/een.1.2425,N contents
+10.1111/een.1.2425,P contents
+10.1111/een.12454,larval diet
+10.1111/een.12454,linear distance between the base of the discal cell and the intersection of vein R5 with the wing margin as a proxy for adult dispersal capacity
+10.1111/een.12454,wing area per thorax volume
+10.1111/eff.12333,body shape
+10.1111/eff.12333,life strategy
+10.1111/eff.12333,standard length
+10.1111/eff.12333,trophic guild
+10.1111/ele.12757,habitat
+10.1111/ele.12757,migratory patterns
+10.1111/evo.12153,aposematism
+10.1111/evo.12153,crypsis
+10.1111/fwb.12228,# of eggs or live young
+10.1111/fwb.12228,niche breadth
+10.1111/fwb.12228,ovovivipary or pasting capsulated eggs on conspecifics
+10.1111/fwb.12228,parental care
+10.1111/fwb.12527,demand for silica
+10.1111/fwb.12527,motility
+10.1111/fwb.12527,phagotrophy
+10.1111/fwb.12527,shape
+10.1111/fwb.12527,size
+10.1111/fwb.12554,altitudinal preferences
+10.1111/fwb.12554,current pref
+10.1111/fwb.12554,current velocity preferences
+10.1111/fwb.12554,degree of rheophily
+10.1111/fwb.12554,depth preference
+10.1111/fwb.12554,feeding habitat
+10.1111/fwb.12554,habitat
+10.1111/fwb.12554,lateral distribution
+10.1111/fwb.12554,longitudinal distribution
+10.1111/fwb.12554,pH tolerance
+10.1111/fwb.12554,salinity tolerance
+10.1111/fwb.12554,saprobity
+10.1111/fwb.12554,substrate preference
+10.1111/fwb.12554,substrate preferences
+10.1111/fwb.12554,temperature preferences
+10.1111/fwb.12554,thermal tolerance
+10.1111/fwb.12554,trophic guild
+10.1111/fwb.12934,body size
+10.1111/fwb.12934,feeding habit
+10.1111/fwb.12934,locomotion and substrate relation
+10.1111/fwb.12961,body flexibility
+10.1111/fwb.12961,body form
+10.1111/fwb.12961,body size
+10.1111/fwb.12961,feeding method
+10.1111/fwb.12961,locomotion
+10.1111/fwb.12961,potential number of cycles per year
+10.1111/fwb.12961,relation to substrate
+10.1111/fwb.12966,cell size
+10.1111/fwb.12966,growth morphology
+10.1111/fwb.12966,trophic guild
+10.1111/fwb.13233,adaptation to anoxic conditions
+10.1111/fwb.13233,compression index
+10.1111/fwb.13233,fineness coefficient
+10.1111/fwb.13233,index of ventral flattening
+10.1111/fwb.13233,pectoral fin aspect ratio
+10.1111/fwb.13233,relative area of pectoral fin
+10.1111/fwb.13233,relative diameter of nares
+10.1111/fwb.13233,relative eye position
+10.1111/fwb.13233,size
+10.1111/fwb.13233,substrate preference
+10.1111/fwb.13233,trophic guild
+10.1111/gcb.12545,growth rate
+10.1111/gcb.12545,recruitment
+10.1111/gcb.12780,diet
+10.1111/gcb.12780,elevation of habitat
+10.1111/gcb.12780,length of spawning season
+10.1111/gcb.12780,longevity
+10.1111/gcb.12780,max length
+10.1111/gcb.12780,max reported fecundity
+10.1111/gcb.12780,salinity tolerance
+10.1111/gcb.12780,spawning method
+10.1111/gcb.12780,substrate preference
+10.1111/gcb.12780,water column position
+10.1111/gcb.12780,water flow preference
+10.1111/gcb.13016,thermal tolerance
+10.1111/gcb.13085,cell shape
+10.1111/gcb.13085,cell size
+10.1111/gcb.13085,motility
+10.1111/gcb.13085,nutritional mode
+10.1111/gcb.13085,organization
+10.1111/gcb.13085,resting stages
+10.1111/gcb.13174,fire resistance
+10.1111/gcb.13174,fire tolerance
+10.1111/gcb.13174,resprout ability
+10.1111/gcb.13538,fecundity
+10.1111/gcb.13538,juvenile survival
+10.1111/gcb.13538,number of breeding pairs
+10.1111/gcb.13835,thermal tolerance
+10.1111/gcb.14119,body size
+10.1111/gcb.14119,diet
+10.1111/gcb.14119,mobility between reefs
+10.1111/gcb.14119,mobility within reefs
+10.1111/gcb.14119,position in water column
+10.1111/gcb.14119,social grouping
+10.1111/gcb.14119,time when active
+10.1111/geb.12030,leaf N content
+10.1111/geb.12030,max height
+10.1111/geb.12030,seed mass
+10.1111/geb.12030,wood density
+10.1111/geb.12088,diet
+10.1111/geb.12088,geographic range size
+10.1111/geb.12088,habitat
+10.1111/geb.12088,mean female body mass
+10.1111/geb.12088,mean litter size
+10.1111/geb.12167,leaf N content
+10.1111/geb.12167,max height
+10.1111/geb.12167,minimum rooting depth
+10.1111/geb.12167,pH tolerance
+10.1111/geb.12167,precipitation for growth
+10.1111/geb.12167,seed mass
+10.1111/geb.12167,slope of the power regression between tree height and diameter
+10.1111/geb.12167,temperature for growth
+10.1111/geb.12167,wood density
+10.1111/geb.12475,adult trophic guild
+10.1111/geb.12475,affinity to different freshwater bodies
+10.1111/geb.12475,altitudinal affinity
+10.1111/geb.12475,flow velocity
+10.1111/geb.12475,max body length
+10.1111/geb.12475,mean stream size
+10.1111/geb.12475,substrate affinity
+10.1111/geb.12475,temp preference
+10.1111/geb.12475,vertical feeding position in water
+10.1111/geb.12521,body size
+10.1111/geb.12521,dietary breadth
+10.1111/geb.12521,dispersal propensity
+10.1111/geb.12521,voltinism
+10.1111/geb.12537,body size
+10.1111/geb.12567,annual fecundity
+10.1111/geb.12567,diet
+10.1111/geb.12567,length of min juvenile period
+10.1111/geb.12567,longevity
+10.1111/geb.12567,max cone length
+10.1111/geb.12567,max DBH
+10.1111/geb.12567,max height
+10.1111/geb.12567,max seed length
+10.1111/geb.12567,max seed wing length
+10.1111/geb.12567,mean adult body mass
+10.1111/geb.12567,mean seed mass
+10.1111/geb.12567,native range size
+10.1111/geb.12567,parthenogenesis
+10.1111/geb.12567,snout-to-vent length
+10.1111/geb.12783,LDMC
+10.1111/geb.12783,leaf area per leaf
+10.1111/geb.12783,leaf N per unit leaf dry mass
+10.1111/geb.12783,max plant height
+10.1111/geb.12783,seed dry mass
+10.1111/geb.12783,SLA
+10.1111/icad.12051,breeding season
+10.1111/icad.12051,feeding method
+10.1111/icad.12051,feeding mode of adults
+10.1111/icad.12051,feeding mode of larvae
+10.1111/icad.12051,habitat needs
+10.1111/icad.12051,hunting mode
+10.1111/icad.12051,microhabitat type
+10.1111/icad.12051,overwintering stages
+10.1111/icad.12051,wing morphology
+10.1111/icad.12248,anterior eye position
+10.1111/icad.12248,aprical tooth length
+10.1111/icad.12248,clypeus length
+10.1111/icad.12248,eye size
+10.1111/icad.12248,femur length
+10.1111/icad.12248,femur width
+10.1111/icad.12248,head width
+10.1111/icad.12248,interocular distance
+10.1111/icad.12248,mandible length
+10.1111/icad.12248,mandible width
+10.1111/icad.12248,pronotum width
+10.1111/icad.12248,scape length
+10.1111/icad.12248,weber's length
+10.1111/icad.12271,generalist
+10.1111/icad.12271,habitat preference for oviposition
+10.1111/icad.12271,larval feeding habit
+10.1111/icad.12271,over-wintering grounds
+10.1111/icad.12271,size
+10.1111/icad.12271,specialist
+10.1111/icad.12271,specialization to wetlands
+10.1111/icad.12271,voltinism
+10.1111/j.0030-1299.2005.13632.x,adult persistence
+10.1111/j.0030-1299.2005.13632.x,potential for long distance dispersal
+10.1111/j.0030-1299.2005.13632.x,potential to build up a persistent soil seed bank
+10.1111/j.0906-7590.2008.05457.x,thermal tolerance
+10.1111/j.1095-8312.2007.00909.x,humerus
+10.1111/j.1095-8312.2007.00909.x,length of the femur
+10.1111/j.1095-8312.2007.00909.x,longest toe on the forelimb
+10.1111/j.1095-8312.2007.00909.x,longest toe on the hindlimb
+10.1111/j.1095-8312.2007.00909.x,metacarpus on the forelimb
+10.1111/j.1095-8312.2007.00909.x,metatarsus on the hindlimb
+10.1111/j.1095-8312.2007.00909.x,radius
+10.1111/j.1095-8312.2007.00909.x,snout-vent length
+10.1111/j.1095-8312.2007.00909.x,tibia
+10.1111/j.1095-8312.2010.01569.x,brown mark patterns lateral on stripes
+10.1111/j.1095-8312.2010.01569.x,distribution of black setae on the abdominal sternites
+10.1111/j.1095-8312.2010.01569.x,number of black setae on every side of the pronotum
+10.1111/j.1095-8312.2010.01569.x,presence of black setae on the abdominal sternites
+10.1111/j.1095-8312.2010.01569.x,shape of brown mark on genae
+10.1111/j.1095-8649.2010.02640.x,number of bony lateral plates
+10.1111/j.1365-2427.1994.tb01754.x,potential no. of descendants per reproductive cycle
+10.1111/j.1365-2427.1994.tb01754.x,potential no. of reproductive cycles per individual
+10.1111/j.1365-2427.1994.tb01754.x,potential size
+10.1111/j.1365-2427.1994.tb01754.x,reproductive period
+10.1111/j.1365-2427.1994.tb01754.x,reproductive technique
+10.1111/j.1365-2427.1994.tb01755.x,# of reproductive cycles per individual
+10.1111/j.1365-2427.1994.tb01755.x,# of reproductive cycles per year
+10.1111/j.1365-2427.1994.tb01755.x,attachment to soil or substrate
+10.1111/j.1365-2427.1994.tb01755.x,body flexibility
+10.1111/j.1365-2427.1994.tb01755.x,body form
+10.1111/j.1365-2427.1994.tb01755.x,diet
+10.1111/j.1365-2427.1994.tb01755.x,distance travelled with current or distance travelled against current
+10.1111/j.1365-2427.1994.tb01755.x,parental care
+10.1111/j.1365-2427.1994.tb01755.x,potential # of descendants per reproductive cycle
+10.1111/j.1365-2427.1994.tb01755.x,potential for regeneration of an individual
+10.1111/j.1365-2427.1994.tb01755.x,potential size
+10.1111/j.1365-2427.1994.tb01755.x,reproductive mode
+10.1111/j.1365-2427.1994.tb01755.x,reproductive period
+10.1111/j.1365-2427.1994.tb01755.x,resistant life stages
+10.1111/j.1365-2427.1994.tb01755.x,respiration
+10.1111/j.1365-2427.1994.tb01755.x,tolerance to variation in humidity
+10.1111/j.1365-2427.1994.tb01755.x,variability of habitat use
+10.1111/j.1365-2427.1994.tb01756.x,attachment
+10.1111/j.1365-2427.1994.tb01756.x,body flexibility
+10.1111/j.1365-2427.1994.tb01756.x,body form
+10.1111/j.1365-2427.1994.tb01756.x,cycles per individual
+10.1111/j.1365-2427.1994.tb01756.x,cycles per year
+10.1111/j.1365-2427.1994.tb01756.x,descendants per cycle
+10.1111/j.1365-2427.1994.tb01756.x,diet
+10.1111/j.1365-2427.1994.tb01756.x,distance moved with current
+10.1111/j.1365-2427.1994.tb01756.x,distanced moved against current
+10.1111/j.1365-2427.1994.tb01756.x,feeding characteristics
+10.1111/j.1365-2427.1994.tb01756.x,general mobility
+10.1111/j.1365-2427.1994.tb01756.x,humidity tolerance
+10.1111/j.1365-2427.1994.tb01756.x,insect adult longevity
+10.1111/j.1365-2427.1994.tb01756.x,larval longevity
+10.1111/j.1365-2427.1994.tb01756.x,parental care
+10.1111/j.1365-2427.1994.tb01756.x,regeneration potential
+10.1111/j.1365-2427.1994.tb01756.x,reproductive period
+10.1111/j.1365-2427.1994.tb01756.x,reproductive technique
+10.1111/j.1365-2427.1994.tb01756.x,resistance stages
+10.1111/j.1365-2427.1994.tb01756.x,size
+10.1111/j.1365-2427.1994.tb01756.x,total longevity
+10.1111/j.1365-2427.2007.01736.x,hydraulic preference
+10.1111/j.1365-2427.2007.01736.x,oxygen tolerance
+10.1111/j.1365-2427.2007.01736.x,thermal tolerance
+10.1111/j.1365-2427.2009.02220.x,life history strategy
+10.1111/j.1365-2427.2009.02220.x,spawning habitat preference
+10.1111/j.1365-2427.2009.02220.x,spawning period
+10.1111/j.1365-2427.2009.02220.x,trophic structure placement
+10.1111/j.1365-2427.2009.02220.x,vertical habitat use
+10.1111/j.1365-2435.2009.01614.x,dry mass
+10.1111/j.1365-2435.2009.01614.x,leaf area
+10.1111/j.1365-2435.2009.01614.x,leaf water content
+10.1111/j.1365-2435.2009.01614.x,SLA
+10.1111/j.1365-2435.2010.01727.x,LDMC
+10.1111/j.1365-2435.2010.01727.x,leaf carbon concentration
+10.1111/j.1365-2435.2010.01727.x,leaf N concentration
+10.1111/j.1365-2435.2010.01727.x,max vegetative height
+10.1111/j.1365-2435.2010.01727.x,SLA
+10.1111/j.1365-2435.2012.02057.x,coricosterone stress responsiveness
+10.1111/j.1365-2486.2007.01483.x,germination rate
+10.1111/j.1365-2486.2007.01483.x,seedling growth rate
+10.1111/j.1365-2656.2006.01068.x,dispersal ability
+10.1111/j.1365-2656.2006.01068.x,dissemination potential
+10.1111/j.1365-2656.2006.01068.x,function feeding group
+10.1111/j.1365-2656.2008.01443.x,average body size of females
+10.1111/j.1365-2656.2008.01443.x,ballooning propensity
+10.1111/j.1365-2656.2008.01443.x,flight ability
+10.1111/j.1365-2656.2008.01443.x,moisture use
+10.1111/j.1365-2656.2008.01443.x,niche breadth
+10.1111/j.1365-2656.2008.01443.x,shading preference
+10.1111/j.1365-2656.2010.01660.x,active dispersal
+10.1111/j.1365-2656.2010.01660.x,adult longevity
+10.1111/j.1365-2656.2010.01660.x,asexual reproduction
+10.1111/j.1365-2656.2010.01660.x,clutch size
+10.1111/j.1365-2656.2010.01660.x,diet
+10.1111/j.1365-2656.2010.01660.x,hermaphroditism
+10.1111/j.1365-2656.2010.01660.x,life history strategy
+10.1111/j.1365-2656.2010.01660.x,rate of juvenile development
+10.1111/j.1365-2656.2010.01660.x,synchronization of adult mergernce
+10.1111/j.1365-2656.2010.01660.x,synchronization of juvenile development
+10.1111/j.1365-2656.2010.01660.x,type of oviposition
+10.1111/j.1365-2656.2010.01660.x,voltinism
+10.1111/j.1365-2656.2010.01759.x,body shape
+10.1111/j.1365-2656.2010.01759.x,colour pattern
+10.1111/j.1365-2656.2010.01759.x,spectral reflectance
+10.1111/j.1365-2656.2012.02015.x,adult survival
+10.1111/j.1365-2656.2012.02015.x,nest dispersal
+10.1111/j.1365-2656.2012.02015.x,reproductive skipping
+10.1111/j.1365-2656.2012.02015.x,transient probability
+10.1111/j.1365-2664.2006.001175.x,ballooning propensity
+10.1111/j.1365-2664.2006.001175.x,body size
+10.1111/j.1365-2664.2006.001175.x,diurnality
+10.1111/j.1365-2664.2006.001175.x,nocturnality
+10.1111/j.1365-2664.2006.001175.x,seasonal activity
+10.1111/j.1365-2664.2006.001175.x,size
+10.1111/j.1365-2664.2006.001175.x,time to maturity
+10.1111/j.1365-2664.2009.01714.x,canopy height
+10.1111/j.1365-2664.2009.01714.x,canopy structure
+10.1111/j.1365-2664.2009.01714.x,dispersal type
+10.1111/j.1365-2664.2009.01714.x,flowering phenology
+10.1111/j.1365-2664.2009.01714.x,growth form
+10.1111/j.1365-2664.2009.01714.x,leaf persistence
+10.1111/j.1365-2664.2009.01714.x,life form
+10.1111/j.1365-2664.2009.01714.x,life history
+10.1111/j.1365-2664.2009.01714.x,reproductive mode
+10.1111/j.1365-2664.2009.01714.x,seed shape
+10.1111/j.1365-2664.2009.01714.x,seed weight
+10.1111/j.1365-2664.2009.01714.x,type of clonality
+10.1111/j.1365-2664.2011.02039.x,diploid
+10.1111/j.1365-2664.2011.02039.x,existence of a mechanism of long-distance dispersal
+10.1111/j.1365-2664.2011.02039.x,life cycle
+10.1111/j.1365-2664.2011.02039.x,mitospore
+10.1111/j.1365-2664.2011.02039.x,pluricellular
+10.1111/j.1365-2664.2011.02039.x,pigmentation
+10.1111/j.1365-2664.2011.02039.x,shape
+10.1111/j.1365-2664.2011.02039.x,size
+10.1111/j.1365-2664.2012.02211.x,conservation status
+10.1111/j.1365-2664.2012.02211.x,feeding method
+10.1111/j.1365-2664.2012.02211.x,mobility
+10.1111/j.1365-2699.2007.01824.x,body size
+10.1111/j.1365-2699.2007.01824.x,colour
+10.1111/j.1365-2699.2007.01824.x,flank-stripe pattern
+10.1111/j.1365-2699.2010.02433.x,buds
+10.1111/j.1365-2699.2010.02433.x,hair density
+10.1111/j.1365-2699.2010.02433.x,hydathodes
+10.1111/j.1365-2699.2010.02433.x,indusium
+10.1111/j.1365-2699.2010.02433.x,laminar dissection
+10.1111/j.1365-2699.2010.02433.x,laminar morphology
+10.1111/j.1365-2699.2010.02433.x,laminar thickness
+10.1111/j.1365-2699.2010.02433.x,rhizome type
+10.1111/j.1365-2699.2010.02433.x,scale density
+10.1111/j.1365-2699.2011.02502.x,body size
+10.1111/j.1365-2699.2011.02502.x,foraging behaviour
+10.1111/j.1365-2699.2011.02502.x,stratum of hunting
+10.1111/j.1365-2699.2011.02502.x,trophic guild
+10.1111/j.1365-2745.2005.01046.x,dispersal method
+10.1111/j.1365-2745.2005.01046.x,fruit size
+10.1111/j.1365-2745.2005.01046.x,fruit type
+10.1111/j.1365-2745.2005.01046.x,leaf size
+10.1111/j.1365-2745.2005.01046.x,re-sprout
+10.1111/j.1365-2745.2005.01046.x,seed size
+10.1111/j.1365-2745.2005.01046.x,shade tolerance
+10.1111/j.1365-2745.2005.01046.x,wood density
+10.1111/j.1365-2745.2009.01610.x,canopy height
+10.1111/j.1365-2745.2009.01610.x,canopy structure
+10.1111/j.1365-2745.2009.01610.x,clonality
+10.1111/j.1365-2745.2009.01610.x,endozoochory
+10.1111/j.1365-2745.2009.01610.x,epizoochory
+10.1111/j.1365-2745.2009.01610.x,flowering period
+10.1111/j.1365-2745.2009.01610.x,flowering start
+10.1111/j.1365-2745.2009.01610.x,grass
+10.1111/j.1365-2745.2009.01610.x,individual leaf area
+10.1111/j.1365-2745.2009.01610.x,lateral spread
+10.1111/j.1365-2745.2009.01610.x,LDMC
+10.1111/j.1365-2745.2009.01610.x,leaf phenology
+10.1111/j.1365-2745.2009.01610.x,leaf thickness
+10.1111/j.1365-2745.2009.01610.x,legume
+10.1111/j.1365-2745.2009.01610.x,life form
+10.1111/j.1365-2745.2009.01610.x,life history
+10.1111/j.1365-2745.2009.01610.x,mycorrhizas
+10.1111/j.1365-2745.2009.01610.x,ornithochorty
+10.1111/j.1365-2745.2009.01610.x,seed bank persistence
+10.1111/j.1365-2745.2009.01610.x,seed dormancy breaking
+10.1111/j.1365-2745.2009.01610.x,seed terminal velocity
+10.1111/j.1365-2745.2009.01610.x,seed weight
+10.1111/j.1365-2745.2009.01610.x,SLA
+10.1111/j.1365-2745.2010.01650.x,clonality
+10.1111/j.1365-2745.2010.01650.x,dispersal ability
+10.1111/j.1365-2745.2010.01650.x,growth form
+10.1111/j.1365-2745.2010.01650.x,life history strategy
+10.1111/j.1365-2745.2010.01650.x,longevity
+10.1111/j.1365-2745.2010.01650.x,plant size
+10.1111/j.1365-2745.2010.01650.x,SLA
+10.1111/j.1365-2745.2010.01651.x,LDMC
+10.1111/j.1365-2745.2010.01651.x,leaf N content
+10.1111/j.1365-2745.2010.01651.x,max veg height
+10.1111/j.1365-2745.2010.01687.x,height
+10.1111/j.1365-2745.2010.01687.x,LDMC
+10.1111/j.1365-2745.2010.01687.x,SLA
+10.1111/j.1365-2745.2010.01743.x,hairy leaves
+10.1111/j.1365-2745.2010.01743.x,life cycle
+10.1111/j.1365-2745.2010.01743.x,pollination
+10.1111/j.1365-2745.2010.01743.x,spikiness
+10.1111/j.1365-2745.2011.01795.x,max plant height
+10.1111/j.1365-2745.2011.01795.x,SLA
+10.1111/j.1365-2745.2011.01860.x,canopy height at maturity
+10.1111/j.1365-2745.2011.01860.x,clonal strategy
+10.1111/j.1365-2745.2011.01860.x,leaf habit of woody species
+10.1111/j.1365-2745.2011.01860.x,life form
+10.1111/j.1365-2745.2011.01860.x,life span
+10.1111/j.1365-2745.2011.01860.x,N-fixing potential of forbs
+10.1111/j.1365-2745.2011.01860.x,origin
+10.1111/j.1365-2745.2011.01860.x,photosynthetic pathway of graminoids
+10.1111/j.1365-2745.2011.01932.x,flowering duration
+10.1111/j.1365-2745.2011.01932.x,flowering onset
+10.1111/j.1365-2745.2011.01932.x,germination onset
+10.1111/j.1365-2745.2011.01932.x,leaf N content
+10.1111/j.1365-2745.2011.01932.x,leaf nitrogen per area
+10.1111/j.1365-2745.2011.01932.x,leaf size
+10.1111/j.1365-2745.2011.01932.x,seed mass of the dispersule
+10.1111/j.1365-2745.2011.01932.x,seed mass of the germinule
+10.1111/j.1365-2745.2011.01932.x,SLA
+10.1111/j.1365-2745.2011.01932.x,typical maximum canopy height
+10.1111/j.1365-2745.2011.01932.x,woodiness
+10.1111/j.1365-2745.2012.01965.x,N content
+10.1111/j.1365-2745.2012.01965.x,P content
+10.1111/j.1365-2745.2012.01965.x,thickness and tissue density
+10.1111/j.1365-2745.2012.01966.x,foliar N15 composition
+10.1111/j.1365-2745.2012.01966.x,foliar C: N ration
+10.1111/j.1365-2745.2012.01966.x,laminar thickness
+10.1111/j.1365-2745.2012.01966.x,laminar total chlorophyll
+10.1111/j.1365-2745.2012.01966.x,laminar toughness
+10.1111/j.1365-2745.2012.01966.x,leaf N concentration
+10.1111/j.1365-2745.2012.01966.x,SLA
+10.1111/j.1365-2745.2012.01966.x,laminar surface area
+10.1111/j.1365-2745.2012.01966.x,trunk xylem density
+10.1111/j.1366-9516.2005.00169.x,aggression
+10.1111/j.1366-9516.2005.00169.x,body size
+10.1111/j.1366-9516.2005.00169.x,diet
+10.1111/j.1366-9516.2005.00169.x,habitat preferences
+10.1111/j.1438-8677.2012.00684.x,mucilage production
+10.1111/j.1438-8677.2012.00684.x,seed number
+10.1111/j.1438-8677.2012.00684.x,seed size
+10.1111/j.1461-0248.2009.01307.x,body mass
+10.1111/j.1461-0248.2009.01307.x,geographical range size
+10.1111/j.1461-0248.2009.01307.x,gestation length
+10.1111/j.1461-0248.2009.01307.x,species population density
+10.1111/j.1461-0248.2009.01307.x,weaning age
+10.1111/j.1461-0248.2010.01456.x,canopy height
+10.1111/j.1461-0248.2010.01456.x,leaf area
+10.1111/j.1461-0248.2010.01456.x,leaf length
+10.1111/j.1461-0248.2010.01456.x,leaf resistance to traction
+10.1111/j.1461-0248.2010.01456.x,leaf shape
+10.1111/j.1461-0248.2010.01456.x,leaf texture
+10.1111/j.1461-0248.2010.01456.x,plant inclination
+10.1111/j.1461-0248.2010.01541.x,leaf area
+10.1111/j.1461-0248.2010.01541.x,leaf N content
+10.1111/j.1461-0248.2010.01541.x,leaf P content
+10.1111/j.1461-0248.2010.01541.x,leaf succulence
+10.1111/j.1461-0248.2010.01541.x,maximum tree height
+10.1111/j.1461-0248.2010.01541.x,seed mass
+10.1111/j.1461-0248.2010.01541.x,SLA
+10.1111/j.1461-0248.2010.01541.x,wood specific gravity
+10.1111/j.1461-0248.2012.01788.x,carapace length
+10.1111/j.1461-0248.2012.01788.x,degree of sociality
+10.1111/j.1461-0248.2012.01861.x,colony growth form
+10.1111/j.1461-0248.2012.01861.x,corallite diameter
+10.1111/j.1461-0248.2012.01861.x,depth range
+10.1111/j.1461-0248.2012.01861.x,generation time
+10.1111/j.1461-0248.2012.01861.x,growth rate
+10.1111/j.1461-0248.2012.01861.x,maximum colony size
+10.1111/j.1461-0248.2012.01861.x,reproductive mode and fecundity
+10.1111/j.1461-0248.2012.01861.x,skeletal density
+10.1111/j.1461-0248.2012.01861.x,solitary colony formation
+10.1111/j.1461-0248.2012.01861.x,symbiotic zooxanthellae associations
+10.1111/j.1466-8238.2010.00623.x,K content
+10.1111/j.1466-8238.2010.00623.x,leaf size
+10.1111/j.1466-8238.2010.00623.x,leaf toughness
+10.1111/j.1466-8238.2010.00623.x,P content
+10.1111/j.1466-8238.2010.00623.x,SLA
+10.1111/j.1466-8238.2010.00623.x,tissue concentrations of N
+10.1111/j.1466-8238.2010.00623.x,water and total phenols
+10.1111/j.1466-8238.2010.00641.x,leaf size
+10.1111/j.1466-8238.2010.00641.x,max height at maturity
+10.1111/j.1466-8238.2010.00641.x,seed size
+10.1111/j.1466-8238.2010.00641.x,wood density
+10.1111/j.1466-8238.2011.00719.x,breeding activity
+10.1111/j.1466-8238.2011.00719.x,breeding type
+10.1111/j.1466-8238.2011.00719.x,broad habitat preference
+10.1111/j.1466-8238.2011.00719.x,daily activity
+10.1111/j.1466-8238.2011.00719.x,eco-morphology
+10.1111/j.1466-8238.2011.00719.x,reproductive mode
+10.1111/j.1466-8238.2011.00719.x,sexual size dimorphism
+10.1111/j.1466-8238.2011.00719.x,snout-vent length
+10.1111/j.1466-8238.2012.00790.x,canopy height
+10.1111/j.1466-8238.2012.00790.x,LDMC
+10.1111/j.1466-8238.2012.00790.x,SLA
+10.1111/j.1469-1795.2012.00528.x,body size
+10.1111/j.1469-1795.2012.00528.x,diet
+10.1111/j.1469-1795.2012.00528.x,foraging method
+10.1111/j.1469-1795.2012.00528.x,foraging substrate
+10.1111/j.1469-8137.2006.01811.x,pollination type
+10.1111/j.1472-4642.2007.00381.x,cold stratification required
+10.1111/j.1472-4642.2007.00381.x,nonfamilial invasive
+10.1111/j.1472-4642.2007.00381.x,congeneric invasive
+10.1111/j.1472-4642.2007.00381.x,cosexual
+10.1111/j.1472-4642.2007.00381.x,dioecious
+10.1111/j.1472-4642.2007.00381.x,fleshy fruit
+10.1111/j.1472-4642.2007.00381.x,flowering season
+10.1111/j.1472-4642.2007.00381.x,fruit maturity
+10.1111/j.1472-4642.2007.00381.x,fruit size
+10.1111/j.1472-4642.2007.00381.x,growth form
+10.1111/j.1472-4642.2007.00381.x,growth rate
+10.1111/j.1472-4642.2007.00381.x,hardiness zone max
+10.1111/j.1472-4642.2007.00381.x,hardiness zone min
+10.1111/j.1472-4642.2007.00381.x,invasive elsewhere
+10.1111/j.1472-4642.2007.00381.x,known hybrids
+10.1111/j.1472-4642.2007.00381.x,native latitudinal range
+10.1111/j.1472-4642.2007.00381.x,native longitudinal range
+10.1111/j.1472-4642.2007.00381.x,native to north America
+10.1111/j.1472-4642.2007.00381.x,naturalized elsewhere
+10.1111/j.1472-4642.2007.00381.x,scarification required
+10.1111/j.1472-4642.2007.00381.x,seed dispersal
+10.1111/j.1472-4642.2007.00381.x,seed size
+10.1111/j.1472-4642.2007.00381.x,seeds per fruit
+10.1111/j.1472-4642.2007.00381.x,shade tolerance
+10.1111/j.1472-4642.2007.00381.x,Soil moisture
+10.1111/j.1472-4642.2007.00381.x,soil pH
+10.1111/j.1472-4642.2007.00381.x,susceptible to pathogens
+10.1111/j.1472-4642.2007.00381.x,susceptible to pests
+10.1111/j.1472-4642.2007.00381.x,vegetative reproduction
+10.1111/j.1472-4642.2009.00599.x,ash
+10.1111/j.1472-4642.2009.00599.x,Ca%
+10.1111/j.1472-4642.2009.00599.x,Cu
+10.1111/j.1472-4642.2009.00599.x,dry pulp:seed mass
+10.1111/j.1472-4642.2009.00599.x,dry weight ratios of pulp to seed
+10.1111/j.1472-4642.2009.00599.x,fat
+10.1111/j.1472-4642.2009.00599.x,Fe
+10.1111/j.1472-4642.2009.00599.x,fruit length
+10.1111/j.1472-4642.2009.00599.x,fruit length:width
+10.1111/j.1472-4642.2009.00599.x,fruit mass
+10.1111/j.1472-4642.2009.00599.x,fruit width
+10.1111/j.1472-4642.2009.00599.x,K content
+10.1111/j.1472-4642.2009.00599.x,Mg%
+10.1111/j.1472-4642.2009.00599.x,mineral traits
+10.1111/j.1472-4642.2009.00599.x,Mn
+10.1111/j.1472-4642.2009.00599.x,moisture
+10.1111/j.1472-4642.2009.00599.x,N content
+10.1111/j.1472-4642.2009.00599.x,P content
+10.1111/j.1472-4642.2009.00599.x,pulp dry weight
+10.1111/j.1472-4642.2009.00599.x,pulp macronutrient
+10.1111/j.1472-4642.2009.00599.x,pulp wet weight
+10.1111/j.1472-4642.2009.00599.x,relative yield
+10.1111/j.1472-4642.2009.00599.x,seed dry weight
+10.1111/j.1472-4642.2009.00599.x,seed length
+10.1111/j.1472-4642.2009.00599.x,seed length to width ratio
+10.1111/j.1472-4642.2009.00599.x,seed length:width
+10.1111/j.1472-4642.2009.00599.x,seed mass
+10.1111/j.1472-4642.2009.00599.x,seed number
+10.1111/j.1472-4642.2009.00599.x,seed wet weight
+10.1111/j.1472-4642.2009.00599.x,seed width
+10.1111/j.1472-4642.2009.00599.x,sugar profile
+10.1111/j.1472-4642.2009.00599.x,total sugars
+10.1111/j.1472-4642.2009.00599.x,wet pulp: seed mass
+10.1111/j.1472-4642.2009.00599.x,wet weight ratio of pulp to seed
+10.1111/j.1472-4642.2009.00599.x,whole fruit to width ratio
+10.1111/j.1472-4642.2009.00599.x,whole fruit weight
+10.1111/j.1472-4642.2009.00599.x,Zc
+10.1111/j.1558-5646.2010.01131.x,growth
+10.1111/j.1558-5646.2010.01131.x,leaf shape
+10.1111/j.1558-5646.2010.01131.x,leaf size
+10.1111/j.1558-5646.2010.01131.x,photosynthetic rate
+10.1111/j.1558-5646.2010.01131.x,SLA
+10.1111/j.1558-5646.2010.01131.x,stomatal density
+10.1111/j.1600-0587.2012.00011.x,leaf area
+10.1111/j.1600-0587.2012.00011.x,leaf N
+10.1111/j.1600-0587.2012.00011.x,leaf phosphorus
+10.1111/j.1600-0587.2012.00011.x,max height
+10.1111/j.1600-0587.2012.00011.x,SLA
+10.1111/j.1600-0587.2012.00011.x,wood density
+10.1111/j.1600-0587.2013.00122.x,dispersal mechanism
+10.1111/j.1600-0587.2013.00237.x,LDMC
+10.1111/j.1600-0587.2013.00237.x,leaf N content
+10.1111/j.1600-0587.2013.00237.x,seed mass
+10.1111/j.1600-0587.2013.00237.x,SLA
+10.1111/j.1600-0587.2013.00237.x,vegetative height
+10.1111/j.1600-0706.2010.18411.x,LDMC
+10.1111/j.1600-0706.2010.18411.x,leaf angle
+10.1111/j.1600-0706.2010.18411.x,life form
+10.1111/j.1600-0706.2010.18411.x,N-fixation capacity
+10.1111/j.1600-0706.2010.18411.x,photosynthetic pathway
+10.1111/j.1600-0706.2010.18411.x,presence of a tap root
+10.1111/j.1600-0706.2010.18411.x,SLA
+10.1111/j.1600-0706.2012.20261.x,life span
+10.1111/j.1600-0706.2012.20261.x,seed dispersal mode
+10.1111/j.1600-0706.2012.20261.x,seed mass
+10.1111/j.1600-0706.2012.20261.x,SLA
+10.1111/j.1600-0706.2012.20261.x,start of flowering
+10.1111/j.1600-0706.2012.20261.x,vegetative height
+10.1111/j.1600-0706.2013.00979.x,flowering start
+10.1111/j.1600-0706.2013.00979.x,LDMC
+10.1111/j.1600-0706.2013.00979.x,pollen vector
+10.1111/j.1600-0706.2013.00979.x,seed longevity
+10.1111/j.1600-0706.2013.00979.x,seed mass
+10.1111/j.1600-0706.2013.00979.x,SLA
+10.1111/j.1600-0706.2013.00979.x,terminal velocity
+10.1111/j.1600-0706.2013.00979.x,veg height
+10.1111/j.1600-0706.2013.00979.x,vegetative spread
+10.1111/j.1654-1103.2009.01160.x,dispersal type
+10.1111/j.1654-1103.2009.01160.x,ellenburg indicator values
+10.1111/j.1654-1103.2009.01160.x,leaf anatomy
+10.1111/j.1654-1103.2009.01160.x,leaf persistence
+10.1111/j.1654-1103.2009.01160.x,life form
+10.1111/j.1654-1103.2009.01160.x,life span
+10.1111/j.1654-1103.2009.01160.x,life strategy
+10.1111/j.1654-1103.2009.01160.x,number of geographical zones
+10.1111/j.1654-1103.2009.01160.x,pollination mode
+10.1111/j.1654-1103.2009.01160.x,reproductive mode
+10.1111/j.1654-1103.2009.01160.x,seed mass
+10.1111/j.1654-1103.2011.01384.x,leaf mass:twig mass
+10.1111/j.1654-1103.2011.01384.x,mature plant height
+10.1111/j.1654-1103.2011.01384.x,SLA
+10.1111/j.1654-1103.2011.01384.x,total leaf area
+10.1111/j.1654-1103.2011.01384.x,total leaf area of a twig:twig cross-sectional area
+10.1111/j.1654-1103.2012.01428.x,flower size
+10.1111/j.1654-1103.2012.01428.x,fruit size
+10.1111/j.1654-1103.2012.01428.x,fruit type
+10.1111/j.1654-1103.2012.01428.x,growth form
+10.1111/j.1654-1103.2012.01428.x,leaf size
+10.1111/j.1654-1103.2012.01428.x,pollination
+10.1111/j.1654-1103.2012.01428.x,sexual system
+10.1111/j.1654-1103.2012.01476.x,dispersal method
+10.1111/j.1654-1103.2012.01476.x,life form
+10.1111/j.1654-1103.2012.01476.x,mode of seed storage
+10.1111/j.1654-1103.2012.01476.x,regenerative response to fire
+10.1111/j.1654-1103.2012.01476.x,seed size
+10.1111/jav.01745,prey agility
+10.1111/jav.01745,reversed sexual dimorphism
+10.1111/jav.01745,structural complexity of hunting habitat
+10.1111/jav.01745,territoriality
+10.1111/jav.01745,territory size
+10.1111/jbi.12284,quantity of longitudinal cuticle furrows
+10.1111/jbi.12284,antero posterior pigmentation gradient
+10.1111/jbi.12284,complexity of muscle organisation
+10.1111/jbi.12284,complexity of seminal vesicles
+10.1111/jbi.12284,complexity of typhlosole
+10.1111/jbi.12284,degree of flattening of the posterior body
+10.1111/jbi.12284,dorsovental position of setae
+10.1111/jbi.12284,dorsoventral pigmentation gradient
+10.1111/jbi.12284,epidermis smoothness
+10.1111/jbi.12284,epidermis thickness
+10.1111/jbi.12284,Flattening of clitellum
+10.1111/jbi.12284,max body mass
+10.1111/jbi.12284,max body width
+10.1111/jbi.12284,maximal body length
+10.1111/jbi.12284,pigmentation
+10.1111/jbi.12284,position of clitellum
+10.1111/jbi.12284,position of crop
+10.1111/jbi.12284,position of female pores
+10.1111/jbi.12284,position of first dorsal pore
+10.1111/jbi.12284,position of male pores
+10.1111/jbi.12284,position of ovary
+10.1111/jbi.12284,position of seminal vesicles
+10.1111/jbi.12284,position of the heart
+10.1111/jbi.12284,position of typhlosole
+10.1111/jbi.12284,presence of calciferous gland
+10.1111/jbi.12284,puberculum presence
+10.1111/jbi.12284,quantity of mucus
+10.1111/jbi.12284,septum thickness
+10.1111/jbi.12284,Size of clitellum
+10.1111/jbi.12284,size of male pores
+10.1111/jbi.12284,size of nephridiopores
+10.1111/jbi.12284,size of the heart
+10.1111/jbi.12284,visibility of dorsal pore
+10.1111/jbi.12574,diet
+10.1111/jbi.12574,max body size
+10.1111/jbi.12574,schooling behaviour
+10.1111/jbi.12574,type of raft habitat generalization
+10.1111/jbi.12574,using rafts
+10.1111/jbi.12574,water column position
+10.1111/jbi.12639,DBH
+10.1111/jbi.12823,dietary specialization
+10.1111/jbi.12946,age at maturity
+10.1111/jbi.12946,dry period survival
+10.1111/jbi.12946,food preferences
+10.1111/jbi.12946,habitat
+10.1111/jbi.12946,humidity tolerance
+10.1111/jbi.12946,inundation tolerance
+10.1111/jbi.12946,main reproduction periods
+10.1111/jbi.12946,max shell size
+10.1111/jbi.12946,microhabitat association
+10.1111/jbi.12946,number of offspring
+10.1111/jbi.12946,reproductive mode
+10.1111/jbi.12946,shell shape
+10.1111/jbi.12970,reproductive strategy
+10.1111/jbi.13108,mean family age
+10.1111/jbi.13129,seed mass
+10.1111/jbi.13129,SLA
+10.1111/jbi.13129,vegetative height
+10.1111/jbi.13171,leaf N concentration
+10.1111/jbi.13171,leaf P concentration
+10.1111/jbi.13171,max plant height
+10.1111/jbi.13171,seed mass
+10.1111/jbi.13171,SLA
+10.1111/jbi.13171,wood density
+10.1111/jbi.13457,body mass
+10.1111/jbi.13457,functional feeding groups
+10.1111/jbi.13457,habitat
+10.1111/jeb.12421,body size
+10.1111/jeb.12421,dorsal coloration
+10.1111/jeb.12421,escape behaviour
+10.1111/jeb.12845,corolla aperture
+10.1111/jeb.12845,corolla area
+10.1111/jeb.12845,corolla diameter
+10.1111/jeb.12845,flower colour
+10.1111/jeb.12845,flower depth
+10.1111/jeb.12845,petal length
+10.1111/jeb.12845,petal width
+10.1111/jeb.12845,plant height
+10.1111/jeb.12845,SLA
+10.1111/jeb.13306,body size
+10.1111/jeb.13306,diurnality
+10.1111/jfb.12378,diet
+10.1111/jfb.12378,maturity degree
+10.1111/jfb.12378,sex
+10.1111/jvs.12058,LDMC
+10.1111/jvs.12058,seed mass
+10.1111/jvs.12058,SLA
+10.1111/jvs.12151,broad-leaf
+10.1111/jvs.12151,ellenburg indicators for light
+10.1111/jvs.12151,ellenburg indicators for N
+10.1111/jvs.12151,first month of flowering
+10.1111/jvs.12151,flowering duration
+10.1111/jvs.12151,grass
+10.1111/jvs.12151,life form classification
+10.1111/jvs.12151,max weed height
+10.1111/jvs.12151,seed weight
+10.1111/jvs.12245,acidic tolerance
+10.1111/jvs.12245,light requirement
+10.1111/jvs.12245,root branching
+10.1111/jvs.12245,root system depth
+10.1111/jvs.12245,seed dispersal vector
+10.1111/jvs.12245,seed persistence
+10.1111/jvs.12245,seed weight
+10.1111/jvs.12245,water preferences
+10.1111/jvs.12288,dispersal method
+10.1111/jvs.12288,establishment strategy
+10.1111/jvs.12288,latex
+10.1111/jvs.12288,leaf area
+10.1111/jvs.12288,leaf aspect ratio
+10.1111/jvs.12288,max plant height
+10.1111/jvs.12288,resprouting capacity after trunk breakage
+10.1111/jvs.12288,seasonal leaf shedding
+10.1111/jvs.12288,seeds per fruit
+10.1111/jvs.12465,average seed mass
+10.1111/jvs.12465,cone serotiny
+10.1111/jvs.12465,drought tolerance
+10.1111/jvs.12465,fire resistance
+10.1111/jvs.12465,minimum reproductive age
+10.1111/jvs.12465,shade tolerance
+10.1111/jvs.12555,LDMC
+10.1111/jvs.12555,leaf mass:area ratio
+10.1111/jvs.12555,N:P ratio
+10.1111/jvs.12555,plant height
+10.1111/jvs.12555,specific root length
+10.1111/jvs.12615,growth form
+10.1111/jvs.12615,nutrient acquisition
+10.1111/jvs.12615,pollination
+10.1111/jvs.12615,regeneration strategies
+10.1111/jvs.12615,seed dispersal
+10.1111/mec.13746,body mass
+10.1111/mec.13746,body shape
+10.1111/mec.13746,number of armour plates
+10.1111/mec.13746,standard length
+10.1111/mec.13985,body size
+10.1111/mec.13985,ovipositor length
+10.1111/mec.14718,dietary specialization
+10.1111/mec.14872,body mass
+10.1111/mec.14872,feeding method
+10.1111/nph.14219,leaf concentrations of Cd
+10.1111/nph.14219,leaf concentrations of Pb
+10.1111/nph.14219,leaf concentrations of Zn
+10.1111/nph.15304,isoprene gas emission
+10.1111/oik.02100,bioturbation
+10.1111/oik.02100,body size
+10.1111/oik.02100,depth
+10.1111/oik.02100,feeding method
+10.1111/oik.02100,longevity
+10.1111/oik.04507,body size
+10.1111/oik.04507,brood parasitism
+10.1111/oik.04507,diet breadth
+10.1111/oik.04507,nesting placement
+10.1111/oik.04507,sociality
+10.1111/oik.04507,tongue length
+10.1111/oik.04561,beak shape
+10.1111/oik.04561,body mass
+10.1111/oik.04561,tail length
+10.1111/oik.04561,tarsus
+10.1111/oik.04561,wing length
+10.1111/oik.04561,wing shape
+10.1111/oik.05228,apparent consumption rate
+10.1111/oik.05228,body mass
+10.1111/oik.05228,effective consumption rate
+10.1111/oik.05228,energy expenditure proxies
+10.1111/oik.05228,locomotion velocity
+10.1111/oik.05228,mandible thickness
+10.1111/oik.05228,mandible incisor process curvature
+10.1111/oik.05228,percentage of time
+10.1111/oik.05228,pleopod beat rate
+10.1111/oik.05228,mass-specific metabolism in activity
+10.1111/oik.05650,diet
+10.1111/plb.12566,diameter of cone
+10.1111/plb.12566,number of viable seeds within a cone
+10.1111/plb.12566,percentage of cone mass corresponding to pulp
+10.1111/plb.12566,pulp mass per individual seed
+10.1111/plb.12566,seed size
+10.1111/plb.12566,total seed mass
+10.1111/wre.12126,air-dried 1000 seed weight
+10.1111/wre.12126,base temperature for germination
+10.1111/wre.12126,chilling requirement to break primary dormancy
+10.1111/wre.12126,duration of flowering stage
+10.1111/wre.12126,duration of juvenile stage
+10.1111/wre.12126,duration of seed maturation stage
+10.1111/wre.12126,emergence calendar
+10.1111/wre.12126,half life of seedbank
+10.1111/wre.12126,loss to weed competition
+10.1111/wre.12126,light requirement for germination
+10.1111/wre.12126,max plant height
+10.1111/wre.12126,percent of emergence per year from seedbank
+10.1111/wre.12126,percent of total seed weight made up of non-investing structures
+10.1111/wre.12126,seed production in relation to mature plant biomass
+10.1111/wre.12126,soil depth for emergence
+10.1126/science.aac7978,body mass
+10.1126/science.aac7978,diet
+10.1126/science.aac7978,gut type
+10.1126/science.aac7978,herd size
+10.1126/science.aac7978,water dependence
+10.1139/cjfas-2015-0190,age at maturation
+10.1139/cjfas-2015-0190,body size
+10.1139/cjfas-2015-0190,size at maturation
+10.1139/cjfr-2017-0139,crown radius
+10.1139/cjfr-2017-0139,DBH
+10.1139/cjfr-2017-0139,height to crown base
+10.1139/cjfr-2017-0139,stump diameter
+10.1139/cjfr-2017-0139,total height
+10.1139/cjz-2012-0236,reproductive mode
+10.1139/gen-2018-0039,flowering phenology
+10.1139/gen-2018-0039,life forms
+10.1139/gen-2018-0039,main dispersal modes
+10.1139/gen-2018-0039,max plant height
+10.1139/gen-2018-0039,pollination modes
+10.1139/gen-2018-0039,sexual system
+10.1163/15685381-00003131,gape width
+10.1163/15685381-00003131,prey breadth
+10.1163/15685381-00003131,snout-vent length
+10.11646/zootaxa.2556.1.3,morphometric measures
+10.1186/1471-2148-10-166,relative body size
+10.1186/1471-2148-10-166,transparency
+10.1186/1471-2148-13-132,body shape
+10.1186/1471-2148-13-132,diet
+10.1186/1471-2148-13-132,foraging method
+10.1186/1471-2148-14-156,condition index
+10.1186/1471-2148-14-156,growth
+10.1186/1471-2148-14-156,mortality
+10.1186/1471-2148-14-156,reproductive maturity
+10.1186/1471-2148-14-156,salinity tolerance
+10.1186/1471-2148-14-156,shell strength
+10.1186/1471-2148-8-68,body size
+10.1186/1472-6785-12-21,fire resistance
+10.1186/s40462-017-0111-3,activity level
+10.1371/journal.pone.0061866,microhabitat
+10.1371/journal.pone.0061866,morphological syndrome
+10.1371/journal.pone.0081739,body size
+10.1371/journal.pone.0081739,exit temporarily
+10.1371/journal.pone.0081739,feeding method
+10.1371/journal.pone.0081739,habitat
+10.1371/journal.pone.0081739,microhabitat use
+10.1371/journal.pone.0081739,number of aquatic stages
+10.1371/journal.pone.0081739,pH tolerance
+10.1371/journal.pone.0081739,reproductive mode
+10.1371/journal.pone.0081739,respiration type
+10.1371/journal.pone.0081739,salinity tolerance
+10.1371/journal.pone.0081739,thermal tolerance
+10.1371/journal.pone.0081739,trophic guild
+10.1371/journal.pone.0081739,voltinism
+10.1371/journal.pone.0093237,age at maturation
+10.1371/journal.pone.0093237,fecundity
+10.1371/journal.pone.0093237,foraging method
+10.1371/journal.pone.0093237,longevity
+10.1371/journal.pone.0093237,max length
+10.1371/journal.pone.0093237,native or non-native
+10.1371/journal.pone.0093237,non-feeding water column position
+10.1371/journal.pone.0093237,spawning mechanism
+10.1371/journal.pone.0093237,spawning time
+10.1371/journal.pone.0107883,body mass
+10.1371/journal.pone.0107883,farmland breeding habitat
+10.1371/journal.pone.0107883,flight initiation distance
+10.1371/journal.pone.0107883,migratory behavior
+10.1371/journal.pone.0107883,pole-most latitudinal range
+10.1371/journal.pone.0111227,body size
+10.1371/journal.pone.0111227,dispersal strategy
+10.1371/journal.pone.0114290,body size:mass ratio
+10.1371/journal.pone.0114290,C concentration
+10.1371/journal.pone.0114290,isotope ratios
+10.1371/journal.pone.0114290,N concentration
+10.1371/journal.pone.0114290,P concentration
+10.1371/journal.pone.0130151,basal area
+10.1371/journal.pone.0130151,crown width
+10.1371/journal.pone.0130151,diameter at breast height
+10.1371/journal.pone.0130151,leaf area
+10.1371/journal.pone.0130151,leaf C content
+10.1371/journal.pone.0130151,leaf N
+10.1371/journal.pone.0130151,leaf P
+10.1371/journal.pone.0130151,leaf thickness
+10.1371/journal.pone.0130151,leaf vein density
+10.1371/journal.pone.0130151,plant height
+10.1371/journal.pone.0130151,SLA
+10.1371/journal.pone.0130151,wood density
+10.1371/journal.pone.0131630,floating leaf
+10.1371/journal.pone.0131630,flowering duration
+10.1371/journal.pone.0131630,lamina thickness
+10.1371/journal.pone.0131630,LDMC
+10.1371/journal.pone.0131630,leaf C content
+10.1371/journal.pone.0131630,leaf C:N ratio
+10.1371/journal.pone.0131630,leaf N content
+10.1371/journal.pone.0131630,mean julian flowering date
+10.1371/journal.pone.0131630,perenial growth form
+10.1371/journal.pone.0131630,ramet size
+10.1371/journal.pone.0131630,rooting depth
+10.1371/journal.pone.0131630,shoot height
+10.1371/journal.pone.0131630,SLA
+10.1371/journal.pone.0131630,stem diameter
+10.1371/journal.pone.0131630,stem dry mass content
+10.1371/journal.pone.0131630,tuber
+10.1371/journal.pone.0137963,C13
+10.1371/journal.pone.0137963,leaf height
+10.1371/journal.pone.0163338,average bill culmen length
+10.1371/journal.pone.0163338,average hand-wing index
+10.1371/journal.pone.0163338,body mass
+10.1371/journal.pone.0163338,depth
+10.1371/journal.pone.0163338,dispersal ability
+10.1371/journal.pone.0163338,tail length
+10.1371/journal.pone.0163338,tarsus
+10.1371/journal.pone.0163338,width
+10.1371/journal.pone.0163338,wing length
+10.1371/journal.pone.0172879,C13 isotopic composition
+10.1371/journal.pone.0172879,N-15 delta isotopic composition
+10.1371/journal.pone.0186123,body size
+10.1371/journal.pone.0186123,PLD
+10.1371/journal.pone.0186123,schooling behaviour
+10.1371/journal.pone.0196066,body shape
+10.1371/journal.pone.0196066,eye position
+10.1371/journal.pone.0196066,number of denticle rows
+10.1371/journal.pone.0196066,p/a of flagellum
+10.1371/journal.pone.0196066,position of oral opening
+10.1371/journal.pone.0196066,relative caudal height
+10.1371/journal.pone.0196066,relative caudal size
+10.1371/journal.pone.0196066,relative spiracle size
+10.1371/journal.pone.0196066,relative width of caudal musculature
+10.1371/journal.pone.0196066,spiracle position
+10.1371/journal.pone.0199898,growth form
+10.1371/journal.pone.0199898,leaf phenology
+10.14471/2016.36.015,canopy height
+10.14471/2016.36.015,seed mass
+10.14471/2016.36.015,SLA
+10.14471/2016.36.018,height
+10.14471/2016.36.018,LDMC
+10.14471/2016.36.018,SLA
+10.1556/168.2016.17.1.11,dispersal method
+10.1556/168.2016.17.1.11,habitat
+10.1556/168.2016.17.1.11,leaf area
+10.1556/168.2016.17.1.11,leaf compoundness
+10.1556/168.2016.17.1.11,leaf slenderness
+10.1556/168.2016.17.1.11,pollination syndrome
+10.1556/168.2016.17.1.11,tree guild
+10.1556/ComEc.14.2013.1.4,chlorophyll a:b ratio
+10.1556/ComEc.14.2013.1.4,leaf area
+10.1556/ComEc.14.2013.1.4,leaf shape
+10.1556/ComEc.14.2013.1.4,SLA
+10.1556/ComEc.14.2013.1.4,support fraction
+10.1556/ComEc.14.2013.1.4,terminal leaf area ratio
+10.1556/ComEc.14.2013.1.4,total carotenoids
+10.1556/ComEc.14.2013.1.4,total chlorophyll
+10.1556/ComEc.14.2013.2.7,biogeographical origin
+10.1556/ComEc.14.2013.2.7,flower type
+10.1556/ComEc.14.2013.2.7,flowering month flowering duration
+10.1556/ComEc.14.2013.2.7,flowering time
+10.1556/ComEc.14.2013.2.7,fruit type
+10.1556/ComEc.14.2013.2.7,growth form
+10.1556/ComEc.14.2013.2.7,habitat
+10.1556/ComEc.14.2013.2.7,number of native congeners
+10.1556/ComEc.9.2008.2.6,distribution
+10.1556/ComEc.9.2008.2.6,habitat quality required
+10.1556/ComEc.9.2008.2.6,humidity requirement
+10.1556/ComEc.9.2008.2.6,light requirement
+10.1650/0010-5422(2007)109[132:SSDAME]2.0.CO;2,size dimorphism
+10.18054/pb.2016.118.3.3924,chorology
+10.18054/pb.2016.118.3.3924,diet
+10.18054/pb.2016.118.3.3924,dispersal power
+10.18054/pb.2016.118.3.3924,reproductive rhythm
+10.1890/07-1737.1,flower sexuality
+10.1890/07-1737.1,flower size
+10.1890/07-1737.1,leaf habitat
+10.1890/07-1737.1,leaf type
+10.1890/07-1737.1,pecisl reduction
+10.1890/07-1737.1,peroth color
+10.1890/07-1737.1,plant height
+10.1890/07-1737.1,pollinator type
+10.1890/07-1737.1,seed dispersal mode
+10.1890/07-1737.1,seed mass
+10.1890/07-1737.1,spinescence
+10.1890/08-1025.1,leaf area
+10.1890/08-1025.1,leaf succulence
+10.1890/08-1025.1,max height
+10.1890/08-1025.1,seed mass
+10.1890/08-1025.1,SLA
+10.1890/08-1025.1,wood specific gravity
+10.1890/08-1836.1,growth form
+10.1890/08-1836.1,habitat
+10.1890/09-0979.1,biomass
+10.1890/09-0979.1,diet
+10.1890/09-1672.1,leaf N concentration
+10.1890/09-1672.1,leaf size
+10.1890/09-1672.1,max DBH
+10.1890/09-1672.1,seed mass
+10.1890/09-1672.1,SLA
+10.1890/09-1672.1,wood density
+10.1890/09-1894.1,diet breadth
+10.1890/09-1894.1,growth
+10.1890/09-1894.1,mass allometry
+10.1890/10-0394.1,fine-root C:N mass ratio
+10.1890/10-0394.1,fine-root carbon content
+10.1890/10-0394.1,fine-root N content
+10.1890/10-0394.1,flowering duration
+10.1890/10-0394.1,forb
+10.1890/10-0394.1,height
+10.1890/10-0394.1,LDMC
+10.1890/10-0394.1,leaf 15N
+10.1890/10-0394.1,leaf area
+10.1890/10-0394.1,leaf C content
+10.1890/10-0394.1,leaf C:N mass ratio
+10.1890/10-0394.1,leaf C13
+10.1890/10-0394.1,leaf N content
+10.1890/10-0394.1,mean julian flowering date
+10.1890/10-0394.1,perennial
+10.1890/10-0394.1,photosynthetic pathway
+10.1890/10-0394.1,seed mass
+10.1890/10-0394.1,SLA
+10.1890/10-0394.1,specific root length
+10.1890/10-1961.1,gemination onset
+10.1890/10-1961.1,leaf N content
+10.1890/10-1961.1,leaf phosphorus content
+10.1890/10-1961.1,max canopy height
+10.1890/10-1961.1,seed mass of the germinule
+10.1890/10-1961.1,seedling relative growth rate
+10.1890/10-1961.1,SLA
+10.1890/1051-0761(2006)016[0891:STAPOL]2.0.CO;2,duration of adult flight period
+10.1890/1051-0761(2006)016[0891:STAPOL]2.0.CO;2,forb dependence
+10.1890/1051-0761(2006)016[0891:STAPOL]2.0.CO;2,max and min forewing length
+10.1890/1051-0761(2006)016[0891:STAPOL]2.0.CO;2,number of broods per season
+10.1890/1051-0761(2006)016[0891:STAPOL]2.0.CO;2,number of host plant families used
+10.1890/11-0975.1,grass height
+10.1890/11-0975.1,leaf surface
+10.1890/11-0975.1,length
+10.1890/11-0975.1,relative wing size
+10.1890/11-0975.1,SLA
+10.1890/11-2026.1,filled seeds per capitulum
+10.1890/11-2026.1,log proportion of seeds damaged
+10.1890/11-2026.1,mean mass of a seed
+10.1890/11-2026.1,proportion of aborted seeds
+10.1890/11-2026.1,seeds initiated per capitulum
+10.1890/11-2026.1,viable seeds per plant
+10.1890/13-0708.1,morphospace
+10.1890/13-2036.1,adult flight period
+10.1890/13-2036.1,capital breeder
+10.1890/13-2036.1,developmental flexibility
+10.1890/13-2036.1,female maturation
+10.1890/13-2036.1,female oviposition behaviour
+10.1890/13-2036.1,generation number
+10.1890/13-2036.1,income breeder
+10.1890/13-2036.1,larval growth rate
+10.1890/13-2036.1,larval thermal tolerance
+10.1890/13-2036.1,larval trophic guild
+10.1890/13-2036.1,male mate-searching behaviour
+10.1890/13-2036.1,mobility
+10.1890/13-2036.1,overwintering stage
+10.1890/13-2036.1,potential fecundity
+10.1890/13-2153.1,height
+10.1890/13-2153.1,seed mass
+10.1890/13-2153.1,SLA
+10.1890/13-2377.1,crown leaf area index
+10.1890/13-2377.1,leaf mass/area
+10.1890/13-2377.1,leaf N concentration
+10.1890/13-2377.1,minimum leaf water potential
+10.1890/13-2377.1,sapwood-specific hydraulic conductivity
+10.1890/13-2377.1,stem sapwood area
+10.1890/13-2377.1,wood density
+10.1890/14-0454.1,leaf area
+10.1890/14-0454.1,leaf C dry mah percentage
+10.1890/14-0454.1,leaf K content
+10.1890/14-0454.1,leaf P
+10.1890/14-0454.1,leaf S
+10.1890/14-0454.1,N dry mass percentage
+10.1890/14-0454.1,SLA
+10.1890/14-0454.1,wood density
+10.1890/14-0910.1,body size
+10.1890/14-0910.1,lecty
+10.1890/14-0910.1,nesting type
+10.1890/14-0910.1,sociality
+10.1890/14-1731.1.sm,dispersal traits
+10.1890/14-1731.1.sm,bill length
+10.1890/14-1731.1.sm,body shape
+10.1890/14-1731.1.sm,body size
+10.1890/14-1731.1.sm,length of primary projection
+10.1890/14-1731.1.sm,locomotory traits
+10.1890/14-1731.1.sm,tail length
+10.1890/14-1731.1.sm,tarsus length
+10.1890/14-1731.1.sm,trophic guild
+10.1890/14-1731.1.sm,wing length
+10.1890/14-2326.1.sm,behavioural dominance
+10.1890/14-2326.1.sm,colony size
+10.1890/14-2326.1.sm,diet
+10.1890/14-2326.1.sm,diurnality
+10.1890/14-2326.1.sm,foraging method
+10.1890/14-2326.1.sm,nesting site
+10.1890/14-2326.1.sm,number of nests per colony
+10.1890/14-2326.1.sm,worker polymorphism
+10.1890/14-2326.1.sm,worker size
+10.1890/14-2357.1,leaf area
+10.1890/14-2357.1,leaf N
+10.1890/14-2357.1,leaf phosphorus
+10.1890/14-2357.1,max height
+10.1890/14-2357.1,SLA
+10.1890/14-2357.1,wood density
+10.1890/15-0794.1,body size
+10.1890/15-0794.1,fecundity
+10.1890/15-0794.1,highly unsaturated fatty acid content
+10.1890/15-1673.1,leaf area
+10.1890/15-1673.1,max height
+10.1890/15-1673.1,seed size
+10.1890/15-1673.1,SLA
+10.1890/15-1673.1,wood density
+10.1890/ES13-00102.1,colonization
+10.1890/ES13-00102.1,mortality rate
+10.1899/06-12.1,drift propensity
+10.1899/06-12.1,feeding method
+10.1899/06-12.1,habitat
+10.1899/06-12.1,voltinism
+10.1899/12-024.1,mode of recolonization
+10.1899/12-024.1,resilience to drought
+10.1899/12-024.1,resistance to drought
+10.2307/1938541,cacheing behaviour
+10.2307/1941217,habitat classification
+10.2307/1941217,shape factor
+10.2307/1941217,swimming factor
+10.2307/1941217,tolerance to silt
+10.2307/1941217,trophic guild
+10.2307/1941614,egg size
+10.2307/1941614,size at maturity
+10.2307/2410901,mortality rate
+10.2307/2937046,morphometric measures
+10.2307/2937081,annual frequency of reproduction
+10.2307/2937081,annual recruitment
+10.2307/2937081,body size
+10.2307/2937081,clutch size
+10.2307/2937081,diet
+10.2307/2937081,egg mass
+10.2307/2937081,expenditure per progeny
+10.2307/2937081,length at maturity
+10.2307/2937081,life expectancy
+10.2307/2937081,mean generation time
+10.2307/2937081,relative clutch mass
+10.2307/2937081,survivorship year to year
+10.2307/2937081,susceptibility to predation
+10.2307/3547051,ability to spread with many close ramets
+10.2307/3547051,above ground biomass
+10.2307/3547051,capacity for lateral spread
+10.2307/3547051,crown cover
+10.2307/3547051,crown plasticity
+10.2307/3547051,form index of leaf shape
+10.2307/3547051,height of tallest photosynthetic tissue
+10.2307/3547051,height plasticity
+10.2307/3547051,leaf unit area
+10.2307/3547051,number of rhizomes or stolon apicies
+10.2307/3547051,stem diameter
+10.2478/s11756-014-0347-y,current velocity
+10.2478/s11756-014-0347-y,macrohabitat
+10.2478/s11756-014-0347-y,substratum
+10.2989/00306520309485376,breeding distribution
+10.2989/00306520309485376,chick provisioning mode
+10.2989/00306520309485376,egg mass
+10.2989/00306520309485376,female body mass
+10.2989/00306520309485376,fledging periods
+10.2989/00306520309485376,habitat
+10.2989/00306520309485376,incubation periods
+10.2989/00306520309485376,modal clutch size
+10.3354/meps12165,functional niche
+10.3354/meps12165,position in water column
+10.3354/meps12165,trophic guild
+10.3389/fmicb.2017.01486,max linear dimension for surface
+10.3389/fmicb.2017.01486,max linear dimension for volume
+10.3389/fmicb.2017.01530,aquatic or terrestrial egg deposition
+10.3389/fmicb.2017.01530,body size
+10.3389/fmicb.2017.01530,degree of arboreality
+10.3389/fmicb.2017.01530,degree of water dependence
+10.3389/fmicb.2017.01530,kind of breeding water body
+10.3389/fmicb.2017.01530,primary forest dependence
+10.3389/fmicb.2017.01530,reproductive mode
+10.3389/fmicb.2019.00169,niche breadth
+10.3389/fpls.2016.00189,LDMC
+10.3389/fpls.2016.00189,leaf C content
+10.3389/fpls.2016.00189,leaf N content
+10.3389/fpls.2016.00189,plant height
+10.3389/fpls.2016.00189,root density
+10.3389/fpls.2016.00189,SLA
+10.3390/f7100228,DBH
+10.3390/f7100228,height
+10.3390/f9010019,leaf N content
+10.3390/f9010019,max height
+10.3390/f9010019,seed mass
+10.3390/f9010019,SLA
+10.3390/f9010019,wood density
+10.3390/f9030122,leaf C
+10.3390/f9030122,leaf thickness
+10.3390/f9030122,leaf tissue density
+10.3390/f9030122,N content
+10.3390/f9030122,SLA
+10.3390/f9110722,foliage C:N ratio
+10.3390/f9110722,height
+10.3390/f9110722,plant functional type
+10.3390/f9110722,root depth
+10.3390/f9110722,SLA
+10.3390/insects10040103,feeding method
+10.3390/insects10040103,stable isotope mean of C values
+10.3390/insects10040103,stable isotope mean of N values
+10.3390/w10020108,food sources
+10.3390/w10020108,habitat
+10.3390/w10020108,trophic guild
+10.3732/ajb.1400437,area-based leaf N
+10.3732/ajb.1400437,leaflet total area
+10.3732/ajb.1400437,max length
+10.3732/ajb.1400437,max width
+10.3732/ajb.1400437,specific area
+10.3732/ajb.1400437,stomatal length
+10.5061/dryad.m03vf,corolla aperture
+10.5061/dryad.m03vf,corolla area
+10.5061/dryad.m03vf,corolla diameter
+10.5061/dryad.m03vf,flower depth
+10.5061/dryad.m03vf,leaf area
+10.5061/dryad.m03vf,petal length
+10.5061/dryad.m03vf,petal width
+10.5061/dryad.m03vf,plant height
+10.5061/dryad.m03vf,SLA
+10.7717/peerj.1241,behavioural dominance
+10.7717/peerj.1241,collective foraging strategy
+10.7717/peerj.1241,colony foundation type
+10.7717/peerj.1241,colony size
+10.7717/peerj.1241,diurnality
+10.7717/peerj.1241,group foraging strategy
+10.7717/peerj.1241,individual foraging strategy
+10.7717/peerj.1241,number of nests
+10.7717/peerj.1241,number of queens
+10.7717/peerj.1241,proportion of insects in diet
+10.7717/peerj.1241,proportion of liquid food in diet
+10.7717/peerj.1241,proportion of seeds in diet
+10.7717/peerj.1241,worker body size
+10.7717/peerj.1241,worker polymorphism
+10.7717/peerj.1410,breeding habitat
+10.7717/peerj.1410,distribution region
+10.7717/peerj.1410,flight period duration
+10.7717/peerj.1410,habitat
+10.7717/peerj.1410,overwintering stage
+10.7717/peerj.1410,species status
+10.7717/peerj.1410,thorax length
+10.7717/peerj.2387,angle of mouth in relation to lateral line
+10.7717/peerj.2387,caudal fin aspect ratio
+10.7717/peerj.2387,eye position
+10.7717/peerj.2387,feeding method
+10.7717/peerj.2387,max recorded length
+10.7717/peerj.2387,relative eye position
+10.7717/peerj.2387,relative gape size
+10.7717/peerj.2387,relative head size
+10.7717/peerj.2387,relative surface area of mouth protrusion
+10.7717/peerj.3092,body length
+10.7717/peerj.3092,body mass
+10.7717/peerj.3092,clutch size
+10.7717/peerj.3092,dichromatism
+10.7717/peerj.3092,diet
+10.7717/peerj.3092,distribution range (km2): Range
+10.7717/peerj.3092,feeding method
+10.7717/peerj.3092,habitat
+10.7717/peerj.3092,incubation days: incubation
+10.7717/peerj.3092,latitude overlap with Taiwan
+10.7717/peerj.3092,max body length
+10.7717/peerj.3092,maximum body mass
+10.7717/peerj.3092,maximum clutch size
+10.7717/peerj.3092,migration pattern
+10.7717/peerj.3092,minimum incubation days
+10.7717/peerj.3092,nesting habitat
+10.7717/peerj.3092,nesting location
+10.7717/peerj.3092,Taiwan resident genus
+10.7717/peerj.3092,the number of invaded countries: Invcountry_Max
+10.7717/peerj.3092,the number of subspecies
+10.7717/peerj.3552,canopy height
+10.7717/peerj.3552,lateral spread
+10.7717/peerj.3552,LDMC
+10.7717/peerj.3552,leaf area
+10.7717/peerj.3552,leaf C content
+10.7717/peerj.3552,leaf dry-matter content
+10.7717/peerj.3552,leaf fresh weight
+10.7717/peerj.3552,leaf N content
+10.7717/peerj.3552,SLA
+10.7717/peerj.5038,adult mobility
+10.7717/peerj.5038,early development mode
+10.7717/peerj.5038,larval dispersal distance
+10.7717/peerj.5038,max body size
+10.7717/peerj.5038,max lifespan
+10.7717/peerj.5038,maximum fecundity
+10.7717/peerj.5038,min space requirement
+10.7717/peerj.5038,population growth rate
+10.7717/peerj.5038,preferred substrate position
+10.7717/peerj.5038,preferred substrate type
+10.7717/peerj.5038,role in sediment engineering
+10.7717/peerj.5038,role of epibiosis
+10.7717/peerj.5038,thermal tolerance
+10.7717/peerj.5038,tidal emersion/low salinity tolerance
+http://dx.doi.org/10.3389/fevo.2018.00081.s001,body shape
+http://dx.doi.org/10.3389/fevo.2018.00081.s001,feeding method
+http://dx.doi.org/10.3389/fevo.2018.00081.s001,mobility
+unknown_10,developmental time
+unknown_10,dispersal ability
+unknown_10,documented geographic range
+unknown_10,endofeeding
+unknown_10,exofeeding
+unknown_10,feeding life stage
+unknown_10,generations a year
+unknown_10,host mortality
+unknown_10,host specificity
+unknown_10,host stages attacked
+unknown_10,how many eggs per site
+unknown_10,native nontarget host
+unknown_10,native nontarget prey
+unknown_10,native origin
+unknown_10,nontarget effects
+unknown_10,other native enemeies present
+unknown_10,oviposition site
+unknown_10,parasitoid
+unknown_10,predator
+unknown_10,searching efficiency
+unknown_10,sex ratio
+unknown_10,target family
+unknown_10,target order
+unknown_10,target system
+unknown_12,growth form
+unknown_12,photobiont partner
+unknown_14,plant height
+unknown_14,seed mass
+unknown_14,seed number
+unknown_14,SLA
+unknown_15,body size
+unknown_15,dorsal colour pattern
+unknown_16,litter size
+unknown_17,age at maturation
+unknown_17,egg size
+unknown_17,fecundity
+unknown_17,length at maturation
+unknown_17,longevity
+unknown_17,max body length
+unknown_17,parental care
+unknown_17,reproductive guild
+unknown_17,shape factor
+unknown_17,spawning frequency
+unknown_17,substrate preference
+unknown_17,swim factor
+unknown_17,trophic guild
+unknown_17,vertical position
+unknown_18,current realized niche occupancy
+unknown_18,percent change in suitable area
+unknown_18,range shift pressure
+unknown_18,range stability over time
+unknown_19,diet
+unknown_19,micro-spatial preference
+unknown_19,morphological syndrome
+unknown_20,ascending process height
+unknown_20,basal plate structural overlap
+unknown_20,body shape
+unknown_20,body size
+unknown_20,cross-sectional diameter
+unknown_20,dorsal spine length
+unknown_20,lateral plate number
+unknown_20,lateral plate position
+unknown_20,lateral plate structural overlap
+unknown_20,pelvic girdle size
+unknown_21,body shape
+unknown_21,mobility
+unknown_22,LDMC
+unknown_22,leaf size
+unknown_22,plant height
+unknown_22,specific root length
+unknown_24,branching type
+unknown_24,clonal growth organs
+unknown_24,flowering phenology
+unknown_24,fruit type
+unknown_24,lateral spread
+unknown_24,leaf distribution
+unknown_24,max height
+unknown_24,minimum height
+unknown_24,pollen vector
+unknown_24,seed mass
+unknown_25,competitive ability
+unknown_25,seed dispersal
+unknown_25,stress tolerance
+unknown_26,sexual dimorphism
+unknown_27,body shape
+unknown_28,duration of development
+unknown_28,larval microhabitat
+unknown_28,trophic guild
+unknown_28,voltinism
+unknown_31,diet
+unknown_31,length-at-age
+unknown_31,maturity
+unknown_31,morphology
+unknown_32,foraging method
+unknown_5,clonality
+unknown_5,dispersal method
+unknown_5,flowering duration
+unknown_5,LDMC
+unknown_5,life span
+unknown_5,plant height
+unknown_5,pollen vector
+unknown_5,seed bank longevity
+unknown_5,seed mass
+unknown_5,seed number
+unknown_5,SLA
+unknown_5,start of flowering
+unknown_6,leaf carbon mass per unit area
+unknown_6,leaf lifespan
+unknown_6,leaf nitrogen content per unit area
+unknown_8,age
+unknown_8,body mass
+unknown_8,carapace length
+unknown_8,interaction dimensionality
+unknown_8,length of medial edge of annulus on right abdominal scute
+unknown_8,plastron length
+unknown_9,body compression index
+unknown_9,distance from nares to snout
+unknown_9,height of dorsal fin
+unknown_9,height of ventral fin
+unknown_9,relative depth
+unknown_9,relative diameter of eyes
+unknown_9,relative width of the tail
+unknown_9,tail compression index
+10.1002/ecs2.2125,antipredator strategy
+10.1002/ecs2.2125,body condition
+10.1002/ecs2.2125,boldness
+10.1002/ecs2.2125,distance to nearest riparian zone
+10.1002/ecs2.2125,growth rates
+10.1002/ecs2.2125,home range size
+10.1002/ecs2.2125,mating success
+10.1002/ecs2.2125,survival
+10.1007/s00035-018-0199-0,base germination water potential
+10.1007/s00035-018-0199-0,base water potential
+10.1007/s00035-018-0199-0,ceiling temperatures
+10.1007/s00035-018-0199-0,LDMC
+10.1007/s00035-018-0199-0,leaf area
+10.1007/s00035-018-0199-0,optimum temperatures
+10.1007/s00035-018-0199-0,pH range of the germination phenotype
+10.1007/s00035-018-0199-0,SLA
+10.1007/s00265-010-1031-z,gregariousness
+10.1007/s00265-010-1031-z,instar size
+10.1007/s00265-010-1031-z,larval escape behaviour
+10.1007/s00265-010-1031-z,larval size
+10.1007/s00265-010-1031-z,maternal care
+10.1007/s00265-010-1031-z,shield weight
+10.1007/s00265-010-1031-z,shields affected survival
+10.1007/s00360-013-0763-2,rest-phase body temperature
+10.1007/s00360-013-0763-2,resting metabolic rate
+10.1007/s10646-013-1068-7,biovolume
+10.1007/s10646-013-1068-7,pigment fluorescence
+10.1007/s10646-013-1068-7,pigment packaging
+10.1007/s10646-013-1068-7,size
+10.1007/s10681-014-1200-7,number of ovules
+10.1007/s10681-014-1200-7,ovary length
+10.1007/s10681-014-1200-7,pollen transfer efficiency
+10.1007/s10681-014-1200-7,stamen length
+10.1007/s10681-014-1200-7,standard dimension of floral display
+10.1007/s10681-014-1200-7,vector-matching
+10.1007/s10682-005-2005-x,area-based stomatal conductance
+10.1007/s10682-005-2005-x,fruit number
+10.1007/s10682-005-2005-x,number of rosette leaves
+10.1007/s10682-005-2005-x,plant size
+10.1007/s10682-005-2005-x,seed output
+10.1007/s10682-005-2005-x,senescence
+10.1016/j.anbehav.2009.11.024,aggression to conspecifics
+10.1016/j.anbehav.2009.11.024,difference in movement in the face of a predator
+10.1016/j.anbehav.2009.11.024,level of movement within area
+10.1016/j.anbehav.2009.11.024,time to consume new food
+10.1016/j.ecoleng.2015.11.001,large hemirosette close to the ground
+10.1016/j.ecoleng.2015.11.001,potential height
+10.1016/j.ecoleng.2015.11.001,SLA
+10.1016/j.ecoleng.2015.11.001,thousand-seed weight
+10.1016/j.geoderma.2013.03.010,body mass
+10.1016/j.ntt.2013.07.001,exploration
+10.1016/j.ntt.2013.07.001,free swimming
+10.1016/j.rse.2018.03.038,leaf N concentration
+10.1016/j.rse.2018.03.038,leaf P conconcentration
+10.1016/j.soilbio.2015.02.007,body size
+10.1046/j.1365-2745.2001.00673.x,dispersal limitation
+10.1073/pnas.1401949111,behavioural stereotypy
+10.1073/pnas.1401949111,body length
+10.1073/pnas.1401949111,chemical defense
+10.1073/pnas.1401949111,crypticity
+10.1073/pnas.1401949111,diet breadth
+10.1073/pnas.1401949111,resting substrate
+10.1093/aob/mcx005,germination temperature
+10.1093/aob/mcx005,habitat
+10.1093/jpe/rtv043,LDMC
+10.1093/jpe/rtv043,saturated height
+10.1093/jpe/rtv043,seed size
+10.1093/jpe/rtv043,SLA
+10.1098/rspb.2015.2841,serum inhibitor ability
+10.1098/rspb.2015.2841,SVMP activity
+10.1098/rspb.2017.1405,body mass
+10.1098/rspb.2017.1405,thermal tolerance
+10.1098/rspb.2017.1942,thermal tolerance
+10.1111/1365-2656.12718,thermal tolerance
+10.1111/1365-2664.12623,ecology
+10.1111/1365-2664.12623,flowering duration
+10.1111/1365-2664.12623,LDMC
+10.1111/1365-2664.12623,lifespan
+10.1111/1365-2664.12623,plant height
+10.1111/1365-2664.12623,pollination mode
+10.1111/1365-2664.12623,seed bank longevity
+10.1111/1365-2664.12623,seed mass
+10.1111/1365-2664.12623,SLA
+10.1111/1365-2664.12623,flower duration
+10.1111/ele.12532,% water content
+10.1111/ele.12532,concentration of oenothein A
+10.1111/ele.12532,concentration of oenothein B
+10.1111/ele.12532,concentration of oenothein oxidized A
+10.1111/ele.12532,date of first flowering
+10.1111/ele.12532,growth rate
+10.1111/ele.12532,height
+10.1111/ele.12532,leaf toughness
+10.1111/ele.12532,oxidative capacity of phenolics
+10.1111/ele.12532,SLA
+10.1111/ele.12532,total phenolics
+10.1111/ele.12532,trichome density
+10.1111/j.1365-2486.2009.01905.x,diameter
+10.1111/j.1365-2486.2009.01905.x,LDMC
+10.1111/j.1365-2486.2009.01905.x,leaf C content
+10.1111/j.1365-2486.2009.01905.x,leaf mass ratio
+10.1111/j.1365-2486.2009.01905.x,root
+10.1111/j.1365-2486.2009.01905.x,SLA
+10.1111/j.1365-2486.2009.01905.x,tissue density
+10.1111/j.1365-2486.2009.01905.x,vegetative height
+10.1111/j.1365-2656.2007.01284.x,aggression to conspecifics
+10.1111/j.1365-2656.2007.01284.x,difference in movement in the face of a predator
+10.1111/j.1365-2656.2007.01284.x,level of movement within area
+10.1111/j.1365-2656.2007.01284.x,time to consume new food
+10.1111/j.1365-2656.2010.01666.x,development time
+10.1111/j.1365-2656.2010.01666.x,mating behaviour
+10.1111/j.1365-2656.2010.01666.x,susceptibility to insecticide
+10.1111/j.1529-8817.2010.00890.x,C content
+10.1111/j.1529-8817.2010.00890.x,N content
+10.1111/j.1529-8817.2010.00890.x,phlorotannin concentrations
+10.1111/jeb.12769,escape behaviour
+10.1111/jeb.12769,general activity
+10.1111/jeb.12769,shelter emergence latency
+10.1111/oik.01544,body size
+10.1111/oik.01544,brooding
+10.1111/oik.01544,exoskeleton
+10.1111/oik.01544,fecundity
+10.1111/oik.01544,horizontal position
+10.1111/oik.01544,movement method
+10.1111/oik.01544,reproduction frequency
+10.1111/oik.01544,trophic group
+10.1371/journal.pone.0020782,body size
+10.1371/journal.pone.0035742,stomal density
+10.1371/journal.pone.0035742,stomatal area
+10.1371/journal.pone.0035742,stomatal length
+10.1371/journal.pone.0035742,stomatal width
+10.1614/WS-09-096.1,max height
+10.1614/WS-09-096.1,seed weight
+10.1614/WS-09-096.1,time of first flowering
+10.1890/0012-9658(2000)081[0183:EOGCSO]2.0.CO;2,body size
+10.1890/ES10-00113.1,allocation to roots vs shoots
+10.1890/ES10-00113.1,annual productivity
+10.1890/ES10-00113.1,degree of summertime activity
+10.1890/ES10-00113.1,litter chemistry
+10.1890/ES10-00113.1,litter production
+10.1899/10-041.1,armoring
+10.1899/10-041.1,desiccation resistance
+10.1899/10-041.1,habit
+10.1899/10-041.1,maximum crawling rate
+10.1899/10-041.1,rheophily
+10.1899/10-041.1,size at maturity
+10.3390/w11020222,cell biovolume
+10.3390/w11020222,flagella
+10.3390/w11020222,intracellular gas vesicles
+10.3390/w11020222,max linear dimension
+10.3390/w11020222,mucus secretion
+10.3390/w11020222,SA:V
+10.3390/w11020222,siliceous exoskeletons
+10.1002/ecm.1297/full,adult habitat
+10.1002/ecm.1297/full,climatic zone inhabited
+10.1002/ecm.1297/full,life stage
+10.1002/ecm.1297/full,physiology
+10.1016/j.agee.2008.04.011,body length
+10.1016/j.agee.2008.04.011,diet
+10.1016/j.agee.2008.04.011,wing morphology
+10.1038/ncomms9877,body mass
+10.1038/ncomms9877,clutch size
+10.1038/ncomms9877,diet
+10.1038/ncomms9877,foraging method
+10.1038/ncomms9877,group size
+10.1038/ncomms9877,habitat
+10.1038/ncomms9877,habitat openness
+10.1038/ncomms9877,migration
+10.1111/1365-2435.12162,leaf mass:area ratio
+10.1111/1365-2435.12162,leaf N content per unit mass
+10.1111/1365-2435.12162,N content per unit area
+10.1111/brv.12461,base temperature
+10.1111/brv.12461,effect of dormancy loss treatment on base germination temperature
+10.1111/brv.12461,germination proportion
+10.1111/brv.12461,seed mass
+10.1111/brv.12461,seed number
+10.1111/brv.12461,seedling growth
+10.1111/brv.12461,thermal time for 50% germination
+10.1111/brv.12461,time to 50% germination
+10.1111/ele.12080,growth form
+10.1111/ele.12080,life history
+10.1111/ele.12080,origin
+10.1111/ele.12576,offspring number
+10.1111/ele.12576,offspring size
+10.1111/faf.12347,body shape
+10.1111/faf.12347,caudal fin aspect ratio
+10.1111/faf.12347,caudal fin shape
+10.1111/faf.12347,dorsal fin shape
+10.1111/faf.12347,eye size
+10.1111/faf.12347,fish length
+10.1111/faf.12347,mouth position
+10.1111/faf.12347,pelvic fin position
+10.1111/faf.12347,prognathism
+10.1111/faf.12347,relative mouth size
+10.1111/faf.12347,snout
+10.1111/faf.12347,stable isotope
+10.1111/gcb.13736,body size
+10.1111/gcb.13736,diet breadth
+10.1111/gcb.13736,fecundity
+10.1111/gcb.13736,habitat
+10.1111/gcb.13736,historic range limit
+10.1111/geb.12249,ability to fix N
+10.1111/geb.12249,biogeographic region
+10.1111/geb.12249,clonality or vegetative reproduction
+10.1111/geb.12249,insularity
+10.1111/geb.12249,invaded ecosystem
+10.1111/geb.12249,non-native plant life-form
+10.1111/j.1365-2435.2008.01477.x,seed size
+10.1111/j.1461-0248.2008.01255.x,activity
+10.1111/j.1461-0248.2008.01255.x,body mass
+10.1111/j.1461-0248.2008.01255.x,diet
+10.1111/j.1461-0248.2008.01255.x,feeding method
+10.1111/j.1461-0248.2008.01255.x,foliage
+10.1111/j.1461-0248.2008.01255.x,foraging habitat
+10.1111/j.1461-0248.2008.01255.x,foraging location
+10.1111/j.1461-0248.2008.01255.x,fruit length
+10.1111/j.1461-0248.2008.01255.x,fruit type
+10.1111/j.1461-0248.2008.01255.x,growth form
+10.1111/j.1461-0248.2008.01255.x,height
+10.1111/j.1461-0248.2008.01255.x,leaf area
+10.1111/j.1461-0248.2008.01255.x,leguminous
+10.1111/j.1461-0248.2008.01255.x,litter size
+10.1111/j.1461-0248.2008.01255.x,nesting
+10.1111/j.1600-0706.2012.00121.x,grasses
+10.1111/j.1600-0706.2012.00121.x,legumes
+10.1111/j.1600-0706.2012.00121.x,non leguminous forbs
+10.1111/j.1600-0706.2012.00121.x,photosynthetic pathway
+10.1111/nph.12907,water potential at which 50% stem conductivity is lost
+10.1890/15-1084.1,ammonia excretion rate
+10.1890/15-1084.1,body dry mass
+10.1890/15-1084.1,body length
+10.1890/15-1084.1,C body concentration
+10.1890/15-1084.1,lipid body concentration
+10.1890/15-1084.1,N body concentration
+10.1890/15-1084.1,N:P body ratio
+10.1890/15-1084.1,P body concentration
+10.1890/15-1084.1,protein body concentration
+10.1890/15-1084.1,respiration rate
+10.1890/ES12-00262.1,body size
+10.1890/ES12-00262.1,dispersal ability
+10.1890/ES12-00262.1,habitat
+10.1890/ES12-00262.1,trophic guild
+unknown_23,agility
+unknown_23,attachment to substrate
+unknown_23,body flexibility
+unknown_23,body shape
+unknown_23,concealment
+unknown_23,mobility
+unknown_23,trajectory in the drift
+unknown_23,trajectory on the bottom substrate
+10.1002/eco.1533,environmental cue for reproduction
+10.1002/eco.1533,growing season
+10.1002/eco.1533,phenology
+10.1002/eco.1533,SLA
+10.1016/j.jtbi.2007.07.013,trophic guild
+10.1038/srep33383,fecundity
+10.1038/srep33383,growth rate
+10.1038/srep33383,mortality rate
+10.1046/j.1365-2427.2002.01002.x,habitat
+10.1046/j.1365-2427.2002.01002.x,light condition
+10.1046/j.1365-2427.2002.01002.x,swimming mode
+10.1098/rspb.2005.3236,prey searching strategy
+10.1103/PhysRevE.88.062721,grazing rate
+10.1103/PhysRevE.88.062721,mortality rate
+10.1111/1365-2656.12218,ash content
+10.1111/1365-2656.12218,baleen plates
+10.1111/1365-2656.12218,body length
+10.1111/1365-2656.12218,body mass
+10.1111/1365-2656.12218,cibrissae
+10.1111/1365-2656.12218,colour
+10.1111/1365-2656.12218,depth
+10.1111/1365-2656.12218,diel migration
+10.1111/1365-2656.12218,differentiated teeth
+10.1111/1365-2656.12218,diving capability
+10.1111/1365-2656.12218,echolocation
+10.1111/1365-2656.12218,energy density
+10.1111/1365-2656.12218,fineness ratio
+10.1111/1365-2656.12218,frontal surface
+10.1111/1365-2656.12218,horizontal habitat
+10.1111/1365-2656.12218,lipid content
+10.1111/1365-2656.12218,max swimming speed
+10.1111/1365-2656.12218,mobility
+10.1111/1365-2656.12218,muscle lipid content
+10.1111/1365-2656.12218,muscle mitochondrial density
+10.1111/1365-2656.12218,number of teeth on lower mandibular
+10.1111/1365-2656.12218,photophores
+10.1111/1365-2656.12218,protein content
+10.1111/1365-2656.12218,rostrum
+10.1111/1365-2656.12218,school size
+10.1111/1365-2656.12218,seasonal migration
+10.1111/1365-2656.12218,skeleton
+10.1111/1365-2656.12218,spine
+10.1111/1365-2656.12218,sustainable swimming speed
+10.1111/1365-2656.12218,vertical habitat
+10.1111/1365-2656.12218,water content
+10.1111/1365-2745.13074,colonization ability
+10.1111/1365-2745.13074,competitive ability
+10.1111/ele.12157,leaf life span
+10.1111/ele.12157,leaf N concentration
+10.1111/ele.12157,ratio of leaf area to dry weight
+10.1111/ele.12157,seed size
+10.1111/ele.12157,wood density
+10.1111/gcb.12604,tree height
+10.1111/gcb.13542,leaf lifespan
+10.1111/gcb.13542,leaf mass/area
+10.1111/gcb.13542,leaf N content
+10.1111/gcb.13542,leaf respiration
+10.1111/j.1365-2699.2012.02690.x,fire tolerance
+10.1242/jeb.059634,activity hours
+10.1242/jeb.059634,energy requirements
+10.1242/jeb.059634,water requirements
+10.1371/journal.pone.0133794,body size
+10.1890/0012-9658(2003)084[1129:AHUISP]2.0.CO;2,feeding rate
+10.1890/0012-9658(2003)084[1129:AHUISP]2.0.CO;2,growth rate
+10.1890/0012-9658(2003)084[1129:AHUISP]2.0.CO;2,habitat
+10.1890/0012-9658(2003)084[1129:AHUISP]2.0.CO;2,metabolic rate
+10.1890/0012-9658(2003)084[1129:AHUISP]2.0.CO;2,mortality rate
+unknown_29,maximum carboxylation rate at 25 degrees C
+unknown_29,maximum electron transport rate at 25 degrees C
+unknown_29,SLA
+10.1007/s00442-018-4074-x,biovolume
+10.1007/s00442-018-4074-x,SA:V
+10.1007/s10452-016-9596-x,buoyance
+10.1007/s10452-016-9596-x,colony formation
+10.1007/s10452-016-9596-x,N2 fixation
+10.1007/s10750-017-3199-y,average egg clutch
+10.1007/s10750-017-3199-y,development of defensive structure
+10.1007/s10750-017-3199-y,eye size to body size ratio
+10.1007/s10750-017-3199-y,feeding method
+10.1007/s10750-017-3199-y,mean body length
+10.1007/s10750-017-3199-y,predator escape response
+10.1007/s10750-017-3199-y,presence of color in the carapace
+10.1007/s10750-017-3199-y,presence of ocellus
+10.1007/s10750-017-3199-y,swimming antennae length ratio to body size
+10.1007/s10750-017-3199-y,trophic guild
+10.1007/s13593-013-0166-5,flowering date
+10.1007/s13593-013-0166-5,flowering range
+10.1007/s13593-013-0166-5,height growth rate
+10.1007/s13593-013-0166-5,leaf surface
+10.1007/s13593-013-0166-5,life form
+10.1007/s13593-013-0166-5,life form germination date
+10.1007/s13593-013-0166-5,max plant height
+10.1007/s13593-013-0166-5,plant phenology
+10.1007/s13593-013-0166-5,seed coat thickness
+10.1007/s13593-013-0166-5,seed mass
+10.1007/s13593-013-0166-5,SLA
+10.1016/B978-0-12-396992-7.00004-6,body size
+10.1016/B978-0-12-396992-7.00004-6,diet
+10.1016/B978-0-12-420002-9.00002-0,body size:mass ratio
+10.1016/B978-0-12-420002-9.00002-0,C concentration
+10.1016/B978-0-12-420002-9.00002-0,isotope ratios
+10.1016/B978-0-12-420002-9.00002-0,N concentration
+10.1016/B978-0-12-420002-9.00002-0,P concentration
+10.1016/j.anbehav.2012.01.032,brain size
+10.1016/j.anbehav.2012.01.032,sociality
+10.1016/j.apsoil.2008.01.007,body mass
+10.1016/j.apsoil.2008.01.007,pigmentation
+10.1016/j.apsoil.2008.01.007,size
+10.1016/j.ecolind.20.17.05.066,algal quality
+10.1016/j.ecolind.20.17.05.066,attachment to substrate
+10.1016/j.ecolind.20.17.05.066,cell size
+10.1016/j.ecolind.20.17.05.066,diatom guild
+10.1016/j.ecolind.20.17.05.066,ecological breadth
+10.1016/j.ecolind.20.17.05.066,functional diversity
+10.1016/j.ecolind.20.17.05.066,life form
+10.1016/j.ecolind.20.17.05.066,motility
+10.1016/j.ecolind.20.17.05.066,N fixation
+10.1016/j.ecolind.20.17.05.066,reproductive mode
+10.1016/j.ecolind.20.17.05.066,spore formation
+10.1016/j.ecolind.20.17.05.066,thermal tolerance
+10.1016/S0065-2881(09)56004-X,body length
+10.1016/S0065-2881(09)56004-X,commercially fished
+10.1016/S0065-2881(09)56004-X,dangerous to humans
+10.1016/S0065-2881(09)56004-X,game fished
+10.1016/S0065-2881(09)56004-X,habitat
+10.1016/S0065-2881(09)56004-X,range size
+10.1016/S0065-2881(09)56004-X,thermal tolerance
+10.1023/B:BIOC.0000004319.91643.9e,annual survival
+10.1023/B:BIOC.0000004319.91643.9e,biogeographic position
+10.1023/B:BIOC.0000004319.91643.9e,body size
+10.1023/B:BIOC.0000004319.91643.9e,competition sensitive traits
+10.1023/B:BIOC.0000004319.91643.9e,dispersal power
+10.1023/B:BIOC.0000004319.91643.9e,disturbance sensitive traits
+10.1023/B:BIOC.0000004319.91643.9e,ecological strategy
+10.1023/B:BIOC.0000004319.91643.9e,matrix use
+10.1023/B:BIOC.0000004319.91643.9e,microhabitat association
+10.1023/B:BIOC.0000004319.91643.9e,rarity
+10.1023/B:BIOC.0000004319.91643.9e,reproductive potential
+10.1023/B:BIOC.0000004319.91643.9e,sociality
+10.1023/B:BIOC.0000004319.91643.9e,trophic guild
+10.1038/s41559-017-0426-x,adult life stages
+10.1038/s41559-017-0426-x,body size
+10.1038/s41559-017-0426-x,diet
+10.1038/s41559-017-0426-x,life-cycle length
+10.1038/s41559-017-0426-x,locomotion
+10.1038/s41559-017-0426-x,pupation
+10.1038/s41559-017-0426-x,resistance elements
+10.1038/s41559-017-0426-x,respiration mode
+10.1038/s41559-017-0426-x,substrate attachment
+10.1038/srep24451,body size
+10.1038/srep24451,flight period
+10.1038/srep24451,habitat specialization
+10.1038/srep24451,larval food dependence on nitrogen
+10.1038/srep24451,larval food preference
+10.1038/srep24451,voltinism
+10.1046/j.1365-2427.2002.00908.x,body size
+10.1046/j.1365-2427.2002.00908.x,coloration
+10.1046/j.1365-2427.2002.00908.x,competitive ability
+10.1046/j.1365-2427.2002.00908.x,predator avoidance
+10.1046/j.1365-2427.2002.00908.x,stable isotopes
+10.1073/pnas.1015178108,habitat
+10.1073/pnas.1015178108,taxa group
+10.1073/pnas.1015178108,trophic group
+10.1086/368401,leaf size
+10.1086/368401,SLA
+10.1086/682680,home range area
+10.1086/682680,maximal rate of oxygen consumption
+10.1093/aob/mcu113,clonality
+10.1093/forestry/cpw018,thermal tolerance
+10.1093/plankt/fbp098,cell size
+10.1093/plankt/fbp098,elemental stoichiometry
+10.1098/rspb.2017.1345,density of liver
+10.1098/rspb.2017.1345,density of liver-free body
+10.1098/rspb.2017.1345,standard length
+10.1098/rspb.2017.1345,volume of liver
+10.1098/rspb.2017.1345,volume of liver-free body
+10.1111/1365-2656.12570,clutch size
+10.1111/1365-2656.12570,egg size
+10.1111/1365-2656.12570,number of broods
+10.1111/1365-2656.12570,parental care
+10.1111/1365-2656.12838,age at maturity
+10.1111/1365-2656.12838,clutch size
+10.1111/1365-2656.12838,drought resistance
+10.1111/1365-2656.12838,inundation resistance
+10.1111/1365-2656.12838,inundation tolerance
+10.1111/1365-2656.12838,longevity
+10.1111/1365-2656.12838,max body size
+10.1111/1365-2656.12838,maximal shell size
+10.1111/1365-2656.12838,mode of reproduction
+10.1111/1365-2656.12838,moisture use
+10.1111/1365-2656.12838,survival of dry period
+10.1111/1365-2656.12838,thermal tolerance
+10.1111/1365-2656.12838,vertical stratification
+10.1111/1365-2656.12838,walking speed
+10.1111/1365-2664.12524,duration of flight season
+10.1111/1365-2664.12524,foraging distance
+10.1111/1365-2664.12524,niche breadth
+10.1111/1365-2664.12524,reproductive strategy
+10.1111/1365-2664.12524,voltinism
+10.1111/1365-2664.13134,leaf nitrogen and phosphorus concentration
+10.1111/1365-2664.13134,leaf toughness
+10.1111/1365-2664.13134,SLA
+10.1111/1365-2664.13134,wood density
+10.1111/brv.12366,bill length
+10.1111/brv.12366,corolla length
+10.1111/ecog.02968,annual fecundity
+10.1111/ecog.02968,body mass
+10.1111/ecog.02968,brain size
+10.1111/ecog.02968,breeding behaviour
+10.1111/ecog.02968,diet breadth
+10.1111/ecog.02968,habitat
+10.1111/ecog.02968,hide behaviour
+10.1111/ecog.02968,home range
+10.1111/ecog.02968,interabdominal seam length
+10.1111/ecog.02968,longevity
+10.1111/ecog.02968,migratory behavior
+10.1111/ecog.02968,population density
+10.1111/ecog.02968,sexual maturity age
+10.1111/ecog.02968,sleep behaviour
+10.1111/ecog.02968,trophic guild
+10.1111/ele.12688,body size
+10.1111/ele.12688,feeding method
+10.1111/ele.12688,myelination
+10.1111/ele.12688,relative offspring size
+10.1111/ele.12945,leaf lifespan
+10.1111/ele.12945,leaf mass/area
+10.1111/ele.12945,N per unit leaf area
+10.1111/ele.12945,nitrogen per unit leaf mass
+10.1111/evo.12518,age
+10.1111/evo.12518,diet
+10.1111/evo.12518,size at maturity
+10.1111/faf.12155,activity
+10.1111/faf.12155,assimilation efficiency
+10.1111/faf.12155,competition ability
+10.1111/faf.12155,dispersal ability
+10.1111/faf.12155,energy allocation
+10.1111/faf.12155,foraging efficiency
+10.1111/faf.12155,growth
+10.1111/faf.12155,habitat availability
+10.1111/faf.12155,maturation age
+10.1111/faf.12155,metabolic rate
+10.1111/faf.12155,migration
+10.1111/faf.12155,mortality
+10.1111/faf.12155,mutualistic behaviour
+10.1111/faf.12155,predation
+10.1111/faf.12155,recruitment
+10.1111/faf.12155,reproduction
+10.1111/gcb.12862,diet
+10.1111/gcb.12862,call duration
+10.1111/gcb.12862,foraging location
+10.1111/gcb.12862,call frequency range
+10.1111/gcb.12862,gestation interval
+10.1111/gcb.12862,nest location
+10.1111/gcb.12862,nest type
+10.1111/gcb.12862,vocalization peak frequency
+10.1111/gcb.13184,depth range
+10.1111/gcb.13184,development type
+10.1111/gcb.13184,mean latitude of observations
+10.1111/geb.12306,age of first flowering
+10.1111/geb.12306,capacity to self-fertilize
+10.1111/geb.12306,dispersal distance
+10.1111/geb.12306,flower pollinator
+10.1111/geb.12306,habitat
+10.1111/geb.12306,plant height
+10.1111/geb.12306,reproductive frequency
+10.1111/geb.12306,resprouting after fire
+10.1111/geb.12306,seed bank persistence
+10.1111/geb.12306,seed mass
+10.1111/geb.12306,SLA
+10.1111/geb.12306,vegetative regeneration
+10.1111/geb.12637,thermal tolerance
+10.1111/gfs.12129,flowering date
+10.1111/gfs.12129,LDMC
+10.1111/j.1095-8312.2008.01102.x,life span
+10.1111/j.1365-2435.2009.01528.x,body fat%
+10.1111/j.1365-2435.2009.01528.x,body mass
+10.1111/j.1365-2435.2009.01528.x,body protein%
+10.1111/j.1365-2435.2009.01528.x,nutritional requirements
+10.1111/j.1365-2486.2009.01963.x,body mass
+10.1111/j.1365-2486.2009.01963.x,brood number
+10.1111/j.1365-2486.2009.01963.x,diet
+10.1111/j.1365-2486.2009.01963.x,fecundity
+10.1111/j.1365-2486.2009.01963.x,generation time
+10.1111/j.1365-2486.2009.01963.x,habitat
+10.1111/j.1365-2486.2009.01963.x,migration method
+10.1111/j.1365-2486.2009.01963.x,nest location
+10.1111/j.1461-0248.2010.01493.x,aerodynamic index
+10.1111/j.1461-0248.2010.01493.x,body mass
+10.1111/j.1461-0248.2010.01493.x,clutch size
+10.1111/j.1461-0248.2010.01493.x,diet
+10.1111/j.1461-0248.2010.01493.x,foraging method
+10.1111/j.1461-0248.2010.01493.x,foraging substrate
+10.1111/j.1461-0248.2010.01493.x,life span
+10.1111/j.1461-0248.2010.01493.x,main foraging period
+10.1111/j.1461-0248.2010.01493.x,migratory behavior
+10.1111/j.1461-0248.2010.01493.x,nest location
+10.1111/j.1466-8238.2011.00717.x,body shape
+10.1111/j.1466-8238.2011.00717.x,leaf economics
+10.1111/j.1466-8238.2011.00717.x,life history parameters
+10.1111/j.1466-8238.2011.00717.x,physiological traits
+10.1111/j.2007.0906-7590.05090.x,adult survival
+10.1111/j.2007.0906-7590.05090.x,offspring production
+10.1111/jbi.12808,body size
+10.1111/jbi.12808,clutch size
+10.1111/jbi.12808,direction of expansion
+10.1111/jbi.12808,native range size
+10.1111/jbi.12808,number of introductions
+10.1111/jbi.12808,species insularity
+10.1111/jbi.12808,topographic heterogeneity
+10.1111/jvs.12066,C isotope ratio
+10.1111/jvs.12066,LDMC
+10.1111/jvs.12066,leaf C content
+10.1111/jvs.12066,leaf N content
+10.1111/jvs.12066,leaf P content
+10.1111/jvs.12066,mean area of a leaf
+10.1111/jvs.12066,onset of flowering
+10.1111/jvs.12066,repro plant height
+10.1111/jvs.12066,seed mass
+10.1111/jvs.12066,seed N concentration
+10.1111/jvs.12066,SLA
+10.1111/jvs.12066,veg plant height
+10.1111/jvs.12256,max species height
+10.1111/jvs.12256,SLA
+10.1111/jvs.12375,after-ripening
+10.1111/jvs.12375,buoyancy
+10.1111/jvs.12375,coat chemical content
+10.1111/jvs.12375,coat water permeability
+10.1111/jvs.12375,desiccation-protected eggs
+10.1111/jvs.12375,embryo type
+10.1111/jvs.12375,embryo:seed
+10.1111/jvs.12375,germinability
+10.1111/jvs.12375,germination rate
+10.1111/jvs.12375,germination synchrony
+10.1111/jvs.12375,germination temperature
+10.1111/jvs.12375,heat requirement
+10.1111/jvs.12375,light requirement
+10.1111/jvs.12375,nitrate
+10.1111/jvs.12375,oil content
+10.1111/jvs.12375,oxygen requirement
+10.1111/jvs.12375,red:far red ratio
+10.1111/jvs.12375,reserve type
+10.1111/jvs.12375,salt tolerance
+10.1111/jvs.12375,seed coat thickness
+10.1111/jvs.12375,seed longevity
+10.1111/jvs.12375,seed mass
+10.1111/jvs.12375,seed shape
+10.1111/jvs.12375,seed size
+10.1111/jvs.12375,seed surface structure
+10.1111/jvs.12375,smoke requirement
+10.1111/jvs.12375,stratification
+10.1111/jvs.12375,terminal velocity
+10.1111/jvs.12375,water content
+10.1111/jvs.12375,water potential
+10.1111/maec.12480,PLD
+10.1111/mam.12035,body mass
+10.1111/mam.12035,human population density within each species range
+10.1111/mec.12756,body size
+10.1111/mec.12756,SLA
+10.1111/nph.14498,seed dormancy
+10.1371/journal.pbio.0020197,activity timing
+10.1371/journal.pbio.0020197,age at sexual maturity
+10.1371/journal.pbio.0020197,body size
+10.1371/journal.pbio.0020197,geographic range size
+10.1371/journal.pbio.0020197,gestation length
+10.1371/journal.pbio.0020197,group size
+10.1371/journal.pbio.0020197,home range size
+10.1371/journal.pbio.0020197,interabdominal seam length
+10.1371/journal.pbio.0020197,island endemicity
+10.1371/journal.pbio.0020197,litter size
+10.1371/journal.pbio.0020197,population density
+10.1371/journal.pbio.0020197,sociality
+10.1371/journal.pbio.0020197,trophic guild
+10.1890/10-1245.1,height
+10.1890/10-1245.1,leaf mass/area
+10.1890/10-1245.1,leaf N content
+10.1890/10-1245.1,N fixation
+10.1890/10-1245.1,specific root length
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,ability to survive desiccation
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,adult ability to exit
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,adult flying strength
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,adult life span
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,armoring
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,attachment
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,development
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,female dispersal
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,habitat
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,max crawling rate
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,occurrence in drift
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,respiration
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,rheophily
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,shape
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,size at maturity
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,swimming ability
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,synchronization of emergence
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,thermal tolerance
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,trophic guild
+10.1899/0887-3593(2006)025[0730:FTNONA]2.0.CO;2,voltinism
+10.2307/1467813,adaptable life cycle
+10.2307/1467813,air breathers
+10.2307/1467813,desiccation tolerance
+10.2307/1467813,development strongly linked to environmental temperature
+10.2307/1467813,dispersal ability
+10.2307/1467813,egg diapause
+10.2307/1467813,feeding method
+10.2307/1467813,global distribution
+10.2307/1467813,habitat
+10.2307/1467813,highly diverse immature forms
+10.2307/1467813,life span
+10.2307/1467813,parthenogenesis known
+10.2307/1467813,staggered egg hatching
+10.2307/1467813,terrestrial ancestors
+10.2307/1467813,trend toward terrestialisation known for some immature stages
+10.2307/1467813,water surface/air breathers
+10.2307/1543609,transparency
+10.3389/fevo.2017.00084,air sacs
+10.3389/fevo.2017.00084,artifacts of conflict
+10.3389/fevo.2017.00084,backbone
+10.3389/fevo.2017.00084,body mass
+10.3389/fevo.2017.00084,brood parasite
+10.3389/fevo.2017.00084,digging
+10.3389/fevo.2017.00084,gleaning
+10.3389/fevo.2017.00084,grazing
+10.3389/fevo.2017.00084,ground vegetation
+10.3389/fevo.2017.00084,Invertebrates
+10.3389/fevo.2017.00084,mean clutch size
+10.3389/fevo.2017.00084,mud association
+10.3389/fevo.2017.00084,nectar
+10.3389/fevo.2017.00084,nesting habitat
+10.3389/fevo.2017.00084,nocturnality
+10.3389/fevo.2017.00084,obligate parasitoid
+10.3389/fevo.2017.00084,other vegetation
+10.3389/fevo.2017.00084,plant type
+10.3389/fevo.2017.00084,pouncing
+10.3389/fevo.2017.00084,probing
+10.3389/fevo.2017.00084,pursuit
+10.3389/fevo.2017.00084,rocky habitat
+10.3389/fevo.2017.00084,scavenging
+10.3389/fevo.2017.00084,tree cavities
+10.3389/fevo.2017.00084,water content
+10.3389/fevo.2017.00084,water vegetation
+10.3389/fevo.2018.00219,leaf N concentration per unit mass
+10.3389/fevo.2018.00219,leaf phosphorus
+10.3389/fevo.2018.00219,max plant height
+10.3389/fevo.2018.00219,seed mass
+10.3389/fevo.2018.00219,SLA
+10.3389/fevo.2018.00219,wood density
+10.5194/bg-14-3371-2017,anthocyanins
+10.5194/bg-14-3371-2017,B weight
+10.5194/bg-14-3371-2017,C13
+10.5194/bg-14-3371-2017,Ca%
+10.5194/bg-14-3371-2017,carotenoids
+10.5194/bg-14-3371-2017,cellulose %
+10.5194/bg-14-3371-2017,chlorophyll b
+10.5194/bg-14-3371-2017,chlorophyll a
+10.5194/bg-14-3371-2017,efficiency of PSII
+10.5194/bg-14-3371-2017,Fe weight
+10.5194/bg-14-3371-2017,hemicellulose %
+10.5194/bg-14-3371-2017,K content
+10.5194/bg-14-3371-2017,leaf content %
+10.5194/bg-14-3371-2017,leaf mass/area
+10.5194/bg-14-3371-2017,lignin%
+10.5194/bg-14-3371-2017,Mg%
+10.5194/bg-14-3371-2017,Mn weight
+10.5194/bg-14-3371-2017,N content
+10.5194/bg-14-3371-2017,N15%
+10.5194/bg-14-3371-2017,P content
+10.5194/bg-14-3371-2017,phenolics%
+10.5194/bg-14-3371-2017,Si%
+10.5194/bg-14-3371-2017,soluble C
+10.5194/bg-14-3371-2017,Zn weight
+unknown_2,dispersal capacity
+unknown_2,ecological range
+unknown_2,hydric limit
+unknown_2,life cycle strategy
+unknown_2,thermal tolerance
+unknown_30,absence of silica demand
+unknown_30,aerotypes
+unknown_30,biological form
+unknown_30,biovolume
+unknown_30,dominant pigment type
+unknown_30,flagella
+unknown_30,heterocysts
+unknown_30,light uptake parameters
+unknown_30,mixotrophy
+unknown_30,mucilage absence
+unknown_30,mucilage presence
+unknown_30,nutrient uptake parameters
+unknown_30,presence of silica demand
+unknown_30,resting stages
+unknown_30,size
+unknown_30,thermal tolerance
+unknown_30,toxin production
+10.1002/ecs2.2101,density of silk lines in the tangle webbing
+10.1002/ecs2.2101,sociality
+10.1002/ecs2.2101,total volume of tangle webbing
+10.1073/pnas.1315179111,leaf lifespan
+10.1073/pnas.1315179111,leaf N
+10.1073/pnas.1315179111,seed mass
+10.1073/pnas.1315179111,SLA
+10.1073/pnas.1315179111,wood density
+10.1111/j.1461-0248.2006.01006.x,drought tolerance
+10.1111/j.1461-0248.2006.01006.x,expression of molecular weight heat shock protein following heat stress
+10.1111/j.1461-0248.2006.01006.x,SLA
+10.1111/j.1461-0248.2011.01620.x,body shape
+10.1111/jbi.13516,# of reproductive organs per year and individual
+10.1111/jbi.13516,dispersal factor
+10.1111/jbi.13516,fruit size
+10.1111/jbi.13516,growth form
+10.1111/jbi.13516,mode of reproduction
+10.1111/jbi.13516,perennation
+10.1111/jbi.13516,period of production of reproductive organ
+10.1111/oik.02277,anaerobic tolerance
+10.1111/oik.02277,drought tolerance
+10.1111/oik.02277,fire resistance
+10.1111/oik.02277,fire tolerance
+10.1111/oik.02277,flower colour
+10.1111/oik.02277,flowering phenology
+10.1111/oik.02277,growth rate
+10.1111/oik.02277,leaf persistence
+10.1111/oik.02277,life cycle
+10.1111/oik.02277,moisture tolerance
+10.1111/oik.02277,principle means of reproduction
+10.1111/oik.02277,raunkiaer life-form
+10.1111/oik.02277,re-sprouting
+10.1111/oik.02277,seed abundance
+10.1111/oik.02277,seed banking
+10.1111/oik.02277,seed dispersal vector
+10.1111/oik.02277,seed spread rate
+10.1111/oik.02277,seed vigor
+10.1111/oik.02277,shade tolerance
+10.1111/oik.02277,stem tissue
+10.1111/oik.02277,vegetative spread rate
+10.1371/journal.pone.0126112,age category
+10.1371/journal.pone.0126112,behavioural guild
+10.1371/journal.pone.0126112,movement rate
+10.1371/journal.pone.0126112,size
+10.1371/journal.pone.0041323,aspect ratio
+10.1371/journal.pone.0041323,average speed
+10.1371/journal.pone.0041323,body-to-wing-size parameter
+10.1371/journal.pone.0041323,body size
+10.1371/journal.pone.0041323,length of wing
+10.1371/journal.pone.0041323,melanism
+10.1371/journal.pone.0041323,orange hue
+10.1371/journal.pone.0041323,total distance
+10.1371/journal.pone.0041323,total flying time
+10.1371/journal.pone.0041323,wing area
+10.1371/journal.pone.0041323,wing width
+10.1111/1365-2745.12333,dispersal method
+10.1111/1365-2745.12333,max. seed release height
+10.1111/1365-2745.12333,seed mass
+10.1111/ele.12728,age at maturity
+10.1111/ele.12728,body mass
+10.1111/ele.12728,clutch size
+10.1111/ele.12728,clutches per year
+10.1111/ele.12728,egg size
+10.1111/ele.12728,hatchling mass
+10.1111/ele.12728,parity
+10.1111/ele.12728,reproductive lifespan
+10.1111/ele.12728,snout-vent length
+10.1111/geb.12003,body shape
+10.1111/geb.12003,body size
+10.1111/geb.12003,head size & shape
+10.1111/geb.12003,limb traits
+10.1111/geb.12003,tail length
+10.1111/geb.12003,toepad characteristics
+10.1002/aqc.1198,benthic lifestyle
+10.1002/aqc.1198,diet breadth
+10.1002/aqc.1198,female age at maturation
+10.1002/aqc.1198,max total body length
+10.1002/aqc.1198,spawning substrate
+10.1002/ece3.3268,age at first flowering
+10.1002/ece3.3268,dormancy
+10.1002/ece3.3268,competitor-stress-tolerator-ruderal scheme
+10.1002/ece3.3268,diaspore form
+10.1002/ece3.3268,diaspore morphology
+10.1002/ece3.3268,diaspore type
+10.1002/ece3.3268,exposure of diaspores
+10.1002/ece3.3268,flowering duration
+10.1002/ece3.3268,fruit type
+10.1002/ece3.3268,heterodiaspory
+10.1002/ece3.3268,LDMC
+10.1002/ece3.3268,life form
+10.1002/ece3.3268,rosette type
+10.1002/ece3.3268,season of flowering
+10.1002/ece3.3268,season of germination
+10.1002/ece3.3268,seed mass
+10.1002/ece3.3268,seed number
+10.1002/ece3.3268,seed shape index
+10.1002/ece3.3268,seed shedding
+10.1002/ece3.3268,SLA
+10.1002/ece3.3268,type of clonal growth organs
+10.1002/ece3.3268,flower duration
+10.1002/ecs2.2324,body mass
+10.1002/ecs2.2324,diet
+10.1006/jaar.1998.0326,food transport strategy
+10.1007/s00442-015-3430-3,base temperature
+10.1007/s00442-015-3430-3,base water-potential
+10.1007/s00442-015-3430-3,coleoptile tissue density
+10.1007/s00442-015-3430-3,germination rate
+10.1007/s00442-015-3430-3,hydrothermal time
+10.1007/s00442-015-3430-3,initial root mass
+10.1007/s00442-015-3430-3,LDMC
+10.1007/s00442-015-3430-3,rate sum
+10.1007/s00442-015-3430-3,relative growth rate
+10.1007/s00442-015-3430-3,relative growth rate plasticity
+10.1007/s00442-015-3430-3,root elongation rate
+10.1007/s00442-015-3430-3,root mass ratio
+10.1007/s00442-015-3430-3,seed mass
+10.1007/s00442-015-3430-3,SLA
+10.1007/s00442-015-3430-3,specific root length
+10.1007/s00442-016-3547-z,carbon isotope ratios of leaves
+10.1007/s00442-016-3547-z,leaf carbon concentration
+10.1007/s00442-016-3547-z,leaf dry mass
+10.1007/s00442-016-3547-z,leaf N concentration
+10.1007/s00442-016-3547-z,leaf thickness
+10.1007/s00442-016-3547-z,max plant height
+10.1007/s00442-016-3547-z,nitrogen isotope ratios of leaves
+10.1007/s00442-016-3547-z,seed mass
+10.1007/s00442-016-3547-z,SLA
+10.1007/s10531-014-0742-2,breeding system
+10.1007/s10531-014-0742-2,CSR strategy
+10.1007/s10531-014-0742-2,diaspore length
+10.1007/s10531-014-0742-2,diaspore type
+10.1007/s10531-014-0742-2,diaspore width
+10.1007/s10531-014-0742-2,dicliny
+10.1007/s10531-014-0742-2,flowering duration
+10.1007/s10531-014-0742-2,germination
+10.1007/s10531-014-0742-2,hemeroby
+10.1007/s10531-014-0742-2,lateral spread rate
+10.1007/s10531-014-0742-2,leaf area
+10.1007/s10531-014-0742-2,leaf persistence
+10.1007/s10531-014-0742-2,leaf shape
+10.1007/s10531-014-0742-2,life form
+10.1007/s10531-014-0742-2,max height
+10.1007/s10531-014-0742-2,month of start flowering
+10.1007/s10531-014-0742-2,nitrogenous fixation
+10.1007/s10531-014-0742-2,photosynthetic pathway
+10.1007/s10531-014-0742-2,pollination vector
+10.1007/s10531-014-0742-2,reproduction type
+10.1007/s10531-014-0742-2,root depth
+10.1007/s10531-014-0742-2,rosette types
+10.1007/s10531-014-0742-2,seed oil
+10.1007/s10531-014-0742-2,seed protein
+10.1007/s10531-014-0742-2,seed weight
+10.1007/s10531-014-0742-2,seeds dispersal
+10.1007/s10531-014-0742-2,Urbanity
+10.1007/s10531-014-0742-2,woodiness
+10.1007/s10750-017-3208-1,average fecundity
+10.1007/s10750-017-3208-1,disturbance tolerance
+10.1007/s10750-017-3208-1,economic importance
+10.1007/s10750-017-3208-1,environment
+10.1007/s10750-017-3208-1,max length
+10.1007/s10750-017-3208-1,max weight
+10.1007/s10750-017-3208-1,spawning season
+10.1007/s10750-017-3208-1,thermal tolerance
+10.1007/s10750-017-3208-1,Trophic Breadth
+10.1007/s11829-016-9444-x,breeding system
+10.1007/s11829-016-9444-x,reproductive output
+10.1016/B978-0-12-396992-7.00001-0,body mass
+10.1016/B978-0-12-396992-7.00001-0,diet
+10.1016/j.anbehav.2005.05.010,age at first reproduction
+10.1016/j.anbehav.2005.05.010,body mass
+10.1016/j.anbehav.2005.05.010,clutch size
+10.1016/j.anbehav.2005.05.010,cooperative breeder
+10.1016/j.anbehav.2005.05.010,diet
+10.1016/j.anbehav.2005.05.010,habitat
+10.1016/j.anbehav.2005.05.010,longevity
+10.1016/j.anbehav.2005.05.010,number of days a chick is fed
+10.1016/j.ecss.2013.07.019,trophic redundancy
+10.1016/j.rse.2015.06.010,above ground biomass
+10.1016/j.rse.2015.06.010,basal area
+10.1016/j.rse.2015.06.010,cellulose %
+10.1016/j.rse.2015.06.010,crown length
+10.1016/j.rse.2015.06.010,crown width
+10.1016/j.rse.2015.06.010,diameter
+10.1016/j.rse.2015.06.010,fiber
+10.1016/j.rse.2015.06.010,foliar lignin percentage
+10.1016/j.rse.2015.06.010,foliar N
+10.1016/j.rse.2015.06.010,height
+10.1016/j.rse.2015.06.010,leaf mass/area
+10.1038/355073a0,inter-birth interval
+10.1073/pnas.1319342111,LDMC
+10.1073/pnas.1319342111,leaf density
+10.1073/pnas.1319342111,leaf size
+10.1073/pnas.1319342111,leaf thickness
+10.1073/pnas.1319342111,leaf toughness
+10.1073/pnas.1319342111,SLA
+10.1073/pnas.1319342111,wood specific gravity
+10.1086/685894,body mass
+10.1086/685894,distance foraging bird maintains between itself and alarm caller
+10.1086/685894,foraging density
+10.1086/685894,foraging height
+10.1086/685894,foraging strategies
+10.1093/plankt/fbr111,body size
+10.1093/plankt/fbr111,nauplii size
+10.1093/plankt/fbr111,trophi shape
+10.1098/rspb.2010.0501,floral colour
+10.1111/1365-2435.12718,ellenberg's value for salt tolerance
+10.1111/1365-2435.12718,grimes plant strategies
+10.1111/1365-2435.12718,LDMC
+10.1111/1365-2435.12718,leaf area
+10.1111/1365-2435.12718,leaf N content
+10.1111/1365-2435.12718,leaf texture
+10.1111/1365-2435.12718,plant vegetative height
+10.1111/1365-2435.12718,raunkier's life form
+10.1111/1365-2435.12718,reproductive mode
+10.1111/1365-2435.12718,seed dry mass
+10.1111/ele.12081,activity duration
+10.1111/ele.12081,amount of nectar
+10.1111/ele.12081,anther exposure
+10.1111/ele.12081,aperture
+10.1111/ele.12081,beak bloom
+10.1111/ele.12081,behaviour
+10.1111/ele.12081,bill gape
+10.1111/ele.12081,bill length
+10.1111/ele.12081,bloom duration
+10.1111/ele.12081,body depth
+10.1111/ele.12081,body length
+10.1111/ele.12081,body mass
+10.1111/ele.12081,body width
+10.1111/ele.12081,colour
+10.1111/ele.12081,corolla depth
+10.1111/ele.12081,corolla width
+10.1111/ele.12081,diameter
+10.1111/ele.12081,diet
+10.1111/ele.12081,feeding method
+10.1111/ele.12081,floral fragrance
+10.1111/ele.12081,flower-influorescence symmetry
+10.1111/ele.12081,flower sex
+10.1111/ele.12081,flower shape
+10.1111/ele.12081,flower type
+10.1111/ele.12081,flowering season
+10.1111/ele.12081,flowers per inflorescence
+10.1111/ele.12081,fruit colour
+10.1111/ele.12081,fruit size
+10.1111/ele.12081,fruit types
+10.1111/ele.12081,functional group
+10.1111/ele.12081,growth form
+10.1111/ele.12081,habitat
+10.1111/ele.12081,larva feeding method
+10.1111/ele.12081,life span
+10.1111/ele.12081,max height
+10.1111/ele.12081,metabolic type
+10.1111/ele.12081,migratory
+10.1111/ele.12081,min height
+10.1111/ele.12081,mobility
+10.1111/ele.12081,mouthparts length
+10.1111/ele.12081,nectar concentration
+10.1111/ele.12081,nectar volume
+10.1111/ele.12081,number of colours
+10.1111/ele.12081,number of fruiting months
+10.1111/ele.12081,number of seeds
+10.1111/ele.12081,ordour
+10.1111/ele.12081,organism type
+10.1111/ele.12081,orientation
+10.1111/ele.12081,origin
+10.1111/ele.12081,pollen carrying structure
+10.1111/ele.12081,pollen volume per flower
+10.1111/ele.12081,pollination mode
+10.1111/ele.12081,proboscis length
+10.1111/ele.12081,proboscis width
+10.1111/ele.12081,thermal tolerance
+10.1111/ele.12351,body shape
+10.1111/ele.12642,DBH
+10.1111/ele.12642,fruit mass
+10.1111/ele.12642,leaf C:N
+10.1111/ele.12642,leaf N concentration
+10.1111/ele.12642,leaf size
+10.1111/ele.12642,leaf thickness
+10.1111/ele.12642,SLA
+10.1111/ele.12642,wood specific gravity
+10.1111/ele.13217,leaf area ratio
+10.1111/ele.13217,leaf mass ratio
+10.1111/ele.13217,rate of dry mass production per unit dry mass
+10.1111/ele.13217,SLA
+10.1111/gcb.12355,body size
+10.1111/gcb.12355,dispersal ability
+10.1111/gcb.12355,predatory habits
+10.1111/j.0014-3820.2005.tb01015.x,shell ornamentation
+10.1111/j.0014-3820.2005.tb01015.x,shell shape
+10.1111/j.1365-2656.2011.01824.x,prey preference
+10.1111/j.1365-2745.2010.01662.x,leaf area
+10.1111/j.1365-2745.2010.01662.x,max height
+10.1111/j.1365-2745.2010.01662.x,N per unit mass
+10.1111/j.1365-2745.2010.01662.x,N/area
+10.1111/j.1365-2745.2010.01662.x,percentage of stem as lumen
+10.1111/j.1365-2745.2010.01662.x,sapwood area
+10.1111/j.1365-2745.2010.01662.x,seed mass
+10.1111/j.1365-2745.2010.01662.x,SLA
+10.1111/j.1365-2745.2010.01662.x,vessel area
+10.1111/j.1365-2745.2010.01662.x,vessel density
+10.1111/j.1365-2745.2010.01662.x,wood density
+10.1111/j.1600-0633.2010.00465.x,age at maturity
+10.1111/j.1600-0633.2010.00465.x,clutch size
+10.1111/j.1600-0633.2010.00465.x,length
+10.1111/j.1600-0633.2010.00465.x,number of oocytes
+10.1111/j.1600-0633.2010.00465.x,size at age
+10.1111/j.1600-0633.2010.00465.x,somatic wet mass of gonads
+10.1111/j.1600-0633.2010.00465.x,somatic wet mass of viscera
+10.1111/j.1600-0633.2010.00465.x,stage of ovary development
+10.1111/j.1600-0706.2012.20025.x,leaf area
+10.1111/j.1600-0706.2012.20025.x,leaf mass/area
+10.1111/j.1600-0706.2012.20025.x,leaf N content
+10.1111/j.1600-0706.2012.20025.x,seed mass
+10.1111/jbi.12794,SLA
+10.1111/jeb.12717,age
+10.1111/jeb.12717,body mass
+10.1111/jeb.12717,measure of bib size
+10.1111/jeb.12717,sex
+10.1111/jeb.12717,tarsus length
+10.1111/jvs.12681,height
+10.1111/jvs.12681,leaf mass/area
+10.1111/jvs.12681,number of leaves
+10.1111/jvs.12681,plant width
+10.1126/science.1160662,leaf N concentration
+10.1126/science.1160662,leaf size
+10.1126/science.1160662,max DBH
+10.1126/science.1160662,seed mass
+10.1126/science.1160662,SLA
+10.1126/science.1160662,wood density
+10.1371/journal.pone.0182826,growth rate
+10.1890/11-0181.1,body size
+10.1890/13-2261.1,bill length
+10.1890/13-2261.1,body mass
+10.1890/13-2261.1,bill curvature
+10.1890/13-2261.1,corolla length
+10.1890/13-2261.1,curvature
+10.1890/13-2261.1,volume
+10.3389/fpls.2016.01224,change in feeding regime
+10.3389/fpls.2016.01224,dispersal capacity
+10.3389/fpls.2016.01224,egg deposition preference
+10.3389/fpls.2016.01224,habitat
+10.3389/fpls.2016.01224,LDMC
+10.3389/fpls.2016.01224,max height
+10.3389/fpls.2016.01224,seed mass
+10.3389/fpls.2016.01224,SLA
+10.1002/ece3.1286,area of cauline leaf
+10.1002/ece3.1286,chl a b anc total concentrations
+10.1002/ece3.1286,concentration of C
+10.1002/ece3.1286,concentration of N
+10.1002/ece3.1286,concentrations of total carotenoid
+10.1002/ece3.1286,construction costs
+10.1002/ece3.1286,fresh leaf mass
+10.1002/ece3.1286,intercellular CO2 concentration
+10.1002/ece3.1286,intrinsic water use efficiency
+10.1002/ece3.1286,leaf ash contents
+10.1002/ece3.1286,leaf dry weight
+10.1002/ece3.1286,leaf photosynthetic energy use efficiency
+10.1002/ece3.1286,leaf respiration efficiency
+10.1002/ece3.1286,length at widest point
+10.1002/ece3.1286,photosynthetic N use efficiency
+10.1002/ece3.1286,plant height
+10.1002/ece3.1286,SLA
+10.1002/ece3.1286,transpiration rate
+10.1002/ece3.1286,width at the widest point
+10.1002/ece3.1286,xanthophylls
+10.1002/ecs2.2164,clonal reproduction
+10.1002/ecs2.2164,growth form
+10.1002/ecs2.2164,leaf area
+10.1002/ecs2.2164,leaf N content
+10.1002/ecs2.2164,life span
+10.1002/ecs2.2164,pollination
+10.1002/ecs2.2164,potential plant height
+10.1002/ecs2.2164,seed dispersal
+10.1002/ecs2.2164,seed mass
+10.1002/ecs2.2164,SLA
+10.1002/ecy.1485,body size
+10.1002/ecy.1485,feeding method
+10.1002/ecy.1485,mobility speed
+10.1007/s00442-002-0935-3,biomass
+10.1007/s00442-013-2673-0,birth rate
+10.1007/s00442-013-2673-0,body size
+10.1007/s00442-013-2673-0,death rate
+10.1007/s00442-013-2673-0,feeding rate
+10.1007/s00442-013-2673-0,per spore susceptibility
+10.1016/j.anbehav.2009.04.016,behavioural syndrome
+10.1111/j.1461-0248.2007.01140.x,patch detection time
+10.1111/j.1654-1103.2012.01424.x,chemical defenses
+10.1111/j.1654-1103.2012.01424.x,latex content
+10.1111/j.1654-1103.2012.01424.x,nutritional quality
+10.1111/j.1654-1103.2012.01424.x,SLA
+10.1111/j.1654-1103.2012.01424.x,toughness
+10.1111/j.1654-1103.2012.01424.x,trichome density
+10.1111/j.1654-1103.2012.01424.x,water content
+10.1890/05-0219,C:N ratio
+10.1890/05-0219,leaf toughness
+10.1890/05-0219,leaf water content
+10.1890/05-0219,total aboveground biomass
+10.1890/05-0219,trichome density
+10.2307/1939297,growth rate
+10.2307/1939297,larval activity
+10.2307/1939297,proportion of metamorphic phenotypes
+10.2307/1939297,proportion of paedomorphic phenotypes
+10.1007/s10531-014-0850-z,anurophagy
+10.1007/s10531-014-0850-z,body mass
+10.1007/s10531-014-0850-z,habitat
+10.1007/s10531-014-0850-z,head width
+10.1007/s12080-014-0229-5,anterior barbel length
+10.1007/s12080-014-0229-5,body depth/width ratio
+10.1007/s12080-014-0229-5,body shape
+10.1007/s12080-014-0229-5,caudal peduncle depth
+10.1007/s12080-014-0229-5,chemical composition
+10.1007/s12080-014-0229-5,compliance
+10.1007/s12080-014-0229-5,escape velocity
+10.1007/s12080-014-0229-5,eye diameter
+10.1007/s12080-014-0229-5,fibrouses
+10.1007/s12080-014-0229-5,fork length
+10.1007/s12080-014-0229-5,gill arch resistance
+10.1007/s12080-014-0229-5,gill raker length
+10.1007/s12080-014-0229-5,gill raker profile
+10.1007/s12080-014-0229-5,gut length
+10.1007/s12080-014-0229-5,habitat
+10.1007/s12080-014-0229-5,head length
+10.1007/s12080-014-0229-5,lower jaw length
+10.1007/s12080-014-0229-5,max diameter
+10.1007/s12080-014-0229-5,oral gape axis
+10.1007/s12080-014-0229-5,oral gape diameter
+10.1007/s12080-014-0229-5,oral gape/body area ratio
+10.1007/s12080-014-0229-5,pharyngoopercular volume
+10.1007/s12080-014-0229-5,postorbital length
+10.1007/s12080-014-0229-5,protrusion length
+10.1007/s12080-014-0229-5,requiring macro-reduction
+10.1007/s12080-014-0229-5,shape
+10.1007/s12080-014-0229-5,strength
+10.1007/s12080-014-0229-5,toughness
+10.1111/ele.13235,thermal tolerance
+10.1111/oik.04300,defense investment
+10.1111/oik.04300,plant growth
+10.2307/5755,dominance
+10.2307/5755,prey handling efficiency
+10.2307/5755,searching efficiency
+10.1111/brv.12250,body size
+10.1111/ddi.12721,body mass
+10.1111/ddi.12721,brain size to body mass ratio
+10.1111/ddi.12721,diet breadth
+10.1111/ddi.12721,habitat
+10.1111/ddi.12721,native breeding range
+10.1111/ddi.12721,proportion of diet comprising animal matter
+10.1111/ddi.12721,proportion of species diet comprising vertebrate prey
+10.1111/ddi.12721,residence time
+10.1111/ele.12342,floral units
+10.1111/ele.12342,flower shape
+10.1111/ele.12342,nectar splitting
+10.1111/ele.12342,nectar tube length
+10.1111/geb.12148,aerodynamic index
+10.1111/geb.12148,body mass
+10.1111/geb.12148,clutch size
+10.1111/geb.12148,diet
+10.1111/geb.12148,foraging habitat
+10.1111/geb.12148,foraging method
+10.1111/geb.12148,life span
+10.1111/geb.12148,migratory behavior
+10.1111/geb.12148,nesting location
+10.1111/geb.12148,nocturnality
+10.1556/168.2018.19.2.9,body mass
+10.1556/168.2018.19.2.9,litter size
+10.1556/168.2018.19.2.9,number of litters per year
+10.1556/168.2018.19.2.9,trophic guild
+10.1002/ece3.4896,diet
+10.1002/ece3.4896,foraging behaviour
+10.1002/ece3.4896,peak echolocation frequency
+10.1007/s002650000260,body size
+10.1007/s00338-013-1042-0,body shape
+10.1007/s00338-013-1042-0,eye diameter
+10.1007/s00338-013-1042-0,head angle
+10.1007/s00338-013-1042-0,schooling behaviour
+10.1007/s00338-013-1042-0,snout angle
+10.1007/s00338-013-1042-0,snout length
+10.1007/s00442-004-1650-z,crushing strength
+10.1007/s00442-004-1650-z,foraging rate
+10.1007/s00442-004-1650-z,handling time
+10.1007/s00442-016-3631-4,diet
+10.1007/s00442-016-3631-4,hunting strategy
+10.1007/s10526-017-9860-6,gut content
+10.1007/s11692-017-9409-8,aril presence
+10.1007/s11692-017-9409-8,beak height
+10.1007/s11692-017-9409-8,beak length
+10.1007/s11692-017-9409-8,body length
+10.1007/s11692-017-9409-8,diaspore colour
+10.1007/s11692-017-9409-8,disapore shape
+10.1007/s11692-017-9409-8,dispersule diameter
+10.1007/s11692-017-9409-8,hand-wing index
+10.1007/s11692-017-9409-8,max plant height
+10.1016/j.csr.2009.01.003,feeding method
+10.1016/j.csr.2009.01.003,migration method
+10.1016/j.csr.2009.01.003,mobility
+10.1016/j.csr.2009.01.003,substrate preference
+10.1016/j.dsr.2016.11.011,aspect ratio of caudal fin
+10.1016/j.dsr.2016.11.011,aspect ratio of pectoral fin
+10.1016/j.dsr.2016.11.011,body transverse shape
+10.1016/j.dsr.2016.11.011,caudal peduncle throttling
+10.1016/j.dsr.2016.11.011,eye size
+10.1016/j.dsr.2016.11.011,fins surface ratio
+10.1016/j.dsr.2016.11.011,fins surface to body size ratio
+10.1016/j.dsr.2016.11.011,oral gape position
+10.1016/j.dsr.2016.11.011,oral gape shape
+10.1016/j.dsr.2016.11.011,oral gape surface
+10.1016/j.dsr.2016.11.011,pectoral fin position
+10.1016/j.dsr2.2006.11.012,dive depth
+10.1016/j.dsr2.2006.11.012,dive time
+10.1016/j.jtbi.2011.05.033,pericarp thickness
+10.1016/j.jtbi.2011.05.033,rostrum length
+10.1016/j.marenvres.2017.09.004,foraging method
+10.1017/S0031182004005050,ability to enter brackish waters
+10.1017/S0031182004005050,body size
+10.1017/S0031182004005050,depth range
+10.1017/S0031182004005050,feeding method
+10.1017/S0031182004005050,preference for benthic vs. pelagic habitats
+10.1017/S0031182004005050,social behaviour
+10.1034/j.1600-0706.2000.880215.x,seed size
+10.1038/s41559-019-0899-x,ecosystem preference
+10.1038/s41559-019-0899-x,interaction strength
+10.1038/s41559-019-0899-x,metabolic pathway
+10.1038/s41559-019-0899-x,movement type
+10.1046/j.1365-2311.2002.0379a.x,diet
+10.1073/pnas.1721464115,body size
+10.1073/pnas.1721464115,sociality
+10.1080/1357650X.2017.1293074,beam circumference
+10.1080/1357650X.2017.1293074,beam length
+10.1080/1357650X.2017.1293074,brow tine length
+10.1080/1357650X.2017.1293074,coronet circumference
+10.1080/1357650X.2017.1293074,lateralization during display
+10.1080/17451000.2013.793802,gut content
+10.1080/17451000.2013.793802,stable isotope
+10.1086/505157,attack rate
+10.1086/505157,parasitoid selectivity
+10.1098/rsos.150652,body size
+10.1098/rspb.2011.1371,number of eggs produced
+10.1098/rspb.2011.1371,timing of life stage
+10.1098/rspb.2015.2444,beak length and width
+10.1098/rspb.2015.2444,body mass
+10.1098/rspb.2015.2444,crop mass
+10.1098/rspb.2015.2444,fruit size and diameter
+10.1098/rspb.2015.2444,plant height
+10.1098/rspb.2015.2444,pointedness of wing
+10.1111/1365-2435.12838,anal fin height
+10.1111/1365-2435.12838,anal fin length
+10.1111/1365-2435.12838,body depth below midline
+10.1111/1365-2435.12838,body shape
+10.1111/1365-2435.12838,body width
+10.1111/1365-2435.12838,caudal fin depth
+10.1111/1365-2435.12838,caudal fin length
+10.1111/1365-2435.12838,caudal peduncle depth
+10.1111/1365-2435.12838,caudal peduncle length
+10.1111/1365-2435.12838,caudal peduncle width
+10.1111/1365-2435.12838,dorsal fin height
+10.1111/1365-2435.12838,dorsal fin length
+10.1111/1365-2435.12838,eye diameter
+10.1111/1365-2435.12838,eye position
+10.1111/1365-2435.12838,fleshy lip thickness
+10.1111/1365-2435.12838,gill raker length
+10.1111/1365-2435.12838,gut length
+10.1111/1365-2435.12838,gut thickness
+10.1111/1365-2435.12838,head depth
+10.1111/1365-2435.12838,head length
+10.1111/1365-2435.12838,intestinal diameter
+10.1111/1365-2435.12838,lower tooth row angle
+10.1111/1365-2435.12838,lower tooth row length
+10.1111/1365-2435.12838,maximum standard length
+10.1111/1365-2435.12838,mouth height
+10.1111/1365-2435.12838,mouth position
+10.1111/1365-2435.12838,mouth protrusion
+10.1111/1365-2435.12838,mouth width
+10.1111/1365-2435.12838,number of lower teeth
+10.1111/1365-2435.12838,number of upper teeth
+10.1111/1365-2435.12838,oral disk length
+10.1111/1365-2435.12838,oral disk width
+10.1111/1365-2435.12838,pectoral fin height
+10.1111/1365-2435.12838,pectoral fin length
+10.1111/1365-2435.12838,pelvic fin length
+10.1111/1365-2435.12838,snout length closed
+10.1111/1365-2435.12838,snout length open
+10.1111/1365-2435.12838,stomach diameter
+10.1111/1365-2435.12838,stomach length
+10.1111/1365-2435.12838,tooth length lower
+10.1111/1365-2435.12838,tooth length upper
+10.1111/1365-2435.12838,tooth shape
+10.1111/1365-2435.12838,tooth thickness
+10.1111/1365-2435.12838,upper tooth row angle
+10.1111/1365-2435.12838,upper tooth row length
+10.1111/1365-2435.13059,social status
+10.1111/1365-2656.12161,dietary similarity
+10.1111/1365-2656.12161,dietary specialization
+10.1111/1365-2656.12161,flower size
+10.1111/1365-2656.12161,flower size squared
+10.1111/1365-2656.12161,flower type
+10.1111/1365-2656.12161,native
+10.1111/1365-2656.12161,non-native
+10.1111/1365-2656.12161,shifts of feeding behaviour relative to plant traits
+10.1111/1365-2656.12250,aggregation size
+10.1111/1365-2656.12250,body shape
+10.1111/1365-2656.12250,body size
+10.1111/1365-2656.12250,chemical defense
+10.1111/1365-2656.12250,cleaning behaviour
+10.1111/1365-2656.12250,nocturnally active
+10.1111/1365-2656.12250,physical defense
+10.1111/1365-2656.12250,water column position
+10.1111/1365-2656.12264,fledgling mass
+10.1111/1365-2656.12603,age at maturity
+10.1111/1365-2656.12603,juvenile growth rate
+10.1111/1365-2656.12603,reproductive effort
+10.1111/1749-4877.12319,mean bill size
+10.1111/1749-4877.12319,pistil length
+10.1111/1749-4877.12319,stamen length
+10.1111/1749-4877.12319,tube length
+10.1111/1749-4877.12319,tube width
+10.1111/2041-210X.12471,average body breadth
+10.1111/2041-210X.12471,average body length
+10.1111/2041-210X.12471,average body width
+10.1111/2041-210X.12471,ease of access to nectar
+10.1111/2041-210X.12471,flower type
+10.1111/2041-210X.12471,flowers per inflorescences
+10.1111/2041-210X.12471,head or inflorescence catkin
+10.1111/2041-210X.12471,inflorescence capitulum
+10.1111/2041-210X.12471,inflorescence spike
+10.1111/2041-210X.12471,larval feeding preference
+10.1111/2041-210X.12471,life span
+10.1111/2041-210X.12471,species behaviour
+10.1111/een.12374,head width to body size ratio
+10.1111/een.12374,length of mandibles
+10.1111/een.12374,width of mandibles
+10.1111/ele.13216,venom potency
+10.1111/ele.13216,yield
+10.1111/geb.12636,seed predation
+10.1111/j.1095-8312.2005.00465.x,% of time spent moving
+10.1111/j.1095-8312.2005.00465.x,% stationary position
+10.1111/j.1095-8312.2005.00465.x,% time displaying
+10.1111/j.1095-8312.2005.00465.x,displays per minute
+10.1111/j.1095-8312.2005.00465.x,life stage
+10.1111/j.1095-8312.2005.00465.x,number of moves per minute
+10.1111/j.1095-8312.2005.00465.x,size
+10.1111/j.1095-8312.2005.00465.x,stationary position adjustments per minute
+10.1111/j.1095-8312.2008.01112.x,colour patterning
+10.1111/j.1095-8649.2012.03294.x,body size
+10.1111/j.1095-8649.2012.03294.x,diet
+10.1111/j.1461-0248.2012.01744.x,body mass
+10.1111/j.1461-0248.2012.01744.x,foraging action rate
+10.1111/j.1600-0706.2010.18860.x,body size
+10.1111/j.1654-1103.2012.01469.x,seed size
+10.1111/jeb.12923,feeding method
+10.1111/jfb.12177,metabolism
+10.1111/jfb.12177,prey size
+10.1111/jfb.12177,space use
+10.1111/jfb.12177,swimming capacity
+10.1111/jfb.12177,trophic guild
+10.1111/jfb.12177,type of approach
+10.1111/jzo.12566,age class
+10.1111/jzo.12566,body length
+10.1111/jzo.12566,body mass
+10.1111/jzo.12566,diet
+10.1111/jzo.12566,sex
+10.1111/oik.00707,adult mass
+10.1111/oik.00707,diet breadth
+10.1111/oik.00707,home range size
+10.1111/oik.00707,longevity
+10.1111/oik.00707,reproductive potential
+10.1111/oik.00707,trophic guild
+10.1111/oik.04712,body mass
+10.1111/oik.04712,diet
+10.1111/oik.04712,feeding method
+10.1111/oik.04712,mobility
+10.1111/oik.04712,poison
+10.1111/oik.04712,prey capture strategy
+10.1111/oik.04712,toughness
+10.1111/oik.04712,vertical stratification
+10.1111/oik.04885,body size
+10.1139/cjfas-54-6-1211,adult drift
+10.1139/cjfas-54-6-1211,benthic exposure
+10.1139/cjfas-54-6-1211,body size
+10.1139/cjfas-54-6-1211,drift distance
+10.1139/cjfas-54-6-1211,likelihood of being accidentally dislodged by the current
+10.1139/cjfas-54-6-1211,propensity to intentionally drift
+10.1186/1471-2148-13-277,jaw protrusion
+10.1186/1471-2148-13-277,lower jaw opening displacement advantage
+10.1186/1471-2148-13-277,suction index
+10.1186/1471-2148-13-277,transmission coefficient of the opercular four-bar
+10.1186/2193-1801-3-630,bill length
+10.1186/2193-1801-3-630,bill width
+10.1186/2193-1801-3-630,body length
+10.1186/2193-1801-3-630,diet breadth
+10.1186/2193-1801-3-630,foraging stratum
+10.1186/2193-1801-3-630,insect predators
+10.1186/2193-1801-3-630,insect specialists
+10.1186/2193-1801-3-630,tarsus length
+10.1186/s13071-016-1659-2,ecosystem engineer
+10.1186/s13071-016-1659-2,functional response to interspecific competition
+10.1186/s13071-016-1659-2,virulence
+10.1371/journal.pone.0090437,arrival from migration
+10.1371/journal.pone.0090437,body size
+10.1371/journal.pone.0090437,cleistogamy
+10.1371/journal.pone.0090437,clutch size
+10.1371/journal.pone.0090437,defense mechanism
+10.1371/journal.pone.0090437,dispersal type
+10.1371/journal.pone.0090437,feeding guild
+10.1371/journal.pone.0090437,feeding method
+10.1371/journal.pone.0090437,flowering phenology
+10.1371/journal.pone.0090437,flying habit
+10.1371/journal.pone.0090437,foliage persistence
+10.1371/journal.pone.0090437,foliage structure
+10.1371/journal.pone.0090437,foraging substrate
+10.1371/journal.pone.0090437,forest edge distance
+10.1371/journal.pone.0090437,habitat structure
+10.1371/journal.pone.0090437,hibernation form
+10.1371/journal.pone.0090437,inflorescence colour
+10.1371/journal.pone.0090437,inflorescence type
+10.1371/journal.pone.0090437,life cycle
+10.1371/journal.pone.0090437,light requirement
+10.1371/journal.pone.0090437,mass
+10.1371/journal.pone.0090437,moisture level
+10.1371/journal.pone.0090437,native
+10.1371/journal.pone.0090437,nest form
+10.1371/journal.pone.0090437,nest height
+10.1371/journal.pone.0090437,nest parasitized by cowbirds
+10.1371/journal.pone.0090437,nest substrate
+10.1371/journal.pone.0090437,number of broods
+10.1371/journal.pone.0090437,number of months active by year
+10.1371/journal.pone.0090437,physical defense
+10.1371/journal.pone.0090437,pollination vector
+10.1371/journal.pone.0090437,primary habitat
+10.1371/journal.pone.0090437,raunkiaer life-form
+10.1371/journal.pone.0090437,reproductive mode
+10.1371/journal.pone.0090437,rhizome
+10.1371/journal.pone.0090437,seed dispersal vector
+10.1371/journal.pone.0090437,seed production
+10.1371/journal.pone.0090437,seed size
+10.1371/journal.pone.0090437,storage organ
+10.1371/journal.pone.0090437,substrate
+10.1371/journal.pone.0090437,tarsus length
+10.1371/journal.pone.0090437,territory size
+10.1371/journal.pone.0090437,type of vegetation
+10.1371/journal.pone.0090437,vertical stratification
+10.1371/journal.pone.0090437,wing condition
+10.1371/journal.pone.0090437,wing length
+10.1666/0094-8373(2005)031<0056:WTPCIT>2.0.CO;2,morphometric measurements
+10.1666/13024,foraging method
+10.1890/14-0024.1,body size
+10.1890/14-0024.1,depth of nectar tube
+10.1890/14-0024.1,floral symmetry
+10.1890/14-0024.1,orientation of the corolla
+10.1890/14-0024.1,presentation pattern of pollen
+10.1890/14-0024.1,the dimensionality of flowers
+10.1890/14-0024.1,width of necular tube
+10.3354/meps09086,age at maturation
+10.3354/meps09086,age at sex change.
+10.3354/meps09086,diet
+10.3354/meps09086,gonadosomatic index of mature females
+10.3354/meps09086,hepatosomatic index
+10.3354/meps09086,max body size
+10.3354/meps09086,mortality rate
+10.3354/meps09086,survival rates
+10.3354/meps11626,foraging habitat
+10.3354/meps11626,trophic level of prey consumed
+10.7717/peerj.2779,hairiness
+unknown_3,diet
+unknown_3,feeding method
+10.1002/ece3.1395,cortisol concentrations
+10.1002/ece3.1395,emerge from refuge or not
+10.1002/ece3.1395,percentage of tank basal area covered
+10.1002/ece3.1395,percentage of time being active
+10.1002/ece3.1395,time in the middle of the tank
+10.1002/ece3.1395,time spent outside of refuge
+10.1002/ece3.1395,total distance moved
+10.1002/ece3.1395,track length
+10.1007/s00442-010-1712-3,apparent distance
+10.1007/s00442-010-1712-3,max acceleration
+10.1007/s00442-010-1712-3,max response speed
+10.1007/s00442-010-1712-3,mean response speed
+10.1007/s00442-010-1712-3,response distance
+10.1007/s00442-010-1712-3,response duration
+10.1007/s00442-010-1712-3,response latency
+10.1007/s00442-010-1712-3,time to max speed
+10.1007/s10071-018-1209-8,personality
+10.1016/j.ecss.2017.11.016,body size
+10.1016/j.ecss.2017.11.016,capture strategy
+10.1016/j.ecss.2017.11.016,capture tools
+10.1016/j.ecss.2017.11.016,feeding method
+10.1016/j.ecss.2017.11.016,wet body weight
+10.1016/j.yhbeh.2007.08.004,body position
+10.1016/j.yhbeh.2007.08.004,body shape
+10.1016/j.yhbeh.2007.08.004,body size
+10.1016/j.yhbeh.2007.08.004,colour
+10.1016/j.yhbeh.2007.08.004,escape technique
+10.1016/j.yhbeh.2007.08.004,flight initiation distance
+10.1023/B:APPA.0000038623.75416.e3,prey-stage preference
+10.1073/pnas.1302051110,vision ability
+10.1098/rspb.2004.2899,growth rate
+10.1111/ele.12529,body size
+10.1111/ele.12529,C:N ratio
+10.1111/ele.12529,incisor strength
+10.1111/ele.12529,LDMC
+10.1111/ele.12529,leaf C:N ratio
+10.1111/ele.12529,plant height
+10.1111/j.1365-2109.2012.03205.x,body mass
+10.1111/j.1365-2109.2012.03205.x,diet
+10.1111/j.1365-2109.2012.03205.x,head width
+10.1111/j.1365-2109.2012.03205.x,mouth width
+10.1111/j.1365-2311.2008.01044.x,diet
+10.1111/j.1365-2656.2010.01705.x,body size
+10.1111/j.1365-2656.2010.01705.x,inducibility
+10.1111/oik.01515,apparency
+10.1111/oik.01515,camouflage
+10.1111/oik.01515,response to attack
+10.1111/oik.01515,resting substrate
+10.1111/oik.01515,stereotypy
+10.1177/1059712311426800,foraging behaviour
+10.1371/journal.pone.0082344,body mass
+10.1371/journal.pone.0082344,life stage
+10.1371/journal.pone.0082344,movement behaviour
+10.1371/journal.pone.0082344,shape
+10.1371/journal.pone.0098755,floral scent
+10.1371/journal.pone.0098755,flower colour
+10.1371/journal.pone.0130571,coloration
+10.2307/2410482,gall size
+10.3354/meps10622,diet
+10.3389/fevo.2019.00025,body size
+10.3389/fevo.2019.00025,likelihood of females surviving to blood feed
+10.3389/fevo.2019.00025,likelihood of survival to adulthood
+10.3389/fevo.2019.00025,mean fecundity in the first gonotrophic cycle
+10.3389/fevo.2019.00025,mean number of feeding bouts required to take a blood meal
+10.3389/fevo.2019.00025,median development time
+unknown_7,anti-predator aggregation behaviour of prey
+unknown_7,hunting strategy
+unknown_7,water column position
+10.1016/j.biocontrol.2010.12.005,herbivore defense
+10.1890/14-0306.1,trophic impact
+10.1016/j.ecocom.2007.11.002,defensive traits
+10.1016/j.ecolmodel.2006.07.023,defensive traits
+10.1016/j.mbs.2016.01.005,attack rate
+10.1016/j.mbs.2016.01.005,parasitoid selectivity
+10.1023/A:1008991021305,survival rate
+10.1098/rspb.2016.1931,diet
+10.1098/rstb.2008.0286,trophic guild
+10.1111/1365-2656.12274,age at 50% maturity
+10.1111/1365-2656.12274,average natural morality
+10.1111/1365-2656.12274,fishing mortality rate
+10.1111/1365-2656.12274,stock-recruit relationship curve slope
+10.1111/j.1365-2656.2011.01812.x,body mass
+10.1371/journal.pone.0012092,body size
+10.1371/journal.pone.0053873,head shape
+10.1371/journal.pone.0053873,rostrum
+10.1890/06-1946.1,growth rate
+10.3390/math6120336,size
+unknown_11,foraging behaviour
+10.1002/ece3.4377,ant length
+10.1002/ece3.4377,feeding method
+10.1002/ece3.4377,growth habit
+10.1002/ece3.4377,life form
+10.1002/ece3.4377,primary dispersal mechanism
+10.1002/ece3.4377,seed shape
+10.1007/s11160-018-9522-5,bathymetric distribution
+10.1007/s11160-018-9522-5,body size
+10.1007/s11160-018-9522-5,snout length
+10.1016/S1385-1101(02)00220-4,habitat
+10.1016/S1385-1101(02)00220-4,shell aspect ratio
+10.1016/S1385-1101(02)00220-4,shell size
+10.1023/A:1022417601010,body size
+10.1023/A:1022417601010,larval colouration
+10.1023/A:1022417601010,lifestyle
+10.1093/beheco/11.4.452,antipredator behaviour
+10.1093/beheco/11.4.452,body mass
+10.1093/beheco/11.4.452,diet
+10.1093/beheco/11.4.452,group size
+10.1098/rsos.160957,body mass
+10.1098/rsos.160957,ear length
+10.1098/rsos.160957,head and body length
+10.1098/rsos.160957,length of hind foot
+10.1098/rsos.160957,morphometric measurements
+10.1098/rsos.160957,tail length
+10.1111/brv.12377,seed dispersal
+10.1111/ecog.03396,bill length
+10.1111/ecog.03396,bill width
+10.1111/ecog.03396,body mass
+10.1111/ecog.03396,crop mass
+10.1111/ecog.03396,fruit diameter
+10.1111/ecog.03396,fruit length
+10.1111/ecog.03396,plant height
+10.1111/ecog.03396,wing shape
+10.1111/j.1365-2656.2008.01460.x,body size
+10.1186/1471-2148-10-204,body shape
+unknown_13,diet
+unknown_13,feeding method
+unknown_13,method of locomotion
+unknown_13,size

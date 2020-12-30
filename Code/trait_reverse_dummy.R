@@ -10,6 +10,10 @@
 ##########
 ##########
 
+# Note to future readers. This code is kind of a mess. I acknowledge this. May 
+# the coding gods just be happy it runs and is quasi-reproducible
+
+# set-up =======================================================================
 library(tidyverse)
 library(data.table)
 library(here)
@@ -18,8 +22,9 @@ library(here)
 dummy_new = read_csv(here('./Data/Cole-Original-Data/traits_dummy_fixed.csv'))
 traits_fixed = read_csv(here('./Data/Cole-Original-Data/traits_fixed.csv'))
 func_biogeo_study_data = read_csv(here('./Data/Cole-Original-Data/study_classification_FuncBiogeog_to_append.csv'))
-func_biogeo_trait_data = read_csv(here('./Data/Cole-Original-Data/traits_classification_FuncBiogeog_to_append.csv'))
+func_biogeo_trait_data = read_csv(here('./Data/Cole-Original-Data/traits_classification_FuncBiogeog_to_append_revised.csv'))
 
+# create data for initial data collection ======================================
 
 all = traits_fixed$DOI
 some = as.factor(dummy_new$DOI)
@@ -31,7 +36,8 @@ missing_dois = as.character(unique(missing_dois$DOI))
 ###### keeping this here for posterity but this problem was solved
 
 
-##### here, I'm making a new df that has each trait and each DOI paired so I can pull things based on the DOI and on the traits
+##### here, I'm making a new df that has each trait and each DOI paired so I 
+##### can pull things based on the DOI and on the traits
 # additive = data.frame(DOI = as.character(),
 #                       Trait = as.character())
 # traits = names(dummy_new)
@@ -57,7 +63,8 @@ dummy_new$sums = rowSums(dummy_new[,c(2:ncol(dummy_new))])
 check_add = data.frame(table(additive$DOI)) %>% 
   rename(DOI = Var1, Trait = Freq) %>% 
   distinct()
-check_add = check_add[order(check_add$DOI),] #important addition to make sure things are ordered properly
+check_add = check_add[order(check_add$DOI),] #important addition to make sure 
+                                             #things are ordered properly
 check_orig = data.frame(dummy_new[,c(1,ncol(dummy_new))]) %>% 
   distinct()
 check_orig = check_orig[order(check_orig$DOI),]
@@ -65,30 +72,41 @@ check_add == check_orig
 check_add[500:802,] == check_orig[500:802,]
 
 check_orig[duplicated(check_orig$DOI),]
-###### ok these above checks ran fine so the number of traits associated with each DOI look fine
-###### I'm interpreting this as the additive df is doing what I'm asking it to do and we're good on that front
+###### begin NOTE ##############################################################
+# ok these above checks ran fine so the number of traits associated with 
+# each DOI look fine
+# I'm interpreting this as the additive df is doing what I'm asking it to 
+# do and we're good on that front
+###### end NOTE ################################################################
 
+# find missing DOIs and put them in a df =======================================
 
 #grab traits_fixed df with the DOIs that I'm missing
 missing_doi_traits = traits_fixed %>% 
   filter(DOI %in% missing_dois) %>% 
-  select(DOI, Traits) %>%  #note, all the traits are actually in the trait_levels database that we went through, so I'll just join here
+  select(DOI, Traits) %>%  #note, all the traits are actually in the 
+                           #trait_levels database that we went through, 
+                           #so I'll just join here
   rename(Trait = Traits)
 
 missing_doi_traits$DOI = as.factor(missing_doi_traits$DOI)
 
-names(missing_doi_traits)
 additive = rbind(additive, missing_doi_traits)
 n_distinct(additive$DOI) #okay, we have all 822 studies now
 
 #join all the other trait levels to the additive database 
-trait_levels = read_csv(here('./Data/Cole-Original-Data/trait_levels_clean.csv'))
+trait_levels = 
+  read_csv(here('./Data/Cole-Original-Data/trait_levels_clean.csv'))
 
-#now, there are likely duplicated traits in the trait_levels dataframe, I have to get rid of them so I can make proper pairs to them 
+###### begin NOTE ##############################################################
+# now, there are likely duplicated traits in the trait_levels dataframe, 
+# I have to get rid of them so I can make proper pairs to them 
+###### end NOTE ################################################################
 dups = trait_levels[duplicated(trait_levels$Trait_spell_corrected),]
 dup_df = trait_levels %>% 
   filter(Trait_spell_corrected %in% dups$Trait_spell_corrected)
-#after checking visually, all duplicates are true duplicates (i.e. no traits that were the same were coded differently)
+#after checking visually, all duplicates are true duplicates 
+#(i.e. no traits that were the same were coded differently)
 #so I can get rid of them now with no problems
 
 trait_levels = trait_levels[!duplicated(trait_levels$Trait_spell_corrected),]
@@ -97,22 +115,27 @@ trait_levels_sub = trait_levels %>%
   select(Trait_spell_corrected, Primary_classification, Secondary_classification) %>% 
   rename(Trait = Trait_spell_corrected)
 
-
-#do a check to make sure that there are no traits coming in from the dummy set that aren't in the levels set and vice versa
+#do a check to make sure that there are no traits coming in from the dummy set 
+#that aren't in the levels set and vice versa
 traits_levels_unique = sort(unique(as.character(trait_levels_sub$Trait)))
 traits_additive_unique = sort(unique(as.character(additive$Trait)))
-missing_traits = data.frame(setdiff(traits_additive_unique, traits_levels_unique)) #as long as this is empty
-missing_traits1 = data.frame(setdiff(traits_levels_unique, traits_additive_unique)) #and this is empty - all the traits that should be there are accounted for
+missing_traits = #as long as this is empty
+  data.frame(setdiff(traits_additive_unique, traits_levels_unique)) 
+missing_traits1 = #and this is empty - all the traits that should be there are 
+                   #accounted for
+  data.frame(setdiff(traits_levels_unique, traits_additive_unique)) 
 
-#### Begin the merge
+# Now begin the merge of new and old data ======================================
 
 #first get the trait classifications to the DOIs by the traits
 additive_levels = merge(additive, trait_levels_sub, 
                         by.x = 'Trait', by.y = 'Trait')
 
-#add functional bigeo geo DOIs and traits here
-#NOTE - did some checking, and dois: "10.1111/1365-2435.13142" & "10.1111/jbi.13171" already exist in previous set of studies
-#so i'll remove them as we should go with the first pass on those papers
+###### begin NOTE ##############################################################
+# did some checking, and dois: "10.1111/1365-2435.13142" & 
+# "10.1111/jbi.13171" already exist in previous set of studies
+# so i'll remove them as we should go with the first pass on those papers
+###### end NOTE ################################################################
 func_biogeo_study_data = func_biogeo_study_data %>% 
   filter(Relevance == 1) 
 
@@ -122,11 +145,25 @@ func_biogeo_trait_data = func_biogeo_trait_data %>%
   filter(DOI %notin% c("10.1111/1365-2435.13142", "10.1111/jbi.13171"))
 
 #do a check to make sure that all the dois are in both 
-traits_levels_unique_biogeo = sort(unique(as.character(func_biogeo_study_data$DOI)))
-traits_additive_unique_biogeo = sort(unique(as.character(func_biogeo_trait_data$DOI)))
-missing_dois_biogeo = data.frame(setdiff(traits_additive_unique_biogeo, traits_levels_unique_biogeo)) #as long as this is empty
-missing_dois_biogeo_1 = data.frame(setdiff(traits_levels_unique_biogeo, traits_additive_unique_biogeo)) #and this is empty - all the traits that should be there are accounted for
+traits_levels_unique_biogeo = 
+  sort(unique(as.character(func_biogeo_study_data$DOI)))
+traits_additive_unique_biogeo = 
+  sort(unique(as.character(func_biogeo_trait_data$DOI)))
+missing_dois_biogeo =  #as long as this is empty
+  data.frame(setdiff(traits_additive_unique_biogeo,
+                     traits_levels_unique_biogeo)) 
+missing_dois_biogeo_1 = #and this is empty - all the traits are accounted for
+  data.frame(setdiff(traits_levels_unique_biogeo, 
+                     traits_additive_unique_biogeo)) 
+###### begin NOTE ##############################################################
+# so the above two dataframes (missing_dois..) are empty so that means that the
+# traits are the same in each dataframe which is what we want. 
+# This addresses the issue we had in mid December 2020 with data missing - 
+# note it was remedied as there was an issue in pulling the data from the Google
+# sheet but now all the traits are there that should be there
+###### end NOTE ################################################################
 
+# Make an 'additive' dataframe for new data ====================================
 
 additive_biogeo = func_biogeo_trait_data %>% 
   select(Original_trait, DOI, Primary_classification, Secondary_classification) %>% 
@@ -135,14 +172,20 @@ names(additive_levels) == names(additive_biogeo) #make sure this is all 'TRUE'
 
 additive_levels = rbind(additive_levels, additive_biogeo)
 additive_levels = unique(additive_levels)
+n_distinct(additive_levels$DOI) # this needs to == 865
+
 #make the dummy datasets for the different levels here
 additive_orig_traits = additive_levels %>% 
   select(DOI, Trait)
 additive_prim_traits = additive_levels %>% 
   select(DOI, Primary_classification) %>% 
   distinct()
-#note two options here - fill secondary with primary or cut it out, I'll do both
-#option1
+
+###### begin NOTE ##############################################################
+# There are two options here - fill secondary with primary or cut it out, 
+# I'll do both but I'll start with option 1
+###### end NOTE ################################################################
+#option 1
 additive_sec_traits_fillempty = additive_levels %>% 
   select(DOI, Primary_classification, Secondary_classification) %>% 
   mutate_all(na_if,"") %>% 
@@ -161,7 +204,8 @@ additive_sec_traits_dropempty = additive_levels %>%
   distinct() %>% 
   filter(!is.na(Secondary_classification))
 
-#now perform reshaping to get the dummies 
+# Perform reshaping to get dummy data ==========================================
+
 orig_traits_multivar = additive_orig_traits %>% 
   mutate(counts = 1) %>% 
   spread(Trait, counts, fill = 0)
@@ -179,7 +223,8 @@ sec_empty_traits_multivar = additive_sec_traits_dropempty %>%
   ##note: just using the old dummy here to check things for peace of mind 
 old_dummy = read_csv(here('./Data/Cole-Original-Data/traits_dummy_old.csv'))
 old_dummy = old_dummy %>% 
-  select(DOI, Ecosystem, Taxonomic, System, `Forecasting/Predictive`, `Global Change Driver`,
+  select(DOI, Ecosystem, Taxonomic, System, `Forecasting/Predictive`, 
+         `Global Change Driver`,
          TOS, Filter)
 n_distinct(old_dummy$DOI) #note, only 802 here, gotta get the other 20 from the other df
 
@@ -191,13 +236,29 @@ current = read_csv(here('./Data/Cole-Original-Data/finalized_lit_db_for_r.csv'),
                    guess_max = 10000)
 current = current %>% 
   filter(`Relevant to Study` == 'Y' | `Relevant to Study` == 'y') %>% 
-  rename(TOS = `Type of study`)
+  rename(TOS = `Type of study`,
+         Relevance = `Relevant to Study`)
 
 #gotta do it for the new data too
 func_biogeo_study_data = func_biogeo_study_data %>% 
   filter(Relevance == 1) %>%
   filter(DOI %in% additive_biogeo$DOI) %>% 
-  rename(TOS = `Type of study`)
+  rename(TOS = `Type of study`,
+         Year = PY) %>% 
+  select(-c(TI, AB, AU, PT, SO, AdditionalReviewNeeded, ReviewerNotes, 
+            TypeofGC, ReviewedBy))
+sort(names(current)) == sort(names(func_biogeo_study_data)) #this must all be T
+
+# join new and old data
+func_biogeo_study_data =
+  func_biogeo_study_data[, match(names(current), 
+                                 names(func_biogeo_study_data))]
+if(all(names(func_biogeo_study_data) == names(current))) {
+  
+  current = rbind(current, func_biogeo_study_data)
+}
+
+# Add in categorical variables =================================================
 
 #TOS
 tos = current %>% 
@@ -305,6 +366,9 @@ levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="Broad"] <- "Multiple
 levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Herps"] <- "Herpetofauna"
 levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Broad"] <- "Multiple"
 levels(other_data$Ecosystem)
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="freshwater"] <- "Freshwater"
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="terrestrial"] <- "Terrestrial"
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="marine"] <- "Marine"
 
 #merge all data together
 other_data_TOS = merge(other_data, TOS_data, 
