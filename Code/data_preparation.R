@@ -14,20 +14,21 @@
 # the coding gods just be happy it runs and is quasi-reproducible
 
 # set-up =======================================================================
+
 library(tidyverse)
 library(data.table)
 library(here)
 `%notin%` = Negate(`%in%`)
 
 dummy_new = read_csv(here('./data/unprocessed-data/traits_dummy_fixed.csv'))
-traits_fixed = read_csv(here('./Data/Cole-Original-Data/traits_fixed.csv'))
+traits_fixed = read_csv(here('./data/unprocessed-data/traits_fixed.csv'))
 func_biogeo_study_data = 
-  read_csv(here(paste('./data/unprocessed-data',
+  read_csv(here(paste0('./data/unprocessed-data',
   '/study_classification_FuncBiogeog_to_append.csv')))
 func_biogeo_trait_data = 
-  read_csv(here(paste('./data/unprocessed-data','
-                      /traits_classification','
-                      _FuncBiogeog_to_append_revised.csv')))
+  read_csv(here(paste0('./data/unprocessed-data',
+  '/traits_classification',
+  '_FuncBiogeog_to_append_revised.csv')))
 
 # create data for initial data collection ======================================
 
