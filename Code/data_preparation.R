@@ -18,6 +18,7 @@
 library(tidyverse)
 library(data.table)
 library(here)
+library(stringr)
 `%notin%` = Negate(`%in%`)
 
 dummy_new = read_csv(here('./data/unprocessed-data/traits_dummy_fixed.csv'))
@@ -256,7 +257,7 @@ func_biogeo_study_data = func_biogeo_study_data %>%
   rename(TOS = `Type of study`,
          Year = PY) %>% 
   select(-c(TI, AB, AU, PT, SO, AdditionalReviewNeeded, ReviewerNotes, 
-            TypeofGC, ReviewedBy))
+            ReviewedBy, `Global Change`))
 sort(names(current)) == sort(names(func_biogeo_study_data)) #this must all be T
 
 # join new and old data
@@ -371,17 +372,30 @@ other_data = current %>%
          `Global Change Driver`, `Forecasting/Predictive`) %>% 
   rename(GlobalChange = `Global Change Driver`,
          Forecasting = `Forecasting/Predictive`)
-other_data$Ecosystem = as.factor((other_data$Ecosystem))
-other_data$Taxonomic = as.factor((other_data$Taxonomic))
 other_data$DOI = as.factor(other_data$DOI)
 
-levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="Broad"] <-
-  "Multiple"
+# make sure capitalization is consistent
+other_data$Taxonomic = str_to_title(other_data$Taxonomic)
+other_data$Ecosystem = str_to_title(other_data$Ecosystem)
+other_data$GlobalChange = str_to_title(other_data$GlobalChange)
+
+other_data$Ecosystem = as.factor((other_data$Ecosystem))
+other_data$Taxonomic = as.factor((other_data$Taxonomic))
+
 levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Herps"] <- 
   "Herpetofauna"
 levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Broad"] <- 
   "Multiple"
-levels(other_data$Ecosystem)
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Bacteria"] <- 
+  "Other"
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Phytoplankton"] <- 
+  "Plankton"
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Fungi"] <- 
+  "Other"
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Invertebrates"] <- 
+  "Other"
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="Broad"] <-
+  "Multiple"
 levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="freshwater"] <- 
   "Freshwater"
 levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="terrestrial"] <- 

@@ -54,9 +54,8 @@ primary_traits_abund_clean = primary_traits_abund %>%
            Taxonomic == "Other" ~ "Other",
            Taxonomic == "Plants" ~ "Plants")
   ) %>%
-  select(DOI:GlobalChange,GlobalChangeCat, PredictiveCat,
-         Predictive:survival) %>%
-  filter(TOS != "NA")
+  select(DOI:GlobalChange,GlobalChangeCat, PredictiveCat, TaxonomicGroup,
+         Predictive:survival)
 write_csv(primary_traits_abund_clean, 
           here(paste0('./data/processed-data',
                       '/primary_traits_dummy_abundance_models.csv')))
@@ -64,6 +63,7 @@ write_csv(primary_traits_abund_clean,
 # clean secondary abundance dataset ============================================
 
 secondary_traits_abund_clean = secondary_traits_abund %>%
+  select(-`X1`) %>% 
   group_by(DOI) %>%
   sample_n(1) %>%
   dplyr::rename(Predictive = Forecasting, 
@@ -87,7 +87,7 @@ secondary_traits_abund_clean = secondary_traits_abund %>%
            Taxonomic == "Other" ~ "Other",
            Taxonomic == "Plants" ~ "Plants")
   ) %>%
-  select(DOI:GlobalChange,GlobalChangeCat, PredictiveCat, 
+  select(DOI:GlobalChange,GlobalChangeCat, PredictiveCat, TaxonomicGroup,
          Predictive:zinc) 
 write_csv(secondary_traits_abund_clean, 
           here(paste0('./data/processed-data',
@@ -118,7 +118,7 @@ primary_traits_pa_clean = primary_traits_pa %>%
            Taxonomic == "Other" ~ "Other",
            Taxonomic == "Plants" ~ "Plants")
   ) %>%
-  select(DOI:GlobalChange,GlobalChangeCat:PredictiveCat,
+  select(DOI:GlobalChange,GlobalChangeCat:PredictiveCat, TaxonomicGroup,
          Predictive:survival) 
 write_csv(primary_traits_pa_clean, 
           here(paste0('./data/processed-data',
@@ -150,7 +150,7 @@ secondary_traits_pa_clean = secondary_traits_pa %>%
            Taxonomic == "Other" ~ "Other",
            Taxonomic == "Plants" ~ "Plants")
   ) %>%
-  select(DOI:GlobalChange,GlobalChangeCat, PredictiveCat, 
+  select(DOI:GlobalChange,GlobalChangeCat, PredictiveCat, TaxonomicGroup,
          Predictive:zinc) 
 write_csv(secondary_traits_pa_clean, 
           here(paste0('./data/processed-data',

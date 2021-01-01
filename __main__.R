@@ -41,5 +41,103 @@ source(here('./code/data_preparation.R'))
 rm(list = ls())
 source(here('./code/pre_multivar_data_cleaning.R'))
 
+# This script takes the data that were processed in the previous script and 
+# does some cleaning to ensure all four datasets (primary vs. secondary trait 
+# classification and abundance v. presence/absence) are consistent and ready
+# to be used in the multivariate analyses 
+
+# Primary PA multivariate analysis =============================================
+rm(list = ls())
+source(here('./code/primary_pa_multivar_models.R'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

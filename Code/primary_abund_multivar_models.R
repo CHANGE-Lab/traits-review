@@ -9,50 +9,68 @@
 # DATE OF CREATION: 2020-06-30
 ##########
 ##########
+# set-up =======================================================================
 
+library(devtools)
+library(knitr)
 library(tidyverse)
 library(vegan)
 library(viridis)
+library(PNWColors)
 library(mvabund)
+library(reshape2)
 library(here)
 
-#separate the modeling into the P/A modeling (1/0) and then the abundance modeling
-primary_abundance = 
-  read_csv(
-    here('./Data/Cole-Output-Data(readyforanalysis)/primary_traits_dummy_abundance_models.csv'))
 
-#split species and sites
+primary_abundance = 
+  read_csv(here(paste0('./data/processed-data',
+                       '/primary_traits_dummy_abundance_models.csv')))
+
+# Ordination ===================================================================
+
+###### begin NOTE ##############################################################
+# The below section has been commented out for simpler use. The ordination takes 
+# a good while to run, easily over 2 hours on a normal laptop, so we've saved
+# the result as an RDS object, which can be easily read into the environment 
+# using the code provided. This will allow the user to inspect the result and
+# subsequent plots that are made in this script, without re-running the 
+# ordination. Note that due to the nature of the analysis, re-running the actual
+# ordination will result in slightly different (not significantly) results each
+# time, and thus should be avoided. All statistics about the ordination itself 
+# can be accessed via the RDS object after reading it into the environment.
+###### end NOTE ################################################################
+
+# split into 'sites' and 'species' just to put it into typical ecological
+# # multivariate context
 primary_abundance_sites = data.frame(primary_abundance[,1:10])
 primary_abundance_species = data.frame(primary_abundance[,11:ncol(primary_abundance)])
 
-#run actual ordination - try with both k = 2 & 3
-# set.seed(00001)
-# 
-# primary_abundance_ord_iso = metaMDS(primary_abundance_species,
-#                                      #distance = 'bray',
-#                                      trymax = 1000,
-#                                     k = 3)
-# 
-# saveRDS(primary_abundance_ord_iso, 
-#         here('./Model Output/Primary_abundance/nMDS-Ordinations/primary_abundance_ord_iso.rds'))
+primary_abundance_ord_iso = metaMDS(primary_abundance_species,
+                                     #distance = 'bray',
+                                    trymax = 1000,
+                                    k = 3)
+
+saveRDS(primary_abundance_ord_iso, 
+        here('./data/nmds-intermediate/primary_abundance_ord_iso.rds'))
 primary_abundance_ord_iso  = 
-  readRDS(here('./Model Output/Primary_abundance/nMDS-Ordinations/primary_abundance_ord_iso.rds'))
+  readRDS(here('./data/nmds-intermediate/primary_abundance_ord_iso.rds'))
 
-############################## Plotting pipeline ###############################
+# Get results from ordination ==================================================
 
-#extract scores
+# extract scores
 primary_ab_k4_scores = data.frame(scores(primary_abundance_ord_iso)) 
 primary_ab_k4_scores$points = rownames(primary_ab_k4_scores) 
 primary_ab_scores = cbind(primary_abundance_sites, primary_ab_k4_scores)
 
-#add species
-primary_ab_trait_scores = data.frame(scores(primary_abundance_ord_iso, 'species'))
+# add species
+primary_ab_trait_scores = data.frame(scores(primary_abundance_ord_iso, 
+                                            'species'))
 primary_ab_trait_scores$species = rownames(primary_ab_trait_scores)
 primary_ab_trait_scores$species[6] = 'life history'
 primary_ab_trait_scores$species[8] = 'resource acquisition'
 str(primary_ab_scores)
 
-########### Get Hulls
+# Plotting pipeline ============================================================
 
 primary_ab_scores$Ecosystem = 
   as.factor(primary_ab_scores$Ecosystem)
@@ -102,18 +120,25 @@ hull_ab_taxonomic = rbind(grp_ab_tax_Birds, grp_ab_tax_Insects,
                           grp_ab_tax_Plankton, grp_ab_tax_Other, 
                           grp_ab_tax_Fish)
 
-#taxonomic group
-#first make new classifications 
+# taxonomic group
+# first make new classifications 
 primary_ab_scores = primary_ab_scores %>% 
   mutate(TaxonomicGroup = 
            ifelse(primary_ab_scores$Taxonomic %in% 
-                    c('Mammals', 'Birds', 'Herpetofauna', 'Fish'), 'Vertebrates', 
-                  ifelse(primary_ab_scores$Taxonomic %in%
-                           c('Insects', 'Plankton'), 'Invertebrates', 
-                         ifelse(primary_ab_scores$Taxonomic == 'Other', 'Other',
-                                ifelse(primary_ab_scores$Taxonomic == 'Multiple', 'Multiple',
-                                       ifelse(primary_ab_scores$Taxonomic == 'Plants', 'Plants', NA))))))
-#now put them in the normal loop
+                    c('Mammals', 'Birds', 'Herpetofauna', 'Fish'), 
+                  'Vertebrates', 
+           ifelse(primary_ab_scores$Taxonomic %in%
+                    c('Insects', 'Plankton'), 
+                  'Invertebrates', 
+           ifelse(primary_ab_scores$Taxonomic == 'Other', 
+                  'Other',
+           ifelse(primary_ab_scores$Taxonomic == 'Multiple', 
+                  'Multiple',
+           ifelse(primary_ab_scores$Taxonomic == 'Plants', 
+                  'Plants', 
+                  NA))))))
+
+# now put them in the normal loop
 tax_group = as.character(unique(primary_ab_scores$TaxonomicGroup))
 for(i in 1:length(tax_group)) {
   temp = tax_group[i]
