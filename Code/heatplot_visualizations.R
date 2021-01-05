@@ -1,7 +1,7 @@
 ########## 
 ##########
 # This code contains some figures
-# in Green et al. (2020) 
+# in Green et al. (2021) 
 # A review on the use of traits in ecological research
 ##########
 ##########
@@ -9,6 +9,8 @@
 # DATE OF CREATION: 2020-01-28
 ##########
 ##########
+
+# set-up =======================================================================
 
 library(tidyverse)
 library(RColorBrewer)
@@ -22,39 +24,28 @@ library(cowplot)
 library(here)
 library(gridExtra)
 
-current = read_csv('./Data/Cole-Original-Data/finalized_lit_db_for_r.csv')
+current = read_csv(here('./data/unprocessed-data/finalized_lit_db_for_r.csv'),
+                   guess_max = 10000)
 trait_levels = 
-  read_csv(here('./Data/Cole-Original-Data/trait_levels_types_clean.csv'))
+  read_csv(here('./data/processed-data/trait_levels_types_clean.csv'))
 original_dummy = 
   read_csv(
     here('./Data/Cole-Output-Data(readyforanalysis)/original_traits_dummy.csv'))
 
-unique(current$`Relevant to Study`)
+categorical_data = read_csv(here('./data/processed-data/categorical_data.csv'))
 
-current = current %>% 
-  filter(`Relevant to Study` %in% c('Y', 'y'))
+factor_cols = c("Ecosystem", "Taxonomic", "GlobalChange", "Forecasting", 
+                "TOS", "TT", "filter")
+categorical_data[factor_cols] = lapply(categorical_data[factor_cols], factor)
 
-
+categorical_data = categorical_data %>% 
+  rename(TraitType = TT, Filter = filter)
 ############################## Trait by Ecosystem
 
-#data manip 
-trait_env_df1 = current %>% 
-  select(Ecosystem, Morphological, 
-         NEWPhysiological, Behavioural, `Life History`)
 
-trait_env_df1$Ecosystem = as.factor(trait_env_df1$Ecosystem)
-
-trait_env_df1 = trait_env_df1 %>% 
-  rename(Physiological = NEWPhysiological)
-
-trait_env_df1 = trait_env_df1 %>% 
-  gather(Trait, Count, Morphological,
-         Physiological, Behavioural, `Life History`) %>% 
-  group_by(Ecosystem, Trait)
-
-trait_env_df1 = trait_env_df1 %>% 
-  group_by(Ecosystem, Trait) %>% 
-  summarize(Total = sum(Count))
+trait_env_df1 = categorical_data %>% 
+  group_by(Ecosystem, TT) %>% 
+  summarize(Total = n())
 
 #make a theme
 theme1 = function(){
@@ -284,6 +275,11 @@ trait_env_df3$Filter = factor(trait_env_df3$Filter,
                                         'Dispersal', 
                                         'Biotic', 
                                         'Trophic'))
+
+trait_env_df33 = categorical_data %>% 
+  group_by(Ecosystem, TraitType, TOS, Filter) %>% 
+  summarize(Total = n()) 
+
 
 
 trait_x_filter_by_ecosystem_x_TOS_plot = 

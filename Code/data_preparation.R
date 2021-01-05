@@ -303,7 +303,7 @@ levels(TOS_data$TOS)[levels(TOS_data$TOS)=="QModel"] <- "Observational"
 levels(TOS_data$TOS)[levels(TOS_data$TOS)=="TModel"] <- "Theoretical"
 TOS_data = TOS_data %>% 
   unique()
-
+TOS_data %>% filter(is.na(TOS))
 
 #Trait Type
 trait_type = current %>% 
@@ -411,29 +411,33 @@ other_data_TOS_TT = merge(other_data_TOS, TT_data,
                           by.x = 'DOI', by.y = 'DOI')
 other_data_TOS_TT_filter = merge(other_data_TOS_TT, filter_data, 
                           by.x = 'DOI', by.y = 'DOI')
-categorial_data = other_data_TOS_TT_filter
+categorical_data = other_data_TOS_TT_filter
 
 # Write out the datasets =======================================================
 
 #original traits
-orig_traits = merge(categorial_data, orig_traits_multivar,
+orig_traits = merge(categorical_data, orig_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
 write_csv(orig_traits, here('./data/processed-data/original_traits_dummy.csv'))
 #primary traits
-prim_traits = merge(categorial_data, prim_traits_multivar,
+prim_traits = merge(categorical_data, prim_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
 write.csv(prim_traits, 
           here('./data/processed-data/primary_traits_dummy.csv'))
 #secondary (keep empty) traits
-sec_empty_traits = merge(categorial_data, sec_empty_traits_multivar,
+sec_empty_traits = merge(categorical_data, sec_empty_traits_multivar,
                     by.x = 'DOI', by.y = 'DOI')
 write.csv(sec_empty_traits, 
           here('./data/processed-data/secondary_traits_empty_dummy.csv'))
 #secondary (keep empty) traits
-sec_fill_traits = merge(categorial_data, sec_fill_traits_multivar,
+sec_fill_traits = merge(categorical_data, sec_fill_traits_multivar,
                          by.x = 'DOI', by.y = 'DOI')
 write.csv(sec_fill_traits, 
           here('./data/processed-data/secondary_traits_f_dummy.csv'))
+
+#write a copy of the `current` dataframe to use for heatplots etc
+write_csv(categorical_data,
+          here('./data/processed-data/categorical_data.csv'))
 
 ###### begin NOTE ##############################################################
 # Repeat data creation process for secondary and primary, but instead
@@ -461,13 +465,13 @@ additive_sec_traits_abundance_multivar = additive_sec_traits_abundance %>%
 
 #perform joins and write to files
 #primary traits
-prim_traits_abundance = merge(categorial_data, prim_traits_abundance_multivar,
+prim_traits_abundance = merge(categorical_data, prim_traits_abundance_multivar,
                     by.x = 'DOI', by.y = 'DOI')
 write.csv(prim_traits_abundance, 
           here('./data/processed-data/primary_traits_dummy_abundance.csv'))
 
 #secondary (keep empty) traits
-sec_empty_traits_abundance = merge(categorial_data, 
+sec_empty_traits_abundance = merge(categorical_data, 
                                    additive_sec_traits_abundance_multivar,
                          by.x = 'DOI', by.y = 'DOI')
 write.csv(sec_empty_traits_abundance, 

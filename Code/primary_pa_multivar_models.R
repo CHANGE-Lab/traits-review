@@ -46,6 +46,7 @@ primary_pa_sites = data.frame(primary_pa[,1:11])
 primary_pa_species = data.frame(primary_pa[,12:ncol(primary_pa)])
 
 # run actual ordination
+set.seed(0002)
 primary_pa_ord_k4 = metaMDS(primary_pa_species,
                          distance = 'jaccard',
                          trymax = 1000,
