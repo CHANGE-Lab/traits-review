@@ -46,11 +46,39 @@ source(here('./code/pre_multivar_data_cleaning.R'))
 # classification and abundance v. presence/absence) are consistent and ready
 # to be used in the multivariate analyses 
 
-# Primary PA multivariate analysis =============================================
+# Run multivariate analyses ====================================================
 rm(list = ls())
-source(here('./code/primary_pa_multivar_models.R'))
+library(parallel)
 
+# look for the cores
+cores = detectCores()
+cluster = makeCluster(4)
+files = c(here('./code/primary_pa_multivar_models.R'),
+          here('./code/primary_abund_multivar_models.R'),
+          here('./code/secondary_pa_multivar_models.R'),
+          here('./code/secondary_abund_multivar_models.R'))
+for(file in files) {
+  if (! file.exists(file)) {
+    stop(paste(file, "does not exist"))
+  }
+}
 
+parSapply(cluster, files, source)
+stopCluster(cluster)
+
+# This section sources four separate scripts, but in parallel, as each take 
+# over four hours to run. NOTE: important to note here that the cluster is 
+# being created on a mcahine with >4 cores so it is safe to make such a cluster
+# without taking all the computing power from the entire machine. 
+#
+# There are four files, two running using the 'primary' trait classifications 
+# (see paper for details) and two running using the 'secondary' trait
+# classifications. All four scripts pull in data created in previous scripts
+# and use them to run multivariate analyses on our data. Note that if left
+# untouched, each of these will run very quickly as we have already run the 
+# analysis to generate the .rds file that contains the model object. These are
+# simply read in and used to create visual representations of the model results
+# in the form of NMDS plots. 
 
 
 
