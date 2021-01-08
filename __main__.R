@@ -68,7 +68,7 @@ stopCluster(cluster)
 
 # This section sources four separate scripts, but in parallel, as each take 
 # over four hours to run. NOTE: important to note here that the cluster is 
-# being created on a mcahine with >4 cores so it is safe to make such a cluster
+# being created on a machine with >4 cores so it is safe to make such a cluster
 # without taking all the computing power from the entire machine. 
 #
 # There are four files, two running using the 'primary' trait classifications 
@@ -78,7 +78,11 @@ stopCluster(cluster)
 # untouched, each of these will run very quickly as we have already run the 
 # analysis to generate the .rds file that contains the model object. These are
 # simply read in and used to create visual representations of the model results
-# in the form of NMDS plots. 
+# in the form of NMDS plots. Note that the succesful reading in of the files in
+# the parSapply function is highly dependent on finding the files successfully.
+# Thus, using the here() function successfully and the RProject will allow them
+# to be read properly. This is checked with the for loop checking for the 
+# existence of each file. 
 
 
 
