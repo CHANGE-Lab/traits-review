@@ -45,13 +45,13 @@ secondary_abundance_species =
   data.frame(secondary_abundance[,12:ncol(secondary_abundance)])
 
 #run actual ordination - try with both k = 2 & 3
-set.seed(0002)
-secondary_abundance_ord_k3 = metaMDS(secondary_abundance_species,
-                              #distance = 'bray',
-                              trymax = 1000,
-                              k = 4)
-saveRDS(secondary_abundance_ord_k3, 
-        here('./data/nmds-intermediate/secondary_abundance_ord.rds'))
+# set.seed(0002)
+# secondary_abundance_ord_k3 = metaMDS(secondary_abundance_species,
+#                               #distance = 'bray',
+#                               trymax = 1000,
+#                               k = 4)
+# saveRDS(secondary_abundance_ord_k3, 
+#         here('./data/nmds-intermediate/secondary_abundance_ord.rds'))
 secondary_abundance_ord_k4 = 
   readRDS(here('./data/nmds-intermediate/secondary_abundance_ord.rds'))
 
@@ -62,15 +62,19 @@ secondary_ab_k4_scores = data.frame(scores(secondary_abundance_ord_k4))
 secondary_ab_k4_scores$points = rownames(secondary_abundance_ord_k4)
 secondary_ab_scores = cbind(secondary_abundance_sites, secondary_ab_k4_scores)
 
-secondary_ab_scores =
-  secondary_ab_scores[#excluded 14 rows here
-    which(secondary_ab_scores$NMDS1 < -0.02 &
-            secondary_ab_scores$NMDS1 > -0.1 &
-            secondary_ab_scores$NMDS2 > -0.05 &
-            secondary_ab_scores$NMDS2 < 0.1),]
+hist(secondary_ab_scores$NMDS1[which(secondary_ab_scores$NMDS1 < 1 & 
+                                       secondary_ab_scores$NMDS1 > -2)], 
+     breaks = 100)
+hist(secondary_ab_scores$NMDS2[which(secondary_ab_scores$NMDS2 < 1 & 
+                                       secondary_ab_scores$NMDS2 > -2)], 
+     breaks = 100)
 
-hist(secondary_ab_scores$NMDS1, breaks = 100)
-hist(secondary_ab_scores$NMDS2, breaks = 100)
+secondary_ab_scores =
+  secondary_ab_scores[#excluded 11 rows here
+    which(secondary_ab_scores$NMDS1 < 0 &
+            secondary_ab_scores$NMDS1 > -0.3 &
+            secondary_ab_scores$NMDS2 > -0.2 &
+            secondary_ab_scores$NMDS2 < 0.2),]
 
 # add species
 secondary_ab_trait_scores = data.frame(scores(secondary_abundance_ord_k4, 'species'))

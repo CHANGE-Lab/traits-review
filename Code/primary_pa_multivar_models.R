@@ -46,16 +46,16 @@ primary_pa_sites = data.frame(primary_pa[,1:11])
 primary_pa_species = data.frame(primary_pa[,12:ncol(primary_pa)])
 
 # run actual ordination
-set.seed(0002)
-primary_pa_ord_k4 = metaMDS(primary_pa_species,
-                         distance = 'jaccard',
-                         trymax = 1000,
-                         k = 4)
-saveRDS(primary_pa_ord_k4,
-        here('./data/nmds-intermediate/primary_pa_ord.rds'))
-plot(primary_pa_ord_k4)
+# set.seed(0002)
+# primary_pa_ord_k4 = metaMDS(primary_pa_species,
+#                          distance = 'jaccard',
+#                          trymax = 1000,
+#                          k = 4)
+# saveRDS(primary_pa_ord_k4,
+#         here('./data/nmds-intermediate/primary_pa_ord.rds'))
+# plot(primary_pa_ord_k4)
 
-#primary_pa_ord_k4 = readRDS(here('./data/nmds-intermediate/primary_pa_ord.rds'))
+primary_pa_ord_k4 = readRDS(here('./data/nmds-intermediate/primary_pa_ord.rds'))
 
 # Get results from ordination ==================================================
 
@@ -460,6 +460,24 @@ ggsave(here('./figures/primary-pa/primary_pa_plot_pred_small.png'),
 ggsave(here('./figures/primary-pa/primary_pa_plot_pred_large.png'),
        plot = primary_pa_pred_plot,
        width = 8, height = 9, dpi = 1200)
+
+## Merge plots
+
+#All 6 panels
+
+review_nMDS_primary_pa6 =
+  plot_grid(primary_pa_tax_plot, primary_pa_tos_plot, primary_pa_eco_plot,
+            primary_pa_fil_plot, primary_pa_gc_plot, primary_pa_pred_plot,
+            labels = c("A", "B", "C", "D", "E", "F"),
+            label_x = 0.15, vjust = 3.5, ncol = 2,
+            rel_widths = c(1, 1), align = "v")
+
+ggsave(here('./figures/primary-pa/review_nMDS_primary_pa6_small.png'),
+       plot = review_nMDS_primary_pa6,
+       width = 16, height = 12, dpi = 200)
+ggsave(here('./figures/primary-pa/review_nMDS_primary_pa6_large.png'),
+       plot = review_nMDS_primary_pa6,
+       width = 16, height = 12, dpi = 1200)
 
 
 

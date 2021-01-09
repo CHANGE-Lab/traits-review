@@ -49,16 +49,16 @@ primary_abundance_species =
   data.frame(primary_abundance[,12:ncol(primary_abundance)])
 
 # run the ordination
-set.seed(0002)
-primary_abundance_ord_iso = metaMDS(primary_abundance_species,
-                                     #distance = 'bray',
-                                    trymax = 1000,
-                                    k = 3)
-
-saveRDS(primary_abundance_ord_iso, 
-        here('./data/nmds-intermediate/primary_abundance_ord_iso.rds'))
-# primary_abundance_ord_iso  = 
-#   readRDS(here('./data/nmds-intermediate/primary_abundance_ord_iso.rds'))
+# set.seed(0002)
+# primary_abundance_ord_iso = metaMDS(primary_abundance_species,
+#                                      #distance = 'bray',
+#                                     trymax = 1000,
+#                                     k = 3)
+# 
+# saveRDS(primary_abundance_ord_iso, 
+#         here('./data/nmds-intermediate/primary_abundance_ord_iso.rds'))
+primary_abundance_ord_iso  =
+  readRDS(here('./data/nmds-intermediate/primary_abundance_ord_iso.rds'))
 # 
 # # Get results from ordination ==================================================
 
@@ -477,8 +477,6 @@ ggsave(here('./figures/primary-abundance/primary_ab_plot_pred_large.png'),
 
 ## Merge plots
 
-## We need to save the ordinations so I don't have to rerun them for this task
-
 #All 6 panels
 
 review_nMDS_primary_abun6 =
@@ -495,15 +493,6 @@ ggsave(here('./figures/primary-abundance/review_nMDS_primary_abun6_large.png'),
        plot = review_nMDS_primary_abun6,
        width = 16, height = 12, dpi = 1200)
 
-# ggsave(here('./figures/primary-abundance/review_nMDS_primary_abun6.jpeg'),
-#        plot = review_nMDS_primary_abun6,
-#        width = 15, height = 12, dpi = 300)
-
-#Alternative panel arrangements
-#All 4 panels, grey background
-#review_nMDS_4 = plot_grid(trait_nMDS_clim, trait_nMDS_filt, trait_nMDS_tos, trait_nMDS_ecos, labels = c("A", "B", "C", "D"), label_x = 0.10, vjust = 3.1, ncol = 2, rel_widths = c(1, 1),  align = "v")
-#review_nMDS_4
-#ggsave("review_nMDS_4whitelab.jpeg", plot = review_nMDS_4, width = 12, height = 7, dpi = 300)
 
 
 

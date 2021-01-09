@@ -141,6 +141,7 @@ secondary_traits_pa_clean = secondary_traits_pa %>%
            # Note can use case_when() or if_else() BUT you need to write one for 
            # each value and not try to combine them as strings using c()
            ###### end NOTE #####################################################
+           Taxonomic == "Mammals" ~ "Vertebrate",
            Taxonomic == "Birds" ~ "Vertebrate",
            Taxonomic == "Fish" ~ "Vertebrate",
            Taxonomic == "Herpetofauna" ~ "Vertebrate",

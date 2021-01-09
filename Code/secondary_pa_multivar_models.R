@@ -40,41 +40,46 @@ secondary_pa = read_csv(here(paste0('./data/processed-data',
 secondary_pa_sites = data.frame(secondary_pa[,1:11])
 secondary_pa_species = data.frame(secondary_pa[,12:ncol(secondary_pa)])
 
-# run the ordination
+#run the ordination
 set.seed(0002)
 secondary_pa_ord_k4 = metaMDS(secondary_pa_species,
                             distance = 'jaccard',
                             trymax = 1000,
                             k = 4)
-saveRDS(secondary_pa_ord_k4, 
+saveRDS(secondary_pa_ord_k4,
         here('./data/nmds-intermediate/secondary_abundance_ord.rds'))
 secondary_pa_ord_k4 = 
   readRDS(here('./data/nmds-intermediate/secondary_abundance_ord.rds'))
-plot(secondary_pa_ord_k4)
 
 # Get results from ordination ==================================================
 
 # extract scores
-secondary_pa_k4_scores <- data.frame(scores(secondary_pa_ord_k4))
-secondary_pa_k4_scores$points <- rownames(secondary_pa_k4_scores)
+secondary_pa_k4_scores = data.frame(scores(secondary_pa_ord_k4))
+secondary_pa_k4_scores$points = rownames(secondary_pa_k4_scores)
 secondary_pa_scores = cbind(secondary_pa_sites, secondary_pa_k4_scores)
 
-secondary_pa_scores =
-  secondary_pa_scores[
-    which(secondary_pa_scores$NMDS1 < 0.05 &
-            secondary_pa_scores$NMDS1 > -0.05 &
-            secondary_pa_scores$NMDS2 > -0.05 &
-            secondary_pa_scores$NMDS2 < 0.05),]
+hist(secondary_pa_scores$NMDS1, breaks = 100)
+hist(secondary_pa_scores$NMDS2, breaks = 100)
+hist(secondary_pa_scores$NMDS1[which(secondary_pa_scores$NMDS1 < 1 & 
+                                       secondary_pa_scores$NMDS1 > -2)], 
+     breaks = 100)
+hist(secondary_pa_scores$NMDS2[which(secondary_pa_scores$NMDS2 < 1 & 
+                                       secondary_pa_scores$NMDS2 > -2)], 
+     breaks = 100)
 
-hist(secondary_pa_scores$NMDS1)
-hist(secondary_pa_scores$NMDS2)
+secondary_pa_scores = # this gets rid of 9 rows
+  secondary_pa_scores[ 
+    which(secondary_pa_scores$NMDS1 < 0 &
+            secondary_pa_scores$NMDS1 > -0.3 &
+            secondary_pa_scores$NMDS2 > -0.2 &
+            secondary_pa_scores$NMDS2 < 0.3),]
+
 
 # add species
 secondary_pa_trait_scores = data.frame(scores(secondary_pa_ord_k4, 'species'))
 secondary_pa_trait_scores$species = rownames(secondary_pa_trait_scores)
 secondary_pa_trait_scores$species[6] = 'life history'
 secondary_pa_trait_scores$species[8] = 'resource acquisition'
-str(secondary_pa_scores)
 
 # Plotting pipeline ============================================================
 
@@ -84,6 +89,8 @@ secondary_pa_scores$GlobalChangeCat =
   as.factor(secondary_pa_scores$GlobalChangeCat)
 secondary_pa_scores$Taxonomic =
   as.factor(secondary_pa_scores$Taxonomic)
+secondary_pa_scores$TaxonomicGroup =
+  as.factor(secondary_pa_scores$TaxonomicGroup)
 secondary_pa_scores$TOS =
   as.factor(secondary_pa_scores$TOS)
 secondary_pa_scores$Filter =
@@ -128,7 +135,6 @@ hull_sec_pa_taxonomic = rbind(grp_sec_pa_tax_Birds, grp_sec_pa_tax_Insects,
                           grp_sec_pa_tax_Plankton, grp_sec_pa_tax_Other,
                           grp_sec_pa_tax_Fish)
 
-#now put them in the normal loop
 tax_group = as.character(unique(secondary_pa_scores$TaxonomicGroup))
 for(i in 1:length(tax_group)) {
   temp = tax_group[i]
@@ -168,11 +174,11 @@ hull_sec_pa_tos = rbind(grp_sec_pa_tos_Observational, grp_sec_pa_tos_Experiment,
 
 #Filter
 levels(secondary_pa_scores$Filter)[levels(secondary_pa_scores$Filter)==
-                                   "Fundamental"] <- "Abiotic"
+                                   "Fundamental"] = "Abiotic"
 levels(secondary_pa_scores$Filter)[levels(secondary_pa_scores$Filter)==
-                                   "Physical"] <- "Dispersal"
+                                   "Physical"] = "Dispersal"
 levels(secondary_pa_scores$Filter)[levels(secondary_pa_scores$Filter)==
-                                   "Ecological"] <- "Biotic"
+                                   "Ecological"] = "Biotic"
 fil = as.character(unique(secondary_pa_scores$Filter))
 for(i in 1:length(fil)) {
   temp = fil[i]
@@ -190,7 +196,7 @@ hull_sec_pa_fil = rbind(grp_sec_pa_fil_Abiotic, grp_sec_pa_fil_Biotic,
 #global change category
 levels(secondary_pa_scores$GlobalChange
        )[levels(secondary_pa_scores$GlobalChange)==
-                                         0] <- "Not Assessed"
+                                         0] = "Not Assessed"
 gc = as.character(unique(secondary_pa_scores$GlobalChange))
 for(i in 1:length(gc)) {
   temp = gc[i]
@@ -227,7 +233,7 @@ hull_sec_pa_pred = rbind(grp_sec_pa_pred_no, grp_sec_pa_pred_yes)
 ########### Make Plots
 
 #ecosystem
-secondary_pa_eco_plot <- ggplot() +
+secondary_pa_eco_plot = ggplot() +
   geom_polygon(data=hull_sec_pa_ecosystem,
                aes(x=NMDS1,y=NMDS2,
                    fill=Ecosystem,
@@ -259,7 +265,7 @@ ggsave(here('./Figures/secondary_pa/secondary_pa_plot_eco_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #tax group
-secondary_pa_tax_plot <- ggplot() +
+secondary_pa_tax_plot = ggplot() +
   geom_polygon(data=hull_sec_pa_taxonomic_group,
                aes(x=NMDS1,y=NMDS2,
                    fill=TaxonomicGroup,
@@ -291,7 +297,7 @@ ggsave(here('./Figures/secondary_pa/secondary_pa_plot_tax_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #TOS
-secondary_pa_tos_plot <- ggplot() +
+secondary_pa_tos_plot = ggplot() +
   geom_polygon(data=hull_sec_pa_tos,
                aes(x=NMDS1,y=NMDS2,
                    fill=TOS,
@@ -323,7 +329,7 @@ ggsave(here('./Figures/secondary_pa/secondary_pa_plot_tos_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #filter
-secondary_pa_fil_plot <- ggplot() +
+secondary_pa_fil_plot = ggplot() +
   geom_polygon(data=hull_sec_pa_fil,
                aes(x=NMDS1,y=NMDS2,
                    fill=Filter,
@@ -355,7 +361,7 @@ ggsave(here('./Figures/secondary_pa/secondary_pa_plot_fil_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #global change
-secondary_pa_gc_plot <- ggplot() +
+secondary_pa_gc_plot = ggplot() +
   geom_polygon(data=hull_sec_pa_gc,
                aes(x=NMDS1,y=NMDS2,
                    fill=GlobalChange,
@@ -387,7 +393,7 @@ ggsave(here('./Figures/secondary_pa/secondary_pa_plot_gc_large.png'),
        width = 8, height = 8, dpi = 1200)
 
 #predictive
-secondary_pa_pred_plot <- ggplot() +
+secondary_pa_pred_plot = ggplot() +
   geom_polygon(data=hull_sec_pa_pred,
                aes(x=NMDS1,y=NMDS2,
                    fill=PredictiveCat,
