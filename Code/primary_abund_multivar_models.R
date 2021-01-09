@@ -277,7 +277,7 @@ ggsave(here('./figures/primary-abundance/primary_ab_plot_eco_small.png'),
        width = 8, height = 8, dpi = 200)
 ggsave(here('./figures/primary-abundance/primary_ab_plot_eco_large.png'),
        plot = primary_ab_eco_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #tax group
 primary_ab_tax_plot = ggplot() +
@@ -316,7 +316,7 @@ ggsave(here('./figures/primary-abundance/primary_ab_plot_tax_small.png'),
        width = 8, height = 8, dpi = 200)
 ggsave(here('./figures/primary-abundance/primary_ab_plot_tax_large.png'),
        plot = primary_ab_tax_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #TOS
 primary_ab_tos_plot = ggplot() +
@@ -355,7 +355,7 @@ ggsave(here('./figures/primary-abundance/primary_ab_plot_tos_small.png'),
        width = 8, height = 8, dpi = 200)
 ggsave(here('./figures/primary-abundance/primary_ab_plot_tos_large.png'),
        plot = primary_ab_tos_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #filter
 primary_ab_fil_plot = ggplot() +
@@ -394,7 +394,7 @@ ggsave(here('./figures/primary-abundance/primary_ab_plot_fil_small.png'),
        width = 8, height = 8, dpi = 200)
 ggsave(here('./figures/primary-abundance/primary_ab_plot_fil_large.png'),
        plot = primary_ab_fil_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #global change
 primary_ab_gc_plot = ggplot() +
@@ -433,7 +433,7 @@ ggsave(here('./figures/primary-abundance/primary_ab_plot_gc_small.png'),
        width = 8, height = 8, dpi = 200)
 ggsave(here('./figures/primary-abundance/primary_ab_plot_gc_large.png'),
        plot = primary_ab_gc_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #predictive
 primary_ab_pred_plot = ggplot() +
@@ -472,7 +472,7 @@ ggsave(here('./figures/primary-abundance/primary_ab_plot_pred_small.png'),
        width = 8, height = 9, dpi = 200)
 ggsave(here('./figures/primary-abundance/primary_ab_plot_pred_large.png'),
        plot = primary_ab_pred_plot,
-       width = 8, height = 9, dpi = 1200)
+       width = 8, height = 9, dpi = 600)
 
 
 ## Merge plots
@@ -491,7 +491,7 @@ ggsave(here('./figures/primary-abundance/review_nMDS_primary_abun6_small.png'),
        width = 16, height = 12, dpi = 200)
 ggsave(here('./figures/primary-abundance/review_nMDS_primary_abun6_large.png'),
        plot = review_nMDS_primary_abun6,
-       width = 16, height = 12, dpi = 1200)
+       width = 16, height = 12, dpi = 600)
 
 
 

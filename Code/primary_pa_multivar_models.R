@@ -264,7 +264,7 @@ ggsave(here('./figures/primary-pa/primary_pa_plot_eco_small.png'),
        width = 8, height = 8, dpi = 200)
 ggsave(here('./figures/primary-pa/primary_pa_plot_eco_large.png'),
        plot = primary_pa_eco_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #tax group
 primary_pa_tax_plot = ggplot() +
@@ -303,7 +303,7 @@ ggsave(here('./figures/primary-pa/primary_pa_plot_tax_small.png'),
        width = 8, height = 8, dpi = 200)
 ggsave(here('./figures/primary-pa/primary_pa_plot_tax_large.png'),
        plot = primary_pa_tax_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #TOS
 primary_pa_tos_plot = ggplot() +
@@ -342,7 +342,7 @@ ggsave(here('./figures/primary-pa/primary_pa_plot_tos_small.png'),
        width = 8, height = 8, dpi = 200)
 ggsave(here('./figures/primary-pa/primary_pa_plot_tos_large.png'),
        plot = primary_pa_tos_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #filter
 primary_pa_fil_plot = ggplot() +
@@ -381,7 +381,7 @@ ggsave(here('./figures/primary-pa/primary_pa_plot_fil_small.png'),
        width = 8, height = 8, dpi = 200)
 ggsave(here('./figures/primary-pa/primary_pa_plot_fil_large.png'),
        plot = primary_pa_fil_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #global change
 primary_pa_gc_plot = ggplot() +
@@ -420,7 +420,7 @@ ggsave(here('./figures/primary-pa/primary_pa_plot_gc_small.png'),
        width = 8, height = 8, dpi = 200)
 ggsave(here('./figures/primary-pa/primary_pa_plot_gc_large.png'),
        plot = primary_pa_gc_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #predictive
 primary_pa_pred_plot = ggplot() +
@@ -459,7 +459,7 @@ ggsave(here('./figures/primary-pa/primary_pa_plot_pred_small.png'),
        width = 8, height = 9, dpi = 200)
 ggsave(here('./figures/primary-pa/primary_pa_plot_pred_large.png'),
        plot = primary_pa_pred_plot,
-       width = 8, height = 9, dpi = 1200)
+       width = 8, height = 9, dpi = 600)
 
 ## Merge plots
 
@@ -477,7 +477,7 @@ ggsave(here('./figures/primary-pa/review_nMDS_primary_pa6_small.png'),
        width = 16, height = 12, dpi = 200)
 ggsave(here('./figures/primary-pa/review_nMDS_primary_pa6_large.png'),
        plot = review_nMDS_primary_pa6,
-       width = 16, height = 12, dpi = 1200)
+       width = 16, height = 12, dpi = 600)
 
 
 

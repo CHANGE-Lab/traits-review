@@ -41,13 +41,13 @@ secondary_pa_sites = data.frame(secondary_pa[,1:11])
 secondary_pa_species = data.frame(secondary_pa[,12:ncol(secondary_pa)])
 
 #run the ordination
-set.seed(0002)
-secondary_pa_ord_k4 = metaMDS(secondary_pa_species,
-                            distance = 'jaccard',
-                            trymax = 1000,
-                            k = 4)
-saveRDS(secondary_pa_ord_k4,
-        here('./data/nmds-intermediate/secondary_abundance_ord.rds'))
+# set.seed(0002)
+# secondary_pa_ord_k4 = metaMDS(secondary_pa_species,
+#                             distance = 'jaccard',
+#                             trymax = 1000,
+#                             k = 4)
+# saveRDS(secondary_pa_ord_k4,
+#         here('./data/nmds-intermediate/secondary_abundance_ord.rds'))
 secondary_pa_ord_k4 = 
   readRDS(here('./data/nmds-intermediate/secondary_abundance_ord.rds'))
 
@@ -146,11 +146,11 @@ for(i in 1:length(tax_group)) {
   ]), ]
   assign(paste0('grp_sec_pa_taxgroup_',temp), df)
 }
-hull_sec_pa_taxonomic_group = rbind(grp_sec_pa_taxgroup_Invertebrates,
+hull_sec_pa_taxonomic_group = rbind(grp_sec_pa_taxgroup_Invertebrate,
                                 grp_sec_pa_taxgroup_Multiple,
                                 grp_sec_pa_taxgroup_Other,
                                 grp_sec_pa_taxgroup_Plants,
-                                grp_sec_pa_taxgroup_Vertebrates)
+                                grp_sec_pa_taxgroup_Vertebrate)
 
 #TOS
 levels(secondary_pa_scores$TOS)[levels(secondary_pa_scores$TOS)==
@@ -257,12 +257,12 @@ secondary_pa_eco_plot = ggplot() +
                      name = "Ecosystem") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
                        name = "Ecosystem")
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_eco_small.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_eco_small.png'),
        plot = secondary_pa_eco_plot,
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_eco_large.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_eco_large.png'),
        plot = secondary_pa_eco_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #tax group
 secondary_pa_tax_plot = ggplot() +
@@ -289,12 +289,12 @@ secondary_pa_tax_plot = ggplot() +
                      name = "Taxa") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
                        name = "Taxa")
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_tax_small.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_tax_small.png'),
        plot = secondary_pa_tax_plot,
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_tax_large.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_tax_large.png'),
        plot = secondary_pa_tax_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #TOS
 secondary_pa_tos_plot = ggplot() +
@@ -321,12 +321,12 @@ secondary_pa_tos_plot = ggplot() +
                      name = "Study Type") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
                        name = "Study Type")
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_tos_small.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_tos_small.png'),
        plot = secondary_pa_tos_plot,
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_tos_large.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_tos_large.png'),
        plot = secondary_pa_tos_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #filter
 secondary_pa_fil_plot = ggplot() +
@@ -353,12 +353,12 @@ secondary_pa_fil_plot = ggplot() +
                      name = "Filter") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
                        name = "Filter")
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_fil_small.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_fil_small.png'),
        plot = secondary_pa_fil_plot,
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_fil_large.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_fil_large.png'),
        plot = secondary_pa_fil_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #global change
 secondary_pa_gc_plot = ggplot() +
@@ -385,12 +385,12 @@ secondary_pa_gc_plot = ggplot() +
                      name = "Global Change Driver") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
                        name = "Global Change Driver")
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_gc_small.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_gc_small.png'),
        plot = secondary_pa_gc_plot,
        width = 8, height = 8, dpi = 200)
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_gc_large.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_gc_large.png'),
        plot = secondary_pa_gc_plot,
-       width = 8, height = 8, dpi = 1200)
+       width = 8, height = 8, dpi = 600)
 
 #predictive
 secondary_pa_pred_plot = ggplot() +
@@ -417,17 +417,15 @@ secondary_pa_pred_plot = ggplot() +
                      name = "Predictive") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
                        name = "Predictive")
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_pred_small.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_pred_small.png'),
        plot = secondary_pa_pred_plot,
        width = 8, height = 9, dpi = 200)
-ggsave(here('./Figures/secondary_pa/secondary_pa_plot_pred_large.png'),
+ggsave(here('./figures/secondary-pa/secondary_pa_plot_pred_large.png'),
        plot = secondary_pa_pred_plot,
-       width = 8, height = 9, dpi = 1200)
+       width = 8, height = 9, dpi = 600)
 
 
 ## Merge plots
-
-## We need to save the ordinations so I don't have to rerun them for this task
 
 #All 6 panels
 
@@ -438,12 +436,12 @@ review_nMDS_secondary_pa6 =
             label_x = 0.12, vjust = 3.5, ncol = 2,
             rel_widths = c(1, 1), align = "v")
 
-ggsave(here('./Figures/secondary_pa/review_nMDS_secondary_pa6_small.png'),
+ggsave(here('./figures/secondary-pa/review_nMDS_secondary_pa6_small.png'),
        plot = review_nMDS_secondary_pa6,
        width = 15, height = 12, dpi = 200)
-ggsave(here('./Figures/secondary_pa/review_nMDS_secondary_pa6_large.png'),
+ggsave(here('./figures/secondary-pa/review_nMDS_secondary_pa6_large.png'),
        plot = review_nMDS_secondary_pa6,
-       width = 15, height = 12, dpi = 1200)
+       width = 15, height = 12, dpi = 600)
 
 
 
