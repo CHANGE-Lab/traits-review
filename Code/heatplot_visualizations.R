@@ -39,7 +39,29 @@ factor_cols = c("Ecosystem", "Taxonomic", "GlobalChange", "Forecasting",
 categorical_data[factor_cols] = lapply(categorical_data[factor_cols], factor)
 
 categorical_data = categorical_data %>% 
-  rename(TraitType = TT, Filter = filter)
+  rename(Filter = filter, 
+         Trait = TT)
+categorical_data$Ecosystem =
+  as.factor(categorical_data$Ecosystem)
+categorical_data$Taxonomic =
+  as.factor(categorical_data$Taxonomic)
+categorical_data$TOS =
+  as.factor(categorical_data$TOS)
+categorical_data$Filter =
+  as.factor(categorical_data$Filter)
+categorical_data$GlobalChange =
+  as.factor(categorical_data$GlobalChange)
+
+levels(categorical_data$TOS)[levels(categorical_data$TOS)==
+                                  'TModel']='Theory'
+levels(categorical_data$TOS)[levels(categorical_data$TOS)==
+                                  'QModel']='Observational'
+levels(categorical_data$Filter)[levels(categorical_data$Filter)==
+                                     "Fundamental"] = "Abiotic"
+levels(categorical_data$Filter)[levels(categorical_data$Filter)==
+                                     "Physical"] = "Dispersal"
+levels(categorical_data$Filter)[levels(categorical_data$Filter)==
+                                     "Ecological"] = "Biotic"
 ############################## Trait by Ecosystem
 
 
@@ -199,85 +221,85 @@ theme3 = function(){
 
 ########################## Trait x Env Filtering by Ecosystem x TOS
 #data manip 
-trait_env_df3 = current %>% 
-  select(Ecosystem, Morphological, 
-         NEWPhysiological, Behavioural, `Life History`, 
-         QModel, Review, Observational, 
-         TModel, Experiment, Metanalysis, `Fundamental`, `Physical`, 
-         `Ecological`, `Trophic`)
+# trait_env_df3 = current %>% 
+#   select(Ecosystem, Morphological, 
+#          NEWPhysiological, Behavioural, `Life History`, 
+#          QModel, Review, Observational, 
+#          TModel, Experiment, Metanalysis, `Fundamental`, `Physical`, 
+#          `Ecological`, `Trophic`)
+# 
+# trait_env_df3 = trait_env_df3 %>% 
+#   rename(Physiological = NEWPhysiological)
+# 
+# trait_env_df3$Ecosystem = as.factor(trait_env_df3$Ecosystem)
+# 
+# trait_env_df3 = trait_env_df3 %>% 
+#   group_by(Ecosystem) %>% 
+#   gather(TOS, CountTOS, QModel, Review, 
+#          Observational, TModel, Experiment, Metanalysis) %>% 
+#   filter(CountTOS == 1)
+# 
+# 
+# trait_env_df3$TOS = as.factor(trait_env_df3$TOS)
+# 
+# trait_env_df3 = trait_env_df3 %>% 
+#   group_by(Ecosystem) %>% 
+#   gather(Filter, CountFIL, `Fundamental`, `Physical`, 
+#          `Ecological`, `Trophic`) %>% 
+#   filter(CountFIL == 1)
+# 
+# levels(trait_env_df3$TOS)[levels(trait_env_df3$TOS)=="QModel"] = 
+#   "Observational"
+# levels(trait_env_df3$TOS)[levels(trait_env_df3$TOS)=="TModel"] = 
+#   "Theoretical"
+# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
+#   "Abiotic"
+# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Physical"] = 
+#   "Dispersal"
+# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
+#   "Biotic"
+# levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] = 
+#   "Multiple"
+# levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] = 
+#   "Multiple"
+# levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] = 
+#   "Multiple"
+# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
+#   "Abiotic"
+# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
+#   "Biotic"
+# 
+# trait_env_df3$Filter = as.factor(trait_env_df3$Filter)
+# 
+# trait_env_df3 = categorical_data %>% 
+#   group_by(TOS) %>% 
+#   gather(Trait, CountT, Morphological, Physiological,
+#          Behavioural, `Life History`) %>% 
+#   filter(CountT == 1)
+# 
+# trait_env_df3 = trait_env_df3 %>% 
+#   group_by(Ecosystem, Trait, TOS, Filter) %>% 
+#   summarize(Total = sum(CountT))
+# 
+# trait_env_df3$Trait = factor(trait_env_df3$Trait, 
+#                              levels = c('Life History', 
+#                                         'Behavioural', 
+#                                         'Morphological', 
+#                                         'Physiological'))
+# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
+#   "Abiotic"
+# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
+#   "Biotic"
+# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Physical"] = 
+#   "Dispersal"
+# trait_env_df3$Filter = factor(trait_env_df3$Filter, 
+#                              levels = c('Abiotic', 
+#                                         'Dispersal', 
+#                                         'Biotic', 
+#                                         'Trophic'))
 
-trait_env_df3 = trait_env_df3 %>% 
-  rename(Physiological = NEWPhysiological)
-
-trait_env_df3$Ecosystem = as.factor(trait_env_df3$Ecosystem)
-
-trait_env_df3 = trait_env_df3 %>% 
-  group_by(Ecosystem) %>% 
-  gather(TOS, CountTOS, QModel, Review, 
-         Observational, TModel, Experiment, Metanalysis) %>% 
-  filter(CountTOS == 1)
-
-
-trait_env_df3$TOS = as.factor(trait_env_df3$TOS)
-
-trait_env_df3 = trait_env_df3 %>% 
-  group_by(Ecosystem) %>% 
-  gather(Filter, CountFIL, `Fundamental`, `Physical`, 
-         `Ecological`, `Trophic`) %>% 
-  filter(CountFIL == 1)
-
-levels(trait_env_df3$TOS)[levels(trait_env_df3$TOS)=="QModel"] = 
-  "Observational"
-levels(trait_env_df3$TOS)[levels(trait_env_df3$TOS)=="TModel"] = 
-  "Theoretical"
-levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
-  "Abiotic"
-levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Physical"] = 
-  "Dispersal"
-levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
-  "Biotic"
-levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] = 
-  "Multiple"
-levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] = 
-  "Multiple"
-levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] = 
-  "Multiple"
-levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
-  "Abiotic"
-levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
-  "Biotic"
-
-trait_env_df3$Filter = as.factor(trait_env_df3$Filter)
-
-trait_env_df3 = trait_env_df3 %>% 
-  group_by(TOS) %>% 
-  gather(Trait, CountT, Morphological, Physiological,
-         Behavioural, `Life History`) %>% 
-  filter(CountT == 1)
-
-trait_env_df3 = trait_env_df3 %>% 
+trait_env_df3 = categorical_data %>% 
   group_by(Ecosystem, Trait, TOS, Filter) %>% 
-  summarize(Total = sum(CountT))
-
-trait_env_df3$Trait = factor(trait_env_df3$Trait, 
-                             levels = c('Life History', 
-                                        'Behavioural', 
-                                        'Morphological', 
-                                        'Physiological'))
-levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
-  "Abiotic"
-levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
-  "Biotic"
-levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Physical"] = 
-  "Dispersal"
-trait_env_df3$Filter = factor(trait_env_df3$Filter, 
-                             levels = c('Abiotic', 
-                                        'Dispersal', 
-                                        'Biotic', 
-                                        'Trophic'))
-
-trait_env_df33 = categorical_data %>% 
-  group_by(Ecosystem, TraitType, TOS, Filter) %>% 
   summarize(Total = n()) 
 
 
@@ -299,72 +321,78 @@ trait_x_filter_by_ecosystem_x_TOS_plot =
                      end = 0.99) +
   theme2() 
 
-ggsave(here('./Figures/Heatplots-Timeseries/trait_x_filter_by_ecosystem_x_TOS_small.png'), 
+ggsave(here(paste0('./figures/heatplots-and-timeseries',
+                   '/trait_x_filter_by_ecosystem_x_TOS_small.png')), 
        plot = trait_x_filter_by_ecosystem_x_TOS_plot, 
        width = 15, height = 9, dpi = 200)
-ggsave(here('./Figures/Heatplots-Timeseries/trait_x_filter_by_ecosystem_x_TOS_large.png'), 
+ggsave(here(paste0('./figures/heatplots-and-timeseries',
+                   '/trait_x_filter_by_ecosystem_x_TOS_large.png')), 
        plot = trait_x_filter_by_ecosystem_x_TOS_plot, 
-       width = 15, height = 9, dpi = 1200)
+       width = 15, height = 9, dpi = 600)
 
 ########################## Trait x Env Filtering by Ecosystem x Taxonomic
 #data manip 
-trait_env_df4 = current %>% 
-  select(Ecosystem, Morphological, NEWPhysiological, 
-         Behavioural, `Life History`, 
-         Taxonomic, `Fundamental`, `Physical`, 
-         `Ecological`, `Trophic`)
+# trait_env_df4 = current %>% 
+#   select(Ecosystem, Morphological, NEWPhysiological, 
+#          Behavioural, `Life History`, 
+#          Taxonomic, `Fundamental`, `Physical`, 
+#          `Ecological`, `Trophic`)
+# 
+# unique(trait_env_df4$Taxonomic)
+# 
+# trait_env_df4 = trait_env_df4 %>% 
+#   rename(Physiological = NEWPhysiological)
+# 
+# trait_env_df4$Ecosystem = as.factor(trait_env_df4$Ecosystem)
+# 
+# trait_env_df4$Taxonomic = as.factor(trait_env_df4$Taxonomic)
+# 
+# trait_env_df4 = trait_env_df4 %>% 
+#   group_by(Ecosystem) %>% 
+#   gather(Filter, CountFIL, `Fundamental`, `Physical`, 
+#          `Ecological`, `Trophic`) %>% 
+#   filter(CountFIL == 1)
+# 
+# trait_env_df4$Filter = as.factor(trait_env_df4$Filter)
+# 
+# trait_env_df4 = trait_env_df4 %>% 
+#   group_by(Taxonomic) %>% 
+#   gather(Trait, CountT, Morphological, Physiological, 
+#          Behavioural, `Life History`) %>% 
+#   filter(CountT == 1)
+# 
+# trait_env_df4 = trait_env_df4 %>% 
+#   group_by(Ecosystem, Trait, Taxonomic, Filter) %>% 
+#   summarize(Total = sum(CountT))
+# 
+# levels(trait_env_df4$Taxonomic)[levels(trait_env_df4$Taxonomic)=="Herps"] = 
+#   "Herpetofauna"
+# levels(trait_env_df4$Taxonomic)[levels(trait_env_df4$Taxonomic)=="Broad"] = 
+#   "Multiple"
+# 
+# trait_env_df4$Filter = factor(trait_env_df4$Filter, 
+#                               levels = c('Fundamental', 'Physical', 
+#                                          'Ecological', 'Trophic'))
+# trait_env_df4$Trait = factor(trait_env_df4$Trait, 
+#                              levels = c('Life History', 'Behavioural', 
+#                                         'Morphological', 'Physiological'))
+# trait_env_df4$Taxonomic = factor(trait_env_df4$Taxonomic, 
+#                                  levels = c('Plants', 'Plankton', 'Insects', 
+#                                             'Herpetofauna', 'Birds', 'Fish', 
+#                                             'Mammals', 'Multiple', 'Other'))
+# 
+# levels(trait_env_df4$Filter)[levels(trait_env_df4$Filter)=="Fundamental"] = 
+#   "Abiotic"
+# levels(trait_env_df4$Filter)[levels(trait_env_df4$Filter)=="Physical"] = 
+#   "Dispersal"
+# levels(trait_env_df4$Filter)[levels(trait_env_df4$Filter)=="Ecological"] = 
+#   "Biotic"
+# levels(trait_env_df4$Ecosystem)[levels(trait_env_df4$Ecosystem)=="Broad"] = 
+#   "Multiple"
 
-unique(trait_env_df4$Taxonomic)
-
-trait_env_df4 = trait_env_df4 %>% 
-  rename(Physiological = NEWPhysiological)
-
-trait_env_df4$Ecosystem = as.factor(trait_env_df4$Ecosystem)
-
-trait_env_df4$Taxonomic = as.factor(trait_env_df4$Taxonomic)
-
-trait_env_df4 = trait_env_df4 %>% 
-  group_by(Ecosystem) %>% 
-  gather(Filter, CountFIL, `Fundamental`, `Physical`, 
-         `Ecological`, `Trophic`) %>% 
-  filter(CountFIL == 1)
-
-trait_env_df4$Filter = as.factor(trait_env_df4$Filter)
-
-trait_env_df4 = trait_env_df4 %>% 
-  group_by(Taxonomic) %>% 
-  gather(Trait, CountT, Morphological, Physiological, 
-         Behavioural, `Life History`) %>% 
-  filter(CountT == 1)
-
-trait_env_df4 = trait_env_df4 %>% 
+trait_env_df4 = categorical_data %>% 
   group_by(Ecosystem, Trait, Taxonomic, Filter) %>% 
-  summarize(Total = sum(CountT))
-
-levels(trait_env_df4$Taxonomic)[levels(trait_env_df4$Taxonomic)=="Herps"] = 
-  "Herpetofauna"
-levels(trait_env_df4$Taxonomic)[levels(trait_env_df4$Taxonomic)=="Broad"] = 
-  "Multiple"
-
-trait_env_df4$Filter = factor(trait_env_df4$Filter, 
-                              levels = c('Fundamental', 'Physical', 
-                                         'Ecological', 'Trophic'))
-trait_env_df4$Trait = factor(trait_env_df4$Trait, 
-                             levels = c('Life History', 'Behavioural', 
-                                        'Morphological', 'Physiological'))
-trait_env_df4$Taxonomic = factor(trait_env_df4$Taxonomic, 
-                                 levels = c('Plants', 'Plankton', 'Insects', 
-                                            'Herpetofauna', 'Birds', 'Fish', 
-                                            'Mammals', 'Multiple', 'Other'))
-
-levels(trait_env_df4$Filter)[levels(trait_env_df4$Filter)=="Fundamental"] = 
-  "Abiotic"
-levels(trait_env_df4$Filter)[levels(trait_env_df4$Filter)=="Physical"] = 
-  "Dispersal"
-levels(trait_env_df4$Filter)[levels(trait_env_df4$Filter)=="Ecological"] = 
-  "Biotic"
-levels(trait_env_df4$Ecosystem)[levels(trait_env_df4$Ecosystem)=="Broad"] = 
-  "Multiple"
+  summarize(Total = n()) 
 
 trait_x_filter_by_ecosystem_x_taxonomic_plot = 
   ggplot(data = trait_env_df4, 
@@ -384,12 +412,14 @@ trait_x_filter_by_ecosystem_x_taxonomic_plot =
                      end = 0.99) +
   theme2() 
 
-ggsave(here('./Figures/Heatplots-Timeseries/trait_x_filter_by_ecosystem_x_taxonomic_small.png'), 
+ggsave(here(paste0('./figures/heatplots-and-timeseries',
+                   '/trait_x_filter_by_ecosystem_x_taxonomic_small.png')), 
        plot = trait_x_filter_by_ecosystem_x_taxonomic_plot, 
        width = 15, height = 9, dpi = 200)
-ggsave(here('./Figures/Heatplots-Timeseries/trait_x_filter_by_ecosystem_x_taxonomic_large.png'), 
+ggsave(here(paste0('./figures/heatplots-and-timeseries',
+                   '/trait_x_filter_by_ecosystem_x_taxonomic_large.png')), 
        plot = trait_x_filter_by_ecosystem_x_taxonomic_plot, 
-       width = 15, height = 9, dpi = 1200)
+       width = 15, height = 9, dpi = 600)
 
 ################################## Looking at what traits are actually used
 #wordclouds
@@ -927,5 +957,5 @@ ggsave(here('./Figures/Heatplots-Timeseries/timeseries_small.png'),
        width = 20, height = 12, dpi = 200)
 ggsave(here('./Figures/Heatplots-Timeseries/timeseries_large.png'), 
        plot = alltypes, 
-       width = 20, height = 12, dpi = 1200)
+       width = 20, height = 12, dpi = 600)
 

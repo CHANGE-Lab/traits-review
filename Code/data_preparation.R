@@ -299,8 +299,9 @@ for(doi in unique(tos$DOI)) {
     TOS_data = rbind(TOS_data, temp)
   }
 }
-levels(TOS_data$TOS)[levels(TOS_data$TOS)=="QModel"] <- "Observational"
-levels(TOS_data$TOS)[levels(TOS_data$TOS)=="TModel"] <- "Theoretical"
+TOS_data$TOS = as.factor(TOS_data$TOS)
+levels(TOS_data$TOS)[levels(TOS_data$TOS)=="QModel"] = "Observational"
+levels(TOS_data$TOS)[levels(TOS_data$TOS)=="TModel"] = "Theoretical"
 TOS_data = TOS_data %>% 
   unique()
 TOS_data %>% filter(is.na(TOS))
@@ -382,25 +383,25 @@ other_data$GlobalChange = str_to_title(other_data$GlobalChange)
 other_data$Ecosystem = as.factor((other_data$Ecosystem))
 other_data$Taxonomic = as.factor((other_data$Taxonomic))
 
-levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Herps"] <- 
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Herps"] = 
   "Herpetofauna"
-levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Broad"] <- 
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Broad"] = 
   "Multiple"
-levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Bacteria"] <- 
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Bacteria"] = 
   "Other"
-levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Phytoplankton"] <- 
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Phytoplankton"] = 
   "Plankton"
-levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Fungi"] <- 
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Fungi"] = 
   "Other"
-levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Invertebrates"] <- 
+levels(other_data$Taxonomic)[levels(other_data$Taxonomic)=="Invertebrates"] = 
   "Other"
-levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="Broad"] <-
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="Broad"] =
   "Multiple"
-levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="freshwater"] <- 
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="freshwater"] = 
   "Freshwater"
-levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="terrestrial"] <- 
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="terrestrial"] = 
   "Terrestrial"
-levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="marine"] <- 
+levels(other_data$Ecosystem)[levels(other_data$Ecosystem)=="marine"] = 
   "Marine"
 
 # Add join dummy and categorical ===============================================
