@@ -185,6 +185,10 @@ additive_levels = rbind(additive_levels, additive_biogeo)
 additive_levels = unique(additive_levels)
 n_distinct(additive_levels$DOI) # this needs to == 865
 
+# write this out
+write_csv(additive_levels, here(paste0('./data/processed-data/',
+                                       'trait_levels_orig_prim_sec.csv')))
+
 #make the dummy datasets for the different levels here
 additive_orig_traits = additive_levels %>% 
   select(DOI, Trait)
@@ -268,7 +272,7 @@ if(all(names(func_biogeo_study_data) == names(current))) {
   
   current = rbind(current, func_biogeo_study_data)
 }
-
+write_csv(current, here('./data/processed-data/categorical_data_nondummy.csv'))
 # Add in categorical variables =================================================
 
 #TOS

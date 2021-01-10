@@ -23,14 +23,9 @@ library(extrafont)
 library(cowplot)
 library(here)
 library(gridExtra)
+library(fastDummies)
+library(ggwordcloud)
 
-current = read_csv(here('./data/unprocessed-data/finalized_lit_db_for_r.csv'),
-                   guess_max = 10000)
-trait_levels = 
-  read_csv(here('./data/processed-data/trait_levels_types_clean.csv'))
-original_dummy = 
-  read_csv(
-    here('./Data/Cole-Output-Data(readyforanalysis)/original_traits_dummy.csv'))
 
 categorical_data = read_csv(here('./data/processed-data/categorical_data.csv'))
 
@@ -63,11 +58,6 @@ levels(categorical_data$Filter)[levels(categorical_data$Filter)==
 levels(categorical_data$Filter)[levels(categorical_data$Filter)==
                                      "Ecological"] = "Biotic"
 ############################## Trait by Ecosystem
-
-
-trait_env_df1 = categorical_data %>% 
-  group_by(Ecosystem, TT) %>% 
-  summarize(Total = n())
 
 #make a theme
 theme1 = function(){
@@ -220,83 +210,6 @@ theme3 = function(){
 }
 
 ########################## Trait x Env Filtering by Ecosystem x TOS
-#data manip 
-# trait_env_df3 = current %>% 
-#   select(Ecosystem, Morphological, 
-#          NEWPhysiological, Behavioural, `Life History`, 
-#          QModel, Review, Observational, 
-#          TModel, Experiment, Metanalysis, `Fundamental`, `Physical`, 
-#          `Ecological`, `Trophic`)
-# 
-# trait_env_df3 = trait_env_df3 %>% 
-#   rename(Physiological = NEWPhysiological)
-# 
-# trait_env_df3$Ecosystem = as.factor(trait_env_df3$Ecosystem)
-# 
-# trait_env_df3 = trait_env_df3 %>% 
-#   group_by(Ecosystem) %>% 
-#   gather(TOS, CountTOS, QModel, Review, 
-#          Observational, TModel, Experiment, Metanalysis) %>% 
-#   filter(CountTOS == 1)
-# 
-# 
-# trait_env_df3$TOS = as.factor(trait_env_df3$TOS)
-# 
-# trait_env_df3 = trait_env_df3 %>% 
-#   group_by(Ecosystem) %>% 
-#   gather(Filter, CountFIL, `Fundamental`, `Physical`, 
-#          `Ecological`, `Trophic`) %>% 
-#   filter(CountFIL == 1)
-# 
-# levels(trait_env_df3$TOS)[levels(trait_env_df3$TOS)=="QModel"] = 
-#   "Observational"
-# levels(trait_env_df3$TOS)[levels(trait_env_df3$TOS)=="TModel"] = 
-#   "Theoretical"
-# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
-#   "Abiotic"
-# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Physical"] = 
-#   "Dispersal"
-# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
-#   "Biotic"
-# levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] = 
-#   "Multiple"
-# levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] = 
-#   "Multiple"
-# levels(trait_env_df3$Ecosystem)[levels(trait_env_df3$Ecosystem)=="Broad"] = 
-#   "Multiple"
-# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
-#   "Abiotic"
-# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
-#   "Biotic"
-# 
-# trait_env_df3$Filter = as.factor(trait_env_df3$Filter)
-# 
-# trait_env_df3 = categorical_data %>% 
-#   group_by(TOS) %>% 
-#   gather(Trait, CountT, Morphological, Physiological,
-#          Behavioural, `Life History`) %>% 
-#   filter(CountT == 1)
-# 
-# trait_env_df3 = trait_env_df3 %>% 
-#   group_by(Ecosystem, Trait, TOS, Filter) %>% 
-#   summarize(Total = sum(CountT))
-# 
-# trait_env_df3$Trait = factor(trait_env_df3$Trait, 
-#                              levels = c('Life History', 
-#                                         'Behavioural', 
-#                                         'Morphological', 
-#                                         'Physiological'))
-# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Fundamental"] = 
-#   "Abiotic"
-# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Ecological"] = 
-#   "Biotic"
-# levels(trait_env_df3$Filter)[levels(trait_env_df3$Filter)=="Physical"] = 
-#   "Dispersal"
-# trait_env_df3$Filter = factor(trait_env_df3$Filter, 
-#                              levels = c('Abiotic', 
-#                                         'Dispersal', 
-#                                         'Biotic', 
-#                                         'Trophic'))
 
 trait_env_df3 = categorical_data %>% 
   group_by(Ecosystem, Trait, TOS, Filter) %>% 
@@ -331,64 +244,6 @@ ggsave(here(paste0('./figures/heatplots-and-timeseries',
        width = 15, height = 9, dpi = 600)
 
 ########################## Trait x Env Filtering by Ecosystem x Taxonomic
-#data manip 
-# trait_env_df4 = current %>% 
-#   select(Ecosystem, Morphological, NEWPhysiological, 
-#          Behavioural, `Life History`, 
-#          Taxonomic, `Fundamental`, `Physical`, 
-#          `Ecological`, `Trophic`)
-# 
-# unique(trait_env_df4$Taxonomic)
-# 
-# trait_env_df4 = trait_env_df4 %>% 
-#   rename(Physiological = NEWPhysiological)
-# 
-# trait_env_df4$Ecosystem = as.factor(trait_env_df4$Ecosystem)
-# 
-# trait_env_df4$Taxonomic = as.factor(trait_env_df4$Taxonomic)
-# 
-# trait_env_df4 = trait_env_df4 %>% 
-#   group_by(Ecosystem) %>% 
-#   gather(Filter, CountFIL, `Fundamental`, `Physical`, 
-#          `Ecological`, `Trophic`) %>% 
-#   filter(CountFIL == 1)
-# 
-# trait_env_df4$Filter = as.factor(trait_env_df4$Filter)
-# 
-# trait_env_df4 = trait_env_df4 %>% 
-#   group_by(Taxonomic) %>% 
-#   gather(Trait, CountT, Morphological, Physiological, 
-#          Behavioural, `Life History`) %>% 
-#   filter(CountT == 1)
-# 
-# trait_env_df4 = trait_env_df4 %>% 
-#   group_by(Ecosystem, Trait, Taxonomic, Filter) %>% 
-#   summarize(Total = sum(CountT))
-# 
-# levels(trait_env_df4$Taxonomic)[levels(trait_env_df4$Taxonomic)=="Herps"] = 
-#   "Herpetofauna"
-# levels(trait_env_df4$Taxonomic)[levels(trait_env_df4$Taxonomic)=="Broad"] = 
-#   "Multiple"
-# 
-# trait_env_df4$Filter = factor(trait_env_df4$Filter, 
-#                               levels = c('Fundamental', 'Physical', 
-#                                          'Ecological', 'Trophic'))
-# trait_env_df4$Trait = factor(trait_env_df4$Trait, 
-#                              levels = c('Life History', 'Behavioural', 
-#                                         'Morphological', 'Physiological'))
-# trait_env_df4$Taxonomic = factor(trait_env_df4$Taxonomic, 
-#                                  levels = c('Plants', 'Plankton', 'Insects', 
-#                                             'Herpetofauna', 'Birds', 'Fish', 
-#                                             'Mammals', 'Multiple', 'Other'))
-# 
-# levels(trait_env_df4$Filter)[levels(trait_env_df4$Filter)=="Fundamental"] = 
-#   "Abiotic"
-# levels(trait_env_df4$Filter)[levels(trait_env_df4$Filter)=="Physical"] = 
-#   "Dispersal"
-# levels(trait_env_df4$Filter)[levels(trait_env_df4$Filter)=="Ecological"] = 
-#   "Biotic"
-# levels(trait_env_df4$Ecosystem)[levels(trait_env_df4$Ecosystem)=="Broad"] = 
-#   "Multiple"
 
 trait_env_df4 = categorical_data %>% 
   group_by(Ecosystem, Trait, Taxonomic, Filter) %>% 
@@ -424,53 +279,191 @@ ggsave(here(paste0('./figures/heatplots-and-timeseries',
 ################################## Looking at what traits are actually used
 #wordclouds
 
-#load data already in phrase-frequency format
-fish = read_csv('FishForR.csv')
-marine = read_csv('MarineForR.csv')
-trophic = read_csv('TrophicForR.csv')
-trophicsub = read_csv('Trophic(Marine-Freshwater)ForR.csv')
+trait_levels = read_csv(here(paste0('./data/processed-data/',
+                                    'trait_levels_orig_prim_sec.csv')))
+categorical_data_nondum = 
+  read_csv(here(paste0('./data/processed-data',
+                       '/categorical_data_nondummy.csv')))
+
+trait_levels_cat = merge(trait_levels, categorical_data_nondum, 
+                       by.x = 'DOI', by.y = 'DOI')
+fish = trait_levels_cat %>% 
+  select(Taxonomic, Trait) %>% 
+  filter(Taxonomic == 'Fish') %>% 
+  group_by(Trait) %>% 
+  summarize(frequency = n()) %>% 
+  filter(frequency > 1)
+marine = trait_levels_cat %>% 
+  select(Ecosystem, Trait) %>% 
+  filter(Ecosystem == 'Marine') %>% 
+  group_by(Trait) %>% 
+  summarize(frequency = n()) %>% 
+  filter(frequency > 1)
+trophic = trait_levels_cat %>% 
+  select(Trophic, Trait) %>% 
+  filter(Trophic == 1) %>% 
+  group_by(Trait) %>% 
+  summarize(frequency = n()) %>% 
+  filter(frequency > 1)
+trophicsub = trait_levels_cat %>% 
+  select(Trophic, Trait, Ecosystem) %>%
+  filter(Ecosystem %in% c('Freshwater', 'Marine')) %>% 
+  filter(Trophic == 1) %>% 
+  group_by(Trait) %>% 
+  summarize(frequency = n()) %>% 
+  filter(frequency > 1)
+
+# write a function to make the proces easier
+make_dataframe = function(column, level, n) {
+  
+  # function takes in the column name and the level of the column to be subset
+  # to, then returns a dataframe ready for a wordcloud to be made
+  
+  df = trait_levels_cat %>% 
+    select(!!column, Trait) %>% 
+    filter(!!column == level) %>% 
+    group_by(Trait) %>% 
+    summarize(frequency = n()) %>% 
+    filter(frequency > n)
+  
+  return(df)
+    
+}
+
+# make environmental filter dataframes
+filter_abiotic = make_dataframe(quo(Fundamental), 1, 5)
+filter_dispersal = make_dataframe(quo(Physical), 1, 1)
+filter_biotic = make_dataframe(quo(Ecological), 1, 3)
+filter_trophic = make_dataframe(quo(Trophic), 1, 2)
+
+# trait type filter dataframes
+trait_morph = make_dataframe(quo(Morphological), 1, 5)
+trait_behav = make_dataframe(quo(Behavioural), 1, 3)
+trait_physio = make_dataframe(quo(NEWPhysiological), 1, 2)
+trait_life = make_dataframe(quo(`Life History`), 1, 5)
+
+# ecosystem type dataframes
+trait_levels_cat$Ecosystem = as.factor(trait_levels_cat$Ecosystem)
+levels(trait_levels_cat$Ecosystem)[
+  levels(trait_levels_cat$Ecosystem)=="Broad"] =
+  "Multiple"
+levels(trait_levels_cat$Ecosystem)[
+  levels(trait_levels_cat$Ecosystem)=="freshwater"] = 
+  "Freshwater"
+levels(trait_levels_cat$Ecosystem)[
+  levels(trait_levels_cat$Ecosystem)=="terrestrial"] = 
+  "Terrestrial"
+levels(trait_levels_cat$Ecosystem)[
+  levels(trait_levels_cat$Ecosystem)=="marine"] = 
+  "Marine"
+eco_terrest = make_dataframe(quo(Ecosystem), 'Terrestrial', 5)
+eco_fresh = make_dataframe(quo(Ecosystem), 'Freshwater', 2)
+eco_marine = make_dataframe(quo(Ecosystem), 'Marine', 1)
+eco_multiple = make_dataframe(quo(Ecosystem), 'Multiple', 1)
+
+# make the wordclouds themselves
+cloud_eco_terrest = ggwordcloud(eco_terrest$Trait, 
+                                eco_terrest$frequency, scale=c(3,.55), 
+                random.order = FALSE, min.freq = 2, max.words = Inf, 
+                rot.per = 0.15, colors=pnw_palette('Bay', 8, 'continuous'))
+
+make_wordclouds = function(df, name) {
+  
+  # function takes in a dataframe from the ones created above and creates a 
+  # wordcloud from that dataframe. The wordcloud is then given a name and 
+  # returned as that name
+  cloud = ggwordcloud(df$Trait, 
+                      df$frequency, 
+                      scale=c(3,.55), 
+                      random.order = FALSE, 
+                      min.freq = 2, 
+                      max.words = Inf, 
+                      rot.per = 0.15, 
+                      colors=pnw_palette('Bay', 8, 'continuous'))
+
+  return(cloud)
+
+}
+
+# ecosystems
+eco_terrest_cloud = make_wordclouds(df = eco_terrest, name = 'eco_terrest')
+eco_marine_cloud = make_wordclouds(df = eco_marine, name = 'eco_marine')
+eco_fresh_cloud = make_wordclouds(df = eco_fresh, name = 'eco_fresh')
+eco_multiple_cloud = make_wordclouds(df = eco_multiple, name = 'eco_multiple')
+
+# traits
+trait_morph_cloud = make_wordclouds(df = trait_morph, name = 'trait_morph')
+trait_life_cloud = make_wordclouds(df = trait_life, name = 'trait_life')
+trait_behav_cloud = make_wordclouds(df = trait_behav, name = 'trait_behav')
+trait_physio_cloud = make_wordclouds(df = trait_physio, name = 'trait_physio')
+
+
+filter_abiotic_cloud = make_wordclouds(df = filter_abiotic, 
+                                       name = 'filter_abiotic')
+filter_biotic_cloud = make_wordclouds(df = filter_biotic, 
+                                      name = 'filter_biotic')
+filter_dispersal_cloud = make_wordclouds(df = filter_dispersal, 
+                                         name = 'filter_dispersal')
+filter_trophic_cloud = make_wordclouds(df = filter_trophic, 
+                                       name = 'filter_trophic')
+
+cloud_grid = 
+  plot_grid(filter_abiotic_cloud, filter_dispersal_cloud, filter_biotic_cloud, 
+            filter_trophic_cloud,
+            trait_morph_cloud, trait_behav_cloud, trait_physio_cloud, 
+            trait_life_cloud, 
+            eco_terrest_cloud, eco_marine_cloud, eco_fresh_cloud, 
+            eco_multiple_cloud, 
+            nrow = 3, ncol = 4,
+            labels = c('Abiotic', 'Dispersal', 'Biotic', 'Trophic', 
+                       'Morphology', 'Behaviour', 'Physiology', 'Life History',
+                       'Terrestrial', 'Marine', 'Freshwater', 'Multiple'),
+            label_size = 20)
+cloud_grid = cloud_grid +
+  ggplot2::annotate('text', label = 'Environmental Filter ------', 
+           x = 0, y = 0.66, size = 30)
+ggsave(here('./figures/word-clouds/cloud_grid_small.png'),
+       plot = cloud_grid,
+       width = 15, height = 15, dpi = 200)
 
 #make a wordcloud
 
 #fish - min. 2
-wordcloud(fish$Trait, fish$`Number of Times Used`, scale=c(3,.55), 
+x = ggwordcloud(fish$Trait, fish$frequency, scale=c(3,.55), 
           random.order = FALSE, min.freq = 2, max.words = Inf, 
           rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
 #marine - min. 2
-wordcloud(marine$Traits, marine$Frequency, scale=c(3,.55), 
+wordcloud(marine$Trait, marine$frequency, scale=c(3,.55), 
           random.order = FALSE, min.freq = 2, max.words = Inf, 
           rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
 #trophic - min. 2
-wordcloud(trophic$Trait, trophic$`Number of Times Used`, scale=c(3,.55), 
+wordcloud(trophic$Trait, trophic$frequency, scale=c(3,.55), 
           random.order = FALSE, min.freq = 2, max.words = Inf, 
           rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
 #trophicsub - min. 2
-wordcloud(trophicsub$Trait, trophicsub$`Number of Times Used`, scale=c(3,.55), 
+wordcloud(trophicsub$Trait, trophicsub$frequency, scale=c(3,.55), 
           random.order = FALSE, min.freq = 2, max.words = Inf, 
           rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
 
 #fish - min. 1
-wordcloud(fish$Trait, fish$`Number of Times Used`, scale=c(2.2,.6), 
+wordcloud(fish$Trait, fish$frequency, scale=c(2.2,.6), 
           random.order = FALSE, min.freq = 1, max.words = Inf, 
           rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
 #marine - min. 1
-wordcloud(marine$Traits, marine$Frequency, scale=c(2.2,.6), 
+wordcloud(marine$Trait, marine$frequency, scale=c(2.2,.6), 
           random.order = FALSE, min.freq = 1, max.words = Inf, 
           rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
 #trophic - min. 2
-wordcloud(trophic$Trait, trophic$`Number of Times Used`, scale=c(2.2,.6), 
+wordcloud(trophic$Trait, trophic$frequency, scale=c(2.2,.6), 
           random.order = FALSE, min.freq = 1, max.words = Inf, 
           rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
 #trophicsub - min. 1
-wordcloud(trophicsub$Trait, trophicsub$`Number of Times Used`, scale=c(2.2,.6), 
+wordcloud(trophicsub$Trait, trophicsub$frequency, scale=c(2.2,.6), 
           random.order = FALSE, min.freq = 1, max.words = Inf, 
           rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
 
 
 ####### wordclouds from the trait-levels of the traits
-trait_levels = trait_levels %>% 
-  select(Trait_spell_corrected, Type) %>% 
-  distinct()
 
 trait_levels_morph = trait_levels %>% 
   filter(Type == 'Morphology')
@@ -481,33 +474,33 @@ trait_levels_life = trait_levels %>%
 trait_levels_behav = trait_levels %>% 
   filter(Type == 'Behavioural')
 
-orig_morph = data.frame(colSums(original_dummy %>% 
-                                  select(-c(1:8)) %>% 
-                                  select(c(
-                                    trait_levels_morph$Trait_spell_corrected))))
-orig_morph$Trait = rownames(orig_morph)
-names(orig_morph)[1] = 'count'
-
-orig_phys = data.frame(colSums(original_dummy %>% 
-                                  select(-c(1:8)) %>% 
-                                  select(c(
-                                    trait_levels_phys$Trait_spell_corrected))))
-orig_phys$Trait = rownames(orig_phys)
-names(orig_phys)[1] = 'count'
-
-orig_life = data.frame(colSums(original_dummy %>% 
-                                 select(-c(1:8)) %>% 
-                                 select(c(
-                                   trait_levels_life$Trait_spell_corrected))))
-orig_life$Trait = rownames(orig_life)
-names(orig_life)[1] = 'count'
-
-orig_behav = data.frame(colSums(original_dummy %>% 
-                                 select(-c(1:8)) %>% 
-                                 select(c(
-                                   trait_levels_behav$Trait_spell_corrected))))
-orig_behav$Trait = rownames(orig_behav)
-names(orig_behav)[1] = 'count'
+# orig_morph = data.frame(colSums(original_dummy %>% 
+#                                   select(-c(1:8)) %>% 
+#                                   select(c(
+#                                     trait_levels_morph$Trait_spell_corrected))))
+# orig_morph$Trait = rownames(orig_morph)
+# names(orig_morph)[1] = 'count'
+# 
+# orig_phys = data.frame(colSums(original_dummy %>% 
+#                                   select(-c(1:8)) %>% 
+#                                   select(c(
+#                                     trait_levels_phys$Trait_spell_corrected))))
+# orig_phys$Trait = rownames(orig_phys)
+# names(orig_phys)[1] = 'count'
+# 
+# orig_life = data.frame(colSums(original_dummy %>% 
+#                                  select(-c(1:8)) %>% 
+#                                  select(c(
+#                                    trait_levels_life$Trait_spell_corrected))))
+# orig_life$Trait = rownames(orig_life)
+# names(orig_life)[1] = 'count'
+# 
+# orig_behav = data.frame(colSums(original_dummy %>% 
+#                                  select(-c(1:8)) %>% 
+#                                  select(c(
+#                                    trait_levels_behav$Trait_spell_corrected))))
+# orig_behav$Trait = rownames(orig_behav)
+# names(orig_behav)[1] = 'count'
 
 # wordcloud - morphological
 wordcloud(orig_morph$Trait, orig_morph$count, scale=c(2.2,.6), 
