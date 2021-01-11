@@ -25,9 +25,13 @@ library(here)
 library(gridExtra)
 library(fastDummies)
 library(ggwordcloud)
+library(patchwork)
 
 
 categorical_data = read_csv(here('./data/processed-data/categorical_data.csv'))
+
+# initial data processing  =====================================================
+
 
 factor_cols = c("Ecosystem", "Taxonomic", "GlobalChange", "Forecasting", 
                 "TOS", "TT", "filter")
@@ -407,135 +411,62 @@ filter_dispersal_cloud = make_wordclouds(df = filter_dispersal,
 filter_trophic_cloud = make_wordclouds(df = filter_trophic, 
                                        name = 'filter_trophic')
 
-cloud_grid = 
+# use cowplot to stitch the plots together and put custom labels on them, then
+# use patchwork to add a title, and then put all the plots together
+filter_cloud =  
   plot_grid(filter_abiotic_cloud, filter_dispersal_cloud, filter_biotic_cloud, 
-            filter_trophic_cloud,
-            trait_morph_cloud, trait_behav_cloud, trait_physio_cloud, 
-            trait_life_cloud, 
-            eco_terrest_cloud, eco_marine_cloud, eco_fresh_cloud, 
-            eco_multiple_cloud, 
-            nrow = 3, ncol = 4,
-            labels = c('Abiotic', 'Dispersal', 'Biotic', 'Trophic', 
-                       'Morphology', 'Behaviour', 'Physiology', 'Life History',
-                       'Terrestrial', 'Marine', 'Freshwater', 'Multiple'),
+            filter_trophic_cloud, ncol = 4, 
+            labels = c('Abiotic', 'Dispersal', 'Biotic', 'Trophic'), 
+            vjust = 0.8, 
+            label_size = 20) 
+trait_cloud =  
+  plot_grid(trait_morph_cloud, trait_behav_cloud, trait_physio_cloud, 
+            trait_life_cloud, ncol = 4, 
+            labels = c('Morphology', 'Behaviour', 'Physiology', 'Life History'), 
+            vjust = 0.8, 
             label_size = 20)
-cloud_grid = cloud_grid +
-  ggplot2::annotate('text', label = 'Environmental Filter ------', 
-           x = 0, y = 0.66, size = 30)
+ecosystem_cloud =  
+  plot_grid(eco_terrest_cloud, eco_marine_cloud, eco_fresh_cloud, 
+            eco_multiple_cloud, ncol = 4, 
+            labels = c('Terrestrial', 'Marine', 'Freshwater', 'Multiple'), 
+            vjust = 0.8, 
+            label_size = 20)
+
+all_cloud = plot_grid(NULL, filter_cloud, NULL, trait_cloud, NULL, ecosystem_cloud,
+                      nrow = 6,
+                      labels = c('Environmental Filter', '', 
+                                 'Trait Type', '',
+                                 'Ecosystem', ''),
+                      label_size = 30,
+                      label_x = c(0.20, 0.33, 0.33),
+                      rel_heights = c(0.3, 1, 0.3, 1, 0.3, 1))
+
 ggsave(here('./figures/word-clouds/cloud_grid_small.png'),
-       plot = cloud_grid,
-       width = 15, height = 15, dpi = 200)
-
-#make a wordcloud
-
-#fish - min. 2
-x = ggwordcloud(fish$Trait, fish$frequency, scale=c(3,.55), 
-          random.order = FALSE, min.freq = 2, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-#marine - min. 2
-wordcloud(marine$Trait, marine$frequency, scale=c(3,.55), 
-          random.order = FALSE, min.freq = 2, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-#trophic - min. 2
-wordcloud(trophic$Trait, trophic$frequency, scale=c(3,.55), 
-          random.order = FALSE, min.freq = 2, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-#trophicsub - min. 2
-wordcloud(trophicsub$Trait, trophicsub$frequency, scale=c(3,.55), 
-          random.order = FALSE, min.freq = 2, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-
-#fish - min. 1
-wordcloud(fish$Trait, fish$frequency, scale=c(2.2,.6), 
-          random.order = FALSE, min.freq = 1, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-#marine - min. 1
-wordcloud(marine$Trait, marine$frequency, scale=c(2.2,.6), 
-          random.order = FALSE, min.freq = 1, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-#trophic - min. 2
-wordcloud(trophic$Trait, trophic$frequency, scale=c(2.2,.6), 
-          random.order = FALSE, min.freq = 1, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-#trophicsub - min. 1
-wordcloud(trophicsub$Trait, trophicsub$frequency, scale=c(2.2,.6), 
-          random.order = FALSE, min.freq = 1, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-
-
-####### wordclouds from the trait-levels of the traits
-
-trait_levels_morph = trait_levels %>% 
-  filter(Type == 'Morphology')
-trait_levels_phys = trait_levels %>% 
-  filter(Type == 'Physiological')
-trait_levels_life = trait_levels %>% 
-  filter(Type == 'Life History')
-trait_levels_behav = trait_levels %>% 
-  filter(Type == 'Behavioural')
-
-# orig_morph = data.frame(colSums(original_dummy %>% 
-#                                   select(-c(1:8)) %>% 
-#                                   select(c(
-#                                     trait_levels_morph$Trait_spell_corrected))))
-# orig_morph$Trait = rownames(orig_morph)
-# names(orig_morph)[1] = 'count'
-# 
-# orig_phys = data.frame(colSums(original_dummy %>% 
-#                                   select(-c(1:8)) %>% 
-#                                   select(c(
-#                                     trait_levels_phys$Trait_spell_corrected))))
-# orig_phys$Trait = rownames(orig_phys)
-# names(orig_phys)[1] = 'count'
-# 
-# orig_life = data.frame(colSums(original_dummy %>% 
-#                                  select(-c(1:8)) %>% 
-#                                  select(c(
-#                                    trait_levels_life$Trait_spell_corrected))))
-# orig_life$Trait = rownames(orig_life)
-# names(orig_life)[1] = 'count'
-# 
-# orig_behav = data.frame(colSums(original_dummy %>% 
-#                                  select(-c(1:8)) %>% 
-#                                  select(c(
-#                                    trait_levels_behav$Trait_spell_corrected))))
-# orig_behav$Trait = rownames(orig_behav)
-# names(orig_behav)[1] = 'count'
-
-# wordcloud - morphological
-wordcloud(orig_morph$Trait, orig_morph$count, scale=c(2.2,.6), 
-          random.order = FALSE, min.freq = 15, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-
-# wordcloud - physiological
-wordcloud(orig_phys$Trait, orig_phys$count, scale=c(2.2,.6), 
-          random.order = FALSE, min.freq = 7, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-
-# wordcloud - life history
-wordcloud(orig_life$Trait, orig_life$count, scale=c(2.2,.6), 
-          random.order = FALSE, min.freq = 14, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
-
-# wordcloud - behavioural
-wordcloud(orig_behav$Trait, orig_behav$count, scale=c(2.2,.6), 
-          random.order = FALSE, min.freq = 14, max.words = Inf, 
-          rot.per = 0.15, colors=brewer.pal(8, 'Dark2'))
+       plot = all_cloud,
+       width = 15, height = 23, dpi = 200)
+ggsave(here('./figures/word-clouds/cloud_grid_large.png'),
+       plot = all_cloud,
+       width = 15, height = 23, dpi = 600)
 
 ######## Studies over time
 
-for_hist = current %>% 
+
+
+#Current change global change driver
+
+categorical_data = merge(categorical_data, categorical_data_nondum %>% 
+                           select(DOI, Year), 
+                         by.x = 'DOI', by.y = 'DOI')
+
+levels(categorical_data$GlobalChange)[levels(categorical_data$GlobalChange)==
+                                         "Global Change Broad"] = "Multiple"
+levels(categorical_data$GlobalChange)[levels(categorical_data$GlobalChange)==
+                                         "Global Change Multiple"] = "Multiple"
+for_hist = categorical_data %>% 
   filter(Year != 'in review' & Year < 2019) %>% 
   group_by(Year) %>% 
   summarize(no_obs = length(Year))
 for_hist$n = for_hist$no_obs
-
-#Current change global change driver
-levels(current$`Global Change Driver`)[levels(current$`Global Change Driver`)==
-                                         "Global Change Broad"] = "Multiple"
-levels(current$`Global Change Driver`)[levels(current$`Global Change Driver`)==
-                                         "Global Change Multiple"] = "Multiple"
-
 
 theme4 = function(){
   color.background = 'white'
@@ -737,7 +668,7 @@ total_studies = ggplot(data = for_hist, aes(x = Year, y = no_obs,
 
 #by ecosystem
 pal = pnw_palette('Bay', 4, type = 'discrete')
-for_eco_hist = current %>% 
+for_eco_hist = categorical_data %>% 
   filter(Year != 'in review' & Year < 2019) %>% 
   group_by(Year, Ecosystem) %>% 
   summarize(no_obs = length(Year))
@@ -756,8 +687,7 @@ ecosystem_studies = ggplot(data = for_eco_hist, aes(x = Year, y = no_obs,
   labs(x = 'Year', y = 'Number of Studies')
 
 #by trait type
-for_phys_hist = current %>% 
-  filter(Year != 'in review' & Year < 2019) %>% 
+for_phys_hist = 
   group_by(Year, NEWPhysiological) %>%   
   filter(NEWPhysiological == 1)%>% 
   summarize(no_obs = length(Year)) %>% 
@@ -785,14 +715,16 @@ for_behav_hist = current %>%
   mutate(trait = 'Behavioural') %>% 
   select(Year, no_obs, trait)
 
-all_traits_line = rbind(for_behav_hist, for_morph_hist, 
-                        for_life_hist, for_phys_hist)
+all_traits_line = categorical_data %>% 
+  filter(Year != 'in review' & Year < 2019) %>% 
+  group_by(Year, Trait) %>% 
+  summarize(no_obs = n())
 
 trait_studies = ggplot(data = all_traits_line, aes(x = Year, y = no_obs, 
-                                                   group = trait, 
-                                                   colour = trait, 
-                                                   shape = trait, 
-                                                   linetype = trait), ) +
+                                                   group = Trait, 
+                                                   colour = Trait, 
+                                                   shape = Trait, 
+                                                   linetype = Trait), ) +
   geom_line(size = 1.08) +
   geom_point(size = 3)+
   scale_color_manual('Trait Type', values = pal) +
@@ -800,7 +732,7 @@ trait_studies = ggplot(data = all_traits_line, aes(x = Year, y = no_obs,
   scale_shape_manual('Trait Type', values = c(19,19,19,19))+
   theme7()+ #begins in 1978
   labs(x = 'Year', y = 'Number of Studies')+
-  scale_x_continuous(breaks = c(1978, 1983, 1988, 1993,
+  scale_x_discrete(breaks = c(1978, 1983, 1988, 1993,
                                 1998, 2003, 2008, 2013, 2018))
 
 
