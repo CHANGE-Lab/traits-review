@@ -13,20 +13,12 @@
 # set-up =======================================================================
 
 library(tidyverse)
-library(RColorBrewer)
-library(viridis)
-library(scales)
-library(tm)
 library(wordcloud)
 library(PNWColors)
-library(extrafont)
 library(cowplot)
 library(here)
-library(gridExtra)
 library(fastDummies)
 library(ggwordcloud)
-library(patchwork)
-
 
 categorical_data = read_csv(here('./data/processed-data/categorical_data.csv'))
 
@@ -61,9 +53,8 @@ levels(categorical_data$Filter)[levels(categorical_data$Filter)==
                                      "Physical"] = "Dispersal"
 levels(categorical_data$Filter)[levels(categorical_data$Filter)==
                                      "Ecological"] = "Biotic"
-############################## Trait by Ecosystem
+# Make themes for the heatplots  ===============================================
 
-#make a theme
 theme1 = function(){
   color.background = 'white'
   color.grid.major = 'black'
@@ -453,6 +444,8 @@ ggsave(here('./figures/word-clouds/cloud_grid_large.png'),
 
 
 #Current change global change driver
+timeseries_data = categorical_data_nondum %>% 
+  select(DOI, Year)
 
 categorical_data = merge(categorical_data, categorical_data_nondum %>% 
                            select(DOI, Year), 
@@ -462,7 +455,7 @@ levels(categorical_data$GlobalChange)[levels(categorical_data$GlobalChange)==
                                          "Global Change Broad"] = "Multiple"
 levels(categorical_data$GlobalChange)[levels(categorical_data$GlobalChange)==
                                          "Global Change Multiple"] = "Multiple"
-for_hist = categorical_data %>% 
+for_hist = categorical_data_nondum %>% 
   filter(Year != 'in review' & Year < 2019) %>% 
   group_by(Year) %>% 
   summarize(no_obs = length(Year))
@@ -670,9 +663,12 @@ total_studies = ggplot(data = for_hist, aes(x = Year, y = no_obs,
 pal = pnw_palette('Bay', 4, type = 'discrete')
 for_eco_hist = categorical_data %>% 
   filter(Year != 'in review' & Year < 2019) %>% 
+  select(DOI, Year, Ecosystem) %>% 
+  distinct() %>% 
   group_by(Year, Ecosystem) %>% 
   summarize(no_obs = length(Year))
 for_eco_hist$n = for_eco_hist$no_obs
+
 ecosystem_studies = ggplot(data = for_eco_hist, aes(x = Year, y = no_obs, 
                                                     group = Ecosystem, 
                                                     colour = Ecosystem,
@@ -687,36 +683,10 @@ ecosystem_studies = ggplot(data = for_eco_hist, aes(x = Year, y = no_obs,
   labs(x = 'Year', y = 'Number of Studies')
 
 #by trait type
-for_phys_hist = 
-  group_by(Year, NEWPhysiological) %>%   
-  filter(NEWPhysiological == 1)%>% 
-  summarize(no_obs = length(Year)) %>% 
-  mutate(trait = 'Physiological') %>% 
-  select(Year, no_obs, trait)
-for_morph_hist = current %>% 
-  filter(Year != 'in review' & Year < 2019) %>% 
-  group_by(Year, Morphological) %>% 
-  filter(Morphological == 1)%>% 
-  summarize(no_obs = length(Year)) %>% 
-  mutate(trait = 'Morphological') %>% 
-  select(Year, no_obs, trait)
-for_life_hist = current %>% 
-  filter(Year != 'in review' & Year < 2019) %>% 
-  group_by(Year, `Life History`) %>% 
-  filter(`Life History` == 1) %>% 
-  summarize(no_obs = length(Year)) %>% 
-  mutate(trait = 'Life History') %>% 
-  select(Year, no_obs, trait)
-for_behav_hist = current %>% 
-  filter(Year != 'in review' & Year < 2019) %>% 
-  group_by(Year, Behavioural) %>% 
-  filter(Behavioural == 1) %>% 
-  summarize(no_obs = length(Year)) %>% 
-  mutate(trait = 'Behavioural') %>% 
-  select(Year, no_obs, trait)
-
 all_traits_line = categorical_data %>% 
   filter(Year != 'in review' & Year < 2019) %>% 
+  select(DOI, Year, Trait) %>% 
+  distinct() %>%
   group_by(Year, Trait) %>% 
   summarize(no_obs = n())
 
@@ -737,48 +707,18 @@ trait_studies = ggplot(data = all_traits_line, aes(x = Year, y = no_obs,
 
 
 #for level of environmental filtering
-for_fund_hist = current %>% 
+all_filters_line = categorical_data %>% 
   filter(Year != 'in review' & Year < 2019) %>% 
-  group_by(Year, Fundamental) %>%   
-  filter(Fundamental == 1)%>% 
-  summarize(no_obs = length(Year)) %>% 
-  mutate(Filter = 'Fundamental') %>% 
-  select(Year, no_obs, Filter)
-for_fund_hist$Filter = 'Abiotic' #match with upper plots
-for_physical_hist = current %>% 
-  filter(Year != 'in review' & Year < 2019) %>% 
-  group_by(Year, Physical) %>% 
-  filter(Physical == 1)%>% 
-  summarize(no_obs = length(Year)) %>% 
-  mutate(Filter = 'Physically Accessible') %>% 
-  select(Year, no_obs, Filter)
-for_physical_hist$Filter = 'Dispersal' #match with upper plots
-for_ecolog_hist = current %>% 
-  filter(Year != 'in review' & Year < 2019) %>% 
-  group_by(Year, Ecological) %>% 
-  filter(Ecological == 1) %>% 
-  summarize(no_obs = length(Year)) %>% 
-  mutate(Filter = 'Ecologically Accessible') %>% 
-  select(Year, no_obs, Filter)
-for_ecolog_hist$Filter = 'Biotic' #match with upper plots
-for_troph_hist = current %>% 
-  filter(Year != 'in review' & Year < 2019) %>% 
-  group_by(Year, Trophic) %>% 
-  filter(Trophic == 1) %>% 
-  summarize(no_obs = length(Year)) %>% 
-  mutate(Filter = 'Trophic') %>% 
-  select(Year, no_obs, Filter)
-for_troph_hist$Filter = 'Trophic' #match with upper plots
+  select(DOI, Year, Filter) %>% 
+  distinct() %>%
+  group_by(Year, Filter) %>% 
+  summarize(no_obs = n())
 
-
-all_filters_line = rbind(for_fund_hist, for_physical_hist, 
-                         for_ecolog_hist, for_troph_hist)
-
-filter_studies = ggplot(data = all_filters_line, aes(x = Year, y = no_obs, 
+filter_studies = ggplot(data = all_filters_line, aes(x = as.numeric(Year), y = no_obs, 
                                                      group = Filter, 
                                                      colour = Filter, 
                                                      shape = Filter, 
-                                                     linetype = Filter), ) +
+                                                     linetype = Filter)) +
   geom_line(size = 1.08) +
   geom_point(size = 3)+
   theme6()+ #begins in 1978
@@ -786,38 +726,21 @@ filter_studies = ggplot(data = all_filters_line, aes(x = Year, y = no_obs,
   scale_shape_manual('Environmental Filter', values = c(19,19,19,19,19,19))+
   scale_color_manual('Environmental Filter', values = pal) +
   labs(x = 'Year', y = 'Number of Studies') +
-  scale_y_continuous(limits = c(0,100), breaks = c(0,30,60,90))+
+  #scale_y_continuous(limits = c(0,100), breaks = c(0,30,60,90))+
   scale_x_continuous(limits = c(1978, 2019), 
                      breaks = c(1978, 1983, 1988, 1993,
                                 1998, 2003, 2008, 2013, 2018))
 
 #for level of environmental filtering
-temp = current
-temp$Taxonomic = as.factor(temp$Taxonomic)
-levels(temp$Taxonomic)[levels(temp$Taxonomic)=="Broad"] = "Multiple"
-levels(temp$Taxonomic)[levels(temp$Taxonomic)=="Herps"] = "Herpetofauna"
-for_tax_hist = temp %>% 
+for_tax_hist = categorical_data %>% 
   filter(Year != 'in review' & Year < 2019) %>% 
+  select(DOI, Year, Taxonomic) %>% 
+  distinct() %>%
   group_by(Year, Taxonomic) %>%   
   summarize(no_obs = length(Year))
-for_tax_hist$Taxonomic = as.factor(for_tax_hist$Taxonomic)
-
-for_tax_hist1 = for_tax_hist %>% 
-  filter(Taxonomic %in% c('Birds', 'Fish', 'Herpetofauna', 'Mammals')) %>% 
-  mutate(spine = 'yay')
-for_tax_hist2 = for_tax_hist %>% 
-  filter(Taxonomic %in% c('Plants', 'Insects', 'Plankton')) %>% 
-  mutate(spine = 'nay')
-for_tax_hist_3 = for_tax_hist %>% 
-  filter(Taxonomic %in% c('Multiple', 'Other')) %>% 
-  mutate(spine = 'poss')
-forTax = rbind(for_tax_hist1, for_tax_hist2, for_tax_hist_3)
-forTax$spine = as.factor(forTax$spine)
-forTax$no_obs = as.integer(forTax$no_obs)
-forTax$Taxonomic = as.character(forTax$Taxonomic)
 
 pal = pnw_palette('Bay',10, type = 'continuous')
-tax_studies = ggplot(data = forTax, aes(x = Year, y = no_obs, 
+tax_studies = ggplot(data = for_tax_hist, aes(x = Year, y = no_obs, 
                                         colour = Taxonomic, 
                                         linetype = Taxonomic, 
                                         group = Taxonomic,
@@ -833,30 +756,22 @@ tax_studies = ggplot(data = forTax, aes(x = Year, y = no_obs,
   labs(x = 'Year', y = 'Number of Studies')
 
 #for level of environmental filtering
-global_driver = current %>% 
+global_driver = categorical_data %>% 
   filter(Year != 'in review' & Year < 2019) %>% 
-  group_by(Year, `Global Change Driver`) %>% 
-  filter(`Global Change Driver` != 0) %>% 
-  summarize(no_obs = length(Year)) %>% 
-  select(Year, no_obs, `Global Change Driver`)
-global_driver$`Global Change Driver` = 
-  as.factor(global_driver$`Global Change Driver`)
-levels(global_driver$
-         `Global Change Driver`)[levels(global_driver$`Global Change Driver`)==
-                                               "Global Change Broad"] = 
-  "Multiple"
-levels(global_driver$
-         `Global Change Driver`)[levels(global_driver$`Global Change Driver`)==
-                                               "Global Change Multiple"] = 
-  "Multiple"
+  select(DOI, Year, GlobalChange) %>% 
+  distinct() %>%
+  group_by(Year, GlobalChange) %>% 
+  filter(GlobalChange != 0) %>% 
+  summarize(no_obs = length(Year)) 
+
 pal = pnw_palette('Bay', 6, type = 'continuous')
 global_driver$Year = as.numeric(global_driver$Year)
 global_plot = ggplot(data = global_driver, 
                      aes(x = Year, y = no_obs, 
-                       group = `Global Change Driver`, 
-                       colour = `Global Change Driver`, 
-                       linetype = `Global Change Driver`,
-                       shape = `Global Change Driver`)) +
+                       group = GlobalChange, 
+                       colour = GlobalChange, 
+                       linetype = GlobalChange,
+                       shape = GlobalChange)) +
   geom_line(size = 1.08) +
   geom_point(size = 3)+
   scale_color_manual('Global Change Driver', values = pal) +
@@ -868,7 +783,7 @@ global_plot = ggplot(data = global_driver,
                      breaks = c(1978, 1983, 1988, 1993,
                                 1998, 2003, 2008, 2013, 2018)) +
   theme6() #begins in 1992
-library(cowplot)
+
 alltypes = plot_grid(total_studies, ecosystem_studies, 
                      tax_studies, trait_studies, filter_studies, global_plot,
                            nrow = 2, ncol = 3, 
@@ -877,10 +792,10 @@ alltypes = plot_grid(total_studies, ecosystem_studies,
                      labels = c('A', 'B','C','D','E','F'), 
                      label_x = c(0.185, 0.07, 0.07, 0.185,0.07,0.07), vjust = 2.5)
 
-ggsave(here('./Figures/Heatplots-Timeseries/timeseries_small.png'), 
+ggsave(here('./figures/heatplots-and-timeseries/timeseries_small.png'), 
        plot = alltypes, 
        width = 20, height = 12, dpi = 200)
-ggsave(here('./Figures/Heatplots-Timeseries/timeseries_large.png'), 
+ggsave(here('./figures/heatplots-and-timeseries/timeseries_large.png'), 
        plot = alltypes, 
        width = 20, height = 12, dpi = 600)
 
