@@ -84,7 +84,15 @@ stopCluster(cluster)
 # to be read properly. This is checked with the for loop checking for the 
 # existence of each file. 
 
+# Create Assorted plots ========================================================
+rm(list = ls())
+source(here('./code/heatplots_wordclouds_timeseries.R'))
 
+# In this script, a series of plots are created, including heat plots for the 
+# number of studies with varying intersections, a number of word clouds that 
+# depict the number of times specific traits were used etc., and then time 
+# series plots that show how the number of studies centering on various 
+# topics over time. 
 
 
 

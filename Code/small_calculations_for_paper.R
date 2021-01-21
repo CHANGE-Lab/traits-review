@@ -1,7 +1,7 @@
 ########## 
 ##########
 # This code contains some back-of-the-envelope calculations
-# in Green et al. (2020) 
+# in Green et al. (2021) 
 # A review on the use of traits in ecological research
 ##########
 ##########
@@ -9,6 +9,8 @@
 # DATE OF CREATION: 2020-07-15
 ##########
 ##########
+
+# set-up =======================================================================
 
 library(tidyverse)
 library(here)

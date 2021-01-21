@@ -1,0 +1,215 @@
+---
+title: "In-text Results"
+author: "Cole B. Brookson"
+date: "12/01/2021"
+output: html_document
+---
+
+# Current trends in trait-based ecology
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(here)
+`%notin%` = Negate(`%in%`)
+
+
+
+categorical_data = read_csv(here('./data/processed-data/categorical_data.csv'))
+categorical_data_nondum = 
+  read_csv(here(paste0('./data/processed-data',
+                       '/categorical_data_nondummy.csv')))
+orig_dummy = read_csv(here('./data/processed-data/original_traits_dummy.csv'))
+trait_levels_orig = 
+  read_csv(here('./data/processed-data/trait_levels_orig_prim_sec.csv'))
+trait_levels_clean = 
+  read_csv(here('./data/unprocessed-data/trait_levels_clean.csv'))
+trait_levels_func_bio = 
+  read_csv(here(paste0('./data/unprocessed-data/',
+                       'traits_classification_FuncBiogeog',
+                       '_to_append_revised.csv')))
+
+number_of_environmental_filters = categorical_data_nondum %>% 
+  select(DOI, Fundamental, Physical, Ecological, Trophic) %>% 
+  group_by(DOI) %>% 
+  summarize(n = sum(Fundamental, Physical, Ecological, Trophic))
+number_of_Traits = categorical_data_nondum %>% 
+  select(DOI, Morphological, NEWPhysiological, `Life History`, Behavioural) %>% 
+  group_by(DOI) %>% 
+  summarize(n = sum(Morphological, NEWPhysiological, 
+                    `Life History`, Behavioural))
+
+one_filter = table(number_of_environmental_filters$n)[1]/
+  sum(table(number_of_environmental_filters))
+more_than_two_filter = sum(table(number_of_environmental_filters$n)[3:4])/
+  sum(table(number_of_environmental_filters))
+more_than_one_filter = sum(table(number_of_environmental_filters$n)[2:4])
+
+more_than_one_trait = sum(table(number_of_Traits$n)[2:4])
+more_than_two_trait = sum(table(number_of_Traits$n)[3:4])
+four_trait = sum(table(number_of_Traits$n)[4])
+
+print(paste0("we identified ", n_distinct(categorical_data$DOI), " studies relevant to traits-based..."))
+print(paste0("most studies (", one_filter, ") focused on one level of filtering"))
+print(paste0("pecentage of studies (", more_than_two_filter, ") focused on more than two levels of filtering"))
+print(paste0("pecentage of studies (", more_than_one_filter, ") focused on more than one level of filtering"))
+
+print(paste0("pecentage of studies (", more_than_one_trait, ") focused on more than one trait"))
+print(paste0("pecentage of studies (", more_than_two_trait, ") focused on more than two traits"))
+print(paste0("pecentage of studies (", four_trait, ") focused on all four traits"))
+
+```
+
+In total, we identified 865 studies relevant to traits-based ecology from >200 journals published as early as 1978. Over 50% of the studies came from just 18 journals.  Most studies (59%) focused on the role of traits at a single level of environmental filtering, while only 3.5% of studies examined traits in the context of more than two levels of filtering. In total, 435 studies examined more than one type of trait (i.e. physiological, morphological, behavioural, or life history), 176 considered more than two trait types, and only 26 (<0.5%) studies considered traits that represented all four categories simultaneously.
+
+```{r}
+categorical_data_nondum$Taxonomic = 
+  str_to_title(categorical_data_nondum$Taxonomic)
+unique(categorical_data_nondum$Taxonomic)
+categorical_data_nondum$Taxonomic = as.factor(categorical_data_nondum$Taxonomic)
+categorical_data_nondum$Ecosystem = as.factor(categorical_data_nondum$Ecosystem)
+
+levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Herps"] = 
+  "Herpetofauna"
+levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Broad"] = 
+  "Multiple"
+levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Bacteria"] = 
+  "Other"
+levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Phytoplankton"] = 
+  "Plankton"
+levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Fungi"] = 
+  "Other"
+levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Invertebrates"] = 
+  "Other"
+levels(categorical_data_nondum$Ecosystem)[levels(categorical_data_nondum$Ecosystem)=="Broad"] =
+  "Multiple"
+levels(categorical_data_nondum$Ecosystem)[levels(categorical_data_nondum$Ecosystem)=="freshwater"] = 
+  "Freshwater"
+levels(categorical_data_nondum$Ecosystem)[levels(categorical_data_nondum$Ecosystem)=="terrestrial"] = 
+  "Terrestrial"
+levels(categorical_data_nondum$Ecosystem)[levels(categorical_data_nondum$Ecosystem)=="marine"] = 
+  "Marine"
+unique(categorical_data_nondum$Taxonomic)
+
+number_of_plant_studies = nrow(categorical_data_nondum %>% 
+  filter(Taxonomic == 'Plants'))/nrow(categorical_data_nondum) *100
+number_of_plant_morphology_studies = nrow(categorical_data_nondum %>% 
+  filter(Taxonomic == 'Plants') %>% 
+    filter(Morphological == 1))/nrow(categorical_data_nondum) *100
+number_of_aquatic_studies = nrow(categorical_data_nondum %>% 
+  filter(Ecosystem %in% c('Marine', 'Freshwater')))/nrow(categorical_data_nondum) *100
+
+
+
+number_of_measures_of_size 
+
+orig_size = trait_levels_clean %>% 
+  filter(Secondary_classification %in% c('age/size at maturity', 'biomass',
+                                         # counted 21 things that weren't size in 'age/size at maturity' so subtract 21
+                                         'bone length/shape', 'brain size', 
+                                         'cell biovolume', 'offspring size', 
+                                         'size', 'stomach size')) %>% 
+  select(Trait_spell_corrected, Secondary_classification) %>% 
+  distinct()
+new_size = trait_levels_func_bio %>% 
+    filter(Secondary_classification %in% c('age/size at maturity', 'biomass',
+                                         'bone length/shape', 'brain size', 
+                                         'cell biovolume', 'offspring size', 
+                                         'size', 'stomach size')) %>% 
+  select(Trait_spell_corrected, Secondary_classification) %>% 
+  distinct()
+
+number_of_measures_of_size = nrow(rbind(orig_size, new_size) %>% 
+  distinct()) - 21
+
+
+
+# trait_levels = rbind(trait_levels_clean %>% 
+#   select(Trait_spell_corrected, Secondary_classification),
+#   trait_levels_func_bio %>% 
+#   select(Trait_spell_corrected, Secondary_classification)) %>% 
+#   distinct()
+
+
+number_of_SLA_studies = nrow(orig_dummy %>% 
+  select(DOI, SLA) %>% 
+  filter(SLA == 1) %>% 
+  distinct())
+
+number_of_body_size_studies = nrow(orig_dummy %>% 
+  select(DOI, `body size`) %>% 
+  filter(`body size` == 1) %>% 
+  distinct())
+
+number_of_unique_traits = n_distinct(trait_levels_orig$Trait)
+percent_of_unique_traits_that_are_size = 
+  (number_of_measures_of_size/number_of_unique_traits)*100
+
+number_of_size_studies_df = trait_levels_orig %>% 
+  filter(Secondary_classification %in% c('age/size at maturity', 'biomass',
+                                         # counted 21 things that weren't size in 'age/size at maturity' so subtract 21
+                                         'bone length/shape', 'brain size', 
+                                         'cell biovolume', 'offspring size', 
+                                         'size', 'stomach size')) %>% 
+  select(DOI, Trait, Secondary_classification) %>% 
+  distinct()
+number_of_size_studies = n_distinct(number_of_size_studies_df$DOI)
+
+number_of_size_studies_avg_use_df = number_of_size_studies_df %>% 
+  group_by(Trait) %>% 
+  summarize(n = n())
+number_of_size_studies_avg_use = mean(number_of_size_studies_avg_use_df$n)
+
+number_of_nonsize_studies_df = trait_levels_orig %>% 
+  select(DOI, Trait) %>% 
+  filter(Trait %notin% number_of_size_studies_df$Trait) %>% 
+  group_by(Trait) %>% 
+  summarize(n = n())
+number_of_nonsize_studies_avg_use = mean(number_of_nonsize_studies_df$n)
+
+print(paste0("pecentage of studies (", number_of_plant_studies, ") focused on plants"))
+print(paste0("pecentage of studies (", number_of_plant_morphology_studies, ") focused on plant morphology"))
+print(paste0("pecentage of studies (", number_of_aquatic_studies, ") focused on aquatic systems"))
+print(paste0("number of metrics (", number_of_measures_of_size, ") of size across studies"))
+print(paste0("number of studies (", number_of_SLA_studies, ") that used SLA"))
+print(paste0("number of studies (", number_of_body_size_studies, ") that used body size"))
+print(paste0("number of unique (", number_of_unique_traits, ") traits"))
+print(paste0("percentage of traits (", percent_of_unique_traits_that_are_size,"%) that were about size"))
+print(paste0("number of studies (", number_of_size_studies,") that used a size-based trait"))
+print(paste0("average number of times (", number_of_size_studies_avg_use,"%) that a particular size-based trait was used"))
+print(paste0("average number of times (", number_of_nonsize_studies_avg_use,"%) that a particular non-size-based trait was used"))
+
+
+
+```
+
+
+Most of the research to date focuses on relating variation in morphological and life history features of vascular plants to abiotic environmental filtering processes within terrestrial ecosystems using observational techniques (Figures 3 and 4; 34% of all papers focused on plants, 30% on plant morphology). In contrast, traits-based investigations within marine and freshwater systems comprises just 30% of the studies combined, with a focus on observational studies of traits in the context of abiotic environmental filtering processes, primarily for fishes (Figures 3 and 4). 
+
+In fact, we identified 131 different metrics of size used across studies, representing a range of length, mass, or volume measures—including vegetative height and cone length (plants), snout-ventral length or instar size (animals), and biovolume (cells).
+
+In fact, SLA is the most common single trait examined in the studies reviewed here (127 occurrences over the 822 studies), with measures of body size a close second at 108 occurrences.
+
+In total, we identified 2,561 unique traits within the literature we reviewed. While only 5% of these (131) represented aspects of organism size, size-based traits were used within 405 studies (49%) and each of these 131 traits were used by 3.7 separate papers on average, while non-size traits were each used only 1.7 times on average across the 822 studies.
+
+
+```{r}
+
+```
+
+...allowed us to attribute traits that confer information about the same process into conceptual groupings, revealing 196 ‘secondary’ trait classifications (Supplementary Material; Table S3). Of these, 14% are used in a single study while 34% are used in more than 10 studies. Of the 2,561 unique traits, morphological traits (Figure 5; n = 1,163) included aspects of organisms’ physical form (e.g. body size and shape, or the presence and form of dentition or spines) and biochemical composition (e.g. nitrogen or carbon content). 
+
+Key behavioural traits (Figure 5, n = 626) include aspects of organisms’ activity (e.g. movement rates or nocturnality) and habitat use (e.g. vertical habitat position within forest canopies or water columns, range size or edge position). Life history traits (Figure 5; n = 585) describe growth, abundance, survival, and reproduction (including reproductive mode, timing, and frequency), while physiological traits (Figure 5; n = 187 traits) conferred information about organisms’ environmental habitat requirements
+
+# Traits-based global change predictions
+
+Of the 822 studies we reviewed, a small portion (23%) focused on applying traits in the context of global change, and even fewer (3%) applied traits to generate predictions about patterns of diversity, abundance, or distribution beyond the data used for the initial analysis. Global change drivers, in order of decreasing frequency within the studies we evaluated, included habitat degradation (8%), climate change (6%), biological invasion (5%), multiple/non-specified drivers (3%), and exploitation (1%). Predictive studies emerged primarily within the last 10 years (82%); half of all predictive studies were published in the last five years (Figure 2F). More than 30% of predictive studies focused on applying plant morphological traits to predict the outcomes of abiotic environmental filtering in terrestrial ecosystems. Crucially, studies that generated trait-based predictions of global change (the main focus of this review) represent fewer than 3% (22) of all studies. Of these, more than half (12) focus on ecological prediction in a climate change context, three on biological invasions, and a single study each on the consequences of habitat degradation and exploitation. Five studies used traits to predict the outcomes of multiple global change drivers (two marine [Jacob et al. 2011, Eklof et al. 2015]; three terrestrial [Cardillo et al. 2004; Dury et al. 2018; Knott et al. 2019]).The narrowest subset of journal articles (and subsequently, traits) corresponded to studies that were both predictive and investigated global change impacts to ecosystems (nstudies = 22).
+
+# Challenges and opportunities for global change prediction
+
+## Measuring multivariate trait 'syndromes' to explain ecological outcomes
+
+Yet single trait-type studies make up roughly half of the research we reviewed (387 papers) compared with multi-trait (i.e. 3 or more traits) studies (176 papers, 21%), and we estimate that the true ratio of single vs. multi-trait studies to be more significantly skewed towards single-trait studies.
+
+## Accounting for intraspecific trait variation in predicted responses to global change
+
+In our review, only 38 papers specifically reference investigating the intraspecific trait variation in their system, while interspecific variation dominated in most of the papers either explicitly or implicitly.
