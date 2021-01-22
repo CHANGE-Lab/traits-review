@@ -94,9 +94,16 @@ source(here('./code/heatplots_wordclouds_timeseries.R'))
 # series plots that show how the number of studies centering on various 
 # topics over time. 
 
+# Print all small calculations from in-text ====================================
+rm(list = ls())
+source(here('./code/in_text_results.R'))
 
-
-
+# This script creates a series of objects that represent some number or 
+# percentage value reported in the text. These objects are then printed
+# along with a short bit of text that describe the object. This allows us to 
+# know how many studies focused on what traits/filters etc. This has been
+# created for complete transparency in the process of reporting results in 
+# the text itself. 
 
 
 

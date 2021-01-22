@@ -75,7 +75,7 @@ mv_gc_nb_an =
   readRDS(here('./data/manyglm-intermediate/mv_gc_nb_anova_secondary.rds'))
 write_csv(
   mv_gc_nb_an$table,
-  here('./data/manyglm-intermediate/mv_gc_nb_secondary_anova_table.csv')) 
+  here('./output-tables/mv_gc_nb_secondary_anova_table.csv')) 
 
 # individual adjusted p-values for species/traits - get univariate p-values
 # mv_gc_nb_an_uni = anova.manyglm(mv_gc_nb,p.uni="adjusted") 
@@ -105,7 +105,7 @@ gc_top = gc_top %>%
 
 #How much deviance explained?
 write_csv(gc_top, 
-          here('./data/manyglm-intermediate/secondary_globalchange_top.csv')) 
+          here('./output-tables/secondary_globalchange_top.csv')) 
 
 # Look at Top Coefficients =====================================================
 

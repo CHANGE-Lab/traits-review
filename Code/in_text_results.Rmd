@@ -48,14 +48,28 @@ more_than_one_trait = sum(table(number_of_Traits$n)[2:4])
 more_than_two_trait = sum(table(number_of_Traits$n)[3:4])
 four_trait = sum(table(number_of_Traits$n)[4])
 
-print(paste0("we identified ", n_distinct(categorical_data$DOI), " studies relevant to traits-based..."))
-print(paste0("most studies (", one_filter, ") focused on one level of filtering"))
-print(paste0("pecentage of studies (", more_than_two_filter, ") focused on more than two levels of filtering"))
-print(paste0("pecentage of studies (", more_than_one_filter, ") focused on more than one level of filtering"))
+print(paste0("we identified ",
+             n_distinct(categorical_data$DOI), 
+             " studies relevant to traits-based..."))
+print(paste0("most studies (", 
+             one_filter, 
+             ") focused on one level of filtering"))
+print(paste0("pecentage of studies (", 
+             more_than_two_filter, 
+             ") focused on more than two levels of filtering"))
+print(paste0("pecentage of studies (", 
+             more_than_one_filter, 
+             ") focused on more than one level of filtering"))
 
-print(paste0("pecentage of studies (", more_than_one_trait, ") focused on more than one trait"))
-print(paste0("pecentage of studies (", more_than_two_trait, ") focused on more than two traits"))
-print(paste0("pecentage of studies (", four_trait, ") focused on all four traits"))
+print(paste0("pecentage of studies (", 
+             more_than_one_trait, 
+             ") focused on more than one trait"))
+print(paste0("pecentage of studies (", 
+             more_than_two_trait, 
+             ") focused on more than two traits"))
+print(paste0("pecentage of studies (", 
+             four_trait, 
+             ") focused on all four traits"))
 
 ```
 
@@ -65,28 +79,40 @@ In total, we identified 865 studies relevant to traits-based ecology from >200 j
 categorical_data_nondum$Taxonomic = 
   str_to_title(categorical_data_nondum$Taxonomic)
 unique(categorical_data_nondum$Taxonomic)
-categorical_data_nondum$Taxonomic = as.factor(categorical_data_nondum$Taxonomic)
-categorical_data_nondum$Ecosystem = as.factor(categorical_data_nondum$Ecosystem)
+categorical_data_nondum$Taxonomic = 
+  as.factor(categorical_data_nondum$Taxonomic)
+categorical_data_nondum$Ecosystem = 
+  as.factor(categorical_data_nondum$Ecosystem)
 
-levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Herps"] = 
+levels(categorical_data_nondum$Taxonomic)[
+  levels(categorical_data_nondum$Taxonomic)=="Herps"] = 
   "Herpetofauna"
-levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Broad"] = 
+levels(categorical_data_nondum$Taxonomic)[
+  levels(categorical_data_nondum$Taxonomic)=="Broad"] = 
   "Multiple"
-levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Bacteria"] = 
+levels(categorical_data_nondum$Taxonomic)[
+  levels(categorical_data_nondum$Taxonomic)=="Bacteria"] = 
   "Other"
-levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Phytoplankton"] = 
+levels(categorical_data_nondum$Taxonomic)[
+  levels(categorical_data_nondum$Taxonomic)=="Phytoplankton"] = 
   "Plankton"
-levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Fungi"] = 
+levels(categorical_data_nondum$Taxonomic)[
+  levels(categorical_data_nondum$Taxonomic)=="Fungi"] = 
   "Other"
-levels(categorical_data_nondum$Taxonomic)[levels(categorical_data_nondum$Taxonomic)=="Invertebrates"] = 
+levels(categorical_data_nondum$Taxonomic)[
+  levels(categorical_data_nondum$Taxonomic)=="Invertebrates"] = 
   "Other"
-levels(categorical_data_nondum$Ecosystem)[levels(categorical_data_nondum$Ecosystem)=="Broad"] =
+levels(categorical_data_nondum$Ecosystem)[
+  levels(categorical_data_nondum$Ecosystem)=="Broad"] =
   "Multiple"
-levels(categorical_data_nondum$Ecosystem)[levels(categorical_data_nondum$Ecosystem)=="freshwater"] = 
+levels(categorical_data_nondum$Ecosystem)[
+  levels(categorical_data_nondum$Ecosystem)=="freshwater"] = 
   "Freshwater"
-levels(categorical_data_nondum$Ecosystem)[levels(categorical_data_nondum$Ecosystem)=="terrestrial"] = 
+levels(categorical_data_nondum$Ecosystem)[
+  levels(categorical_data_nondum$Ecosystem)=="terrestrial"] = 
   "Terrestrial"
-levels(categorical_data_nondum$Ecosystem)[levels(categorical_data_nondum$Ecosystem)=="marine"] = 
+levels(categorical_data_nondum$Ecosystem)[
+  levels(categorical_data_nondum$Ecosystem)=="marine"] = 
   "Marine"
 unique(categorical_data_nondum$Taxonomic)
 
@@ -96,25 +122,28 @@ number_of_plant_morphology_studies = nrow(categorical_data_nondum %>%
   filter(Taxonomic == 'Plants') %>% 
     filter(Morphological == 1))/nrow(categorical_data_nondum) *100
 number_of_aquatic_studies = nrow(categorical_data_nondum %>% 
-  filter(Ecosystem %in% c('Marine', 'Freshwater')))/nrow(categorical_data_nondum) *100
+  filter(Ecosystem %in% c('Marine', 'Freshwater')))/
+  nrow(categorical_data_nondum) *100
 
 
 
-number_of_measures_of_size 
 
 orig_size = trait_levels_clean %>% 
-  filter(Secondary_classification %in% c('age/size at maturity', 'biomass',
-                                         # counted 21 things that weren't size in 'age/size at maturity' so subtract 21
-                                         'bone length/shape', 'brain size', 
-                                         'cell biovolume', 'offspring size', 
-                                         'size', 'stomach size')) %>% 
+  filter(Secondary_classification %in% 
+           c('age/size at maturity', 'biomass',
+             # counted 21 things that weren't size in 
+             # 'age/size at maturity' so subtract 21
+             'bone length/shape', 'brain size', 
+             'cell biovolume', 'offspring size', 
+             'size', 'stomach size')) %>% 
   select(Trait_spell_corrected, Secondary_classification) %>% 
   distinct()
 new_size = trait_levels_func_bio %>% 
-    filter(Secondary_classification %in% c('age/size at maturity', 'biomass',
-                                         'bone length/shape', 'brain size', 
-                                         'cell biovolume', 'offspring size', 
-                                         'size', 'stomach size')) %>% 
+    filter(Secondary_classification %in% 
+             c('age/size at maturity', 'biomass',
+               'bone length/shape', 'brain size', 
+               'cell biovolume', 'offspring size', 
+                'size', 'stomach size')) %>% 
   select(Trait_spell_corrected, Secondary_classification) %>% 
   distinct()
 
@@ -145,11 +174,13 @@ percent_of_unique_traits_that_are_size =
   (number_of_measures_of_size/number_of_unique_traits)*100
 
 number_of_size_studies_df = trait_levels_orig %>% 
-  filter(Secondary_classification %in% c('age/size at maturity', 'biomass',
-                                         # counted 21 things that weren't size in 'age/size at maturity' so subtract 21
-                                         'bone length/shape', 'brain size', 
-                                         'cell biovolume', 'offspring size', 
-                                         'size', 'stomach size')) %>% 
+  filter(Secondary_classification %in% 
+           c('age/size at maturity', 'biomass',
+              # counted 21 things that weren't size 
+              # in 'age/size at maturity' so subtract 21
+              'bone length/shape', 'brain size', 
+              'cell biovolume', 'offspring size', 
+              'size', 'stomach size')) %>% 
   select(DOI, Trait, Secondary_classification) %>% 
   distinct()
 number_of_size_studies = n_distinct(number_of_size_studies_df$DOI)
@@ -166,17 +197,39 @@ number_of_nonsize_studies_df = trait_levels_orig %>%
   summarize(n = n())
 number_of_nonsize_studies_avg_use = mean(number_of_nonsize_studies_df$n)
 
-print(paste0("pecentage of studies (", number_of_plant_studies, ") focused on plants"))
-print(paste0("pecentage of studies (", number_of_plant_morphology_studies, ") focused on plant morphology"))
-print(paste0("pecentage of studies (", number_of_aquatic_studies, ") focused on aquatic systems"))
-print(paste0("number of metrics (", number_of_measures_of_size, ") of size across studies"))
-print(paste0("number of studies (", number_of_SLA_studies, ") that used SLA"))
-print(paste0("number of studies (", number_of_body_size_studies, ") that used body size"))
-print(paste0("number of unique (", number_of_unique_traits, ") traits"))
-print(paste0("percentage of traits (", percent_of_unique_traits_that_are_size,"%) that were about size"))
-print(paste0("number of studies (", number_of_size_studies,") that used a size-based trait"))
-print(paste0("average number of times (", number_of_size_studies_avg_use,"%) that a particular size-based trait was used"))
-print(paste0("average number of times (", number_of_nonsize_studies_avg_use,"%) that a particular non-size-based trait was used"))
+print(paste0("pecentage of studies (",
+             number_of_plant_studies, 
+             ") focused on plants"))
+print(paste0("pecentage of studies (", 
+             number_of_plant_morphology_studies, 
+             ") focused on plant morphology"))
+print(paste0("pecentage of studies (", 
+             number_of_aquatic_studies, 
+             ") focused on aquatic systems"))
+print(paste0("number of metrics (", 
+             number_of_measures_of_size, 
+             ") of size across studies"))
+print(paste0("number of studies (", 
+             number_of_SLA_studies, 
+             ") that used SLA"))
+print(paste0("number of studies (", 
+             number_of_body_size_studies, 
+             ") that used body size"))
+print(paste0("number of unique (", 
+             number_of_unique_traits, 
+             ") traits"))
+print(paste0("percentage of traits (",
+             percent_of_unique_traits_that_are_size,
+             "%) that were about size"))
+print(paste0("number of studies (", 
+             number_of_size_studies,
+             ") that used a size-based trait"))
+print(paste0("average number of times (", 
+             number_of_size_studies_avg_use,
+             "%) that a particular size-based trait was used"))
+print(paste0("average number of times (", 
+             number_of_nonsize_studies_avg_use,
+             "%) that a particular non-size-based trait was used"))
 
 
 
@@ -193,6 +246,67 @@ In total, we identified 2,561 unique traits within the literature we reviewed. W
 
 
 ```{r}
+number_of_secondary_traits = 
+  n_distinct(trait_levels_orig$Secondary_classification)
+number_of_primary_traits = 
+  n_distinct(trait_levels_orig$Primary_classification)
+
+number_of_times_secondary_studies_used_df = trait_levels_orig %>% 
+  select(Secondary_classification, Trait) %>% 
+  unique() %>% 
+  group_by(Secondary_classification) %>% 
+  summarize(n = n())
+number_of_secondary_traits_used_once = 
+  nrow(number_of_times_secondary_studies_used_df %>% 
+  filter(n == 1))/nrow(number_of_times_secondary_studies_used_df)
+number_of_secondary_traits_used_more_than_10_times = 
+  nrow(number_of_times_secondary_studies_used_df %>% 
+  filter(n >= 10))/nrow(number_of_times_secondary_studies_used_df)
+
+
+number_of_physiological_studies_df = rbind(trait_levels_orig %>% 
+  filter(grepl("tolerance", Secondary_classification)),
+  trait_levels_orig %>% 
+    filter(Primary_classification == 'physiology'))
+number_of_physiological_studies = nrow(number_of_physiological_studies_df)
+
+number_of_times_primary_studies_used_df = trait_levels_orig %>% 
+  filter(Trait %notin% number_of_physiological_studies_df$Trait) %>% 
+  select(Primary_classification, Trait) %>% 
+  unique() %>% 
+  group_by(Primary_classification) %>% 
+  summarize(n = n())
+
+number_of_morphology_studies_df = number_of_times_primary_studies_used_df %>% 
+  filter(Primary_classification %in% c('morphology', 'composition'))
+number_of_morphology_studies = sum(number_of_morphology_studies_df$n)
+number_of_behaviour_studies_df = number_of_times_primary_studies_used_df %>% 
+  filter(Primary_classification %in% c('behaviour', 'activity', 'habitat',
+                                       'resource acquisition'))
+number_of_behaviour_studies = sum(number_of_behaviour_studies_df$n)
+number_of_lifehistory_studies_df = number_of_times_primary_studies_used_df %>% 
+  filter(Primary_classification %in% c('growth', 'abundance', 'survival', 
+                                       'life history'))
+number_of_lifehistory_studies = sum(number_of_lifehistory_studies_df$n)
+
+print(paste0("number of secondary trait (", 
+             number_of_secondary_traits,
+             "%) classifications, and ",
+             number_of_primary_traits, "primary trait classifications"))
+print(paste0("percentage of secondary traits (", 
+             number_of_secondary_traits_used_once,
+             "%) that only appeared in one paper"))
+print(paste0("percentage of secondary traits (", 
+             number_of_secondary_traits_used_more_than_10_times,
+             "%) that appeared in 10 or more papers"))
+print(paste0("number of physiological (", 
+             number_of_physiological_studies,") traits"))
+print(paste0("number of morphological (", 
+             number_of_morphology_studies,") traits"))
+print(paste0("number of behaviour (", 
+             number_of_behaviour_studies,") traits"))
+print(paste0("number of life history (", 
+             number_of_lifehistory_studies,") traits"))
 
 ```
 
@@ -201,6 +315,132 @@ In total, we identified 2,561 unique traits within the literature we reviewed. W
 Key behavioural traits (Figure 5, n = 626) include aspects of organisms’ activity (e.g. movement rates or nocturnality) and habitat use (e.g. vertical habitat position within forest canopies or water columns, range size or edge position). Life history traits (Figure 5; n = 585) describe growth, abundance, survival, and reproduction (including reproductive mode, timing, and frequency), while physiological traits (Figure 5; n = 187 traits) conferred information about organisms’ environmental habitat requirements
 
 # Traits-based global change predictions
+
+```{r}
+categorical_data_nondum$`Global Change Driver` = 
+  as.factor(categorical_data_nondum$`Global Change Driver`)
+levels(categorical_data_nondum$`Global Change Driver`)[
+  levels(categorical_data_nondum$
+           `Global Change Driver`)=="climate change"] = 
+  "Climate Change"
+levels(categorical_data_nondum$`Global Change Driver`)[
+  levels(categorical_data_nondum$
+           `Global Change Driver`)=="habitat degredation"] = 
+  "Habitat Degredation"
+levels(categorical_data_nondum$`Global Change Driver`)[
+  levels(categorical_data_nondum$`Global Change Driver`)=="invasion"] = 
+  "Invasion"
+levels(categorical_data_nondum$`Global Change Driver`)[
+  levels(categorical_data_nondum$
+           `Global Change Driver`)=="Global Change Multiple"] = 
+  "Global Change Broad"
+
+percentage_of_global_change_studies = 
+  nrow(categorical_data_nondum %>% 
+       filter(`Global Change Driver` != 0))/nrow(categorical_data_nondum)*100
+percentage_of_forecasting_studies = 
+  nrow(categorical_data_nondum %>% 
+       filter(`Forecasting/Predictive` == 1))/nrow(categorical_data_nondum)*100
+
+percentage_of_global_change_drivers = 
+  table(categorical_data_nondum$`Global Change Driver`)/
+  nrow(categorical_data_nondum)*100
+
+predictive_papers_df = categorical_data_nondum %>% 
+       filter(`Forecasting/Predictive` == 1) 
+percentage_of_predictive_papers_in_last_10_years =
+  nrow(predictive_papers_df %>% 
+         filter(Year >= 2011))/nrow(predictive_papers_df)*100
+percentage_of_predictive_papers_in_last_5_years =
+  nrow(predictive_papers_df %>% 
+         filter(Year >= 2016))/nrow(predictive_papers_df)*100
+
+predictive_papers_focused_on_plants = 
+  nrow(predictive_papers_df %>% 
+  filter(Taxonomic == 'Plants'))/
+  nrow(predictive_papers_df)*100
+
+percentage_of_predictive_global_change_papers = 
+  nrow(predictive_papers_df %>% 
+         filter(`Global Change Driver` != 0))/
+  nrow(categorical_data_nondum)*100
+number_of_predictive_global_change_papers = 
+    nrow(predictive_papers_df %>% 
+         filter(`Global Change Driver` != 0))
+
+predictive_types_of_global_change = 
+  predictive_papers_df %>% 
+  filter(`Global Change Driver` != 0)
+predictive_types_of_global_change = 
+  table(predictive_types_of_global_change$
+          `Global Change Driver`)
+
+trait_type_studies = categorical_data_nondum %>% 
+  rowwise() %>% 
+  mutate(sum = sum(Morphological, NEWPhysiological, `Life History`, 
+                   Behavioural)) %>% 
+  select(DOI, sum)
+
+number_of_single_trait_type_studies = nrow(trait_type_studies %>% 
+                                             filter(sum == 1))
+number_of_three_or_more_trait_type_studies = nrow(trait_type_studies %>% 
+                                             filter(sum > 2))
+
+print(paste0("percentage of global change (", 
+             percentage_of_global_change_studies,") studies"))
+print(paste0("percentage of forecasting (", 
+             percentage_of_forecasting_studies,") studies"))
+print(paste0("percentage of papers about (", 
+             percentage_of_global_change_drivers['Climate Change'],
+             ") Climate Change"))
+print(paste0("percentage of papers about (", 
+             percentage_of_global_change_drivers['Invasion'],
+             ") Invasion"))
+print(paste0("percentage of papers about (", 
+             percentage_of_global_change_drivers['Habitat Degredation'],
+             ") CHabitat Degredation"))
+print(paste0("percentage of papers about (", 
+             percentage_of_global_change_drivers['Global Change Broad'],
+             ") Global Change Broad"))
+print(paste0("percentage of papers about (", 
+             percentage_of_global_change_drivers['Exploitation'],
+             ") Exploitation"))
+print(paste0("percentage of predictive papers (", 
+             percentage_of_predictive_papers_in_last_10_years,
+             ") published in the last 10 years"))
+print(paste0("percentage of predictive papers (", 
+             percentage_of_predictive_papers_in_last_5_years,
+             ") published in the last 5 years"))
+print(paste0("percentage of predictive papers focused on applying plant", 
+             " traits to predict the outcomes of abiotic ",
+             "environmental(", predictive_papers_focused_on_plants,
+             ") filtering in terrestrial ecosystems"))
+print(paste0("number of predictive papers that look at ",
+             "global change (", number_of_predictive_global_change_papers, 
+             ", (", percentage_of_predictive_global_change_papers, "))"))
+print(paste0("percentage of predictive papers about (", 
+             predictive_types_of_global_change['Climate Change'],
+             ") Climate Change"))
+print(paste0("percentage of predictive papers about (", 
+             predictive_types_of_global_change['Invasion'],
+             ") Invasion"))
+print(paste0("percentage of predictive papers about (", 
+             predictive_types_of_global_change['Habitat Degredation'],
+             ") CHabitat Degredation"))
+print(paste0("percentage of predictive papers about (", 
+             predictive_types_of_global_change['Global Change Broad'],
+             ") Global Change Broad"))
+print(paste0("percentage of predictive papers about (", 
+             predictive_types_of_global_change['Exploitation'],
+             ") Exploitation"))
+print(paste0("number of single trait (", 
+             number_of_three_or_more_trait_type_studies,
+             ") studies"))
+print(paste0("number of studies (", 
+             number_of_single_trait_type_studies,
+             ") with 3 or more traits"))
+```
+
 
 Of the 822 studies we reviewed, a small portion (23%) focused on applying traits in the context of global change, and even fewer (3%) applied traits to generate predictions about patterns of diversity, abundance, or distribution beyond the data used for the initial analysis. Global change drivers, in order of decreasing frequency within the studies we evaluated, included habitat degradation (8%), climate change (6%), biological invasion (5%), multiple/non-specified drivers (3%), and exploitation (1%). Predictive studies emerged primarily within the last 10 years (82%); half of all predictive studies were published in the last five years (Figure 2F). More than 30% of predictive studies focused on applying plant morphological traits to predict the outcomes of abiotic environmental filtering in terrestrial ecosystems. Crucially, studies that generated trait-based predictions of global change (the main focus of this review) represent fewer than 3% (22) of all studies. Of these, more than half (12) focus on ecological prediction in a climate change context, three on biological invasions, and a single study each on the consequences of habitat degradation and exploitation. Five studies used traits to predict the outcomes of multiple global change drivers (two marine [Jacob et al. 2011, Eklof et al. 2015]; three terrestrial [Cardillo et al. 2004; Dury et al. 2018; Knott et al. 2019]).The narrowest subset of journal articles (and subsequently, traits) corresponded to studies that were both predictive and investigated global change impacts to ecosystems (nstudies = 22).
 
