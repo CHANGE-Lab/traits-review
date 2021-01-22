@@ -24,8 +24,14 @@ primary_abundance =
 
 # Multivariate Regression ======================================================
 
+###### begin NOTE ##############################################################
+# Some below sections have been commented out for simpler use. Some of the 
+# regressions take a good while to run, so we've saved the result as an RDS 
+# object which can be easily read into the environment using the code provided.
+###### end NOTE ################################################################
+
 # split into 'sites' and 'species' just to put it into typical ecological
-# # multivariate context
+# multivariate context
 primary_abundance_traits = data.frame(primary_abundance[,1:11])
 primary_abundance_species = 
   data.frame(primary_abundance[,12:ncol(primary_abundance)])
@@ -108,17 +114,59 @@ gc_top_primabun = gc_top_primabun %>%
   rename('traits' = names(gc_top_primabun))
 
 # write table for amount of deviance explained 
-write_csv(gc_top_primabun, here("./output-tables/gc_top5_primabun.csv"))
+write_csv(gc_top_primabun, 
+          here("./output-tables/primary_globalchange_top5.csv"))
 
 # Look at Top Coefficients =====================================================
 
+# create df to combine coef values, also p-values from univ anovas & the top 20
+gc_coef_prim = data.frame(t(gc_coef_primabun)) 
+gc_coef_prim$traits = rownames(gc_coef_prim) #convert rownames to a column
+gc_coef_prim = gc_coef_prim %>% 
+  dplyr::rename('coef_intercept' = `X.Intercept.`, 
+                'coef_gc_yes' = names(gc_coef_prim)[2])
 
+gc_top_coeffs = merge(gc_top_primabun, gc_coef_prim,
+                      by.x = 'traits',
+                      by.y = 'traits') 
 
+# now join the df with test statistic values
+gc_an_test = as.data.frame(t( # first transpose coef_filter
+  mv_gc_nb_primabun_an_uni$uni.test)) 
+gc_an_test$traits = rownames(gc_an_test) #convert rownames to a column
+gc_an_test = gc_an_test %>% 
+  dplyr::rename('deviance_explained' = names(gc_an_test)[2])
+gc_top_coeffs = merge(gc_top_coeffs,
+                      gc_an_test,
+                      by.x = 'traits',
+                      by.y = 'traits')
+gc_top_coeffs = gc_top_coeffs %>%
+  select(-"(Intercept)")
 
+# now need to join again with p-values
+gc_an_pvalue = data.frame(t( # first transpose coef_filter
+  mv_gc_nb_primabun_an_uni$uni.p)) 
+gc_an_pvalue$traits = rownames(gc_an_pvalue) #convert rownames to a column
+gc_an_pvalue = gc_an_pvalue %>% 
+  select(-names(gc_an_pvalue)[1]) 
+gc_an_pvalue = gc_an_pvalue%>% 
+  dplyr::rename('p_value' = names(gc_an_pvalue)[1])
+gc_top_coeffs = merge(gc_top_coeffs, 
+                      gc_an_pvalue,
+                      by.x = 'traits',
+                      by.y = 'traits') 
+# write table of this 
+write_csv(gc_top_coeffs, 
+          here("./output-tables/primary_globalchange_top_coefs.csv"))
 
+# see how many papers actually have those traits
+papers_with_top_3_gc = primary_abundance_species
+top_3_gc = gc_top_primabun$traits
+papers_with_top_3_gc = papers_with_top_3_gc[top_3_gc]
 
-
-
+rownames(papers_with_top_3_gc) = primary_abundance_traits$DOI
+papers_with_top_3_gc = 
+  papers_with_top_3_gc[rowSums(papers_with_top_3_gc[, -1])>0, ]
 
 
 
