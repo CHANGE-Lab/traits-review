@@ -1,15 +1,16 @@
 # Global Review of Species Traits
-Repository for multivariate analyses and visualisations of traits review paper
 
-NH: Working on troubleshooting analyses
+**Under Revision**
 
-FILES INFO:
-traits_review_datamanip.Rmd == data manipulation workflow for initial traits_dummy.csv, and subsequent datasets
+Please feel free to use and borrow from this code base according to the licence below.
 
-traits_review_nmds.Rmd == workflow for ordination and nMDS figures for original trait dataset
+Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
-traits_review_nmds_1.Rmd == workflow for ordination and nMDS figures for primary traits classification dataset
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
 
-traits_review_nmds_2.Rmd == workflow for ordination and nMDS figures for secondary traits classification dataset
+[![CC BY 4.0][cc-by-image]][cc-by]
 
-## NOTE, that traits_review_nmds_2.Rmd + traits_review_datamanip.Rmd are needed to troubleshoot problems with outliers in the secondary traits classification dataset. But there is code in other documents if we want to dive into this, I'll need to clean that up.
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
