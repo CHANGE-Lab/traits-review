@@ -7,7 +7,7 @@ output: html_document
 
 # Current trends in trait-based ecology
 
-```{r, echo=FALSE}
+```{r, echo=TRUE, results = 'hide', message=FALSE}
 library(tidyverse)
 library(here)
 `%notin%` = Negate(`%in%`)
