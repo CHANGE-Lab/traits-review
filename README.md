@@ -4,6 +4,8 @@
 
 Please feel free to use and borrow from this code base according to the licence below.
 
+The corresponding pre-print that this repository supports can be found here on [Authorea](https://www.authorea.com/users/346990/articles/472799-trait-based-approaches-to-global-change-ecology-from-description-to-prediction), which has the following DOI: [10.22541/au.159595908.80082633](10.22541/au.159595908.80082633).
+
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
 This work is licensed under a
