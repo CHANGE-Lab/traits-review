@@ -245,12 +245,12 @@ percentage_of_global_change_drivers =
 
 predictive_papers_df = categorical_data_nondum %>% 
   filter(`Forecasting/Predictive` == 1) 
-percentage_of_predictive_papers_in_last_10_years =
+percentage_of_predictive_papers_since_2011 =
   nrow(predictive_papers_df %>% 
          filter(Year >= 2011))/nrow(predictive_papers_df)*100
-percentage_of_predictive_papers_in_last_5_years =
+percentage_of_predictive_papers_since_2015 =
   nrow(predictive_papers_df %>% 
-         filter(Year >= 2016))/nrow(predictive_papers_df)*100
+         filter(Year >= 2015))/nrow(predictive_papers_df)*100
 
 predictive_papers_focused_on_plants = 
   nrow(predictive_papers_df %>% 
@@ -377,11 +377,11 @@ print(paste0("percentage of papers about (",
              percentage_of_global_change_drivers['Exploitation'],
              ") Exploitation"))
 print(paste0("percentage of predictive papers (", 
-             percentage_of_predictive_papers_in_last_10_years,
-             ") published in the last 10 years"))
+             percentage_of_predictive_papers_since_2011,
+             ") published since 2011"))
 print(paste0("percentage of predictive papers (", 
-             percentage_of_predictive_papers_in_last_5_years,
-             ") published in the last 5 years"))
+             percentage_of_predictive_papers_since_2015,
+             ") published since 2015"))
 print(paste0("percentage of predictive papers focused on applying plant", 
              " traits to predict the outcomes of abiotic ",
              "environmental(", predictive_papers_focused_on_plants,
