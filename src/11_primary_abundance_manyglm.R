@@ -1,11 +1,11 @@
 ########## 
 ##########
 # This code contains the multivariate modeling component of the analysis presented in
-# in Green et al. (2020) 
+# in Green et al. (2022) 
 # A review on the use of traits in ecological research
 ##########
 ##########
-# AUTHOR: Cole B. Brookson
+# AUTHOR: Natasha Hardy & Cole Brookson
 # DATE OF CREATION: 2021-12-15
 ##########
 ##########
@@ -37,40 +37,96 @@ primary_abundance_mv = mvabund(primary_abundance_species)
 
 # figure out distribution ======================================================
 
-primary_check_matrix = as.matrix(primary_abundance_species)
-hist(primary_check_matrix)
-hist(primary_check_matrix[primary_check_matrix > 0])
-
 #try poisson and neg. binom.
-mv_gc_poisson = manyglm(primary_abundance_mv ~ 
-                          primary_abundance_traits$GlobalChangeCat, 
-                        data= primary_abundance_traits,
-                        family = 'poisson')
-plot(mv_gc_poisson) 
-qqnorm(residuals(mv_gc_poisson)[which(residuals(mv_gc_poisson)<10000)])
+mv_gc_poisson_primabun = 
+  manyglm(primary_abundance_mv ~  primary_abundance_traits$GlobalChangeCat, 
+          data= primary_abundance_traits,
+          family = 'poisson')
+plot(mv_gc_poisson_primabun) 
 
-mv_gc_nb = manyglm(primary_abundance_mv ~ 
-                     primary_abundance_traits$GlobalChangeCat, 
-                   data= primary_abundance_traits,
-                   family = 'negative.binomial')
+qqnorm(residuals(mv_gc_poisson_primabun)[
+  which(residuals(mv_gc_poisson_primabun)<10000)])
+
+mv_gc_nb_primabun = manyglm(primary_abundance_mv ~ 
+                              primary_abundance_traits$GlobalChangeCat, 
+                            data= primary_abundance_traits,
+                            family = 'negative.binomial')
 #family=binomial("cloglog")) 
-plot(mv_gc_nb) 
-qqnorm(residuals(mv_gc_nb)[which(residuals(mv_gc_nb)<10000)])
+plot(mv_gc_nb_primabun) 
+qqnorm(residuals(mv_gc_nb_primabun)[which(residuals(mv_gc_nb_primabun)<10000)])
 
 # NOTE - okay, neg. binom definitely  better but I'll save both just in case
-saveRDS(mv_gc_nb, here('./data/manyglm-intermediate/mv_gc_nb_prim.rds')) 
-saveRDS(mv_gc_poisson, here('./data/manyglm-intermediate/mv_gc_poisson_prim.rds')) 
+saveRDS(mv_gc_nb_primabun, 
+        here("./data/manyglm-intermediate/mv_gc_nb_primabun.rds")) #, here('./Code')
+saveRDS(mv_gc_poisson_primabun, 
+        here("./data/manyglm-intermediate/mv_gc_poisson_primabun.rds")) 
+
+# significance test ============================================================
 
 #model output significance test
-mv_gc_nb_an = anova.manyglm(mv_gc_nb)
-saveRDS(mv_gc_nb_an, here('./data/manyglm-intermediate/mv_gc__nb_anova_prim.rds')) 
+mv_gc_nb_primabun_an = anova.manyglm(mv_gc_nb_primabun)
+saveRDS(mv_gc_nb_primabun_an,
+        here("./data/manyglm-intermediate/mv_gc_nb_primabun_anova.rds")) 
+levels(as.factor(primary_abundance_traits$GlobalChangeCat))
+
+write_csv(mv_gc_nb_primabun_an$table, 
+          here("./output-tables/mv_gc_nb_primabun_anova_table.csv"))
+
+#individual adjusted p-values for species/traits - get univariate p-values
+mv_gc_nb_primabun_an_uni = anova.manyglm(mv_gc_nb_primabun,p.uni="adjusted")
+saveRDS(mv_gc_nb_primabun_an_uni, 
+        here("./data/manyglm-intermediate/mv_gc_nb_primabun_univs.rds")) 
+
+#Get the direction of effect fof each species with the main effect
+gc_coef_primabun = coef(mv_gc_nb_primabun)
+
+#figure out what the top traits are - recall traits are our 'species' here
+mv_gc_nb_primabun_species = 
+  sort(mv_gc_nb_primabun_an$uni.test[2,],
+       decreasing=T,index.return=T)[1:5] #sort and select top species/traits
+mv_gc_nb_primabun_species$ix[1:5] #the column numbers of the top  impacted spp/traits
+
+#Need > 50% deviance explainaed --> result = 25 traits explain > 50% deviance
+sum(mv_gc_nb_primabun_an$uni.test[2,mv_gc_nb_primabun_species$ix[1:3]])*100/
+  sum(mv_gc_nb_primabun_an$uni.test[2,]) #25 species explained = 53.65588% Deviance
+#3 species explained >90% deviance
+
+gc_top_primabun = 
+  data.frame(dimnames(primary_abundance_species)[[2]][mv_gc_nb_primabun_species$ix[
+    1:5]]) #df with the names of the top 20 traits
+
+gc_top_primabun = gc_top_primabun %>% 
+  dplyr::rename('traits' = names(gc_top_primabun))
+
+str(gc_top_primabun)
+#These were traits: chr  "habitat" "morphology" "resource.acquisition"
+
+#How much deviance explained?
+write_csv(gc_top_primabun, here("./output-tables/gc_top5_primabun.csv"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+#model output significance test
+mv_gc_nb_an = anova.manyglm(mv_gc_nb_primabun)
+saveRDS(mv_gc_nb_an, here('./data/manyglm-intermediate/mv_gc_nb_anova_prim.rds')) 
 #mv_gc_nb_an = readRDS(here('./data/manyglm-intermediate/mv_gc__nb_anova.rds'))
 write_csv(mv_gc_nb_an$table, 
           here('./data/manyglm-intermediate/mv_gc_nb_anova_table_prim.csv')) 
 
 #individual adjusted p-values for species/traits - get univariate p-values
 mv_gc_nb_an_uni = anova.manyglm(mv_gc_nb,p.uni="adjusted") 
-saveRDS(mv_gc_nb_an_uni, here('./data/manyglm-intermediate/mv_gc_univs_prim.rds')) 
+saveRDS(mv_gc_nb_an_uni, 
+        here('./data/manyglm-intermediate/mv_gc_univs_prim.rds')) 
 #mv_gc_nb_an_uni = readRDS(here('./data/manyglm-intermediate/mv_gc_univs.rds'))
 #Get the direction of effect fof each species with the main effect
 gc_coef = coef(mv_gc_nb)
@@ -78,11 +134,11 @@ gc_coef = coef(mv_gc_nb)
 #figure out what the top traits are - recall traits are our 'species' here
 mv_gc_nb_species = 
   sort(mv_gc_nb_an$uni.test[2,],
-       decreasing=T,index.return=T)[1:25] #sort and select top species/traits
-mv_gc_nb_species$ix[1:25] #the column numbers of the top  impacted spp/traits
+       decreasing=T,index.return=T)#sort and select top species/traits
+mv_gc_nb_species$ix[1:11] #the column numbers of the top  impacted spp/traits
 
 #Need > 50% deviance explainaed --> result = 25 traits explain > 50% deviance
-sum(mv_gc_nb_an$uni.test[2,mv_gc_nb_species$ix[1:25]])*100/
+sum(mv_gc_nb_an$uni.test[2,mv_gc_nb_species$ix[1:11]])*100/
   sum(mv_gc_nb_an$uni.test[2,]) #25 species explained = 53.65588% Deviance
 
 gc_top = 
