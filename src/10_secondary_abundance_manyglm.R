@@ -10,6 +10,8 @@
 ##########
 ##########
 
+# set-up =======================================================================
+
 library(devtools)
 library(knitr)
 library(tidyverse)
@@ -22,13 +24,17 @@ library(here)
 
 #subset data into the two groups needed
 secondary_abundance = 
-  read_csv(here('./Data/Cole-Output-Data(readyforanalysis)/secondary_traits_dummy_abundance_models.csv'))
+  read_csv(
+    here('./data/processed-data/secondary_traits_dummy_abundance_models.csv'))
+
 secondary_abundance_species = 
-  data.frame(secondary_abundance[,11:ncol(secondary_abundance)])
-secondary_abundance_traits = data.frame(secondary_abundance[,1:10])
+  data.frame(secondary_abundance[,12:ncol(secondary_abundance)])
+
+secondary_abundance_traits = data.frame(secondary_abundance[,1:11])
 secondary_abundance_mv = mvabund(secondary_abundance_species)
 
-#figure out what error distribution works
+# find appropriate distribution ================================================
+
 secondary_check_matrix = as.matrix(secondary_abundance_species)
 hist(secondary_check_matrix)
 hist(secondary_check_matrix[secondary_check_matrix > 0])
@@ -50,20 +56,22 @@ plot(mv_gc_nb)
 qqnorm(residuals(mv_gc_nb)[which(residuals(mv_gc_nb)<10000)])
 
 # NOTE - okay, neg. binom definitely  better but I'll save both just in case
-saveRDS(mv_gc_nb, here('./Data/Cole-Output-ManyGLM/mv_gc_nb.rds')) 
-saveRDS(mv_gc_poisson, here('./Data/Cole-Output-ManyGLM/mv_gc_poisson.rds')) 
+saveRDS(mv_gc_nb, here('./data/manyglm-intermediate/mv_gc_nb.rds')) 
+saveRDS(mv_gc_poisson, here('./data/manyglm-intermediate/mv_gc_poisson_sec.rds')) 
+
+# model output =================================================================
 
 #model output significance test
 mv_gc_nb_an = anova.manyglm(mv_gc_nb)
-saveRDS(mv_gc_nb_an, here('./Data/Cole-Output-ManyGLM/mv_gc__nb_anova.rds')) 
-#mv_gc_nb_an = readRDS(here('./Data/Cole-Output-ManyGLM/mv_gc__nb_anova.rds'))
+saveRDS(mv_gc_nb_an, here('./data/manyglm-intermediate/mv_gc__nb_anova_sec.rds')) 
+#mv_gc_nb_an = readRDS(here('./data/manyglm-intermediate/mv_gc__nb_anova.rds'))
 write_csv(mv_gc_nb_an$table, 
-          here('./Data/Cole-Output-ManyGLM/mv_gc_nb_anova_table.csv')) 
+          here('./data/manyglm-intermediate/mv_gc_nb_anova_table_sec.csv')) 
 
 #individual adjusted p-values for species/traits - get univariate p-values
 mv_gc_nb_an_uni = anova.manyglm(mv_gc_nb,p.uni="adjusted") 
-saveRDS(mv_gc_nb_an_uni, here('./Data/Cole-Output-ManyGLM/mv_gc_univs.rds')) 
-#mv_gc_nb_an_uni = readRDS(here('./Data/Cole-Output-ManyGLM/mv_gc_univs.rds'))
+saveRDS(mv_gc_nb_an_uni, here('./data/manyglm-intermediate/mv_gc_univs_sec.rds')) 
+#mv_gc_nb_an_uni = readRDS(here('./data/manyglm-intermediate/mv_gc_univs.rds'))
 #Get the direction of effect fof each species with the main effect
 gc_coef = coef(mv_gc_nb)
 
@@ -86,7 +94,7 @@ str(gc_top)
 
 
 #How much deviance explained?
-write_csv(gc_top, here('./Data/Cole-Output-ManyGLM/mv_gc_top.csv')) 
+write_csv(gc_top, here('./data/manyglm-intermediate/mv_gc_top_sec.csv')) 
 
 #Now combine traits with their coeffs and p-values
 
@@ -131,7 +139,7 @@ gc_top_coeffs = merge(gc_top_coeffs,
                      by.x = 'traits',
                      by.y = 'traits') 
 
-write_csv(gc_top_coeffs, here('./Data/Cole-Output-ManyGLM/gc_top_coefs.csv'))
+write_csv(gc_top_coeffs, here('./data/manyglm-intermediate/gc_top_coefs_sec.csv'))
 
 #See how many papers actually have those traits
 papers_with_top_25_gc = secondary_abundance_species
