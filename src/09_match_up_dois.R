@@ -42,16 +42,17 @@ new_data = read_csv(
 
 all_data = rbind(new_data, unique_data)
 
+all_data = mutate_all(all_data, funs(toupper))
 unique_journals = all_data %>% 
   group_by(Journal) %>% 
+  mutate(across(where(is.character), toupper)) %>% 
   summarize(`Number of Relevant Papers` = n())
 
 table = unique_journals[order(
   unique_journals$`Number of Relevant Papers`, decreasing = TRUE),]
 
+write_csv(table, here("./output-tables/journals_table.csv"))
+
 write.table(table, here("./output-tables/journals_table.txt"))
-kable(table, "latex", booktabs = T) %>%
-  kable_styling(latex_options = c("striped", "scale_down")) %>% 
-  as_image
-  #save_kable(here("./output-tables/journals_table.png"))
+
 

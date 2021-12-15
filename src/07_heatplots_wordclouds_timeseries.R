@@ -19,6 +19,7 @@ library(cowplot)
 library(here)
 library(fastDummies)
 library(ggwordcloud)
+library(viridis)
 
 categorical_data = read_csv(here('./data/processed-data/categorical_data.csv'))
 trait_levels = read_csv(here(paste0('./data/processed-data/',
@@ -212,8 +213,9 @@ theme3 = function(){
 
 # make the dataframe
 trait_env_df3 = categorical_data %>% 
-  group_by(Ecosystem, Trait, TOS, Filter) %>% 
+  group_by(Ecosystem, Trait, TOS, Filter, .drop = FALSE) %>% 
   summarize(Total = n()) 
+trait_env_df3[which(trait_env_df3$Total == 0), "Total"] = NA
 
 # make the actual plot itself 
 trait_x_filter_by_ecosystem_x_TOS_plot = 
@@ -230,7 +232,8 @@ trait_x_filter_by_ecosystem_x_TOS_plot =
   scale_fill_viridis(option = 'A', 
                      direction = -1,
                      begin = 0.01, 
-                     end = 0.99) +
+                     end = 0.99, 
+                     na.value = "#FFFFE0") +
   theme2() 
 
 ggsave(here(paste0('./figures/heatplots-and-timeseries',
@@ -246,8 +249,10 @@ ggsave(here(paste0('./figures/heatplots-and-timeseries',
 
 # make dataframe
 trait_env_df4 = categorical_data %>% 
-  group_by(Ecosystem, Trait, Taxonomic, Filter) %>% 
+  group_by(Ecosystem, Trait, Taxonomic, Filter, .drop = FALSE) %>% 
   summarize(Total = n()) 
+trait_env_df4[which(trait_env_df4$Total == 0), "Total"] = NA
+
 
 # make heat plot
 trait_x_filter_by_ecosystem_x_taxonomic_plot = 
@@ -264,8 +269,9 @@ trait_x_filter_by_ecosystem_x_taxonomic_plot =
        y = 'Trait type by level of environmental filtering') +
   scale_fill_viridis(option = 'A', 
                      direction = -1,
-                     begin = 0.01, 
-                     end = 0.99) +
+                     begin = 0, 
+                     end = 0.99, 
+                     na.value = "#FFFFE0") +
   theme2() 
 
 ggsave(here(paste0('./figures/heatplots-and-timeseries',
