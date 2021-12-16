@@ -59,6 +59,8 @@ qqnorm(residuals(mv_gc_nb)[which(residuals(mv_gc_nb)<10000)])
 saveRDS(mv_gc_nb, here('./data/manyglm-intermediate/mv_gc_nb.rds')) 
 saveRDS(mv_gc_poisson, 
         here('./data/manyglm-intermediate/mv_gc_poisson_sec.rds')) 
+mv_gc_nb = readRDS(here('./data/manyglm-intermediate/mv_gc_nb.rds'))
+mv_gc_poisson = readRDS(here('./data/manyglm-intermediate/mv_gc_poisson_sec.rds'))
 
 # model output =================================================================
 
@@ -66,7 +68,8 @@ saveRDS(mv_gc_poisson,
 mv_gc_nb_an = anova.manyglm(mv_gc_nb)
 saveRDS(mv_gc_nb_an, 
         here('./data/manyglm-intermediate/mv_gc__nb_anova_sec.rds')) 
-#mv_gc_nb_an = readRDS(here('./data/manyglm-intermediate/mv_gc__nb_anova.rds'))
+mv_gc_nb_an = readRDS(here('./data/manyglm-intermediate/mv_gc__nb_anova_sec.rds'))
+mv_gc_nb_an = readRDS(here('./data/manyglm-intermediate/mv_gc__nb_anova.rds'))
 write_csv(mv_gc_nb_an$table, 
           here('./data/manyglm-intermediate/mv_gc_nb_anova_table_sec.csv')) 
 
@@ -74,7 +77,7 @@ write_csv(mv_gc_nb_an$table,
 mv_gc_nb_an_uni = anova.manyglm(mv_gc_nb,p.uni="adjusted") 
 saveRDS(mv_gc_nb_an_uni, 
         here('./data/manyglm-intermediate/mv_gc_univs_sec.rds')) 
-#mv_gc_nb_an_uni = readRDS(here('./data/manyglm-intermediate/mv_gc_univs.rds'))
+mv_gc_nb_an_uni = readRDS(here('./data/manyglm-intermediate/mv_gc_univs_sec.rds'))
 #Get the direction of effect fof each species with the main effect
 gc_coef = coef(mv_gc_nb)
 
@@ -148,7 +151,7 @@ write_csv(gc_top_coeffs,
 #See how many papers actually have those traits
 papers_with_top_25_gc = secondary_abundance_species
 top_25_gc = gc_top$traits
-papers_with_top_25_gc = papers_with_top_25_gc[top_25_gcggg]
+papers_with_top_25_gc = papers_with_top_25_gc[top_25_gc]
 
 rownames(papers_with_top_25_gc) = secondary_abundance_traits$DOI
 papers_with_top_25_gc = papers_with_top_25_gc[
