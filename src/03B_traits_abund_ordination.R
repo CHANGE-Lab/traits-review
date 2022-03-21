@@ -52,9 +52,9 @@ traits_species_use <- trait_abundance_use[,11:ncol(trait_abundance_use)] #1411 t
 # Ordination based on using 1 replicate per study (DOI) #727 obs
 traits_ord_use <- metaMDS(traits_species_use,
                           distance = "jaccard",
-                          trymax = 1000,
+                          trymax = 1000, #for testing trymax = 50
                           maxits = 1000,
-                          k = 4) #increase trymax = 50
+                          k = 4) 
 
 ##Model convergence issues
 #Based on ordination goodness fit/stress checks, we could use k = 2-3.
