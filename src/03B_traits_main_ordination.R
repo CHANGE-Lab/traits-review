@@ -17,9 +17,10 @@ library(vegan)
 library(viridis)
 library(mvabund)
 library(here)
+here::here()
 library(cowplot)
 
-trait_abundance_use = 
+trait_main_use = 
   read_csv(here(paste0('./data/processed-data',
                        '/review_traits_clean_models.csv')))
 
@@ -38,8 +39,10 @@ trait_abundance_use =
 ###### end NOTE ################################################################
 
 # This needs to be done a
-traits_sites_use <- as.data.frame(trait_abundance_use[,1:10])
-traits_species_use <- trait_abundance_use[,11:ncol(trait_abundance_use)] #1411 trait columns
+traits_sites_use <- as.data.frame(trait_main_use[,1:9])
+traits_species_use <- trait_main_use[,10:ncol(trait_main_use)] #1411 trait columns
+
+range(traits_species_use)
 
 # Note that these data are already presence absence
 # Using Jaccard dissimilarity for binary data.
@@ -71,5 +74,9 @@ orditorp(traits_ord_use, display = "sites", col = "red", air=0.01) #labels trait
 
 ggsave("review_nmdsinitial.jpeg", width = 8, height = 8, dpi = 300)
 
+saveRDS(traits_ord_use, here('./data/nmds-intermediate/traits_ord_use.rds'))
 
-saveRDS(traits_ord_use, "traits_ord_use.rds")
+#Check this
+#traits_ord_use = readRDS(here::here('./data/nmds-intermediate/traits_ord_use.rds'))
+
+
