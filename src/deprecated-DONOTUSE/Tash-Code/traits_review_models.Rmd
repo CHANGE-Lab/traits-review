@@ -12,8 +12,6 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-
 ```{r Workspace Install, echo=F, eval=F}
 
 #getwd()

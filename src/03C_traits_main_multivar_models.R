@@ -63,174 +63,160 @@ traits_ord_use_scores$species = rownames(traits_ord_use_scores)
 
 # Plotting pipeline ============================================================
 
-#all factors?
+### All factors? ----
 sapply(traits_main_scores[,1:10], class)
-
-traits_main_scores[,1:10] = lapply(traits_main_scores[,1:10], factor)
 
 traits_main_scores$Ecosystem =
   as.factor(traits_main_scores$Ecosystem)
-traits_main_scores$GlobalChangeCat =
-  as.factor(traits_main_scores$GlobalChangeCat)
 traits_main_scores$Taxonomic =
   as.factor(traits_main_scores$Taxonomic)
+traits_main_scores$System =
+  as.factor(traits_main_scores$System)
+traits_main_scores$Predictive =
+  as.factor(traits_main_scores$Predictive)
+traits_main_scores$`Global Change Driver` =
+  as.factor(traits_main_scores$`Global Change Driver`)
+traits_main_scores$`Global Change` =
+  as.factor(traits_main_scores$`Global Change`)
 traits_main_scores$TOS =
   as.factor(traits_main_scores$TOS)
 traits_main_scores$Filter =
   as.factor(traits_main_scores$Filter)
-traits_main_scores$GlobalChange =
-  as.factor(traits_main_scores$GlobalChange)
-traits_main_scores$PredictiveCat =
-  as.factor(traits_main_scores$PredictiveCat)
 
-#ecosystem
-eco = as.character(unique(primary_pa_scores$Ecosystem))
+
+### Ecosystem ----
+levels(traits_main_scores$Ecosystem)
+eco = as.character(unique(traits_main_scores$Ecosystem))
 for(i in 1:length(eco)) {
   temp = eco[i]
-  df = primary_pa_scores[
-    primary_pa_scores$Ecosystem == temp,
-  ][chull(primary_pa_scores[
-    primary_pa_scores$Ecosystem == temp,
+  df = traits_main_scores[
+    traits_main_scores$Ecosystem == temp,
+  ][chull(traits_main_scores[
+    traits_main_scores$Ecosystem == temp,
     c("NMDS1", "NMDS2")
   ]), ]
-  assign(paste0('grp_pa_eco_',temp), df)
+  assign(paste0('grp_eco_',temp), df)
 }
-hull_pa_ecosystem = rbind(grp_pa_eco_Terrestrial, grp_pa_eco_Freshwater,
-                          grp_pa_eco_Marine, grp_pa_eco_Multiple)
+hull_ecosystem = rbind(grp_eco_Terrestrial, grp_eco_Freshwater,
+                          grp_eco_Marine, grp_eco_Broad)
 
-#taxonomic
-tax = as.character(unique(primary_pa_scores$Taxonomic))
+### Taxonomic ----
+unique(traits_main_scores$`Taxonomic`) 
+summary(traits_main_scores$Taxonomic)
+traits_main_scores = traits_main_scores %>% 
+  dplyr::mutate(Taxonomic = replace_na(Taxonomic, "Other")) #Replace NA's in the vector
+#Taxonomic group - hull loop
+tax = as.character(unique(traits_main_scores$Taxonomic))
 for(i in 1:length(tax)) {
   temp = tax[i]
-  df = primary_pa_scores[
-    primary_pa_scores$Taxonomic == temp,
-  ][chull(primary_pa_scores[
-    primary_pa_scores$Taxonomic == temp,
+  df = traits_main_scores[
+    traits_main_scores$Taxonomic == temp,
+  ][chull(traits_main_scores[
+    traits_main_scores$Taxonomic == temp,
     c("NMDS1", "NMDS2")
   ]), ]
-  assign(paste0('grp_pa_tax_',temp), df)
+  assign(paste0('grp_tax_',temp), df)
 }
-hull_pa_taxonomic = rbind(grp_pa_tax_Birds, grp_pa_tax_Insects,
-                          grp_pa_tax_Mammals, grp_pa_tax_Multiple,
-                          grp_pa_tax_Herpetofauna, grp_pa_tax_Plants,
-                          grp_pa_tax_Plankton, grp_pa_tax_Other,
-                          grp_pa_tax_Fish)
+hull_taxonomic = rbind(grp_tax_Invertebrate, grp_tax_Multiple, grp_tax_Other, 
+                       grp_tax_Plants, grp_tax_Vertebrate)
 
-#taxonomic group
-#first make new classifications
-primary_pa_scores = primary_pa_scores %>%
-  mutate(TaxonomicGroup =
-           ifelse(primary_pa_scores$Taxonomic %in%
-                    c('Mammals', 'Birds', 'Herpetofauna', 'Fish'),
-                  'Vertebrates',
-                  ifelse(primary_pa_scores$Taxonomic %in%
-                           c('Insects', 'Plankton'), 'Invertebrates',
-                         ifelse(primary_pa_scores$Taxonomic == 'Other', 'Other',
-                                ifelse(primary_pa_scores$Taxonomic == 'Multiple', 'Multiple',
-                                       ifelse(primary_pa_scores$Taxonomic == 'Plants', 'Plants', NA))))))
-#now put them in the normal loop
-tax_group = as.character(unique(primary_pa_scores$TaxonomicGroup))
-for(i in 1:length(tax_group)) {
-  temp = tax_group[i]
-  df = primary_pa_scores[
-    primary_pa_scores$TaxonomicGroup == temp,
-  ][chull(primary_pa_scores[
-    primary_pa_scores$TaxonomicGroup == temp,
-    c("NMDS1", "NMDS2")
-  ]), ]
-  assign(paste0('grp_pa_taxgroup_',temp), df)
-}
-hull_pa_taxonomic_group = rbind(grp_pa_taxgroup_Invertebrates,
-                                grp_pa_taxgroup_Multiple,
-                                grp_pa_taxgroup_Other,
-                                grp_pa_taxgroup_Plants,
-                                grp_pa_taxgroup_Vertebrates)
-
-#TOS
-levels(primary_pa_scores$TOS)[levels(primary_pa_scores$TOS)==
+### TOS ----
+levels(traits_main_scores$TOS)[levels(traits_main_scores$TOS)==
                                 'TModel']='Theory'
-levels(primary_pa_scores$TOS)[levels(primary_pa_scores$TOS)==
-                                'QModel']='Observational'
-tos = as.character(unique(primary_pa_scores$TOS))
+tos = as.character(unique(traits_main_scores$TOS))
 for(i in 1:length(tos)) {
   temp = tos[i]
-  df = primary_pa_scores[
-    primary_pa_scores$TOS == temp,
-  ][chull(primary_pa_scores[
-    primary_pa_scores$TOS == temp,
+  df = traits_main_scores[
+    traits_main_scores$TOS == temp,
+  ][chull(traits_main_scores[
+    traits_main_scores$TOS == temp,
     c("NMDS1", "NMDS2")
   ]), ]
-  assign(paste0('grp_pa_tos_',temp), df)
+  assign(paste0('grp_tos_',temp), df)
 }
-hull_pa_tos = rbind(grp_pa_tos_Observational, grp_pa_tos_Experiment,
-                    grp_pa_tos_Metanalysis, grp_pa_tos_Theory,
-                    grp_pa_tos_Review)
+hull_tos = rbind(grp_tos_Observational, grp_tos_Experiment,
+                    grp_tos_Metanalysis, grp_tos_Theory,
+                    grp_tos_Review)
 
-#Filter
-levels(primary_pa_scores$Filter)[levels(primary_pa_scores$Filter)==
+### Filter ----
+levels(traits_main_scores$Filter)[levels(traits_main_scores$Filter)==
                                    "Fundamental"] = "Abiotic"
-levels(primary_pa_scores$Filter)[levels(primary_pa_scores$Filter)==
+levels(traits_main_scores$Filter)[levels(traits_main_scores$Filter)==
                                    "Physical"] = "Dispersal"
-levels(primary_pa_scores$Filter)[levels(primary_pa_scores$Filter)==
+levels(traits_main_scores$Filter)[levels(traits_main_scores$Filter)==
                                    "Ecological"] = "Biotic"
-fil = as.character(unique(primary_pa_scores$Filter))
+fil = as.character(unique(traits_main_scores$Filter))
 for(i in 1:length(fil)) {
   temp = fil[i]
-  df = primary_pa_scores[
-    primary_pa_scores$Filter == temp,
-  ][chull(primary_pa_scores[
-    primary_pa_scores$Filter == temp,
+  df = traits_main_scores[
+    traits_main_scores$Filter == temp,
+  ][chull(traits_main_scores[
+    traits_main_scores$Filter == temp,
     c("NMDS1", "NMDS2")
   ]), ]
-  assign(paste0('grp_pa_fil_',temp), df)
+  assign(paste0('grp_fil_',temp), df)
 }
-hull_pa_fil = rbind(grp_pa_fil_Abiotic, grp_pa_fil_Biotic,
-                    grp_pa_fil_Dispersal, grp_pa_fil_Trophic)
+hull_fil = rbind(grp_fil_Abiotic, grp_fil_Biotic, grp_fil_Dispersal, grp_fil_Trophic)
 
-#global change category
-levels(primary_pa_scores$GlobalChange)[levels(primary_pa_scores$GlobalChange)==
-                                         0] = "Not Assessed"
-gc = as.character(unique(primary_pa_scores$GlobalChange))
-for(i in 1:length(gc)) {
-  temp = gc[i]
-  df = primary_pa_scores[
-    primary_pa_scores$GlobalChange == temp,
-  ][chull(primary_pa_scores[
-    primary_pa_scores$GlobalChange == temp,
-    c("NMDS1", "NMDS2")
-  ]), ]
-  assign(paste0('grp_pa_gc_',temp), df)
+### Global change binary ----
+unique(traits_main_scores$`Global Change`) #no/yes
+levels(traits_main_scores$`Global Change`)[levels(traits_main_scores$`Global Change`)=="no"] <- "No"
+levels(traits_main_scores$`Global Change`)[levels(traits_main_scores$`Global Change`)=="yes"] <- "Yes"
+
+#Yes
+grp_clim_yes <- traits_main_scores[traits_main_scores$`Global Change` == "Yes", ][chull(traits_main_scores[traits_main_scores$`Global Change` == "Yes", c("NMDS1", "NMDS2")]), ] 
+#No
+grp_clim_no <- traits_main_scores[traits_main_scores$`Global Change` == "No", ][chull(traits_main_scores[traits_main_scores$`Global Change` == "No", c("NMDS1", "NMDS2")]), ] 
+
+#combine the hull data
+hull_clim <- rbind(grp_clim_yes, grp_clim_no)  
+
+### Global change categories ----
+unique(traits_main_scores$`Global Change Driver`)
+
+summary(traits_main_scores$`Global Change Driver`)
+
+levels(traits_main_scores$`Global Change Driver`)[levels(traits_main_scores$`Global Change Driver`)==0] <- "Not assessed"
+levels(traits_main_scores$`Global Change Driver`)[levels(traits_main_scores$`Global Change Driver`)=="Global Change Broad"] <- "Multiple"
+levels(traits_main_scores$`Global Change Driver`)[levels(traits_main_scores$`Global Change Driver`)=="Global Change Multiple"] <- "Multiple"
+levels(traits_main_scores$`Global Change Driver`)[levels(traits_main_scores$`Global Change Driver`)=="Habitat Degredation"] <- "Habitat loss"
+levels(traits_main_scores$`Global Change Driver`)[levels(traits_main_scores$`Global Change Driver`)=="Climate Change"] <- "Climate change"
+
+#Global Change Drivers - hull loop
+gcd = as.character(unique(traits_main_scores$`Global Change Driver`))
+for(i in 1:length(gcd)) {
+  temp = gcd[i]
+  df = traits_main_scores[traits_main_scores$`Global Change Driver` == temp, ][chull(traits_main_scores[traits_main_scores$`Global Change Driver` == temp, c("NMDS1", "NMDS2")]), ]
+  assign(paste0('grp_climd_',temp), df)
 }
-hull_pa_gc = rbind(`grp_pa_gc_Climate Change`, grp_pa_gc_Exploitation,
-                   `grp_pa_gc_Global Change Broad`,
-                   `grp_pa_gc_Global Change Multiple`,
-                   `grp_pa_gc_Habitat Degredation`, grp_pa_gc_Invasion,
-                   `grp_pa_gc_Not Assessed`)
 
-#predictive category
-pred = as.character(unique(primary_pa_scores$PredictiveCat))
-for(i in 1:length(pred)) {
-  temp = pred[i]
-  df = primary_pa_scores[
-    primary_pa_scores$PredictiveCat == temp,
-  ][chull(primary_pa_scores[
-    primary_pa_scores$PredictiveCat == temp,
-    c("NMDS1", "NMDS2")
-  ]), ]
-  assign(paste0('grp_pa_pred_',temp), df)
-}
-hull_pa_pred = rbind(grp_pa_pred_no, grp_pa_pred_yes)
+#combine the hull data
+hull_gcd <- rbind(`grp_climd_Not assessed`,`grp_climd_Climate change`, grp_climd_Exploitation, grp_climd_Multiple, `grp_climd_Habitat loss`, grp_climd_Invasion)  
 
-########### Make Plots
+### Predictive ----
+summary(traits_main_scores$Predictive)
+levels(traits_main_scores$Predictive)[levels(traits_main_scores$Predictive)=="0"] <- "No"
+levels(traits_main_scores$Predictive)[levels(traits_main_scores$Predictive)=="1"] <- "Yes"
 
-#ecosystem
-primary_pa_eco_plot = ggplot() +
-  geom_polygon(data=hull_pa_ecosystem,
-               aes(x=NMDS1,y=NMDS2,
-                   fill=Ecosystem,
-                   group=Ecosystem),alpha=0.30) +
-  geom_point(data=primary_pa_scores,
-             aes(x=NMDS1,y=NMDS2, colour = Ecosystem), size=2) +
+#Yes
+traits_main_scores$Predictive <- as.character(traits_main_scores$Predictive)
+grp_pred_yes <- traits_main_scores[traits_main_scores$Predictive == "Yes", ][chull(traits_main_scores[traits_main_scores$Predictive == "Yes", c("NMDS1", "NMDS2")]), ] 
+#No
+grp_pred_no <- traits_main_scores[traits_main_scores$Predictive == "No", ][chull(traits_main_scores[traits_main_scores$Predictive == "No", c("NMDS1", "NMDS2")]), ]
+
+#combine the hull data
+hull_predict <- rbind(grp_pred_yes, grp_pred_no)  
+
+## Make Plots ==========================================================
+
+### Ecosystem ----
+eco_plot = ggplot() +
+  geom_polygon(data=hull_ecosystem,
+               aes(x=NMDS1,y=NMDS2, fill=fct_rev(`Ecosystem`), 
+                   group=fct_rev(`Ecosystem`)), alpha=0.30) +
+  geom_point(data= traits_main_scores,
+             aes(x=NMDS1,y=NMDS2, 
+                 colour = fct_rev(`Ecosystem`)), size=2) +
   coord_equal() +
   theme_bw()  +
   theme(axis.text.x = element_blank(),
@@ -247,29 +233,28 @@ primary_pa_eco_plot = ggplot() +
   scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2,
                      name = "Ecosystem") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
-                       name = "Ecosystem") +
-  geom_label(data = primary_pa_trait_scores,
-             aes(x =  NMDS1,
-                 y = NMDS2,
-                 label = species),
-             alpha = 0.8,
-             size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 8))
-ggsave(here('./figures/primary-pa/primary_pa_plot_eco_small.png'),
-       plot = primary_pa_eco_plot,
+                       name = "Ecosystem") 
+eco_plot
+ggsave(here('./figures/main-nmds/main-nmds_eco_small.png'),
+       plot = tax_plot,
        width = 8, height = 8, dpi = 200)
-ggsave(here('./figures/primary-pa/primary_pa_plot_eco_large.png'),
-       plot = primary_pa_eco_plot,
+ggsave(here('./figures/main-nmds/main-nmds_eco_large.png'),
+       plot = tax_plot,
        width = 8, height = 8, dpi = 600)
 
-#tax group
-primary_pa_tax_plot = ggplot() +
-  geom_polygon(data=hull_pa_taxonomic_group,
-               aes(x=NMDS1,y=NMDS2,
-                   fill=TaxonomicGroup,
-                   group=TaxonomicGroup),alpha=0.30) +
-  geom_point(data=primary_pa_scores,
-             aes(x=NMDS1,y=NMDS2, colour = TaxonomicGroup), size=2) +
+### Tax group ----
+tax_plot = ggplot() +
+  geom_polygon(data = hull_taxonomic,
+               aes(x=NMDS1 ,y=NMDS2, 
+                   fill= fct_relevel(Taxonomic, 
+                                     "Vertebrate", "Invertebrate", "Plants", "Other", "Multiple"), 
+                   group= fct_relevel(Taxonomic, "Vertebrate", "Invertebrate", "Plants", "Other", "Multiple")),
+               alpha=0.30) +
+  geom_point(data = traits_main_scores,
+             aes(x=NMDS1,y=NMDS2, 
+                 colour = fct_relevel(Taxonomic, 
+                                      "Vertebrate", "Invertebrate", "Plants", "Other", "Multiple")), 
+             size=2) +
   coord_equal() +
   theme_bw()  +
   theme(axis.text.x = element_blank(),
@@ -286,29 +271,28 @@ primary_pa_tax_plot = ggplot() +
   scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2,
                      name = "Taxa") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
-                       name = "Taxa")+
-  geom_label(data = primary_pa_trait_scores,
-             aes(x =  NMDS1,
-                 y = NMDS2,
-                 label = species),
-             alpha = 0.8,
-             size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 8))
-ggsave(here('./figures/primary-pa/primary_pa_plot_tax_small.png'),
-       plot = primary_pa_tax_plot,
+                       name = "Taxa")
+tax_plot
+ggsave(here('./figures/main-nmds/main-nmds_tax_small.png'),
+       plot = tax_plot,
        width = 8, height = 8, dpi = 200)
-ggsave(here('./figures/primary-pa/primary_pa_plot_tax_large.png'),
-       plot = primary_pa_tax_plot,
+ggsave(here('./figures/main-nmds/main-nmds_tax_large.png'),
+       plot = tax_plot,
        width = 8, height = 8, dpi = 600)
 
-#TOS
-primary_pa_tos_plot = ggplot() +
-  geom_polygon(data=hull_pa_tos,
-               aes(x=NMDS1,y=NMDS2,
-                   fill=TOS,
-                   group=TOS),alpha=0.30) +
-  geom_point(data=primary_pa_scores,
-             aes(x=NMDS1,y=NMDS2, colour = TOS), size=2) +
+### TOS ----
+tos_plot = ggplot() +
+  geom_polygon(data = hull_tos,
+              aes(x = NMDS1, y = NMDS2, 
+                  fill= fct_relevel(TOS, 
+                                   "Observational", "Experiment", "Metanalysis", "Review", "Theory"),
+                  group = fct_relevel(TOS, 
+                                      "Observational", "Experiment", "Metanalysis", "Review", "Theory")),
+              alpha=0.30) +
+  geom_point(data = traits_main_scores,
+             aes(x=NMDS1, y=NMDS2, 
+                 colour = fct_relevel(TOS, "Observational", "Experiment", "Metanalysis", "Review", "Theory")), 
+             size=2) + 
   coord_equal() +
   theme_bw()  +
   theme(axis.text.x = element_blank(),
@@ -325,29 +309,25 @@ primary_pa_tos_plot = ggplot() +
   scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2,
                      name = "Study Type") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
-                       name = "Study Type")+
-  geom_label(data = primary_pa_trait_scores,
-             aes(x =  NMDS1,
-                 y = NMDS2,
-                 label = species),
-             alpha = 0.8,
-             size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 8))
-ggsave(here('./figures/primary-pa/primary_pa_plot_tos_small.png'),
-       plot = primary_pa_tos_plot,
+                       name = "Study Type")
+tos_plot
+ggsave(here('./figures/main-nmds/main-nmds_tos_small.png'),
+       plot = tos_plot,
        width = 8, height = 8, dpi = 200)
-ggsave(here('./figures/primary-pa/primary_pa_plot_tos_large.png'),
-       plot = primary_pa_tos_plot,
+ggsave(here('./figures/main-nmds/main-nmds_tos_large.png'),
+       plot = tos_plot,
        width = 8, height = 8, dpi = 600)
 
-#filter
-primary_pa_fil_plot = ggplot() +
-  geom_polygon(data=hull_pa_fil,
-               aes(x=NMDS1,y=NMDS2,
-                   fill=Filter,
-                   group=Filter),alpha=0.30) +
-  geom_point(data=primary_pa_scores,
-             aes(x=NMDS1,y=NMDS2, colour = Filter), size=2) +
+### Filter ----
+fil_plot = ggplot() +
+  geom_polygon(data=hull_fil, 
+               aes(x=NMDS1, y=NMDS2, 
+                   fill= fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic"), 
+                   group=fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic")),
+               alpha=0.30) + # add the convex hulls
+  geom_point(data=traits_main_scores,
+             aes(x=NMDS1, y=NMDS2, 
+                 colour = fct_relevel(Filter, "Abiotic", "Biotic", "Dispersal", "Trophic")), size=2) +
   coord_equal() +
   theme_bw()  +
   theme(axis.text.x = element_blank(),
@@ -364,29 +344,32 @@ primary_pa_fil_plot = ggplot() +
   scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2,
                      name = "Filter") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
-                       name = "Filter")+
-  geom_label(data = primary_pa_trait_scores,
-             aes(x =  NMDS1,
-                 y = NMDS2,
-                 label = species),
-             alpha = 0.8,
-             size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 8))
-ggsave(here('./figures/primary-pa/primary_pa_plot_fil_small.png'),
-       plot = primary_pa_fil_plot,
+                       name = "Filter")
+fil_plot
+ggsave(here('./figures/main-nmds/main-nmds_fil_small.png'),
+       plot = fil_plot,
        width = 8, height = 8, dpi = 200)
-ggsave(here('./figures/primary-pa/primary_pa_plot_fil_large.png'),
-       plot = primary_pa_fil_plot,
+ggsave(here('./figures/main-nmds/main-nmds_fil_large.png'),
+       plot = fil_plot,
        width = 8, height = 8, dpi = 600)
 
-#global change
-primary_pa_gc_plot = ggplot() +
-  geom_polygon(data=hull_pa_gc,
-               aes(x=NMDS1,y=NMDS2,
-                   fill=GlobalChange,
-                   group=GlobalChange), alpha=0.30) +
-  geom_point(data=primary_pa_scores,
-             aes(x=NMDS1,y=NMDS2, colour = GlobalChange), size=2) +
+### Global change ----
+gc_plot = ggplot() + 
+  geom_polygon(data=hull_gcd, 
+               aes(x=NMDS1, y=NMDS2, 
+                   fill= fct_relevel(`Global Change Driver`, 
+                                     "Not assessed", "Climate change", "Exploitation", 
+                                     "Multiple", "Habitat loss", "Invasion"), 
+                   group=fct_relevel(`Global Change Driver`, 
+                                     "Not assessed", "Climate change", "Exploitation", 
+                                     "Multiple", "Habitat loss", "Invasion")), 
+               alpha=0.30) + # add the convex hulls
+  geom_point(data=traits_main_scores, 
+             aes(x=NMDS1,y=NMDS2, 
+                 colour = fct_relevel(`Global Change Driver`, 
+                                      "Not assessed", "Climate change", "Exploitation", 
+                                      "Multiple", "Habitat loss", "Invasion")), 
+             size=2) + # add the point markers
   coord_equal() +
   theme_bw()  +
   theme(axis.text.x = element_blank(),
@@ -400,32 +383,26 @@ primary_pa_gc_plot = ggplot() +
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         plot.background = element_blank()) +
-  scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2,
-                     name = "Global Change Driver") +
-  scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
-                       name = "Global Change Driver")+
-  geom_label(data = primary_pa_trait_scores,
-             aes(x =  NMDS1,
-                 y = NMDS2,
-                 label = species),
-             alpha = 0.8,
-             size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 8))
-ggsave(here('./figures/primary-pa/primary_pa_plot_gc_small.png'),
-       plot = primary_pa_gc_plot,
+  scale_fill_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, 
+                     name = "Driver of change") + #name = "Global Change Assessed"
+  scale_colour_viridis(option="magma", discrete = TRUE, begin = 0.8, end = 0.2, 
+                       name = "Driver of change") #+ #name = "Global Change Assessed"
+gc_plot
+ggsave(here('./figures/main-nmds/main-nmds_gc_small.png'),
+       plot = gc_plot,
        width = 8, height = 8, dpi = 200)
-ggsave(here('./figures/primary-pa/primary_pa_plot_gc_large.png'),
-       plot = primary_pa_gc_plot,
+ggsave(here('./figures/main-nmds/main-nmds_gc_large.png'),
+       plot = gc_plot,
        width = 8, height = 8, dpi = 600)
 
-#predictive
-primary_pa_pred_plot = ggplot() +
-  geom_polygon(data=hull_pa_pred,
+### Predictive ----
+pred_plot = ggplot() +
+  geom_polygon(data=hull_predict,
                aes(x=NMDS1,y=NMDS2,
-                   fill=PredictiveCat,
-                   group=PredictiveCat), alpha=0.30) +
-  geom_point(data=primary_pa_scores,
-             aes(x=NMDS1,y=NMDS2, colour = PredictiveCat), size=2) +
+                   fill=Predictive,
+                   group=Predictive), alpha=0.30) +
+  geom_point(data=traits_main_scores,
+             aes(x=NMDS1,y=NMDS2, colour = Predictive), size=2) +
   coord_equal() +
   theme_bw()  +
   theme(axis.text.x = element_blank(),
@@ -442,37 +419,31 @@ primary_pa_pred_plot = ggplot() +
   scale_fill_viridis(option = 'magma', discrete = TRUE, begin = 0.8, end = 0.2,
                      name = "Predictive") +
   scale_colour_viridis(option = 'magma',discrete = TRUE, begin = 0.8, end = 0.2,
-                       name = "Predictive")+
-  geom_label(data = primary_pa_trait_scores,
-             aes(x =  NMDS1,
-                 y = NMDS2,
-                 label = species),
-             alpha = 0.8,
-             size = 3,
-             position = position_jitter(width = 0, height = 0.1, seed = 8))
-ggsave(here('./figures/primary-pa/primary_pa_plot_pred_small.png'),
-       plot = primary_pa_pred_plot,
+                       name = "Predictive")
+pred_plot
+ggsave(here('./figures/main-nmds/main-nmds_pred_small.png'),
+       plot = pred_plot,
        width = 8, height = 9, dpi = 200)
-ggsave(here('./figures/primary-pa/primary_pa_plot_pred_large.png'),
-       plot = primary_pa_pred_plot,
+ggsave(here('./figures/main-nmds/main-nmds_plot_pred_large.png'),
+       plot = pred_plot,
        width = 8, height = 9, dpi = 600)
 
-## Merge plots
+## Merge plots ----
 
 #All 6 panels
 
-review_nMDS_primary_pa6 =
-  plot_grid(primary_pa_tax_plot, primary_pa_tos_plot, primary_pa_eco_plot,
-            primary_pa_fil_plot, primary_pa_gc_plot, primary_pa_pred_plot,
+review_main_nMDS_6 =
+  plot_grid(tax_plot, tos_plot, eco_plot,
+            fil_plot, gc_plot, pred_plot,
             labels = c("A", "B", "C", "D", "E", "F"),
             label_x = 0.15, vjust = 3.5, ncol = 2,
             rel_widths = c(1, 1), align = "v")
-
-ggsave(here('./figures/primary-pa/review_nMDS_primary_pa6_small.png'),
-       plot = review_nMDS_primary_pa6,
+review_main_nMDS_6
+ggsave(here('./figures/main-nmds/review_main_nMDS_6_small.png'),
+       plot = review_main_nMDS_6,
        width = 16, height = 12, dpi = 200)
-ggsave(here('./figures/primary-pa/review_nMDS_primary_pa6_large.png'),
-       plot = review_nMDS_primary_pa6,
+ggsave(here('./figures/main-nmds/review_main_nMDS_6_large.png'),
+       plot = review_main_nMDS_6,
        width = 16, height = 12, dpi = 600)
 
 
