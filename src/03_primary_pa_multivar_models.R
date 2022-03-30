@@ -5,7 +5,7 @@
 # A review on the use of traits in ecological research
 ##########
 ##########
-# AUTHOR: Cole B. Brookson
+# AUTHOR: Cole B. Brookson & Natasha Hardy
 # DATE OF CREATION: 2020-06-27
 ##########
 ##########

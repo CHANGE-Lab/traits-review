@@ -41,7 +41,6 @@ library(reshape2)
 
 ```
 
-
 ```{r USE THIS DATA FOR ORDS}
 
 #Upload selected dataset
@@ -78,8 +77,7 @@ review_species_mv <- review_traits_mv[,11:ncol(review_traits_mv)] #144 trait col
 Note that the stress decreases as we decrease the number of observations, however, I'm concerned that it becomes so low as to indicate that we do not have enough observations vs. traits (data are too wide because #traits > # obs)
 
 
-
-```{r Ordination USE}
+```{r Ordination USE, eval=FALSE}
 #Second ordination based on using no replicates for the study
 traits_ord_use <- metaMDS(review_species_use,
                           distance = "jaccard",
@@ -96,6 +94,7 @@ Note that for the next three chunks below, here we change the input ordination A
 2) Second using traits_ord_jac2 and review_sites2.0
 3) Second using traits_ord_jac3 and review_sites3.0
 
+### Data and treatment scores
 ```{r Data scores for plotting - 1.0 dataset, include=F, eval=F, echo=F}
 #attach(review_sites)
 
@@ -176,7 +175,7 @@ str(treatment.scores)
 
 ```
 
-#Convex hull calculations
+### Convex hull calculations
 For each ordination and set of grouping variables input to data scores chunk
 
 ```{r Convex hulls - Ecosystem}
@@ -313,9 +312,9 @@ summary(treatment.scores$Filter)
 ```
 
 
-# nMDS Plots
+## nMDS Plots
 
-###nMDS plot for the assessmenet of global change (yes/no) and the drivers.
+### nMDS plot for the assessmenet of global change (yes/no) and the drivers.
 
 ```{r nMDS Global Change Driver, echo=TRUE}
 
@@ -357,7 +356,7 @@ ggsave("trait_nMDS_clim.jpeg", plot = trait_nMDS_clim, width = 8, height = 8, dp
 
 ```
 
-###nMDS plot for the ecosystem type studied
+### nMDS plot for the ecosystem type studied
 
 ```{r nMDS Ecosystem, echo=TRUE}
 
@@ -402,7 +401,7 @@ ggsave("trait_nMDS_ecos.jpeg", plot = trait_nMDS_ecos, width = 8, height = 8, dp
 
 ```
 
-###nMDS plot for the specific taxonomic group studied
+### nMDS plot for the specific taxonomic group studied
 
 ```{r nMDS Taxonomic, echo=TRUE}
 
@@ -434,7 +433,7 @@ ggsave("trait_nMDS_taxonsp.jpeg", plot = trait_nMDS_taxon, width = 8, height = 8
 
 ```
 
-###nMDS plot for the broad taxonomic group studied
+### nMDS plot for the broad taxonomic group studied
 
 ```{r nMDS Taxonomic Group, echo=TRUE}
 
@@ -466,7 +465,7 @@ ggsave("trait_nMDS_taxongrp.jpeg", plot = trait_nMDS_taxon, width = 8, height = 
 
 ```
 
-###nMDS plot for the type of study
+### nMDS plot for the type of study
 
 ```{r nMDS Type of study, echo=TRUE}
 
@@ -502,7 +501,7 @@ ggsave("trait_nMDS_tos2.jpeg", plot = trait_nMDS_tos, width = 8, height = 8, dpi
 
 ```
 
-###nMDS plot for the level of ecological filtering for which traits were applied
+### nMDS plot for the level of ecological filtering for which traits were applied
 
 ```{r nMDS Filter, echo=TRUE}
 
