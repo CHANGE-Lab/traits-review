@@ -23,7 +23,7 @@ library(reshape2)
 library(here)
 
 #subset data into the two groups needed
-traits_main_use = 
+trait_main_use = 
   read_csv(here(paste0('./data/processed-data',
                        '/review_traits_clean_models.csv')))
 
@@ -34,56 +34,57 @@ traits_species_use <- trait_main_use[,11:ncol(trait_main_use)] #1411 trait colum
 
 # secondary_abundance_species == traits_species_use
 # secondary_abundance_traits == traits_sites_use
-  data.frame(secondary_abundance[,12:ncol(secondary_abundance)])
 
-secondary_abundance_traits = data.frame(secondary_abundance[,1:11])
-secondary_abundance_mv = mvabund(secondary_abundance_species)
+traits_species_mv = mvabund(traits_species_use)
+# secondary_abundance_mv == traits_species_mv
 
-# find appropriate distribution ================================================
+## Find appropriate distribution ================================================
 
-secondary_check_matrix = as.matrix(secondary_abundance_species)
-hist(secondary_check_matrix)
-hist(secondary_check_matrix[secondary_check_matrix > 0])
+main_check_matrix = as.matrix(traits_species_use)
+hist(main_check_matrix)
+hist(main_check_matrix[main_check_matrix > 0])
 
+### Global Change Driver ----
 #try poisson and neg. binom.
-mv_gc_poisson = manyglm(secondary_abundance_mv ~ 
-                          secondary_abundance_traits$GlobalChangeCat, 
-                        data= secondary_abundance_traits,
+mv_gc_poisson = manyglm(traits_species_mv ~ 
+                          traits_sites_use$`Global Change Driver`, 
+                        data= traits_sites_use,
                         family = 'poisson')
 plot(mv_gc_poisson) 
 qqnorm(residuals(mv_gc_poisson)[which(residuals(mv_gc_poisson)<10000)])
 
-mv_gc_nb = manyglm(secondary_abundance_mv ~ 
-                     secondary_abundance_traits$GlobalChangeCat, 
-                   data= secondary_abundance_traits,
+mv_gc_nb = manyglm(traits_species_mv ~ 
+                     traits_sites_use$`Global Change Driver`, 
+                   data= traits_sites_use,
                    family = 'negative.binomial')
 #family=binomial("cloglog")) 
 plot(mv_gc_nb) 
 qqnorm(residuals(mv_gc_nb)[which(residuals(mv_gc_nb)<10000)])
 
 # NOTE - okay, neg. binom definitely  better but I'll save both just in case
-saveRDS(mv_gc_nb, here('./data/manyglm-intermediate/mv_gc_nb.rds')) 
+saveRDS(mv_gc_nb, here('./data/manyglm-intermediate/mv_gc_nb_main.rds')) 
 saveRDS(mv_gc_poisson, 
-        here('./data/manyglm-intermediate/mv_gc_poisson_sec.rds')) 
-mv_gc_nb = readRDS(here('./data/manyglm-intermediate/mv_gc_nb.rds'))
-mv_gc_poisson = readRDS(here('./data/manyglm-intermediate/mv_gc_poisson_sec.rds'))
+        here('./data/manyglm-intermediate/mv_gc_pois_main.rds'))
+# Reload
+mv_gc_nb = readRDS(here('./data/manyglm-intermediate/mv_gc_nb_main.rds'))
+mv_gc_poisson = readRDS(here('./data/manyglm-intermediate/mv_gc_pois_main.rds'))
 
-# model output =================================================================
+### model output =================================================================
 
 #model output significance test
 mv_gc_nb_an = anova.manyglm(mv_gc_nb)
 saveRDS(mv_gc_nb_an, 
-        here('./data/manyglm-intermediate/mv_gc__nb_anova_sec.rds')) 
-mv_gc_nb_an = readRDS(here('./data/manyglm-intermediate/mv_gc__nb_anova_sec.rds'))
-mv_gc_nb_an = readRDS(here('./data/manyglm-intermediate/mv_gc__nb_anova.rds'))
+        here('./data/manyglm-intermediate/mv_gc_nb_anova_main.rds')) 
+mv_gc_nb_an = readRDS(here('./data/manyglm-intermediate/mv_gc_nb_anova_main.rds'))
+#save and extract analysis of deviance output table
 write_csv(mv_gc_nb_an$table, 
-          here('./data/manyglm-intermediate/mv_gc_nb_anova_table_sec.csv')) 
+          here('./data/manyglm-intermediate/mv_gc_nb_anova_table_main.csv')) 
 
 #individual adjusted p-values for species/traits - get univariate p-values
 mv_gc_nb_an_uni = anova.manyglm(mv_gc_nb,p.uni="adjusted") 
 saveRDS(mv_gc_nb_an_uni, 
-        here('./data/manyglm-intermediate/mv_gc_univs_sec.rds')) 
-mv_gc_nb_an_uni = readRDS(here('./data/manyglm-intermediate/mv_gc_univs_sec.rds'))
+        here('./data/manyglm-intermediate/mv_gc_univs_main.rds')) 
+mv_gc_nb_an_uni = readRDS(here('./data/manyglm-intermediate/mv_gc_univs_main.rds'))
 #Get the direction of effect fof each species with the main effect
 gc_coef = coef(mv_gc_nb)
 
@@ -98,7 +99,7 @@ sum(mv_gc_nb_an$uni.test[2,mv_gc_nb_species$ix[1:25]])*100/
   sum(mv_gc_nb_an$uni.test[2,]) #25 species explained = 53.65588% Deviance
 
 gc_top = 
-  data.frame(dimnames(secondary_abundance_species)[[2]][mv_gc_nb_species$ix[
+  data.frame(dimnames(traits_species_use)[[2]][mv_gc_nb_species$ix[
     1:25]]) #df with the names of the top 20 traits
 gc_top = gc_top %>% 
   rename('traits' = names(gc_top))
@@ -106,7 +107,7 @@ str(gc_top)
 
 
 #How much deviance explained?
-write_csv(gc_top, here('./data/manyglm-intermediate/mv_gc_top_sec.csv')) 
+write_csv(gc_top, here('./data/manyglm-intermediate/mv_gc_top_main.csv')) 
 
 #Now combine traits with their coeffs and p-values
 
@@ -152,13 +153,13 @@ gc_top_coeffs = merge(gc_top_coeffs,
                       by.y = 'traits') 
 
 write_csv(gc_top_coeffs, 
-          here('./data/manyglm-intermediate/gc_top_coefs_sec.csv'))
+          here('./data/manyglm-intermediate/gc_top_coefs_main.csv'))
 
 #See how many papers actually have those traits
-papers_with_top_25_gc = secondary_abundance_species
+papers_with_top_25_gc = traits_species_use
 top_25_gc = gc_top$traits
 papers_with_top_25_gc = papers_with_top_25_gc[top_25_gc]
 
-rownames(papers_with_top_25_gc) = secondary_abundance_traits$DOI
+rownames(papers_with_top_25_gc) = traits_sites_use$DOI
 papers_with_top_25_gc = papers_with_top_25_gc[
   rowSums(papers_with_top_25_gc[, -1])>0, ]
