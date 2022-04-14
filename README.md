@@ -1,10 +1,18 @@
-# Global Review of Species Traits
+# Trait-based approaches to global change ecology: moving from description to prediction
 
-**Under Revision**
+The related paper for this publication is available here: https://doi.org/10.1098/rspb.2022.0071
+
+The paper itself can be cited as: 
+
+Green, S. J., Brookson, C. B., Hardy, N. A., & Crowder, L. B. (*2022*). Trait-based approaches to global change ecology: moving from description to prediction. *Proceedings of the Royal Society B*, 289(1971), 20220071
+
 
 Please feel free to use and borrow from this code base according to the licence below.
 
-The corresponding pre-print that this repository supports can be found here on [Authorea](https://www.authorea.com/users/346990/articles/472799-trait-based-approaches-to-global-change-ecology-from-description-to-prediction), which has the following DOI: [10.22541/au.159595908.80082633](10.22541/au.159595908.80082633).
+### Note:
+
+The licence governing the code in this repository (below) is **separate** from the licence governing the use and distribution of the article published by The Roayl Society Publishing. 
+
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
