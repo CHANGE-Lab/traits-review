@@ -11,7 +11,7 @@ Please feel free to use and borrow from this code base according to the licence 
 
 ### Note:
 
-The licence governing the code in this repository (below) is **separate** from the licence governing the use and distribution of the article published by The Roayl Society Publishing. 
+The licence governing the code in this repository (below) is **separate** from the licence governing the use and distribution of the article published by The Royal Society Publishing. 
 
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
